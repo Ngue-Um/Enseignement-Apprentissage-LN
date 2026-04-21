@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "basaa",
+    "name": "Bàsàa",
+    "iso": "bas",
+    "family": "Bantoue A.43",
+    "audio": false
+  },
+  {
+    "slug": "ewondo",
+    "name": "Èwòndó",
+    "iso": "ewo",
+    "family": "Bantoue A.72",
+    "audio": false
+  },
+  {
+    "slug": "bulu",
+    "name": "Bulu",
+    "iso": "bum",
+    "family": "Bantoue A.74",
+    "audio": true
+  },
+  {
+    "slug": "gbaya",
+    "name": "Gbáyá",
+    "iso": "gya",
+    "family": "Oubanguienne",
+    "audio": false
+  },
+  {
+    "slug": "tikar",
+    "name": "Tikar",
+    "iso": "tik",
+    "family": "Bantoïde",
+    "audio": false
+  },
+  {
+    "slug": "fong",
+    "name": "Fòŋ",
+    "iso": "—",
+    "family": "Bantoue A.50",
+    "audio": false
+  },
+  {
+    "slug": "mvele",
+    "name": "Mvélé",
+    "iso": "—",
+    "family": "Bantoue A.50",
+    "audio": false
+  },
+  {
+    "slug": "bakossi",
+    "name": "Bakossi",
+    "iso": "bss",
+    "family": "Bantoue A.15",
+    "audio": false
+  },
+  {
+    "slug": "tuki-tumbele",
+    "name": "Tuki-Tumbele",
+    "iso": "—",
+    "family": "Bantoue A.60",
+    "audio": false
+  },
+  {
+    "slug": "tuki-tukombe",
+    "name": "Tuki-Tukombe",
+    "iso": "—",
+    "family": "Bantoue A.60",
+    "audio": false
+  },
+  {
+    "slug": "balom",
+    "name": "Balom",
+    "iso": "—",
+    "family": "Bantoue A.60",
+    "audio": false
+  },
+  {
+    "slug": "badjia",
+    "name": "Bàdjíà",
+    "iso": "—",
+    "family": "Bantoue",
+    "audio": false
+  },
+  {
+    "slug": "banoo",
+    "name": "Banɔɔ",
+    "iso": "—",
+    "family": "Bantoue A.40",
+    "audio": false
+  },
+  {
+    "slug": "mipa",
+    "name": "Mìpá",
+    "iso": "—",
+    "family": "Bantoue",
+    "audio": false
+  },
+  {
+    "slug": "yezoum",
+    "name": "Yezoum",
+    "iso": "—",
+    "family": "Bantoue A.70",
+    "audio": false
+  },
+  {
+    "slug": "diboum",
+    "name": "Diboum",
+    "iso": "—",
+    "family": "Bantoue",
+    "audio": false
+  }
+]

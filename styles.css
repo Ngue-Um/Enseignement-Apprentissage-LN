@@ -1,0 +1,99 @@
+/* ALCAM Apprendre — styles complémentaires à Tailwind */
+
+.lang-text {
+  font-family: 'Lora', Georgia, serif;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
+/* Active nav link */
+.nav-link.active {
+  background-color: #fef7ed; /* brand-50 */
+  color: #b94608; /* brand-700 */
+  font-weight: 600;
+}
+
+/* Card hover micro-interaction */
+.exo-card:active {
+  transform: scale(0.99);
+}
+
+/* Audio play button */
+.play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: #26241f;
+  color: #fff;
+  padding: .35rem .75rem;
+  border-radius: .5rem;
+  font-size: .8rem;
+  font-weight: 500;
+  transition: background .15s ease;
+}
+.play-btn:hover { background: #48453e; }
+.play-btn:focus-visible { outline: 2px solid #f29232; outline-offset: 2px; }
+.play-btn[disabled] {
+  background: #aba89e;
+  cursor: not-allowed;
+}
+.play-btn.is-playing {
+  background: #ee780f;
+}
+
+/* Choice buttons in exercises */
+.choice {
+  width: 100%;
+  text-align: left;
+  padding: .9rem 1rem;
+  border-radius: .6rem;
+  border: 1px solid #e6e5e2;
+  background: #fff;
+  transition: all .15s ease;
+  font-size: 1rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.choice:hover { border-color: #aba89e; }
+.choice:focus-visible {
+  outline: 2px solid #f29232;
+  outline-offset: 2px;
+}
+.choice.is-correct {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #065f46;
+}
+.choice.is-wrong {
+  background: #fef2f2;
+  border-color: #f87171;
+  color: #991b1b;
+}
+.choice[disabled] {
+  cursor: default;
+  opacity: 1; /* on garde lisible */
+}
+
+/* Pulse the play icon when playing */
+.is-playing svg {
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .55; }
+}
+
+/* Progress bar */
+.progress-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #e6e5e2;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f29232, #ee780f);
+  transition: width .3s ease;
+}
+
+/* Make sure pre-rendered template content is hidden */
+template { display: none; }

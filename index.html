@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALCAM Apprendre — Outils didactiques pour les langues camerounaises</title>
+  <meta name="description" content="Prototype d'outil interactif d'enseignement des langues nationales camerounaises, à partir des ressources ALCAM publiées sur Mozilla Data Collective. Cours LACC2342 — ENS Yaoundé, Prof. Emmanuel Ngue Um." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#fef7ed',
+              100: '#fdecd3',
+              200: '#fbd5a5',
+              300: '#f7b96d',
+              400: '#f29232',
+              500: '#ee780f',
+              600: '#df5e05',
+              700: '#b94608',
+              800: '#94380e',
+              900: '#782f10',
+            },
+            ink: {
+              50:  '#f7f7f6',
+              100: '#e6e5e2',
+              200: '#cdcbc4',
+              300: '#aba89e',
+              400: '#878478',
+              500: '#6d695e',
+              600: '#5a574d',
+              700: '#48453e',
+              800: '#3d3a35',
+              900: '#26241f',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Lora', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-ink-50 text-ink-900 font-sans antialiased min-h-screen">
+
+  <!-- Header -->
+  <header class="border-b border-ink-100 bg-white sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <a href="#/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-lg bg-brand-500 text-white grid place-items-center font-bold font-serif text-lg shadow-sm group-hover:bg-brand-600 transition">A</div>
+        <div class="leading-tight">
+          <div class="font-semibold text-ink-900">ALCAM Apprendre</div>
+          <div class="text-xs text-ink-500">Outils didactiques pour les langues camerounaises</div>
+        </div>
+      </a>
+      <nav id="main-nav" class="hidden sm:flex items-center gap-1 text-sm">
+        <a href="#/" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Accueil</a>
+        <a href="#/catalogue" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Langues</a>
+        <a href="#/vocabulaire" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Vocabulaire</a>
+        <a href="#/exercices" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Exercices</a>
+        <a href="#/a-propos" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">À propos</a>
+      </nav>
+      <button id="mobile-toggle" class="sm:hidden p-2 rounded-md hover:bg-ink-100" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="sm:hidden hidden border-t border-ink-100 bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col text-sm">
+        <a href="#/" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Accueil</a>
+        <a href="#/catalogue" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Langues</a>
+        <a href="#/vocabulaire" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Vocabulaire</a>
+        <a href="#/exercices" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Exercices</a>
+        <a href="#/a-propos" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">À propos</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="app" class="max-w-6xl mx-auto px-4 py-8 min-h-[60vh]">
+    <div class="text-center text-ink-500 py-20">Chargement…</div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-ink-100 bg-white mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-ink-500 flex flex-col sm:flex-row justify-between gap-3">
+      <div>
+        © 2026 — Prototype pédagogique LACC2342 · ENS Yaoundé · Prof. <span class="text-ink-700">Emmanuel Ngue Um</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://mozilladatacollective.com/organization/cmfv3ichk000amd07piai0zoz" target="_blank" rel="noopener" class="hover:text-brand-700 underline">Données ALCAM sur mdc</a>
+        <span class="text-ink-300">·</span>
+        <a href="https://github.com/Ngue-Um/syllabi" target="_blank" rel="noopener" class="hover:text-brand-700 underline">Syllabi</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Templates -->
+  <template id="tpl-home">
+    <section class="py-8 sm:py-14">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-block text-xs font-semibold text-brand-700 bg-brand-100 px-3 py-1 rounded-full">Prototype LACC2342 · ENS Yaoundé</span>
+          <h1 class="mt-4 font-serif text-4xl sm:text-5xl leading-tight text-ink-900">
+            Apprendre les langues camerounaises<br/>avec les ressources <span class="text-brand-600">ALCAM</span>.
+          </h1>
+          <p class="mt-5 text-lg text-ink-600 max-w-xl">
+            Un prototype d'outil interactif construit à partir des jeux de données ALCAM
+            publiés sur Mozilla Data Collective sous la bannière de l'Institut des Humanités numériques africaines.
+            Aligné sur les programmes officiels MINESEC des classes de 6<sup>e</sup>, 5<sup>e</sup>, 4<sup>e</sup> et 3<sup>e</sup>.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#/exercices" class="inline-flex items-center gap-2 px-5 py-3 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-medium shadow-sm">
+              Commencer les exercices
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#/vocabulaire" class="inline-flex items-center px-5 py-3 bg-white border border-ink-200 hover:border-ink-300 text-ink-800 rounded-lg font-medium">
+              Explorer le vocabulaire
+            </a>
+          </div>
+          <dl class="mt-10 grid grid-cols-3 gap-4 max-w-md">
+            <div>
+              <dt class="text-3xl font-serif text-brand-600" id="stat-langues">16</dt>
+              <dd class="text-xs text-ink-500 uppercase tracking-wide">Langues ALCAM</dd>
+            </div>
+            <div>
+              <dt class="text-3xl font-serif text-brand-600" id="stat-phrases">—</dt>
+              <dd class="text-xs text-ink-500 uppercase tracking-wide">Phrases bulu</dd>
+            </div>
+            <div>
+              <dt class="text-3xl font-serif text-brand-600" id="stat-audios">—</dt>
+              <dd class="text-xs text-ink-500 uppercase tracking-wide">Audios MP3</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="relative">
+          <div class="bg-white rounded-2xl shadow-lg border border-ink-100 p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 grid place-items-center bg-brand-100 text-brand-700 rounded-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-ink-500 uppercase tracking-wide">Module II — Productions segmentales</div>
+                <div class="text-sm font-medium text-ink-700">Phrase d'exemple en bulu</div>
+              </div>
+            </div>
+            <p class="font-serif text-2xl text-ink-900 leading-snug" id="demo-lang">èbé é:nə̀ èdɔ́k</p>
+            <p class="mt-2 text-ink-500 italic" id="demo-french">le trou est profond</p>
+            <button id="demo-play" class="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-ink-900 hover:bg-ink-700 text-white rounded-lg text-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              Écouter
+            </button>
+            <audio id="demo-audio" preload="none"></audio>
+            <div class="mt-6 grid grid-cols-3 gap-2 text-center text-xs">
+              <div class="p-2 rounded bg-ink-50">
+                <div class="text-ink-400">Module</div>
+                <div class="font-medium text-ink-700">II</div>
+              </div>
+              <div class="p-2 rounded bg-ink-50">
+                <div class="text-ink-400">Langue</div>
+                <div class="font-medium text-ink-700">Bulu</div>
+              </div>
+              <div class="p-2 rounded bg-ink-50">
+                <div class="text-ink-400">Source</div>
+                <div class="font-medium text-ink-700">ALCAM/mdc</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 grid sm:grid-cols-3 gap-6">
+        <a href="#/catalogue" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-3xl mb-2 font-serif text-brand-500">①</div>
+          <h3 class="font-semibold text-lg">Catalogue des langues</h3>
+          <p class="text-sm text-ink-500 mt-1">Les 16 langues ALCAM publiées par l'IHNA sur mdc, avec leur statut audio.</p>
+        </a>
+        <a href="#/vocabulaire" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-3xl mb-2 font-serif text-brand-500">②</div>
+          <h3 class="font-semibold text-lg">Vocabulaire & phrases</h3>
+          <p class="text-sm text-ink-500 mt-1">Naviguer dans le corpus bulu : audio + transcription AGLC + traduction française.</p>
+        </a>
+        <a href="#/exercices" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-3xl mb-2 font-serif text-brand-500">③</div>
+          <h3 class="font-semibold text-lg">Exercices interactifs</h3>
+          <p class="text-sm text-ink-500 mt-1">Quatre familles d'exercices alignées sur les modules MINESEC.</p>
+        </a>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-catalogue">
+    <section>
+      <h1 class="font-serif text-3xl mb-2">Catalogue des langues ALCAM</h1>
+      <p class="text-ink-600 mb-8 max-w-2xl">
+        Les 16 langues camerounaises dont les jeux de données ont été publiés par l'Institut des Humanités numériques africaines
+        sur la plateforme Mozilla Data Collective. Le prototype actuel propose les exercices en <strong>bulu</strong> ; les autres
+        langues sont accessibles en consultation et seront activées au fur et à mesure de la publication des datasets vocaux.
+      </p>
+      <div id="catalogue-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+  </template>
+
+  <template id="tpl-vocabulaire">
+    <section>
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-6">
+        <div>
+          <h1 class="font-serif text-3xl mb-2">Vocabulaire — Bulu</h1>
+          <p class="text-ink-600 max-w-2xl">Écoutez chaque phrase, lisez sa transcription en AGLC et sa traduction française. Filtrez par module MINESEC.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <label class="text-sm text-ink-500" for="vocab-filter">Module</label>
+          <select id="vocab-filter" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm">
+            <option value="">Tous</option>
+            <option value="M2-segmentaux">II — Productions segmentales</option>
+            <option value="M3-suprasegmentaux">III — Suprasegmentaux</option>
+            <option value="M4-syntagme-nominal">IV — Syntagme nominal</option>
+            <option value="M5-syntagme-verbal">V — Syntagme verbal</option>
+            <option value="M6-phrase">VI — La phrase</option>
+          </select>
+          <input id="vocab-search" type="search" placeholder="Rechercher…" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm w-40 sm:w-56" />
+        </div>
+      </div>
+      <div id="vocab-list" class="space-y-3"></div>
+      <div id="vocab-empty" class="hidden text-center text-ink-400 py-12">Aucune phrase ne correspond.</div>
+    </section>
+  </template>
+
+  <template id="tpl-exercices">
+    <section>
+      <h1 class="font-serif text-3xl mb-2">Exercices interactifs — Bulu</h1>
+      <p class="text-ink-600 mb-8 max-w-2xl">Quatre familles d'exercices, conçues pour les classes du premier cycle. Vos réponses sont mémorisées le temps de la session.</p>
+
+      <div id="exo-menu" class="grid sm:grid-cols-2 gap-4">
+        <button data-exo="comprehension" class="exo-card text-left bg-white border border-ink-100 rounded-xl p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Module II → VI · Compréhension orale</div>
+          <h3 class="text-lg font-semibold mt-2">Audio → Traduction française</h3>
+          <p class="text-sm text-ink-500 mt-1">Écoute la phrase en bulu et choisis la bonne traduction française parmi quatre.</p>
+        </button>
+        <button data-exo="reconnaissance" class="exo-card text-left bg-white border border-ink-100 rounded-xl p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Module II · Reconnaissance audio</div>
+          <h3 class="text-lg font-semibold mt-2">Texte bulu → Audio correspondant</h3>
+          <p class="text-sm text-ink-500 mt-1">Lis la phrase bulu et choisis, parmi trois enregistrements, celui qui lui correspond.</p>
+        </button>
+        <button data-exo="lecture" class="exo-card text-left bg-white border border-ink-100 rounded-xl p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Module IV-VI · Lecture</div>
+          <h3 class="text-lg font-semibold mt-2">Texte bulu → Traduction française</h3>
+          <p class="text-sm text-ink-500 mt-1">Sans audio, traduis depuis le bulu écrit. Idéal pour réviser la phonologie de l'AGLC.</p>
+        </button>
+        <button data-exo="dictee" class="exo-card text-left bg-white border border-ink-100 rounded-xl p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Module II-III · Dictée</div>
+          <h3 class="text-lg font-semibold mt-2">Audio → Transcription AGLC</h3>
+          <p class="text-sm text-ink-500 mt-1">Écoute et écris ce que tu entends. Le score se calcule par similarité de caractères.</p>
+        </button>
+      </div>
+
+      <div id="exo-stage" class="hidden mt-8"></div>
+    </section>
+  </template>
+
+  <template id="tpl-apropos">
+    <section class="prose prose-ink max-w-3xl">
+      <h1 class="font-serif text-3xl">À propos de ce prototype</h1>
+      <p>
+        Ce prototype est un livrable du cours <strong>LACC2342 — Outils pour la production du matériel didactique numérique
+        et multimédia en langues camerounaises</strong> dispensé à l'École Normale Supérieure de Yaoundé par
+        le <strong>Prof. Emmanuel Ngue Um</strong> aux élèves-professeurs de Niveau 2.
+      </p>
+      <p>
+        Il démontre, à partir des ressources <strong>ALCAM</strong> publiées sur la plateforme
+        <a href="https://mozilladatacollective.com/organization/cmfv3ichk000amd07piai0zoz" target="_blank" rel="noopener">Mozilla Data Collective</a>
+        sous la bannière de l'<strong>Institut des Humanités numériques africaines</strong>,
+        comment articuler audio, transcription en Alphabet général des langues camerounaises (AGLC) et traduction française
+        au service de l'enseignement secondaire des langues nationales (programmes MINESEC, classes de 6<sup>e</sup>, 5<sup>e</sup>, 4<sup>e</sup>, 3<sup>e</sup>).
+      </p>
+      <h2 class="font-serif text-2xl mt-8">Portée pédagogique</h2>
+      <ul>
+        <li><strong>Cadrage</strong> : approche par compétences et entrée par les situations de vie (MINESEC, 2014).</li>
+        <li><strong>Données</strong> : 152 phrases bulu avec audio MP3 et traduction française appariée (sur 184 audios totaux).</li>
+        <li><strong>Modules MINESEC ciblés</strong> : II (segmentaux), III (suprasegmentaux), IV (syntagme nominal), V (syntagme verbal), VI (phrase).</li>
+      </ul>
+      <h2 class="font-serif text-2xl mt-8">Étendre à une autre langue</h2>
+      <p>
+        Pour ajouter une langue ALCAM, il suffit de fournir un fichier <code>data/&lt;langue&gt;.json</code>
+        au même format que <code>data/bulu.json</code>, et de déposer les MP3 dans <code>audio/&lt;langue&gt;/</code>.
+        Le script <code>build_data.py</code> est fourni à titre d'exemple. La marche à suivre détaillée se trouve
+        dans le <code>README.md</code> du dépôt.
+      </p>
+      <h2 class="font-serif text-2xl mt-8">Crédits & licence</h2>
+      <p>
+        Données ALCAM : Institut des Humanités numériques africaines, publiées sur Mozilla Data Collective.
+        Code de l'application : licence MIT. Données et audios : licence CC-BY (attribuer aux locuteurs et au dépositaire).
+      </p>
+      <p class="text-sm text-ink-500 mt-8">
+        Ce prototype a été réalisé en avril 2026 dans le cadre du semestre 2 de l'année universitaire 2025-2026.
+      </p>
+    </section>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
