@@ -2,6 +2,405 @@
   "language": "bulu",
   "lessons": [
     {
+      "id": "I-1",
+      "code": "I.1",
+      "module": "M1-diversite",
+      "moduleTitle": "Module I — Diversité linguistique camerounaise",
+      "title": "Le Cameroun, mosaïque de 239 langues",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Prendre conscience de la diversité linguistique du Cameroun",
+        "Situer quelques grandes familles de langues sur la carte",
+        "Adopter une attitude de respect envers toutes les langues du pays"
+      ],
+      "vocabulary": [
+        {
+          "id": "cba3f314894a",
+          "audio": "cba3f314894a2c8f64f5bf0f6008b02d.mp3",
+          "langText": "bìdɔ́k",
+          "frenchText": "profond",
+          "langWord": "bìdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "5b86c54a9224",
+          "audio": "5b86c54a9224ac2322531f6f0e31a9cf.mp3",
+          "langText": "mə̀nɛ́n",
+          "frenchText": "gros",
+          "langWord": "mə̀nɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "988e0c733e86",
+          "audio": "988e0c733e86febd61831aac13423a5e.mp3",
+          "langText": "mə̀yàp",
+          "frenchText": "grands",
+          "langWord": "mə̀yàp",
+          "frenchWord": "grands",
+          "pos": "adj"
+        },
+        {
+          "id": "88d2b054e789",
+          "audio": "88d2b054e7898d3d9f9eab0d32d1b10e.mp3",
+          "langText": "mìnkɔ́t",
+          "frenchText": "étroits",
+          "langWord": "mìnkɔ́t",
+          "frenchWord": "étroits",
+          "pos": "adj"
+        },
+        {
+          "id": "f0ad9b94c0af",
+          "audio": "f0ad9b94c0af0bf1ca741c191c4b6efa.mp3",
+          "langText": "bìtùn",
+          "frenchText": "courts",
+          "langWord": "bìtùn",
+          "frenchWord": "courts",
+          "pos": "adj"
+        },
+        {
+          "id": "45e0b0c55d38",
+          "audio": "45e0b0c55d389b1a019e15ca1178aefb.mp3",
+          "langText": "mìndzálán",
+          "frenchText": "pleins",
+          "langWord": "mìndzálán",
+          "frenchWord": "pleins",
+          "pos": "adj"
+        },
+        {
+          "id": "98abc9f854b3",
+          "audio": "98abc9f854b3a228489183d5852b2faf.mp3",
+          "langText": "ə̰̀nkót sí",
+          "frenchText": "la terre est sèche.",
+          "langWord": "ə̰̀nkót",
+          "frenchWord": "sec",
+          "pos": "adj"
+        },
+        {
+          "id": "c423c1f84970",
+          "audio": "c423c1f84970b4a8eec4a572413c0514.mp3",
+          "langText": "mìnkót",
+          "frenchText": "secs",
+          "langWord": "mìnkót",
+          "frenchWord": "secs",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez aux élèves combien de langues ils pensent qu'on parle au Cameroun. Recueillez les estimations au tableau. Annoncez le chiffre officiel : environ 239 langues vivantes (ALCAM)."
+          },
+          {
+            "title": "Carte au tableau (15 min)",
+            "instruction": "Tracez (ou affichez) une carte simplifiée des grandes zones linguistiques : Bantu (Sud, Centre, Est, Littoral), Soudaniques (Nord), Adamawa-Oubanguiennes, Tchadiques. Montrez qu'aucune région n'est mono-langue."
+          },
+          {
+            "title": "Témoignages (15 min)",
+            "instruction": "Faites circuler la parole : chaque élève dit la (ou les) langue(s) parlée(s) à la maison. Notez la liste collective au tableau. Valorisez la diversité présente dans la classe."
+          },
+          {
+            "title": "Réflexion guidée (15 min)",
+            "instruction": "Question : pourquoi enseigne-t-on les langues nationales à l'école aujourd'hui ? Faites émerger : transmission, patrimoine, citoyenneté, identité."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Bilan collectif : « ce que je retiens, c'est… ». Annoncez la prochaine leçon : la place du bulu."
+          }
+        ],
+        "freedom": "Si la classe est multiethnique (souvent le cas), invitez des élèves à dire bonjour dans leur langue. Variante : faites préparer une mini-affiche par binôme à exposer en salle.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Le Cameroun parle environ 239 langues. C'est une richesse. Aujourd'hui, tu découvres cette mosaïque et la place de ta propre langue dans ce paysage.",
+        "activities": [
+          {
+            "title": "Activité 1 — Estimer puis vérifier",
+            "instruction": "Avant la leçon, écris ton estimation du nombre de langues du Cameroun. À la fin, compare avec le chiffre réel."
+          },
+          {
+            "title": "Activité 2 — Ma langue, mes langues",
+            "instruction": "Liste les langues parlées chez toi. Souligne celle que tu utilises le plus souvent."
+          },
+          {
+            "title": "Activité 3 — Carte mentale",
+            "instruction": "Dessine une carte mentale : « langues du Cameroun » au centre, et autour les grandes familles vues en classe."
+          }
+        ],
+        "memo": "Le Cameroun est l'un des pays les plus plurilingues d'Afrique : 239 langues environ, regroupées en 4 grandes familles. Aucune langue n'est plus légitime qu'une autre."
+      }
+    },
+    {
+      "id": "I-2",
+      "code": "I.2",
+      "module": "M1-diversite",
+      "moduleTitle": "Module I — Diversité linguistique camerounaise",
+      "title": "Identifier la place du bulu",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Situer le bulu dans la famille bantu (zone A.70)",
+        "Reconnaître quelques langues apparentées (ewondo, fang, eton)",
+        "Localiser l'aire bulu sur la carte du Cameroun"
+      ],
+      "vocabulary": [
+        {
+          "id": "cba3f314894a",
+          "audio": "cba3f314894a2c8f64f5bf0f6008b02d.mp3",
+          "langText": "bìdɔ́k",
+          "frenchText": "profond",
+          "langWord": "bìdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "5b86c54a9224",
+          "audio": "5b86c54a9224ac2322531f6f0e31a9cf.mp3",
+          "langText": "mə̀nɛ́n",
+          "frenchText": "gros",
+          "langWord": "mə̀nɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "988e0c733e86",
+          "audio": "988e0c733e86febd61831aac13423a5e.mp3",
+          "langText": "mə̀yàp",
+          "frenchText": "grands",
+          "langWord": "mə̀yàp",
+          "frenchWord": "grands",
+          "pos": "adj"
+        },
+        {
+          "id": "88d2b054e789",
+          "audio": "88d2b054e7898d3d9f9eab0d32d1b10e.mp3",
+          "langText": "mìnkɔ́t",
+          "frenchText": "étroits",
+          "langWord": "mìnkɔ́t",
+          "frenchWord": "étroits",
+          "pos": "adj"
+        },
+        {
+          "id": "f0ad9b94c0af",
+          "audio": "f0ad9b94c0af0bf1ca741c191c4b6efa.mp3",
+          "langText": "bìtùn",
+          "frenchText": "courts",
+          "langWord": "bìtùn",
+          "frenchWord": "courts",
+          "pos": "adj"
+        },
+        {
+          "id": "45e0b0c55d38",
+          "audio": "45e0b0c55d389b1a019e15ca1178aefb.mp3",
+          "langText": "mìndzálán",
+          "frenchText": "pleins",
+          "langWord": "mìndzálán",
+          "frenchWord": "pleins",
+          "pos": "adj"
+        },
+        {
+          "id": "98abc9f854b3",
+          "audio": "98abc9f854b3a228489183d5852b2faf.mp3",
+          "langText": "ə̰̀nkót sí",
+          "frenchText": "la terre est sèche.",
+          "langWord": "ə̰̀nkót",
+          "frenchWord": "sec",
+          "pos": "adj"
+        },
+        {
+          "id": "c423c1f84970",
+          "audio": "c423c1f84970b4a8eec4a572413c0514.mp3",
+          "langText": "mìnkót",
+          "frenchText": "secs",
+          "langWord": "mìnkót",
+          "frenchWord": "secs",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Rappel (5 min)",
+            "instruction": "Reprenez avec la classe les 4 grandes familles vues en I.1. Demandez : « à laquelle pensez-vous que le bulu appartient ? »."
+          },
+          {
+            "title": "Présentation (15 min)",
+            "instruction": "Le bulu est une langue bantu (zone A.70 selon la classification Guthrie). Au tableau, dessinez un arbre : Bantu → A → A.70 → bulu, ewondo, fang, eton. Faites observer la proximité."
+          },
+          {
+            "title": "Carte régionale (15 min)",
+            "instruction": "Affichez une carte du Sud-Cameroun. Délimitez l'aire bulu (régions du Sud et du Centre, autour de Sangmélima, Ebolowa). Faites placer 3 villes par les élèves au tableau."
+          },
+          {
+            "title": "Comparaison guidée (15 min)",
+            "instruction": "Comparez 5 mots dans les 4 langues sœurs (eau, maison, enfant, manger, soleil). Faites observer les ressemblances."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Bilan : « le bulu n'est pas isolé, il est entouré de langues cousines ». Annoncez la prochaine leçon."
+          }
+        ],
+        "freedom": "Si vous avez en classe des élèves locuteurs d'ewondo, fang ou eton, sollicitez-les pour les comparaisons. C'est plus vivant qu'un cours magistral.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Le bulu fait partie de la famille bantu, au sud du Cameroun. Il a des langues sœurs très proches : ewondo, fang, eton. Aujourd'hui, tu apprends à le situer.",
+        "activities": [
+          {
+            "title": "Activité 1 — Famille",
+            "instruction": "Complète l'arbre : Bantu → A → A.70 → … (cite 4 langues)."
+          },
+          {
+            "title": "Activité 2 — Carte",
+            "instruction": "Sur la carte du Cameroun, colorie l'aire bulu en orange clair."
+          },
+          {
+            "title": "Activité 3 — Comparer",
+            "instruction": "Pour les 5 mots du jour, entoure ce qui se ressemble entre le bulu et l'ewondo (ou fang)."
+          }
+        ],
+        "memo": "Le bulu appartient à la zone bantu A.70 (classification Guthrie). Ses langues sœurs sont l'ewondo, le fang et l'eton."
+      }
+    },
+    {
+      "id": "I-3",
+      "code": "I.3",
+      "module": "M1-diversite",
+      "moduleTitle": "Module I — Diversité linguistique camerounaise",
+      "title": "Langue, dialecte, langue officielle",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Distinguer langue, dialecte et variété régionale",
+        "Identifier les deux langues officielles du Cameroun",
+        "Comprendre le statut des langues nationales à l'école"
+      ],
+      "vocabulary": [
+        {
+          "id": "cba3f314894a",
+          "audio": "cba3f314894a2c8f64f5bf0f6008b02d.mp3",
+          "langText": "bìdɔ́k",
+          "frenchText": "profond",
+          "langWord": "bìdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "5b86c54a9224",
+          "audio": "5b86c54a9224ac2322531f6f0e31a9cf.mp3",
+          "langText": "mə̀nɛ́n",
+          "frenchText": "gros",
+          "langWord": "mə̀nɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "988e0c733e86",
+          "audio": "988e0c733e86febd61831aac13423a5e.mp3",
+          "langText": "mə̀yàp",
+          "frenchText": "grands",
+          "langWord": "mə̀yàp",
+          "frenchWord": "grands",
+          "pos": "adj"
+        },
+        {
+          "id": "88d2b054e789",
+          "audio": "88d2b054e7898d3d9f9eab0d32d1b10e.mp3",
+          "langText": "mìnkɔ́t",
+          "frenchText": "étroits",
+          "langWord": "mìnkɔ́t",
+          "frenchWord": "étroits",
+          "pos": "adj"
+        },
+        {
+          "id": "f0ad9b94c0af",
+          "audio": "f0ad9b94c0af0bf1ca741c191c4b6efa.mp3",
+          "langText": "bìtùn",
+          "frenchText": "courts",
+          "langWord": "bìtùn",
+          "frenchWord": "courts",
+          "pos": "adj"
+        },
+        {
+          "id": "45e0b0c55d38",
+          "audio": "45e0b0c55d389b1a019e15ca1178aefb.mp3",
+          "langText": "mìndzálán",
+          "frenchText": "pleins",
+          "langWord": "mìndzálán",
+          "frenchWord": "pleins",
+          "pos": "adj"
+        },
+        {
+          "id": "98abc9f854b3",
+          "audio": "98abc9f854b3a228489183d5852b2faf.mp3",
+          "langText": "ə̰̀nkót sí",
+          "frenchText": "la terre est sèche.",
+          "langWord": "ə̰̀nkót",
+          "frenchWord": "sec",
+          "pos": "adj"
+        },
+        {
+          "id": "c423c1f84970",
+          "audio": "c423c1f84970b4a8eec4a572413c0514.mp3",
+          "langText": "mìnkót",
+          "frenchText": "secs",
+          "langWord": "mìnkót",
+          "frenchWord": "secs",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Accroche (5 min)",
+            "instruction": "Posez la question piège : « le bulu est-il une langue ou un dialecte ? ». Recueillez les réponses, sans trancher tout de suite."
+          },
+          {
+            "title": "Définitions (15 min)",
+            "instruction": "Au tableau : LANGUE = système autonome, intercompréhension limitée avec ses voisines. DIALECTE = variété régionale d'une même langue. LANGUE OFFICIELLE = langue de l'administration. Tranchez : le bulu est une LANGUE à part entière."
+          },
+          {
+            "title": "Statuts au Cameroun (15 min)",
+            "instruction": "Expliquez : 2 langues officielles (français, anglais), 239 langues nationales protégées par la Constitution (art. 1 al. 3, révision 1996). Affichez les deux concepts au tableau."
+          },
+          {
+            "title": "Étude de cas (15 min)",
+            "instruction": "Faites lire (en groupe) un court extrait de loi ou de circulaire MINESEC mentionnant l'enseignement des langues nationales. Faites repérer le mot « national »."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Synthèse : un mot pour chacun. « À retenir : … »."
+          }
+        ],
+        "freedom": "Si le débat « langue ou dialecte » prend, ne le coupez pas : c'est un excellent point d'entrée vers la sociolinguistique. Vous pouvez faire émerger la dimension politique du choix.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Tout le monde parle une langue. Mais qu'est-ce qui fait qu'on appelle quelque chose une langue, un dialecte, ou une langue officielle ? Aujourd'hui, on clarifie.",
+        "activities": [
+          {
+            "title": "Activité 1 — Définir",
+            "instruction": "Recopie les trois définitions vues au tableau."
+          },
+          {
+            "title": "Activité 2 — Classer",
+            "instruction": "Pour chaque exemple donné par le professeur, dis si c'est une LANGUE, un DIALECTE, ou une LANGUE OFFICIELLE."
+          },
+          {
+            "title": "Activité 3 — Réfléchir",
+            "instruction": "En 3 lignes, explique pourquoi il est important d'enseigner les langues nationales à l'école."
+          }
+        ],
+        "memo": "Au Cameroun, 2 langues officielles (français, anglais) coexistent avec ~239 langues nationales reconnues. Le bulu est une langue nationale à part entière, pas un dialecte."
+      }
+    },
+    {
       "id": "II-1",
       "code": "II.1",
       "module": "M2-segmentaux",
@@ -540,7 +939,7 @@
       "moduleTitle": "Module III — Suprasegmentaux",
       "title": "Paires aux tons opposés",
       "duration": "60 min",
-      "level": "5e",
+      "level": "6e",
       "objectives": [
         "Repérer que deux mots de même squelette consonantique peuvent différer uniquement par les tons",
         "Mémoriser quelques couples utiles",
@@ -673,7 +1072,7 @@
       "moduleTitle": "Module III — Suprasegmentaux",
       "title": "Rythme et longueur des syllabes",
       "duration": "60 min",
-      "level": "5e",
+      "level": "6e",
       "objectives": [
         "Repérer les voyelles longues (notées par redoublement ou « : »)",
         "Identifier les syllabes accentuées dans une phrase courte",
@@ -1072,7 +1471,7 @@
       "moduleTitle": "Module IV — Syntagme nominal",
       "title": "Décrire avec des adjectifs",
       "duration": "60 min",
-      "level": "4e",
+      "level": "5e",
       "objectives": [
         "Utiliser les adjectifs courants (grand, petit, beau, gros)",
         "Faire l'accord de l'adjectif avec le nom",
@@ -1320,7 +1719,7 @@
       "moduleTitle": "Module V — Syntagme verbal",
       "title": "La famille et les personnes",
       "duration": "60 min",
-      "level": "6e",
+      "level": "5e",
       "objectives": [
         "Nommer les membres de la famille proche",
         "Comprendre une phrase parlant de quelqu'un",
@@ -1453,7 +1852,7 @@
       "moduleTitle": "Module V — Syntagme verbal",
       "title": "Les animaux du village et de la forêt",
       "duration": "60 min",
-      "level": "6e",
+      "level": "5e",
       "objectives": [
         "Nommer 6 animaux courants",
         "Distinguer animaux domestiques et sauvages",
@@ -1719,7 +2118,7 @@
       "moduleTitle": "Module VI — La phrase",
       "title": "Phrases existentielles : « il y a »",
       "duration": "60 min",
-      "level": "4e",
+      "level": "5e",
       "objectives": [
         "Reconnaître la structure « il y a » en bulu",
         "Identifier le sujet et le complément de lieu",
@@ -1807,7 +2206,7 @@
       "moduleTitle": "Module VI — La phrase",
       "title": "Décrire un objet par sa qualité",
       "duration": "60 min",
-      "level": "4e",
+      "level": "5e",
       "objectives": [
         "Construire une phrase « X est Y » (Y = adjectif)",
         "Faire l'accord adjectif/nom",
@@ -1940,7 +2339,7 @@
       "moduleTitle": "Module VI — La phrase",
       "title": "Localiser : ici, là, là-bas",
       "duration": "60 min",
-      "level": "4e",
+      "level": "5e",
       "objectives": [
         "Comprendre le système des démonstratifs spatiaux",
         "Distinguer « ici », « là », « là-bas »",
@@ -2067,10 +2466,318 @@
       }
     },
     {
-      "id": "VI-4",
-      "code": "VI.4",
-      "module": "M6-phrase",
-      "moduleTitle": "Module VI — La phrase",
+      "id": "VII-1",
+      "code": "VII.1",
+      "module": "M7-quotidien-1",
+      "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+      "title": "Saluer, se présenter, prendre congé",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Échanger des salutations en bulu adaptées au moment de la journée",
+        "Se présenter brièvement (nom, âge, lieu d'habitation)",
+        "Clore un échange par une formule de prise de congé"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Saluez la classe en bulu (mbolo). Faites répéter. Demandez aux élèves de saluer leur voisin en bulu sans aucune autre instruction. Observez les hésitations."
+          },
+          {
+            "title": "Présentation des formules (15 min)",
+            "instruction": "Au tableau, listez les formules de salutation selon le moment de la journée et le statut (aîné/cadet). Faites observer que la politesse passe aussi par la posture, pas seulement par les mots."
+          },
+          {
+            "title": "Modélisation (15 min)",
+            "instruction": "Jouez avec un élève une mini-saynette : se croiser, saluer, demander des nouvelles, prendre congé. Décomposez chaque réplique."
+          },
+          {
+            "title": "Pratique en binôme (15 min)",
+            "instruction": "Chaque élève joue la saynette avec son voisin. Variantes : matin/soir, ami/aîné. Circulez et corrigez la prononciation et la posture."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Trois binômes volontaires passent devant la classe. La classe valide ou suggère. Bilan : « ce que j'ai appris à dire ». "
+          }
+        ],
+        "freedom": "Adaptez aux usages locaux : si vos élèves ont une variante particulière (régionale, familiale), valorisez-la. Vous pouvez filmer une saynette et la rejouer à la séance suivante.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Saluer, c'est le premier pas vers une vraie conversation. En bulu, la salutation tient compte du moment de la journée et du respect dû à l'aîné. Aujourd'hui, tu apprends ces gestes simples.",
+        "activities": [
+          {
+            "title": "Activité 1 — Choisir la bonne formule",
+            "instruction": "Pour chaque situation (matin, soir, aîné, cadet), choisis la formule appropriée parmi celles vues en classe."
+          },
+          {
+            "title": "Activité 2 — Mini-saynette",
+            "instruction": "Avec un camarade, joue une rencontre : salutation → présentation → congé. 4 répliques chacun."
+          },
+          {
+            "title": "Activité 3 — Carnet",
+            "instruction": "Recopie dans ton cahier 5 formules que tu t'engages à utiliser à la maison cette semaine."
+          }
+        ],
+        "memo": "Saluer en bulu, c'est tenir compte du moment et du statut. On ne s'adresse pas à un aîné comme à un camarade. Les formules de prise de congé sont aussi importantes que celles d'accueil."
+      }
+    },
+    {
+      "id": "VII-2",
+      "code": "VII.2",
+      "module": "M7-quotidien-1",
+      "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+      "title": "À la maison : objets et activités",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Nommer 8 à 10 objets et lieux courants de la maison en bulu",
+        "Décrire en une phrase une activité domestique simple",
+        "Comprendre une consigne courte donnée à la maison"
+      ],
+      "vocabulary": [
+        {
+          "id": "fa9c810fafa9",
+          "audio": "fa9c810fafa99d57f6292aea7c048c80.mp3",
+          "langText": "èsɔ́ énə̀ ə̰̀dzálán à mə́ndíp",
+          "frenchText": "la calebasse est pleine d'eau",
+          "langWord": "ə̰̀dzálán",
+          "frenchWord": "plein",
+          "pos": "adj"
+        },
+        {
+          "id": "5d094a14d1d9",
+          "audio": "5d094a14d1d9b4bd39753647829b0efd.mp3",
+          "langText": "mə́ndíp mā mə́nə̀ àvə́p",
+          "frenchText": "cette eau-ci est froide",
+          "langWord": "àvə́p",
+          "frenchWord": "froid",
+          "pos": "adj"
+        },
+        {
+          "id": "94bd00eab3ae",
+          "audio": "94bd00eab3ae787dc01c7dd1baa185ff.mp3",
+          "langText": "mə́ndíp mā mə́nə̀ àyóŋ",
+          "frenchText": "cette eau-là est chaude",
+          "langWord": "àyóŋ",
+          "frenchWord": "chaud",
+          "pos": "adj"
+        },
+        {
+          "id": "888cbaee014d",
+          "audio": "888cbaee014df553dbf47236bf14170c.mp3",
+          "langText": "mà kə́ lóm mɔ́n á-kə̀-dzə́ŋ mə̀ndíp",
+          "frenchText": "j'ai envoyer l'enfant chercher de l'eau",
+          "langWord": "ə́ló̰m",
+          "frenchWord": "envoyer",
+          "pos": "v"
+        },
+        {
+          "id": "21b4d4b69b85",
+          "audio": "21b4d4b69b851124eea86f8bee50902a.mp3",
+          "langText": "mìngá àsò mə̀ndíp ə́vyə̄k",
+          "frenchText": "la femme verse de l'eau dans la calebasse",
+          "langWord": "ə́sō",
+          "frenchWord": "verser",
+          "pos": "v"
+        },
+        {
+          "id": "633c9b56a33c",
+          "audio": "633c9b56a33c73a988525f4c1eac9bc2.mp3",
+          "langText": "bî: ɲú mə̀ndíp",
+          "frenchText": "nous boirons de l'eau",
+          "langWord": "ə́ɲú",
+          "frenchWord": "boire",
+          "pos": "v"
+        },
+        {
+          "id": "918d1fab89bd",
+          "audio": "918d1fab89bde0da7b4b12ddb2627f49.mp3",
+          "langText": "à vúndù ndúàn",
+          "frenchText": "ils soufflent sur le feu",
+          "langWord": "ə́vúndù",
+          "frenchWord": "souffler",
+          "pos": "v"
+        },
+        {
+          "id": "8640b7f51259",
+          "audio": "8640b7f51259c8f9ac1b58d8f5de3b05.mp3",
+          "langText": "òyɔ́",
+          "frenchText": "dormir",
+          "langWord": "òyɔ́",
+          "frenchWord": "dormir",
+          "pos": "v"
+        },
+        {
+          "id": "3152b612d6ab",
+          "audio": "3152b612d6abcc4094f9b121dd3bd405.mp3",
+          "langText": "mòt à wé tsít nâ: á dì",
+          "frenchText": "l'homme (être humain) tue les animaux pour les manger",
+          "langWord": "ə́wé",
+          "frenchWord": "tuer",
+          "pos": "v"
+        },
+        {
+          "id": "7f364742fb73",
+          "audio": "7f364742fb739347e23e9b42ac253ea8.mp3",
+          "langText": "mə̀ndím mə́nə̀ ə́mvē èté",
+          "frenchText": "il y a de l'eau dans la calebasse",
+          "langWord": "étéwè",
+          "frenchWord": "",
+          "pos": "prep"
+        },
+        {
+          "id": "8bad932f8cd3",
+          "audio": "8bad932f8cd379076087782255e25b51.mp3",
+          "langText": "à tɔ̀ɔ́ bèbè ǹdúàn",
+          "frenchText": "il est près du feu",
+          "langWord": "bèbè",
+          "frenchWord": "près",
+          "pos": "prep"
+        },
+        {
+          "id": "c4ee5d6d8fab",
+          "audio": "c4ee5d6d8fab059a93fcf14ea68cf465.mp3",
+          "langText": "byá kə́ ɲú àbwì mə́ndíp",
+          "frenchText": "nous avons beacoup d'eau",
+          "langWord": "àbwì",
+          "frenchWord": "beaucoup",
+          "pos": ""
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez : « citez 5 objets que vous voyez chez vous tous les matins ». Recueillez en français au tableau."
+          },
+          {
+            "title": "Vocabulaire (15 min)",
+            "instruction": "Présentez 8 à 10 mots bulu : maison, cuisine, eau, feu, balai, etc. Pour chaque mot, prononcez deux fois, faites répéter, écrivez au tableau en AGLC."
+          },
+          {
+            "title": "Activités domestiques (15 min)",
+            "instruction": "Reliez chaque objet à un verbe d'action : balai → balayer, feu → cuisiner, eau → laver. Faites construire des couples."
+          },
+          {
+            "title": "Production de phrases (15 min)",
+            "instruction": "Modèle : « je [verbe] [objet] dans [lieu] ». Chaque élève produit 3 phrases simples, les présente à son voisin."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Tour de table : chaque élève dit une activité qu'il fait vraiment chez lui. Encouragez l'usage du bulu réel."
+          }
+        ],
+        "freedom": "Adaptez à la réalité de vos élèves : urbain/rural, maison traditionnelle/moderne. Le bulu n'a pas une seule manière de dire « maison » selon le contexte. Soyez à l'écoute.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Ta maison est pleine de mots à découvrir. Aujourd'hui, tu vas apprendre à nommer ce qui t'entoure quand tu rentres chez toi, et à décrire ce que tu y fais.",
+        "activities": [
+          {
+            "title": "Activité 1 — Étiqueter",
+            "instruction": "Sur le dessin de la maison fourni, écris en bulu le nom de chaque objet ou lieu indiqué."
+          },
+          {
+            "title": "Activité 2 — Apparier",
+            "instruction": "Relie chaque objet (colonne A) à l'action qui lui correspond (colonne B)."
+          },
+          {
+            "title": "Activité 3 — Mes 3 phrases",
+            "instruction": "Écris 3 phrases vraies sur ce que tu fais à la maison, en utilisant les mots du jour."
+          }
+        ],
+        "memo": "Le vocabulaire de la maison est une porte d'entrée naturelle vers le bulu de tous les jours. Apprends d'abord les mots que tu peux réutiliser dès ce soir."
+      }
+    },
+    {
+      "id": "VII-3",
+      "code": "VII.3",
+      "module": "M7-quotidien-1",
+      "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+      "title": "Au marché : acheter et vendre",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Demander un prix et nommer 6 à 8 produits courants en bulu",
+        "Comprendre une réponse de marchand (prix, quantité)",
+        "Conduire un mini-dialogue d'achat de bout en bout"
+      ],
+      "vocabulary": [
+        {
+          "id": "0f19198b9e18",
+          "audio": "0f19198b9e18fd7e4f2c69fc321575cb.mp3",
+          "langText": "à mátə̀ ésá wě",
+          "frenchText": "il craint beaucoup son père",
+          "langWord": "ə́mátə̀",
+          "frenchWord": "craindre",
+          "pos": "v"
+        },
+        {
+          "id": "3d72e590e880",
+          "audio": "3d72e590e880a9f1ef90c691b11e6706.mp3",
+          "langText": "à ɲə́ʔə̀ mɔ́nə́ wě àbwì",
+          "frenchText": "il aime beaucoup son enfant",
+          "langWord": "èdìŋ",
+          "frenchWord": "aimer",
+          "pos": "v"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez aux élèves : « quand êtes-vous allé(e) au marché pour la dernière fois ? Avez-vous parlé en français ou en langue ? ». Recueillez quelques témoignages."
+          },
+          {
+            "title": "Vocabulaire produits (15 min)",
+            "instruction": "Présentez 6 à 8 noms de produits du marché (banane plantain, huile, tomate, poisson, pain, etc.). Prononcez et faites répéter. Écrivez en AGLC au tableau."
+          },
+          {
+            "title": "Vocabulaire transaction (15 min)",
+            "instruction": "Présentez les formules : « combien ça coûte ? », « c'est trop cher », « je prends », « merci ». Modélisez avec un élève."
+          },
+          {
+            "title": "Jeu de rôle (15 min)",
+            "instruction": "Organisez un mini-marché : 4 vendeurs, le reste de la classe achète. Chaque transaction dure ~1 min. Tournez les rôles."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Bilan : qu'est-ce qui a été facile, difficile ? Recensez les formules à retenir absolument."
+          }
+        ],
+        "freedom": "Le marché est un terrain extraordinaire pour la langue vivante. Si vous le pouvez, organisez une vraie sortie ; à défaut, demandez aux élèves d'enregistrer (audio) un échange réel avec accord, et apportez-le en classe la séance d'après.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Au marché, on parle, on négocie, on rit. C'est l'un des lieux où le bulu est le plus vivant. Aujourd'hui, tu vas apprendre à acheter quelque chose en bulu de bout en bout.",
+        "activities": [
+          {
+            "title": "Activité 1 — Liste de courses",
+            "instruction": "Choisis 5 produits que tu veux « acheter » et écris leur nom en bulu."
+          },
+          {
+            "title": "Activité 2 — Demander le prix",
+            "instruction": "Pour chaque produit, écris la phrase « combien coûte X ? » en bulu (modèle au tableau)."
+          },
+          {
+            "title": "Activité 3 — Mini-dialogue",
+            "instruction": "Avec un camarade, joue un échange : tu demandes, il/elle répond, tu décides. 6 répliques au total."
+          }
+        ],
+        "memo": "Au marché, la politesse compte autant que le prix. Saluer le vendeur avant de demander, c'est déjà une marque de respect qu'on apprend dès l'enfance."
+      }
+    },
+    {
+      "id": "VIII-1",
+      "code": "VIII.1",
+      "module": "M8-quotidien-2",
+      "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
       "title": "Comparer et opposer",
       "duration": "60 min",
       "level": "3e",
@@ -2191,10 +2898,10 @@
       }
     },
     {
-      "id": "VI-5",
-      "code": "VI.5",
-      "module": "M6-phrase",
-      "moduleTitle": "Module VI — La phrase",
+      "id": "VIII-2",
+      "code": "VIII.2",
+      "module": "M8-quotidien-2",
+      "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
       "title": "Petits récits : raconter une scène",
       "duration": "60 min",
       "level": "3e",
@@ -2324,10 +3031,10 @@
       }
     },
     {
-      "id": "VI-6",
-      "code": "VI.6",
-      "module": "M6-phrase",
-      "moduleTitle": "Module VI — La phrase",
+      "id": "VIII-3",
+      "code": "VIII.3",
+      "module": "M8-quotidien-2",
+      "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
       "title": "Demander, répondre, dialoguer",
       "duration": "60 min",
       "level": "3e",
@@ -2458,14 +3165,17 @@
     }
   ],
   "stats": {
-    "total_lessons": 19,
+    "total_lessons": 25,
     "by_module": {
+      "M1-diversite": 3,
       "M2-segmentaux": 2,
       "M3-suprasegmentaux": 4,
       "M4-syntagme-nominal": 3,
       "M5-syntagme-verbal": 4,
-      "M6-phrase": 6
+      "M6-phrase": 3,
+      "M7-quotidien-1": 3,
+      "M8-quotidien-2": 3
     },
-    "vocabulary_items": 144
+    "vocabulary_items": 182
   }
 }

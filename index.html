@@ -223,20 +223,30 @@
         <div>
           <h1 class="font-serif text-3xl mb-2">Leçons — Bulu</h1>
           <p class="text-ink-600 max-w-3xl">
-            Dix-neuf leçons clé-en-main, ventilées dans les cinq modules du programme MINESEC.
-            Chaque fiche fournit un plan en cinq étapes pour l'enseignant et un cahier d'activités
-            pour l'élève. Le matériel s'appuie strictement sur le corpus ALCAM bulu.
+            Vingt-cinq leçons clé-en-main, ventilées dans les huit modules
+            des programmes officiels MINESEC : Langues nationales 6<sup>e</sup>/5<sup>e</sup>
+            (Modules I à VI, 50 h annuelles, 2 h hebdomadaires) et Langues nationales
+            4<sup>e</sup>/3<sup>e</sup> (Modules VII et VIII, 25 h annuelles, 1 h hebdomadaire).
+            Chaque fiche fournit un plan en cinq étapes pour l'enseignant et un cahier
+            d'activités pour l'élève, à partir du corpus ALCAM bulu.
           </p>
         </div>
         <div class="flex items-center gap-2">
           <label class="text-sm text-ink-500" for="lecons-filter">Module</label>
           <select id="lecons-filter" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm">
             <option value="">Tous les modules</option>
-            <option value="M2-segmentaux">II — Productions segmentales</option>
-            <option value="M3-suprasegmentaux">III — Suprasegmentaux</option>
-            <option value="M4-syntagme-nominal">IV — Syntagme nominal</option>
-            <option value="M5-syntagme-verbal">V — Syntagme verbal</option>
-            <option value="M6-phrase">VI — La phrase</option>
+            <optgroup label="Classes de 6e et 5e">
+              <option value="M1-diversite">I — Diversité linguistique camerounaise (6e)</option>
+              <option value="M2-segmentaux">II — Productions segmentales (6e)</option>
+              <option value="M3-suprasegmentaux">III — Suprasegmentaux (6e)</option>
+              <option value="M4-syntagme-nominal">IV — Syntagme nominal (5e)</option>
+              <option value="M5-syntagme-verbal">V — Syntagme verbal (5e)</option>
+              <option value="M6-phrase">VI — La phrase (5e)</option>
+            </optgroup>
+            <optgroup label="Classes de 4e et 3e">
+              <option value="M7-quotidien-1">VII — Gestion du quotidien Niveau 1 (4e)</option>
+              <option value="M8-quotidien-2">VIII — Gestion du quotidien Niveau 2 (3e)</option>
+            </optgroup>
           </select>
         </div>
       </div>

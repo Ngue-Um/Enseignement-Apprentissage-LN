@@ -26,11 +26,14 @@ const state = {
 };
 
 const MODULES = {
-  'M2-segmentaux':       { num: 'II',  label: 'Productions segmentales' },
-  'M3-suprasegmentaux':  { num: 'III', label: 'Suprasegmentaux' },
-  'M4-syntagme-nominal': { num: 'IV',  label: 'Syntagme nominal' },
-  'M5-syntagme-verbal':  { num: 'V',   label: 'Syntagme verbal' },
-  'M6-phrase':           { num: 'VI',  label: 'La phrase' },
+  'M1-diversite':        { num: 'I',    label: 'Diversité linguistique camerounaise' },
+  'M2-segmentaux':       { num: 'II',   label: 'Productions segmentales' },
+  'M3-suprasegmentaux':  { num: 'III',  label: 'Suprasegmentaux' },
+  'M4-syntagme-nominal': { num: 'IV',   label: 'Syntagme nominal' },
+  'M5-syntagme-verbal':  { num: 'V',    label: 'Syntagme verbal' },
+  'M6-phrase':           { num: 'VI',   label: 'La phrase' },
+  'M7-quotidien-1':      { num: 'VII',  label: 'Gestion du quotidien — Niveau 1' },
+  'M8-quotidien-2':      { num: 'VIII', label: 'Gestion du quotidien — Niveau 2' },
 };
 
 const EXO_LABELS = {
@@ -305,11 +308,14 @@ function renderAPropos() {
 /* ---------- Leçons ---------- */
 
 const MODULE_ORDER = [
+  'M1-diversite',
   'M2-segmentaux',
   'M3-suprasegmentaux',
   'M4-syntagme-nominal',
   'M5-syntagme-verbal',
   'M6-phrase',
+  'M7-quotidien-1',
+  'M8-quotidien-2',
 ];
 
 function renderLecons() {

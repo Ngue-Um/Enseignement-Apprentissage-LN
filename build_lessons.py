@@ -92,6 +92,189 @@ def trim(it):
 # ----------------------------------------------------------------------
 
 LESSONS_PLAN = [
+    # === Module I — Diversité linguistique camerounaise (6e, 15h) =========
+    {
+        "id": "I-1",
+        "code": "I.1",
+        "module": "M1-diversite",
+        "moduleTitle": "Module I — Diversité linguistique camerounaise",
+        "title": "Le Cameroun, mosaïque de 239 langues",
+        "duration": "60 min",
+        "level": "6e",
+        "objectives": [
+            "Prendre conscience de la diversité linguistique du Cameroun",
+            "Situer quelques grandes familles de langues sur la carte",
+            "Adopter une attitude de respect envers toutes les langues du pays",
+        ],
+        "filter": dict(max_tokens=2, has_french_only=True),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Demandez aux élèves combien de langues ils pensent qu'on parle "
+             "au Cameroun. Recueillez les estimations au tableau. Annoncez "
+             "le chiffre officiel : environ 239 langues vivantes (ALCAM)."),
+            ("Carte au tableau (15 min)",
+             "Tracez (ou affichez) une carte simplifiée des grandes zones "
+             "linguistiques : Bantu (Sud, Centre, Est, Littoral), Soudaniques "
+             "(Nord), Adamawa-Oubanguiennes, Tchadiques. Montrez qu'aucune "
+             "région n'est mono-langue."),
+            ("Témoignages (15 min)",
+             "Faites circuler la parole : chaque élève dit la (ou les) "
+             "langue(s) parlée(s) à la maison. Notez la liste collective "
+             "au tableau. Valorisez la diversité présente dans la classe."),
+            ("Réflexion guidée (15 min)",
+             "Question : pourquoi enseigne-t-on les langues nationales à "
+             "l'école aujourd'hui ? Faites émerger : transmission, "
+             "patrimoine, citoyenneté, identité."),
+            ("Clôture (10 min)",
+             "Bilan collectif : « ce que je retiens, c'est… ». Annoncez la "
+             "prochaine leçon : la place du bulu."),
+        ],
+        "freedom": (
+            "Si la classe est multiethnique (souvent le cas), invitez des "
+            "élèves à dire bonjour dans leur langue. Variante : faites "
+            "préparer une mini-affiche par binôme à exposer en salle."
+        ),
+        "student_intro": (
+            "Le Cameroun parle environ 239 langues. C'est une richesse. "
+            "Aujourd'hui, tu découvres cette mosaïque et la place de ta "
+            "propre langue dans ce paysage."
+        ),
+        "student_activities": [
+            ("Activité 1 — Estimer puis vérifier",
+             "Avant la leçon, écris ton estimation du nombre de langues du "
+             "Cameroun. À la fin, compare avec le chiffre réel."),
+            ("Activité 2 — Ma langue, mes langues",
+             "Liste les langues parlées chez toi. Souligne celle que tu "
+             "utilises le plus souvent."),
+            ("Activité 3 — Carte mentale",
+             "Dessine une carte mentale : « langues du Cameroun » au centre, "
+             "et autour les grandes familles vues en classe."),
+        ],
+        "memo": (
+            "Le Cameroun est l'un des pays les plus plurilingues d'Afrique : "
+            "239 langues environ, regroupées en 4 grandes familles. Aucune "
+            "langue n'est plus légitime qu'une autre."
+        ),
+    },
+    {
+        "id": "I-2",
+        "code": "I.2",
+        "module": "M1-diversite",
+        "moduleTitle": "Module I — Diversité linguistique camerounaise",
+        "title": "Identifier la place du bulu",
+        "duration": "60 min",
+        "level": "6e",
+        "objectives": [
+            "Situer le bulu dans la famille bantu (zone A.70)",
+            "Reconnaître quelques langues apparentées (ewondo, fang, eton)",
+            "Localiser l'aire bulu sur la carte du Cameroun",
+        ],
+        "filter": dict(max_tokens=2, has_french_only=True),
+        "teacher_steps": [
+            ("Rappel (5 min)",
+             "Reprenez avec la classe les 4 grandes familles vues en I.1. "
+             "Demandez : « à laquelle pensez-vous que le bulu appartient ? »."),
+            ("Présentation (15 min)",
+             "Le bulu est une langue bantu (zone A.70 selon la classification "
+             "Guthrie). Au tableau, dessinez un arbre : Bantu → A → A.70 → "
+             "bulu, ewondo, fang, eton. Faites observer la proximité."),
+            ("Carte régionale (15 min)",
+             "Affichez une carte du Sud-Cameroun. Délimitez l'aire bulu "
+             "(régions du Sud et du Centre, autour de Sangmélima, Ebolowa). "
+             "Faites placer 3 villes par les élèves au tableau."),
+            ("Comparaison guidée (15 min)",
+             "Comparez 5 mots dans les 4 langues sœurs (eau, maison, enfant, "
+             "manger, soleil). Faites observer les ressemblances."),
+            ("Clôture (10 min)",
+             "Bilan : « le bulu n'est pas isolé, il est entouré de langues "
+             "cousines ». Annoncez la prochaine leçon."),
+        ],
+        "freedom": (
+            "Si vous avez en classe des élèves locuteurs d'ewondo, fang ou "
+            "eton, sollicitez-les pour les comparaisons. C'est plus vivant "
+            "qu'un cours magistral."
+        ),
+        "student_intro": (
+            "Le bulu fait partie de la famille bantu, au sud du Cameroun. "
+            "Il a des langues sœurs très proches : ewondo, fang, eton. "
+            "Aujourd'hui, tu apprends à le situer."
+        ),
+        "student_activities": [
+            ("Activité 1 — Famille",
+             "Complète l'arbre : Bantu → A → A.70 → … (cite 4 langues)."),
+            ("Activité 2 — Carte",
+             "Sur la carte du Cameroun, colorie l'aire bulu en orange clair."),
+            ("Activité 3 — Comparer",
+             "Pour les 5 mots du jour, entoure ce qui se ressemble entre "
+             "le bulu et l'ewondo (ou fang)."),
+        ],
+        "memo": (
+            "Le bulu appartient à la zone bantu A.70 (classification Guthrie). "
+            "Ses langues sœurs sont l'ewondo, le fang et l'eton."
+        ),
+    },
+    {
+        "id": "I-3",
+        "code": "I.3",
+        "module": "M1-diversite",
+        "moduleTitle": "Module I — Diversité linguistique camerounaise",
+        "title": "Langue, dialecte, langue officielle",
+        "duration": "60 min",
+        "level": "6e",
+        "objectives": [
+            "Distinguer langue, dialecte et variété régionale",
+            "Identifier les deux langues officielles du Cameroun",
+            "Comprendre le statut des langues nationales à l'école",
+        ],
+        "filter": dict(max_tokens=2, has_french_only=True),
+        "teacher_steps": [
+            ("Accroche (5 min)",
+             "Posez la question piège : « le bulu est-il une langue ou un "
+             "dialecte ? ». Recueillez les réponses, sans trancher tout de "
+             "suite."),
+            ("Définitions (15 min)",
+             "Au tableau : LANGUE = système autonome, intercompréhension "
+             "limitée avec ses voisines. DIALECTE = variété régionale d'une "
+             "même langue. LANGUE OFFICIELLE = langue de l'administration. "
+             "Tranchez : le bulu est une LANGUE à part entière."),
+            ("Statuts au Cameroun (15 min)",
+             "Expliquez : 2 langues officielles (français, anglais), "
+             "239 langues nationales protégées par la Constitution (art. 1 "
+             "al. 3, révision 1996). Affichez les deux concepts au tableau."),
+            ("Étude de cas (15 min)",
+             "Faites lire (en groupe) un court extrait de loi ou de circulaire "
+             "MINESEC mentionnant l'enseignement des langues nationales. "
+             "Faites repérer le mot « national »."),
+            ("Clôture (10 min)",
+             "Synthèse : un mot pour chacun. « À retenir : … »."),
+        ],
+        "freedom": (
+            "Si le débat « langue ou dialecte » prend, ne le coupez pas : "
+            "c'est un excellent point d'entrée vers la sociolinguistique. "
+            "Vous pouvez faire émerger la dimension politique du choix."
+        ),
+        "student_intro": (
+            "Tout le monde parle une langue. Mais qu'est-ce qui fait qu'on "
+            "appelle quelque chose une langue, un dialecte, ou une langue "
+            "officielle ? Aujourd'hui, on clarifie."
+        ),
+        "student_activities": [
+            ("Activité 1 — Définir",
+             "Recopie les trois définitions vues au tableau."),
+            ("Activité 2 — Classer",
+             "Pour chaque exemple donné par le professeur, dis si c'est une "
+             "LANGUE, un DIALECTE, ou une LANGUE OFFICIELLE."),
+            ("Activité 3 — Réfléchir",
+             "En 3 lignes, explique pourquoi il est important d'enseigner "
+             "les langues nationales à l'école."),
+        ],
+        "memo": (
+            "Au Cameroun, 2 langues officielles (français, anglais) "
+            "coexistent avec ~239 langues nationales reconnues. "
+            "Le bulu est une langue nationale à part entière, pas un dialecte."
+        ),
+    },
+
     # === Module II — Productions segmentales ============================
     {
         "id": "II-1",
@@ -337,7 +520,7 @@ LESSONS_PLAN = [
         "moduleTitle": "Module III — Suprasegmentaux",
         "title": "Paires aux tons opposés",
         "duration": "60 min",
-        "level": "5e",
+        "level": "6e",
         "objectives": [
             "Repérer que deux mots de même squelette consonantique peuvent "
             "différer uniquement par les tons",
@@ -396,7 +579,7 @@ LESSONS_PLAN = [
         "moduleTitle": "Module III — Suprasegmentaux",
         "title": "Rythme et longueur des syllabes",
         "duration": "60 min",
-        "level": "5e",
+        "level": "6e",
         "objectives": [
             "Repérer les voyelles longues (notées par redoublement ou « : »)",
             "Identifier les syllabes accentuées dans une phrase courte",
@@ -564,7 +747,7 @@ LESSONS_PLAN = [
         "moduleTitle": "Module IV — Syntagme nominal",
         "title": "Décrire avec des adjectifs",
         "duration": "60 min",
-        "level": "4e",
+        "level": "5e",
         "objectives": [
             "Utiliser les adjectifs courants (grand, petit, beau, gros)",
             "Faire l'accord de l'adjectif avec le nom",
@@ -677,7 +860,7 @@ LESSONS_PLAN = [
         "moduleTitle": "Module V — Syntagme verbal",
         "title": "La famille et les personnes",
         "duration": "60 min",
-        "level": "6e",
+        "level": "5e",
         "objectives": [
             "Nommer les membres de la famille proche",
             "Comprendre une phrase parlant de quelqu'un",
@@ -731,7 +914,7 @@ LESSONS_PLAN = [
         "moduleTitle": "Module V — Syntagme verbal",
         "title": "Les animaux du village et de la forêt",
         "duration": "60 min",
-        "level": "6e",
+        "level": "5e",
         "objectives": [
             "Nommer 6 animaux courants",
             "Distinguer animaux domestiques et sauvages",
@@ -835,7 +1018,7 @@ LESSONS_PLAN = [
         "moduleTitle": "Module VI — La phrase",
         "title": "Phrases existentielles : « il y a »",
         "duration": "60 min",
-        "level": "4e",
+        "level": "5e",
         "objectives": [
             "Reconnaître la structure « il y a » en bulu",
             "Identifier le sujet et le complément de lieu",
@@ -887,7 +1070,7 @@ LESSONS_PLAN = [
         "moduleTitle": "Module VI — La phrase",
         "title": "Décrire un objet par sa qualité",
         "duration": "60 min",
-        "level": "4e",
+        "level": "5e",
         "objectives": [
             "Construire une phrase « X est Y » (Y = adjectif)",
             "Faire l'accord adjectif/nom",
@@ -939,7 +1122,7 @@ LESSONS_PLAN = [
         "moduleTitle": "Module VI — La phrase",
         "title": "Localiser : ici, là, là-bas",
         "duration": "60 min",
-        "level": "4e",
+        "level": "5e",
         "objectives": [
             "Comprendre le système des démonstratifs spatiaux",
             "Distinguer « ici », « là », « là-bas »",
@@ -983,11 +1166,195 @@ LESSONS_PLAN = [
             "près de moi, près de toi, loin de tous les deux."
         ),
     },
+    # === Module VII — Gestion du quotidien Niveau 1 (4e, 25h) ============
     {
-        "id": "VI-4",
-        "code": "VI.4",
-        "module": "M6-phrase",
-        "moduleTitle": "Module VI — La phrase",
+        "id": "VII-1",
+        "code": "VII.1",
+        "module": "M7-quotidien-1",
+        "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+        "title": "Saluer, se présenter, prendre congé",
+        "duration": "60 min",
+        "level": "4e",
+        "objectives": [
+            "Échanger des salutations en bulu adaptées au moment de la journée",
+            "Se présenter brièvement (nom, âge, lieu d'habitation)",
+            "Clore un échange par une formule de prise de congé",
+        ],
+        "filter": dict(fr_pattern=r"\b(bonjour|bonsoir|salut|au revoir|merci|s'il te plaît|comment t'appelles|je m'appelle)\b", max_n=10),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Saluez la classe en bulu (mbolo). Faites répéter. Demandez aux "
+             "élèves de saluer leur voisin en bulu sans aucune autre instruction. "
+             "Observez les hésitations."),
+            ("Présentation des formules (15 min)",
+             "Au tableau, listez les formules de salutation selon le moment "
+             "de la journée et le statut (aîné/cadet). Faites observer que la "
+             "politesse passe aussi par la posture, pas seulement par les mots."),
+            ("Modélisation (15 min)",
+             "Jouez avec un élève une mini-saynette : se croiser, saluer, "
+             "demander des nouvelles, prendre congé. Décomposez chaque réplique."),
+            ("Pratique en binôme (15 min)",
+             "Chaque élève joue la saynette avec son voisin. Variantes : matin/"
+             "soir, ami/aîné. Circulez et corrigez la prononciation et la posture."),
+            ("Clôture (10 min)",
+             "Trois binômes volontaires passent devant la classe. La classe "
+             "valide ou suggère. Bilan : « ce que j'ai appris à dire ». "),
+        ],
+        "freedom": (
+            "Adaptez aux usages locaux : si vos élèves ont une variante "
+            "particulière (régionale, familiale), valorisez-la. Vous pouvez "
+            "filmer une saynette et la rejouer à la séance suivante."
+        ),
+        "student_intro": (
+            "Saluer, c'est le premier pas vers une vraie conversation. En "
+            "bulu, la salutation tient compte du moment de la journée et du "
+            "respect dû à l'aîné. Aujourd'hui, tu apprends ces gestes simples."
+        ),
+        "student_activities": [
+            ("Activité 1 — Choisir la bonne formule",
+             "Pour chaque situation (matin, soir, aîné, cadet), choisis la "
+             "formule appropriée parmi celles vues en classe."),
+            ("Activité 2 — Mini-saynette",
+             "Avec un camarade, joue une rencontre : salutation → présentation "
+             "→ congé. 4 répliques chacun."),
+            ("Activité 3 — Carnet",
+             "Recopie dans ton cahier 5 formules que tu t'engages à utiliser "
+             "à la maison cette semaine."),
+        ],
+        "memo": (
+            "Saluer en bulu, c'est tenir compte du moment et du statut. "
+            "On ne s'adresse pas à un aîné comme à un camarade. "
+            "Les formules de prise de congé sont aussi importantes que celles "
+            "d'accueil."
+        ),
+    },
+    {
+        "id": "VII-2",
+        "code": "VII.2",
+        "module": "M7-quotidien-1",
+        "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+        "title": "À la maison : objets et activités",
+        "duration": "60 min",
+        "level": "4e",
+        "objectives": [
+            "Nommer 8 à 10 objets et lieux courants de la maison en bulu",
+            "Décrire en une phrase une activité domestique simple",
+            "Comprendre une consigne courte donnée à la maison",
+        ],
+        "filter": dict(fr_pattern=r"\b(maison|cuisine|chambre|cour|porte|table|chaise|lit|eau|feu|balayer|cuisiner|laver|dormir|manger)\b", max_n=12),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Demandez : « citez 5 objets que vous voyez chez vous tous les "
+             "matins ». Recueillez en français au tableau."),
+            ("Vocabulaire (15 min)",
+             "Présentez 8 à 10 mots bulu : maison, cuisine, eau, feu, balai, "
+             "etc. Pour chaque mot, prononcez deux fois, faites répéter, "
+             "écrivez au tableau en AGLC."),
+            ("Activités domestiques (15 min)",
+             "Reliez chaque objet à un verbe d'action : balai → balayer, "
+             "feu → cuisiner, eau → laver. Faites construire des couples."),
+            ("Production de phrases (15 min)",
+             "Modèle : « je [verbe] [objet] dans [lieu] ». Chaque élève "
+             "produit 3 phrases simples, les présente à son voisin."),
+            ("Clôture (10 min)",
+             "Tour de table : chaque élève dit une activité qu'il fait "
+             "vraiment chez lui. Encouragez l'usage du bulu réel."),
+        ],
+        "freedom": (
+            "Adaptez à la réalité de vos élèves : urbain/rural, maison "
+            "traditionnelle/moderne. Le bulu n'a pas une seule manière de "
+            "dire « maison » selon le contexte. Soyez à l'écoute."
+        ),
+        "student_intro": (
+            "Ta maison est pleine de mots à découvrir. Aujourd'hui, tu vas "
+            "apprendre à nommer ce qui t'entoure quand tu rentres chez toi, "
+            "et à décrire ce que tu y fais."
+        ),
+        "student_activities": [
+            ("Activité 1 — Étiqueter",
+             "Sur le dessin de la maison fourni, écris en bulu le nom de "
+             "chaque objet ou lieu indiqué."),
+            ("Activité 2 — Apparier",
+             "Relie chaque objet (colonne A) à l'action qui lui correspond "
+             "(colonne B)."),
+            ("Activité 3 — Mes 3 phrases",
+             "Écris 3 phrases vraies sur ce que tu fais à la maison, en "
+             "utilisant les mots du jour."),
+        ],
+        "memo": (
+            "Le vocabulaire de la maison est une porte d'entrée naturelle "
+            "vers le bulu de tous les jours. Apprends d'abord les mots que "
+            "tu peux réutiliser dès ce soir."
+        ),
+    },
+    {
+        "id": "VII-3",
+        "code": "VII.3",
+        "module": "M7-quotidien-1",
+        "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+        "title": "Au marché : acheter et vendre",
+        "duration": "60 min",
+        "level": "4e",
+        "objectives": [
+            "Demander un prix et nommer 6 à 8 produits courants en bulu",
+            "Comprendre une réponse de marchand (prix, quantité)",
+            "Conduire un mini-dialogue d'achat de bout en bout",
+        ],
+        "filter": dict(fr_pattern=r"\b(combien|prix|cher|cher|acheter|vendre|argent|marché|francs|donner|prendre|peu|beaucoup)\b", max_n=12),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Demandez aux élèves : « quand êtes-vous allé(e) au marché pour "
+             "la dernière fois ? Avez-vous parlé en français ou en langue ? ». "
+             "Recueillez quelques témoignages."),
+            ("Vocabulaire produits (15 min)",
+             "Présentez 6 à 8 noms de produits du marché (banane plantain, "
+             "huile, tomate, poisson, pain, etc.). Prononcez et faites "
+             "répéter. Écrivez en AGLC au tableau."),
+            ("Vocabulaire transaction (15 min)",
+             "Présentez les formules : « combien ça coûte ? », « c'est trop "
+             "cher », « je prends », « merci ». Modélisez avec un élève."),
+            ("Jeu de rôle (15 min)",
+             "Organisez un mini-marché : 4 vendeurs, le reste de la classe "
+             "achète. Chaque transaction dure ~1 min. Tournez les rôles."),
+            ("Clôture (10 min)",
+             "Bilan : qu'est-ce qui a été facile, difficile ? Recensez les "
+             "formules à retenir absolument."),
+        ],
+        "freedom": (
+            "Le marché est un terrain extraordinaire pour la langue vivante. "
+            "Si vous le pouvez, organisez une vraie sortie ; à défaut, "
+            "demandez aux élèves d'enregistrer (audio) un échange réel "
+            "avec accord, et apportez-le en classe la séance d'après."
+        ),
+        "student_intro": (
+            "Au marché, on parle, on négocie, on rit. C'est l'un des lieux "
+            "où le bulu est le plus vivant. Aujourd'hui, tu vas apprendre "
+            "à acheter quelque chose en bulu de bout en bout."
+        ),
+        "student_activities": [
+            ("Activité 1 — Liste de courses",
+             "Choisis 5 produits que tu veux « acheter » et écris leur nom "
+             "en bulu."),
+            ("Activité 2 — Demander le prix",
+             "Pour chaque produit, écris la phrase « combien coûte X ? » "
+             "en bulu (modèle au tableau)."),
+            ("Activité 3 — Mini-dialogue",
+             "Avec un camarade, joue un échange : tu demandes, il/elle "
+             "répond, tu décides. 6 répliques au total."),
+        ],
+        "memo": (
+            "Au marché, la politesse compte autant que le prix. Saluer le "
+            "vendeur avant de demander, c'est déjà une marque de respect "
+            "qu'on apprend dès l'enfance."
+        ),
+    },
+
+    # === Module VIII — Gestion du quotidien Niveau 2 (3e, 25h) ============
+    {
+        "id": "VIII-1",
+        "code": "VIII.1",
+        "module": "M8-quotidien-2",
+        "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
         "title": "Comparer et opposer",
         "duration": "60 min",
         "level": "3e",
@@ -1038,10 +1405,10 @@ LESSONS_PLAN = [
         ),
     },
     {
-        "id": "VI-5",
-        "code": "VI.5",
-        "module": "M6-phrase",
-        "moduleTitle": "Module VI — La phrase",
+        "id": "VIII-2",
+        "code": "VIII.2",
+        "module": "M8-quotidien-2",
+        "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
         "title": "Petits récits : raconter une scène",
         "duration": "60 min",
         "level": "3e",
@@ -1090,10 +1457,10 @@ LESSONS_PLAN = [
         ),
     },
     {
-        "id": "VI-6",
-        "code": "VI.6",
-        "module": "M6-phrase",
-        "moduleTitle": "Module VI — La phrase",
+        "id": "VIII-3",
+        "code": "VIII.3",
+        "module": "M8-quotidien-2",
+        "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
         "title": "Demander, répondre, dialoguer",
         "duration": "60 min",
         "level": "3e",
