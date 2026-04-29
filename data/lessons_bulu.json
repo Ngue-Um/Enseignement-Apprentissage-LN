@@ -1,0 +1,2471 @@
+{
+  "language": "bulu",
+  "lessons": [
+    {
+      "id": "II-1",
+      "code": "II.1",
+      "module": "M2-segmentaux",
+      "moduleTitle": "Module II — Productions segmentales",
+      "title": "Mes premiers mots en bulu",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Identifier 6 mots usuels du bulu à l'oreille",
+        "Reproduire les sons du bulu absents du français",
+        "Associer un mot bulu à sa traduction française"
+      ],
+      "vocabulary": [
+        {
+          "id": "cba3f314894a",
+          "audio": "cba3f314894a2c8f64f5bf0f6008b02d.mp3",
+          "langText": "bìdɔ́k",
+          "frenchText": "profond",
+          "langWord": "bìdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "5b86c54a9224",
+          "audio": "5b86c54a9224ac2322531f6f0e31a9cf.mp3",
+          "langText": "mə̀nɛ́n",
+          "frenchText": "gros",
+          "langWord": "mə̀nɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "988e0c733e86",
+          "audio": "988e0c733e86febd61831aac13423a5e.mp3",
+          "langText": "mə̀yàp",
+          "frenchText": "grands",
+          "langWord": "mə̀yàp",
+          "frenchWord": "grands",
+          "pos": "adj"
+        },
+        {
+          "id": "88d2b054e789",
+          "audio": "88d2b054e7898d3d9f9eab0d32d1b10e.mp3",
+          "langText": "mìnkɔ́t",
+          "frenchText": "étroits",
+          "langWord": "mìnkɔ́t",
+          "frenchWord": "étroits",
+          "pos": "adj"
+        },
+        {
+          "id": "f0ad9b94c0af",
+          "audio": "f0ad9b94c0af0bf1ca741c191c4b6efa.mp3",
+          "langText": "bìtùn",
+          "frenchText": "courts",
+          "langWord": "bìtùn",
+          "frenchWord": "courts",
+          "pos": "adj"
+        },
+        {
+          "id": "45e0b0c55d38",
+          "audio": "45e0b0c55d389b1a019e15ca1178aefb.mp3",
+          "langText": "mìndzálán",
+          "frenchText": "pleins",
+          "langWord": "mìndzálán",
+          "frenchWord": "pleins",
+          "pos": "adj"
+        },
+        {
+          "id": "98abc9f854b3",
+          "audio": "98abc9f854b3a228489183d5852b2faf.mp3",
+          "langText": "ə̰̀nkót sí",
+          "frenchText": "la terre est sèche.",
+          "langWord": "ə̰̀nkót",
+          "frenchWord": "sec",
+          "pos": "adj"
+        },
+        {
+          "id": "c423c1f84970",
+          "audio": "c423c1f84970b4a8eec4a572413c0514.mp3",
+          "langText": "mìnkót",
+          "frenchText": "secs",
+          "langWord": "mìnkót",
+          "frenchWord": "secs",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Saluez la classe en bulu (mbolo). Demandez aux élèves quels mots de leur langue maternelle ils connaissent déjà. Annoncez l'objectif : « aujourd'hui, nous allons reconnaître nos premiers mots en bulu »."
+          },
+          {
+            "title": "Écoute guidée (15 min)",
+            "instruction": "Faites écouter chaque mot deux fois. Demandez aux élèves de répéter à voix haute, sans regarder la transcription. Insistez sur les sons qui n'existent pas en français (ə, ɔ, ɛ, voyelles longues)."
+          },
+          {
+            "title": "Découverte de la transcription AGLC (15 min)",
+            "instruction": "Affichez la transcription au tableau. Faites observer les caractères spéciaux. Lisez chaque mot en pointant les lettres ; demandez aux élèves de venir au tableau pointer le mot que vous prononcez."
+          },
+          {
+            "title": "Pratique (15 min)",
+            "instruction": "Activité d'appariement audio ↔ traduction (cf. fiche élève). Donnez 3 minutes par mot. Circulez et corrigez la prononciation."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Demandez à chaque élève de prononcer un mot de son choix. Notez collectivement la liste au tableau. Annoncez la leçon suivante."
+          }
+        ],
+        "freedom": "Si les élèves accrochent, prolongez par une mini-saynette : deux élèves se saluent en bulu, l'un demande « comment ça va ? » (à introduire si vous le connaissez), l'autre répond. Sinon, contentez-vous des 6 mots ci-contre.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Aujourd'hui nous découvrons nos six premiers mots en bulu. Tu vas les écouter, les répéter, et apprendre à les écrire en AGLC.",
+        "activities": [
+          {
+            "title": "Activité 1 — Écouter et répéter",
+            "instruction": "Clique sur ▶ chaque mot. Répète-le à voix haute trois fois. Coche la case quand tu sais le prononcer."
+          },
+          {
+            "title": "Activité 2 — Apparier",
+            "instruction": "Relie chaque mot bulu à sa traduction française."
+          },
+          {
+            "title": "Activité 3 — Écrire",
+            "instruction": "Écris en AGLC, sans regarder, les trois mots que tu connais le mieux."
+          }
+        ],
+        "memo": "Le bulu utilise des sons absents du français (ə, ɔ, ɛ). Ces sons s'écrivent grâce à l'alphabet général AGLC."
+      }
+    },
+    {
+      "id": "II-2",
+      "code": "II.2",
+      "module": "M2-segmentaux",
+      "moduleTitle": "Module II — Productions segmentales",
+      "title": "Voyelles ouvertes et voyelles fermées",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Distinguer à l'oreille les voyelles ouvertes (ɛ, ɔ) et fermées (e, o)",
+        "Reproduire correctement la voyelle centrale ə",
+        "Lire correctement des mots contenant ces voyelles"
+      ],
+      "vocabulary": [
+        {
+          "id": "4513ffb01a9f",
+          "audio": "4513ffb01a9f370de66aed60d0bb1cb8.mp3",
+          "langText": "èbé é:nə̀ èdɔ́k",
+          "frenchText": "le trou est profond",
+          "langWord": "èdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "cba3f314894a",
+          "audio": "cba3f314894a2c8f64f5bf0f6008b02d.mp3",
+          "langText": "bìdɔ́k",
+          "frenchText": "profond",
+          "langWord": "bìdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "5b86c54a9224",
+          "audio": "5b86c54a9224ac2322531f6f0e31a9cf.mp3",
+          "langText": "mə̀nɛ́n",
+          "frenchText": "gros",
+          "langWord": "mə̀nɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "988e0c733e86",
+          "audio": "988e0c733e86febd61831aac13423a5e.mp3",
+          "langText": "mə̀yàp",
+          "frenchText": "grands",
+          "langWord": "mə̀yàp",
+          "frenchWord": "grands",
+          "pos": "adj"
+        },
+        {
+          "id": "de54f97eacbb",
+          "audio": "de54f97eacbbbce9c93145f2d374dcc0.mp3",
+          "langText": "zə̌n ènə̀ ndàm",
+          "frenchText": "le chemin est large.",
+          "langWord": "ndàm",
+          "frenchWord": "large",
+          "pos": "adj"
+        },
+        {
+          "id": "88d2b054e789",
+          "audio": "88d2b054e7898d3d9f9eab0d32d1b10e.mp3",
+          "langText": "mìnkɔ́t",
+          "frenchText": "étroits",
+          "langWord": "mìnkɔ́t",
+          "frenchWord": "étroits",
+          "pos": "adj"
+        },
+        {
+          "id": "fb0127bfcdd6",
+          "audio": "fb0127bfcdd6cdbb237606185122c211.mp3",
+          "langText": "àkàlà ánə̀ ndzìŋlə́tə̀",
+          "frenchText": "la boule de (manioc, maϊs, mil, banane) est ronde",
+          "langWord": "ndzìŋlə́tə̀",
+          "frenchWord": "rond",
+          "pos": "adj"
+        },
+        {
+          "id": "f32b91b7c830",
+          "audio": "f32b91b7c83041c40179586ec337491e.mp3",
+          "langText": "ànə̀ àdìt àkɔ́k",
+          "frenchText": "c'est une lourde pierre.",
+          "langWord": "àdìt",
+          "frenchWord": "lourd",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Rappel rapide de la leçon II.1. Demandez à 3 élèves de prononcer un mot vu la fois précédente. Corrigez bienveillamment."
+          },
+          {
+            "title": "Présentation des voyelles AGLC (15 min)",
+            "instruction": "Au tableau, dressez le tableau des sept voyelles du bulu : i, e, ɛ, a, ɔ, o, u + ə. Pour chaque voyelle, prononcez-la en exagérant l'ouverture de la bouche. Faites répéter en chœur."
+          },
+          {
+            "title": "Écoute discriminative (20 min)",
+            "instruction": "Faites écouter les mots du jour. À chaque écoute, demandez : « quelle voyelle entendez-vous ? » Notez les réponses. L'enjeu n'est pas de tout réussir mais d'aiguiser l'oreille."
+          },
+          {
+            "title": "Lecture à voix haute (15 min)",
+            "instruction": "Distribuez la fiche élève. En binôme, les élèves lisent les mots à tour de rôle. Le binôme valide ou corrige."
+          },
+          {
+            "title": "Clôture (5 min)",
+            "instruction": "Recensez collectivement les voyelles « difficiles ». Annoncez le passage aux tons (Module III)."
+          }
+        ],
+        "freedom": "Si la classe est nombreuse, organisez l'écoute discriminative en demi-groupes. Vous pouvez aussi remplacer la lecture à voix haute par un dictée chuchotée si les élèves sont à l'aise.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Le bulu a sept voyelles. Quatre d'entre elles n'existent pas en français écrit : ɛ, ɔ, ə, et la longue. Aujourd'hui tu apprends à les distinguer.",
+        "activities": [
+          {
+            "title": "Activité 1 — Reconnaître la voyelle",
+            "instruction": "Pour chaque mot, écoute et écris la première voyelle que tu entends. Choisis parmi : i, e, ɛ, a, ɔ, o, u, ə."
+          },
+          {
+            "title": "Activité 2 — Lire en binôme",
+            "instruction": "Avec ton voisin, lisez chaque mot à tour de rôle. Celui qui écoute valide ou corrige. Changez de rôle après chaque mot."
+          },
+          {
+            "title": "Activité 3 — Recopier",
+            "instruction": "Recopie soigneusement les trois mots les plus difficiles dans ton cahier."
+          }
+        ],
+        "memo": "Les voyelles ɛ et ɔ se prononcent bouche plus ouverte que e et o. La voyelle ə (« e muet ») est centrale, ni avant ni arrière."
+      }
+    },
+    {
+      "id": "III-1",
+      "code": "III.1",
+      "module": "M3-suprasegmentaux",
+      "moduleTitle": "Module III — Suprasegmentaux",
+      "title": "Tons hauts et tons bas",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Comprendre que le bulu est une langue à tons",
+        "Distinguer un ton haut (´) d'un ton bas (`) à l'oreille",
+        "Lire correctement des mots porteurs de tons"
+      ],
+      "vocabulary": [
+        {
+          "id": "4513ffb01a9f",
+          "audio": "4513ffb01a9f370de66aed60d0bb1cb8.mp3",
+          "langText": "èbé é:nə̀ èdɔ́k",
+          "frenchText": "le trou est profond",
+          "langWord": "èdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "cba3f314894a",
+          "audio": "cba3f314894a2c8f64f5bf0f6008b02d.mp3",
+          "langText": "bìdɔ́k",
+          "frenchText": "profond",
+          "langWord": "bìdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "5b86c54a9224",
+          "audio": "5b86c54a9224ac2322531f6f0e31a9cf.mp3",
+          "langText": "mə̀nɛ́n",
+          "frenchText": "gros",
+          "langWord": "mə̀nɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "988e0c733e86",
+          "audio": "988e0c733e86febd61831aac13423a5e.mp3",
+          "langText": "mə̀yàp",
+          "frenchText": "grands",
+          "langWord": "mə̀yàp",
+          "frenchWord": "grands",
+          "pos": "adj"
+        },
+        {
+          "id": "de54f97eacbb",
+          "audio": "de54f97eacbbbce9c93145f2d374dcc0.mp3",
+          "langText": "zə̌n ènə̀ ndàm",
+          "frenchText": "le chemin est large.",
+          "langWord": "ndàm",
+          "frenchWord": "large",
+          "pos": "adj"
+        },
+        {
+          "id": "88d2b054e789",
+          "audio": "88d2b054e7898d3d9f9eab0d32d1b10e.mp3",
+          "langText": "mìnkɔ́t",
+          "frenchText": "étroits",
+          "langWord": "mìnkɔ́t",
+          "frenchWord": "étroits",
+          "pos": "adj"
+        },
+        {
+          "id": "f0ad9b94c0af",
+          "audio": "f0ad9b94c0af0bf1ca741c191c4b6efa.mp3",
+          "langText": "bìtùn",
+          "frenchText": "courts",
+          "langWord": "bìtùn",
+          "frenchWord": "courts",
+          "pos": "adj"
+        },
+        {
+          "id": "fb0127bfcdd6",
+          "audio": "fb0127bfcdd6cdbb237606185122c211.mp3",
+          "langText": "àkàlà ánə̀ ndzìŋlə́tə̀",
+          "frenchText": "la boule de (manioc, maϊs, mil, banane) est ronde",
+          "langWord": "ndzìŋlə́tə̀",
+          "frenchWord": "rond",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Accroche (5 min)",
+            "instruction": "Comparez deux mots quasi-identiques au tableau (par exemple mə̀nɛ́n « gros » vs un autre mot que vous connaissez). Demandez à la classe : « qu'est-ce qui change ? ». Faites émerger l'idée de hauteur."
+          },
+          {
+            "title": "Présentation des tons (15 min)",
+            "instruction": "Expliquez la convention AGLC : accent aigu = ton haut, accent grave = ton bas, circonflexe = descendant, antiflexe = montant. Mimez chaque ton avec la main (haut, bas, descendant, montant)."
+          },
+          {
+            "title": "Écoute et geste (15 min)",
+            "instruction": "Faites écouter chaque mot du jour. À chaque ton, les élèves lèvent ou baissent la main. Cette gestuelle est essentielle pour ancrer la perception tonale."
+          },
+          {
+            "title": "Marquage tonal (15 min)",
+            "instruction": "Distribuez la fiche élève. Sur la transcription dépouillée des tons, les élèves placent les accents au bon endroit après écoute. Corrigez collectivement."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Faites prononcer un mot par chaque rangée. Comparez les rangées : qui prononce le plus juste ? Cette émulation aide la mémorisation."
+          }
+        ],
+        "freedom": "Si vos élèves ont du mal, restez plus longtemps sur deux tons (haut/bas) avant d'aborder les contours (montant/descendant). Vous pouvez aussi chanter les tons sur deux notes (sol-do).",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Le bulu est une langue à tons : la même suite de lettres peut vouloir dire des choses différentes selon que la voix monte ou descend. Aujourd'hui tu apprends à entendre les tons.",
+        "activities": [
+          {
+            "title": "Activité 1 — Lever-baisser la main",
+            "instruction": "Écoute chaque mot. Lève la main si la voix monte, baisse-la si la voix descend. Vérifie en regardant la transcription."
+          },
+          {
+            "title": "Activité 2 — Placer les accents",
+            "instruction": "Sur le mot écrit sans tons, dessine au-dessus de chaque syllabe une flèche : ↑ pour haut, ↓ pour bas."
+          },
+          {
+            "title": "Activité 3 — Imiter",
+            "instruction": "Choisis 3 mots et enregistre-toi (ou prononce-les à voix haute trois fois). Compare avec l'audio."
+          }
+        ],
+        "memo": "En AGLC : á = ton haut, à = ton bas, â = ton descendant, ǎ = ton montant. Un mauvais ton = un autre mot, ou un mot incompréhensible."
+      }
+    },
+    {
+      "id": "III-2",
+      "code": "III.2",
+      "module": "M3-suprasegmentaux",
+      "moduleTitle": "Module III — Suprasegmentaux",
+      "title": "Le ton qui monte, le ton qui descend",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Identifier un ton montant et un ton descendant",
+        "Reproduire ces mouvements tonals en isolation et dans un mot",
+        "Marquer correctement les tons en AGLC"
+      ],
+      "vocabulary": [
+        {
+          "id": "4513ffb01a9f",
+          "audio": "4513ffb01a9f370de66aed60d0bb1cb8.mp3",
+          "langText": "èbé é:nə̀ èdɔ́k",
+          "frenchText": "le trou est profond",
+          "langWord": "èdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "de54f97eacbb",
+          "audio": "de54f97eacbbbce9c93145f2d374dcc0.mp3",
+          "langText": "zə̌n ènə̀ ndàm",
+          "frenchText": "le chemin est large.",
+          "langWord": "ndàm",
+          "frenchWord": "large",
+          "pos": "adj"
+        },
+        {
+          "id": "fb0127bfcdd6",
+          "audio": "fb0127bfcdd6cdbb237606185122c211.mp3",
+          "langText": "àkàlà ánə̀ ndzìŋlə́tə̀",
+          "frenchText": "la boule de (manioc, maϊs, mil, banane) est ronde",
+          "langWord": "ndzìŋlə́tə̀",
+          "frenchWord": "rond",
+          "pos": "adj"
+        },
+        {
+          "id": "f32b91b7c830",
+          "audio": "f32b91b7c83041c40179586ec337491e.mp3",
+          "langText": "ànə̀ àdìt àkɔ́k",
+          "frenchText": "c'est une lourde pierre.",
+          "langWord": "àdìt",
+          "frenchWord": "lourd",
+          "pos": "adj"
+        },
+        {
+          "id": "45e0b0c55d38",
+          "audio": "45e0b0c55d389b1a019e15ca1178aefb.mp3",
+          "langText": "mìndzálán",
+          "frenchText": "pleins",
+          "langWord": "mìndzálán",
+          "frenchWord": "pleins",
+          "pos": "adj"
+        },
+        {
+          "id": "d8d4eb485296",
+          "audio": "d8d4eb4852964bae2f452d235af27a40.mp3",
+          "langText": "tʃít ènə̀ èbɔ̀l",
+          "frenchText": "la viande est pourrie",
+          "langWord": "èbɔ̀l",
+          "frenchWord": "pourri",
+          "pos": "adj"
+        },
+        {
+          "id": "89cae68d44d9",
+          "audio": "89cae68d44d9e656228f331f6cebf7e0.mp3",
+          "langText": "mìmbàmbà mífúlú",
+          "frenchText": "bons",
+          "langWord": "mìmbàmbà mífúlú",
+          "frenchWord": "bons",
+          "pos": "adj"
+        },
+        {
+          "id": "8af2eda48d75",
+          "audio": "8af2eda48d7581370c951d7deb38e4d8.mp3",
+          "langText": "bìvíndì",
+          "frenchText": "noirs",
+          "langWord": "bìvíndì",
+          "frenchWord": "noirs",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Rappel (5 min)",
+            "instruction": "Faites rappeler par un élève les conventions tonales vues en III.1. Affichez les quatre symboles au tableau."
+          },
+          {
+            "title": "Démonstration (10 min)",
+            "instruction": "Prononcez successivement : á (haut), à (bas), â (haut→bas), ǎ (bas→haut). Faites bien sentir la durée plus longue des contours."
+          },
+          {
+            "title": "Écoute discriminative (20 min)",
+            "instruction": "Pour chaque mot du jour, demandez aux élèves d'identifier le ton de la dernière syllabe. Notez collectivement. Vérifiez avec la transcription officielle."
+          },
+          {
+            "title": "Production (15 min)",
+            "instruction": "En binôme, un élève prononce un mot en cachant la transcription, l'autre dessine la courbe tonale sur son cahier. Échangez."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Mini-quiz oral : 5 mots à identifier ton par ton. Corrigez immédiatement et félicitez les progrès."
+          }
+        ],
+        "freedom": "Si vous disposez d'un piano ou d'un téléphone avec une appli de réglage de hauteur, faites-le entendre : cela aide énormément. Sinon, le geste de la main suffit largement.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Au-delà du ton haut et du ton bas, le bulu connaît deux contours : le ton qui monte (â pas — non, ǎ : bas→haut) et celui qui descend (â : haut→bas). C'est subtil mais on s'y habitue.",
+        "activities": [
+          {
+            "title": "Activité 1 — Tracer la courbe",
+            "instruction": "Pour chaque mot, dessine sur ton cahier une ligne qui suit la voix : horizontale pour un ton plat, oblique pour un contour."
+          },
+          {
+            "title": "Activité 2 — Dictée tonale",
+            "instruction": "Le professeur prononce un mot. Sur ta fiche, ajoute uniquement les accents au-dessus de la transcription nue."
+          },
+          {
+            "title": "Activité 3 — S'enregistrer",
+            "instruction": "Choisis le mot le plus long et enregistre-toi sur ton téléphone. Réécoute : tes contours sont-ils nets ?"
+          }
+        ],
+        "memo": "Les contours (â, ǎ) sont plus longs que les tons plats (á, à). Bien marquer la durée aide à les rendre audibles."
+      }
+    },
+    {
+      "id": "III-3",
+      "code": "III.3",
+      "module": "M3-suprasegmentaux",
+      "moduleTitle": "Module III — Suprasegmentaux",
+      "title": "Paires aux tons opposés",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Repérer que deux mots de même squelette consonantique peuvent différer uniquement par les tons",
+        "Mémoriser quelques couples utiles",
+        "Lire à voix haute en respectant les tons"
+      ],
+      "vocabulary": [
+        {
+          "id": "cba3f314894a",
+          "audio": "cba3f314894a2c8f64f5bf0f6008b02d.mp3",
+          "langText": "bìdɔ́k",
+          "frenchText": "profond",
+          "langWord": "bìdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "5b86c54a9224",
+          "audio": "5b86c54a9224ac2322531f6f0e31a9cf.mp3",
+          "langText": "mə̀nɛ́n",
+          "frenchText": "gros",
+          "langWord": "mə̀nɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "988e0c733e86",
+          "audio": "988e0c733e86febd61831aac13423a5e.mp3",
+          "langText": "mə̀yàp",
+          "frenchText": "grands",
+          "langWord": "mə̀yàp",
+          "frenchWord": "grands",
+          "pos": "adj"
+        },
+        {
+          "id": "88d2b054e789",
+          "audio": "88d2b054e7898d3d9f9eab0d32d1b10e.mp3",
+          "langText": "mìnkɔ́t",
+          "frenchText": "étroits",
+          "langWord": "mìnkɔ́t",
+          "frenchWord": "étroits",
+          "pos": "adj"
+        },
+        {
+          "id": "f0ad9b94c0af",
+          "audio": "f0ad9b94c0af0bf1ca741c191c4b6efa.mp3",
+          "langText": "bìtùn",
+          "frenchText": "courts",
+          "langWord": "bìtùn",
+          "frenchWord": "courts",
+          "pos": "adj"
+        },
+        {
+          "id": "45e0b0c55d38",
+          "audio": "45e0b0c55d389b1a019e15ca1178aefb.mp3",
+          "langText": "mìndzálán",
+          "frenchText": "pleins",
+          "langWord": "mìndzálán",
+          "frenchWord": "pleins",
+          "pos": "adj"
+        },
+        {
+          "id": "c423c1f84970",
+          "audio": "c423c1f84970b4a8eec4a572413c0514.mp3",
+          "langText": "mìnkót",
+          "frenchText": "secs",
+          "langWord": "mìnkót",
+          "frenchWord": "secs",
+          "pos": "adj"
+        },
+        {
+          "id": "fc2dcf9b005a",
+          "audio": "fc2dcf9b005a4361311a0301b9e7f462.mp3",
+          "langText": "bìbɔ̀l",
+          "frenchText": "pourris",
+          "langWord": "bìbɔ̀l",
+          "frenchWord": "pourris",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez aux élèves : « avez-vous déjà confondu deux mots à cause des tons ? ». Recueillez les anecdotes."
+          },
+          {
+            "title": "Découverte (15 min)",
+            "instruction": "Présentez les mots du jour groupés deux par deux quand c'est possible. Faites lire et entendre les contrastes."
+          },
+          {
+            "title": "Mémorisation (15 min)",
+            "instruction": "Jeu du « pong tonal » : vous prononcez un mot, les élèves doivent produire le mot opposé tonalement (s'il existe dans la liste)."
+          },
+          {
+            "title": "Application en phrase courte (15 min)",
+            "instruction": "Faites construire à l'oral une phrase simple « moi je dis X » en français pour ancrer le sens. Le but est moins la phrase que la consolidation lexicale."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Demandez à chaque élève de prononcer son mot préféré et d'expliquer pourquoi en français."
+          }
+        ],
+        "freedom": "Si les élèves ne saisissent pas le contraste, isolez la voyelle tonique et faites-la chanter sur deux notes. Si tout va bien, passez à la lecture des phrases du module IV.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "On dit parfois que le bulu est une langue « musicale ». Ce n'est pas un cliché : un même mot peut changer de sens selon la mélodie. Apprends quelques paires utiles.",
+        "activities": [
+          {
+            "title": "Activité 1 — Trier",
+            "instruction": "Classe les mots par hauteur globale : plutôt aigu, plutôt grave, ou les deux."
+          },
+          {
+            "title": "Activité 2 — Répéter en boucle",
+            "instruction": "Choisis un mot et répète-le 10 fois en exagérant les tons. Au début c'est étrange ; au bout de 10 fois, ça vient."
+          },
+          {
+            "title": "Activité 3 — Réutiliser",
+            "instruction": "Note dans ton cahier 3 mots que tu veux retenir absolument. Reviens-y demain."
+          }
+        ],
+        "memo": "Deux mots peuvent ne différer que par les tons. La transcription AGLC les distingue grâce aux accents."
+      }
+    },
+    {
+      "id": "III-4",
+      "code": "III.4",
+      "module": "M3-suprasegmentaux",
+      "moduleTitle": "Module III — Suprasegmentaux",
+      "title": "Rythme et longueur des syllabes",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Repérer les voyelles longues (notées par redoublement ou « : »)",
+        "Identifier les syllabes accentuées dans une phrase courte",
+        "Lire un énoncé bulu avec un rythme correct"
+      ],
+      "vocabulary": [
+        {
+          "id": "4513ffb01a9f",
+          "audio": "4513ffb01a9f370de66aed60d0bb1cb8.mp3",
+          "langText": "èbé é:nə̀ èdɔ́k",
+          "frenchText": "le trou est profond",
+          "langWord": "èdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "5f9b1e2b0f3c",
+          "audio": "5f9b1e2b0f3c6df2bc3df50069777973.mp3",
+          "langText": "à_nɛ́n ákɔ́k ánə̀ ə́lí",
+          "frenchText": "il y a une grosse pièrre noire là-bas.",
+          "langWord": "ànɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "2dedd6ff377c",
+          "audio": "2dedd6ff377c84f36ea7df0615a14b2a.mp3",
+          "langText": "àyàp élé ánə̀ ə́lí",
+          "frenchText": "il y a un grand arbre là-bas",
+          "langWord": "àyàp",
+          "frenchWord": "grand",
+          "pos": "adj"
+        },
+        {
+          "id": "02e477dffeaa",
+          "audio": "02e477dffeaaed885cecd60a44945028.mp3",
+          "langText": "mà ɲɔ̀ŋ mɔ̀nə́ ákɔ́k",
+          "frenchText": "je prends une petite pierre.",
+          "langWord": "tʃótʃóáé",
+          "frenchWord": "petit",
+          "pos": "adj"
+        },
+        {
+          "id": "de54f97eacbb",
+          "audio": "de54f97eacbbbce9c93145f2d374dcc0.mp3",
+          "langText": "zə̌n ènə̀ ndàm",
+          "frenchText": "le chemin est large.",
+          "langWord": "ndàm",
+          "frenchWord": "large",
+          "pos": "adj"
+        },
+        {
+          "id": "25ff7ef05b20",
+          "audio": "25ff7ef05b209e23cda58ee88c6fc048.mp3",
+          "langText": "ə́ zə̌n ə́ɲū ènə̀ ə̰̀nkɔ́t",
+          "frenchText": "ce chemin est étroit.",
+          "langWord": "ə̰̀nkɔ́t",
+          "frenchWord": "étroit",
+          "pos": "adj"
+        },
+        {
+          "id": "0e7b7cf2398d",
+          "audio": "0e7b7cf2398d875b8d7af4ceb847e95c.mp3",
+          "langText": "à kə́ yɛ́n àyàbə́ ɲɔ́",
+          "frenchText": "il a vu un long serpent.",
+          "langWord": "àyàp",
+          "frenchWord": "long",
+          "pos": "adj"
+        },
+        {
+          "id": "8c747e169c54",
+          "audio": "8c747e169c54ec262227ad2888533078.mp3",
+          "langText": "à ɲɔ̌:ŋ (mɔ́nə́) étùn ə̰́kásí",
+          "frenchText": "il prit un court bâton (à ce moment-là).",
+          "langWord": "ètùn",
+          "frenchWord": "court",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Tapez dans les mains au rythme d'une phrase française. Demandez : « combien de battements ? ». Annoncez : « aujourd'hui on tape le rythme du bulu »."
+          },
+          {
+            "title": "Présentation (10 min)",
+            "instruction": "Au tableau, écrivez une phrase du jour. Soulignez les syllabes longues. Expliquez la convention AGLC : voyelle redoublée ou « : »."
+          },
+          {
+            "title": "Tape-rythme (20 min)",
+            "instruction": "Faites réécouter chaque phrase. Les élèves tapent en rythme : 1 tape par syllabe, 2 tapes pour une syllabe longue. C'est très ludique et efficace."
+          },
+          {
+            "title": "Lecture rythmée (15 min)",
+            "instruction": "En groupes de 4, les élèves lisent une phrase en respectant les longueurs. Vérifiez l'aisance, pas la perfection."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Une phrase au choix, tous ensemble, à voix haute, avec rythme. Cela donne le sentiment de « parler bulu »."
+          }
+        ],
+        "freedom": "Vous pouvez utiliser un tambour, un crayon sur la table, n'importe quel objet pour marquer la pulsation. Pas besoin d'instrument.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Une phrase bulu a son propre rythme : certaines syllabes sont courtes, d'autres longues. Bien marquer le rythme rend la phrase compréhensible.",
+        "activities": [
+          {
+            "title": "Activité 1 — Compter les syllabes",
+            "instruction": "Pour chaque phrase, compte les syllabes. Vérifie en tapant des mains."
+          },
+          {
+            "title": "Activité 2 — Repérer les longues",
+            "instruction": "Souligne dans la transcription les voyelles écrites « aa » ou « a: »."
+          },
+          {
+            "title": "Activité 3 — Lire en rythme",
+            "instruction": "À voix haute, en tapant le rythme. Pas de précipitation : la régularité prime sur la vitesse."
+          }
+        ],
+        "memo": "Une voyelle longue se note « aa » ou « a: » en AGLC. Le rythme du bulu n'est pas celui du français."
+      }
+    },
+    {
+      "id": "IV-1",
+      "code": "IV.1",
+      "module": "M4-syntagme-nominal",
+      "moduleTitle": "Module IV — Syntagme nominal",
+      "title": "Désigner les objets de la maison",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Nommer 6 objets du quotidien en bulu",
+        "Construire un syntagme nominal simple « le X »",
+        "Reconnaître l'accord de classe"
+      ],
+      "vocabulary": [
+        {
+          "id": "02e477dffeaa",
+          "audio": "02e477dffeaaed885cecd60a44945028.mp3",
+          "langText": "mà ɲɔ̀ŋ mɔ̀nə́ ákɔ́k",
+          "frenchText": "je prends une petite pierre.",
+          "langWord": "tʃótʃóáé",
+          "frenchWord": "petit",
+          "pos": "adj"
+        },
+        {
+          "id": "f32b91b7c830",
+          "audio": "f32b91b7c83041c40179586ec337491e.mp3",
+          "langText": "ànə̀ àdìt àkɔ́k",
+          "frenchText": "c'est une lourde pierre.",
+          "langWord": "àdìt",
+          "frenchWord": "lourd",
+          "pos": "adj"
+        },
+        {
+          "id": "fa9c810fafa9",
+          "audio": "fa9c810fafa99d57f6292aea7c048c80.mp3",
+          "langText": "èsɔ́ énə̀ ə̰̀dzálán à mə́ndíp",
+          "frenchText": "la calebasse est pleine d'eau",
+          "langWord": "ə̰̀dzálán",
+          "frenchWord": "plein",
+          "pos": "adj"
+        },
+        {
+          "id": "46874444db0c",
+          "audio": "46874444db0c69ca59c1347df228779d.mp3",
+          "langText": "à tʃík ə̰́kɔ̀l à à:káp ótyə̀ŋ",
+          "frenchText": "il coupa la corde avec un couteau tranchante.",
+          "langWord": "àkáp",
+          "frenchWord": "tranchant",
+          "pos": "adj"
+        },
+        {
+          "id": "21b4d4b69b85",
+          "audio": "21b4d4b69b851124eea86f8bee50902a.mp3",
+          "langText": "mìngá àsò mə̀ndíp ə́vyə̄k",
+          "frenchText": "la femme verse de l'eau dans la calebasse",
+          "langWord": "ə́sō",
+          "frenchWord": "verser",
+          "pos": "v"
+        },
+        {
+          "id": "e9b62c64a1c5",
+          "audio": "e9b62c64a1c52f2b52a1771f2bc8c30d.mp3",
+          "langText": "mà kə́ sàl ə̰́dzàʔàk",
+          "frenchText": "j'ai fendu tout le bois",
+          "langWord": "ə́sàl",
+          "frenchWord": "b) fendre",
+          "pos": "v"
+        },
+        {
+          "id": "bee8a4bbbc38",
+          "audio": "bee8a4bbbc3824df650fb71a816fd4c7.mp3",
+          "langText": "à dzə́ŋ òtʃə̀ŋ wé",
+          "frenchText": "il cherche son couteau",
+          "langWord": "ə́dzə́ŋ",
+          "frenchWord": "a) chercher",
+          "pos": "v"
+        },
+        {
+          "id": "8cc7e98d564c",
+          "audio": "8cc7e98d564c594192635b65d1aaa38b.mp3",
+          "langText": "à kə́ sɔ̀m òtʃə̀ŋ wé",
+          "frenchText": "il a trouvé son couteau",
+          "langWord": "ə́.sɔ̀m",
+          "frenchWord": "b) trouver",
+          "pos": "v"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez aux élèves de nommer en français trois objets qui les entourent en classe. Listez-les au tableau."
+          },
+          {
+            "title": "Découverte du vocabulaire (15 min)",
+            "instruction": "Pour chaque objet du jour : faites écouter le mot bulu, montrez ou mimez l'objet, faites répéter. Insistez sur la prononciation."
+          },
+          {
+            "title": "Mémorisation (15 min)",
+            "instruction": "Jeu de l'aveugle : un élève ferme les yeux, vous nommez un objet en bulu, l'élève désigne un objet de la classe correspondant. Sinon, support image distribué."
+          },
+          {
+            "title": "Construction de groupes nominaux (15 min)",
+            "instruction": "Présentez 2-3 phrases simples du jour avec un objet (« il y a une X dans la calebasse »). Faites repérer le nom dans la phrase."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Tour de table : chaque élève nomme un objet en bulu et le pointe. Validez avec bienveillance."
+          }
+        ],
+        "freedom": "Apportez si possible quelques vrais objets en classe (calebasse, marmite). C'est imparable. Sinon, des images suffisent.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Quand on apprend une langue, le plus utile est de pouvoir désigner ce qu'on a sous les yeux. Apprends à nommer les objets de la maison.",
+        "activities": [
+          {
+            "title": "Activité 1 — Écouter et désigner",
+            "instruction": "Pour chaque mot, désigne dans ta tête ou sur une image l'objet correspondant."
+          },
+          {
+            "title": "Activité 2 — Recopier",
+            "instruction": "Recopie chaque mot en AGLC, soigneusement, avec ses tons."
+          },
+          {
+            "title": "Activité 3 — Réutiliser",
+            "instruction": "Choisis 3 objets autour de toi et essaie de les nommer en bulu (ceux que tu as appris)."
+          }
+        ],
+        "memo": "Les noms bulu portent une « classe » (1, 2, 3…). C'est un peu comme le genre en français mais il y a beaucoup plus de classes."
+      }
+    },
+    {
+      "id": "IV-2",
+      "code": "IV.2",
+      "module": "M4-syntagme-nominal",
+      "moduleTitle": "Module IV — Syntagme nominal",
+      "title": "Compter en bulu",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Énoncer les nombres de 1 à 10 en bulu",
+        "Construire un syntagme nominal avec déterminant numéral",
+        "Lire et écrire les nombres en AGLC"
+      ],
+      "vocabulary": [
+        {
+          "id": "458f0f5b8733",
+          "audio": "458f0f5b87331d9f1d15133d65f35cd0.mp3",
+          "langText": "kɔ̀sə́ dzìá à ànɔ̀n á bāē",
+          "frenchText": "1 poisson et 2 oiseaux.",
+          "langWord": "fɔ́k",
+          "frenchWord": "un",
+          "pos": "num"
+        },
+        {
+          "id": "99c0557cbf19",
+          "audio": "99c0557cbf1940be4bf9621cfa0bf096.mp3",
+          "langText": "dzíá",
+          "frenchText": "1 poisson et 2 oiseaux.",
+          "langWord": "dzíá",
+          "frenchWord": "un",
+          "pos": "num"
+        },
+        {
+          "id": "c976632abdff",
+          "audio": "c976632abdffbc3d5b82700af233aef1.mp3",
+          "langText": "bòt bə́bāē à mìngá ùwá",
+          "frenchText": "2 hommes et 1 femme.",
+          "langWord": "baè",
+          "frenchWord": "deux",
+          "pos": "num"
+        },
+        {
+          "id": "7ad43301aee9",
+          "audio": "7ad43301aee9ba0ee4503c59b55e465c.mp3",
+          "langText": "bibaè",
+          "frenchText": "2 hommes et 1 femme.",
+          "langWord": "bibaè",
+          "frenchWord": "deux",
+          "pos": "num"
+        },
+        {
+          "id": "954e654427d3",
+          "audio": "954e654427d3859b3c1871ca13bb449f.mp3",
+          "langText": "bóngó bə́lál à bə̀mvú bə́bāē",
+          "frenchText": "3 enfants et 2 chiens.",
+          "langWord": "lál",
+          "frenchWord": "trois",
+          "pos": "num"
+        },
+        {
+          "id": "f6211f03d644",
+          "audio": "f6211f03d644492ae9ed21fdff31f0ed.mp3",
+          "langText": "bílál",
+          "frenchText": "3 enfants et 2 chiens.",
+          "langWord": "bílál",
+          "frenchWord": "trois",
+          "pos": "num"
+        },
+        {
+          "id": "d46520686dea",
+          "audio": "d46520686deaf7d5f54fb58ea57977a6.mp3",
+          "langText": "mìnkásá míɲìn à mə̀kɔ́k mə́lál",
+          "frenchText": "4 bâtons et 3 pierres.",
+          "langWord": "ɲìn",
+          "frenchWord": "quatre",
+          "pos": "num"
+        },
+        {
+          "id": "22da67d6511c",
+          "audio": "22da67d6511cd3ed2fc609b714215121.mp3",
+          "langText": "bíɲìn",
+          "frenchText": "4 bâtons et 3 pierres.",
+          "langWord": "bíɲìn",
+          "frenchWord": "quatre",
+          "pos": "num"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Comptez ensemble jusqu'à 10 en français. Annoncez : « et maintenant, en bulu »."
+          },
+          {
+            "title": "Présentation des nombres (15 min)",
+            "instruction": "Faites écouter chaque nombre du jour. Faites répéter en chœur puis individuellement. Affichez les chiffres au tableau."
+          },
+          {
+            "title": "Mémorisation (15 min)",
+            "instruction": "Jeu de la chaîne : élève 1 dit « 1 », élève 2 dit « 1, 2 », élève 3 dit « 1, 2, 3 »… Tout le monde participe."
+          },
+          {
+            "title": "Application (15 min)",
+            "instruction": "Phrases du type « 3 enfants et 2 chiens » : faites repérer le nombre puis le nom qu'il modifie."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Petit calcul : « 2 + 3 = ? » à dire en bulu. Validez ensemble."
+          }
+        ],
+        "freedom": "Si la classe est dynamique, ajoutez la dimension corporelle : les élèves se mettent debout en formant des groupes de N selon le nombre prononcé. C'est très efficace pour ancrer.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Compter, c'est l'une des choses les plus utiles dans la vie quotidienne. Apprends les nombres en bulu pour faire le marché, compter tes camarades, dire ton âge.",
+        "activities": [
+          {
+            "title": "Activité 1 — Compter à voix haute",
+            "instruction": "Compte de 1 à 10 en bulu sans regarder ton cahier. Recommence trois fois."
+          },
+          {
+            "title": "Activité 2 — Écrire",
+            "instruction": "Écris en AGLC les nombres de 1 à 5."
+          },
+          {
+            "title": "Activité 3 — Phrases-éclairs",
+            "instruction": "Forme oralement : « 2 chèvres », « 3 enfants », « 5 maisons » (les noms que tu as déjà vus)."
+          }
+        ],
+        "memo": "En bulu, le nombre se place souvent après le nom : « enfants trois » plutôt que « trois enfants ». Observe bien l'ordre."
+      }
+    },
+    {
+      "id": "IV-3",
+      "code": "IV.3",
+      "module": "M4-syntagme-nominal",
+      "moduleTitle": "Module IV — Syntagme nominal",
+      "title": "Décrire avec des adjectifs",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Utiliser les adjectifs courants (grand, petit, beau, gros)",
+        "Faire l'accord de l'adjectif avec le nom",
+        "Construire des descriptions courtes"
+      ],
+      "vocabulary": [
+        {
+          "id": "4513ffb01a9f",
+          "audio": "4513ffb01a9f370de66aed60d0bb1cb8.mp3",
+          "langText": "èbé é:nə̀ èdɔ́k",
+          "frenchText": "le trou est profond",
+          "langWord": "èdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "cba3f314894a",
+          "audio": "cba3f314894a2c8f64f5bf0f6008b02d.mp3",
+          "langText": "bìdɔ́k",
+          "frenchText": "profond",
+          "langWord": "bìdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "5b86c54a9224",
+          "audio": "5b86c54a9224ac2322531f6f0e31a9cf.mp3",
+          "langText": "mə̀nɛ́n",
+          "frenchText": "gros",
+          "langWord": "mə̀nɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "988e0c733e86",
+          "audio": "988e0c733e86febd61831aac13423a5e.mp3",
+          "langText": "mə̀yàp",
+          "frenchText": "grands",
+          "langWord": "mə̀yàp",
+          "frenchWord": "grands",
+          "pos": "adj"
+        },
+        {
+          "id": "de54f97eacbb",
+          "audio": "de54f97eacbbbce9c93145f2d374dcc0.mp3",
+          "langText": "zə̌n ènə̀ ndàm",
+          "frenchText": "le chemin est large.",
+          "langWord": "ndàm",
+          "frenchWord": "large",
+          "pos": "adj"
+        },
+        {
+          "id": "88d2b054e789",
+          "audio": "88d2b054e7898d3d9f9eab0d32d1b10e.mp3",
+          "langText": "mìnkɔ́t",
+          "frenchText": "étroits",
+          "langWord": "mìnkɔ́t",
+          "frenchWord": "étroits",
+          "pos": "adj"
+        },
+        {
+          "id": "f0ad9b94c0af",
+          "audio": "f0ad9b94c0af0bf1ca741c191c4b6efa.mp3",
+          "langText": "bìtùn",
+          "frenchText": "courts",
+          "langWord": "bìtùn",
+          "frenchWord": "courts",
+          "pos": "adj"
+        },
+        {
+          "id": "fb0127bfcdd6",
+          "audio": "fb0127bfcdd6cdbb237606185122c211.mp3",
+          "langText": "àkàlà ánə̀ ndzìŋlə́tə̀",
+          "frenchText": "la boule de (manioc, maϊs, mil, banane) est ronde",
+          "langWord": "ndzìŋlə́tə̀",
+          "frenchWord": "rond",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Au tableau : « j'ai vu un X grand-petit-beau ». Demandez aux élèves de dire en français comment ils décrivent une personne, un animal, un objet."
+          },
+          {
+            "title": "Présentation des adjectifs (15 min)",
+            "instruction": "Pour chaque adjectif du jour : prononciation, exemple en phrase, geste illustrant le sens (mains écartées pour « grand », etc.)."
+          },
+          {
+            "title": "Repérage de l'accord (15 min)",
+            "instruction": "Comparez le singulier et le pluriel d'un même adjectif. Faites remarquer le changement de préfixe (l'élève n'a pas besoin de tout maîtriser, juste de remarquer)."
+          },
+          {
+            "title": "Production (15 min)",
+            "instruction": "Chaque élève choisit un objet de la classe et tente une description à 2 mots : nom + adjectif. Validez à l'oral."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Faites lire 3 phrases descriptives complètes du jour. Insistez sur le rythme et les tons."
+          }
+        ],
+        "freedom": "Si vous repérez que les élèves confondent adjectif et nom, passez plus de temps sur le repérage. Si tout va bien, lancez le concours du « plus beau syntagme ».",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Les adjectifs sont les mots qui décrivent. En bulu, ils s'accordent avec le nom (au singulier comme au pluriel). Apprends-en quelques-uns.",
+        "activities": [
+          {
+            "title": "Activité 1 — Sens",
+            "instruction": "Pour chaque adjectif, mime le sens (grand : tu écartes les bras ; petit : tu rapetisses ; etc.)."
+          },
+          {
+            "title": "Activité 2 — Singulier/pluriel",
+            "instruction": "Repère, dans les exemples du jour, les adjectifs au singulier puis au pluriel. Le préfixe change."
+          },
+          {
+            "title": "Activité 3 — Décris",
+            "instruction": "Décris en bulu un objet de ta chambre avec deux mots : un nom + un adjectif. Note dans ton cahier."
+          }
+        ],
+        "memo": "L'adjectif s'accorde avec le nom. Singulier et pluriel ont des préfixes différents. Le détail n'a pas à être maîtrisé tout de suite."
+      }
+    },
+    {
+      "id": "V-1",
+      "code": "V.1",
+      "module": "M5-syntagme-verbal",
+      "moduleTitle": "Module V — Syntagme verbal",
+      "title": "Verbes d'action du quotidien",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Identifier 6 verbes d'action courants en bulu",
+        "Construire une phrase « je + verbe »",
+        "Comprendre une phrase action courte"
+      ],
+      "vocabulary": [
+        {
+          "id": "888cbaee014d",
+          "audio": "888cbaee014df553dbf47236bf14170c.mp3",
+          "langText": "mà kə́ lóm mɔ́n á-kə̀-dzə́ŋ mə̀ndíp",
+          "frenchText": "j'ai envoyer l'enfant chercher de l'eau",
+          "langWord": "ə́ló̰m",
+          "frenchWord": "envoyer",
+          "pos": "v"
+        },
+        {
+          "id": "7add8dedd464",
+          "audio": "7add8dedd4644f091bdb7a5bb7e7538f.mp3",
+          "langText": "à kə́ bòm mɔ́n",
+          "frenchText": "elle a frapper l'enfant",
+          "langWord": "ə́bòm",
+          "frenchWord": "frapper",
+          "pos": "v"
+        },
+        {
+          "id": "8640b7f51259",
+          "audio": "8640b7f51259c8f9ac1b58d8f5de3b05.mp3",
+          "langText": "òyɔ́",
+          "frenchText": "dormir",
+          "langWord": "òyɔ́",
+          "frenchWord": "dormir",
+          "pos": "v"
+        },
+        {
+          "id": "3152b612d6ab",
+          "audio": "3152b612d6abcc4094f9b121dd3bd405.mp3",
+          "langText": "mòt à wé tsít nâ: á dì",
+          "frenchText": "l'homme (être humain) tue les animaux pour les manger",
+          "langWord": "ə́wé",
+          "frenchWord": "tuer",
+          "pos": "v"
+        },
+        {
+          "id": "40f144e5f293",
+          "audio": "40f144e5f2939193042f90c9813e913c.mp3",
+          "langText": "mà wók ànə́ myá wāē",
+          "frenchText": "je vous entends rire",
+          "langWord": "ə́.wàè",
+          "frenchWord": "rire",
+          "pos": "v"
+        },
+        {
+          "id": "2fdb89905920",
+          "audio": "2fdb8990592077383eb777b013f9e9c3.mp3",
+          "langText": "mà wók bìngá bə́yīā",
+          "frenchText": "j'entends les femmes chanter",
+          "langWord": "ə́wók",
+          "frenchWord": "entendre",
+          "pos": "v"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez à 5 élèves de mimer une action quelconque. La classe devine en français. Annoncez : « on va apprendre à le dire en bulu »."
+          },
+          {
+            "title": "Présentation des verbes (15 min)",
+            "instruction": "Chaque verbe : audio + mime + traduction. Faites répéter en chœur."
+          },
+          {
+            "title": "Compréhension orale (15 min)",
+            "instruction": "Faites écouter les phrases d'exemple. Pour chacune, demandez : « qui fait quoi ? »."
+          },
+          {
+            "title": "Production guidée (15 min)",
+            "instruction": "Chaque élève forme une phrase « je + verbe » en bulu, à l'oral, puis l'écrit dans son cahier."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Mini-saynète : un élève mime, un autre dit la phrase en bulu. Permutez les rôles."
+          }
+        ],
+        "freedom": "Si la classe a peu de temps, sélectionnez 4 verbes seulement mais faites-les vraiment maîtriser plutôt que d'en survoler 8.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Avec quelques verbes d'action, on peut déjà raconter beaucoup. Apprends-en six et tu pourras décrire ce que tu fais chaque jour.",
+        "activities": [
+          {
+            "title": "Activité 1 — Mime",
+            "instruction": "Pour chaque verbe, mime l'action. Demande à un camarade de deviner."
+          },
+          {
+            "title": "Activité 2 — Phrases « je »",
+            "instruction": "Forme oralement : « je vais », « je viens », « je mange »… Note dans ton cahier."
+          },
+          {
+            "title": "Activité 3 — Compréhension",
+            "instruction": "Écoute une phrase et dis (en français) qui fait quoi."
+          }
+        ],
+        "memo": "En bulu, le verbe peut porter un préfixe sujet. Le pronom personnel peut être collé ou séparé. À ce stade, contente-toi de reconnaître le verbe."
+      }
+    },
+    {
+      "id": "V-2",
+      "code": "V.2",
+      "module": "M5-syntagme-verbal",
+      "moduleTitle": "Module V — Syntagme verbal",
+      "title": "La famille et les personnes",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Nommer les membres de la famille proche",
+        "Comprendre une phrase parlant de quelqu'un",
+        "Présenter brièvement un proche"
+      ],
+      "vocabulary": [
+        {
+          "id": "617a31434226",
+          "audio": "617a314342266647d32b5f5e1b36907a.mp3",
+          "langText": "ə́ mòt ɲú ànə̀ ə̀mbàmbà fúlú",
+          "frenchText": "cet homme est bon",
+          "langWord": "ə̀mbàmbà fúlú",
+          "frenchWord": "bon",
+          "pos": "adj"
+        },
+        {
+          "id": "da807a98e53f",
+          "audio": "da807a98e53ff6eea9990b1b2c1c7396.mp3",
+          "langText": "ə́ mòt ɲú ànə̀ àyɔ́k",
+          "frenchText": "cet homme est mauvais",
+          "langWord": "àyɔ́k",
+          "frenchWord": "mauvais",
+          "pos": "adj"
+        },
+        {
+          "id": "eba54368c513",
+          "audio": "eba54368c51347794bc8ee084379cae5.mp3",
+          "langText": "mɔ́ngó à wók zàè",
+          "frenchText": "l'enfant a faim",
+          "langWord": "zàè",
+          "frenchWord": "faim",
+          "pos": "n"
+        },
+        {
+          "id": "66c22cbefee0",
+          "audio": "66c22cbefee002eec3aa715afdc98863.mp3",
+          "langText": "mòt à wók òzáŋ tʃít",
+          "frenchText": "l'homme a faim de viande",
+          "langWord": "zàè",
+          "frenchWord": "faim",
+          "pos": "n"
+        },
+        {
+          "id": "0af307b1f66a",
+          "audio": "0af307b1f66af65cdf8afa982a48cffd.mp3",
+          "langText": "à wók ólún àmú mɔ́nə́ wě: à kə́ wú",
+          "frenchText": "elle est triste (// pleurer ) parce-que son enfant est mort",
+          "langWord": "òlún",
+          "frenchWord": "triste",
+          "pos": "adj"
+        },
+        {
+          "id": "c976632abdff",
+          "audio": "c976632abdffbc3d5b82700af233aef1.mp3",
+          "langText": "bòt bə́bāē à mìngá ùwá",
+          "frenchText": "2 hommes et 1 femme.",
+          "langWord": "baè",
+          "frenchWord": "deux",
+          "pos": "num"
+        },
+        {
+          "id": "7ad43301aee9",
+          "audio": "7ad43301aee9ba0ee4503c59b55e465c.mp3",
+          "langText": "bibaè",
+          "frenchText": "2 hommes et 1 femme.",
+          "langWord": "bibaè",
+          "frenchWord": "deux",
+          "pos": "num"
+        },
+        {
+          "id": "888cbaee014d",
+          "audio": "888cbaee014df553dbf47236bf14170c.mp3",
+          "langText": "mà kə́ lóm mɔ́n á-kə̀-dzə́ŋ mə̀ndíp",
+          "frenchText": "j'ai envoyer l'enfant chercher de l'eau",
+          "langWord": "ə́ló̰m",
+          "frenchWord": "envoyer",
+          "pos": "v"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez aux élèves : « avec qui habitez-vous ? ». Recueillez les réponses en français au tableau."
+          },
+          {
+            "title": "Présentation du vocabulaire (15 min)",
+            "instruction": "Audio + traduction pour chaque mot. Insistez sur le tutoiement respectueux que la culture bulu valorise pour les aînés."
+          },
+          {
+            "title": "Mémorisation (15 min)",
+            "instruction": "Arbre généalogique au tableau. Chaque élève vient placer un mot à la bonne case. Variante en binôme sur fiche."
+          },
+          {
+            "title": "Compréhension (15 min)",
+            "instruction": "Phrases d'exemple sur la famille (« sa mère », « ses enfants »…). Identifiez collectivement de qui on parle."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Chaque élève dit oralement, en bulu, le mot pour « ma mère » ou « mon père ». Validez."
+          }
+        ],
+        "freedom": "La famille est un sujet sensible (deuils, séparations). Restez souple sur les présentations personnelles ; restreignez si besoin à des personnages fictifs (« Pierre, Marie »).",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "La famille est au cœur de la culture bulu. Les mots pour « père », « mère », « enfant » sont parmi les premiers à apprendre.",
+        "activities": [
+          {
+            "title": "Activité 1 — Arbre",
+            "instruction": "Sur ton cahier, dessine ton arbre généalogique à 3 niveaux. Note en bulu les mots que tu connais."
+          },
+          {
+            "title": "Activité 2 — Présenter",
+            "instruction": "À l'oral : « ma mère + adjectif que tu connais »."
+          },
+          {
+            "title": "Activité 3 — Compréhension",
+            "instruction": "Écoute une phrase et dis de quel proche on parle."
+          }
+        ],
+        "memo": "Les mots de famille en bulu portent souvent un préfixe possessif. Au début, contente-toi de reconnaître la racine."
+      }
+    },
+    {
+      "id": "V-3",
+      "code": "V.3",
+      "module": "M5-syntagme-verbal",
+      "moduleTitle": "Module V — Syntagme verbal",
+      "title": "Les animaux du village et de la forêt",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Nommer 6 animaux courants",
+        "Distinguer animaux domestiques et sauvages",
+        "Décrire ce qu'un animal fait"
+      ],
+      "vocabulary": [
+        {
+          "id": "0e7b7cf2398d",
+          "audio": "0e7b7cf2398d875b8d7af4ceb847e95c.mp3",
+          "langText": "à kə́ yɛ́n àyàbə́ ɲɔ́",
+          "frenchText": "il a vu un long serpent.",
+          "langWord": "àyàp",
+          "frenchWord": "long",
+          "pos": "adj"
+        },
+        {
+          "id": "e81ed8915f47",
+          "audio": "e81ed8915f4743167fe66e630e1d42bc.mp3",
+          "langText": "ə́ kɔ̌s ɲù ènə̀ àbə̀ŋ",
+          "frenchText": "ce poisson est bon",
+          "langWord": "àbə̀ŋ",
+          "frenchWord": "bon",
+          "pos": "adj"
+        },
+        {
+          "id": "e3891ca6dd52",
+          "audio": "e3891ca6dd521eb7f765a5f32cdaa3a6.mp3",
+          "langText": "ə́ kɔ̌s ɲù ènə̀ àbé",
+          "frenchText": "ce poisson est mauvais",
+          "langWord": "àbé",
+          "frenchWord": "mauvais",
+          "pos": "adj"
+        },
+        {
+          "id": "b321bd7390f6",
+          "audio": "b321bd7390f6537c7e76e0db13e134cf.mp3",
+          "langText": "èfúmùlù mvú dzá kə̀ óyɔ́",
+          "frenchText": "le chien blanc dort.",
+          "langWord": "èfúmùlù",
+          "frenchWord": "blanc",
+          "pos": "adj"
+        },
+        {
+          "id": "458f0f5b8733",
+          "audio": "458f0f5b87331d9f1d15133d65f35cd0.mp3",
+          "langText": "kɔ̀sə́ dzìá à ànɔ̀n á bāē",
+          "frenchText": "1 poisson et 2 oiseaux.",
+          "langWord": "fɔ́k",
+          "frenchWord": "un",
+          "pos": "num"
+        },
+        {
+          "id": "99c0557cbf19",
+          "audio": "99c0557cbf1940be4bf9621cfa0bf096.mp3",
+          "langText": "dzíá",
+          "frenchText": "1 poisson et 2 oiseaux.",
+          "langWord": "dzíá",
+          "frenchWord": "un",
+          "pos": "num"
+        },
+        {
+          "id": "273095783200",
+          "audio": "2730957832004159463f1d3566b4dd2a.mp3",
+          "langText": "mvú dyà kə́ díʔì móngó",
+          "frenchText": "le chien a mordu l'enfant",
+          "langWord": "ə́ díʔì",
+          "frenchWord": "mordre",
+          "pos": "v"
+        },
+        {
+          "id": "ffff439b23ad",
+          "audio": "ffff439b23ad103cc2e40bb1e0e4ea9d.mp3",
+          "langText": "à kə́ tʃík ə̰̀ló ɲɔ́",
+          "frenchText": "il a coupé la tête du serpent",
+          "langWord": "ə́tʃík",
+          "frenchWord": "a) couper",
+          "pos": "v"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez : « quels animaux trouve-t-on autour du village ? ». Listez en français au tableau."
+          },
+          {
+            "title": "Présentation (15 min)",
+            "instruction": "Pour chaque animal : audio + image (ou cri imité) + traduction. Distinguez deux colonnes : domestiques / sauvages."
+          },
+          {
+            "title": "Mémorisation (15 min)",
+            "instruction": "Jeu : vous prononcez le nom de l'animal, les élèves miment l'animal (ailes pour l'oiseau, ramper pour le serpent…)."
+          },
+          {
+            "title": "Phrases d'action (15 min)",
+            "instruction": "Phrases « l'animal X fait Y » du jour. Faites repérer le verbe."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Concours du plus beau « cri d'animal » avec son nom en bulu."
+          }
+        ],
+        "freedom": "Adaptez aux animaux locaux : si vous êtes en zone forestière, insistez sur les sauvages ; en zone villageoise, sur les domestiques. Restez sur le vocabulaire bulu attesté dans la fiche.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Les animaux peuplent les contes et les chansons en bulu. En connaître les noms permet de comprendre beaucoup d'histoires.",
+        "activities": [
+          {
+            "title": "Activité 1 — Trier",
+            "instruction": "Classe les animaux en deux colonnes : domestiques / sauvages."
+          },
+          {
+            "title": "Activité 2 — Mimer",
+            "instruction": "Mime trois animaux et fais deviner à un camarade leur nom en bulu."
+          },
+          {
+            "title": "Activité 3 — Phrase courte",
+            "instruction": "Choisis un animal et un verbe (« courir », « manger »…) et fabrique oralement une phrase de 2 mots."
+          }
+        ],
+        "memo": "Les noms d'animaux ont leurs préfixes propres. Les contes bulu donnent une grande place aux animaux."
+      }
+    },
+    {
+      "id": "V-4",
+      "code": "V.4",
+      "module": "M5-syntagme-verbal",
+      "moduleTitle": "Module V — Syntagme verbal",
+      "title": "Manger, boire, cultiver",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Connaître les verbes liés à l'alimentation",
+        "Comprendre une phrase autour du repas et du champ",
+        "Construire une phrase « je mange + nourriture »"
+      ],
+      "vocabulary": [
+        {
+          "id": "fb0127bfcdd6",
+          "audio": "fb0127bfcdd6cdbb237606185122c211.mp3",
+          "langText": "àkàlà ánə̀ ndzìŋlə́tə̀",
+          "frenchText": "la boule de (manioc, maϊs, mil, banane) est ronde",
+          "langWord": "ndzìŋlə́tə̀",
+          "frenchWord": "rond",
+          "pos": "adj"
+        },
+        {
+          "id": "fa9c810fafa9",
+          "audio": "fa9c810fafa99d57f6292aea7c048c80.mp3",
+          "langText": "èsɔ́ énə̀ ə̰̀dzálán à mə́ndíp",
+          "frenchText": "la calebasse est pleine d'eau",
+          "langWord": "ə̰̀dzálán",
+          "frenchWord": "plein",
+          "pos": "adj"
+        },
+        {
+          "id": "d8d4eb485296",
+          "audio": "d8d4eb4852964bae2f452d235af27a40.mp3",
+          "langText": "tʃít ènə̀ èbɔ̀l",
+          "frenchText": "la viande est pourrie",
+          "langWord": "èbɔ̀l",
+          "frenchWord": "pourri",
+          "pos": "adj"
+        },
+        {
+          "id": "e81ed8915f47",
+          "audio": "e81ed8915f4743167fe66e630e1d42bc.mp3",
+          "langText": "ə́ kɔ̌s ɲù ènə̀ àbə̀ŋ",
+          "frenchText": "ce poisson est bon",
+          "langWord": "àbə̀ŋ",
+          "frenchWord": "bon",
+          "pos": "adj"
+        },
+        {
+          "id": "e3891ca6dd52",
+          "audio": "e3891ca6dd521eb7f765a5f32cdaa3a6.mp3",
+          "langText": "ə́ kɔ̌s ɲù ènə̀ àbé",
+          "frenchText": "ce poisson est mauvais",
+          "langWord": "àbé",
+          "frenchWord": "mauvais",
+          "pos": "adj"
+        },
+        {
+          "id": "5d094a14d1d9",
+          "audio": "5d094a14d1d9b4bd39753647829b0efd.mp3",
+          "langText": "mə́ndíp mā mə́nə̀ àvə́p",
+          "frenchText": "cette eau-ci est froide",
+          "langWord": "àvə́p",
+          "frenchWord": "froid",
+          "pos": "adj"
+        },
+        {
+          "id": "94bd00eab3ae",
+          "audio": "94bd00eab3ae787dc01c7dd1baa185ff.mp3",
+          "langText": "mə́ndíp mā mə́nə̀ àyóŋ",
+          "frenchText": "cette eau-là est chaude",
+          "langWord": "àyóŋ",
+          "frenchWord": "chaud",
+          "pos": "adj"
+        },
+        {
+          "id": "66c22cbefee0",
+          "audio": "66c22cbefee002eec3aa715afdc98863.mp3",
+          "langText": "mòt à wók òzáŋ tʃít",
+          "frenchText": "l'homme a faim de viande",
+          "langWord": "zàè",
+          "frenchWord": "faim",
+          "pos": "n"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez : « qu'avez-vous mangé ce matin ? ». Listez les aliments en français au tableau."
+          },
+          {
+            "title": "Présentation du vocabulaire (15 min)",
+            "instruction": "Audio + traduction pour chaque mot. Distinguez actions (manger, boire, cuire) et aliments (eau, manioc, poisson…)."
+          },
+          {
+            "title": "Construction de phrases (15 min)",
+            "instruction": "Modèle : « je + verbe + aliment ». Chaque élève en construit une à l'oral."
+          },
+          {
+            "title": "Compréhension (15 min)",
+            "instruction": "Phrases d'exemple. Identifiez la nourriture mentionnée."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Tour de classe : « moi je mange X ». Chaque élève répond."
+          }
+        ],
+        "freedom": "Sujet riche culturellement (tabous alimentaires, plats régionaux). Restez factuel et bienveillant ; n'imposez aucune préférence.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Tout le monde mange, tout le monde boit. Apprends à le dire en bulu : ce sont des phrases que tu utiliseras tous les jours.",
+        "activities": [
+          {
+            "title": "Activité 1 — Catégoriser",
+            "instruction": "Sépare verbes et aliments dans deux listes."
+          },
+          {
+            "title": "Activité 2 — Construire",
+            "instruction": "Forme 3 phrases « je verbe aliment »."
+          },
+          {
+            "title": "Activité 3 — Audio",
+            "instruction": "Écoute une phrase et dis ce qu'on mange ou boit."
+          }
+        ],
+        "memo": "Les noms d'aliments portent souvent une classe nominale spécifique. Reste sur la racine au début."
+      }
+    },
+    {
+      "id": "VI-1",
+      "code": "VI.1",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase",
+      "title": "Phrases existentielles : « il y a »",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Reconnaître la structure « il y a » en bulu",
+        "Identifier le sujet et le complément de lieu",
+        "Produire une phrase « il y a X dans Y »"
+      ],
+      "vocabulary": [
+        {
+          "id": "5f9b1e2b0f3c",
+          "audio": "5f9b1e2b0f3c6df2bc3df50069777973.mp3",
+          "langText": "à_nɛ́n ákɔ́k ánə̀ ə́lí",
+          "frenchText": "il y a une grosse pièrre noire là-bas.",
+          "langWord": "ànɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "2dedd6ff377c",
+          "audio": "2dedd6ff377c84f36ea7df0615a14b2a.mp3",
+          "langText": "àyàp élé ánə̀ ə́lí",
+          "frenchText": "il y a un grand arbre là-bas",
+          "langWord": "àyàp",
+          "frenchWord": "grand",
+          "pos": "adj"
+        },
+        {
+          "id": "7f364742fb73",
+          "audio": "7f364742fb739347e23e9b42ac253ea8.mp3",
+          "langText": "mə̀ndím mə́nə̀ ə́mvē èté",
+          "frenchText": "il y a de l'eau dans la calebasse",
+          "langWord": "étéwè",
+          "frenchWord": "",
+          "pos": "prep"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez : « qu'y a-t-il dans la salle de classe ? ». Recueillez des réponses en français : « il y a un tableau, des chaises… »."
+          },
+          {
+            "title": "Présentation de la structure (15 min)",
+            "instruction": "Phrases du jour. Repérez collectivement le marqueur d'existence et le complément de lieu."
+          },
+          {
+            "title": "Repérage (15 min)",
+            "instruction": "Pour chaque phrase : entourez le sujet, soulignez le lieu. Variante en binôme avec correction."
+          },
+          {
+            "title": "Production (15 min)",
+            "instruction": "Chaque élève forme une phrase à partir d'un objet vu en IV.1 et d'un lieu. Modèle : « il y a une calebasse dans la maison »."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Lecture des plus belles productions. Faites valoriser l'effort."
+          }
+        ],
+        "freedom": "Si la classe a déjà bien acquis la structure, lancez un concours : qui produit la phrase la plus longue tout en restant correcte ? Sinon, restez sur le modèle simple.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "La structure « il y a » est très utile : elle permet de décrire ce qui se trouve dans un endroit. Apprends à la reconnaître.",
+        "activities": [
+          {
+            "title": "Activité 1 — Repérer",
+            "instruction": "Pour chaque phrase, entoure le mot qui désigne le lieu."
+          },
+          {
+            "title": "Activité 2 — Compléter",
+            "instruction": "Sur un trou « il y a ___ dans la maison », place un mot vu en IV.1."
+          },
+          {
+            "title": "Activité 3 — Inventer",
+            "instruction": "Décris ce qu'il y a sur ton bureau, en bulu, en deux phrases."
+          }
+        ],
+        "memo": "« il y a » se construit en bulu autour d'un verbe d'existence. Le complément de lieu suit souvent."
+      }
+    },
+    {
+      "id": "VI-2",
+      "code": "VI.2",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase",
+      "title": "Décrire un objet par sa qualité",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Construire une phrase « X est Y » (Y = adjectif)",
+        "Faire l'accord adjectif/nom",
+        "Lire une phrase descriptive avec aisance"
+      ],
+      "vocabulary": [
+        {
+          "id": "4513ffb01a9f",
+          "audio": "4513ffb01a9f370de66aed60d0bb1cb8.mp3",
+          "langText": "èbé é:nə̀ èdɔ́k",
+          "frenchText": "le trou est profond",
+          "langWord": "èdɔ́k",
+          "frenchWord": "profond",
+          "pos": "adj"
+        },
+        {
+          "id": "de54f97eacbb",
+          "audio": "de54f97eacbbbce9c93145f2d374dcc0.mp3",
+          "langText": "zə̌n ènə̀ ndàm",
+          "frenchText": "le chemin est large.",
+          "langWord": "ndàm",
+          "frenchWord": "large",
+          "pos": "adj"
+        },
+        {
+          "id": "25ff7ef05b20",
+          "audio": "25ff7ef05b209e23cda58ee88c6fc048.mp3",
+          "langText": "ə́ zə̌n ə́ɲū ènə̀ ə̰̀nkɔ́t",
+          "frenchText": "ce chemin est étroit.",
+          "langWord": "ə̰̀nkɔ́t",
+          "frenchWord": "étroit",
+          "pos": "adj"
+        },
+        {
+          "id": "fb0127bfcdd6",
+          "audio": "fb0127bfcdd6cdbb237606185122c211.mp3",
+          "langText": "àkàlà ánə̀ ndzìŋlə́tə̀",
+          "frenchText": "la boule de (manioc, maϊs, mil, banane) est ronde",
+          "langWord": "ndzìŋlə́tə̀",
+          "frenchWord": "rond",
+          "pos": "adj"
+        },
+        {
+          "id": "f32b91b7c830",
+          "audio": "f32b91b7c83041c40179586ec337491e.mp3",
+          "langText": "ànə̀ àdìt àkɔ́k",
+          "frenchText": "c'est une lourde pierre.",
+          "langWord": "àdìt",
+          "frenchWord": "lourd",
+          "pos": "adj"
+        },
+        {
+          "id": "fa9c810fafa9",
+          "audio": "fa9c810fafa99d57f6292aea7c048c80.mp3",
+          "langText": "èsɔ́ énə̀ ə̰̀dzálán à mə́ndíp",
+          "frenchText": "la calebasse est pleine d'eau",
+          "langWord": "ə̰̀dzálán",
+          "frenchWord": "plein",
+          "pos": "adj"
+        },
+        {
+          "id": "98abc9f854b3",
+          "audio": "98abc9f854b3a228489183d5852b2faf.mp3",
+          "langText": "ə̰̀nkót sí",
+          "frenchText": "la terre est sèche.",
+          "langWord": "ə̰̀nkót",
+          "frenchWord": "sec",
+          "pos": "adj"
+        },
+        {
+          "id": "d8d4eb485296",
+          "audio": "d8d4eb4852964bae2f452d235af27a40.mp3",
+          "langText": "tʃít ènə̀ èbɔ̀l",
+          "frenchText": "la viande est pourrie",
+          "langWord": "èbɔ̀l",
+          "frenchWord": "pourri",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Au tableau : « ce stylo est ___ ». Demandez aux élèves de compléter en français avec un adjectif."
+          },
+          {
+            "title": "Présentation (15 min)",
+            "instruction": "Phrases du jour. Identifiez nom-sujet, copule, adjectif."
+          },
+          {
+            "title": "Repérage de l'accord (15 min)",
+            "instruction": "Comparez les phrases : la marque de classe sur l'adjectif change selon le nom. Faites observer sans trop insister."
+          },
+          {
+            "title": "Production (15 min)",
+            "instruction": "« mon livre est petit », « ma maison est grande »… Chaque élève en produit deux à l'oral, puis à l'écrit."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Trois élèves au choix lisent leurs phrases à voix haute."
+          }
+        ],
+        "freedom": "Sujet idéal pour intégrer les adjectifs vus en IV.3. Si vos élèves bloquent sur l'accord, ne le corrigez pas trop frontalement à ce stade : laissez-les s'imprégner.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Décrire, c'est dire ce qu'une chose est. Avec un nom et un adjectif, tu peux déjà beaucoup.",
+        "activities": [
+          {
+            "title": "Activité 1 — Repérer",
+            "instruction": "Souligne l'adjectif dans chaque phrase."
+          },
+          {
+            "title": "Activité 2 — Transformer",
+            "instruction": "Sur le modèle d'une phrase du jour, change le nom : « le X est grand » → « la Y est grande »."
+          },
+          {
+            "title": "Activité 3 — Inventer",
+            "instruction": "Décris 3 objets de ta classe en bulu."
+          }
+        ],
+        "memo": "L'adjectif s'accorde avec le nom. La copule (« être ») prend souvent une forme courte (« nə̀ »)."
+      }
+    },
+    {
+      "id": "VI-3",
+      "code": "VI.3",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase",
+      "title": "Localiser : ici, là, là-bas",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Comprendre le système des démonstratifs spatiaux",
+        "Distinguer « ici », « là », « là-bas »",
+        "Localiser un objet ou une personne"
+      ],
+      "vocabulary": [
+        {
+          "id": "5f9b1e2b0f3c",
+          "audio": "5f9b1e2b0f3c6df2bc3df50069777973.mp3",
+          "langText": "à_nɛ́n ákɔ́k ánə̀ ə́lí",
+          "frenchText": "il y a une grosse pièrre noire là-bas.",
+          "langWord": "ànɛ́n",
+          "frenchWord": "gros",
+          "pos": "adj"
+        },
+        {
+          "id": "2dedd6ff377c",
+          "audio": "2dedd6ff377c84f36ea7df0615a14b2a.mp3",
+          "langText": "àyàp élé ánə̀ ə́lí",
+          "frenchText": "il y a un grand arbre là-bas",
+          "langWord": "àyàp",
+          "frenchWord": "grand",
+          "pos": "adj"
+        },
+        {
+          "id": "8c747e169c54",
+          "audio": "8c747e169c54ec262227ad2888533078.mp3",
+          "langText": "à ɲɔ̌:ŋ (mɔ́nə́) étùn ə̰́kásí",
+          "frenchText": "il prit un court bâton (à ce moment-là).",
+          "langWord": "ètùn",
+          "frenchWord": "court",
+          "pos": "adj"
+        },
+        {
+          "id": "fb0127bfcdd6",
+          "audio": "fb0127bfcdd6cdbb237606185122c211.mp3",
+          "langText": "àkàlà ánə̀ ndzìŋlə́tə̀",
+          "frenchText": "la boule de (manioc, maϊs, mil, banane) est ronde",
+          "langWord": "ndzìŋlə́tə̀",
+          "frenchWord": "rond",
+          "pos": "adj"
+        },
+        {
+          "id": "fa9c810fafa9",
+          "audio": "fa9c810fafa99d57f6292aea7c048c80.mp3",
+          "langText": "èsɔ́ énə̀ ə̰̀dzálán à mə́ndíp",
+          "frenchText": "la calebasse est pleine d'eau",
+          "langWord": "ə̰̀dzálán",
+          "frenchWord": "plein",
+          "pos": "adj"
+        },
+        {
+          "id": "98abc9f854b3",
+          "audio": "98abc9f854b3a228489183d5852b2faf.mp3",
+          "langText": "ə̰̀nkót sí",
+          "frenchText": "la terre est sèche.",
+          "langWord": "ə̰̀nkót",
+          "frenchWord": "sec",
+          "pos": "adj"
+        },
+        {
+          "id": "d8d4eb485296",
+          "audio": "d8d4eb4852964bae2f452d235af27a40.mp3",
+          "langText": "tʃít ènə̀ èbɔ̀l",
+          "frenchText": "la viande est pourrie",
+          "langWord": "èbɔ̀l",
+          "frenchWord": "pourri",
+          "pos": "adj"
+        },
+        {
+          "id": "94bd00eab3ae",
+          "audio": "94bd00eab3ae787dc01c7dd1baa185ff.mp3",
+          "langText": "mə́ndíp mā mə́nə̀ àyóŋ",
+          "frenchText": "cette eau-là est chaude",
+          "langWord": "àyóŋ",
+          "frenchWord": "chaud",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Au tableau : pointez votre bureau (ici), un élève (là), la fenêtre (là-bas). Verbalisez en français."
+          },
+          {
+            "title": "Présentation (15 min)",
+            "instruction": "Phrases du jour comportant les marqueurs de lieu. Pour chacune, désignez physiquement le point dont on parle."
+          },
+          {
+            "title": "Geste et mémoire (15 min)",
+            "instruction": "Vous prononcez « ici / là / là-bas » : les élèves pointent dans la salle. Ce mouvement aide énormément."
+          },
+          {
+            "title": "Production (15 min)",
+            "instruction": "Chaque élève dit une phrase « il y a X ici/là/là-bas » en désignant."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Faites lire 3 phrases du jour à voix haute, avec geste."
+          }
+        ],
+        "freedom": "Bel exercice à mener dehors si la météo le permet : la cour offre un meilleur terrain de jeu pour les distances.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "« Ici », « là », « là-bas » : trois mots tout simples mais indispensables pour situer ce dont on parle.",
+        "activities": [
+          {
+            "title": "Activité 1 — Pointer",
+            "instruction": "Pour chaque phrase, pointe physiquement la zone évoquée."
+          },
+          {
+            "title": "Activité 2 — Compléter",
+            "instruction": "Sur le modèle « il y a X ___ », choisis ici/là/là-bas selon la position de l'objet."
+          },
+          {
+            "title": "Activité 3 — Décrire la classe",
+            "instruction": "Décris à l'oral 3 objets en utilisant un démonstratif spatial."
+          }
+        ],
+        "memo": "Les démonstratifs spatiaux distinguent souvent trois zones : près de moi, près de toi, loin de tous les deux."
+      }
+    },
+    {
+      "id": "VI-4",
+      "code": "VI.4",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase",
+      "title": "Comparer et opposer",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Construire des phrases qui mettent deux choses en parallèle",
+        "Comprendre une phrase comportant « les uns / les autres »",
+        "Produire une comparaison simple"
+      ],
+      "vocabulary": [
+        {
+          "id": "0af307b1f66a",
+          "audio": "0af307b1f66af65cdf8afa982a48cffd.mp3",
+          "langText": "à wók ólún àmú mɔ́nə́ wě: à kə́ wú",
+          "frenchText": "elle est triste (// pleurer ) parce-que son enfant est mort",
+          "langWord": "òlún",
+          "frenchWord": "triste",
+          "pos": "adj"
+        },
+        {
+          "id": "74b8f982614e",
+          "audio": "74b8f982614e1dc388094dd780f2445d.mp3",
+          "langText": "bə̀vɔ́k bə́tə́lə̀ tə́tə̀lə́, bə̀vɔ́k bə́tɔ̀ɔ́ ə́ tʃìà",
+          "frenchText": "les uns  sont debout, les autres sont assis",
+          "langWord": "tə́tə̀lə́",
+          "frenchWord": "être debout",
+          "pos": "v"
+        },
+        {
+          "id": "e6078a61dbe3",
+          "audio": "e6078a61dbe3fc07f98d45f80caabc8a.mp3",
+          "langText": "à bô sí və̀dá à.sə́ kì óyɔ́",
+          "frenchText": "il est couché mais il ne dort pas",
+          "langWord": "ə́bómbò",
+          "frenchWord": "se coucher",
+          "pos": "v"
+        },
+        {
+          "id": "b765119c6501",
+          "audio": "b765119c6501d921564fb2478e2f9698.mp3",
+          "langText": "à yón àmó̰ ɲìá wé àkə́ ɲə́ yít",
+          "frenchText": "il pleure parce que sa mère l'a frappé",
+          "langWord": "ə́.yón",
+          "frenchWord": "pleurer",
+          "pos": "v"
+        },
+        {
+          "id": "752ba1c9e8c5",
+          "audio": "752ba1c9e8c5927f5b35095549372aa7.mp3",
+          "langText": "wà di dzé ?",
+          "frenchText": "qu'est-ce que tu manges? (tu manges quoi?)",
+          "langWord": "dzé",
+          "frenchWord": "quoi ?",
+          "pos": "prn"
+        },
+        {
+          "id": "569787daa334",
+          "audio": "569787daa3349b5d07c615d8e3d8d7fe.mp3",
+          "langText": "àmódzé",
+          "frenchText": "qu'est-ce que tu manges? (tu manges quoi?)",
+          "langWord": "àmódzé",
+          "frenchWord": "quoi ?",
+          "pos": "prn"
+        },
+        {
+          "id": "6f948323f1ee",
+          "audio": "6f948323f1ee3faccc1463b533c75026.mp3",
+          "langText": "mà wàè àmú wà kə́ kù",
+          "frenchText": "j'ai ri parce que tu étais tombé",
+          "langWord": "àmú nâ:",
+          "frenchWord": "parce que",
+          "pos": ""
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez : « qu'est-ce qui est plus grand : un éléphant ou une souris ? ». Recueillez les réponses en français."
+          },
+          {
+            "title": "Présentation (15 min)",
+            "instruction": "Phrases du jour. Repérez les marqueurs de comparaison ou d'opposition."
+          },
+          {
+            "title": "Analyse (15 min)",
+            "instruction": "Pour les phrases « les uns…, les autres… », faites identifier les deux groupes. C'est typique du bulu narratif."
+          },
+          {
+            "title": "Production (15 min)",
+            "instruction": "Chaque élève construit une comparaison simple à partir du vocabulaire vu (animaux, objets, personnes)."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Lecture de 3 productions. Encouragez la prise de risque."
+          }
+        ],
+        "freedom": "C'est un sujet de niveau 3e : si vos élèves sont plus jeunes, limitez-vous au repérage. La production peut être collective plutôt qu'individuelle.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Comparer, c'est mettre deux choses en relation. En bulu, la structure « les uns…, les autres… » revient souvent dans les contes.",
+        "activities": [
+          {
+            "title": "Activité 1 — Repérer",
+            "instruction": "Souligne dans chaque phrase les deux choses qu'on compare."
+          },
+          {
+            "title": "Activité 2 — Compléter",
+            "instruction": "Sur le modèle « les uns X, les autres Y », place deux verbes que tu connais."
+          },
+          {
+            "title": "Activité 3 — Inventer",
+            "instruction": "Compare deux animaux en français, puis en bulu (avec les mots que tu connais)."
+          }
+        ],
+        "memo": "« les uns…, les autres… » est une structure idiomatique du bulu narratif. La répétition du démonstratif est volontaire."
+      }
+    },
+    {
+      "id": "VI-5",
+      "code": "VI.5",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase",
+      "title": "Petits récits : raconter une scène",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Comprendre une mini-narration en bulu",
+        "Identifier sujet, verbe et compléments dans une phrase complexe",
+        "Produire une phrase racontant une action"
+      ],
+      "vocabulary": [
+        {
+          "id": "25ff7ef05b20",
+          "audio": "25ff7ef05b209e23cda58ee88c6fc048.mp3",
+          "langText": "ə́ zə̌n ə́ɲū ènə̀ ə̰̀nkɔ́t",
+          "frenchText": "ce chemin est étroit.",
+          "langWord": "ə̰̀nkɔ́t",
+          "frenchWord": "étroit",
+          "pos": "adj"
+        },
+        {
+          "id": "0e7b7cf2398d",
+          "audio": "0e7b7cf2398d875b8d7af4ceb847e95c.mp3",
+          "langText": "à kə́ yɛ́n àyàbə́ ɲɔ́",
+          "frenchText": "il a vu un long serpent.",
+          "langWord": "àyàp",
+          "frenchWord": "long",
+          "pos": "adj"
+        },
+        {
+          "id": "8c747e169c54",
+          "audio": "8c747e169c54ec262227ad2888533078.mp3",
+          "langText": "à ɲɔ̌:ŋ (mɔ́nə́) étùn ə̰́kásí",
+          "frenchText": "il prit un court bâton (à ce moment-là).",
+          "langWord": "ètùn",
+          "frenchWord": "court",
+          "pos": "adj"
+        },
+        {
+          "id": "fa9c810fafa9",
+          "audio": "fa9c810fafa99d57f6292aea7c048c80.mp3",
+          "langText": "èsɔ́ énə̀ ə̰̀dzálán à mə́ndíp",
+          "frenchText": "la calebasse est pleine d'eau",
+          "langWord": "ə̰̀dzálán",
+          "frenchWord": "plein",
+          "pos": "adj"
+        },
+        {
+          "id": "e81ed8915f47",
+          "audio": "e81ed8915f4743167fe66e630e1d42bc.mp3",
+          "langText": "ə́ kɔ̌s ɲù ènə̀ àbə̀ŋ",
+          "frenchText": "ce poisson est bon",
+          "langWord": "àbə̀ŋ",
+          "frenchWord": "bon",
+          "pos": "adj"
+        },
+        {
+          "id": "617a31434226",
+          "audio": "617a314342266647d32b5f5e1b36907a.mp3",
+          "langText": "ə́ mòt ɲú ànə̀ ə̀mbàmbà fúlú",
+          "frenchText": "cet homme est bon",
+          "langWord": "ə̀mbàmbà fúlú",
+          "frenchWord": "bon",
+          "pos": "adj"
+        },
+        {
+          "id": "e3891ca6dd52",
+          "audio": "e3891ca6dd521eb7f765a5f32cdaa3a6.mp3",
+          "langText": "ə́ kɔ̌s ɲù ènə̀ àbé",
+          "frenchText": "ce poisson est mauvais",
+          "langWord": "àbé",
+          "frenchWord": "mauvais",
+          "pos": "adj"
+        },
+        {
+          "id": "da807a98e53f",
+          "audio": "da807a98e53ff6eea9990b1b2c1c7396.mp3",
+          "langText": "ə́ mòt ɲú ànə̀ àyɔ́k",
+          "frenchText": "cet homme est mauvais",
+          "langWord": "àyɔ́k",
+          "frenchWord": "mauvais",
+          "pos": "adj"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez : « racontez en une phrase ce que vous avez fait hier ». Recueillez 2-3 récits en français."
+          },
+          {
+            "title": "Présentation (15 min)",
+            "instruction": "Phrases du jour. Pour chacune : qui ? quoi ? où ? quand ? Faites les repérer collectivement."
+          },
+          {
+            "title": "Analyse fine (15 min)",
+            "instruction": "Reprenez une phrase plus longue. Identifiez les marques de temps (passé, présent), de personne, et les éventuelles particules."
+          },
+          {
+            "title": "Production guidée (15 min)",
+            "instruction": "Chaque élève transforme une phrase du jour en changeant le sujet ou l'action. C'est l'occasion d'expérimenter."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Trois élèves volontaires racontent en une phrase ce qu'ils ont compris d'une phrase du jour."
+          }
+        ],
+        "freedom": "Récit = liberté. Si vos élèves veulent inventer plus, laissez-les. Si la phrase « modèle » est trop dense, restez en compréhension.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Raconter, c'est l'une des choses les plus naturelles. En bulu, tu vas découvrir comment se fabrique une phrase qui raconte.",
+        "activities": [
+          {
+            "title": "Activité 1 — Décortiquer",
+            "instruction": "Pour chaque phrase, écris : qui ? fait quoi ? où ?"
+          },
+          {
+            "title": "Activité 2 — Transformer",
+            "instruction": "Change le sujet d'une phrase et adapte le verbe."
+          },
+          {
+            "title": "Activité 3 — Inventer",
+            "instruction": "À l'oral, raconte en une phrase ce que tu vois autour de toi."
+          }
+        ],
+        "memo": "Une phrase complexe en bulu suit l'ordre Sujet-Verbe-Complément, avec des marques de temps préfixées au verbe."
+      }
+    },
+    {
+      "id": "VI-6",
+      "code": "VI.6",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase",
+      "title": "Demander, répondre, dialoguer",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Reconnaître une phrase interrogative",
+        "Comprendre une réponse",
+        "Reproduire un mini-dialogue"
+      ],
+      "vocabulary": [
+        {
+          "id": "0af307b1f66a",
+          "audio": "0af307b1f66af65cdf8afa982a48cffd.mp3",
+          "langText": "à wók ólún àmú mɔ́nə́ wě: à kə́ wú",
+          "frenchText": "elle est triste (// pleurer ) parce-que son enfant est mort",
+          "langWord": "òlún",
+          "frenchWord": "triste",
+          "pos": "adj"
+        },
+        {
+          "id": "5978cf52fb2b",
+          "audio": "5978cf52fb2be1a778e1fae27124b07a.mp3",
+          "langText": "àngá kə̀ éyōŋ wà kə́ kwí",
+          "frenchText": "il est parti quand tu es arrivé",
+          "langWord": "ákə̀",
+          "frenchWord": "partir",
+          "pos": "v"
+        },
+        {
+          "id": "36c0e1dd13f2",
+          "audio": "36c0e1dd13f2d0f4dc09019641b91c0c.mp3",
+          "langText": "ə́kúí",
+          "frenchText": "il est parti quand tu es arrivé",
+          "langWord": "ə́kúí",
+          "frenchWord": "arriver",
+          "pos": "v"
+        },
+        {
+          "id": "a3ed10394efe",
+          "audio": "a3ed10394efe2f0b528538bce5c8d257.mp3",
+          "langText": "ànɔ̀n ə̰́ndə̀tə̀ dáyə́lə̀ sə́sàlə̀ və̀ kɔ̀s",
+          "frenchText": "ce sont les oiseaux qui volent, pas les poissons",
+          "langWord": "ə́yə́lə̀",
+          "frenchWord": "voler",
+          "pos": "v"
+        },
+        {
+          "id": "26cdf69c1f3b",
+          "audio": "26cdf69c1f3b33ccc24b1ee6783dec23.mp3",
+          "langText": "à télè àndé",
+          "frenchText": "il plante le piquet",
+          "langWord": "ə́ télè",
+          "frenchWord": "planter",
+          "pos": "v"
+        },
+        {
+          "id": "fb0dba1232b8",
+          "audio": "fb0dba1232b86d9e4a3e72d4b0ccd2c4.mp3",
+          "langText": "éyòŋ bá tíndì ɲə́, à kǔ:",
+          "frenchText": "quand on le pousse, il tombe",
+          "langWord": "ə́.tíndì",
+          "frenchWord": "pousser",
+          "pos": "v"
+        },
+        {
+          "id": "b765119c6501",
+          "audio": "b765119c6501d921564fb2478e2f9698.mp3",
+          "langText": "à yón àmó̰ ɲìá wé àkə́ ɲə́ yít",
+          "frenchText": "il pleure parce que sa mère l'a frappé",
+          "langWord": "ə́.yón",
+          "frenchWord": "pleurer",
+          "pos": "v"
+        },
+        {
+          "id": "22f4f1c98ccb",
+          "audio": "22f4f1c98ccb368ebb33f849336a8834.mp3",
+          "langText": "à nə zá ?",
+          "frenchText": "qui est-ce?",
+          "langWord": "zá",
+          "frenchWord": "qui ?",
+          "pos": "prn"
+        }
+      ],
+      "teacher": {
+        "intro": "Cette leçon dure environ 60 min. Le plan est en cinq étapes : il vous laisse libre de moduler la durée, l'ordre et la profondeur selon votre classe. Le vocabulaire ci-contre est extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez : « comment pose-t-on une question en français ? ». Listez les mots interrogatifs : qui, quoi, où, quand, comment, pourquoi."
+          },
+          {
+            "title": "Présentation des phrases (15 min)",
+            "instruction": "Phrases du jour : repérez les questions et les réponses. Faites observer la prosodie particulière des questions."
+          },
+          {
+            "title": "Mémorisation (15 min)",
+            "instruction": "Jeu en binôme : un élève pose une question simple, l'autre répond. Vous fournissez le modèle."
+          },
+          {
+            "title": "Mini-dialogue (15 min)",
+            "instruction": "Quatre élèves au tableau, jouent une saynette à partir de phrases du jour. Le reste de la classe valide."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Bilan oral : qu'avez-vous appris ce trimestre ? Recueillez les réponses en bulu autant que possible."
+          }
+        ],
+        "freedom": "Idéale pour conclure un trimestre. Si vous voulez aller plus loin, filmez un mini-dialogue à partager (avec accord) sur l'ENT de l'établissement.",
+        "tips": "Si vous n'êtes pas locuteur natif, faites systématiquement écouter l'audio en référence avant de prononcer vous-même. Si vous l'êtes, partagez vos variantes avec la classe : elles enrichissent l'apprentissage."
+      },
+      "student": {
+        "intro": "Une langue, c'est avant tout un dialogue. Aujourd'hui, tu apprends à poser une question simple et à y répondre.",
+        "activities": [
+          {
+            "title": "Activité 1 — Question ou réponse ?",
+            "instruction": "Pour chaque phrase, dis si c'est une question ou une réponse."
+          },
+          {
+            "title": "Activité 2 — Apparier",
+            "instruction": "Relie chaque question à sa réponse possible."
+          },
+          {
+            "title": "Activité 3 — Jouer",
+            "instruction": "Avec un camarade, joue un mini-dialogue de 4 répliques."
+          }
+        ],
+        "memo": "L'intonation montante marque souvent la question. Certains marqueurs interrogatifs sont placés en fin de phrase."
+      }
+    }
+  ],
+  "stats": {
+    "total_lessons": 19,
+    "by_module": {
+      "M2-segmentaux": 2,
+      "M3-suprasegmentaux": 4,
+      "M4-syntagme-nominal": 3,
+      "M5-syntagme-verbal": 4,
+      "M6-phrase": 6
+    },
+    "vocabulary_items": 144
+  }
+}

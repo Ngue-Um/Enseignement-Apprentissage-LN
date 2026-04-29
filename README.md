@@ -5,9 +5,13 @@ Réalisé dans le cadre du cours **LACC2342 — Outils pour la production du mat
 numérique et multimédia en langues camerounaises**, dispensé à l'École Normale Supérieure
 de Yaoundé par le **Prof. Emmanuel Ngue Um**.
 
-Aperçu : un site responsive qui permet de consulter le vocabulaire bulu (audio MP3 +
-transcription AGLC + traduction française) et de réaliser quatre familles d'exercices
-interactifs alignés sur les programmes officiels MINESEC.
+Aperçu : un site responsive qui propose **dix-neuf leçons clé-en-main** pour
+le bulu (fiche enseignant + fiche élève) ainsi qu'une banque de **184 phrases**
+audio (transcription AGLC + traduction française) et **quatre familles d'exercices
+interactifs**, le tout aligné sur les programmes officiels MINESEC. L'outil est
+conçu pour soulager le travail des enseignants — y compris ceux qui ne sont pas
+locuteurs natifs fluides — et pour rendre les apprentissages immédiatement
+accessibles aux élèves.
 
 ## Démonstration en local
 
@@ -40,12 +44,14 @@ GitHub Pages ignore certains fichiers (notamment ceux commençant par `_`).
 ```
 prototype-langues-camerounaises/
 ├── index.html               # point d'entrée SPA
-├── app.js                   # logique : routage, exercices, lecteur audio
+├── app.js                   # logique : routage, leçons, exercices, lecteur audio
 ├── styles.css               # styles complémentaires à Tailwind (CDN)
 ├── build_data.py            # script Python : fusionne mapping.tsv + ALCAM_*.tsv
+├── build_lessons.py         # script Python : génère lessons_bulu.json (19 fiches)
 ├── data/
 │   ├── languages.json       # catalogue des 16 langues ALCAM
-│   └── bulu.json            # 184 phrases bulu (152 avec traduction française)
+│   ├── bulu.json            # 184 phrases bulu (177 avec traduction française)
+│   └── lessons_bulu.json    # 19 leçons clé-en-main (fiche prof + fiche élève)
 ├── audio/
 │   └── bulu/                # 184 fichiers MP3 (≈ 11 Mo)
 ├── assets/
@@ -95,6 +101,83 @@ la partie du discours (`pos`) et de la classe nominale (`classNoun`) :
 - **Module IV — Syntagme nominal** (`pos = n`)
 - **Module V — Syntagme verbal** (`pos = v`)
 - **Module VI — La phrase**
+
+## Leçons clé-en-main
+
+Le fichier `data/lessons_bulu.json` (généré par `build_lessons.py`) découpe ces cinq
+modules en dix-neuf leçons d'environ 60 minutes. Chaque leçon est pensée pour être
+utilisable telle quelle, y compris par un enseignant qui ne serait pas locuteur natif
+fluide du bulu : le plan en cinq étapes laisse une réelle liberté pédagogique, et la
+fiche élève propose des activités concrètes alignées sur les objectifs MINESEC.
+
+| Code   | Module | Titre |
+|--------|--------|-------|
+| II.1   | II     | Mes premiers mots en bulu |
+| II.2   | II     | Voyelles ouvertes et voyelles fermées |
+| III.1  | III    | Tons hauts et tons bas |
+| III.2  | III    | Le ton qui monte, le ton qui descend |
+| III.3  | III    | Paires aux tons opposés |
+| III.4  | III    | Rythme et longueur des syllabes |
+| IV.1   | IV     | Désigner les objets de la maison |
+| IV.2   | IV     | Compter en bulu |
+| IV.3   | IV     | Décrire avec des adjectifs |
+| V.1    | V      | Verbes d'action du quotidien |
+| V.2    | V      | La famille et les personnes |
+| V.3    | V      | Les animaux du village et de la forêt |
+| V.4    | V      | Manger, boire, cultiver |
+| VI.1   | VI     | Phrases existentielles : « il y a » |
+| VI.2   | VI     | Décrire un objet par sa qualité |
+| VI.3   | VI     | Localiser : ici, là, là-bas |
+| VI.4   | VI     | Comparer et opposer |
+| VI.5   | VI     | Petits récits : raconter une scène |
+| VI.6   | VI     | Demander, répondre, dialoguer |
+
+### Schéma d'une leçon (`data/lessons_bulu.json`)
+
+```jsonc
+{
+  "id": "II-1",
+  "code": "II.1",
+  "module": "M2-segmentaux",
+  "title": "Mes premiers mots en bulu",
+  "duration": "60 min",
+  "level": "6e",
+  "objectives": ["...", "..."],
+  "vocabulary": [ /* items ALCAM (audio + langText + frenchText + …) */ ],
+  "teacher": {
+    "intro":   "Cette leçon dure environ 60 min…",
+    "steps":   [ {"title": "Mise en route (5 min)", "instruction": "..."} , … ],
+    "freedom": "Si les élèves accrochent, prolongez par…",
+    "tips":    "Si vous n'êtes pas locuteur natif…"
+  },
+  "student": {
+    "intro":      "Aujourd'hui nous découvrons…",
+    "activities": [ {"title": "Activité 1 — Écouter et répéter", "instruction": "..."} , … ],
+    "memo":       "Le bulu utilise des sons absents du français (ə, ɔ, ɛ)…"
+  }
+}
+```
+
+### Visualisation dans l'app
+
+- **`/lecons`** — index de toutes les leçons, filtrable par module.
+- **`/lecon/<id>`** — détail d'une leçon avec deux panneaux :
+  - sur **grand écran (≥ 1024px)**, fiche enseignant et fiche élève s'affichent
+    **côte à côte**, ce qui permet à l'enseignant de préparer son cours avec la
+    fiche élève déjà sous les yeux ;
+  - sur **mobile/tablette**, un sélecteur permet de basculer d'un panneau à l'autre.
+
+### Régénérer les leçons
+
+```bash
+python3 build_lessons.py
+```
+
+Le script lit `data/bulu.json` et reconstitue intégralement `data/lessons_bulu.json`
+à partir du plan inscrit en haut de `build_lessons.py`. Les filtres thématiques
+(par regex sur la traduction française et la transcription) garantissent que
+chaque leçon ne mobilise **que des données ALCAM existantes** ; aucune phrase
+n'est inventée.
 
 ## Quatre familles d'exercices
 

@@ -97,3 +97,34 @@
 
 /* Make sure pre-rendered template content is hidden */
 template { display: none; }
+
+/* ---------- Leçons : bascule mobile teacher / student ---------- */
+
+/* Bouton de bascule (visible < 1024px). */
+.lecon-toggle-btn {
+  background: transparent;
+  color: #5a574d;
+  transition: all .15s ease;
+}
+.lecon-toggle-btn.is-active {
+  background: #ffffff;
+  color: #b94608;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+/* Sur écrans étroits, on masque le panneau non sélectionné.
+   Sur écrans larges (≥ 1024px), les deux panneaux sont toujours visibles. */
+@media (max-width: 1023px) {
+  #lecon-teacher-pane.is-hidden-mobile,
+  #lecon-student-pane.is-hidden-mobile {
+    display: none;
+  }
+}
+
+/* Tronquer un paragraphe à 2 lignes (utilisé sur les cartes de leçons). */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

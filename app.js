@@ -2,6 +2,8 @@
  * Routes par hash :
  *   #/             -> Accueil
  *   #/catalogue    -> Catalogue des 16 langues
+ *   #/lecons       -> Index des 19 leçons
+ *   #/lecon/:id    -> Fiche enseignant + élève d'une leçon
  *   #/vocabulaire  -> Liste des phrases bulu
  *   #/exercices    -> Quatre familles d'exercices
  *   #/a-propos     -> À propos
@@ -11,8 +13,10 @@ const state = {
   langues: [],     // catalogue des 16 langues ALCAM
   bulu: [],        // phrases bulu enrichies
   buluWithFr: [],  // phrases bulu qui ont une traduction française non vide
+  lessons: [],     // 19 leçons clé-en-main
   audioBase: 'audio/bulu/',
   currentAudio: null,
+  preferredPane: 'teacher',  // mémoire de session pour la bascule mobile
   scores: {        // scores en mémoire seulement (jamais persistés)
     comprehension: { correct: 0, total: 0 },
     reconnaissance: { correct: 0, total: 0 },
@@ -119,29 +123,45 @@ function similarity(a, b) {
 /* ---------- Chargement des données ---------- */
 
 async function loadData() {
-  const [langues, bulu] = await Promise.all([
+  const [langues, bulu, lessons] = await Promise.all([
     fetch('data/languages.json').then(r => r.json()),
     fetch('data/bulu.json').then(r => r.json()),
+    fetch('data/lessons_bulu.json').then(r => r.json()).catch(() => ({ lessons: [] })),
   ]);
   state.langues = langues;
   state.bulu = bulu;
   state.buluWithFr = bulu.filter(b => b.frenchText && b.langText);
-  return { langues, bulu };
+  state.lessons = lessons.lessons || [];
+  return { langues, bulu, lessons };
 }
 
 /* ---------- Routeur ---------- */
 
-const routes = {
-  '/':           renderHome,
-  '/catalogue':  renderCatalogue,
+// Routes statiques + routes paramétriques.
+// Chaque entrée paramétrique a la forme [regex, renderer].
+const STATIC_ROUTES = {
+  '/':            renderHome,
+  '/catalogue':   renderCatalogue,
+  '/lecons':      renderLecons,
   '/vocabulaire': renderVocabulaire,
-  '/exercices':  renderExercices,
-  '/a-propos':   renderAPropos,
+  '/exercices':   renderExercices,
+  '/a-propos':    renderAPropos,
 };
 
-function getRoute() {
-  const h = location.hash.replace(/^#/, '') || '/';
-  return routes[h] ? h : '/';
+const PARAM_ROUTES = [
+  [/^\/lecon\/([A-Za-z0-9-]+)$/, (id) => renderLecon(id)],
+];
+
+function resolveRoute() {
+  const path = location.hash.replace(/^#/, '') || '/';
+  if (STATIC_ROUTES[path]) {
+    return { path, run: STATIC_ROUTES[path] };
+  }
+  for (const [re, fn] of PARAM_ROUTES) {
+    const m = path.match(re);
+    if (m) return { path, run: () => fn(...m.slice(1)) };
+  }
+  return { path: '/', run: STATIC_ROUTES['/'] };
 }
 
 function navigate(path) {
@@ -149,17 +169,20 @@ function navigate(path) {
 }
 
 function setActiveNav(path) {
+  // Surligne le lien dont le préfixe correspond.
   $$('.nav-link').forEach(a => {
     const target = a.getAttribute('href').replace(/^#/, '');
-    a.classList.toggle('active', target === path);
+    const active = path === target
+      || (target !== '/' && path.startsWith(target));
+    a.classList.toggle('active', active);
   });
 }
 
 function render() {
   stopCurrentAudio();
-  const path = getRoute();
+  const { path, run } = resolveRoute();
   setActiveNav(path);
-  routes[path]();
+  run();
   $('#mobile-menu')?.classList.add('hidden');
   window.scrollTo(0, 0);
 }
@@ -277,6 +300,183 @@ function renderVocabulaire() {
 
 function renderAPropos() {
   mountTemplate('tpl-apropos');
+}
+
+/* ---------- Leçons ---------- */
+
+const MODULE_ORDER = [
+  'M2-segmentaux',
+  'M3-suprasegmentaux',
+  'M4-syntagme-nominal',
+  'M5-syntagme-verbal',
+  'M6-phrase',
+];
+
+function renderLecons() {
+  mountTemplate('tpl-lecons');
+  const root = $('#lecons-modules');
+  const filter = $('#lecons-filter');
+
+  function update() {
+    const sel = filter.value;
+    const lessons = state.lessons.filter(L => !sel || L.module === sel);
+
+    // Regrouper par module en respectant l'ordre MINESEC
+    const byMod = {};
+    for (const L of lessons) {
+      (byMod[L.module] ||= []).push(L);
+    }
+
+    if (!lessons.length) {
+      root.innerHTML = `<div class="text-center text-ink-400 py-12">Aucune leçon dans ce module.</div>`;
+      return;
+    }
+
+    root.innerHTML = MODULE_ORDER
+      .filter(m => byMod[m])
+      .map(m => {
+        const list = byMod[m];
+        const meta = MODULES[m] || { num: '?', label: '' };
+        return `
+          <div>
+            <h2 class="font-serif text-2xl text-ink-900 mb-1">Module ${meta.num} — ${escapeHtml(meta.label)}</h2>
+            <p class="text-sm text-ink-500 mb-4">${list.length} leçon${list.length > 1 ? 's' : ''}</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              ${list.map(renderLeconCard).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+  }
+
+  filter.addEventListener('change', update);
+  update();
+}
+
+function renderLeconCard(L) {
+  const objectives = L.objectives.slice(0, 2).map(o => escapeHtml(o)).join(' · ');
+  return `
+    <a href="#/lecon/${escapeHtml(L.id)}" class="group block bg-white border border-ink-100 rounded-xl p-5 hover:border-brand-300 hover:shadow transition">
+      <div class="flex items-center justify-between gap-3 mb-2">
+        <span class="font-serif text-2xl text-brand-600">${escapeHtml(L.code)}</span>
+        <span class="text-xs text-ink-400 uppercase tracking-wide">${escapeHtml(L.duration)} · ${escapeHtml(L.level)}</span>
+      </div>
+      <h3 class="font-semibold text-lg text-ink-900 group-hover:text-brand-700">${escapeHtml(L.title)}</h3>
+      <p class="text-sm text-ink-500 mt-2 line-clamp-2">${objectives}</p>
+      <div class="mt-3 flex items-center gap-3 text-xs text-ink-400">
+        <span>${L.vocabulary.length} item${L.vocabulary.length > 1 ? 's' : ''} ALCAM</span>
+        <span>·</span>
+        <span class="text-brand-700 font-medium">Ouvrir →</span>
+      </div>
+    </a>
+  `;
+}
+
+function renderLecon(id) {
+  const L = state.lessons.find(x => x.id === id);
+  if (!L) {
+    $('#app').innerHTML = `
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 text-amber-800 max-w-2xl mx-auto">
+        <h2 class="font-semibold text-lg">Leçon introuvable</h2>
+        <p class="mt-2 text-sm">L'identifiant <code>${escapeHtml(id)}</code> ne correspond à aucune leçon.</p>
+        <p class="mt-3"><a class="text-amber-900 underline" href="#/lecons">Retour aux leçons</a></p>
+      </div>`;
+    return;
+  }
+
+  mountTemplate('tpl-lecon');
+  const meta = MODULES[L.module] || { num: '?', label: '' };
+
+  $('#lecon-module-tag').textContent = `Module ${meta.num} — ${meta.label}`;
+  $('#lecon-title').textContent = L.title;
+  $('#lecon-code').textContent = L.code;
+  $('#lecon-meta').textContent = `Durée indicative : ${L.duration} · Niveau : ${L.level}`;
+
+  $('#lecon-objectives').innerHTML = L.objectives
+    .map(o => `<li>${escapeHtml(o)}</li>`).join('');
+
+  // Panneau enseignant
+  $('#lecon-teacher-intro').textContent = L.teacher.intro;
+  $('#lecon-teacher-steps').innerHTML = L.teacher.steps.map((s, i) => `
+    <li class="relative pl-12">
+      <span class="absolute left-0 top-0 w-9 h-9 grid place-items-center rounded-full bg-brand-100 text-brand-700 font-serif font-semibold">${i + 1}</span>
+      <div class="font-semibold text-ink-900">${escapeHtml(s.title)}</div>
+      <p class="text-sm text-ink-700 mt-1">${escapeHtml(s.instruction)}</p>
+    </li>
+  `).join('');
+  $('#lecon-teacher-freedom').textContent = L.teacher.freedom;
+  $('#lecon-teacher-tips').textContent = L.teacher.tips;
+
+  // Panneau élève
+  $('#lecon-student-intro').textContent = L.student.intro;
+  $('#lecon-student-activities').innerHTML = L.student.activities.map((a, i) => `
+    <li class="relative pl-12">
+      <span class="absolute left-0 top-0 w-9 h-9 grid place-items-center rounded-full bg-emerald-100 text-emerald-700 font-serif font-semibold">${i + 1}</span>
+      <div class="font-semibold text-ink-900">${escapeHtml(a.title)}</div>
+      <p class="text-sm text-ink-700 mt-1">${escapeHtml(a.instruction)}</p>
+    </li>
+  `).join('');
+  $('#lecon-student-memo').textContent = L.student.memo;
+
+  // Vocabulaire ALCAM
+  $('#lecon-voc-count').textContent = `${L.vocabulary.length} entrée${L.vocabulary.length > 1 ? 's' : ''}`;
+  $('#lecon-voc-list').innerHTML = L.vocabulary.map(it => `
+    <article class="bg-white border border-ink-100 rounded-lg p-3 flex items-center gap-3">
+      <button class="play-btn shrink-0" data-audio="${escapeHtml(it.audio)}" aria-label="Écouter">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="flex-1 min-w-0">
+        <p class="lang-text text-base text-ink-900 truncate" title="${escapeHtml(it.langText)}">${escapeHtml(it.langText)}</p>
+        <p class="text-xs text-ink-500 truncate" title="${escapeHtml(it.frenchText)}">${escapeHtml(it.frenchText)}</p>
+      </div>
+    </article>
+  `).join('');
+  $$('#lecon-voc-list [data-audio]').forEach(btn => {
+    btn.addEventListener('click', () => playAudio(state.audioBase + btn.dataset.audio, btn));
+  });
+
+  // Bascule mobile teacher / student
+  applyPaneVisibility();
+  $$('.lecon-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.preferredPane = btn.dataset.pane;
+      $$('.lecon-toggle-btn').forEach(b => b.classList.toggle('is-active', b === btn));
+      applyPaneVisibility();
+    });
+  });
+
+  // Navigation prev / next
+  const idx = state.lessons.findIndex(x => x.id === id);
+  const prev = state.lessons[idx - 1];
+  const next = state.lessons[idx + 1];
+  $('#lecon-nav').innerHTML = `
+    ${prev
+      ? `<a href="#/lecon/${escapeHtml(prev.id)}" class="inline-flex items-center gap-2 text-sm text-ink-700 hover:text-brand-700">
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+           ${escapeHtml(prev.code)} · ${escapeHtml(prev.title)}
+         </a>`
+      : '<span></span>'}
+    ${next
+      ? `<a href="#/lecon/${escapeHtml(next.id)}" class="inline-flex items-center gap-2 text-sm text-ink-700 hover:text-brand-700">
+           ${escapeHtml(next.code)} · ${escapeHtml(next.title)}
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+         </a>`
+      : '<span></span>'}
+  `;
+}
+
+function applyPaneVisibility() {
+  const teacher = $('#lecon-teacher-pane');
+  const student = $('#lecon-student-pane');
+  // Sur lg+, les deux panneaux s'affichent côte-à-côte (toggle masqué).
+  // Sur < lg, le toggle pilote la visibilité.
+  if (!teacher || !student) return;
+  // On utilise une classe spécifique pour ne masquer qu'en mode mobile
+  teacher.classList.toggle('is-hidden-mobile', state.preferredPane !== 'teacher');
+  student.classList.toggle('is-hidden-mobile', state.preferredPane !== 'student');
+  $$('.lecon-toggle-btn').forEach(b => {
+    b.classList.toggle('is-active', b.dataset.pane === state.preferredPane);
+  });
 }
 
 /* ---------- Exercices ---------- */
