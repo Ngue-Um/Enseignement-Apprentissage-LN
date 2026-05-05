@@ -4,111 +4,127 @@
     "name": "Bàsàa",
     "iso": "bas",
     "family": "Bantoue A.43",
-    "audio": false
+    "audio": true,
+    "has_lessons": true
   },
   {
     "slug": "ewondo",
     "name": "Èwòndó",
     "iso": "ewo",
     "family": "Bantoue A.72",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   },
   {
     "slug": "bulu",
     "name": "Bulu",
     "iso": "bum",
     "family": "Bantoue A.74",
-    "audio": true
+    "audio": true,
+    "has_lessons": true
   },
   {
     "slug": "gbaya",
     "name": "Gbáyá",
     "iso": "gya",
     "family": "Oubanguienne",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   },
   {
     "slug": "tikar",
     "name": "Tikar",
     "iso": "tik",
     "family": "Bantoïde",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   },
   {
     "slug": "fong",
     "name": "Fòŋ",
     "iso": "—",
     "family": "Bantoue A.50",
-    "audio": false
+    "audio": true,
+    "has_lessons": true
   },
   {
     "slug": "mvele",
     "name": "Mvélé",
     "iso": "—",
     "family": "Bantoue A.50",
-    "audio": false
+    "audio": true,
+    "has_lessons": true
   },
   {
     "slug": "bakossi",
     "name": "Bakossi",
     "iso": "bss",
     "family": "Bantoue A.15",
-    "audio": false
+    "audio": true,
+    "has_lessons": true
   },
   {
     "slug": "tuki-tumbele",
     "name": "Tuki-Tumbele",
     "iso": "—",
     "family": "Bantoue A.60",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   },
   {
     "slug": "tuki-tukombe",
     "name": "Tuki-Tukombe",
     "iso": "—",
     "family": "Bantoue A.60",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   },
   {
     "slug": "balom",
     "name": "Balom",
     "iso": "—",
     "family": "Bantoue A.60",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   },
   {
     "slug": "badjia",
     "name": "Bàdjíà",
     "iso": "—",
     "family": "Bantoue",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   },
   {
     "slug": "banoo",
     "name": "Banɔɔ",
     "iso": "—",
     "family": "Bantoue A.40",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   },
   {
     "slug": "mipa",
     "name": "Mìpá",
     "iso": "—",
     "family": "Bantoue",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   },
   {
     "slug": "yezoum",
     "name": "Yezoum",
     "iso": "—",
     "family": "Bantoue A.70",
-    "audio": false
+    "audio": true,
+    "has_lessons": true
   },
   {
     "slug": "diboum",
     "name": "Diboum",
     "iso": "—",
     "family": "Bantoue",
-    "audio": false
+    "audio": false,
+    "has_lessons": true
   }
 ]

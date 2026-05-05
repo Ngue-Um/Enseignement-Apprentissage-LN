@@ -392,6 +392,135 @@ LESSONS_PLAN = [
             "La voyelle ə (« e muet ») est centrale, ni avant ni arrière."
         ),
     },
+    {
+        "id": "II-3",
+        "code": "II.3",
+        "module": "M2-segmentaux",
+        "moduleTitle": "Module II — Productions segmentales",
+        "title": "Consonnes simples et consonnes complexes",
+        "duration": "60 min",
+        "level": "6e",
+        "objectives": [
+            (
+                "Distinguer une consonne simple d'une consonne complexe (prénasalisée, "
+                "labiovélaire)"
+            ),
+            (
+                "Reproduire correctement quelques consonnes complexes du bulu (mb, nd, "
+                "ng, kp, gb)"
+            ),
+            "Lire des mots contenant ces consonnes",
+        ],
+        "filter": dict(max_tokens=2, lang_pattern="(mb|nd|ng|nz|nj|kp|gb)"),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Affichez deux paires : « ba » vs « mba », « di » vs « ndi ». Faites "
+             "entendre la différence. Demandez : « qu'est-ce qui change ? »."),
+            ("Présentation (15 min)",
+             "Au tableau, deux colonnes. À gauche : consonnes SIMPLES (b, d, g, p, "
+             "t, k, m, n, ɲ, ŋ, l, r, s, z, f, v, w, y). À droite : consonnes "
+             "COMPLEXES, réparties en deux types — prénasalisées (mb, nd, ng, nz, "
+             "nj) et labio-vélaires (kp, gb). Insistez : ce sont des sons UNIQUES, "
+             "pas deux sons."),
+            ("Écoute discriminative (15 min)",
+             "Faites entendre 8 mots. Pour chacun, les élèves notent S ou C "
+             "(simple/complexe). Corrigez collectivement. Insistez sur la perception"
+             " : la prénasalisée est très brève."),
+            ("Lecture en binôme (15 min)",
+             "Distribuez la fiche élève. En binôme, lecture à voix haute. Le binôme "
+             "valide ou corrige."),
+            ("Clôture (10 min)",
+             "Recensez les consonnes complexes vues. Annoncez la leçon AGLC."),
+        ],
+        "freedom": (
+            "Si vos élèves locuteurs natifs trouvent l'exercice trop facile, passez"
+            " aux contrastes plus subtils (kp vs p+w, gb vs g+b). À l'inverse, "
+            "concentrez-vous sur 2 ou 3 consonnes complexes à la fois."
+        ),
+        "student_intro": (
+            "Certaines consonnes du bulu n'existent pas en français : la "
+            "prénasalisée « mb » comme dans « mbom » (nuit), le « kp » comme dans «"
+            " kpaa ». Aujourd'hui tu apprends à les distinguer."
+        ),
+        "student_activities": [
+            ("Activité 1 — Simple ou complexe ?",
+             "Pour chaque mot écouté, écris S (consonne simple) ou C (complexe) en "
+             "début de mot."),
+            ("Activité 2 — Lire à voix haute",
+             "Lis chaque mot en binôme. Ton voisin valide la prononciation, puis "
+             "vous échangez les rôles."),
+            ("Activité 3 — Repérer",
+             "Souligne dans la liste toutes les consonnes prénasalisées (mb, nd, ng,"
+             " nz, nj). Entoure les labiovélaires (kp, gb)."),
+        ],
+        "memo": (
+            "Les consonnes prénasalisées (mb, nd, ng…) et labiovélaires (kp, gb) "
+            "sont une caractéristique forte des langues bantu. Elles s'écrivent "
+            "avec deux lettres mais comptent comme UN son."
+        ),
+    },
+    {
+        "id": "II-4",
+        "code": "II.4",
+        "module": "M2-segmentaux",
+        "moduleTitle": "Module II — Productions segmentales",
+        "title": "L'alphabet général des langues camerounaises (AGLC)",
+        "duration": "60 min",
+        "level": "6e",
+        "objectives": [
+            (
+                "Connaître les principales lettres de l'AGLC absentes de l'alphabet "
+                "français"
+            ),
+            "Associer chaque lettre AGLC au son qu'elle représente",
+            "Lire des mots transcrits en AGLC sans hésitation",
+        ],
+        "filter": dict(max_tokens=2, lang_pattern="[ɛɔəŋɲ]"),
+        "teacher_steps": [
+            ("Accroche (5 min)",
+             "Au tableau, écrivez le mot bulu mə̀nɛ́n. Demandez : « combien de "
+             "lettres voyez-vous qui n'existent pas en français ? ». Recueillez les "
+             "réponses (ə, ɛ, accents)."),
+            ("Présentation de l'AGLC (15 min)",
+             "Affichez le tableau AGLC simplifié : voyelles spéciales (ə, ɛ, ɔ), "
+             "consonnes spéciales (ŋ, ɲ, ɓ pour certaines langues), tons (´, `, ^, "
+             "ˇ). Pour chaque, prononcez le son et faites répéter."),
+            ("Reconnaissance (15 min)",
+             "Distribuez 12 mots transcrits en AGLC. Les élèves entourent les "
+             "caractères spéciaux. Corrigez collectivement."),
+            ("Lecture (15 min)",
+             "Chaque élève à tour de rôle lit un mot. La classe valide. Corrigez "
+             "bienveillamment les erreurs de prononciation."),
+            ("Clôture (10 min)",
+             "Bilan : à quoi sert l'AGLC ? À écrire toutes les langues camerounaises"
+             " avec un seul alphabet partagé. Annoncez la suite."),
+        ],
+        "freedom": (
+            "L'AGLC compte ~50 caractères au total. Inutile de tout présenter en "
+            "une heure : ciblez les 6 à 8 caractères les plus utiles pour votre "
+            "langue cible (en bulu : ə, ɛ, ɔ, ŋ, plus les tons)."
+        ),
+        "student_intro": (
+            "L'AGLC est un alphabet unique pour écrire toutes les langues "
+            "camerounaises. Ce n'est pas une langue, c'est un outil partagé. "
+            "Aujourd'hui, tu en apprends les principales lettres."
+        ),
+        "student_activities": [
+            ("Activité 1 — Repérer",
+             "Pour chaque mot AGLC, entoure les caractères qui n'existent pas en "
+             "français."),
+            ("Activité 2 — Associer",
+             "Relie chaque caractère AGLC au son qu'il représente (API ou exemple "
+             "français approchant)."),
+            ("Activité 3 — Lire",
+             "Lis à voix haute les 5 mots de la fiche, sans regarder la traduction."),
+        ],
+        "memo": (
+            "L'AGLC (Alphabet Général des Langues Camerounaises) ajoute à "
+            "l'alphabet latin des caractères tirés de l'API. Le ə, le ɛ, le ɔ et le"
+            " ŋ sont les plus fréquents."
+        ),
+    },
 
     # === Module III — Suprasegmentaux ====================================
     {
@@ -628,6 +757,72 @@ LESSONS_PLAN = [
             "Le rythme du bulu n'est pas celui du français."
         ),
     },
+    {
+        "id": "III-5",
+        "code": "III.5",
+        "module": "M3-suprasegmentaux",
+        "moduleTitle": "Module III — Suprasegmentaux",
+        "title": "Tons lexicaux et tons grammaticaux",
+        "duration": "60 min",
+        "level": "6e",
+        "objectives": [
+            "Comprendre que le ton peut changer le SENS d'un mot (ton lexical)",
+            (
+                "Comprendre que le ton peut marquer une fonction grammaticale (ton "
+                "grammatical)"
+            ),
+            (
+                "Distinguer un ton lexical d'un ton grammatical sur des exemples "
+                "simples"
+            ),
+        ],
+        "filter": dict(module="M3-suprasegmentaux", min_tones=2, max_tokens=4),
+        "teacher_steps": [
+            ("Rappel (5 min)",
+             "Reprenez avec la classe les 4 types de tons vus en III-1 et III-2 "
+             "(haut, bas, montant, descendant)."),
+            ("Tons lexicaux (15 min)",
+             "Présentez deux paires minimales tonales : deux mots qui ne diffèrent "
+             "que par leur ton et qui désignent deux choses différentes. C'est la "
+             "fonction LEXICALE du ton : il distingue les mots."),
+            ("Tons grammaticaux (15 min)",
+             "Présentez ensuite un même radical verbal qui change de ton selon qu'il"
+             " est au présent ou au passé, ou selon qu'il accepte une négation. "
+             "C'est la fonction GRAMMATICALE : le ton marque une catégorie "
+             "grammaticale."),
+            ("Tri en binôme (15 min)",
+             "Distribuez 8 paires de mots ou de formes verbales. En binôme, les "
+             "élèves classent chaque paire : tonalité lexicale ou grammaticale ?"),
+            ("Clôture (10 min)",
+             "Bilan : « le ton fait deux métiers : il distingue les MOTS, et il "
+             "marque la GRAMMAIRE ». Encouragez à écouter attentivement à la maison."),
+        ],
+        "freedom": (
+            "Si la distinction est trop subtile, restez sur le ton lexical (plus "
+            "accessible). Le ton grammatical peut être effleuré et repris en M5 "
+            "(syntagme verbal)."
+        ),
+        "student_intro": (
+            "Le ton est puissant : il peut changer le sens d'un mot (« banane mûre "
+            "» vs « banane verte ») mais aussi marquer le temps d'un verbe (« je "
+            "mange » vs « j'ai mangé »). Aujourd'hui, on découvre cette double "
+            "fonction."
+        ),
+        "student_activities": [
+            ("Activité 1 — Paires minimales",
+             "Pour chaque paire, écris ce qui change : le ton ? la voyelle ? la "
+             "consonne ?"),
+            ("Activité 2 — Lexical ou grammatical ?",
+             "Pour chaque paire entendue, coche : LEXICAL (sens du mot) ou "
+             "GRAMMATICAL (temps, négation, classe)."),
+            ("Activité 3 — Lire", "Lis à voix haute trois paires en respectant les tons."),
+        ],
+        "memo": (
+            "Le ton fait deux métiers : il distingue les mots (lexical) et il "
+            "marque la grammaire (temps verbal, négation, classe nominale). Bien "
+            "lire = bien tonaliser."
+        ),
+    },
 
     # === Module IV — Syntagme nominal ====================================
     {
@@ -796,6 +991,184 @@ LESSONS_PLAN = [
         "memo": (
             "L'adjectif s'accorde avec le nom. Singulier et pluriel ont des "
             "préfixes différents. Le détail n'a pas à être maîtrisé tout de suite."
+        ),
+    },
+    {
+        "id": "IV-4",
+        "code": "IV.4",
+        "module": "M4-syntagme-nominal",
+        "moduleTitle": "Module IV — Syntagme nominal",
+        "title": "Découvrir les classes nominales",
+        "duration": "60 min",
+        "level": "5e",
+        "objectives": [
+            "Comprendre que les noms du bulu sont rangés en classes",
+            "Identifier les préfixes de classes les plus fréquents",
+            "Associer un nom à sa classe nominale",
+        ],
+        "filter": dict(pos="n", max_tokens=2),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Listez 6 noms bulu au tableau (ex : mòt, bòt, mvù, mìmvù, èsí, bìsí). "
+             "Demandez : « voyez-vous des ressemblances au début des mots ? »."),
+            ("Présentation des classes (15 min)",
+             "Expliquez : en bulu, chaque nom appartient à une CLASSE qui se "
+             "manifeste par un préfixe. Présentez 3 ou 4 classes principales avec "
+             "leur préfixe : mò-/bò- (humains), mu-/mi- (objets), e-/bi- (choses), "
+             "etc. Donnez 2 exemples par classe."),
+            ("Repérage (15 min)",
+             "Distribuez 12 noms. Les élèves identifient le préfixe et notent la "
+             "classe. Corrigez collectivement. Insistez : la classe est une boîte, "
+             "tous les noms d'une boîte se comportent pareil."),
+            ("Pratique en binôme (15 min)",
+             "Jeu de cartes : 16 cartes-noms à trier en 4 piles (4 classes). Le "
+             "premier binôme à trier correctement gagne."),
+            ("Clôture (10 min)",
+             "Bilan : « les classes sont l'ossature du bulu ». Annoncez la leçon "
+             "suivante : singulier/pluriel et accords."),
+        ],
+        "freedom": (
+            "Le bulu compte une dizaine de classes ; n'en présentez que 3-4 à ce "
+            "stade. Si vos élèves accrochent, ajoutez les classes des abstraits "
+            "(bu-) et des liquides (ma-)."
+        ),
+        "student_intro": (
+            "En bulu, comme dans toutes les langues bantu, les noms ne se promènent"
+            " pas seuls : ils appartiennent à des CLASSES, comme des tiroirs bien "
+            "rangés. Aujourd'hui tu découvres les principaux tiroirs."
+        ),
+        "student_activities": [
+            ("Activité 1 — Préfixes",
+             "Souligne le préfixe de chaque nom (les premières lettres avant le "
+             "radical)."),
+            ("Activité 2 — Classer",
+             "Range chaque nom dans la bonne colonne : Classe 1 (mò-), Classe 2 "
+             "(bò-), Classe 3 (mu-), Classe 7 (e-)."),
+            ("Activité 3 — Compléter",
+             "Pour chaque mot français donné, propose un nom bulu et indique sa "
+             "classe."),
+        ],
+        "memo": (
+            "Le bulu range les noms en CLASSES. Chaque classe a son préfixe. Les "
+            "classes 1 et 2 sont pour les humains ; les classes 7 et 8 pour les "
+            "choses. C'est la base de la grammaire bantu."
+        ),
+    },
+    {
+        "id": "IV-5",
+        "code": "IV.5",
+        "module": "M4-syntagme-nominal",
+        "moduleTitle": "Module IV — Syntagme nominal",
+        "title": "Singulier et pluriel : préfixes et accords",
+        "duration": "60 min",
+        "level": "5e",
+        "objectives": [
+            "Reconnaître les couples singulier/pluriel d'une même classe",
+            "Former le pluriel d'un nom à partir de son préfixe singulier",
+            "Comprendre l'accord en classe entre nom et adjectif",
+        ],
+        "filter": dict(pos="n", max_tokens=2),
+        "teacher_steps": [
+            ("Rappel (5 min)",
+             "Reprenez 4 classes vues en IV-4. Demandez à 4 élèves de citer un nom "
+             "de chaque classe."),
+            ("Couples singulier/pluriel (15 min)",
+             "Présentez les couples : Cl.1 mò- ↔ Cl.2 bò-, Cl.3 mu- ↔ Cl.4 mi-, Cl.7"
+             " e- ↔ Cl.8 bi-. Pour chaque, donnez 2 exemples : mòt/bòt, èkíè/bèkíè, "
+             "etc."),
+            ("Mise en pratique (15 min)",
+             "Distribuez 8 noms au singulier. Les élèves forment le pluriel. "
+             "Corrigez collectivement."),
+            ("Accord avec l'adjectif (15 min)",
+             "Présentez : un adjectif s'accorde avec le nom selon la classe. Exemple"
+             " : mòt mvāa (homme bon), bòt bvāa (hommes bons). Faites former 4 "
+             "paires d'accord."),
+            ("Clôture (10 min)",
+             "Bilan : la classe régit tout — préfixe du nom et préfixe de l'adjectif"
+             " marchent ensemble."),
+        ],
+        "freedom": (
+            "L'accord adjectival est complexe et peut être effleuré ; le passage "
+            "singulier ↔ pluriel est l'objectif minimal. Si la classe peine, "
+            "limitez-vous aux couples mò-/bò- et e-/bi-."
+        ),
+        "student_intro": (
+            "En bulu, le pluriel ne s'écrit pas en ajoutant un -s. Il change le "
+            "préfixe du mot. mòt (un homme) → bòt (des hommes). Aujourd'hui, tu "
+            "apprends ces couples."
+        ),
+        "student_activities": [
+            ("Activité 1 — Forme le pluriel",
+             "Pour chaque nom au singulier, écris le pluriel en changeant le "
+             "préfixe."),
+            ("Activité 2 — Accord",
+             "Complète : mòt _____ (bon) ; bòt _____ (bons). Le préfixe de "
+             "l'adjectif suit la classe."),
+            ("Activité 3 — Recopier", "Recopie 5 couples singulier/pluriel dans ton cahier."),
+        ],
+        "memo": (
+            "Sg ↔ Pl en bulu = changement de PRÉFIXE, pas de suffixe. L'adjectif "
+            "s'accorde aussi avec la classe : c'est le système d'accord en classe."
+        ),
+    },
+    {
+        "id": "IV-6",
+        "code": "IV.6",
+        "module": "M4-syntagme-nominal",
+        "moduleTitle": "Module IV — Syntagme nominal",
+        "title": "Possessifs et démonstratifs du nom",
+        "duration": "60 min",
+        "level": "5e",
+        "objectives": [
+            "Utiliser les possessifs (mon, ton, son…) accordés en classe",
+            "Utiliser les démonstratifs (ce, cet, ces…) accordés en classe",
+            (
+                "Construire un syntagme nominal complet : préfixe + radical + "
+                "déterminant"
+            ),
+        ],
+        "filter": dict(fr_pattern=r"\b(mon|ma|mes|ton|ta|tes|son|sa|ses|ce|cet|cette|ces|notre|votre|leur)\b", max_n=10),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Demandez : « comment dit-on “ma maison” en bulu ? ». Recueillez les "
+             "essais. Validez sans corriger immédiatement."),
+            ("Possessifs (15 min)",
+             "Présentez les six personnes : 1sg/2sg/3sg/1pl/2pl/3pl. Au tableau, "
+             "montrez comment le possessif s'accorde avec la classe du nom possédé. "
+             "Donnez 3 exemples : mvù wàma (mon chien, cl.3), èkíè jàma (ma "
+             "calebasse, cl.7), bèkíè bjàma (mes calebasses, cl.8)."),
+            ("Démonstratifs (15 min)",
+             "Présentez le système à trois zones : proche du locuteur, proche de "
+             "l'interlocuteur, éloigné des deux. Pour chaque zone, donnez deux "
+             "exemples accordés en classe."),
+            ("Production (15 min)",
+             "Modèle : « MON [objet] EST ICI ». Chaque élève produit 3 syntagmes "
+             "complets en utilisant les objets vus en IV-1."),
+            ("Clôture (10 min)",
+             "Lecture des plus belles productions. Synthèse : la classe gouverne "
+             "tout — nom, adjectif, possessif, démonstratif."),
+        ],
+        "freedom": (
+            "Système riche mais paradoxalement régulier. Si vos élèves saturent, "
+            "limitez-vous aux 1sg/2sg + démonstratifs proches. Le 3pl et les zones "
+            "lointaines peuvent attendre."
+        ),
+        "student_intro": (
+            "Tu sais déjà nommer les choses. Aujourd'hui, tu apprends à dire « mon "
+            "» et « ce » devant un nom — en bulu, ces petits mots s'accordent "
+            "toujours avec la classe."
+        ),
+        "student_activities": [
+            ("Activité 1 — Accorder le possessif",
+             "Pour chaque nom donné, écris « mon X » et « tes X » avec le préfixe "
+             "correct."),
+            ("Activité 2 — Démonstratif", "Pour chaque nom, propose la forme « ce X-ci » (proche)."),
+            ("Activité 3 — Phrase", "Construis 3 phrases : « MON [objet] [verbe vu en V-1] »."),
+        ],
+        "memo": (
+            "Possessifs et démonstratifs s'accordent EN CLASSE avec le nom : c'est "
+            "la concordance bantu. Le système distingue souvent trois zones "
+            "spatiales (ici/là/là-bas)."
         ),
     },
 
@@ -1009,6 +1382,118 @@ LESSONS_PLAN = [
             "Reste sur la racine au début."
         ),
     },
+    {
+        "id": "V-5",
+        "code": "V.5",
+        "module": "M5-syntagme-verbal",
+        "moduleTitle": "Module V — Syntagme verbal",
+        "title": "Conjuguer au présent, au passé et au futur",
+        "duration": "60 min",
+        "level": "5e",
+        "objectives": [
+            "Identifier les marques de présent, passé et futur sur un verbe",
+            "Conjuguer 3 verbes simples aux trois temps fondamentaux",
+            "Comprendre le rôle des préfixes/affixes verbaux",
+        ],
+        "filter": dict(pos="v", max_tokens=4),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Demandez : « comment dit-on “je mange” et “j'ai mangé” en bulu ? ». "
+             "Recueillez les essais. Notez au tableau."),
+            ("Présentation des temps (15 min)",
+             "Au tableau, dressez la structure de base : SUJET + MARQUE-TEMPS + "
+             "RADICAL + (FINALE). Présentez 3 marques : Ø (présent), -nga/-mā "
+             "(passé), à-/aye- (futur). Insistez : la marque s'insère AVANT le "
+             "radical."),
+            ("Conjugaison guidée (15 min)",
+             "Prenez le verbe « manger » (-dí). Construisez : mə̀ndí (je mange), mə̀"
+             " máñdī (j'ai mangé), mə̀ ayedí (je mangerai). Faites de même pour deux"
+             " autres verbes."),
+            ("Tableau collectif (15 min)",
+             "Distribuez un tableau à compléter (3 verbes × 3 temps × 3 personnes). "
+             "Les élèves le remplissent en binôme. Correction collective."),
+            ("Clôture (10 min)",
+             "Bilan : la conjugaison bulu marche par AFFIXES, pas par terminaisons "
+             "comme en français."),
+        ],
+        "freedom": (
+            "Les marques temporelles varient selon les variétés du bulu. Adaptez à "
+            "l'usage local. Si la classe progresse vite, introduisez l'aspect "
+            "(accompli/inaccompli) en plus."
+        ),
+        "student_intro": (
+            "Hier, aujourd'hui, demain : trois moments, trois temps. En bulu, ce ne"
+            " sont pas les terminaisons qui changent — ce sont des petits morceaux "
+            "ajoutés AVANT le verbe."
+        ),
+        "student_activities": [
+            ("Activité 1 — Repérer le temps", "Pour chaque phrase, écris : présent / passé / futur."),
+            ("Activité 2 — Conjuguer",
+             "Pour le verbe « boire », écris les trois formes : « je bois », « j'ai "
+             "bu », « je boirai »."),
+            ("Activité 3 — Tableau", "Complète le tableau : 3 verbes × 3 temps."),
+        ],
+        "memo": (
+            "Le verbe bulu se construit comme un train : SUJET + MARQUE-TEMPS + "
+            "RADICAL. Pour changer de temps, on change de wagon-temps."
+        ),
+    },
+    {
+        "id": "V-6",
+        "code": "V.6",
+        "module": "M5-syntagme-verbal",
+        "moduleTitle": "Module V — Syntagme verbal",
+        "title": "Dire non : la négation du verbe",
+        "duration": "60 min",
+        "level": "5e",
+        "objectives": [
+            "Reconnaître la marque de négation du verbe bulu",
+            "Transformer une phrase affirmative en phrase négative",
+            "Comprendre que la négation peut être tonale ou affixale selon le verbe",
+        ],
+        "filter": dict(pos="v", fr_pattern=r"\b(ne |n'|pas|jamais|rien|personne)\b"),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Au tableau : « je mange » et « je ne mange pas ». Demandez : « qu'est-"
+             "ce qui change dans la deuxième phrase ? ». Recueillez en français : « "
+             "ne » et « pas »."),
+            ("Présentation (15 min)",
+             "En bulu, la négation se marque par : (a) un préfixe spécifique ajouté "
+             "au verbe (ex : sa-, kə-, selon les variétés), (b) parfois un "
+             "changement de ton sur la racine. Donnez 2 exemples : « je vois » → « "
+             "je ne vois pas »."),
+            ("Transformation (15 min)",
+             "Distribuez 6 phrases affirmatives. Les élèves les passent à la "
+             "négation. Correction collective."),
+            ("Mini-dialogue (15 min)",
+             "Jeu de questions-réponses : un élève affirme « je mange du plantain »."
+             " L'autre répond « moi, je ne mange pas de plantain ». 4 échanges."),
+            ("Clôture (10 min)",
+             "Bilan : « la négation bulu n'est pas un mot séparé — c'est un préfixe "
+             "sur le verbe »."),
+        ],
+        "freedom": (
+            "La négation bulu peut être tonale, affixale ou combinée selon les "
+            "verbes. Inutile d'épuiser le système : choisissez la forme la plus "
+            "régulière de votre variété et tenez-vous-y."
+        ),
+        "student_intro": (
+            "Pour dire NON à une action, le bulu n'utilise pas deux mots comme le "
+            "français. Il modifie le verbe directement. Aujourd'hui, tu apprends ce"
+            " mécanisme essentiel."
+        ),
+        "student_activities": [
+            ("Activité 1 — Affirmatif/négatif", "Pour chaque phrase, dis si elle est affirmative ou négative."),
+            ("Activité 2 — Transformer",
+             "Mets à la négative 4 phrases simples données par le professeur."),
+            ("Activité 3 — Dialoguer",
+             "Avec un camarade, jouez 4 échanges « je fais X / je ne fais pas X »."),
+        ],
+        "memo": (
+            "La négation en bulu se marque sur le verbe lui-même (préfixe ou ton). "
+            "Pas de « ne...pas » séparé : tout se passe AU SEIN du verbe."
+        ),
+    },
 
     # === Module VI — La phrase ===========================================
     {
@@ -1164,6 +1649,65 @@ LESSONS_PLAN = [
         "memo": (
             "Les démonstratifs spatiaux distinguent souvent trois zones : "
             "près de moi, près de toi, loin de tous les deux."
+        ),
+    },
+    {
+        "id": "VI-4",
+        "code": "VI.4",
+        "module": "M6-phrase",
+        "moduleTitle": "Module VI — La phrase",
+        "title": "Les types de phrases : déclarative, interrogative, impérative, exclamative",
+        "duration": "60 min",
+        "level": "5e",
+        "objectives": [
+            "Distinguer les quatre types de phrases en bulu",
+            (
+                "Reconnaître les marques typiques de chaque type (intonation, "
+                "particule)"
+            ),
+            "Produire une phrase de chaque type",
+        ],
+        "filter": dict(min_tokens=3, max_tokens=8),
+        "teacher_steps": [
+            ("Accroche (5 min)",
+             "Au tableau, écrivez 4 phrases françaises : « tu manges. », « tu manges"
+             " ? », « mange ! », « comme tu manges ! ». Faites identifier les types."),
+            ("Présentation (15 min)",
+             "Présentez en bulu les marques caractéristiques : phrase déclarative "
+             "(intonation neutre), interrogative (intonation montante + parfois "
+             "particule finale), impérative (verbe sans sujet, intonation ferme), "
+             "exclamative (particule expressive, intonation marquée)."),
+            ("Écoute discriminative (15 min)",
+             "Faites entendre 8 phrases bulu. Les élèves notent le type (D/I/Imp/E)."
+             " Correction collective."),
+            ("Production (15 min)",
+             "Chaque élève transforme « tu vas au marché » en quatre types. Lecture "
+             "à voix haute en binôme."),
+            ("Clôture (10 min)",
+             "Synthèse : « ce qui distingue souvent les types en bulu, c'est "
+             "l'intonation et les particules — pas seulement la ponctuation »."),
+        ],
+        "freedom": (
+            "L'exclamative est parfois fusionnée avec la déclarative selon les "
+            "variétés. Les particules interrogatives varient. Adaptez à votre usage"
+            " local."
+        ),
+        "student_intro": (
+            "Une même idée peut s'exprimer de quatre façons : on affirme, on "
+            "questionne, on ordonne, on s'exclame. En bulu, chaque type a sa "
+            "musique propre."
+        ),
+        "student_activities": [
+            ("Activité 1 — Identifier",
+             "Pour chaque phrase entendue, coche le type : déclarative, "
+             "interrogative, impérative, exclamative."),
+            ("Activité 2 — Transformer",
+             "Prends la phrase « tu vas au marché » et écris-la en 4 types."),
+            ("Activité 3 — Jouer", "En binôme, jouez 4 mini-saynètes, une par type."),
+        ],
+        "memo": (
+            "Quatre types de phrases : on AFFIRME, on QUESTIONNE, on ORDONNE, on "
+            "S'EXCLAME. En bulu, l'intonation et les particules font la différence."
         ),
     },
     # === Module VII — Gestion du quotidien Niveau 1 (4e, 25h) ============
@@ -1348,6 +1892,164 @@ LESSONS_PLAN = [
             "qu'on apprend dès l'enfance."
         ),
     },
+    {
+        "id": "VII-4",
+        "code": "VII.4",
+        "module": "M7-quotidien-1",
+        "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+        "title": "La ponctuation en langue nationale",
+        "duration": "60 min",
+        "level": "4e",
+        "objectives": [
+            "Connaître les principaux signes de ponctuation et leur fonction",
+            "Ponctuer correctement une phrase ou un court paragraphe",
+            "Comprendre que la ponctuation aide à la lecture orale",
+        ],
+        "filter": dict(fr_pattern=r"[.,;:!?\-]", max_n=10),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Au tableau, projetez un paragraphe SANS ponctuation. Demandez à un "
+             "élève de le lire à voix haute. Faites observer la difficulté."),
+            ("Présentation des signes (15 min)",
+             "Listez : point (.), virgule (,), point d'interrogation (?), point "
+             "d'exclamation (!), point-virgule (;), deux-points (:), tiret (-). Pour"
+             " chaque, donnez la fonction et un exemple."),
+            ("Ponctuer (15 min)",
+             "Distribuez le même paragraphe sans ponctuation. Les élèves le "
+             "ponctuent en binôme. Comparez les versions et discutez les choix."),
+            ("Lire ponctué (15 min)",
+             "Lecture à voix haute par 4 élèves volontaires, en respectant la "
+             "ponctuation. La classe écoute et valide."),
+            ("Clôture (10 min)", "Bilan : « la ponctuation, c'est la respiration du texte »."),
+        ],
+        "freedom": (
+            "En langues nationales, l'usage de certains signes peut différer du "
+            "français. Le tiret long, les guillemets, et le point d'interrogation "
+            "renversé peuvent être adaptés à la tradition orthographique locale."
+        ),
+        "student_intro": (
+            "La ponctuation est faite de petits signes qui guident la lecture. Ils "
+            "disent quand respirer, quand interroger, quand s'arrêter. Aujourd'hui,"
+            " tu apprends à les utiliser."
+        ),
+        "student_activities": [
+            ("Activité 1 — Identifier",
+             "Pour chaque signe de ponctuation rencontré dans le texte, indique sa "
+             "fonction."),
+            ("Activité 2 — Ponctuer", "Place les signes manquants dans le paragraphe fourni."),
+            ("Activité 3 — Lire à voix haute", "Lis le texte ponctué en respectant les pauses."),
+        ],
+        "memo": (
+            "Les signes de ponctuation rythment la phrase. Ils n'ont pas tous la "
+            "même valeur : le point clôt, la virgule sépare, le point "
+            "d'interrogation appelle une réponse."
+        ),
+    },
+    {
+        "id": "VII-5",
+        "code": "VII.5",
+        "module": "M7-quotidien-1",
+        "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+        "title": "Prépositions et compléments circonstanciels (lieu, temps, manière)",
+        "duration": "60 min",
+        "level": "4e",
+        "objectives": [
+            "Identifier les principales prépositions du bulu (lieu, temps)",
+            "Construire un complément circonstanciel correct",
+            "Distinguer CC de lieu, de temps et de manière",
+        ],
+        "filter": dict(fr_pattern=r"\b(à|dans|sur|sous|chez|devant|derrière|avant|après|pendant|avec|sans|comme)\b", max_n=10),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Au tableau : « je vais ». Demandez : « où ? quand ? comment ? ». "
+             "Recueillez les compléments en français."),
+            ("Présentation des prépositions (15 min)",
+             "Présentez 6 à 8 prépositions bulu : à, dans, sur, sous, devant, avec, "
+             "etc. Pour chacune, donnez la traduction et un exemple."),
+            ("Compléments circonstanciels (15 min)",
+             "Triez les compléments en 3 groupes : LIEU (où ?), TEMPS (quand ?), "
+             "MANIÈRE (comment ?). Pour chaque, donnez 2 exemples typiques."),
+            ("Production (15 min)",
+             "Modèle : « Je VERBE + CC-lieu + CC-temps ». Chaque élève produit 3 "
+             "phrases complètes."),
+            ("Clôture (10 min)",
+             "Bilan : « les compléments circonstanciels enrichissent l'action »."),
+        ],
+        "freedom": (
+            "Les prépositions bulu fusionnent souvent avec leur complément "
+            "(préposition + nom forme un syntagme prépositionnel). Adaptez selon la"
+            " variété et l'orthographe employées."
+        ),
+        "student_intro": (
+            "Une action se passe quelque part, à un certain moment, d'une certaine "
+            "manière. Aujourd'hui, tu apprends à dire OÙ, QUAND, COMMENT en bulu."
+        ),
+        "student_activities": [
+            ("Activité 1 — Repérer la préposition",
+             "Souligne la préposition dans chaque phrase et écris ce qu'elle "
+             "introduit (lieu, temps, manière)."),
+            ("Activité 2 — Compléter", "Ajoute un complément circonstanciel à chaque phrase."),
+            ("Activité 3 — Produire", "Écris 3 phrases avec un CC-lieu, un CC-temps, un CC-manière."),
+        ],
+        "memo": (
+            "Le complément circonstanciel répond à : OÙ, QUAND, COMMENT, POURQUOI. "
+            "Il s'introduit le plus souvent par une préposition."
+        ),
+    },
+    {
+        "id": "VII-6",
+        "code": "VII.6",
+        "module": "M7-quotidien-1",
+        "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+        "title": "Conjonctions de coordination et adverbes",
+        "duration": "60 min",
+        "level": "4e",
+        "objectives": [
+            "Connaître les principales conjonctions de coordination du bulu",
+            (
+                "Utiliser les adverbes les plus fréquents (oui, non, peut-être, "
+                "souvent, toujours…)"
+            ),
+            "Construire une phrase coordonnée simple",
+        ],
+        "filter": dict(fr_pattern=r"\b(et|ou|mais|donc|or|ni|car|puis|alors|toujours|jamais|souvent|parfois)\b", max_n=10),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Demandez aux élèves d'enchaîner deux idées : « je vais au marché. Je "
+             "rentre à la maison. » Comment les relier ?"),
+            ("Conjonctions (15 min)",
+             "Présentez les conjonctions principales : ET, OU, MAIS, DONC, en bulu. "
+             "Pour chacune, donnez deux phrases-exemples."),
+            ("Adverbes (15 min)",
+             "Présentez 6 adverbes utiles : oui, non, peut-être, souvent, toujours, "
+             "jamais. Faites prononcer et placer dans la phrase."),
+            ("Production (15 min)",
+             "Modèle : « phrase 1 + conjonction + phrase 2 ». Chaque élève produit 3"
+             " phrases coordonnées."),
+            ("Clôture (10 min)", "Bilan : « les conjonctions tissent les idées entre elles »."),
+        ],
+        "freedom": (
+            "L'usage des conjonctions varie : certaines variétés du bulu préfèrent "
+            "la juxtaposition (sans conjonction explicite). Présentez les deux "
+            "options."
+        ),
+        "student_intro": (
+            "Pour relier deux idées, on a besoin de petits mots-pont : « et », « "
+            "mais », « ou ». Et pour nuancer, on a les adverbes : « toujours », « "
+            "parfois », « jamais »."
+        ),
+        "student_activities": [
+            ("Activité 1 — Repérer", "Souligne dans chaque phrase la conjonction et l'adverbe."),
+            ("Activité 2 — Coordonner",
+             "Relie chaque paire de phrases avec la bonne conjonction (et, mais, ou,"
+             " donc)."),
+            ("Activité 3 — Produire", "Écris 3 phrases coordonnées sur ta journée d'hier."),
+        ],
+        "memo": (
+            "Conjonctions = relier (et, mais, ou, donc). Adverbes = nuancer "
+            "(souvent, toujours, jamais)."
+        ),
+    },
 
     # === Module VIII — Gestion du quotidien Niveau 2 (3e, 25h) ============
     {
@@ -1510,6 +2212,479 @@ LESSONS_PLAN = [
             "marqueurs interrogatifs sont placés en fin de phrase."
         ),
     },
+    {
+        "id": "VIII-4",
+        "code": "VIII.4",
+        "module": "M8-quotidien-2",
+        "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
+        "title": "Parler de la santé et du bien-être",
+        "duration": "60 min",
+        "level": "3e",
+        "objectives": [
+            "Nommer les parties du corps et les maladies courantes en bulu",
+            "Décrire un symptôme et demander un soin",
+            "Comprendre un conseil de santé simple",
+        ],
+        "filter": dict(fr_pattern=r"\b(corps|tête|ventre|main|pied|œil|fièvre|paludisme|toux|douleur|malade|guérir|médecin|hôpital)\b", max_n=12),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Demandez : « comment dit-on “j'ai mal” en bulu ? ». Recueillez les "
+             "essais."),
+            ("Vocabulaire du corps (15 min)",
+             "Présentez 8 parties du corps : tête, ventre, main, pied, œil, oreille,"
+             " dos, jambe. Affichez sur un schéma simple."),
+            ("Vocabulaire de la maladie (15 min)",
+             "Présentez : avoir mal à, fièvre, paludisme, toux, douleur, médecin, "
+             "hôpital. Pour chacun, donnez un exemple en phrase."),
+            ("Mini-dialogue (15 min)",
+             "Jeu de rôle : un élève « malade » décrit son symptôme, un autre « "
+             "médecin » conseille. 4 échanges minimum."),
+            ("Clôture (10 min)",
+             "Bilan : « parler de sa santé en bulu, c'est honorer une langue qui "
+             "sait soigner ». Annoncez la suite (environnement)."),
+        ],
+        "freedom": (
+            "Si vous le pouvez, invitez un agent de santé local pour une "
+            "intervention de 10 min en bulu — apprentissage situé et communautaire."
+        ),
+        "student_intro": (
+            "Sa santé, on en parle d'abord à ses proches, dans sa langue. "
+            "Aujourd'hui, tu apprends à nommer ton corps et à décrire ce qui ne va "
+            "pas en bulu."
+        ),
+        "student_activities": [
+            ("Activité 1 — Étiqueter", "Sur le schéma du corps, écris chaque partie en bulu."),
+            ("Activité 2 — Décrire un symptôme",
+             "« J'ai mal à... » : produis 3 phrases avec 3 parties du corps "
+             "différentes."),
+            ("Activité 3 — Mini-dialogue", "En binôme, jouez un échange patient/médecin de 6 répliques."),
+        ],
+        "memo": (
+            "Le vocabulaire de la santé est essentiel : il permet d'aider et d'être"
+            " aidé. Connaître son corps en bulu, c'est aussi un acte de "
+            "transmission."
+        ),
+    },
+    {
+        "id": "VIII-5",
+        "code": "VIII.5",
+        "module": "M8-quotidien-2",
+        "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
+        "title": "Environnement et citoyenneté en langue nationale",
+        "duration": "60 min",
+        "level": "3e",
+        "objectives": [
+            "Nommer les éléments de l'environnement (forêt, fleuve, air, sol)",
+            "Comprendre et produire un message citoyen simple",
+            "Discuter d'une action écocitoyenne en bulu",
+        ],
+        "filter": dict(fr_pattern=r"\b(forêt|arbre|fleuve|rivière|terre|eau|propre|sale|protéger|jeter|déchet|village|école|citoyen)\b", max_n=12),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Demandez : « citez 3 choses de la nature autour de votre village ». "
+             "Recueillez en français."),
+            ("Vocabulaire environnement (15 min)",
+             "Présentez 6 mots : forêt, arbre, fleuve, eau, terre, air. Plus 3 "
+             "verbes : protéger, jeter, ramasser. Donnez des exemples."),
+            ("Citoyenneté (15 min)",
+             "Présentez 4 expressions : « ne jette pas », « protège la forêt », « "
+             "vive le village », « notre école ». Discutez du rôle citoyen."),
+            ("Production écrite (15 min)",
+             "Chaque élève rédige une phrase écocitoyenne : modèle « pour notre "
+             "[lieu], je [action] »."),
+            ("Clôture (10 min)",
+             "Lecture des 3 plus belles productions. Discutez : à qui transmettre ce"
+             " message ?"),
+        ],
+        "freedom": (
+            "Sortie possible si l'environnement le permet : 15 min dans la cour ou "
+            "autour de l'école pour nommer en bulu ce qu'on voit. Apprentissage "
+            "incarné."
+        ),
+        "student_intro": (
+            "Ton environnement est précieux. Le bulu sait nommer les arbres, les "
+            "rivières, le sol — et il sait aussi appeler à les protéger. "
+            "Aujourd'hui, tu deviens citoyen en langue."
+        ),
+        "student_activities": [
+            ("Activité 1 — Vocabulaire", "Pour chaque mot français, écris l'équivalent bulu."),
+            ("Activité 2 — Slogan", "Crée un mini-slogan écocitoyen en bulu (4-5 mots)."),
+            ("Activité 3 — Engagement", "Écris une phrase qui commence par « je m'engage à... »."),
+        ],
+        "memo": (
+            "L'environnement et la citoyenneté se disent dans toutes les langues du"
+            " monde. Quand on les dit en langue nationale, on enracine l'engagement"
+            " dans la culture."
+        ),
+    },
+    {
+        "id": "VIII-6",
+        "code": "VIII.6",
+        "module": "M8-quotidien-2",
+        "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
+        "title": "Médias et communication : informer en langue nationale",
+        "duration": "60 min",
+        "level": "3e",
+        "objectives": [
+            "Connaître quelques mots du champ médiatique (radio, journal, message)",
+            "Produire un court message d'information en bulu",
+            "Comprendre un titre de bulletin radio simple",
+        ],
+        "filter": dict(fr_pattern=r"\b(radio|journal|nouvelle|annonce|message|téléphone|appeler|écrire|lire|écouter)\b", max_n=12),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Demandez : « écoutez-vous la radio en bulu ? laquelle ? quelle "
+             "émission ? ». Recueillez les témoignages."),
+            ("Vocabulaire médias (15 min)",
+             "Présentez : radio, journal, nouvelle, annonce, message, téléphone. "
+             "Plus 4 verbes : écouter, lire, écrire, appeler."),
+            ("Titre de bulletin (15 min)",
+             "Modèle : « Aujourd'hui, [événement] dans [lieu] ». Faites produire 3 "
+             "titres collectifs au tableau."),
+            ("Production individuelle (15 min)",
+             "Chaque élève rédige un mini-bulletin de 2 phrases sur un événement "
+             "récent du village ou de l'école."),
+            ("Clôture (10 min)",
+             "Trois élèves lisent leur bulletin à voix haute, façon présentateur "
+             "radio. La classe valide."),
+        ],
+        "freedom": (
+            "Si vous avez du matériel, faites enregistrer (audio) les bulletins et "
+            "écoutez-les en classe. Vous pouvez aussi écouter un vrai bulletin "
+            "radio en bulu sur YouTube."
+        ),
+        "student_intro": (
+            "Informer, c'est faire circuler les nouvelles. La radio en bulu, le "
+            "journal en bulu, le téléphone en bulu — autant de canaux pour que la "
+            "langue vive."
+        ),
+        "student_activities": [
+            ("Activité 1 — Lexique", "Apparie chaque mot français à son équivalent bulu."),
+            ("Activité 2 — Titre", "Écris 2 titres de bulletin sur le modèle vu."),
+            ("Activité 3 — Présentateur",
+             "Lis ton mini-bulletin à voix haute en imitant un présentateur radio."),
+        ],
+        "memo": (
+            "Les médias gardent les langues vivantes. Quand on informe en langue "
+            "nationale, on dit aux jeunes : cette langue compte aussi pour le "
+            "présent et l'avenir, pas seulement pour le passé."
+        ),
+    },
+    {
+        "id": "IX-1",
+        "code": "IX.1",
+        "module": "M9-terminale",
+        "moduleTitle": "Module IX — Terminale : genres de discours et littérature",
+        "title": "Les genres de discours : narratif, procédural, expositif, exhortatif",
+        "duration": "60 min",
+        "level": "Tle",
+        "objectives": [
+            "Distinguer les quatre grands genres de discours classiques",
+            "Reconnaître les marques formelles de chaque genre",
+            "Identifier le genre d'un texte court en langue nationale",
+        ],
+        "filter": dict(min_tokens=4, max_tokens=12),
+        "teacher_steps": [
+            ("Accroche (5 min)",
+             "Lisez 4 incipits courts à la classe. Demandez : « qu'est-ce que chacun"
+             " veut faire ? raconter ? expliquer ? convaincre ? instruire ? »."),
+            ("Présentation (15 min)",
+             "Définissez les quatre genres : NARRATIF (raconter), PROCÉDURAL "
+             "(comment faire), EXPOSITIF (expliquer un savoir), EXHORTATIF (inciter "
+             "à l'action). Pour chacun, donnez les marques formelles."),
+            ("Étude collective (15 min)",
+             "Distribuez quatre courts extraits (un par genre). Faites identifier "
+             "collectivement le genre de chacun, en justifiant."),
+            ("Production (15 min)",
+             "Chaque élève rédige une phrase de chaque genre sur le même thème (ex :"
+             " « le manioc »)."),
+            ("Clôture (10 min)",
+             "Bilan : « le genre du discours guide le lecteur — il dit comment lire "
+             "»."),
+        ],
+        "freedom": (
+            "Vous pouvez ajouter les sous-genres de la littérature africaine : "
+            "proverbes (sentencieux), contes (narratif merveilleux), devinettes "
+            "(énigmatique), chants (poétique). Cela prépare la leçon suivante."
+        ),
+        "student_intro": (
+            "Tout texte appartient à un genre — il raconte, explique, instruit, ou "
+            "exhorte. Reconnaître le genre, c'est déjà comprendre l'intention de "
+            "l'auteur."
+        ),
+        "student_activities": [
+            ("Activité 1 — Identifier",
+             "Pour chaque extrait, indique le genre : narratif, procédural, "
+             "expositif, ou exhortatif."),
+            ("Activité 2 — Marques formelles",
+             "Repère et entoure deux marques caractéristiques par genre (verbes au "
+             "passé pour narratif, impératifs pour procédural, etc.)."),
+            ("Activité 3 — Produire",
+             "Sur le thème « le marché », écris une phrase narrative, une "
+             "procédurale, une expositive, une exhortative."),
+        ],
+        "memo": (
+            "Quatre genres classiques : NARRATIF (raconter), PROCÉDURAL (faire), "
+            "EXPOSITIF (expliquer), EXHORTATIF (inciter). La littérature africaine "
+            "y ajoute proverbes, contes, devinettes, chants."
+        ),
+    },
+    {
+        "id": "IX-2",
+        "code": "IX.2",
+        "module": "M9-terminale",
+        "moduleTitle": "Module IX — Terminale : genres de discours et littérature",
+        "title": "Identifier l'intention de l'auteur (primaire et secondaire)",
+        "duration": "60 min",
+        "level": "Tle",
+        "objectives": [
+            (
+                "Distinguer intention primaire (immédiate, manifeste) et intention "
+                "secondaire (sous-jacente, implicite)"
+            ),
+            (
+                "Repérer les marques linguistiques de l'intention (performatifs, "
+                "expressions idiomatiques, questions rhétoriques)"
+            ),
+            "Formuler en une phrase l'intention dominante d'un texte",
+        ],
+        "filter": dict(min_tokens=5, max_tokens=15),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Au tableau, écrivez : « il fait chaud ici ». Demandez : « cette phrase"
+             " est-elle un constat ou un appel à ouvrir la fenêtre ? ». Faites "
+             "émerger l'idée d'intention."),
+            ("Intention primaire (15 min)",
+             "Définissez : c'est ce que l'auteur veut faire MANIFESTEMENT. Marques :"
+             " performatifs (« je promets, j'ordonne »), apertures et finales "
+             "codifiées."),
+            ("Intention secondaire (15 min)",
+             "Définissez : c'est ce que l'auteur vise EN PROFONDEUR. Marques : "
+             "digressions, questions rhétoriques, chants insérés, évaluations "
+             "morales, expressions idiomatiques."),
+            ("Étude de cas (15 min)",
+             "Distribuez un court texte (10-15 lignes) en bulu. Les élèves, en "
+             "binôme, formulent les deux intentions."),
+            ("Clôture (10 min)",
+             "Lecture des analyses. Discussion : « un même texte peut avoir "
+             "plusieurs intentions superposées »."),
+        ],
+        "freedom": (
+            "Pour les classes en avance, introduisez la prise en compte de "
+            "l'auditoire/lecteur (âge, niveau de connaissance, contexte) — comment "
+            "l'auteur l'anticipe et adapte son discours."
+        ),
+        "student_intro": (
+            "Un texte ne dit pas toujours tout ce qu'il veut. L'auteur a souvent "
+            "une intention apparente et une autre, plus profonde. Aujourd'hui, tu "
+            "apprends à les distinguer."
+        ),
+        "student_activities": [
+            ("Activité 1 — Repérer les marques",
+             "Souligne dans le texte les performatifs, les questions rhétoriques, "
+             "les expressions idiomatiques."),
+            ("Activité 2 — Formuler",
+             "Rédige en une phrase l'intention primaire, puis l'intention "
+             "secondaire."),
+            ("Activité 3 — Justifier",
+             "Cite deux marques linguistiques qui appuient ton interprétation de "
+             "l'intention secondaire."),
+        ],
+        "memo": (
+            "Intention primaire = ce que l'auteur veut MANIFESTEMENT (annoncé, "
+            "performatif). Intention secondaire = ce qu'il vise EN PROFONDEUR "
+            "(digressions, chants, ironie). Les deux peuvent coexister."
+        ),
+    },
+    {
+        "id": "IX-3",
+        "code": "IX.3",
+        "module": "M9-terminale",
+        "moduleTitle": "Module IX — Terminale : genres de discours et littérature",
+        "title": "Les participants dans le discours et leurs références",
+        "duration": "60 min",
+        "level": "Tle",
+        "objectives": [
+            (
+                "Identifier les types de participants (primaires, secondaires, "
+                "tertiaires, figurants, décor)"
+            ),
+            "Reconnaître les types de références (négative, indéfinie, définie)",
+            (
+                "Repérer les formes de référence (noms, syntagmes, propositions, "
+                "pronoms, démonstratifs)"
+            ),
+        ],
+        "filter": dict(min_tokens=6, max_tokens=18),
+        "teacher_steps": [
+            ("Accroche (5 min)",
+             "Lisez un court extrait narratif. Demandez : « combien de personnages ?"
+             " lesquels sont au centre, lesquels en arrière-plan ? »."),
+            ("Catégories de participants (15 min)",
+             "Présentez : PRIMAIRES (centre du récit), SECONDAIRES (interagissent "
+             "avec eux), TERTIAIRES (mentionnés sans agir), FIGURANTS et DÉCORS "
+             "(toile de fond). Donnez des exemples."),
+            ("Types de références (15 min)",
+             "Présentez : RÉFÉRENCE NÉGATIVE (« personne », « rien »), INDÉFINIE (« "
+             "un homme », « quelqu'un »), DÉFINIE (« le chef », « ce roi »). Faites "
+             "repérer dans un texte."),
+            ("Formes de références (15 min)",
+             "Listez : noms, syntagmes nominaux, propositions relatives, pronoms, "
+             "démonstratifs. Faites identifier 2 occurrences de chaque forme dans le"
+             " texte étudié."),
+            ("Clôture (10 min)",
+             "Bilan : « l'auteur module l'attention du lecteur en variant la manière"
+             " de désigner les participants »."),
+        ],
+        "freedom": (
+            "Excellent terrain pour intégrer les contes traditionnels — qui "
+            "regorgent de participants hiérarchisés (chef, héros, animal-totem, "
+            "forêt-personnage). À adapter selon les textes disponibles."
+        ),
+        "student_intro": (
+            "Dans un récit, certains personnages sont au centre, d'autres en marge."
+            " La langue dispose de mille manières de les désigner. Aujourd'hui, tu "
+            "apprends à les repérer toutes."
+        ),
+        "student_activities": [
+            ("Activité 1 — Hiérarchiser",
+             "Liste les participants du texte par catégorie : primaires, "
+             "secondaires, tertiaires, figurants."),
+            ("Activité 2 — Type de référence",
+             "Pour 6 mentions, indique : référence négative, indéfinie, ou définie."),
+            ("Activité 3 — Forme",
+             "Repère 2 syntagmes nominaux, 2 pronoms, 2 démonstratifs dans le texte."),
+        ],
+        "memo": (
+            "Les participants ont une HIÉRARCHIE "
+            "(primaires/secondaires/tertiaires/figurants), un TYPE de référence "
+            "(négatif/indéfini/défini) et une FORME (nom, syntagme, proposition, "
+            "pronom, démonstratif)."
+        ),
+    },
+    {
+        "id": "IX-4",
+        "code": "IX.4",
+        "module": "M9-terminale",
+        "moduleTitle": "Module IX — Terminale : genres de discours et littérature",
+        "title": "Modalité du verbe : voix, aspect, modes et temps",
+        "duration": "60 min",
+        "level": "Tle",
+        "objectives": [
+            "Distinguer voix active et voix passive en langue nationale",
+            "Reconnaître l'aspect (accompli vs inaccompli) sur un verbe",
+            "Identifier le mode (indicatif, impératif, subjonctif, conditionnel)",
+        ],
+        "filter": dict(pos="v", min_tokens=4, max_tokens=12),
+        "teacher_steps": [
+            ("Mise en route (5 min)",
+             "Au tableau : « le chasseur tue l'antilope » vs « l'antilope est tuée "
+             "par le chasseur ». Faites identifier la différence."),
+            ("Voix (15 min)",
+             "Définissez : voix ACTIVE (sujet = agent), voix PASSIVE (sujet = "
+             "patient). En langue nationale, le passif est souvent marqué par un "
+             "suffixe verbal (variable selon les variétés)."),
+            ("Aspect (15 min)",
+             "Définissez : ACCOMPLI (action achevée — « j'ai mangé ») vs INACCOMPLI "
+             "(action en cours ou habituelle — « je mange »). Donnez 3 exemples "
+             "bulu."),
+            ("Modes (15 min)",
+             "Listez : indicatif (réel), impératif (ordre), subjonctif "
+             "(souhait/possibilité), conditionnel (hypothèse). Faites identifier le "
+             "mode sur 6 phrases."),
+            ("Clôture (10 min)",
+             "Bilan : « le verbe porte beaucoup d'informations à la fois — voix, "
+             "aspect, mode, temps. La grammaire du verbe est la grammaire de "
+             "l'action »."),
+        ],
+        "freedom": (
+            "Très dense pour 60 min : sentez-vous libre d'étaler sur deux séances. "
+            "La voix peut être traitée en première heure, l'aspect/mode en seconde."
+        ),
+        "student_intro": (
+            "Le verbe ne se contente pas de dire l'action — il dit aussi qui agit "
+            "(voix), si l'action est finie ou en cours (aspect), si elle est réelle"
+            " ou souhaitée (mode). Aujourd'hui, tu décodes tout cela."
+        ),
+        "student_activities": [
+            ("Activité 1 — Voix", "Pour chaque phrase, dis si elle est active ou passive."),
+            ("Activité 2 — Aspect", "Indique l'aspect (accompli/inaccompli) de chaque verbe."),
+            ("Activité 3 — Mode",
+             "Pour 6 phrases, indique le mode : indicatif, impératif, subjonctif, ou"
+             " conditionnel."),
+        ],
+        "memo": (
+            "Le verbe porte 4 informations : VOIX (qui agit), ASPECT (achevé ou "
+            "pas), MODE (réel ou autre), TEMPS (passé/présent/futur). C'est le cœur"
+            " de la grammaire."
+        ),
+    },
+    {
+        "id": "IX-5",
+        "code": "IX.5",
+        "module": "M9-terminale",
+        "moduleTitle": "Module IX — Terminale : genres de discours et littérature",
+        "title": "Cohésion textuelle et prééminence (topicalisation, focalisation)",
+        "duration": "60 min",
+        "level": "Tle",
+        "objectives": [
+            (
+                "Identifier les marqueurs de cohésion d'un texte (connecteurs, "
+                "anaphores)"
+            ),
+            (
+                "Repérer une topicalisation (mise en thème) et une focalisation (mise "
+                "en relief)"
+            ),
+            "Comprendre comment l'auteur dirige l'attention du lecteur",
+        ],
+        "filter": dict(min_tokens=8, max_tokens=20),
+        "teacher_steps": [
+            ("Accroche (5 min)",
+             "Lisez deux versions d'une même phrase : « le chef a parlé hier » vs « "
+             "hier, c'est LE CHEF qui a parlé ». Demandez ce qui change."),
+            ("Cohésion (15 min)",
+             "Définissez : la cohésion est ce qui tient un texte ensemble. Marques :"
+             " connecteurs (puis, donc, alors, mais), anaphores (reprises "
+             "pronominales), répétitions stratégiques."),
+            ("Topicalisation (15 min)",
+             "Définissez : déplacer un élément en début de phrase pour en faire le "
+             "THÈME. En bulu, souvent marqué par une particule de mise en tête. "
+             "Donnez 3 exemples."),
+            ("Focalisation (15 min)",
+             "Définissez : placer un élément dans une position privilégiée (souvent "
+             "après un clivage : « c'est X qui... ») pour le METTRE EN RELIEF. 3 "
+             "exemples."),
+            ("Clôture (10 min)",
+             "Bilan : « la grammaire ne sert pas seulement à construire — elle sert "
+             "à montrer, à hiérarchiser, à séduire »."),
+        ],
+        "freedom": (
+            "Notion avancée. Si vos élèves sont déjà solides, introduisez la "
+            "structure information ancienne / nouvelle (given/new). Sinon, tenez-"
+            "vous à la cohésion + un seul des deux phénomènes."
+        ),
+        "student_intro": (
+            "Un bon texte ne se contente pas d'enchaîner des phrases : il les "
+            "tisse. Et un bon écrivain dirige l'attention de son lecteur, comme un "
+            "chef d'orchestre. Aujourd'hui, tu apprends ces gestes."
+        ),
+        "student_activities": [
+            ("Activité 1 — Connecteurs",
+             "Souligne dans le texte les 5 connecteurs principaux et indique leur "
+             "fonction (addition, opposition, conséquence...)."),
+            ("Activité 2 — Topicalisation",
+             "Repère 2 énoncés où un élément a été déplacé en tête. Réécris-les sous"
+             " forme « non topicalisée »."),
+            ("Activité 3 — Focalisation",
+             "Mets en relief un élément différent dans 3 phrases simples fournies."),
+        ],
+        "memo": (
+            "COHÉSION = ciment du texte (connecteurs, anaphores). TOPICALISATION = "
+            "on met en TÊTE ce dont on parle. FOCALISATION = on met en RELIEF ce "
+            "sur quoi on insiste. Trois leviers pour guider le lecteur."
+        ),
+    },
 ]
 
 
@@ -1569,6 +2744,8 @@ def main():
 
     out = {
         "language": "bulu",
+        "languageName": "Bulu",
+        "audio": True,
         "lessons": lessons,
         "stats": {
             "total_lessons": len(lessons),

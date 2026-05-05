@@ -34,6 +34,7 @@ const MODULES = {
   'M6-phrase':           { num: 'VI',   label: 'La phrase' },
   'M7-quotidien-1':      { num: 'VII',  label: 'Gestion du quotidien — Niveau 1' },
   'M8-quotidien-2':      { num: 'VIII', label: 'Gestion du quotidien — Niveau 2' },
+  'M9-terminale':        { num: 'IX',   label: 'Genres de discours et littérature' },
 };
 
 const EXO_LABELS = {
@@ -125,17 +126,65 @@ function similarity(a, b) {
 
 /* ---------- Chargement des données ---------- */
 
+const LANG_KEY = 'lang.selected';
+
+function getSelectedLang() {
+  // 1. Look at URL hash query param ?lang=...
+  const m = (location.hash || '').match(/[?&]lang=([\w-]+)/);
+  if (m) return m[1];
+  // 2. Look at localStorage
+  try {
+    const stored = localStorage.getItem(LANG_KEY);
+    if (stored) return stored;
+  } catch (e) {}
+  // 3. Default
+  return 'bulu';
+}
+
+function setSelectedLang(slug) {
+  state.currentLang = slug;
+  try { localStorage.setItem(LANG_KEY, slug); } catch (e) {}
+}
+
+async function loadLessonsForLang(slug) {
+  try {
+    const res = await fetch(`data/lessons_${slug}.json`);
+    if (!res.ok) return { lessons: [] };
+    return await res.json();
+  } catch (e) {
+    return { lessons: [] };
+  }
+}
+
 async function loadData() {
-  const [langues, bulu, lessons] = await Promise.all([
+  const initLang = getSelectedLang();
+  const [langues, bulu, lessonsPack] = await Promise.all([
     fetch('data/languages.json').then(r => r.json()),
     fetch('data/bulu.json').then(r => r.json()),
-    fetch('data/lessons_bulu.json').then(r => r.json()).catch(() => ({ lessons: [] })),
+    loadLessonsForLang(initLang),
   ]);
   state.langues = langues;
+  state.currentLang = initLang;
+  state.currentLangAudio = lessonsPack.audio === true;
+  state.audioBase = `audio/${initLang}/`;
   state.bulu = bulu;
   state.buluWithFr = bulu.filter(b => b.frenchText && b.langText);
-  state.lessons = lessons.lessons || [];
-  return { langues, bulu, lessons };
+  state.lessons = lessonsPack.lessons || [];
+  return { langues, bulu, lessons: lessonsPack };
+}
+
+async function switchLanguage(slug) {
+  if (slug === state.currentLang) return;
+  setSelectedLang(slug);
+  const pack = await loadLessonsForLang(slug);
+  state.lessons = pack.lessons || [];
+  state.currentLangAudio = pack.audio === true;
+  state.audioBase = `audio/${slug}/`;
+  // Re-render the current view if it depends on lessons
+  const route = (location.hash || '#/').slice(1).split('?')[0];
+  if (route === '/lecons' || route.startsWith('/lecon/')) {
+    handleRoute();
+  }
 }
 
 /* ---------- Routeur ---------- */
@@ -222,31 +271,48 @@ function renderHome() {
 function renderCatalogue() {
   mountTemplate('tpl-catalogue');
   const grid = $('#catalogue-grid');
-  grid.innerHTML = state.langues.map(l => `
+  grid.innerHTML = state.langues.map(l => {
+    const tags = [];
+    if (l.has_lessons) tags.push('<span class="text-xs font-semibold bg-brand-100 text-brand-800 px-2 py-1 rounded-full">45 leçons</span>');
+    if (l.audio)       tags.push('<span class="text-xs font-semibold bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full">Audio dispo</span>');
+    if (!l.audio && !l.has_lessons) tags.push('<span class="text-xs font-semibold bg-ink-100 text-ink-500 px-2 py-1 rounded-full">À venir</span>');
+    const description = l.audio
+      ? 'Dataset complet : audios MP3, transcription AGLC, traduction française. Disponible dans Vocabulaire et Exercices.'
+      : (l.has_lessons
+          ? 'Dataset textuel ALCAM disponible. Les 45 leçons clé-en-main des 9 modules MINESEC sont utilisables ; la couche audio reste à enregistrer par les élèves-professeurs.'
+          : 'Dataset textuel disponible sur mdc. La couche audio est en cours de constitution par les élèves-professeurs.');
+    return `
     <article class="bg-white rounded-xl border border-ink-100 p-5 ${l.audio ? '' : 'opacity-90'}">
       <div class="flex items-start justify-between gap-3">
         <div>
           <h3 class="font-serif text-xl text-ink-900 lang-text">${escapeHtml(l.name)}</h3>
           <div class="text-xs text-ink-500 mt-0.5">ISO ${escapeHtml(l.iso)} · ${escapeHtml(l.family)}</div>
         </div>
-        ${l.audio
-          ? '<span class="text-xs font-semibold bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full">Audio dispo</span>'
-          : '<span class="text-xs font-semibold bg-ink-100 text-ink-500 px-2 py-1 rounded-full">À venir</span>'}
+        <div class="flex flex-col gap-1 items-end">${tags.join('')}</div>
       </div>
-      <p class="text-sm text-ink-500 mt-3">
+      <p class="text-sm text-ink-500 mt-3">${escapeHtml(description)}</p>
+      <div class="mt-4 flex items-center gap-3">
+        ${l.has_lessons
+          ? `<a href="#/lecons" data-lang="${escapeHtml(l.slug)}" class="catalogue-open-lecons text-sm font-medium text-brand-700 hover:text-brand-800">Ouvrir les leçons →</a>`
+          : ''}
         ${l.audio
-          ? 'Dataset complet : audios MP3, transcription AGLC, traduction française. Disponible dans Vocabulaire et Exercices.'
-          : 'Dataset textuel disponible sur mdc. La couche audio est en cours de constitution par les élèves-professeurs.'}
-      </p>
-      <div class="mt-4 flex items-center gap-2">
-        ${l.audio
-          ? `<a href="#/vocabulaire" class="text-sm font-medium text-brand-700 hover:text-brand-800">Explorer →</a>`
+          ? `<a href="#/vocabulaire" class="text-sm font-medium text-brand-700 hover:text-brand-800">Vocabulaire →</a>`
           : ''}
         <a href="https://mozilladatacollective.com/organization/cmfv3ichk000amd07piai0zoz" target="_blank" rel="noopener"
            class="text-sm text-ink-500 hover:text-ink-700 underline">mdc</a>
       </div>
     </article>
-  `).join('');
+  `;
+  }).join('');
+  // Wire « Ouvrir les leçons » to switch the language before navigating
+  $$('.catalogue-open-lecons').forEach(a => {
+    a.addEventListener('click', async e => {
+      e.preventDefault();
+      const slug = a.dataset.lang;
+      await switchLanguage(slug);
+      location.hash = '#/lecons';
+    });
+  });
 }
 
 function renderVocabulaire() {
@@ -316,12 +382,50 @@ const MODULE_ORDER = [
   'M6-phrase',
   'M7-quotidien-1',
   'M8-quotidien-2',
+  'M9-terminale',
 ];
 
 function renderLecons() {
   mountTemplate('tpl-lecons');
   const root = $('#lecons-modules');
   const filter = $('#lecons-filter');
+  const langPicker = $('#lecons-lang');
+  const audioBanner = $('#lecons-audio-banner');
+
+  // Populate language picker if present
+  if (langPicker && state.langues) {
+    const sortedLangs = [...state.langues].sort((a, b) => {
+      // bulu first, then alpha
+      if (a.slug === 'bulu') return -1;
+      if (b.slug === 'bulu') return 1;
+      return a.name.localeCompare(b.name);
+    });
+    langPicker.innerHTML = sortedLangs.map(L => {
+      const audioFlag = L.audio ? '' : ' (sans audio)';
+      return `<option value="${escapeHtml(L.slug)}">${escapeHtml(L.name)}${audioFlag}</option>`;
+    }).join('');
+    langPicker.value = state.currentLang;
+    langPicker.addEventListener('change', async () => {
+      await switchLanguage(langPicker.value);
+    });
+  }
+
+  if (audioBanner) {
+    if (!state.currentLangAudio) {
+      const lang = (state.langues || []).find(L => L.slug === state.currentLang);
+      audioBanner.classList.remove('hidden');
+      audioBanner.innerHTML = `
+        <strong>Audio non disponible.</strong> Les enregistrements ALCAM ne sont
+        pour l'instant disponibles que pour le bulu. Pour
+        ${lang ? escapeHtml(lang.name) : 'cette langue'}, les transcriptions
+        AGLC et le plan pédagogique restent utilisables, mais les boutons
+        d'écoute ne joueront aucun son.
+      `;
+    } else {
+      audioBanner.classList.add('hidden');
+      audioBanner.innerHTML = '';
+    }
+  }
 
   function update() {
     const sel = filter.value;
@@ -425,18 +529,24 @@ function renderLecon(id) {
   $('#lecon-student-memo').textContent = L.student.memo;
 
   // Vocabulaire ALCAM
+  const hasAudio = state.currentLangAudio !== false;
   $('#lecon-voc-count').textContent = `${L.vocabulary.length} entrée${L.vocabulary.length > 1 ? 's' : ''}`;
-  $('#lecon-voc-list').innerHTML = L.vocabulary.map(it => `
-    <article class="bg-white border border-ink-100 rounded-lg p-3 flex items-center gap-3">
-      <button class="play-btn shrink-0" data-audio="${escapeHtml(it.audio)}" aria-label="Écouter">
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-      <div class="flex-1 min-w-0">
-        <p class="lang-text text-base text-ink-900 truncate" title="${escapeHtml(it.langText)}">${escapeHtml(it.langText)}</p>
-        <p class="text-xs text-ink-500 truncate" title="${escapeHtml(it.frenchText)}">${escapeHtml(it.frenchText)}</p>
-      </div>
-    </article>
-  `).join('');
+  $('#lecon-voc-list').innerHTML = L.vocabulary.map(it => {
+    const audioOk = hasAudio && it.audio;
+    const btnClasses = audioOk ? 'play-btn' : 'play-btn opacity-30 cursor-not-allowed';
+    const btnTitle = audioOk ? 'Écouter' : 'Audio non disponible pour cette langue';
+    return `
+      <article class="bg-white border border-ink-100 rounded-lg p-3 flex items-center gap-3">
+        <button class="${btnClasses} shrink-0" ${audioOk ? `data-audio="${escapeHtml(it.audio)}"` : 'disabled'} aria-label="${btnTitle}" title="${btnTitle}">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="flex-1 min-w-0">
+          <p class="lang-text text-base text-ink-900 truncate" title="${escapeHtml(it.langText)}">${escapeHtml(it.langText)}</p>
+          <p class="text-xs text-ink-500 truncate" title="${escapeHtml(it.frenchText)}">${escapeHtml(it.frenchText)}</p>
+        </div>
+      </article>
+    `;
+  }).join('');
   $$('#lecon-voc-list [data-audio]').forEach(btn => {
     btn.addEventListener('click', () => playAudio(state.audioBase + btn.dataset.audio, btn));
   });

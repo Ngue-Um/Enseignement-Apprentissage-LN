@@ -206,21 +206,21 @@ def build_bulu(audio_dir: Path, mapping_path: Path, alcam_path: Path):
 
 # ----------- 16 langues ALCAM (catalogue) -----------
 LANGUES = [
-    {"slug": "basaa",          "name": "Bàsàa",            "iso": "bas", "family": "Bantoue A.43", "audio": False},
+    {"slug": "basaa",          "name": "Bàsàa",            "iso": "bas", "family": "Bantoue A.43", "audio": True},
     {"slug": "ewondo",         "name": "Èwòndó",           "iso": "ewo", "family": "Bantoue A.72", "audio": False},
     {"slug": "bulu",           "name": "Bulu",             "iso": "bum", "family": "Bantoue A.74", "audio": True},
     {"slug": "gbaya",          "name": "Gbáyá",            "iso": "gya", "family": "Oubanguienne", "audio": False},
     {"slug": "tikar",          "name": "Tikar",            "iso": "tik", "family": "Bantoïde",     "audio": False},
-    {"slug": "fong",           "name": "Fòŋ",              "iso": "—",   "family": "Bantoue A.50", "audio": False},
-    {"slug": "mvele",          "name": "Mvélé",            "iso": "—",   "family": "Bantoue A.50", "audio": False},
-    {"slug": "bakossi",        "name": "Bakossi",          "iso": "bss", "family": "Bantoue A.15", "audio": False},
+    {"slug": "fong",           "name": "Fòŋ",              "iso": "—",   "family": "Bantoue A.50", "audio": True},
+    {"slug": "mvele",          "name": "Mvélé",            "iso": "—",   "family": "Bantoue A.50", "audio": True},
+    {"slug": "bakossi",        "name": "Bakossi",          "iso": "bss", "family": "Bantoue A.15", "audio": True},
     {"slug": "tuki-tumbele",   "name": "Tuki-Tumbele",     "iso": "—",   "family": "Bantoue A.60", "audio": False},
     {"slug": "tuki-tukombe",   "name": "Tuki-Tukombe",     "iso": "—",   "family": "Bantoue A.60", "audio": False},
     {"slug": "balom",          "name": "Balom",            "iso": "—",   "family": "Bantoue A.60", "audio": False},
     {"slug": "badjia",         "name": "Bàdjíà",           "iso": "—",   "family": "Bantoue",      "audio": False},
     {"slug": "banoo",          "name": "Banɔɔ",            "iso": "—",   "family": "Bantoue A.40", "audio": False},
     {"slug": "mipa",           "name": "Mìpá",             "iso": "—",   "family": "Bantoue",      "audio": False},
-    {"slug": "yezoum",         "name": "Yezoum",           "iso": "—",   "family": "Bantoue A.70", "audio": False},
+    {"slug": "yezoum",         "name": "Yezoum",           "iso": "—",   "family": "Bantoue A.70", "audio": True},
     {"slug": "diboum",         "name": "Diboum",           "iso": "—",   "family": "Bantoue",      "audio": False},
 ]
 
