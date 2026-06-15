@@ -1,0 +1,3955 @@
+{
+  "language": "bakossi",
+  "languageName": "Bakossi",
+  "lessons": [
+    {
+      "id": "I-1",
+      "code": "I.1",
+      "module": "M1-diversite",
+      "moduleTitle": "Module I — Diversité linguistique camerounaise",
+      "title": "Le Cameroun, mosaïque de 239 langues",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Prendre conscience de la diversité linguistique du Cameroun",
+        "Situer quelques grandes familles de langues sur la carte",
+        "Adopter une attitude de respect envers toutes les langues du pays"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon I.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Mise en route (5 min)",
+            "instruction": "Demandez aux élèves combien de langues ils pensent qu'on parle au Cameroun. Recueillez les estimations au tableau. Annoncez le chiffre officiel : environ 239 langues vivantes (ALCAM)."
+          },
+          {
+            "title": "Carte au tableau (15 min)",
+            "instruction": "Tracez une carte simplifiée des grandes zones linguistiques : Bantu (Sud, Centre, Est, Littoral), Soudaniques (Nord), Adamawa-Oubanguiennes, Tchadiques. Montrez qu'aucune région n'est mono-langue."
+          },
+          {
+            "title": "Témoignages (15 min)",
+            "instruction": "Faites circuler la parole : chaque élève dit la ou les langue(s) parlée(s) à la maison. Valorisez la diversité présente dans la classe."
+          },
+          {
+            "title": "Réflexion guidée (15 min)",
+            "instruction": "Question : pourquoi enseigne-t-on les langues nationales à l'école aujourd'hui ? Faites émerger : transmission, patrimoine, citoyenneté, identité."
+          },
+          {
+            "title": "Clôture (10 min)",
+            "instruction": "Bilan collectif. Annoncez la prochaine leçon : la place du Bakossi."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Si vous n'êtes pas locuteur natif, consultez le corpus ALCAM (Bakossi) pour les prononciations de référence."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Le Cameroun, mosaïque de 239 langues.",
+        "activities": [
+          {
+            "title": "Activité 1 — Estimer puis vérifier",
+            "instruction": "Avant la leçon, écris ton estimation du nombre de langues du Cameroun. À la fin, compare avec le chiffre réel."
+          },
+          {
+            "title": "Activité 2 — Ma langue",
+            "instruction": "Liste les langues parlées chez toi. Le Bakossi en fait-il partie ?"
+          },
+          {
+            "title": "Activité 3 — Carte mentale",
+            "instruction": "Dessine une carte mentale : « langues du Cameroun » au centre, et les grandes familles autour."
+          }
+        ],
+        "memo": "Le Cameroun compte environ 239 langues réparties en 4 grandes familles. Aucune langue n'est plus légitime qu'une autre."
+      }
+    },
+    {
+      "id": "I-2",
+      "code": "I.2",
+      "module": "M1-diversite",
+      "moduleTitle": "Module I — Diversité linguistique camerounaise",
+      "title": "Identifier la place du Bakossi",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Situer le Bakossi dans la famille Bantoue A.15",
+        "Reconnaître quelques langues apparentées (basaa)",
+        "Localiser l'aire Bakossi sur la carte"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon I.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Rappel (5 min)",
+            "instruction": "Reprenez les grandes familles. Demandez à quelle famille appartient le Bakossi."
+          },
+          {
+            "title": "Portrait du Bakossi (20 min)",
+            "instruction": "Famille : Bantoue A.15. Région principale : Littoral, Sud-Ouest. Langues apparentées : basaa. Montrez sur carte."
+          },
+          {
+            "title": "Comparaison (15 min)",
+            "instruction": "Proposez quelques mots Bakossi du corpus et faites repérer les sons absents du français, les tons, les classes nominales."
+          },
+          {
+            "title": "Discussion (10 min)",
+            "instruction": "Peut-on comprendre un locuteur de basaa si on parle Bakossi ? Explorez l'intercompréhension."
+          },
+          {
+            "title": "Synthèse (10 min)",
+            "instruction": "Fiche mémo : famille / région / langues apparentées du Bakossi."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "La famille bantoue est la plus vaste d'Afrique subsaharienne."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Identifier la place du Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Classer",
+            "instruction": "Place le Bakossi dans le tableau des familles linguistiques."
+          },
+          {
+            "title": "Activité 2 — Carte",
+            "instruction": "Colorie sur une carte muette la région où le Bakossi est parlé."
+          },
+          {
+            "title": "Activité 3 — Enquête",
+            "instruction": "Demande à un membre de ta famille 3 mots en Bakossi avec traduction."
+          }
+        ],
+        "memo": "Le Bakossi appartient à la famille Bantoue A.15. Il est parlé dans la région Littoral, Sud-Ouest."
+      }
+    },
+    {
+      "id": "II-1",
+      "code": "II.1",
+      "module": "M2-segmentaux",
+      "moduleTitle": "Module II — Productions segmentales",
+      "title": "Le système vocalique du Bakossi",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Identifier les voyelles du Bakossi",
+        "Distinguer voyelles orales et nasales",
+        "Produire correctement les voyelles spécifiques au Bakossi"
+      ],
+      "vocabulary": [
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "3b9a42d09ee9",
+          "audio": null,
+          "langText": "mû",
+          "langWord": "mû",
+          "frenchText": "nez",
+          "frenchWord": "nez",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "93bdd2607b74",
+          "audio": null,
+          "langText": "abî",
+          "langWord": "abî",
+          "frenchText": "sein",
+          "frenchWord": "sein",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "66766c89a6c5",
+          "audio": null,
+          "langText": "mətoŋ",
+          "langWord": "mətoŋ",
+          "frenchText": "nombrils",
+          "frenchWord": "nombrils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "ae7f4d6943cc",
+          "audio": null,
+          "langText": "mòd̚",
+          "langWord": "mòd̚",
+          "frenchText": "personne, être humain",
+          "frenchWord": "personne, être humain",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "928d36105cd8",
+          "audio": null,
+          "langText": "ɲǎ̰",
+          "langWord": "ɲǎ̰",
+          "frenchText": "leur mère est morte depuis quatre ans",
+          "frenchWord": "mère",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon II.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Écoute et répétition (15 min)",
+            "instruction": "Prononcez les voyelles du Bakossi en les écrivant au tableau."
+          },
+          {
+            "title": "Tri de sons (15 min)",
+            "instruction": "Distribuez une liste de mots. Les élèves soulignent les voyelles et les classent : orales / nasales."
+          },
+          {
+            "title": "Paires minimales (15 min)",
+            "instruction": "Présentez des paires minimales du Bakossi ne différant que par une voyelle."
+          },
+          {
+            "title": "Production libre (10 min)",
+            "instruction": "Chaque élève lit 3 mots du vocabulaire à voix haute."
+          },
+          {
+            "title": "Bilan (5 min)",
+            "instruction": "Notez les difficultés récurrentes."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Les voyelles nasales et à longueur distincte sont souvent les plus difficiles pour les élèves."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Le système vocalique du Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Inventaire",
+            "instruction": "Note les voyelles que tu entends dans les mots Bakossi prononcés."
+          },
+          {
+            "title": "Activité 2 — Paires minimales",
+            "instruction": "Répète les paires de mots et identifie la voyelle qui change."
+          },
+          {
+            "title": "Activité 3 — Production",
+            "instruction": "Prononce 5 mots du corpus Bakossi contenant des voyelles différentes."
+          }
+        ],
+        "memo": "En Bakossi, les voyelles peuvent être orales ou nasales. Certaines n'existent pas en français."
+      }
+    },
+    {
+      "id": "II-2",
+      "code": "II.2",
+      "module": "M2-segmentaux",
+      "moduleTitle": "Module II — Productions segmentales",
+      "title": "Le système consonantique du Bakossi",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Identifier les consonnes spécifiques au Bakossi",
+        "Produire des implosives et prénasalisées",
+        "Distinguer les séries consonantiques"
+      ],
+      "vocabulary": [
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "3b9a42d09ee9",
+          "audio": null,
+          "langText": "mû",
+          "langWord": "mû",
+          "frenchText": "nez",
+          "frenchWord": "nez",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "93bdd2607b74",
+          "audio": null,
+          "langText": "abî",
+          "langWord": "abî",
+          "frenchText": "sein",
+          "frenchWord": "sein",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "66766c89a6c5",
+          "audio": null,
+          "langText": "mətoŋ",
+          "langWord": "mətoŋ",
+          "frenchText": "nombrils",
+          "frenchWord": "nombrils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "ae7f4d6943cc",
+          "audio": null,
+          "langText": "mòd̚",
+          "langWord": "mòd̚",
+          "frenchText": "personne, être humain",
+          "frenchWord": "personne, être humain",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "928d36105cd8",
+          "audio": null,
+          "langText": "ɲǎ̰",
+          "langWord": "ɲǎ̰",
+          "frenchText": "leur mère est morte depuis quatre ans",
+          "frenchWord": "mère",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon II.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Inventaire consonantique (15 min)",
+            "instruction": "Tableau des consonnes Bakossi : séries occlusives, fricatives, nasales. Implosives et prénasalisées si présentes."
+          },
+          {
+            "title": "Exercice de discrimination (15 min)",
+            "instruction": "Paires minimales consonantiques. Les élèves cochent la consonne entendue."
+          },
+          {
+            "title": "Production (20 min)",
+            "instruction": "Répétition de syllabes isolées puis de mots Bakossi."
+          },
+          {
+            "title": "Bilan (10 min)",
+            "instruction": "Les consonnes les plus difficiles à produire pour les francophones."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Mettez l'accent sur les sons absents du français (implosives, clicks si présents, prénasalisées)."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Le système consonantique du Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Classement",
+            "instruction": "Classe les consonnes Bakossi selon leur mode d'articulation."
+          },
+          {
+            "title": "Activité 2 — Discrimination",
+            "instruction": "Écoute et coche la consonne entendue dans chaque paire."
+          },
+          {
+            "title": "Activité 3 — Production",
+            "instruction": "Entraîne-toi à prononcer les consonnes difficiles du Bakossi."
+          }
+        ],
+        "memo": "Le Bakossi possède des consonnes absentes du français : implosives, prénasalisées…"
+      }
+    },
+    {
+      "id": "III-1",
+      "code": "III.1",
+      "module": "M3-suprasegmentaux",
+      "moduleTitle": "Module III — Suprasegmentaux",
+      "title": "Les tons du Bakossi",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Définir la notion de ton dans les langues camerounaises",
+        "Identifier tons hauts et bas en Bakossi",
+        "Comprendre la fonction distinctive des tons"
+      ],
+      "vocabulary": [
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "c4755830717e",
+          "audio": null,
+          "langText": "è'cém",
+          "langWord": "è'cém",
+          "frenchText": "langues",
+          "frenchWord": "langues",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "19557e993552",
+          "audio": null,
+          "langText": "mə̀bòl",
+          "langWord": "mə̀bòl",
+          "frenchText": "cous",
+          "frenchWord": "cous",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "9e0b56896242",
+          "audio": null,
+          "langText": "mə̀kù:",
+          "langWord": "mə̀kù:",
+          "frenchText": "jambes",
+          "frenchWord": "jambes",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "31dbca0ae985",
+          "audio": null,
+          "langText": "mə̀pə̀ŋ",
+          "langWord": "mə̀pə̀ŋ",
+          "frenchText": "cuisses",
+          "frenchWord": "cuisses",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "5c3a1c23fceb",
+          "audio": null,
+          "langText": "mètà:",
+          "langWord": "mètà:",
+          "frenchText": "hanches",
+          "frenchWord": "hanches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "4212d0bc2d0c",
+          "audio": null,
+          "langText": "àɓɛ̂n",
+          "langWord": "àɓɛ̂n",
+          "frenchText": "pied",
+          "frenchWord": "pied",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "2f51e4ab0b9c",
+          "audio": null,
+          "langText": "àsúsú",
+          "langWord": "àsúsú",
+          "frenchText": "fesse (derrière fondement)",
+          "frenchWord": "fesse (derrière fondement)",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon III.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Introduction aux tons (10 min)",
+            "instruction": "Qu'est-ce qu'un ton ? Exemples de paires minimales tonales en Bakossi."
+          },
+          {
+            "title": "Discrimination tonale (20 min)",
+            "instruction": "Les élèves écoutent des paires de mots Bakossi et indiquent si le ton est identique ou différent."
+          },
+          {
+            "title": "Notation des tons (15 min)",
+            "instruction": "Convention de notation tonale en Bakossi : diacritiques ou lettre. Exercice de transcription."
+          },
+          {
+            "title": "Synthèse (15 min)",
+            "instruction": "Les tons sont des phonèmes à part entière dans les langues bantoues."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Illustrez avec des paires minimales tonales : un mot change complètement de sens selon le ton."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Les tons du Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Identifier",
+            "instruction": "Écoute les mots Bakossi et note le ton (haut/bas) sur chaque syllabe."
+          },
+          {
+            "title": "Activité 2 — Paires tonales",
+            "instruction": "Trouve deux mots Bakossi qui ne diffèrent que par le ton."
+          },
+          {
+            "title": "Activité 3 — Transcrire",
+            "instruction": "Transcris 5 mots Bakossi avec notation tonale complète."
+          }
+        ],
+        "memo": "En Bakossi, le ton est phonémique : il distingue des mots de sens différents. Ton haut = ´, ton bas = `, ton modulé = ̂."
+      }
+    },
+    {
+      "id": "III-2",
+      "code": "III.2",
+      "module": "M3-suprasegmentaux",
+      "moduleTitle": "Module III — Suprasegmentaux",
+      "title": "Longueur vocalique et accent en Bakossi",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Distinguer voyelles brèves et longues",
+        "Identifier l'accentuation syllabique",
+        "Produire correctement longueurs et accents en Bakossi"
+      ],
+      "vocabulary": [
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "c4755830717e",
+          "audio": null,
+          "langText": "è'cém",
+          "langWord": "è'cém",
+          "frenchText": "langues",
+          "frenchWord": "langues",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "19557e993552",
+          "audio": null,
+          "langText": "mə̀bòl",
+          "langWord": "mə̀bòl",
+          "frenchText": "cous",
+          "frenchWord": "cous",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "9e0b56896242",
+          "audio": null,
+          "langText": "mə̀kù:",
+          "langWord": "mə̀kù:",
+          "frenchText": "jambes",
+          "frenchWord": "jambes",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "31dbca0ae985",
+          "audio": null,
+          "langText": "mə̀pə̀ŋ",
+          "langWord": "mə̀pə̀ŋ",
+          "frenchText": "cuisses",
+          "frenchWord": "cuisses",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "5c3a1c23fceb",
+          "audio": null,
+          "langText": "mètà:",
+          "langWord": "mètà:",
+          "frenchText": "hanches",
+          "frenchWord": "hanches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "4212d0bc2d0c",
+          "audio": null,
+          "langText": "àɓɛ̂n",
+          "langWord": "àɓɛ̂n",
+          "frenchText": "pied",
+          "frenchWord": "pied",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "2f51e4ab0b9c",
+          "audio": null,
+          "langText": "àsúsú",
+          "langWord": "àsúsú",
+          "frenchText": "fesse (derrière fondement)",
+          "frenchWord": "fesse (derrière fondement)",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon III.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Longueur vocalique (20 min)",
+            "instruction": "Paires minimales avec voyelles brèves/longues en Bakossi. Notation et production."
+          },
+          {
+            "title": "Accentuation (20 min)",
+            "instruction": "Règles d'accentuation en Bakossi. Est-ce un accent lexical ou grammatical ?"
+          },
+          {
+            "title": "Exercices (15 min)",
+            "instruction": "Répétition de mots Bakossi à longueur et accent distincts."
+          },
+          {
+            "title": "Bilan (5 min)",
+            "instruction": "Suprasegmentaux = traits phonologiques au-dessus du segment simple."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Les ressources EMAC illustrent bien les contours mélodiques des langues de la région Littoral, Sud-Ouest."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Longueur vocalique et accent en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Longueur",
+            "instruction": "Classe les voyelles Bakossi en brèves et longues."
+          },
+          {
+            "title": "Activité 2 — Accent",
+            "instruction": "Indique sur quelles syllabes tombe l'accent dans des mots Bakossi."
+          },
+          {
+            "title": "Activité 3 — Chant",
+            "instruction": "Écoute une ressource EMAC et observe comment les tons se reflètent dans la mélodie."
+          }
+        ],
+        "memo": "En Bakossi : tons (haut, bas, modulé), longueur vocalique et accent contribuent au sens."
+      }
+    },
+    {
+      "id": "IV-1",
+      "code": "IV.1",
+      "module": "M4-syntagme-nominal",
+      "moduleTitle": "Module IV — Syntagme nominal",
+      "title": "Le système des classes nominales en Bakossi",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Identifier les classes nominales du Bakossi",
+        "Associer un nom à sa classe",
+        "Comprendre le rôle des préfixes de classe"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "09871dcd9eff",
+          "audio": null,
+          "langText": "mə̀sòŋ mə́ mbwə́ ̄  mə́dé",
+          "langWord": "mə̀sòŋ",
+          "frenchText": "ce sont des dents de chiens",
+          "frenchWord": "dents",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "be820f0af74c",
+          "audio": null,
+          "langText": "à ŋkwàɣə́l écém",
+          "langWord": "ècém",
+          "frenchText": "il s'est mordu la langue",
+          "frenchWord": "langue",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "1e882df3e817",
+          "audio": null,
+          "langText": "à wɔ́mɛ̀ dû",
+          "langWord": "dû",
+          "frenchText": "il se gratte le nez",
+          "frenchWord": "nez",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "d4cec8e1c001",
+          "audio": null,
+          "langText": "à wɔ́mɛ̀ mbéd̚ ə̀tû",
+          "langWord": "ètû",
+          "frenchText": "il se gratte derrière l'oreille",
+          "frenchWord": "oreille",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon IV.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Introduction aux classes (15 min)",
+            "instruction": "Le Bakossi classe les noms selon des catégories sémantiques : humains, animaux, choses, etc. Chaque classe a un préfixe."
+          },
+          {
+            "title": "Inventaire (20 min)",
+            "instruction": "Tableau des préfixes de classe en Bakossi avec exemples du corpus ALCAM."
+          },
+          {
+            "title": "Exercices de classement (15 min)",
+            "instruction": "Donner une liste de noms Bakossi : les élèves identifient la classe par le préfixe."
+          },
+          {
+            "title": "Synthèse (10 min)",
+            "instruction": "Les classes nominales permettent l'accord dans tout le syntagme."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Comparez avec d'autres langues bantoues apparentées (basaa) pour montrer la régularité du système."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Le système des classes nominales en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Préfixes",
+            "instruction": "Identifie le préfixe de classe dans 10 noms Bakossi."
+          },
+          {
+            "title": "Activité 2 — Catégories",
+            "instruction": "Regroupe les noms Bakossi par catégorie sémantique (humains, animaux, objets…)."
+          },
+          {
+            "title": "Activité 3 — Accord",
+            "instruction": "Fais accorder l'adjectif qualificatif avec le nom en Bakossi."
+          }
+        ],
+        "memo": "En Bakossi, chaque nom appartient à une classe marquée par un préfixe. L'accord en classe s'étend à tout le syntagme nominal."
+      }
+    },
+    {
+      "id": "IV-2",
+      "code": "IV.2",
+      "module": "M4-syntagme-nominal",
+      "moduleTitle": "Module IV — Syntagme nominal",
+      "title": "Déterminants et qualificatifs en Bakossi",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Utiliser les déterminants du Bakossi",
+        "Former des syntagmes nominaux étendus",
+        "Distinguer antéposition et postposition des qualificatifs"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "09871dcd9eff",
+          "audio": null,
+          "langText": "mə̀sòŋ mə́ mbwə́ ̄  mə́dé",
+          "langWord": "mə̀sòŋ",
+          "frenchText": "ce sont des dents de chiens",
+          "frenchWord": "dents",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "be820f0af74c",
+          "audio": null,
+          "langText": "à ŋkwàɣə́l écém",
+          "langWord": "ècém",
+          "frenchText": "il s'est mordu la langue",
+          "frenchWord": "langue",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "1e882df3e817",
+          "audio": null,
+          "langText": "à wɔ́mɛ̀ dû",
+          "langWord": "dû",
+          "frenchText": "il se gratte le nez",
+          "frenchWord": "nez",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "d4cec8e1c001",
+          "audio": null,
+          "langText": "à wɔ́mɛ̀ mbéd̚ ə̀tû",
+          "langWord": "ètû",
+          "frenchText": "il se gratte derrière l'oreille",
+          "frenchWord": "oreille",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon IV.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Démonstratifs (15 min)",
+            "instruction": "Démonstratifs du Bakossi : proximité / éloignement. Accord en classe."
+          },
+          {
+            "title": "Possessifs (15 min)",
+            "instruction": "Possessifs du Bakossi : position dans le SN."
+          },
+          {
+            "title": "Qualificatifs (20 min)",
+            "instruction": "Position des adjectifs qualificatifs en Bakossi : avant ou après le nom ? Avec accord de classe."
+          },
+          {
+            "title": "Synthèse (10 min)",
+            "instruction": "Structure générale du syntagme nominal en Bakossi."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Insistez sur la position du qualificatif par rapport au nom en Bakossi, souvent différente du français."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Déterminants et qualificatifs en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Démonstratifs",
+            "instruction": "Remplace l'article français par le démonstratif Bakossi approprié."
+          },
+          {
+            "title": "Activité 2 — Expansion",
+            "instruction": "Expands un nom simple Bakossi en ajoutant possessif et qualificatif."
+          },
+          {
+            "title": "Activité 3 — Traduction",
+            "instruction": "Traduis des syntagmes nominaux du français en Bakossi."
+          }
+        ],
+        "memo": "Le SN en Bakossi : déterminants (démonstratifs, possessifs), qualificatifs avec accord en classe nominale."
+      }
+    },
+    {
+      "id": "V-1",
+      "code": "V.1",
+      "module": "M5-syntagme-verbal",
+      "moduleTitle": "Module V — Syntagme verbal",
+      "title": "Le verbe et l'aspect en Bakossi",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Identifier la structure du syntagme verbal en Bakossi",
+        "Distinguer accompli et inaccompli",
+        "Conjuguer des verbes simples"
+      ],
+      "vocabulary": [
+        {
+          "id": "49138ddabd2c",
+          "audio": null,
+          "langText": "ɲúmó bə̌ pə̌",
+          "langWord": "á pə̀",
+          "frenchText": "tu viendras avec lui",
+          "frenchWord": "venir",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "878882789426",
+          "audio": null,
+          "langText": "ǹlómə̀ à nə̀ mwǎn ákə̀ də́ bwə̀ŋ mə̀ndéb̚",
+          "langWord": "á lōm",
+          "frenchText": "j'ai envoyé l'enfant chercher de l'eau",
+          "frenchWord": "envoyer (commissionner)",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "cdc7643c108e",
+          "audio": null,
+          "langText": "à kɔ́na:́ ádə̄ á kàkɛ́",
+          "langWord": "á kɛ̀",
+          "frenchText": "il marchait en chantant",
+          "frenchWord": "marcher",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "807fba911010",
+          "audio": null,
+          "langText": "á ɓə́ ɓǎn ɓə́  ɲə́gtə́ 'á ɓə́ sáɣə́'á ɓə́ wɔ̌'ə̀",
+          "langWord": "à ɲəɣət",
+          "frenchText": "les enfants couraient, dansaient et riaient.",
+          "frenchWord": "courir",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "644dacf329b0",
+          "audio": null,
+          "langText": "à nə̀ mòd̚ à húnə́ ɓwə̀",
+          "langWord": "á hūn",
+          "frenchText": "l'homme est tombé de l'arbre",
+          "frenchWord": "tomber",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "0ccf99049790",
+          "audio": null,
+          "langText": "à syə̌ŋgə́ é ̄  péré",
+          "langWord": "á syə̀",
+          "frenchText": "a) il est parti quand tu es arrivé",
+          "frenchWord": "partir",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "cf1cf4575dab",
+          "audio": null,
+          "langText": "à syə̌ŋgə́ é ̄  péré",
+          "langWord": "á pə̀",
+          "frenchText": "b) il est partir quand tu es arrivé",
+          "frenchWord": "arriver",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "1b9bb516f369",
+          "audio": null,
+          "langText": "mə̀nɔ̀n mɔ́ ̄ mə́ pùmmə̀'  sà:kə́ sû",
+          "langWord": "á pùmə̀",
+          "frenchText": "ce sont les oiseaux qui volent, pas les poissons",
+          "frenchWord": "voler (oiseau)",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon V.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Structure du verbe (10 min)",
+            "instruction": "Préfixe sujet + marque aspectuelle + radical verbal en Bakossi."
+          },
+          {
+            "title": "Accompli vs inaccompli (15 min)",
+            "instruction": "Exemples du corpus ALCAM Bakossi : accompli (terminé) vs inaccompli (en cours / habituel)."
+          },
+          {
+            "title": "Conjugaison (20 min)",
+            "instruction": "3 verbes Bakossi à l'accompli et à l'inaccompli avec différents sujets."
+          },
+          {
+            "title": "Phrases (10 min)",
+            "instruction": "Les élèves construisent des phrases simples Bakossi avec verbe conjugué."
+          },
+          {
+            "title": "Synthèse (5 min)",
+            "instruction": "Les préfixes sujets reflètent la classe du nom sujet."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Commencez par les formes les plus simples du Bakossi avant d'explorer la complexité aspectuelle."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Le verbe et l'aspect en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Identifier",
+            "instruction": "Dans les phrases Bakossi, souligne le verbe et identifie son aspect."
+          },
+          {
+            "title": "Activité 2 — Conjuguer",
+            "instruction": "Conjugue un verbe Bakossi à l'accompli et à l'inaccompli."
+          },
+          {
+            "title": "Activité 3 — Phrase",
+            "instruction": "Construis une phrase avec différents sujets et un verbe Bakossi."
+          }
+        ],
+        "memo": "En Bakossi, le verbe s'accorde avec le sujet et exprime l'aspect (accompli / inaccompli)."
+      }
+    },
+    {
+      "id": "V-2",
+      "code": "V.2",
+      "module": "M5-syntagme-verbal",
+      "moduleTitle": "Module V — Syntagme verbal",
+      "title": "Négation et interrogation en Bakossi",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Former des phrases négatives en Bakossi",
+        "Former des questions en Bakossi",
+        "Distinguer plusieurs types de questions"
+      ],
+      "vocabulary": [
+        {
+          "id": "49138ddabd2c",
+          "audio": null,
+          "langText": "ɲúmó bə̌ pə̌",
+          "langWord": "á pə̀",
+          "frenchText": "tu viendras avec lui",
+          "frenchWord": "venir",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "878882789426",
+          "audio": null,
+          "langText": "ǹlómə̀ à nə̀ mwǎn ákə̀ də́ bwə̀ŋ mə̀ndéb̚",
+          "langWord": "á lōm",
+          "frenchText": "j'ai envoyé l'enfant chercher de l'eau",
+          "frenchWord": "envoyer (commissionner)",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "cdc7643c108e",
+          "audio": null,
+          "langText": "à kɔ́na:́ ádə̄ á kàkɛ́",
+          "langWord": "á kɛ̀",
+          "frenchText": "il marchait en chantant",
+          "frenchWord": "marcher",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "807fba911010",
+          "audio": null,
+          "langText": "á ɓə́ ɓǎn ɓə́  ɲə́gtə́ 'á ɓə́ sáɣə́'á ɓə́ wɔ̌'ə̀",
+          "langWord": "à ɲəɣət",
+          "frenchText": "les enfants couraient, dansaient et riaient.",
+          "frenchWord": "courir",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "644dacf329b0",
+          "audio": null,
+          "langText": "à nə̀ mòd̚ à húnə́ ɓwə̀",
+          "langWord": "á hūn",
+          "frenchText": "l'homme est tombé de l'arbre",
+          "frenchWord": "tomber",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "0ccf99049790",
+          "audio": null,
+          "langText": "à syə̌ŋgə́ é ̄  péré",
+          "langWord": "á syə̀",
+          "frenchText": "a) il est parti quand tu es arrivé",
+          "frenchWord": "partir",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "cf1cf4575dab",
+          "audio": null,
+          "langText": "à syə̌ŋgə́ é ̄  péré",
+          "langWord": "á pə̀",
+          "frenchText": "b) il est partir quand tu es arrivé",
+          "frenchWord": "arriver",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        },
+        {
+          "id": "1b9bb516f369",
+          "audio": null,
+          "langText": "mə̀nɔ̀n mɔ́ ̄ mə́ pùmmə̀'  sà:kə́ sû",
+          "langWord": "á pùmə̀",
+          "frenchText": "ce sont les oiseaux qui volent, pas les poissons",
+          "frenchWord": "voler (oiseau)",
+          "pos": "v",
+          "classNoun": "-",
+          "module": "M5-syntagme-verbal"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon V.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "La négation (15 min)",
+            "instruction": "Structure de négation en Bakossi : marqueurs négatifs, position dans la phrase."
+          },
+          {
+            "title": "Exercice de négation (10 min)",
+            "instruction": "Transformer des phrases affirmatives Bakossi en négatives."
+          },
+          {
+            "title": "Interrogation totale (15 min)",
+            "instruction": "Questions oui/non en Bakossi : intonation, marqueurs."
+          },
+          {
+            "title": "Interrogation partielle (10 min)",
+            "instruction": "Mots interrogatifs du Bakossi (qui, quoi, où, quand, comment)."
+          },
+          {
+            "title": "Jeu de rôle (10 min)",
+            "instruction": "Par paires : questions et réponses en Bakossi."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Comparez les marqueurs négatifs et interrogatifs du Bakossi avec ceux des langues apparentées."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Négation et interrogation en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Nier",
+            "instruction": "Transforme 5 phrases affirmatives Bakossi en négatives."
+          },
+          {
+            "title": "Activité 2 — Questionner",
+            "instruction": "Formule 3 questions en Bakossi."
+          },
+          {
+            "title": "Activité 3 — Dialogue",
+            "instruction": "Court dialogue Bakossi avec question et réponse négative."
+          }
+        ],
+        "memo": "En Bakossi, négation et interrogation utilisent des marqueurs spécifiques."
+      }
+    },
+    {
+      "id": "VI-1",
+      "code": "VI.1",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase",
+      "title": "La phrase de base en Bakossi",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Identifier l'ordre des constituants en Bakossi",
+        "Distinguer sujet, verbe, objet",
+        "Construire une phrase de base correcte"
+      ],
+      "vocabulary": [
+        {
+          "id": "681f9b084e92",
+          "audio": null,
+          "langText": "à húrə̀ ǹsí: é détè",
+          "langWord": "-",
+          "frenchText": "il prend du sable dans l'eau",
+          "frenchWord": "-",
+          "pos": "-",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "d68ee55bde3c",
+          "audio": null,
+          "langText": "ǹsí: ńdə́ á nzètê",
+          "langWord": "-",
+          "frenchText": "il y a du sable sur le chemin",
+          "frenchWord": "-",
+          "pos": "-",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "9cfb21fab297",
+          "audio": null,
+          "langText": "àlá: á mɓá: ádə̄ á hénə̀'  á də́ wíní:",
+          "langWord": "ḿbá:",
+          "frenchText": "a) il y a une grosse pierre noire là-bas",
+          "frenchWord": "a) gros",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "bdb89fe938a3",
+          "audio": null,
+          "langText": "ɓwə̀l á bə̄'  cáβə́ ə́' də́ wíní:",
+          "langWord": "cábə̄",
+          "frenchText": "b) il y a un grand arbre là-bas",
+          "frenchWord": "b)grand",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "0d87a9e90f65",
+          "audio": null,
+          "langText": "ǹtéré mwǎmpén mə́ lá:",
+          "langWord": "mwǎmpén",
+          "frenchText": "je prends une petite pierre",
+          "frenchWord": "petit",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "fc3720d4ebab",
+          "audio": null,
+          "langText": "ǹzì: è kə̀lə́ àtè",
+          "langWord": "kə̀lə́ átè",
+          "frenchText": "le chemin est large",
+          "frenchWord": "large",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "e51623e8c7a6",
+          "audio": null,
+          "langText": "ǹzì: è làtánɛ́ áté",
+          "langWord": "làtánɛ́ átè",
+          "frenchText": "ce chemin est étroit",
+          "frenchWord": "étroit",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "e3b1a8cf9d29",
+          "audio": null,
+          "langText": "à ɲénə́ ɲǒ ècě càbə́",
+          "langWord": "càbɛ́",
+          "frenchText": "il a vu un long serpent",
+          "frenchWord": "long",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon VI.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Ordre des constituants (10 min)",
+            "instruction": "Ordre habituel en Bakossi à partir des exemples ALCAM."
+          },
+          {
+            "title": "Analyse (15 min)",
+            "instruction": "Analyser 5 phrases Bakossi : identifier S, V, O."
+          },
+          {
+            "title": "Traduction (15 min)",
+            "instruction": "Phrases françaises à traduire en Bakossi."
+          },
+          {
+            "title": "Construction (15 min)",
+            "instruction": "Les élèves construisent librement 3 phrases Bakossi."
+          },
+          {
+            "title": "Correction (5 min)",
+            "instruction": "Correction collective."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Reliez la structure de la phrase aux SN (module IV) et SV (module V)."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — La phrase de base en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Analyser",
+            "instruction": "Analyse 3 phrases Bakossi : sujet, verbe, objet."
+          },
+          {
+            "title": "Activité 2 — Traduire",
+            "instruction": "Traduis 3 phrases simples du français en Bakossi."
+          },
+          {
+            "title": "Activité 3 — Composer",
+            "instruction": "Rédige 3 phrases Bakossi décrivant une image."
+          }
+        ],
+        "memo": "En Bakossi, la phrase simple s'organise avec sujet, verbe et objet dans un ordre spécifique."
+      }
+    },
+    {
+      "id": "VI-2",
+      "code": "VI.2",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase",
+      "title": "Phrase complexe et coordination en Bakossi",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Former des phrases complexes en Bakossi",
+        "Utiliser coordinants et subordonnants",
+        "Relier deux propositions"
+      ],
+      "vocabulary": [
+        {
+          "id": "681f9b084e92",
+          "audio": null,
+          "langText": "à húrə̀ ǹsí: é détè",
+          "langWord": "-",
+          "frenchText": "il prend du sable dans l'eau",
+          "frenchWord": "-",
+          "pos": "-",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "d68ee55bde3c",
+          "audio": null,
+          "langText": "ǹsí: ńdə́ á nzètê",
+          "langWord": "-",
+          "frenchText": "il y a du sable sur le chemin",
+          "frenchWord": "-",
+          "pos": "-",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "9cfb21fab297",
+          "audio": null,
+          "langText": "àlá: á mɓá: ádə̄ á hénə̀'  á də́ wíní:",
+          "langWord": "ḿbá:",
+          "frenchText": "a) il y a une grosse pierre noire là-bas",
+          "frenchWord": "a) gros",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "bdb89fe938a3",
+          "audio": null,
+          "langText": "ɓwə̀l á bə̄'  cáβə́ ə́' də́ wíní:",
+          "langWord": "cábə̄",
+          "frenchText": "b) il y a un grand arbre là-bas",
+          "frenchWord": "b)grand",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "0d87a9e90f65",
+          "audio": null,
+          "langText": "ǹtéré mwǎmpén mə́ lá:",
+          "langWord": "mwǎmpén",
+          "frenchText": "je prends une petite pierre",
+          "frenchWord": "petit",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "fc3720d4ebab",
+          "audio": null,
+          "langText": "ǹzì: è kə̀lə́ àtè",
+          "langWord": "kə̀lə́ átè",
+          "frenchText": "le chemin est large",
+          "frenchWord": "large",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "e51623e8c7a6",
+          "audio": null,
+          "langText": "ǹzì: è làtánɛ́ áté",
+          "langWord": "làtánɛ́ átè",
+          "frenchText": "ce chemin est étroit",
+          "frenchWord": "étroit",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "e3b1a8cf9d29",
+          "audio": null,
+          "langText": "à ɲénə́ ɲǒ ècě càbə́",
+          "langWord": "càbɛ́",
+          "frenchText": "il a vu un long serpent",
+          "frenchWord": "long",
+          "pos": "adj",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon VI.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Révision (5 min)",
+            "instruction": "Rappel rapide de VI.1."
+          },
+          {
+            "title": "Coordination (15 min)",
+            "instruction": "Conjonctions de coordination Bakossi avec exemples."
+          },
+          {
+            "title": "Subordination (15 min)",
+            "instruction": "Propositions subordonnées en Bakossi."
+          },
+          {
+            "title": "Exercices (20 min)",
+            "instruction": "Relier des paires de phrases Bakossi."
+          },
+          {
+            "title": "Synthèse (5 min)",
+            "instruction": "La phrase complexe exprime des relations entre événements."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Les textes des épopées et chante-fables (ressources EMAC) sont riches en phrases complexes."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Phrase complexe et coordination en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Relier",
+            "instruction": "Relie des paires de phrases Bakossi avec un coordinant."
+          },
+          {
+            "title": "Activité 2 — Analyser",
+            "instruction": "Dans un texte Bakossi, repère les propositions subordonnées."
+          },
+          {
+            "title": "Activité 3 — Rédiger",
+            "instruction": "Rédige 4 phrases Bakossi incluant au moins une phrase complexe."
+          }
+        ],
+        "memo": "La phrase complexe en Bakossi utilise coordinants et subordonnants pour relier des propositions."
+      }
+    },
+    {
+      "id": "VII-1",
+      "code": "VII.1",
+      "module": "M7-quotidien-1",
+      "moduleTitle": "Module VII — Gestion du quotidien — Niveau 1",
+      "title": "Se présenter en Bakossi",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Se présenter (nom, origine, âge) en Bakossi",
+        "Saluer et prendre congé en Bakossi",
+        "Conduire un échange de base"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon VII.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Salutations (15 min)",
+            "instruction": "Formules de salutation Bakossi selon le moment et le niveau de respect."
+          },
+          {
+            "title": "Se présenter (15 min)",
+            "instruction": "Formules pour dire son nom, son village d'origine en Bakossi."
+          },
+          {
+            "title": "Dialogues (15 min)",
+            "instruction": "Jeux de rôle : dialogues de présentation en Bakossi."
+          },
+          {
+            "title": "Prise de congé (10 min)",
+            "instruction": "Formules de prise de congé en Bakossi."
+          },
+          {
+            "title": "Synthèse (5 min)",
+            "instruction": "Récapitulatif des formules essentielles."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Intégrez les formules de politesse propres à la culture Bakossi."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Se présenter en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Salutation",
+            "instruction": "Apprends à saluer en Bakossi le matin, le midi et le soir."
+          },
+          {
+            "title": "Activité 2 — Présentation",
+            "instruction": "Prépare une présentation de toi-même (5 phrases) en Bakossi."
+          },
+          {
+            "title": "Activité 3 — Jeu de rôle",
+            "instruction": "Joue une scène de présentation en Bakossi."
+          }
+        ],
+        "memo": "Pour se présenter en Bakossi : donner son nom, son village, son groupe."
+      }
+    },
+    {
+      "id": "VII-2",
+      "code": "VII.2",
+      "module": "M7-quotidien-1",
+      "moduleTitle": "Module VII — Gestion du quotidien — Niveau 1",
+      "title": "La maison et la famille en Bakossi",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Nommer les membres de la famille en Bakossi",
+        "Décrire une habitation en Bakossi",
+        "Parler de sa famille"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon VII.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "La famille (20 min)",
+            "instruction": "Termes de parenté Bakossi : distinctions maternelle/paternelle."
+          },
+          {
+            "title": "La maison (15 min)",
+            "instruction": "Vocabulaire de l'habitat Bakossi : maison, chambre, cuisine, cour, grenier."
+          },
+          {
+            "title": "Description (15 min)",
+            "instruction": "Les élèves décrivent leur maison ou famille en Bakossi."
+          },
+          {
+            "title": "Synthèse (10 min)",
+            "instruction": "La famille est une institution centrale dans la culture Bakossi."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "En Bakossi, les termes de parenté distinguent souvent le côté maternel du paternel."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — La maison et la famille en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Arbre généalogique",
+            "instruction": "Dessine ton arbre généalogique avec les noms en Bakossi."
+          },
+          {
+            "title": "Activité 2 — Description",
+            "instruction": "Décris ta maison en Bakossi en 5 phrases."
+          },
+          {
+            "title": "Activité 3 — Interview",
+            "instruction": "Interviewe un(e) camarade sur sa famille en Bakossi."
+          }
+        ],
+        "memo": "En Bakossi, les termes de parenté sont précis et distinguent des relations que le français réunit sous un même mot."
+      }
+    },
+    {
+      "id": "VIII-1",
+      "code": "VIII.1",
+      "module": "M8-quotidien-2",
+      "moduleTitle": "Module VIII — Gestion du quotidien — Niveau 2",
+      "title": "Au marché en Bakossi",
+      "duration": "60 min",
+      "level": "2nde",
+      "objectives": [
+        "Identifier des produits alimentaires en Bakossi",
+        "Négocier un prix",
+        "Conduire un échange commercial de base"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [],
+      "teacher": {
+        "intro": "Leçon VIII.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Lexique du marché (15 min)",
+            "instruction": "Vocabulaire des produits agricoles et alimentaires en Bakossi."
+          },
+          {
+            "title": "Les nombres (15 min)",
+            "instruction": "Nombres 1-20 en Bakossi et mots pour les prix."
+          },
+          {
+            "title": "Dialogue au marché (20 min)",
+            "instruction": "Jeux de rôle achat/vente en Bakossi."
+          },
+          {
+            "title": "Synthèse (10 min)",
+            "instruction": "Formules-clés en Bakossi : demander un prix, négocier, conclure."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Le marché est souvent multilingue : comparez comment les transactions se déroulent en Bakossi et en français."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Au marché en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Lexique",
+            "instruction": "Associe chaque produit à son nom en Bakossi."
+          },
+          {
+            "title": "Activité 2 — Nombres",
+            "instruction": "Compte de 1 à 20 en Bakossi."
+          },
+          {
+            "title": "Activité 3 — Jeu de rôle",
+            "instruction": "Joue une scène d'achat au marché en Bakossi."
+          }
+        ],
+        "memo": "Au marché en Bakossi : saluer, demander le prix, négocier, conclure."
+      }
+    },
+    {
+      "id": "VIII-2",
+      "code": "VIII.2",
+      "module": "M8-quotidien-2",
+      "moduleTitle": "Module VIII — Gestion du quotidien — Niveau 2",
+      "title": "Patrimoine culturel et littérature orale en Bakossi",
+      "duration": "60 min",
+      "level": "Tle",
+      "objectives": [
+        "Identifier les genres de littérature orale en Bakossi",
+        "Analyser un extrait de texte oral",
+        "Valoriser le patrimoine immatériel"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon VIII.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Inventaire des genres (10 min)",
+            "instruction": "Genres de littérature orale en Bakossi : conte, épopée, proverbe, devinette, chant, berceuse."
+          },
+          {
+            "title": "Analyse d'un extrait (20 min)",
+            "instruction": "Extrait de la tradition orale Bakossi (voir ressources EMAC). Structure, formules répétitives, contenu culturel."
+          },
+          {
+            "title": "Discussion culturelle (15 min)",
+            "instruction": "Dans quelle occasion ce genre est-il pratiqué ? Qui peut le pratiquer en Bakossi ?"
+          },
+          {
+            "title": "Création (10 min)",
+            "instruction": "En groupe, créer une courte devinette ou un proverbe en Bakossi."
+          },
+          {
+            "title": "Partage (5 min)",
+            "instruction": "Chaque groupe présente sa production."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Invitez si possible un aîné ou un conteur Bakossi pour témoigner en classe."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Patrimoine culturel et littérature orale en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Genres oraux",
+            "instruction": "Liste les genres de littérature orale que tu connais en Bakossi."
+          },
+          {
+            "title": "Activité 2 — Analyse",
+            "instruction": "Écoute ou lis l'extrait fourni (ressource EMAC) et identifie genre, thème, formules répétitives."
+          },
+          {
+            "title": "Activité 3 — Création",
+            "instruction": "Invente un proverbe ou une devinette en Bakossi."
+          }
+        ],
+        "memo": "La littérature orale Bakossi : contes, épopées, proverbes, chants cérémoniels. Patrimoine immatériel vivant."
+      }
+    },
+    {
+      "id": "MC1-1",
+      "code": "C-I.1",
+      "module": "MC1-diversite-culturelle",
+      "moduleTitle": "Module C-I — Diversité culturelle camerounaise",
+      "title": "Les aires culturelles du Cameroun et la place de la communauté Bakossi",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Définir les notions de culture, cultures nationales, diversité culturelle",
+        "Situer l'aire culturelle Bakossi sur la carte du Cameroun",
+        "Distinguer les pratiques culturelles emblématiques de la région"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-I.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Notions-clés (10 min)",
+            "instruction": "Définir avec les élèves : 'culture', 'cultures nationales', 'aire culturelle', 'diversité culturelle'. Écrire les définitions au tableau."
+          },
+          {
+            "title": "Carte des aires culturelles (15 min)",
+            "instruction": "Montrer une carte des grandes aires culturelles camerounaises. Situer l'aire Bakossi (région : Littoral, Sud-Ouest)."
+          },
+          {
+            "title": "Inventaire culturel (20 min)",
+            "instruction": "Liste des pratiques culturelles associées au groupe Bakossi : cuisine, musique, danse, artisanat, us et coutumes. Brainstorming collectif."
+          },
+          {
+            "title": "Ressource EMAC (10 min)",
+            "instruction": "Écouter un extrait musical EMAC lié à la région Bakossi. Observer : genre musical, instruments, contexte d'usage."
+          },
+          {
+            "title": "Synthèse (5 min)",
+            "instruction": "Conclusion : le Cameroun est une 'Afrique en miniature'. La culture Bakossi en est une composante précieuse."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Impliquer les élèves dans la collecte d'exemples culturels qu'ils connaissent déjà dans leur famille ou leur communauté Bakossi."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Les aires culturelles du Cameroun et la place de la communauté Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Vocabulaire culturel",
+            "instruction": "Définis dans tes propres mots : culture, diversité culturelle, aire culturelle."
+          },
+          {
+            "title": "Activité 2 — Carte",
+            "instruction": "Colorie sur une carte muette l'aire culturelle Bakossi et note 3 pratiques culturelles emblématiques."
+          },
+          {
+            "title": "Activité 3 — EMAC",
+            "instruction": "Écoute la ressource musicale fournie et réponds : quel genre musical ? Quels instruments ? Dans quel contexte est-il pratiqué dans la communauté Bakossi ?"
+          }
+        ],
+        "memo": "Le Cameroun compte plus de 200 ethnies et autant d'aires culturelles distinctes. La culture Bakossi (région : Littoral, Sud-Ouest) se distingue par ses pratiques musicales, culinaires, artisanales et littéraires spécifiques."
+      }
+    },
+    {
+      "id": "MC1-2",
+      "code": "C-I.2",
+      "module": "MC1-diversite-culturelle",
+      "moduleTitle": "Module C-I — Diversité culturelle camerounaise",
+      "title": "Diversité des pratiques culinaires, musicales et artisanales en Bakossi",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Identifier les plats traditionnels emblématiques de la communauté Bakossi",
+        "Nommer les instruments de musique traditionnelle Bakossi",
+        "Décrire une technique artisanale de la communauté Bakossi"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-I.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Art culinaire (15 min)",
+            "instruction": "Recenser les plats traditionnels de la communauté Bakossi. Quels sont les ingrédients locaux ? Quand les prépare-t-on ? Qui les prépare ?"
+          },
+          {
+            "title": "Musique et danse (20 min)",
+            "instruction": "Genres musicaux et danses traditionnelles Bakossi. Écoute d'un extrait EMAC. Identification des instruments (tam-tam, balafon, harpe, etc.)."
+          },
+          {
+            "title": "Artisanat (15 min)",
+            "instruction": "Techniques artisanales traditionnelles Bakossi : vannerie, poterie, tissage, sculpture, forge. Observation de photos ou d'objets si disponibles."
+          },
+          {
+            "title": "Synthèse (10 min)",
+            "instruction": "Ces pratiques constituent le patrimoine matériel et immatériel de la communauté."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Encouragez les élèves à apporter des objets artisanaux ou des recettes culinaires Bakossi de chez eux."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Diversité des pratiques culinaires, musicales et artisanales en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Recette",
+            "instruction": "Décris une recette traditionnelle Bakossi : ingrédients, étapes de préparation, occasion de dégustation."
+          },
+          {
+            "title": "Activité 2 — Instrument",
+            "instruction": "Dessine un instrument de musique traditionnel Bakossi et explique son rôle dans les cérémonies."
+          },
+          {
+            "title": "Activité 3 — Artisanat",
+            "instruction": "Décris une technique artisanale Bakossi en 5 phrases."
+          }
+        ],
+        "memo": "Pratiques culturelles Bakossi : art culinaire (ingrédients locaux, mets cérémoniels), musique et danse (genres, instruments), artisanat (vannerie, sculpture, poterie)."
+      }
+    },
+    {
+      "id": "MC2-1",
+      "code": "C-II.1",
+      "module": "MC2-modes-de-vie",
+      "moduleTitle": "Module C-II — Pratiques culturelles — Modes de vie",
+      "title": "La famille et la société traditionnelles Bakossi",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Décrire la structure de la famille traditionnelle Bakossi",
+        "Énoncer les droits et devoirs des membres de la famille",
+        "Identifier les pratiques de politesse dans la société Bakossi"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-II.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Structure familiale (15 min)",
+            "instruction": "La famille traditionnelle Bakossi : composition (nucléaire, élargie, lignage), hiérarchie, rôles. Qui est chef de famille ?"
+          },
+          {
+            "title": "Droits et devoirs (15 min)",
+            "instruction": "Quels sont les droits et devoirs des enfants, des femmes, des anciens dans la famille Bakossi ?"
+          },
+          {
+            "title": "Politesse (15 min)",
+            "instruction": "Formes de salutation, postures et discours de politesse en Bakossi selon l'âge et le rang. Jeux de rôle."
+          },
+          {
+            "title": "La société (10 min)",
+            "instruction": "Structure de la société Bakossi : chefferie, conseil des anciens, associations traditionnelles."
+          },
+          {
+            "title": "Synthèse (5 min)",
+            "instruction": "La famille et la société traditionnelle transmettent les valeurs culturelles fondamentales."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Invitez un parent d'élève ou un aîné Bakossi à venir témoigner de l'organisation familiale traditionnelle."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — La famille et la société traditionnelles Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Schéma familial",
+            "instruction": "Dessine l'organigramme de la famille traditionnelle Bakossi avec les rôles de chaque membre."
+          },
+          {
+            "title": "Activité 2 — Jeu de rôle",
+            "instruction": "Joue une scène de salutation respectueuse en Bakossi selon l'âge et le rang."
+          },
+          {
+            "title": "Activité 3 — Comparaison",
+            "instruction": "Compare la structure familiale traditionnelle avec la famille moderne. Quelles valeurs se maintiennent ?"
+          }
+        ],
+        "memo": "Famille traditionnelle Bakossi : structure hiérarchique, rôles définis, respect des anciens. Politesse : salutations codifiées, postures, formules de respect selon l'âge et le rang."
+      }
+    },
+    {
+      "id": "MC2-2",
+      "code": "C-II.2",
+      "module": "MC2-modes-de-vie",
+      "moduleTitle": "Module C-II — Pratiques culturelles — Modes de vie",
+      "title": "Économie, environnement et bien-être dans la tradition Bakossi",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Décrire un secteur de l'économie traditionnelle Bakossi",
+        "Identifier les stratégies traditionnelles de préservation de l'environnement",
+        "Présenter des pratiques de bien-être et de santé dans la communauté Bakossi"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-II.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Économie traditionnelle (15 min)",
+            "instruction": "Agriculture, élevage, pêche, chasse, artisanat, commerce dans la communauté Bakossi. Produits phares et circuits de distribution traditionnels."
+          },
+          {
+            "title": "Environnement (15 min)",
+            "instruction": "Pratiques traditionnelles Bakossi de gestion de la forêt, des champs, de l'eau. Espèces fauniques et florales valorisées localement."
+          },
+          {
+            "title": "Bien-être et santé (15 min)",
+            "instruction": "Médecine traditionnelle Bakossi : plantes médicinales, recettes de soins. Habillement traditionnel. Art culinaire et santé."
+          },
+          {
+            "title": "Médias traditionnels (10 min)",
+            "instruction": "Comment l'information circule-t-elle dans la société Bakossi ? Tam-tam, crieurs, réunions de quartier."
+          },
+          {
+            "title": "Synthèse (5 min)",
+            "instruction": "La culture intègre des savoirs durables sur l'économie et l'environnement."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Reliez les savoirs traditionnels Bakossi sur l'environnement aux enjeux actuels de développement durable."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Économie, environnement et bien-être dans la tradition Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Économie",
+            "instruction": "Décris un secteur de l'économie traditionnelle Bakossi : produits, techniques, circuits de vente."
+          },
+          {
+            "title": "Activité 2 — Plantes médicinales",
+            "instruction": "Liste 3 plantes médicinales connues dans la communauté Bakossi et leurs usages."
+          },
+          {
+            "title": "Activité 3 — Environnement",
+            "instruction": "Décris une pratique traditionnelle Bakossi de préservation de l'environnement."
+          }
+        ],
+        "memo": "Économie traditionnelle Bakossi : agriculture, artisanat, commerce local. Environnement : savoirs écologiques endogènes. Santé : plantes médicinales, pratiques de soin. Médias : tam-tam, crieurs publics."
+      }
+    },
+    {
+      "id": "MC3-1",
+      "code": "C-III.1",
+      "module": "MC3-evenements",
+      "moduleTitle": "Module C-III — Pratiques culturelles — Événements de la vie",
+      "title": "Naissance, rites de passage et mariage dans la communauté Bakossi",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Décrire les cérémonies liées à la naissance en Bakossi",
+        "Identifier les principaux rites de passage vers l'âge adulte",
+        "Présenter les étapes d'un mariage traditionnel Bakossi"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-III.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "La naissance (20 min)",
+            "instruction": "Cérémonies de naissance dans la communauté Bakossi : intervenants, activités, mets cérémoniels, rites. Quel est le rôle de chaque membre de la famille ?"
+          },
+          {
+            "title": "Rites de passage (20 min)",
+            "instruction": "Initiation à l'âge adulte dans la tradition Bakossi : âge, durée, déroulement, signification. Qu'est-ce qui change après l'initiation ?"
+          },
+          {
+            "title": "Le mariage (15 min)",
+            "instruction": "Étapes du mariage traditionnel Bakossi : fiançailles, négociations, dot, célébration, intégration."
+          },
+          {
+            "title": "Ressource EMAC (5 min)",
+            "instruction": "Écouter un extrait musical cérémoniel (berceuse, épopée) et identifier son contexte d'usage."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Ces cérémonies sont des moments forts de transmission culturelle. Invitez les élèves à partager leurs expériences familiales Bakossi."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Naissance, rites de passage et mariage dans la communauté Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Cérémonie de naissance",
+            "instruction": "Décris une cérémonie de naissance Bakossi : qui intervient, que fait-on, que mange-t-on, quels rites ?"
+          },
+          {
+            "title": "Activité 2 — Rites de passage",
+            "instruction": "Explique la signification des rites de passage dans la tradition Bakossi."
+          },
+          {
+            "title": "Activité 3 — Le mariage",
+            "instruction": "Présente les étapes d'un mariage traditionnel Bakossi sous forme de schéma ou d'affiche."
+          }
+        ],
+        "memo": "Événements de la vie Bakossi : naissance (cérémonies, rites, mets spéciaux), initiation (rites de passage à l'âge adulte), mariage (dot, négociation, célébration)."
+      }
+    },
+    {
+      "id": "MC3-2",
+      "code": "C-III.2",
+      "module": "MC3-evenements",
+      "moduleTitle": "Module C-III — Pratiques culturelles — Événements de la vie",
+      "title": "La mort et le deuil dans la tradition Bakossi",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Décrire les pratiques funéraires traditionnelles",
+        "Identifier les significations culturelles du deuil",
+        "Distinguer deuil traditionnel et pratiques contemporaines"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-III.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Les funérailles (20 min)",
+            "instruction": "Pratiques funéraires Bakossi : annonce du décès, préparation du corps, veillée, enterrement, levée de deuil."
+          },
+          {
+            "title": "Rôles et intervenants (15 min)",
+            "instruction": "Qui fait quoi lors des funérailles Bakossi ? Rôles de la famille, du lignage, de la chefferie."
+          },
+          {
+            "title": "Significations (15 min)",
+            "instruction": "Que représente la mort pour la communauté Bakossi ? Rapport aux ancêtres, croyances sur l'au-delà."
+          },
+          {
+            "title": "Tradition et modernité (10 min)",
+            "instruction": "Comment les pratiques funéraires ont-elles évolué ? Ce qui demeure, ce qui change."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Abordez ce sujet avec sensibilité. Plusieurs élèves ont peut-être récemment vécu un deuil dans leur famille."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — La mort et le deuil dans la tradition Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Schéma",
+            "instruction": "Dessine un schéma des étapes des funérailles Bakossi."
+          },
+          {
+            "title": "Activité 2 — Réflexion",
+            "instruction": "Que signifie la mort pour la communauté Bakossi ? Quel est le lien avec les ancêtres ?"
+          },
+          {
+            "title": "Activité 3 — Évolution",
+            "instruction": "Cite 2 pratiques funéraires qui ont évolué et 2 qui se maintiennent dans ta communauté."
+          }
+        ],
+        "memo": "La mort en Bakossi : veillée funèbre, enterrement selon les rites, deuil collectif, levée de deuil. Les ancêtres continuent de jouer un rôle dans la vie de la communauté."
+      }
+    },
+    {
+      "id": "MC4-1",
+      "code": "C-IV.1",
+      "module": "MC4-communaute-1",
+      "moduleTitle": "Module C-IV — Pratiques culturelles en communauté — Niveau I",
+      "title": "Jeux, loisirs et littérature orale dans la communauté Bakossi",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Identifier les principaux jeux traditionnels Bakossi",
+        "Pratiquer un genre de littérature orale Bakossi",
+        "Valoriser ces pratiques comme patrimoine immatériel"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-IV.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Jeux traditionnels (15 min)",
+            "instruction": "Inventaire des jeux traditionnels Bakossi : jeux de société, jeux d'adresse, jeux d'enfants. Règles, joueurs, circonstances."
+          },
+          {
+            "title": "Loisirs (10 min)",
+            "instruction": "Autres loisirs de la société Bakossi : pêche, chasse, chant collectif, danse."
+          },
+          {
+            "title": "Le conte (25 min)",
+            "instruction": "Un genre de littérature orale Bakossi : le conte. Structure (situation initiale, nœud, dénouement), personnages types (héros, trickster, ancêtre), morale. Un élève raconte un conte."
+          },
+          {
+            "title": "Pratique (10 min)",
+            "instruction": "Jouer à un jeu traditionnel Bakossi ou déclamer une devinette."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Le conte est un vecteur privilégié de l'enseignement des valeurs dans la société Bakossi. Invitez les élèves à en connaître au moins un."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Jeux, loisirs et littérature orale dans la communauté Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Jeu",
+            "instruction": "Décris les règles d'un jeu traditionnel Bakossi et explique dans quel contexte il est pratiqué."
+          },
+          {
+            "title": "Activité 2 — Conte",
+            "instruction": "Résume un conte Bakossi que tu connais : personnages, intrigue, morale."
+          },
+          {
+            "title": "Activité 3 — Devinette",
+            "instruction": "Propose une devinette traditionnelle Bakossi à la classe."
+          }
+        ],
+        "memo": "Littérature orale Bakossi : le conte (structure narrative, personnages symboliques, morale), la devinette (jeu de langage, sagesse populaire), le proverbe (condensé de sagesse). Jeux traditionnels : mancala, jeux d'adresse, concours de lutte."
+      }
+    },
+    {
+      "id": "MC4-2",
+      "code": "C-IV.2",
+      "module": "MC4-communaute-1",
+      "moduleTitle": "Module C-IV — Pratiques culturelles en communauté — Niveau I",
+      "title": "Économie traditionnelle et organisation sociale en Bakossi",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Décrire un secteur de l'économie traditionnelle Bakossi en détail",
+        "Identifier les stratégies d'épargne et d'entraide communautaire",
+        "Comprendre les droits et devoirs dans la société traditionnelle"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-IV.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Agriculture et productions (20 min)",
+            "instruction": "L'agriculture dans la communauté Bakossi : cultures vivrières et de rente, techniques de production, calendrier agricole, grenier communautaire."
+          },
+          {
+            "title": "Commerce et épargne (15 min)",
+            "instruction": "Circuits de distribution traditionnels, marchés périodiques, tontines et systèmes d'épargne collectifs propres à la communauté Bakossi."
+          },
+          {
+            "title": "Droits et devoirs (15 min)",
+            "instruction": "Organisation sociale Bakossi : droits et devoirs des individus selon l'âge, le sexe, le rang. Sanctions sociales en cas de manquement."
+          },
+          {
+            "title": "Synthèse (10 min)",
+            "instruction": "L'économie et l'organisation sociale traditionnelle constituent un système cohérent de valeurs et de solidarité."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Faites le lien entre les pratiques traditionnelles Bakossi et les enjeux actuels (développement durable, économie sociale et solidaire)."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Économie traditionnelle et organisation sociale en Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Calendrier agricole",
+            "instruction": "Reconstitue le calendrier agricole de la communauté Bakossi : quelles cultures ? Quelles saisons ?"
+          },
+          {
+            "title": "Activité 2 — Tontine",
+            "instruction": "Explique le fonctionnement d'une tontine et son utilité dans la communauté."
+          },
+          {
+            "title": "Activité 3 — Droits et devoirs",
+            "instruction": "Cite 3 droits et 3 devoirs d'un jeune dans la société Bakossi traditionnelle."
+          }
+        ],
+        "memo": "Économie Bakossi : agriculture (cultures vivrières et de rente), artisanat, tontine (épargne collective). Organisation sociale : hiérarchie, droits et devoirs, solidarité communautaire."
+      }
+    },
+    {
+      "id": "MC5-1",
+      "code": "C-V.1",
+      "module": "MC5-communaute-2",
+      "moduleTitle": "Module C-V — Pratiques culturelles en communauté — Niveau II",
+      "title": "Symbolique, interdits et rites dans la culture Bakossi",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Identifier des interdits alimentaires et leur fondement dans la tradition Bakossi",
+        "Expliquer la symbolique de pratiques culturelles Bakossi",
+        "Analyser un rite traditionnel dans son contexte culturel"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-V.1 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Interdits alimentaires (15 min)",
+            "instruction": "Quels aliments sont interdits dans la communauté Bakossi ? Pourquoi ? (totem, rang, genre, âge). Quelle est l'origine de ces interdits ?"
+          },
+          {
+            "title": "Symbolique des pratiques (20 min)",
+            "instruction": "Choisir une pratique culturelle Bakossi (un met, un geste, un vêtement, un instrument) et analyser sa symbolique."
+          },
+          {
+            "title": "Analyse d'un rite (15 min)",
+            "instruction": "Étude approfondie d'un rite Bakossi : objectif, déroulement, acteurs, symboles, signification."
+          },
+          {
+            "title": "Synthèse (10 min)",
+            "instruction": "Les pratiques culturelles sont rarement gratuites : elles portent des significations profondes."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Abordez ce sujet avec respect. Les interdits alimentaires et les rites sont des éléments identitaires sensibles."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Symbolique, interdits et rites dans la culture Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Interdit",
+            "instruction": "Cite un interdit alimentaire Bakossi et explique son origine et sa signification."
+          },
+          {
+            "title": "Activité 2 — Symbolique",
+            "instruction": "Analyse la symbolique d'un objet ou d'un geste culturel Bakossi."
+          },
+          {
+            "title": "Activité 3 — Rite",
+            "instruction": "Décris un rite Bakossi : à quelle occasion ? Qui y participe ? Qu'est-ce qui se passe ? Quelle est sa signification ?"
+          }
+        ],
+        "memo": "Culture Bakossi : interdits alimentaires (totémiques, sociaux, rituels), symbolique des pratiques, rites (initiation, purification, guérison, passage). Chaque pratique culturelle est porteuse de sens."
+      }
+    },
+    {
+      "id": "MC5-2",
+      "code": "C-V.2",
+      "module": "MC5-communaute-2",
+      "moduleTitle": "Module C-V — Pratiques culturelles en communauté — Niveau II",
+      "title": "Médias traditionnels, parures et code moral dans la société Bakossi",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Identifier les outils traditionnels de communication de la communauté Bakossi",
+        "Décrire les parures et décorations corporelles Bakossi et leur symbolique",
+        "Présenter les éléments du code moral traditionnel Bakossi"
+      ],
+      "vocabulary": [
+        {
+          "id": "382435077c99",
+          "audio": null,
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "353e21192b60",
+          "audio": null,
+          "langText": "-",
+          "langWord": "-",
+          "frenchText": "bouches",
+          "frenchWord": "bouches",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "418998fbc9c2",
+          "audio": null,
+          "langText": "-",
+          "langWord": "děd̚",
+          "frenchText": "oeil",
+          "frenchWord": "oeil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc9c219ad695",
+          "audio": null,
+          "langText": "ɓé hə́ntà:n měd̚",
+          "langWord": "měd̚",
+          "frenchText": "ils frottaient les yeux",
+          "frenchWord": "yeux",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "a1bb3128448a",
+          "audio": null,
+          "langText": "à wó: ǹló ḿmə́ ŋkólɛ́ nɛ̀ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
+          "frenchText": "il avait une grosse tête et un long cou",
+          "frenchWord": "tête",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "6f7e0dde6312",
+          "audio": null,
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "f477125e9555",
+          "audio": null,
+          "langText": "nòŋ éjē édɛ́ mɔ́: yēl é hénə̀'",
+          "langWord": "-",
+          "frenchText": "ses poils sont noirs",
+          "frenchWord": "poils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M4-syntagme-nominal"
+        },
+        {
+          "id": "bc1454d6acd2",
+          "audio": null,
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        }
+      ],
+      "emacResources": [
+        {
+          "file": "EMAC_CM_BER_001-1-1.mp3",
+          "genre": "Berceuse",
+          "title": "lisoohe (Basaa)",
+          "ethnic": "Basaa"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon C-V.2 — Bakossi. Vocabulaire extrait du corpus ALCAM.",
+        "steps": [
+          {
+            "title": "Médias traditionnels (15 min)",
+            "instruction": "Comment la société Bakossi communique-t-elle ? Tam-tam, sifflets, clochettes, crieurs publics, réunions rituelles. Fonctionnement et symbolique."
+          },
+          {
+            "title": "Parures et décoration (15 min)",
+            "instruction": "Coiffures, tatouages, scarifications, balafres, vêtements cérémoniels dans la tradition Bakossi. Que signifient-ils (statut, appartenance, beauté, protection) ?"
+          },
+          {
+            "title": "Code moral et pénal (20 min)",
+            "instruction": "Quelles sont les règles morales fondamentales de la société Bakossi ? Quelles sont les sanctions en cas de manquement (exclusion, amende, rite de réparation) ?"
+          },
+          {
+            "title": "Production culturelle (10 min)",
+            "instruction": "En groupe, concevoir une ressource culturelle Bakossi (affiche, court texte) à partir des éléments étudiés."
+          }
+        ],
+        "freedom": "Adaptez les activités au niveau et à la composition de votre classe.",
+        "tips": "Encouragez les élèves à documenter des pratiques culturelles Bakossi dans leurs familles et à les partager en classe."
+      },
+      "student": {
+        "intro": "Cours de Bakossi — Médias traditionnels, parures et code moral dans la société Bakossi.",
+        "activities": [
+          {
+            "title": "Activité 1 — Média",
+            "instruction": "Décris un outil traditionnel de communication Bakossi et explique comment il fonctionne."
+          },
+          {
+            "title": "Activité 2 — Parure",
+            "instruction": "Dessine et décris une parure Bakossi (vêtement, coiffure, tatouage) en expliquant sa signification."
+          },
+          {
+            "title": "Activité 3 — Code moral",
+            "instruction": "Cite 3 règles du code moral Bakossi et les sanctions prévues en cas de non-respect."
+          }
+        ],
+        "memo": "Médias Bakossi : tam-tam (messages codifiés), sifflets, réunions rituelles. Parures : coiffure, tatouage, scarification, habillement cérémoniel (marqueurs de statut et d'identité). Code moral : règles communautaires, sanctions sociales."
+      }
+    }
+  ]
+}

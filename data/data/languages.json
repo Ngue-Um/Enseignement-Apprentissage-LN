@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "basaa",
+    "name": "Bàsàa",
+    "iso": "bas",
+    "family": "Bantoue A.43",
+    "region": "Littoral, Centre, Sud",
+    "audio": true,
+    "emacCount": 7
+  },
+  {
+    "slug": "ewondo",
+    "name": "Èwòndó",
+    "iso": "ewo",
+    "family": "Bantoue A.72",
+    "region": "Centre",
+    "audio": false,
+    "emacCount": 9
+  },
+  {
+    "slug": "bulu",
+    "name": "Bulu",
+    "iso": "bum",
+    "family": "Bantoue A.74",
+    "region": "Sud",
+    "audio": true,
+    "emacCount": 9
+  },
+  {
+    "slug": "gbaya",
+    "name": "Gbáyá",
+    "iso": "gya",
+    "family": "Oubanguienne",
+    "region": "Est, Adamaoua",
+    "audio": false,
+    "emacCount": 0
+  },
+  {
+    "slug": "tikar",
+    "name": "Tikar",
+    "iso": "tik",
+    "family": "Bantoïde",
+    "region": "Centre, Adamaoua",
+    "audio": false,
+    "emacCount": 2
+  },
+  {
+    "slug": "fong",
+    "name": "Fòŋ",
+    "iso": "—",
+    "family": "Bantoue A.50",
+    "region": "Centre",
+    "audio": true,
+    "emacCount": 2
+  },
+  {
+    "slug": "mvele",
+    "name": "Mvélé",
+    "iso": "—",
+    "family": "Bantoue A.50",
+    "region": "Centre",
+    "audio": true,
+    "emacCount": 2
+  },
+  {
+    "slug": "bakossi",
+    "name": "Bakossi",
+    "iso": "bss",
+    "family": "Bantoue A.15",
+    "region": "Littoral, Sud-Ouest",
+    "audio": true,
+    "emacCount": 1
+  },
+  {
+    "slug": "tuki-tumbele",
+    "name": "Tuki-Tumbele",
+    "iso": "—",
+    "family": "Bantoue A.60",
+    "region": "Centre",
+    "audio": false,
+    "emacCount": 1
+  },
+  {
+    "slug": "tuki-tukombe",
+    "name": "Tuki-Tukombe",
+    "iso": "—",
+    "family": "Bantoue A.60",
+    "region": "Centre",
+    "audio": false,
+    "emacCount": 1
+  },
+  {
+    "slug": "balom",
+    "name": "Balom",
+    "iso": "—",
+    "family": "Bantoue A.60",
+    "region": "Centre",
+    "audio": false,
+    "emacCount": 1
+  },
+  {
+    "slug": "badjia",
+    "name": "Bàdjíà",
+    "iso": "—",
+    "family": "Bantoue",
+    "region": "Littoral",
+    "audio": false,
+    "emacCount": 1
+  },
+  {
+    "slug": "banoo",
+    "name": "Banɔɔ",
+    "iso": "—",
+    "family": "Bantoue A.40",
+    "region": "Littoral",
+    "audio": false,
+    "emacCount": 1
+  },
+  {
+    "slug": "mipa",
+    "name": "Mìpá",
+    "iso": "—",
+    "family": "Bantoue",
+    "region": "Littoral",
+    "audio": false,
+    "emacCount": 1
+  },
+  {
+    "slug": "yezoum",
+    "name": "Yezoum",
+    "iso": "—",
+    "family": "Bantoue A.70",
+    "region": "Centre",
+    "audio": true,
+    "emacCount": 2
+  },
+  {
+    "slug": "diboum",
+    "name": "Diboum",
+    "iso": "—",
+    "family": "Bantoue",
+    "region": "Littoral",
+    "audio": false,
+    "emacCount": 2
+  }
+]
