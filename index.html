@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ALCAM Apprendre — Outils didactiques pour les langues camerounaises</title>
-  <meta name="description" content="Prototype d'outil interactif d'enseignement des langues nationales camerounaises, à partir des ressources ALCAM publiées sur Mozilla Data Collective. Cours LACC2342 — ENS Yaoundé, Prof. Emmanuel Ngue Um." />
+  <title>Likalo — Enseignement/Apprentissage des Langues et Cultures Camerounaises</title>
+  <meta name="description" content="Likalo : plateforme interactive d'enseignement des langues et cultures nationales camerounaises. Données ALCAM · corpus EMAC/CERDOTOLA · Programmes MINESEC Cultures Nationales. LACC2342 — ENS Yaoundé, Prof. Emmanuel Ngue Um." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,10 +56,10 @@
   <header class="border-b border-ink-100 bg-white sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/80">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
       <a href="#/" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-lg bg-brand-500 text-white grid place-items-center font-bold font-serif text-lg shadow-sm group-hover:bg-brand-600 transition">A</div>
+        <div class="w-10 h-10 rounded-lg bg-brand-500 text-white grid place-items-center font-bold font-serif text-lg shadow-sm group-hover:bg-brand-600 transition">L</div>
         <div class="leading-tight">
-          <div class="font-semibold text-ink-900">ALCAM Apprendre</div>
-          <div class="text-xs text-ink-500">Outils didactiques pour les langues camerounaises</div>
+          <div class="font-semibold text-ink-900">Likalo</div>
+          <div class="text-xs text-ink-500">Langues &amp; Cultures Camerounaises</div>
         </div>
       </a>
       <nav id="main-nav" class="hidden sm:flex items-center gap-1 text-sm">
@@ -69,6 +69,9 @@
         <a href="#/vocabulaire" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Vocabulaire</a>
         <a href="#/exercices" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Exercices</a>
         <a href="#/a-propos" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">À propos</a>
+        <select id="nav-lang-selector" class="lang-selector ml-2 border border-ink-200 rounded-md px-2 py-1 bg-white text-sm text-ink-700 cursor-pointer" title="Changer de langue" onchange="switchLanguage(this.value)">
+          <!-- rempli dynamiquement par JS -->
+        </select>
       </nav>
       <button id="mobile-toggle" class="sm:hidden p-2 rounded-md hover:bg-ink-100" aria-label="Menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -95,7 +98,7 @@
   <footer class="border-t border-ink-100 bg-white mt-12">
     <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-ink-500 flex flex-col sm:flex-row justify-between gap-3">
       <div>
-        © 2026 — Prototype pédagogique LACC2342 · ENS Yaoundé · Prof. <span class="text-ink-700">Emmanuel Ngue Um</span>
+        © 2026 — <strong>Likalo</strong> · LACC2342 · ENS Yaoundé · Prof. <span class="text-ink-700">Emmanuel Ngue Um</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="https://mozilladatacollective.com/organization/cmfv3ichk000amd07piai0zoz" target="_blank" rel="noopener" class="hover:text-brand-700 underline">Données ALCAM sur mdc</a>
@@ -112,12 +115,12 @@
         <div>
           <span class="inline-block text-xs font-semibold text-brand-700 bg-brand-100 px-3 py-1 rounded-full">Prototype LACC2342 · ENS Yaoundé</span>
           <h1 class="mt-4 font-serif text-4xl sm:text-5xl leading-tight text-ink-900">
-            Apprendre les langues camerounaises<br/>avec les ressources <span class="text-brand-600">ALCAM</span>.
+            <span class="text-brand-600">Likalo</span> — Apprendre les langues<br/>et cultures camerounaises.
           </h1>
           <p class="mt-5 text-lg text-ink-600 max-w-xl">
-            Un prototype d'outil interactif construit à partir des jeux de données ALCAM
-            publiés sur Mozilla Data Collective sous la bannière de l'Institut des Humanités numériques africaines.
-            Aligné sur les programmes officiels MINESEC des classes de 6<sup>e</sup>, 5<sup>e</sup>, 4<sup>e</sup> et 3<sup>e</sup>.
+            Plateforme interactive d'enseignement des langues et cultures nationales camerounaises.
+            Données ALCAM · corpus musical EMAC/CERDOTOLA · programmes officiels MINESEC
+            <em>Langues Nationales</em> et <em>Cultures Nationales</em> (6<sup>e</sup>–Terminale).
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="#/exercices" class="inline-flex items-center gap-2 px-5 py-3 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-medium shadow-sm">
@@ -221,55 +224,35 @@
     <section>
       <div class="flex flex-wrap items-end justify-between gap-4 mb-6">
         <div>
-          <h1 class="font-serif text-3xl mb-2">Leçons</h1>
+          <h1 class="font-serif text-3xl mb-2">Leçons — Bulu</h1>
           <p class="text-ink-600 max-w-3xl">
-            Quarante-cinq leçons clé-en-main, ventilées dans les neuf modules
-            des programmes officiels MINESEC du secondaire : Langues nationales
-            6<sup>e</sup>/5<sup>e</sup> (Modules I à VI), 4<sup>e</sup>/3<sup>e</sup>
-            (Modules VII et VIII), et Terminale (Module IX, genres de discours
-            et littérature). Chaque fiche fournit un plan en cinq étapes pour
-            l'enseignant et un cahier d'activités pour l'élève. Le corpus ALCAM
-            bulu fournit pour l'instant l'audio ; les autres langues seront
-            ajoutées progressivement.
-          </p>
-          <p class="mt-2 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-3 py-2 max-w-3xl">
-            <strong>Note&nbsp;:</strong> les programmes officiels des classes de
-            <strong>Seconde</strong> et de <strong>Première</strong> ne sont pas
-            encore intégrés. Dès que les PDF MINESEC seront disponibles, un
-            module supplémentaire sera ajouté pour couvrir le second cycle complet.
+            Vingt-cinq leçons clé-en-main, ventilées dans les huit modules
+            des programmes officiels MINESEC : Langues nationales 6<sup>e</sup>/5<sup>e</sup>
+            (Modules I à VI, 50 h annuelles, 2 h hebdomadaires) et Langues nationales
+            4<sup>e</sup>/3<sup>e</sup> (Modules VII et VIII, 25 h annuelles, 1 h hebdomadaire).
+            Chaque fiche fournit un plan en cinq étapes pour l'enseignant et un cahier
+            d'activités pour l'élève, à partir du corpus ALCAM bulu.
           </p>
         </div>
-        <div class="flex flex-wrap items-center gap-3">
-          <div class="flex items-center gap-2">
-            <label class="text-sm text-ink-500" for="lecons-lang">Langue</label>
-            <select id="lecons-lang" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm min-w-[10rem]">
-              <option value="bulu">Bulu</option>
-            </select>
-          </div>
-          <div class="flex items-center gap-2">
-            <label class="text-sm text-ink-500" for="lecons-filter">Module</label>
-            <select id="lecons-filter" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm">
-              <option value="">Tous les modules</option>
-              <optgroup label="Classes de 6e et 5e">
-                <option value="M1-diversite">I — Diversité linguistique camerounaise (6e)</option>
-                <option value="M2-segmentaux">II — Productions segmentales (6e)</option>
-                <option value="M3-suprasegmentaux">III — Suprasegmentaux (6e)</option>
-                <option value="M4-syntagme-nominal">IV — Syntagme nominal (5e)</option>
-                <option value="M5-syntagme-verbal">V — Syntagme verbal (5e)</option>
-                <option value="M6-phrase">VI — La phrase (5e)</option>
-              </optgroup>
-              <optgroup label="Classes de 4e et 3e">
-                <option value="M7-quotidien-1">VII — Gestion du quotidien Niveau 1 (4e)</option>
-                <option value="M8-quotidien-2">VIII — Gestion du quotidien Niveau 2 (3e)</option>
-              </optgroup>
-              <optgroup label="Classe de Terminale">
-                <option value="M9-terminale">IX — Genres de discours et littérature (Tle)</option>
-              </optgroup>
-            </select>
-          </div>
+        <div class="flex items-center gap-2">
+          <label class="text-sm text-ink-500" for="lecons-filter">Module</label>
+          <select id="lecons-filter" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm">
+            <option value="">Tous les modules</option>
+            <optgroup label="Classes de 6e et 5e">
+              <option value="M1-diversite">I — Diversité linguistique camerounaise (6e)</option>
+              <option value="M2-segmentaux">II — Productions segmentales (6e)</option>
+              <option value="M3-suprasegmentaux">III — Suprasegmentaux (6e)</option>
+              <option value="M4-syntagme-nominal">IV — Syntagme nominal (5e)</option>
+              <option value="M5-syntagme-verbal">V — Syntagme verbal (5e)</option>
+              <option value="M6-phrase">VI — La phrase (5e)</option>
+            </optgroup>
+            <optgroup label="Classes de 4e et 3e">
+              <option value="M7-quotidien-1">VII — Gestion du quotidien Niveau 1 (4e)</option>
+              <option value="M8-quotidien-2">VIII — Gestion du quotidien Niveau 2 (3e)</option>
+            </optgroup>
+          </select>
         </div>
       </div>
-      <div id="lecons-audio-banner" class="hidden mb-4 text-xs text-sky-800 bg-sky-50 border border-sky-200 rounded px-3 py-2"></div>
       <div id="lecons-modules" class="space-y-10"></div>
     </section>
   </template>
@@ -350,6 +333,16 @@
         </article>
       </div>
 
+      <!-- Ressources musicales EMAC -->
+      <section id="lecon-emac-section" class="mt-8 hidden">
+        <div class="flex items-center gap-3 mb-4">
+          <h2 class="font-serif text-2xl">Ressources musicales EMAC</h2>
+          <span class="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded-full font-semibold">Ethnomusicologie du Cameroun · CERDOTOLA</span>
+        </div>
+        <p class="text-sm text-ink-500 mb-4">Ces extraits sonores du corpus EMAC (Ethnomusicologie du Cameroun, CERDOTOLA) illustrent les pratiques musicales et orales de la zone culturelle de cette langue. Cliquez ▶ pour écouter.</p>
+        <div id="lecon-emac-list" class="grid sm:grid-cols-2 gap-3"></div>
+      </section>
+
       <!-- Vocabulaire ALCAM mobilisé -->
       <section class="mt-8">
         <div class="flex items-center justify-between gap-3 mb-4">
@@ -369,7 +362,7 @@
     <section>
       <div class="flex flex-wrap items-end justify-between gap-4 mb-6">
         <div>
-          <h1 class="font-serif text-3xl mb-2">Vocabulaire — Bulu</h1>
+          <h1 class="font-serif text-3xl mb-2">Vocabulaire — <span id="vocab-lang-title">Bulu</span></h1>
           <p class="text-ink-600 max-w-2xl">Écoutez chaque phrase, lisez sa transcription en AGLC et sa traduction française. Filtrez par module MINESEC.</p>
         </div>
         <div class="flex items-center gap-2">
