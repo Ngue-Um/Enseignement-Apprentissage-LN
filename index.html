@@ -85,6 +85,12 @@
         <a href="#/vocabulaire" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Vocabulaire</a>
         <a href="#/exercices" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Exercices</a>
         <a href="#/a-propos" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">À propos</a>
+        <div class="px-3 py-2 border-t border-ink-100 mt-1">
+          <label class="text-xs text-ink-400 uppercase tracking-wide block mb-1">Langue active</label>
+          <select id="mobile-lang-selector" class="lang-selector w-full border border-ink-200 rounded-md px-2 py-1.5 bg-white text-sm text-ink-700 cursor-pointer" title="Changer de langue" onchange="switchLanguage(this.value)">
+            <!-- rempli dynamiquement par JS -->
+          </select>
+        </div>
       </div>
     </div>
   </header>
@@ -138,7 +144,7 @@
             </div>
             <div>
               <dt class="text-3xl font-serif text-brand-600" id="stat-phrases">—</dt>
-              <dd class="text-xs text-ink-500 uppercase tracking-wide">Phrases bulu</dd>
+              <dd class="text-xs text-ink-500 uppercase tracking-wide">Phrases <span id="stat-phrases-lang"></span></dd>
             </div>
             <div>
               <dt class="text-3xl font-serif text-brand-600" id="stat-audios">—</dt>
@@ -154,8 +160,8 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
               </div>
               <div>
-                <div class="text-xs text-ink-500 uppercase tracking-wide">Module II — Productions segmentales</div>
-                <div class="text-sm font-medium text-ink-700">Phrase d'exemple en bulu</div>
+                <div class="text-xs text-ink-500 uppercase tracking-wide" id="demo-module-label">Module II — Productions segmentales</div>
+                <div class="text-sm font-medium text-ink-700">Phrase d'exemple en <span id="demo-lang-name"></span></div>
               </div>
             </div>
             <p class="font-serif text-2xl text-ink-900 leading-snug" id="demo-lang">èbé é:nə̀ èdɔ́k</p>
@@ -172,7 +178,7 @@
               </div>
               <div class="p-2 rounded bg-ink-50">
                 <div class="text-ink-400">Langue</div>
-                <div class="font-medium text-ink-700">Bulu</div>
+                <div class="font-medium text-ink-700" id="demo-badge-lang"></div>
               </div>
               <div class="p-2 rounded bg-ink-50">
                 <div class="text-ink-400">Source</div>
@@ -224,14 +230,14 @@
     <section>
       <div class="flex flex-wrap items-end justify-between gap-4 mb-6">
         <div>
-          <h1 class="font-serif text-3xl mb-2">Leçons — Bulu</h1>
-          <p class="text-ink-600 max-w-3xl">
-            Vingt-cinq leçons clé-en-main, ventilées dans les huit modules
+          <h1 class="font-serif text-3xl mb-2" id="lecons-title">Leçons</h1>
+          <p class="text-ink-600 max-w-3xl" id="lecons-desc">
+            Leçons clé-en-main, ventilées dans les modules
             des programmes officiels MINESEC : Langues nationales 6<sup>e</sup>/5<sup>e</sup>
             (Modules I à VI, 50 h annuelles, 2 h hebdomadaires) et Langues nationales
             4<sup>e</sup>/3<sup>e</sup> (Modules VII et VIII, 25 h annuelles, 1 h hebdomadaire).
             Chaque fiche fournit un plan en cinq étapes pour l'enseignant et un cahier
-            d'activités pour l'élève, à partir du corpus ALCAM bulu.
+            d'activités pour l'élève, à partir du corpus ALCAM.
           </p>
         </div>
         <div class="flex items-center gap-2">
@@ -385,24 +391,24 @@
 
   <template id="tpl-exercices">
     <section>
-      <h1 class="font-serif text-3xl mb-2">Exercices interactifs — Bulu</h1>
+      <h1 class="font-serif text-3xl mb-2" id="exo-title">Exercices interactifs</h1>
       <p class="text-ink-600 mb-8 max-w-2xl">Quatre familles d'exercices, conçues pour les classes du premier cycle. Vos réponses sont mémorisées le temps de la session.</p>
 
       <div id="exo-menu" class="grid sm:grid-cols-2 gap-4">
         <button data-exo="comprehension" class="exo-card text-left bg-white border border-ink-100 rounded-xl p-6 hover:border-brand-300 hover:shadow transition">
           <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Module II → VI · Compréhension orale</div>
           <h3 class="text-lg font-semibold mt-2">Audio → Traduction française</h3>
-          <p class="text-sm text-ink-500 mt-1">Écoute la phrase en bulu et choisis la bonne traduction française parmi quatre.</p>
+          <p class="text-sm text-ink-500 mt-1" id="exo-desc-comprehension">Écoute la phrase et choisis la bonne traduction française parmi quatre.</p>
         </button>
         <button data-exo="reconnaissance" class="exo-card text-left bg-white border border-ink-100 rounded-xl p-6 hover:border-brand-300 hover:shadow transition">
           <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Module II · Reconnaissance audio</div>
-          <h3 class="text-lg font-semibold mt-2">Texte bulu → Audio correspondant</h3>
-          <p class="text-sm text-ink-500 mt-1">Lis la phrase bulu et choisis, parmi trois enregistrements, celui qui lui correspond.</p>
+          <h3 class="text-lg font-semibold mt-2" id="exo-label-reconnaissance">Texte → Audio correspondant</h3>
+          <p class="text-sm text-ink-500 mt-1" id="exo-desc-reconnaissance">Lis la phrase et choisis, parmi trois enregistrements, celui qui lui correspond.</p>
         </button>
         <button data-exo="lecture" class="exo-card text-left bg-white border border-ink-100 rounded-xl p-6 hover:border-brand-300 hover:shadow transition">
           <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Module IV-VI · Lecture</div>
-          <h3 class="text-lg font-semibold mt-2">Texte bulu → Traduction française</h3>
-          <p class="text-sm text-ink-500 mt-1">Sans audio, traduis depuis le bulu écrit. Idéal pour réviser la phonologie de l'AGLC.</p>
+          <h3 class="text-lg font-semibold mt-2" id="exo-label-lecture">Texte → Traduction française</h3>
+          <p class="text-sm text-ink-500 mt-1" id="exo-desc-lecture">Sans audio, traduis depuis la langue écrite. Idéal pour réviser la phonologie de l'AGLC.</p>
         </button>
         <button data-exo="dictee" class="exo-card text-left bg-white border border-ink-100 rounded-xl p-6 hover:border-brand-300 hover:shadow transition">
           <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Module II-III · Dictée</div>
