@@ -154,15 +154,17 @@ async function loadData() {
   const langInfo = langues.find(l => l.slug === state.currentLang);
   state.currentLangName = langInfo ? langInfo.name : state.currentLang;
   state.audioBase = `audio/${state.currentLang}/`;
-  // Populate nav language selector
-  const navSel = document.getElementById('nav-lang-selector');
-  if (navSel && !navSel.options.length) {
-    langues.forEach(l => {
-      const opt = new Option(l.name, l.slug);
-      navSel.add(opt);
-    });
-  }
-  if (navSel) navSel.value = state.currentLang;
+  // Populate all language selectors (nav + mobile)
+  ['nav-lang-selector', 'mobile-lang-selector'].forEach(id => {
+    const sel = document.getElementById(id);
+    if (sel && !sel.options.length) {
+      langues.forEach(l => {
+        const opt = new Option(l.name, l.slug);
+        sel.add(opt);
+      });
+    }
+    if (sel) sel.value = state.currentLang;
+  });
   return { langues, vocab, lessons };
 }
 
@@ -259,6 +261,12 @@ function renderHome() {
   $('#stat-langues').textContent = state.langues.length;
   $('#stat-phrases').textContent = state.vocabWithFr.length;
   $('#stat-audios').textContent = state.vocab.filter(v => v.audio).length;
+  const phrasesLangEl = $('#stat-phrases-lang');
+  if (phrasesLangEl) phrasesLangEl.textContent = state.currentLangName;
+  const demoLangName = $('#demo-lang-name');
+  if (demoLangName) demoLangName.textContent = state.currentLangName;
+  const demoBadgeLang = $('#demo-badge-lang');
+  if (demoBadgeLang) demoBadgeLang.textContent = state.currentLangName;
 
   // Phrase de démo : prendre un exemple sympa
   const demo = state.vocabWithFr.find(d => d.langText.length > 8 && d.langText.length < 25)
@@ -412,6 +420,9 @@ const MODULE_ORDER = [
 
 function renderLecons() {
   mountTemplate('tpl-lecons');
+  // Update title with current language name
+  const leconsTitleEl = $('#lecons-title');
+  if (leconsTitleEl) leconsTitleEl.textContent = `Leçons — ${state.currentLangName}`;
   const root = $('#lecons-modules');
   const filter = $('#lecons-filter');
 
@@ -632,6 +643,20 @@ function applyPaneVisibility() {
 
 function renderExercices() {
   mountTemplate('tpl-exercices');
+  // Update title and exercise labels with current language name
+  const exoTitleEl = $('#exo-title');
+  if (exoTitleEl) exoTitleEl.textContent = `Exercices interactifs — ${state.currentLangName}`;
+  const lang = state.currentLangName;
+  const reconLabel = $('#exo-label-reconnaissance');
+  if (reconLabel) reconLabel.textContent = `Texte ${lang} → Audio correspondant`;
+  const lectureLabel = $('#exo-label-lecture');
+  if (lectureLabel) lectureLabel.textContent = `Texte ${lang} → Traduction française`;
+  const compDesc = $('#exo-desc-comprehension');
+  if (compDesc) compDesc.textContent = `Écoute la phrase en ${lang} et choisis la bonne traduction française parmi quatre.`;
+  const reconDesc = $('#exo-desc-reconnaissance');
+  if (reconDesc) reconDesc.textContent = `Lis la phrase en ${lang} et choisis, parmi trois enregistrements, celui qui lui correspond.`;
+  const lectureDesc = $('#exo-desc-lecture');
+  if (lectureDesc) lectureDesc.textContent = `Sans audio, traduis depuis le ${lang} écrit. Idéal pour réviser la phonologie de l'AGLC.`;
   $$('.exo-card').forEach(card => {
     card.addEventListener('click', () => startExercise(card.dataset.exo));
   });
