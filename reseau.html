@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CamRhizome — Réseau Intercommunautaire du Cameroun · Likalo</title>
+<link rel="icon" href="assets/favicon.svg"/>
+
+<!-- Tailwind CSS (same as main site) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Hide the internal nav bar when embedded as an iframe inside Likalo -->
+<style id="iframe-style"></style>
+<script>
+  if (window.self !== window.top) {
+    document.getElementById('iframe-style').textContent = 'nav { display:none !important; }';
+    document.documentElement.style.setProperty('--top-offset', '0px');
+  }
+</script>
+
+<!-- Cytoscape.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+
+<style>
+  :root {
+    --hist:   #7c3aed; --hist-bg:   #ede9fe;
+    --ling:   #1d4ed8; --ling-bg:   #dbeafe;
+    --geo:    #059669; --geo-bg:    #d1fae5;
+    --social: #d97706; --social-bg: #fef3c7;
+    --cogn:   #be185d; --cogn-bg:   #fce7f3;
+  }
+
+  /* ── Family colour palette for node backgrounds ── */
+  .fc-bantoid   { background: #818cf8 !important; }
+  .fc-bantu     { background: #22d3ee !important; }
+  .fc-ubangian  { background: #f97316 !important; }
+  .fc-adamawa   { background: #84cc16 !important; }
+  .fc-chadic    { background: #facc15 !important; }
+  .fc-nilosaharan{ background: #e879f9 !important; }
+  .fc-atlantic  { background: #fb7185 !important; }
+  .fc-other     { background: #94a3b8 !important; }
+
+  #cy { width: 100%; height: 100%; }
+
+  .plane-btn { transition: all .15s; }
+  .plane-btn.active { box-shadow: inset 0 0 0 2px currentColor; }
+
+  #detail-panel {
+    transition: transform .25s ease;
+    transform: translateX(110%);
+  }
+  #detail-panel.open {
+    transform: translateX(0);
+  }
+
+  /* slim scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #f1f5f9; }
+  ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+
+  .tag {
+    display: inline-block; border-radius: 4px;
+    font-size: 11px; font-weight: 600;
+    padding: 1px 7px; margin: 2px 2px;
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 overflow-hidden" style="height:100vh; display:flex; flex-direction:column;">
+
+<!-- ══ NAV BAR ══════════════════════════════════════════════════════════════ -->
+<nav class="bg-white border-b border-slate-200 px-4 py-2 flex items-center gap-4 z-10 flex-shrink-0">
+  <a href="#/" class="flex items-center gap-2 font-black text-indigo-700 text-lg no-underline">
+    <span class="bg-indigo-700 text-white rounded px-1.5 py-0.5 text-sm">L</span>
+    <span>Likalo</span>
+  </a>
+  <span class="text-slate-300">|</span>
+  <span class="font-semibold text-slate-700">CamRhizome</span>
+  <span class="ml-auto text-xs text-slate-400 hidden sm:block">
+    Réseau multiplex inter-communautaire · Données CERDOTOLA/UNESCO
+  </span>
+</nav>
+
+<!-- ══ MAIN LAYOUT ══════════════════════════════════════════════════════════ -->
+<div class="flex flex-1 overflow-hidden relative">
+
+  <!-- ── LEFT SIDEBAR ──────────────────────────────────────────────────────── -->
+  <aside id="sidebar" class="w-64 bg-white border-r border-slate-200 flex flex-col overflow-hidden flex-shrink-0">
+
+    <!-- Search -->
+    <div class="p-3 border-b border-slate-100">
+      <input id="search" type="text" placeholder="Chercher une communauté…"
+        class="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
+    </div>
+
+    <!-- Plane filters -->
+    <div class="p-3 border-b border-slate-100">
+      <div class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">Plans d'analyse</div>
+      <div class="flex flex-wrap gap-1">
+        <button data-plane="hist"   class="plane-btn active tag" style="background:var(--hist-bg);color:var(--hist)">Historique</button>
+        <button data-plane="ling"   class="plane-btn active tag" style="background:var(--ling-bg);color:var(--ling)">Linguistique</button>
+        <button data-plane="geo"    class="plane-btn active tag" style="background:var(--geo-bg);color:var(--geo)">Géographique</button>
+        <button data-plane="social" class="plane-btn active tag" style="background:var(--social-bg);color:var(--social)">Social</button>
+        <button data-plane="cogn"   class="plane-btn active tag" style="background:var(--cogn-bg);color:var(--cogn)">Cognitif</button>
+      </div>
+    </div>
+
+    <!-- Weight threshold -->
+    <div class="p-3 border-b border-slate-100">
+      <div class="flex justify-between text-xs text-slate-500 mb-1">
+        <span class="font-bold uppercase tracking-wide text-slate-400">Poids min.</span>
+        <span id="weight-val" class="font-semibold text-indigo-600">0.10</span>
+      </div>
+      <input id="weight-slider" type="range" min="0" max="90" value="10" step="5"
+        class="w-full accent-indigo-600"/>
+    </div>
+
+    <!-- Layout selector -->
+    <div class="p-3 border-b border-slate-100">
+      <div class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">Disposition</div>
+      <div class="flex gap-1">
+        <button data-layout="cose"   class="layout-btn active text-xs px-2 py-1 rounded bg-indigo-100 text-indigo-700 font-semibold">Force</button>
+        <button data-layout="circle" class="layout-btn text-xs px-2 py-1 rounded bg-slate-100 text-slate-600 font-semibold">Cercle</button>
+        <button data-layout="grid"   class="layout-btn text-xs px-2 py-1 rounded bg-slate-100 text-slate-600 font-semibold">Grille</button>
+      </div>
+    </div>
+
+    <!-- Community list -->
+    <div class="flex-1 overflow-y-auto">
+      <div class="text-xs font-bold uppercase tracking-wide text-slate-400 px-3 pt-3 pb-1">
+        Communautés <span id="node-count" class="text-indigo-500"></span>
+      </div>
+      <div id="community-list" class="pb-2"></div>
+    </div>
+
+    <!-- Legend -->
+    <div class="p-3 border-t border-slate-100 bg-slate-50">
+      <div class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">Familles linguistiques</div>
+      <div id="legend" class="space-y-1"></div>
+    </div>
+  </aside>
+
+  <!-- ── GRAPH CANVAS ───────────────────────────────────────────────────────── -->
+  <div class="flex-1 relative overflow-hidden">
+    <div id="cy" class="w-full h-full"></div>
+
+    <!-- Loading overlay -->
+    <div id="loading" class="absolute inset-0 flex items-center justify-center bg-slate-50">
+      <div class="text-center">
+        <div class="w-12 h-12 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mx-auto mb-3"></div>
+        <div class="text-slate-500 text-sm">Tissage du rhizome…</div>
+      </div>
+    </div>
+
+    <!-- Top-right stats bar -->
+    <div id="stats-bar" class="hidden absolute top-3 right-3 bg-white/90 backdrop-blur rounded-xl shadow text-xs px-4 py-2 text-slate-600 space-x-4">
+      <span>Nœuds : <strong id="stat-nodes" class="text-indigo-600"></strong></span>
+      <span>Arêtes visibles : <strong id="stat-edges" class="text-indigo-600"></strong></span>
+    </div>
+
+    <!-- Reset / fit button -->
+    <button id="btn-fit" class="hidden absolute bottom-4 right-4 bg-white shadow rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50 border border-slate-200">
+      ⊞ Ajuster la vue
+    </button>
+  </div>
+
+  <!-- ── DETAIL PANEL (slides in from right) ───────────────────────────────── -->
+  <div id="detail-panel"
+    class="absolute top-0 right-0 h-full w-80 bg-white border-l border-slate-200 shadow-2xl overflow-y-auto z-20 flex flex-col">
+    <div class="flex items-start justify-between p-4 border-b border-slate-100">
+      <div>
+        <div id="dp-title" class="font-black text-lg text-indigo-700"></div>
+        <div id="dp-emic"  class="text-xs text-slate-400 mt-0.5"></div>
+      </div>
+      <button id="dp-close" class="text-slate-300 hover:text-slate-600 text-xl leading-none mt-0.5">✕</button>
+    </div>
+    <div id="dp-body" class="p-4 space-y-4 flex-1 text-sm"></div>
+  </div>
+
+</div>
+
+
+<!-- Inline graph data (auto-generated from rhizome.json) -->
+<script>const RHIZOME_DATA={"metadata":{"generated":"2026-07-21","project":"CamRhizome — Réseau inter-communautaire du Cameroun","version":"1.0","nodeCount":20,"edgeCount":302},"nodes":[{"id":"BAFO","slug":"BAFOU","label":"Bafou","emicName":"afhō","meaning":"Nom(s) donné(s) par les groupes voisins :","region":"Ouest","family":"Bantoid (Grassfields)","fc":"bantoid","numeralSystem":"vigésimal","origins":[],"neighborCodes":[],"recordId":"BAFO_2020_001","qa":{"neighbors":"Si oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nBaleveng, Bafoussam et Mbouda","origin":"Oui\nSi oui, quel est le lieu de départ de leur migration ?\nbaleveng\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nNon\nSi oui, lesquels ?\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nOui mais seulement jusqu’à une certaine période de leur vie C’est une terre ancestrale\nY-a-t-il une symbolique ou une sign","social":"Stigmates de l’histoire puisque le chef fondadateur vient de Baleveng et il n’était pas en de très bons termes avec son frère Baleveng","marriage":"L’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nAu sein du groupement Bafou, les femmes , aussi bien que les hommes , se marient avec les gens d’autres groupements ou communautés\nLes habitudes de mariage ont-elles considérablement évolué avec le temp"},"displayName":"Bafou"},{"id":"BAKA","slug":"BAKA","label":"Baka","emicName":"Baka","meaning":"Liberté ( peuple à grande mobilité","region":"Est / Sud","family":"Ubangien","fc":"ubangian","numeralSystem":"quinaire / vigésimal","origins":[],"neighborCodes":["MPNG"],"recordId":"BAKA_2020_001","qa":{"neighbors":"Intégré\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nNzimé , Mpoupieng","origin":"Oui\nSi oui, quel est le lieu de départ de leur migration ?\nYokadouma aux côtés des Mpoupieng\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui\nSi oui, lesquels ?\nLomié, mindourou\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nClientélisme , échange socio-économique Y-a-t-il une symbolique ou une signi","social":"Alliances : parténariat éconmique","marriage":"Endogamie\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nChez les femmes. Elles épousent les Nzimé et les Mpoupieng. L’inverse est rare\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nNon"},"displayName":"Pygmée"},{"id":"BKKO","slug":"BAKOKO","label":"Bakoko","emicName":"adie \"“édea\"","meaning":"les fils du mpoo au nom de likande","region":"Littoral","family":"Bantou","fc":"bantu","numeralSystem":"vigésimal","origins":["Égypte"],"neighborCodes":[],"recordId":"BKKO_2020_001","qa":{"neighbors":"Il est intégré\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nIl ya bàsàa,bati mpoo et en plus le beti, bamiléké etc...","origin":"Si oui, quel est le lieu de départ de leur migration ?\nl’Egypte\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui,à logbikoy, le mfoundi, dans la lékié, kribi, lolodorf\nSi oui, lesquels ?\nils ont séjourné à logbikoy, mfoundi,la lékié, à kribi\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nOui de bonnes rela","social":"Les relations entre factions est les groups adjacents étaient bonnes car ce sont les factions qui regulaient la société et ny avait ni stigmates ni rancœurs","marriage":"Les deux habitudes etaient précises\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nIl yavait l’ exogamie\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nExactement"},"displayName":"Les adie"},{"id":"BANN","slug":"BANEN","label":"Banen","emicName":"Banen Ndogtuna","meaning":"Peuple travailleur et laboureur","region":"Littoral","family":"Bantou","fc":"bantu","numeralSystem":"vigésimal","origins":["Cameroun"],"neighborCodes":[],"recordId":"BANN_2020_001","qa":{"neighbors":"Le groupe chevauche avec d’autres communautés\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nBanem Bandem; tongo basaa, Bamileke, haoussa, Bamoun, Beti, Bodiman, Dibum","origin":"OUI\nSi oui, quel est le lieu de départ de leur migration ?\nNDIKI NEMEKI\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOUI\nSi oui, lesquels ?\nOuest,- cameroun-makombe\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nOUI Yabassi est une terre d’acceuil pour le people Banen\nY-a-t-il une symbolique ou une signifi","social":"Mais signalons que les relations sont bonnes(alliances) entre les notables, chef du village et les membres de la communauté","marriage":"Les gens ont tendance à se marier à l’exterieur du groupe\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nLes hommes prennent plus les femmes hors du groupe\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nOUI"},"displayName":"Banen"},{"id":"BOUM","slug":"BOUM","label":"Boum","emicName":"NGAOUNDERE","meaning":"Reférence à la montagne qui a un ventre surmonté et un nombrille exsubérant qui se trouve dans la ville","region":"Adamaoua","family":"Adamawa (Mbum)","fc":"adamawa","numeralSystem":"décimal","origins":["Soudan","Égypte","Yémen"],"neighborCodes":["FULA","GBYA"],"recordId":"BOUM_2020_001","qa":{"neighbors":"On parle plus d’intégration pas de chevauchement\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nNous sommes intégrés avec les Peuls , Kàkà , Fulbés , Gbaya , Haoussa , kanura , Nyaŋgeré , Bamiléké , Bàsàá","origin":"Oui , il est venu d’ailleurs\nSi oui, quel est le lieu de départ de leur migration ?\nYemen = Arabie Saoudite = Egypte = Soudan——————————————————————————————————————————————————————Ngaoundéré\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui , ils ont eu\nSi oui, lesquels ?\nYemen = Arabie Saoudite = Egypte = Soudan\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de dépa","social":"On ne peut les évacuer , il y en a encore : des rancoeurs mais on en fait plus vraiment mention","marriage":"Il ya les deux cas à la fois : l’endogamie et l’exogamie. C’est difficile de mesurer\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nOui c’est plus marqué chef l’homme que chez la femme car c’est l’homme qui marche le plus\nLes habitudes de mariage o"},"displayName":"NGAOUNDERE"},{"id":"FULA","slug":"FOUFOULDE","label":"Foufoulde","emicName":"Foulbé","meaning":"Nom(s) donné(s) par les groupes voisins :","region":"Nord / Adamaoua","family":"Atlantic-Congo","fc":"atlantic","numeralSystem":"vigésimal","origins":["Mali","Cameroun"],"neighborCodes":[],"recordId":"FULA_2020_001","qa":{"neighbors":"Oui\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nLes Fali et les Bata","origin":"Oui\nSi oui, quel est le lieu de départ de leur migration ?\nMali , Burkina Faso , Niger\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui\nSi oui, lesquels ?\nAu cameroun : Baschéo , Demsa , les Monts Mandara\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nOui Ils ont acquis les terres peu à peu en se rapproc","social":"Les relationa sio-politiques ne sont pas toujours harmonieuses au fond","marriage":"Les mariages peuvent se faire entre n’importe quelle ethnie. La priorité est qu’ils aient la même réligion\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nOui avant les mari"},"displayName":"Walarbe"},{"id":"GBYA","slug":"GBAYA","label":"Gbaya","emicName":"Gbaya","meaning":"La grosse fourmi","region":"Est","family":"Ubangien","fc":"ubangian","numeralSystem":"quinaire / vigésimal","origins":["Soudan","Égypte"],"neighborCodes":[],"recordId":"GBYA_2020_001","qa":{"neighbors":"Le groupe n’est pas isolé, il vit avec d’autres groups en convivilaité\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nMakaa du Nord,c’est un canton, les Bobilis, les Kapere,les kakɔ, les bamvələ","origin":"Egypte\nSi oui, quel est le lieu de départ de leur migration ?\nOui\nmOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui\nSi oui, lesquels ?\nmɔinam Soudan, Centrafrique\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nOui le regroupement de tous les Gbaya tous les 2 ans(mɔinam) C’est la terre ancestrale les autres","social":"","marriage":"L’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nChacun se marie comme il veut, on empêche personne de faire son mariage\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nOui avec la Mondialisation"},"displayName":"Gbaya"},{"id":"GUIZ","slug":"GUIZIGA","label":"Guiziga","emicName":"Guiziga Muturwa","meaning":"Qui est à l’origine de tout ça ? / lterre lui appartient","region":"Extrême-Nord","family":"Tchadique","fc":"chadic","numeralSystem":"vigésimal","origins":["Soudan","Cameroun"],"neighborCodes":[],"recordId":"GUIZ_2020_001","qa":{"neighbors":"Le groupe n’est pas isolé , il ya les Gudur , Guidar\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nGuidar , Gudur","origin":"Les guiziga sont venus du Soudan\nSi oui, quel est le lieu de départ de leur migration ?\nDu Soudan. Ils sont arrivés à Gudur par Mokong c’est de là qu’ils se sont distribués dans l’Extrême Nord du Cameroun\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nGudar , Maroua\nSi oui, lesquels ?\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de le","social":"","marriage":"Endogamie et exogamie , mais jamais dans les mêmes familles\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nOui aujourd’hui , ils se marient n’importe comment"},"displayName":"guiziga Muturwa"},{"id":"KTKK","slug":"KOTOKO","label":"Kotoko","emicName":"Mantagé","meaning":"Nom(s) donné(s) par les groupes voisins :","region":"Extrême-Nord","family":"Tchadique","fc":"chadic","numeralSystem":"vigésimal","origins":["Soudan","Tchad"],"neighborCodes":[],"recordId":"KTKK_2020_001","qa":{"neighbors":"Avec la mondialisatuon , aucun peuple ne peut rester en isolement. Nous sommes intégrés\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nNous sommes intégrés avec tous les autres groupes. Il est très difficile de nos jours d’identifier un Massa , kotoko ou Mousgoum","origin":"Oui il est venu d’ailleurs avant de s’installer sur le lieu actuel\nSi oui, quel est le lieu de départ de leur migration ?\nCe groupe ethnique très ancien est venu de l’égypte ancienne\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui\nSi oui, lesquels ?\nLe Soudan et le Tchad\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours in","social":"Les problèmes inter-ethniques ne manquent pas. Lorsque cela arrive , on fait appel au patriache pour remédier au coflit","marriage":"C’est un mélande avec les autres groupes et au sein du groupe\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nC’est dans les deux sens , filles comme garçons\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nMoi je pense que"},"displayName":"<< kotoko >>"},{"id":"LIMB","slug":"LIMBUM","label":"Limbum","emicName":"wimbum","meaning":"mbum people","region":"Nord-Ouest","family":"Bantoid (Grassfields)","fc":"bantoid","numeralSystem":"vigésimal","origins":[],"neighborCodes":[],"recordId":"LIMB_2020_001","qa":{"neighbors":"Live is armony with other ethnic groups\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nMbororo and people from other neighbouring villages(nwa, ako, misaje,banso","origin":"the wimbum migrated from Tikar\nSi oui, quel est le lieu de départ de leur migration ?\ntikar- Adamaoua region\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nyes\nSi oui, lesquels ?\nkimi\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nno links with their first site migration the land of their forefathers\nY-a-t-i","social":"No Antagonism. They live in harmony with neighbours","marriage":"Exogamy even thoug parents prefer endogamy\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nNo. both men and women could get married to people from other ethnic groups\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nyes"},"displayName":"Ndu and Nkambe people"},{"id":"MND1","slug":"MANDARA1","label":"Mandara (1)","emicName":"kanuri","meaning":"ceux de la noblesse","region":"Extrême-Nord","family":"Tchadique","fc":"chadic","numeralSystem":"vigésimal","origins":["Yémen"],"neighborCodes":["PODO"],"recordId":"MND1_2020_001","qa":{"neighbors":"Oui les kanuri sont intégrés avec d’autres communautés\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nles Mandara, les Podoko, les Mouktélé, Les Gamergou, Les Arabes choua, Les Foulbés","origin":"Oui le groupe est venu d’ailleurs avant de s’etablir sur le lieu actuel\nSi oui, quel est le lieu de départ de leur migration ?\nleur lieu de depart est Yemen\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui ils ont des séjours intermédiaires dans d’autres lieux\nSi oui, lesquels ?\nKouka, Maïduguri\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lie","social":"","marriage":"les habitudes de marriage au sein du groupe sont: La dote, les présents, et la cola. ———Oui les gens on tendance à se marier à l’intérieur du groupe\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nOui l’exogamie est plus marquee chez les hommes que ch"},"displayName":"kanuri"},{"id":"MND2","slug":"MANDARA_2","label":"Mandara (2)","emicName":"wandala","meaning":"ceux de constructeur","region":"Extrême-Nord","family":"Tchadique","fc":"chadic","numeralSystem":"vigésimal","origins":[],"neighborCodes":["PODO"],"recordId":"MND2_2020_001","qa":{"neighbors":"Oui les groupe est intégré\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nles Kanuria, les Podoko, les Houza, Les moutélé, Les Arabes choua, Les malgwa, kotako","origin":"Oui le groupe est venu d’ailleurs avant de s’etablir sur le lieu actuel\nSi oui, quel est le lieu de départ de leur migration ?\noui à Ichga-kewe\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui ils ont eu des séjours intermédiaires dans d’autres lieux\nSi oui, lesquels ?\nKerawa, Doulo\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs ","social":"Les relations sociopolitique vis-à-vis des groups adjacents se présentent comme des alliances stigmates de l’histoire","marriage":"les habitudes de marriage au sein du groupe sont: La dote, les présents, et la cola. ———Oui les gens on tendance à se marier à l’intérieur du groupe\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nOui l’exogamie est plus marquee chez les hommes\nLes ha"},"displayName":"mandara"},{"id":"MNDG","slug":"MOUNDANG","label":"Moundang","emicName":"MOUNDANG","meaning":"MOUNDANG","region":"Nord","family":"Nilo-Saharien","fc":"nilosaharan","numeralSystem":"décimal","origins":["Soudan","Tchad","Cameroun"],"neighborCodes":["FULA","GUIZ"],"recordId":"MNDG_2020_001","qa":{"neighbors":"Guiziga , Peuls Toupouri\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nGuiziga , Peuls Toupouri","origin":"Oui\nSi oui, quel est le lieu de départ de leur migration ?\nDu Soudan\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui\nSi oui, lesquels ?\nLéré au Tchad\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nAuncu lien avec le Soudan mais avec le Tchad, les Moundang du Cameroun partagent une vie cuturelle commune ","social":"Les Toupouris sont non circoncis————————————————————————————————————————————————————————————Les Peuls sont les envahisseurs. Ils ont tué les ancêtres les problèmes entre agriculteurs et éleveurs————————————————————————————————————————————————————————————————Les Guiziga parlent avec beaucoup de salive. Ils soutirent les bons aux Moudnags, les disputes sur le foncier avec les Guizigas","marriage":"Endogamie en majorité\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nChez les hommes à cause de la mobilité récente\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nOui << toquer la porte à 7000 >>. Avant c’était la ho"},"displayName":"MOUNDANG"},{"id":"MPNG","slug":"MPOUPIENG","label":"Mpoupieng","emicName":"Mpoupieng","meaning":"Fortification des gens","region":"Littoral","family":"Bantou","fc":"bantu","numeralSystem":"vigésimal","origins":[],"neighborCodes":["BAKA"],"recordId":"MPNG_2020_001","qa":{"neighbors":"Chevauche\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nBaka , Maka , Djem","origin":"Non\nSi oui, quel est le lieu de départ de leur migration ?\nYokadouma\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nOui\nSi oui, lesquels ?\nEtikeba\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nNon Terre ancestrale\nY-a-t-il une symbolique ou une signification religieuse du lieu en rapport avec l’histoire du ","social":"Alliances","marriage":"Exogamie\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nChez les femmes\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nOui"},"displayName":"Mpoupieng"},{"id":"NGMB","slug":"NGOMBALE","label":"Ngombale","emicName":"Mbasso","meaning":"Fin gueniers","region":"Littoral","family":"Bantou","fc":"bantu","numeralSystem":"vigésimal","origins":[],"neighborCodes":[],"recordId":"NGMB_2020_001","qa":{"neighbors":"Groupe isolé ( c’est un cas unique au Cameroun )\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?","origin":"Oui la majorité est venue du Nord-Ouest << Bapa >> et a trouvé sur place une poignée de personne\nSi oui, quel est le lieu de départ de leur migration ?\nNord-Ouest\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nNon\nSi oui, lesquels ?\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nOui ils ont gardé les lie","social":"Tout est homogène et chacun non seulement la place qui lui est reservée , mais aussi celles des autres. Tout se dans l’harmonie se consentement mutuel","marriage":"Le peuple babadjou est exogamique en cas de mariage\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nL’exogamie est autant marquée chez les hommes que chez les femmes\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nLes habit"},"displayName":"chefferie 1er dédré de Babadjou"},{"id":"NVNV","slug":"NVON_NVON","label":"Nvon-Nvon","emicName":"Mvoń-Mvón","meaning":"Nom(s) donné(s) par les groupes voisins :","region":"Adamaoua","family":"Adamawa (Mbum)","fc":"adamawa","numeralSystem":"vigésimal","origins":[],"neighborCodes":[],"recordId":"NVNV_2020_001","qa":{"neighbors":"Le goupe n’est pas isolé. Ils chevauche avec d’autres communautés (Mbimo , Bayege , Ngbaya , Kako’o\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nMbimo","origin":"Le groupement a toujours vécu à Yokadouma . c’est leur terre originelle\nSi oui, quel est le lieu de départ de leur migration ?\n/\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\n/\nSi oui, lesquels ?\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ? C’est la terre de leurs ancêtres. Ce lieu leur appartient touj","social":"Les peuples vivent en groupe. Les problèmes ne manquent jamais mais om cherche toujours à y remédier par le dialogue","marriage":"On obseve les mariages endogamiques mais également exogamiques\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nOui nos fils et marient avec les ressortissants des autres peuples au Cameroun et d’ailleurs sans grandes difficultés\nLes habitudes de mar"},"displayName":"Mvoń-Mvón / pu Buanda"},{"id":"OROK","slug":"OROK","label":"Orokɔ","emicName":"ŋgóló","meaning":"assembling","region":"Ouest / Sud-Ouest","family":"Bantoid (Grassfields)","fc":"bantoid","numeralSystem":"quinaire / vigésimal","origins":[],"neighborCodes":[],"recordId":"OROK_2020_001","qa":{"neighbors":"Live with peole from other ethinic groups\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nPeople from westand North West regions whom they call báŋgárà in ŋgóló meaning << grasslanders >> and people from neiglebouring village","origin":"Yes\nSi oui, quel est le lieu de départ de leur migration ?\nÍsàkà known today as Bàkásí\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nYes\nSi oui, lesquels ?\nMàtùbà\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nYes. They have some cultural practices and during cultural associations festivals they in","social":"Live in perfect harmony. Neighbouring villages are brothers to them","marriage":"Exogamy\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nBoth men and women\nLes habitudes de mariage ont-elles considérablement évolué avec le temps ?\nYes"},"displayName":"ɔ̀rɔ́kɔ̀ whith comprises many clans"},{"id":"PODO","slug":"PODOKO","label":"Podoko","emicName":"Arba, Podoko,Parkwa","meaning":"ceux de la plaine","region":"Extrême-Nord","family":"Tchadique","fc":"chadic","numeralSystem":"vigésimal","origins":[],"neighborCodes":[],"recordId":"PODO_2020_001","qa":{"neighbors":"oui le groupe est intégré avec d’autres communautés\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nLes Podoko sont homogènes. Ils sont homogènes avec les Podoko d’Oudjila et Podoko du Sud, le\nMoukelehe","origin":"oui le groupe est venu d’ailleurs avant de s’etablir dans le lieu actuel\nSi oui, quel est le lieu de départ de leur migration ?\nle lieu de depart de leur migration est Gaza\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\noui ils ont eu des séjours intermediaires dans d’autres lieux\nSi oui, lesquels ?\nWaza, Logone\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ","social":"Les relations socio-politique vis-à-vis des groups adjacents se presentment bonnes et sans antagonisms ni de rancœur","marriage":"Le marriage est coutumier et se passe à l’exterieur de la communauté. Oui les gens ont——tendance à se marier à l’exterieur du groupe\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nL’exogamie est marquée chez les hommes tout comme chez les femmes dans"},"displayName":"Podoko"},{"id":"SHPM","slug":"SHU_PAMOM","label":"Shu Pamom","emicName":"pamɔm(pamom)","meaning":"\"quelqu'un qui est rusé\"”celui qui a ne vision longue,qui est sage\"","region":"Ouest","family":"Bantoid (Grassfields)","fc":"bantoid","numeralSystem":"inconnu","origins":[],"neighborCodes":[],"recordId":"SHPM_2020_001","qa":{"neighbors":"Oui\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nHausa, fulbés, bororo, basaa, ewondo, tupuri, banso","origin":"oui\nSi oui, quel est le lieu de départ de leur migration ?\nRoyaume de RIFOUM(aujourd’hui MBANKIM)\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\noui\nSi oui, lesquels ?\nNJIMOM (à 15km de Foumban)\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\noui Ce n’est pas sur la terre ancestrale car celui qui a fondé le r","social":"On favorise aussi les alliances intertribales. Depuis l’époque du Rois Njoya cela se faisait","marriage":"Dans chaue famille, il ya un cas de marriage exogamique\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nc’est vice versa, mais les femmes se marient exogamiquement plus que les hommes\nLes habitudes de mariage ont-elles considérablement évolué avec le "},"displayName":"Bamoun"},{"id":"YEMB","slug":"YEMBA","label":"Yemba","emicName":"Djo","meaning":",<ceux qui achètent><ceux qui ont de l’argent.>","region":"Ouest","family":"Bantoid (Grassfields)","fc":"bantoid","numeralSystem":"vigésimal","origins":[],"neighborCodes":[],"recordId":"YEMB_2020_001","qa":{"neighbors":"c’est un regroupement des peuples de plusieurs origines\nSi oui, quels sont le(s) groupe(s) avec lequel(s) le groupe est intégré, ou avec lequel(s) il chevauche ?\nIls viennent de ŋwa dans le haut-nkam, de baleng, des pays Bamoun","origin":"Oui du Noun, haut-nkam,baleng, et bien plus\nSi oui, quel est le lieu de départ de leur migration ?\nŋwə’, haut-kam, baleng, pays bamoun\nOnt-ils eu des séjours intermédiaires dans d’autres lieux ?\nNon\nSi oui, lesquels ?\nOnt-ils gardé des liens avec d’autres groupes dans leurs lieux de départ ou dans les lieux de leurs séjours intermédiaires ?\nOui Ils ont gardé les liens avec les lieux de départ et","social":"Ces relations sont aujourd’hui bonnes, mais il yavait eu des chaudes batailles","marriage":"On a les mariages endogamiques, mais avec aussi une forte prropension dee mariage exogamiques\nL’exogamie est-elle plus marquée chez les hommes (les hommes prennent souvent femme hors du groupe) que chez les femmes (les filles originaires du groupe ont tendance à se marier hors du groupe) ?\nOn a une plus grande tendance á l’endogamie\nLes habitudes de mariage ont-elles considérablement évolué avec "},"displayName":"Bandjoun"}],"edges":[{"source":"BKKO","target":"BOUM","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Égypte"},{"source":"BKKO","target":"GBYA","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Égypte"},{"source":"BANN","target":"FULA","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Cameroun"},{"source":"BANN","target":"GUIZ","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Cameroun"},{"source":"BANN","target":"MNDG","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Cameroun"},{"source":"BOUM","target":"GBYA","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.9,"label":"Soudan, Égypte"},{"source":"BOUM","target":"GUIZ","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Soudan"},{"source":"BOUM","target":"KTKK","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Soudan"},{"source":"BOUM","target":"MND1","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Yémen"},{"source":"BOUM","target":"MNDG","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Soudan"},{"source":"FULA","target":"GUIZ","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Cameroun"},{"source":"FULA","target":"MNDG","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Cameroun"},{"source":"GBYA","target":"GUIZ","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Soudan"},{"source":"GBYA","target":"KTKK","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Soudan"},{"source":"GBYA","target":"MNDG","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Soudan"},{"source":"GUIZ","target":"KTKK","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.8,"label":"Soudan"},{"source":"GUIZ","target":"MNDG","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.9,"label":"Cameroun, Soudan"},{"source":"KTKK","target":"MNDG","type":"ORIGINE_PARTAGÉE","plane":"hist","weight":0.9,"label":"Soudan, Tchad"},{"source":"BAFO","target":"LIMB","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"BAFO","target":"OROK","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"BAFO","target":"SHPM","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"BAFO","target":"YEMB","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"BAKA","target":"GBYA","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Ubangien"},{"source":"BKKO","target":"BANN","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantou"},{"source":"BKKO","target":"MPNG","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantou"},{"source":"BKKO","target":"NGMB","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantou"},{"source":"BANN","target":"MPNG","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantou"},{"source":"BANN","target":"NGMB","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantou"},{"source":"BOUM","target":"NVNV","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Adamawa (Mbum)"},{"source":"GUIZ","target":"KTKK","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"GUIZ","target":"MND1","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"GUIZ","target":"MND2","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"GUIZ","target":"PODO","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"KTKK","target":"MND1","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"KTKK","target":"MND2","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"KTKK","target":"PODO","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"LIMB","target":"OROK","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"LIMB","target":"SHPM","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"LIMB","target":"YEMB","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"MND1","target":"MND2","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"MND1","target":"PODO","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"MND2","target":"PODO","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Tchadique"},{"source":"MPNG","target":"NGMB","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantou"},{"source":"OROK","target":"SHPM","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"OROK","target":"YEMB","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"SHPM","target":"YEMB","type":"MÊME_FAMILLE","plane":"ling","weight":0.9,"label":"Bantoid (Grassfields)"},{"source":"BAFO","target":"OROK","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Ouest"},{"source":"BAFO","target":"SHPM","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Ouest"},{"source":"BAFO","target":"YEMB","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Ouest"},{"source":"BAKA","target":"GBYA","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Est"},{"source":"BKKO","target":"BANN","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Littoral"},{"source":"BKKO","target":"MPNG","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Littoral"},{"source":"BKKO","target":"NGMB","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Littoral"},{"source":"BANN","target":"MPNG","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Littoral"},{"source":"BANN","target":"NGMB","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Littoral"},{"source":"BOUM","target":"NVNV","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Adamaoua"},{"source":"FULA","target":"MNDG","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Nord"},{"source":"GUIZ","target":"KTKK","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"GUIZ","target":"MND1","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"GUIZ","target":"MND2","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"GUIZ","target":"PODO","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"KTKK","target":"MND1","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"KTKK","target":"MND2","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"KTKK","target":"PODO","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"MND1","target":"MND2","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"MND1","target":"PODO","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"MND2","target":"PODO","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Extrême-Nord"},{"source":"MPNG","target":"NGMB","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Littoral"},{"source":"OROK","target":"SHPM","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Ouest"},{"source":"OROK","target":"YEMB","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Ouest"},{"source":"SHPM","target":"YEMB","type":"MÊME_RÉGION","plane":"geo","weight":0.6,"label":"Ouest"},{"source":"BAKA","target":"MPNG","type":"ADJACENT_À","plane":"social","weight":0.65,"label":"Mention de voisinage"},{"source":"BOUM","target":"FULA","type":"ADJACENT_À","plane":"social","weight":0.65,"label":"Mention de voisinage"},{"source":"BOUM","target":"GBYA","type":"ADJACENT_À","plane":"social","weight":0.65,"label":"Mention de voisinage"},{"source":"MND1","target":"PODO","type":"ADJACENT_À","plane":"social","weight":0.65,"label":"Mention de voisinage"},{"source":"MND2","target":"PODO","type":"ADJACENT_À","plane":"social","weight":0.65,"label":"Mention de voisinage"},{"source":"FULA","target":"MNDG","type":"ADJACENT_À","plane":"social","weight":0.65,"label":"Mention de voisinage"},{"source":"GUIZ","target":"MNDG","type":"ADJACENT_À","plane":"social","weight":0.65,"label":"Mention de voisinage"},{"source":"BAFO","target":"BKKO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.122,"label":"Sim. lexicale sur 156 formules"},{"source":"BAFO","target":"GBYA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.132,"label":"Sim. lexicale sur 135 formules"},{"source":"BAFO","target":"GUIZ","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.126,"label":"Sim. lexicale sur 155 formules"},{"source":"BAFO","target":"KTKK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.126,"label":"Sim. lexicale sur 146 formules"},{"source":"BAFO","target":"LIMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.164,"label":"Sim. lexicale sur 144 formules"},{"source":"BAFO","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.148,"label":"Sim. lexicale sur 152 formules"},{"source":"BAFO","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.131,"label":"Sim. lexicale sur 145 formules"},{"source":"BAFO","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.306,"label":"Sim. lexicale sur 153 formules"},{"source":"BAFO","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.13,"label":"Sim. lexicale sur 56 formules"},{"source":"BAFO","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.228,"label":"Sim. lexicale sur 150 formules"},{"source":"BAKA","target":"BKKO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.182,"label":"Sim. lexicale sur 139 formules"},{"source":"BAKA","target":"BANN","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.145,"label":"Sim. lexicale sur 137 formules"},{"source":"BAKA","target":"BOUM","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.139,"label":"Sim. lexicale sur 131 formules"},{"source":"BAKA","target":"FULA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.173,"label":"Sim. lexicale sur 137 formules"},{"source":"BAKA","target":"GBYA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.167,"label":"Sim. lexicale sur 124 formules"},{"source":"BAKA","target":"GUIZ","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.155,"label":"Sim. lexicale sur 138 formules"},{"source":"BAKA","target":"KTKK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.149,"label":"Sim. lexicale sur 133 formules"},{"source":"BAKA","target":"LIMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.144,"label":"Sim. lexicale sur 131 formules"},{"source":"BAKA","target":"MND1","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.143,"label":"Sim. lexicale sur 139 formules"},{"source":"BAKA","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.166,"label":"Sim. lexicale sur 139 formules"},{"source":"BAKA","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.174,"label":"Sim. lexicale sur 138 formules"},{"source":"BAKA","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.201,"label":"Sim. lexicale sur 136 formules"},{"source":"BAKA","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.175,"label":"Sim. lexicale sur 136 formules"},{"source":"BAKA","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.149,"label":"Sim. lexicale sur 56 formules"},{"source":"BAKA","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.136,"label":"Sim. lexicale sur 139 formules"},{"source":"BAKA","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.132,"label":"Sim. lexicale sur 136 formules"},{"source":"BKKO","target":"BANN","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.175,"label":"Sim. lexicale sur 155 formules"},{"source":"BKKO","target":"BOUM","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.164,"label":"Sim. lexicale sur 144 formules"},{"source":"BKKO","target":"FULA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.16,"label":"Sim. lexicale sur 154 formules"},{"source":"BKKO","target":"GBYA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.153,"label":"Sim. lexicale sur 136 formules"},{"source":"BKKO","target":"GUIZ","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.145,"label":"Sim. lexicale sur 156 formules"},{"source":"BKKO","target":"KTKK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.135,"label":"Sim. lexicale sur 146 formules"},{"source":"BKKO","target":"LIMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.179,"label":"Sim. lexicale sur 145 formules"},{"source":"BKKO","target":"MND1","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.145,"label":"Sim. lexicale sur 157 formules"},{"source":"BKKO","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.154,"label":"Sim. lexicale sur 157 formules"},{"source":"BKKO","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.179,"label":"Sim. lexicale sur 152 formules"},{"source":"BKKO","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.21,"label":"Sim. lexicale sur 146 formules"},{"source":"BKKO","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.129,"label":"Sim. lexicale sur 154 formules"},{"source":"BKKO","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.176,"label":"Sim. lexicale sur 150 formules"},{"source":"BKKO","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.163,"label":"Sim. lexicale sur 56 formules"},{"source":"BKKO","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.134,"label":"Sim. lexicale sur 150 formules"},{"source":"BANN","target":"BOUM","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.143,"label":"Sim. lexicale sur 144 formules"},{"source":"BANN","target":"FULA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.133,"label":"Sim. lexicale sur 152 formules"},{"source":"BANN","target":"GBYA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.148,"label":"Sim. lexicale sur 135 formules"},{"source":"BANN","target":"GUIZ","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.143,"label":"Sim. lexicale sur 154 formules"},{"source":"BANN","target":"KTKK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.146,"label":"Sim. lexicale sur 144 formules"},{"source":"BANN","target":"LIMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.125,"label":"Sim. lexicale sur 143 formules"},{"source":"BANN","target":"MND1","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.127,"label":"Sim. lexicale sur 155 formules"},{"source":"BANN","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.142,"label":"Sim. lexicale sur 155 formules"},{"source":"BANN","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.149,"label":"Sim. lexicale sur 150 formules"},{"source":"BANN","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.146,"label":"Sim. lexicale sur 144 formules"},{"source":"BANN","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.146,"label":"Sim. lexicale sur 148 formules"},{"source":"BANN","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.131,"label":"Sim. lexicale sur 55 formules"},{"source":"BANN","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.132,"label":"Sim. lexicale sur 155 formules"},{"source":"BOUM","target":"FULA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.175,"label":"Sim. lexicale sur 143 formules"},{"source":"BOUM","target":"GBYA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.14,"label":"Sim. lexicale sur 127 formules"},{"source":"BOUM","target":"GUIZ","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.163,"label":"Sim. lexicale sur 143 formules"},{"source":"BOUM","target":"KTKK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.149,"label":"Sim. lexicale sur 136 formules"},{"source":"BOUM","target":"LIMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.176,"label":"Sim. lexicale sur 134 formules"},{"source":"BOUM","target":"MND1","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.164,"label":"Sim. lexicale sur 144 formules"},{"source":"BOUM","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.161,"label":"Sim. lexicale sur 144 formules"},{"source":"BOUM","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.192,"label":"Sim. lexicale sur 141 formules"},{"source":"BOUM","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.148,"label":"Sim. lexicale sur 136 formules"},{"source":"BOUM","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.129,"label":"Sim. lexicale sur 144 formules"},{"source":"BOUM","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.128,"label":"Sim. lexicale sur 139 formules"},{"source":"BOUM","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.189,"label":"Sim. lexicale sur 51 formules"},{"source":"BOUM","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.131,"label":"Sim. lexicale sur 144 formules"},{"source":"BOUM","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.121,"label":"Sim. lexicale sur 140 formules"},{"source":"FULA","target":"GBYA","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.173,"label":"Sim. lexicale sur 134 formules"},{"source":"FULA","target":"GUIZ","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.175,"label":"Sim. lexicale sur 153 formules"},{"source":"FULA","target":"KTKK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.17,"label":"Sim. lexicale sur 144 formules"},{"source":"FULA","target":"LIMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.163,"label":"Sim. lexicale sur 142 formules"},{"source":"FULA","target":"MND1","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.151,"label":"Sim. lexicale sur 154 formules"},{"source":"FULA","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.166,"label":"Sim. lexicale sur 154 formules"},{"source":"FULA","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.19,"label":"Sim. lexicale sur 150 formules"},{"source":"FULA","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.171,"label":"Sim. lexicale sur 144 formules"},{"source":"FULA","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.121,"label":"Sim. lexicale sur 153 formules"},{"source":"FULA","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.141,"label":"Sim. lexicale sur 147 formules"},{"source":"FULA","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.129,"label":"Sim. lexicale sur 55 formules"},{"source":"FULA","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.147,"label":"Sim. lexicale sur 154 formules"},{"source":"FULA","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.137,"label":"Sim. lexicale sur 147 formules"},{"source":"GBYA","target":"GUIZ","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.171,"label":"Sim. lexicale sur 135 formules"},{"source":"GBYA","target":"KTKK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.137,"label":"Sim. lexicale sur 126 formules"},{"source":"GBYA","target":"LIMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.142,"label":"Sim. lexicale sur 124 formules"},{"source":"GBYA","target":"MND1","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.14,"label":"Sim. lexicale sur 136 formules"},{"source":"GBYA","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.156,"label":"Sim. lexicale sur 136 formules"},{"source":"GBYA","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.193,"label":"Sim. lexicale sur 131 formules"},{"source":"GBYA","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.156,"label":"Sim. lexicale sur 130 formules"},{"source":"GBYA","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.128,"label":"Sim. lexicale sur 134 formules"},{"source":"GBYA","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.125,"label":"Sim. lexicale sur 131 formules"},{"source":"GBYA","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.128,"label":"Sim. lexicale sur 136 formules"},{"source":"GBYA","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.131,"label":"Sim. lexicale sur 130 formules"},{"source":"GUIZ","target":"KTKK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.203,"label":"Sim. lexicale sur 146 formules"},{"source":"GUIZ","target":"LIMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.125,"label":"Sim. lexicale sur 144 formules"},{"source":"GUIZ","target":"MND1","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.158,"label":"Sim. lexicale sur 156 formules"},{"source":"GUIZ","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.205,"label":"Sim. lexicale sur 156 formules"},{"source":"GUIZ","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.193,"label":"Sim. lexicale sur 151 formules"},{"source":"GUIZ","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.156,"label":"Sim. lexicale sur 145 formules"},{"source":"GUIZ","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.123,"label":"Sim. lexicale sur 153 formules"},{"source":"GUIZ","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.132,"label":"Sim. lexicale sur 149 formules"},{"source":"GUIZ","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.171,"label":"Sim. lexicale sur 156 formules"},{"source":"GUIZ","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.138,"label":"Sim. lexicale sur 149 formules"},{"source":"KTKK","target":"LIMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.124,"label":"Sim. lexicale sur 135 formules"},{"source":"KTKK","target":"MND1","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.171,"label":"Sim. lexicale sur 146 formules"},{"source":"KTKK","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.22,"label":"Sim. lexicale sur 146 formules"},{"source":"KTKK","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.183,"label":"Sim. lexicale sur 143 formules"},{"source":"KTKK","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.137,"label":"Sim. lexicale sur 139 formules"},{"source":"KTKK","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.127,"label":"Sim. lexicale sur 145 formules"},{"source":"KTKK","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.13,"label":"Sim. lexicale sur 141 formules"},{"source":"KTKK","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.132,"label":"Sim. lexicale sur 55 formules"},{"source":"KTKK","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.18,"label":"Sim. lexicale sur 146 formules"},{"source":"KTKK","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.123,"label":"Sim. lexicale sur 141 formules"},{"source":"LIMB","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.138,"label":"Sim. lexicale sur 145 formules"},{"source":"LIMB","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.151,"label":"Sim. lexicale sur 141 formules"},{"source":"LIMB","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.156,"label":"Sim. lexicale sur 134 formules"},{"source":"LIMB","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.161,"label":"Sim. lexicale sur 142 formules"},{"source":"LIMB","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.125,"label":"Sim. lexicale sur 139 formules"},{"source":"LIMB","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.16,"label":"Sim. lexicale sur 54 formules"},{"source":"LIMB","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.187,"label":"Sim. lexicale sur 142 formules"},{"source":"MND1","target":"MND2","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.174,"label":"Sim. lexicale sur 157 formules"},{"source":"MND1","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.157,"label":"Sim. lexicale sur 152 formules"},{"source":"MND1","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.145,"label":"Sim. lexicale sur 146 formules"},{"source":"MND1","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.133,"label":"Sim. lexicale sur 150 formules"},{"source":"MND1","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.134,"label":"Sim. lexicale sur 56 formules"},{"source":"MND1","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.148,"label":"Sim. lexicale sur 157 formules"},{"source":"MND2","target":"MNDG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.175,"label":"Sim. lexicale sur 152 formules"},{"source":"MND2","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.141,"label":"Sim. lexicale sur 146 formules"},{"source":"MND2","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.126,"label":"Sim. lexicale sur 150 formules"},{"source":"MND2","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.138,"label":"Sim. lexicale sur 56 formules"},{"source":"MND2","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.214,"label":"Sim. lexicale sur 157 formules"},{"source":"MNDG","target":"MPNG","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.196,"label":"Sim. lexicale sur 142 formules"},{"source":"MNDG","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.158,"label":"Sim. lexicale sur 150 formules"},{"source":"MNDG","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.148,"label":"Sim. lexicale sur 146 formules"},{"source":"MNDG","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.125,"label":"Sim. lexicale sur 56 formules"},{"source":"MNDG","target":"PODO","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.136,"label":"Sim. lexicale sur 152 formules"},{"source":"MNDG","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.136,"label":"Sim. lexicale sur 147 formules"},{"source":"MPNG","target":"NGMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.137,"label":"Sim. lexicale sur 145 formules"},{"source":"MPNG","target":"NVNV","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.353,"label":"Sim. lexicale sur 142 formules"},{"source":"MPNG","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.155,"label":"Sim. lexicale sur 55 formules"},{"source":"MPNG","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.132,"label":"Sim. lexicale sur 140 formules"},{"source":"NGMB","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.225,"label":"Sim. lexicale sur 147 formules"},{"source":"NVNV","target":"OROK","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.152,"label":"Sim. lexicale sur 55 formules"},{"source":"OROK","target":"YEMB","type":"SIMILAIRE_LEXICALEMENT","plane":"ling","weight":0.123,"label":"Sim. lexicale sur 55 formules"},{"source":"BAFO","target":"LIMB","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.249,"label":"Sim. numérale sur 12 formes"},{"source":"BAFO","target":"MPNG","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.273,"label":"Sim. numérale sur 12 formes"},{"source":"BAFO","target":"NGMB","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.717,"label":"Sim. numérale sur 12 formes"},{"source":"BAFO","target":"NVNV","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.265,"label":"Sim. numérale sur 12 formes"},{"source":"BAFO","target":"OROK","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.232,"label":"Sim. numérale sur 12 formes"},{"source":"BAFO","target":"YEMB","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.295,"label":"Sim. numérale sur 12 formes"},{"source":"BAKA","target":"BKKO","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.23,"label":"Sim. numérale sur 12 formes"},{"source":"BAKA","target":"FULA","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.33,"label":"Sim. numérale sur 12 formes"},{"source":"BAKA","target":"MND2","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.254,"label":"Sim. numérale sur 12 formes"},{"source":"BAKA","target":"OROK","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.253,"label":"Sim. numérale sur 12 formes"},{"source":"BKKO","target":"BANN","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.414,"label":"Sim. numérale sur 12 formes"},{"source":"BKKO","target":"LIMB","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.294,"label":"Sim. numérale sur 12 formes"},{"source":"BKKO","target":"MPNG","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.316,"label":"Sim. numérale sur 12 formes"},{"source":"BKKO","target":"PODO","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.248,"label":"Sim. numérale sur 12 formes"},{"source":"BANN","target":"MPNG","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.289,"label":"Sim. numérale sur 12 formes"},{"source":"BOUM","target":"FULA","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.252,"label":"Sim. numérale sur 12 formes"},{"source":"BOUM","target":"MND2","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.229,"label":"Sim. numérale sur 12 formes"},{"source":"FULA","target":"MNDG","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.308,"label":"Sim. numérale sur 12 formes"},{"source":"FULA","target":"MPNG","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.226,"label":"Sim. numérale sur 12 formes"},{"source":"GUIZ","target":"KTKK","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.291,"label":"Sim. numérale sur 12 formes"},{"source":"GUIZ","target":"MND2","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.225,"label":"Sim. numérale sur 12 formes"},{"source":"GUIZ","target":"PODO","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.331,"label":"Sim. numérale sur 12 formes"},{"source":"KTKK","target":"MND1","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.342,"label":"Sim. numérale sur 12 formes"},{"source":"KTKK","target":"MND2","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.239,"label":"Sim. numérale sur 12 formes"},{"source":"KTKK","target":"NVNV","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.242,"label":"Sim. numérale sur 12 formes"},{"source":"LIMB","target":"MPNG","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.229,"label":"Sim. numérale sur 12 formes"},{"source":"LIMB","target":"NGMB","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.294,"label":"Sim. numérale sur 12 formes"},{"source":"LIMB","target":"YEMB","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.304,"label":"Sim. numérale sur 12 formes"},{"source":"MND2","target":"NVNV","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.262,"label":"Sim. numérale sur 12 formes"},{"source":"MND2","target":"PODO","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.318,"label":"Sim. numérale sur 12 formes"},{"source":"MNDG","target":"NVNV","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.228,"label":"Sim. numérale sur 12 formes"},{"source":"MPNG","target":"NGMB","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.384,"label":"Sim. numérale sur 12 formes"},{"source":"MPNG","target":"NVNV","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.482,"label":"Sim. numérale sur 12 formes"},{"source":"NGMB","target":"YEMB","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.243,"label":"Sim. numérale sur 12 formes"},{"source":"NVNV","target":"OROK","type":"SIMILAIRE_NUMERALEMENT","plane":"hist","weight":0.239,"label":"Sim. numérale sur 12 formes"},{"source":"BKKO","target":"BOUM","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BKKO","target":"FULA","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BKKO","target":"GUIZ","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BKKO","target":"KTKK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BKKO","target":"MND2","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BKKO","target":"MNDG","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BKKO","target":"NVNV","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BKKO","target":"OROK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BKKO","target":"PODO","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BANN","target":"GBYA","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":0.966,"label":"Similarité catégories onomastiques"},{"source":"BOUM","target":"FULA","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BOUM","target":"GUIZ","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BOUM","target":"KTKK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BOUM","target":"MND2","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BOUM","target":"MNDG","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BOUM","target":"NVNV","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BOUM","target":"OROK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"BOUM","target":"PODO","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"FULA","target":"GUIZ","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"FULA","target":"KTKK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"FULA","target":"MND2","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"FULA","target":"MNDG","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"FULA","target":"NVNV","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"FULA","target":"OROK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"FULA","target":"PODO","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"GUIZ","target":"KTKK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"GUIZ","target":"MND2","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"GUIZ","target":"MNDG","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"GUIZ","target":"NVNV","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"GUIZ","target":"OROK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"GUIZ","target":"PODO","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"KTKK","target":"MND2","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"KTKK","target":"MNDG","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"KTKK","target":"NVNV","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"KTKK","target":"OROK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"KTKK","target":"PODO","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"MND2","target":"MNDG","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"MND2","target":"NVNV","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"MND2","target":"OROK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"MND2","target":"PODO","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"MNDG","target":"NVNV","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"MNDG","target":"OROK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"MNDG","target":"PODO","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"NVNV","target":"OROK","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"NVNV","target":"PODO","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"},{"source":"OROK","target":"PODO","type":"SIMILAIRE_COGNITIVEMENT","plane":"cogn","weight":1.0,"label":"Similarité catégories onomastiques"}]};</script>
+<!-- ══ SCRIPT ═══════════════════════════════════════════════════════════════ -->
+<script>
+// ── Colour helpers ──────────────────────────────────────────────────────────
+const PLANE_COLOR = {
+  hist:   '#7c3aed',
+  ling:   '#1d4ed8',
+  geo:    '#059669',
+  social: '#d97706',
+  cogn:   '#be185d',
+};
+const PLANE_LABEL = {
+  hist:'Historique', ling:'Linguistique',
+  geo:'Géographique', social:'Social', cogn:'Cognitif',
+};
+const FC_COLOR = {
+  bantoid:    '#818cf8',
+  bantu:      '#22d3ee',
+  ubangian:   '#f97316',
+  adamawa:    '#84cc16',
+  chadic:     '#facc15',
+  nilosaharan:'#e879f9',
+  atlantic:   '#fb7185',
+  other:      '#94a3b8',
+};
+const FC_LABEL = {
+  bantoid:    'Bantoid (Grassfields)',
+  bantu:      'Bantou',
+  ubangian:   'Ubangien',
+  adamawa:    'Adamawa (Mbum)',
+  chadic:     'Tchadique',
+  nilosaharan:'Nilo-Saharien',
+  atlantic:   'Atlantic-Congo',
+  other:      'Autre',
+};
+
+// ── State ───────────────────────────────────────────────────────────────────
+let cy, graphData;
+let activePlanes = new Set(['hist','ling','geo','social','cogn']);
+let minWeight = 0.10;
+let activeLayout = 'cose';
+
+// ── Inline data (no server required) ────────────────────────────────────────
+(function() {
+  const data = RHIZOME_DATA;
+  graphData = data;
+  init(data);
+})();
+
+function init(data) {
+  // Build community list sidebar
+  buildSidebar(data.nodes);
+  buildLegend(data.nodes);
+
+  // Build Cytoscape elements
+  const elements = buildElements(data);
+
+  cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements,
+    style: cyStyles(),
+    layout: layoutConfig(),
+    wheelSensitivity: 0.3,
+    minZoom: 0.1,
+    maxZoom: 5,
+  });
+
+  cy.ready(() => {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('stats-bar').classList.remove('hidden');
+    document.getElementById('btn-fit').classList.remove('hidden');
+    updateStats();
+  });
+
+  cy.on('tap', 'node', e => showDetail(e.target));
+  cy.on('tap', e => { if (e.target === cy) closeDetail(); });
+
+  setupControls();
+}
+
+// ── Cytoscape elements ───────────────────────────────────────────────────────
+function buildElements(data) {
+  const nodes = data.nodes.map(n => ({
+    data: {
+      id:    n.id,
+      label: n.label,
+      fc:    n.fc || 'other',
+      ...n,
+    }
+  }));
+
+  const edges = data.edges
+    .filter(e => activePlanes.has(e.plane) && e.weight >= minWeight)
+    .map(e => ({
+      data: {
+        id:     `${e.source}-${e.type}-${e.target}`,
+        source: e.source,
+        target: e.target,
+        plane:  e.plane,
+        weight: e.weight,
+        type:   e.type,
+        label:  e.label,
+      }
+    }));
+
+  return [...nodes, ...edges];
+}
+
+// ── Cytoscape styles ──────────────────────────────────────────────────────────
+function cyStyles() {
+  return [
+    {
+      selector: 'node',
+      style: {
+        'background-color':   ele => FC_COLOR[ele.data('fc')] || '#94a3b8',
+        'label':              'data(label)',
+        'color':              '#1e293b',
+        'font-size':          '11px',
+        'font-weight':        '700',
+        'text-valign':        'bottom',
+        'text-halign':        'center',
+        'text-margin-y':      4,
+        'text-outline-color': '#ffffff',
+        'text-outline-width': 2,
+        'width':              34,
+        'height':             34,
+        'border-color':       '#ffffff',
+        'border-width':       2,
+        'shadow-blur':        8,
+        'shadow-color':       '#0000001a',
+        'shadow-offset-x':    0,
+        'shadow-offset-y':    2,
+        'transition-property':'background-color, border-color, width, height',
+        'transition-duration':'0.15s',
+      }
+    },
+    {
+      selector: 'node:selected',
+      style: {
+        'border-color': '#6366f1',
+        'border-width': 3,
+        'width': 42, 'height': 42,
+      }
+    },
+    {
+      selector: 'node.highlighted',
+      style: { 'opacity': 1 }
+    },
+    {
+      selector: 'node.dimmed',
+      style: { 'opacity': 0.2 }
+    },
+    {
+      selector: 'edge',
+      style: {
+        'width':            ele => Math.max(1, ele.data('weight') * 6),
+        'line-color':       ele => PLANE_COLOR[ele.data('plane')] || '#94a3b8',
+        'opacity':          0.55,
+        'curve-style':      'bezier',
+        'target-arrow-shape': 'none',
+        'transition-property':'opacity, width',
+        'transition-duration':'0.15s',
+      }
+    },
+    {
+      selector: 'edge.highlighted',
+      style: { 'opacity': 0.9 }
+    },
+    {
+      selector: 'edge.dimmed',
+      style: { 'opacity': 0.05 }
+    },
+  ];
+}
+
+// ── Layout configs ────────────────────────────────────────────────────────────
+function layoutConfig(name) {
+  name = name || activeLayout;
+  const base = { animate: true, animationDuration: 600 };
+  if (name === 'cose') return {
+    ...base, name: 'cose',
+    idealEdgeLength: 120, nodeOverlap: 20,
+    nodeRepulsion: () => 8000,
+    edgeElasticity: () => 32,
+    gravity: 0.2, numIter: 1000, coolingFactor: 0.95,
+  };
+  if (name === 'circle') return { ...base, name: 'circle', radius: 280, padding: 40 };
+  return { ...base, name: 'grid', padding: 30 };
+}
+
+// ── Sidebar community list ────────────────────────────────────────────────────
+function buildSidebar(nodes) {
+  const el = document.getElementById('community-list');
+  document.getElementById('node-count').textContent = `(${nodes.length})`;
+  nodes.sort((a,b) => a.label.localeCompare(b.label)).forEach(n => {
+    const dot = document.createElement('div');
+    dot.className = 'flex items-center gap-2 px-3 py-1.5 hover:bg-slate-50 cursor-pointer text-sm';
+    dot.dataset.id = n.id;
+    dot.innerHTML = `
+      <span class="w-3 h-3 rounded-full flex-shrink-0" style="background:${FC_COLOR[n.fc]||'#94a3b8'}"></span>
+      <span class="truncate">${n.label}</span>
+      <span class="ml-auto text-xs text-slate-400 flex-shrink-0">${n.region.split(' / ')[0]}</span>
+    `;
+    dot.addEventListener('click', () => {
+      if (!cy) return;
+      const node = cy.getElementById(n.id);
+      if (node.length) {
+        cy.animate({ fit: { eles: node.closedNeighborhood(), padding: 80 }, duration: 500 });
+        showDetail(node);
+      }
+    });
+    el.appendChild(dot);
+  });
+}
+
+// ── Legend ───────────────────────────────────────────────────────────────────
+function buildLegend(nodes) {
+  const fcs = [...new Set(nodes.map(n => n.fc))];
+  const el = document.getElementById('legend');
+  fcs.forEach(fc => {
+    const row = document.createElement('div');
+    row.className = 'flex items-center gap-2 text-xs text-slate-600';
+    row.innerHTML = `
+      <span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:${FC_COLOR[fc]}"></span>
+      <span>${FC_LABEL[fc] || fc}</span>
+    `;
+    el.appendChild(row);
+  });
+}
+
+// ── Detail panel ──────────────────────────────────────────────────────────────
+function showDetail(node) {
+  const d = node.data();
+  document.getElementById('dp-title').textContent = d.label;
+  document.getElementById('dp-emic').textContent = d.emicName ? `« ${d.emicName} »` : '';
+
+  const body = document.getElementById('dp-body');
+  body.innerHTML = '';
+
+  // Meaning
+  if (d.meaning) {
+    body.innerHTML += section('Signification du nom', `<em>${d.meaning}</em>`);
+  }
+
+  // Essentials
+  body.innerHTML += section('Profil', `
+    <div class="space-y-1">
+      <div><span class="text-slate-400">Région :</span> <strong>${d.region||'—'}</strong></div>
+      <div><span class="text-slate-400">Famille :</span> <strong>${d.family||'—'}</strong></div>
+      <div><span class="text-slate-400">Système numéral :</span> <strong>${d.numeralSystem||'—'}</strong></div>
+      ${d.origins && d.origins.length ? `<div><span class="text-slate-400">Origine(s) :</span> <strong>${d.origins.join(', ')}</strong></div>` : ''}
+    </div>
+  `);
+
+  // Connected communities
+  const connEdges = node.connectedEdges();
+  const connNodes = connEdges.connectedNodes().not(node);
+  if (connNodes.length) {
+    const byPlane = {};
+    connEdges.forEach(e => {
+      const p = e.data('plane');
+      const other = e.source().id() === d.id ? e.target() : e.source();
+      if (!byPlane[p]) byPlane[p] = [];
+      byPlane[p].push({ label: other.data('label'), w: e.data('weight') });
+    });
+    let html = '';
+    Object.keys(byPlane).sort().forEach(p => {
+      const items = byPlane[p].sort((a,b) => b.w - a.w);
+      const tags = items.map(x =>
+        `<span class="tag" style="background:${PLANE_COLOR[p]}22;color:${PLANE_COLOR[p]}">${x.label}</span>`
+      ).join('');
+      html += `<div class="mb-2"><div class="text-xs font-bold text-slate-400 mb-1">${PLANE_LABEL[p]}</div>${tags}</div>`;
+    });
+    body.innerHTML += section(`Connexions (${connNodes.length})`, html);
+  }
+
+  // QA excerpts
+  if (d.qa) {
+    const items = [
+      ['Voisins déclarés', d.qa.neighbors],
+      ['Origine / migration', d.qa.origin],
+      ['Relations sociales', d.qa.social],
+    ].filter(([,v]) => v && v.trim());
+    if (items.length) {
+      const html = items.map(([title, text]) =>
+        `<div class="mb-2"><div class="text-xs font-bold text-slate-400">${title}</div>
+         <div class="text-xs text-slate-600 mt-0.5 leading-relaxed">${text.slice(0,300)}${text.length>300?'…':''}</div></div>`
+      ).join('');
+      body.innerHTML += section('Données du questionnaire', html);
+    }
+  }
+
+  // Highlight neighbourhood
+  cy.elements().addClass('dimmed');
+  node.removeClass('dimmed').addClass('highlighted');
+  node.closedNeighborhood().removeClass('dimmed').addClass('highlighted');
+
+  document.getElementById('detail-panel').classList.add('open');
+}
+
+function section(title, content) {
+  return `<div>
+    <div class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1.5">${title}</div>
+    <div class="text-sm leading-relaxed">${content}</div>
+  </div>`;
+}
+
+function closeDetail() {
+  document.getElementById('detail-panel').classList.remove('open');
+  if (cy) {
+    cy.elements().removeClass('dimmed highlighted');
+  }
+}
+
+document.getElementById('dp-close').addEventListener('click', closeDetail);
+
+// ── Controls ──────────────────────────────────────────────────────────────────
+function setupControls() {
+
+  // Plane filter buttons
+  document.querySelectorAll('.plane-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const plane = btn.dataset.plane;
+      if (activePlanes.has(plane)) {
+        activePlanes.delete(plane);
+        btn.classList.remove('active');
+      } else {
+        activePlanes.add(plane);
+        btn.classList.add('active');
+      }
+      rebuildEdges();
+    });
+  });
+
+  // Weight slider
+  const slider = document.getElementById('weight-slider');
+  const weightVal = document.getElementById('weight-val');
+  slider.addEventListener('input', () => {
+    minWeight = parseInt(slider.value) / 100;
+    weightVal.textContent = minWeight.toFixed(2);
+    rebuildEdges();
+  });
+
+  // Layout buttons
+  document.querySelectorAll('.layout-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.layout-btn').forEach(b => {
+        b.className = b.className.replace('bg-indigo-100 text-indigo-700', 'bg-slate-100 text-slate-600');
+      });
+      btn.className = btn.className.replace('bg-slate-100 text-slate-600', 'bg-indigo-100 text-indigo-700');
+      activeLayout = btn.dataset.layout;
+      cy.layout(layoutConfig()).run();
+    });
+  });
+
+  // Fit button
+  document.getElementById('btn-fit').addEventListener('click', () => {
+    cy.fit(cy.elements(':visible'), 40);
+  });
+
+  // Search
+  const search = document.getElementById('search');
+  search.addEventListener('input', () => {
+    const q = search.value.toLowerCase().trim();
+    document.querySelectorAll('#community-list > div').forEach(el => {
+      const matches = !q || el.textContent.toLowerCase().includes(q);
+      el.style.display = matches ? '' : 'none';
+    });
+    if (q.length >= 2 && cy) {
+      cy.nodes().forEach(n => {
+        if (n.data('label').toLowerCase().includes(q)) {
+          n.removeClass('dimmed').addClass('highlighted');
+        } else {
+          n.removeClass('highlighted').addClass('dimmed');
+        }
+      });
+    } else if (!q && cy) {
+      cy.elements().removeClass('dimmed highlighted');
+    }
+  });
+}
+
+// ── Rebuild edge visibility ───────────────────────────────────────────────────
+function rebuildEdges() {
+  if (!cy || !graphData) return;
+  // Remove all edges and re-add filtered set
+  cy.edges().remove();
+  const filtered = graphData.edges
+    .filter(e => activePlanes.has(e.plane) && e.weight >= minWeight)
+    .map(e => ({
+      data: {
+        id:     `${e.source}-${e.type}-${e.target}`,
+        source: e.source,
+        target: e.target,
+        plane:  e.plane,
+        weight: e.weight,
+        type:   e.type,
+        label:  e.label,
+      }
+    }));
+  cy.add(filtered);
+  cy.style(cyStyles()); // re-apply styles to new elements
+  updateStats();
+}
+
+function updateStats() {
+  if (!cy) return;
+  document.getElementById('stat-nodes').textContent = cy.nodes().length;
+  document.getElementById('stat-edges').textContent = cy.edges().length;
+}
+</script>
+</body>
+</html>
