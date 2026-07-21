@@ -203,6 +203,7 @@ const STATIC_ROUTES = {
   '/vocabulaire': renderVocabulaire,
   '/exercices':   renderExercices,
   '/a-propos':    renderAPropos,
+  '/reseau':      renderReseau,
 };
 
 const PARAM_ROUTES = [
@@ -237,6 +238,12 @@ function setActiveNav(path) {
 
 function render() {
   stopCurrentAudio();
+  // Restore default #app layout on every navigation (reset from /reseau full-bleed mode)
+  const appEl = $('#app');
+  if (appEl) {
+    appEl.className = 'max-w-6xl mx-auto px-4 py-8 min-h-[60vh]';
+    appEl.style.cssText = '';
+  }
   const { path, run } = resolveRoute();
   setActiveNav(path);
   run();
@@ -396,6 +403,22 @@ function renderVocabulaire() {
 
 function renderAPropos() {
   mountTemplate('tpl-apropos');
+}
+
+function renderReseau() {
+  const app = $('#app');
+  // Full-bleed override: remove container constraints for the graph view
+  app.className = '';
+  app.style.cssText = 'width:100%;height:calc(100vh - 65px);padding:0;margin:0;max-width:none;overflow:hidden;';
+  app.innerHTML = `
+    <iframe
+      src="reseau.html"
+      title="CamRhizome — Réseau intercommunautaire du Cameroun"
+      style="width:100%;height:100%;border:none;display:block;"
+      loading="lazy"
+      allow="fullscreen"
+    ></iframe>
+  `;
 }
 
 /* ---------- Leçons ---------- */
