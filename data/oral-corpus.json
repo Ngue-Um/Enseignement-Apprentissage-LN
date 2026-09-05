@@ -1,0 +1,745 @@
+[
+  {
+    "slug": "bankon",
+    "name": "Bankon",
+    "family": "—",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "Bankon-bon.wav",
+        "sizeMb": 188.5,
+        "type": "Enregistrement oral — LCC 1"
+      },
+      {
+        "file": "Bankon.wav",
+        "sizeMb": 176.7,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "basaa",
+    "name": "Bàsàa",
+    "family": "Bantoue A.43",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 3,
+    "recordings": [
+      {
+        "file": "Basaa-Manguele.wav",
+        "sizeMb": 167.2,
+        "type": "Enregistrement oral — LCC 1"
+      },
+      {
+        "file": "Basaa1.wav",
+        "sizeMb": 247.2,
+        "type": "Enregistrement oral — LCC 1"
+      },
+      {
+        "file": "Basaa_Ngo-Nlend.wav",
+        "sizeMb": 132.5,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "bulu",
+    "name": "Bulu",
+    "family": "Bantoue A.75",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "Bulu-Ebolowa.wav",
+        "sizeMb": 112.7,
+        "type": "Enregistrement oral — LCC 1"
+      },
+      {
+        "file": "Bulu.wav",
+        "sizeMb": 150.4,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "bulu-sangmelima",
+    "name": "Bulu (Sangmélima)",
+    "family": "—",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Bulu-Sangmelima.wav",
+        "sizeMb": 123.0,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "eton",
+    "name": "Eton",
+    "family": "—",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "Eton-bis.wav",
+        "sizeMb": 90.6,
+        "type": "Enregistrement oral — LCC 1"
+      },
+      {
+        "file": "Eton.wav",
+        "sizeMb": 124.2,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "ewondo",
+    "name": "Èwòndó",
+    "family": "Bantoue A.72",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "Ewondo-Soa2.wav",
+        "sizeMb": 73.0,
+        "type": "Enregistrement oral — LCC 1"
+      },
+      {
+        "file": "Ewono-Soa.wav",
+        "sizeMb": 119.5,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "ghomala",
+    "name": "Ghomala'",
+    "family": "Bantoid — Grassfields",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Ghomala.wav",
+        "sizeMb": 111.9,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "limbum",
+    "name": "Limbum",
+    "family": "—",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "INTERCULTURALITY.wav",
+        "sizeMb": 149.5,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "mankon",
+    "name": "Mankon",
+    "family": "—",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "Mankon.wav",
+        "sizeMb": 178.8,
+        "type": "Enregistrement oral — LCC 1"
+      },
+      {
+        "file": "Mankon_Bon.wav",
+        "sizeMb": 177.8,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "mengambo",
+    "name": "Mengambo",
+    "family": "—",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "INTERCULTURALITE.wav",
+        "sizeMb": 206.6,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "mvele",
+    "name": "Mvélé",
+    "family": "Bantoue A.83",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Mvele.wav",
+        "sizeMb": 197.3,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "ngemba-bamenjou",
+    "name": "Ngemba (Bamenjou)",
+    "family": "Bantoid — Grassfields",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Ngemba-Bamenjou.wav",
+        "sizeMb": 107.5,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "ngiembon",
+    "name": "Ngiemboon",
+    "family": "Bantoid — Grassfields",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Ngiembon.wav",
+        "sizeMb": 169.2,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "shupamem",
+    "name": "Shupamem",
+    "family": "—",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Shupamem.wav",
+        "sizeMb": 139.4,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "tuki-totsenga",
+    "name": "Tuki-Totsenga",
+    "family": "—",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Totsenga.wav",
+        "sizeMb": 155.4,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "tupuri",
+    "name": "Tupuri",
+    "family": "Tchadique",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Tupuri.wav",
+        "sizeMb": 140.6,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "yambetta",
+    "name": "Yambetta",
+    "family": "—",
+    "session": "LCC1",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC1 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Yambetta.wav",
+        "sizeMb": 188.2,
+        "type": "Enregistrement oral — LCC 1"
+      }
+    ]
+  },
+  {
+    "slug": "bakaka",
+    "name": "Bakaka",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "Bakaka-bon.wav",
+        "sizeMb": 112.1,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "Bakaka.wav",
+        "sizeMb": 114.4,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "banoho",
+    "name": "Banɔɔ",
+    "family": "Bantoue côtière",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 3,
+    "recordings": [
+      {
+        "file": "BANOHO.wav",
+        "sizeMb": 16.5,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "BANOHO2.wav",
+        "sizeMb": 10.2,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "LCC2-2015-Banoho.wav",
+        "sizeMb": 40.5,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "basaa",
+    "name": "Bàsàa",
+    "family": "Bantoue A.43",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "BASAA.wav",
+        "sizeMb": 14.0,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "LCC2-2015-Basaa-Eseka.wav",
+        "sizeMb": 55.8,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "ewondo",
+    "name": "Èwòndó",
+    "family": "Bantoue A.72",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "EWOLO_MININGA.wav",
+        "sizeMb": 23.7,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "ewondo-biloa",
+    "name": "Èwòndó (Biloa)",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Ewondo-Biloa.wav",
+        "sizeMb": 23.6,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "ewondo-enobe",
+    "name": "Èwòndó (Enobeñ)",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Ewondo-Enobe.wav",
+        "sizeMb": 14.4,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "ewondo-fong",
+    "name": "Èwòndó (Fong)",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "Ewondo-Fong.wav",
+        "sizeMb": 20.6,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "LCC2-2015-Fong-Messok.wav",
+        "sizeMb": 82.1,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "ewondo-mimboe",
+    "name": "Èwòndó (Mimboé)",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "EWONDO-MIMBOE.wav",
+        "sizeMb": 15.7,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "fong",
+    "name": "Fòŋ",
+    "family": "Bantoue A.75",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "FONG.wav",
+        "sizeMb": 16.2,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "fulfulde",
+    "name": "Fulfulde d'Adamaoua",
+    "family": "Atlantique-Congo",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "Binngel.wav",
+        "sizeMb": 241.4,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "LCC2-2015-Fulfulde-Garoua.wav",
+        "sizeMb": 120.7,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "ghomala",
+    "name": "Ghomala'",
+    "family": "Bantoid — Grassfields",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "TOJOM.wav",
+        "sizeMb": 82.7,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "language-akoose",
+    "name": "Akoose",
+    "family": "Bantoue A.15",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 4,
+    "recordings": [
+      {
+        "file": "AKOOSE.wav",
+        "sizeMb": 11.2,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "AWONG.wav",
+        "sizeMb": 4.2,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "EWONGE.wav",
+        "sizeMb": 3.5,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "NYAA.wav",
+        "sizeMb": 3.1,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "mbekum",
+    "name": "Mbekum",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 6,
+    "recordings": [
+      {
+        "file": "LCC2-2015-Mbekum-Akum1.wav",
+        "sizeMb": 39.9,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "LCC2-2015-Mbekum-Akum2.wav",
+        "sizeMb": 24.2,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "LCC2-2015-Mbekum-Akum3.wav",
+        "sizeMb": 13.9,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "MBEKUM.wav",
+        "sizeMb": 10.0,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "MUNE.wav",
+        "sizeMb": 6.1,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "NTEGH.wav",
+        "sizeMb": 3.5,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "medumba",
+    "name": "Medumba",
+    "family": "Bantoid — Grassfields",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "LCC2-2015-Medumba-Bangulap.wav",
+        "sizeMb": 45.6,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "ZENU.wav",
+        "sizeMb": 91.2,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "mekaa",
+    "name": "Mekaa",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "IBI.wav",
+        "sizeMb": 100.5,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "LCC2-2015-Mekaa-AbongMbang.wav",
+        "sizeMb": 50.3,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "mengambo",
+    "name": "Mengambo",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "MENGAMBO-Bon.wav",
+        "sizeMb": 93.0,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "MENGAMBO.wav",
+        "sizeMb": 74.6,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "mvae",
+    "name": "Mvaé",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "MVAE.wav",
+        "sizeMb": 18.3,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "nda-nda",
+    "name": "Nda-Nda",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 2,
+    "recordings": [
+      {
+        "file": "LCC2-2015-Ndanda-Batufam-ancien1.wav",
+        "sizeMb": 14.3,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "LCC2-2015-Ndanda-Batufam.wav",
+        "sizeMb": 57.0,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "rikpa",
+    "name": "Rikpa",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "Rikpa.wav",
+        "sizeMb": 50.8,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "shupamem",
+    "name": "Shupamem",
+    "family": "—",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 1,
+    "recordings": [
+      {
+        "file": "NGHUE.wav",
+        "sizeMb": 77.7,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  },
+  {
+    "slug": "tupuri",
+    "name": "Tupuri",
+    "family": "Tchadique",
+    "session": "LCC2",
+    "year": "2014–2015",
+    "context": "Corpus oral collecté dans le cadre du cours LCC2 (Langues et Cultures Camerounaises), ENS Yaoundé, 2014–2015.",
+    "recordingCount": 3,
+    "recordings": [
+      {
+        "file": "Mingir.wav",
+        "sizeMb": 6.3,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "Poiny.wav",
+        "sizeMb": 5.1,
+        "type": "Enregistrement oral — LCC 2"
+      },
+      {
+        "file": "Tupuri.wav",
+        "sizeMb": 11.6,
+        "type": "Enregistrement oral — LCC 2"
+      }
+    ]
+  }
+]
