@@ -14,7 +14,7 @@
     "iso": "ewo",
     "family": "Bantoue A.72",
     "region": "Centre",
-    "audio": false,
+    "audio": true,
     "emacCount": 9
   },
   {
