@@ -62,13 +62,15 @@
           <div class="text-xs text-ink-500">Langues &amp; Cultures Camerounaises</div>
         </div>
       </a>
-      <nav id="main-nav" class="hidden sm:flex items-center gap-1 text-sm">
+      <nav id="main-nav" class="hidden sm:flex items-center gap-1 text-sm flex-wrap">
         <a href="#/" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Accueil</a>
         <a href="#/catalogue" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Langues</a>
         <a href="#/lecons" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Leçons</a>
         <a href="#/vocabulaire" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Vocabulaire</a>
         <a href="#/exercices" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Exercices</a>
-        <a href="#/reseau" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Réseau</a>
+        <a href="#/ressources" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Ressources</a>
+        <a href="#/corpus-oral" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Corpus oral</a>
+        <a href="#/contribuer" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100 text-brand-700 font-medium">Contribuer</a>
         <a href="#/a-propos" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">À propos</a>
         <select id="nav-lang-selector" class="lang-selector ml-2 border border-ink-200 rounded-md px-2 py-1 bg-white text-sm text-ink-700 cursor-pointer" title="Changer de langue" onchange="switchLanguage(this.value)">
           <!-- rempli dynamiquement par JS -->
@@ -85,7 +87,9 @@
         <a href="#/lecons" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Leçons</a>
         <a href="#/vocabulaire" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Vocabulaire</a>
         <a href="#/exercices" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Exercices</a>
-        <a href="#/reseau" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Réseau</a>
+        <a href="#/ressources" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Ressources</a>
+        <a href="#/corpus-oral" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Corpus oral</a>
+        <a href="#/contribuer" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100 text-brand-700 font-medium">Contribuer</a>
         <a href="#/a-propos" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">À propos</a>
         <div class="px-3 py-2 border-t border-ink-100 mt-1">
           <label class="text-xs text-ink-400 uppercase tracking-wide block mb-1">Langue active</label>
@@ -104,14 +108,28 @@
 
   <!-- Footer -->
   <footer class="border-t border-ink-100 bg-white mt-12">
-    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-ink-500 flex flex-col sm:flex-row justify-between gap-3">
-      <div>
-        © 2026 — <strong>Likalo</strong> · LACC2342 · ENS Yaoundé · Prof. <span class="text-ink-700">Emmanuel Ngue Um</span>
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-ink-500">
+      <div class="flex flex-col sm:flex-row justify-between gap-4 mb-4">
+        <div>
+          © 2026 — <strong class="text-ink-700">Likalo</strong> · LACC2342 · ENS Yaoundé<br/>
+          Concepteur : <span class="text-ink-700 font-medium">Prof. Emmanuel Ngue Um</span> ·
+          <a href="mailto:ngueum@gmail.com" class="hover:text-brand-700 underline">ngueum@gmail.com</a> ·
+          <a href="https://wa.me/237677066803" target="_blank" rel="noopener" class="hover:text-brand-700 underline">+237 677 066 803</a>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="#/ressources" class="hover:text-brand-700">Ressources</a>
+          <span class="text-ink-300">·</span>
+          <a href="#/corpus-oral" class="hover:text-brand-700">Corpus oral</a>
+          <span class="text-ink-300">·</span>
+          <a href="#/contribuer" class="hover:text-brand-700">Contribuer</a>
+          <span class="text-ink-300">·</span>
+          <a href="https://mozilladatacollective.com/organization/cmfv3ichk000amd07piai0zoz" target="_blank" rel="noopener" class="hover:text-brand-700 underline">ALCAM / mdc</a>
+          <span class="text-ink-300">·</span>
+          <a href="https://github.com/Ngue-Um/Enseignement-Apprentissage-LN" target="_blank" rel="noopener" class="hover:text-brand-700 underline">GitHub</a>
+        </div>
       </div>
-      <div class="flex items-center gap-3">
-        <a href="https://mozilladatacollective.com/organization/cmfv3ichk000amd07piai0zoz" target="_blank" rel="noopener" class="hover:text-brand-700 underline">Données ALCAM sur mdc</a>
-        <span class="text-ink-300">·</span>
-        <a href="https://github.com/Ngue-Um/syllabi" target="_blank" rel="noopener" class="hover:text-brand-700 underline">Syllabi</a>
+      <div class="text-xs text-ink-400 border-t border-ink-100 pt-3">
+        Données ALCAM : Institut des Humanités numériques africaines · Corpus EMAC : CERDOTOLA · Fiches : ANELCAC · Code : licence MIT
       </div>
     </div>
   </footer>
@@ -130,23 +148,36 @@
             Données ALCAM · corpus musical EMAC/CERDOTOLA · programmes officiels MINESEC
             <em>Langues Nationales</em> et <em>Cultures Nationales</em> (6<sup>e</sup>–Terminale).
           </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#/exercices" class="inline-flex items-center gap-2 px-5 py-3 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-medium shadow-sm">
-              Commencer les exercices
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#/vocabulaire" class="inline-flex items-center px-5 py-3 bg-white border border-ink-200 hover:border-ink-300 text-ink-800 rounded-lg font-medium">
-              Explorer le vocabulaire
-            </a>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <div class="flex-1 rounded-xl border border-brand-200 bg-brand-50 p-4">
+              <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide mb-2">👩‍🏫 Enseignants</div>
+              <p class="text-sm text-ink-700 mb-3">Fiches prêtes à l'emploi, plans de cours MINESEC, ressources pédagogiques.</p>
+              <a href="#/lecons" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-sm font-medium shadow-sm">
+                Voir les leçons
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="flex-1 rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+              <div class="text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-2">🎓 Élèves</div>
+              <p class="text-sm text-ink-700 mb-3">Exercices interactifs, audio, vocabulaire pour pratiquer à votre rythme.</p>
+              <a href="#/exercices" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-sm font-medium shadow-sm">
+                Commencer les exercices
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
           </div>
-          <dl class="mt-10 grid grid-cols-3 gap-4 max-w-md">
+          <dl class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div>
-              <dt class="text-3xl font-serif text-brand-600" id="stat-langues">16</dt>
-              <dd class="text-xs text-ink-500 uppercase tracking-wide">Langues ALCAM</dd>
+              <dt class="text-3xl font-serif text-brand-600" id="stat-langues">28</dt>
+              <dd class="text-xs text-ink-500 uppercase tracking-wide">Langues</dd>
+            </div>
+            <div>
+              <dt class="text-3xl font-serif text-brand-600" id="stat-lecons">26</dt>
+              <dd class="text-xs text-ink-500 uppercase tracking-wide">Leçons / langue</dd>
             </div>
             <div>
               <dt class="text-3xl font-serif text-brand-600" id="stat-phrases">—</dt>
-              <dd class="text-xs text-ink-500 uppercase tracking-wide">Phrases <span id="stat-phrases-lang"></span></dd>
+              <dd class="text-xs text-ink-500 uppercase tracking-wide">Mots <span id="stat-phrases-lang"></span></dd>
             </div>
             <div>
               <dt class="text-3xl font-serif text-brand-600" id="stat-audios">—</dt>
@@ -191,36 +222,36 @@
         </div>
       </div>
 
-      <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <a href="#/lecons" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
           <div class="text-3xl mb-2 font-serif text-brand-500">①</div>
           <h3 class="font-semibold text-lg">Leçons clé-en-main</h3>
-          <p class="text-sm text-ink-500 mt-1">19 fiches enseignant + élève prêtes pour la classe, organisées par module MINESEC.</p>
-        </a>
-        <a href="#/catalogue" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
-          <div class="text-3xl mb-2 font-serif text-brand-500">②</div>
-          <h3 class="font-semibold text-lg">Catalogue des langues</h3>
-          <p class="text-sm text-ink-500 mt-1">Les 16 langues ALCAM publiées par l'IHNA sur mdc, avec leur statut audio.</p>
-        </a>
-        <a href="#/vocabulaire" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
-          <div class="text-3xl mb-2 font-serif text-brand-500">③</div>
-          <h3 class="font-semibold text-lg">Vocabulaire & phrases</h3>
-          <p class="text-sm text-ink-500 mt-1">Naviguer dans le corpus bulu : audio + transcription AGLC + traduction française.</p>
+          <p class="text-sm text-ink-500 mt-1">26 fiches enseignant + élève par langue, couvrant Langues Nationales (6e–3e) et Cultures Nationales (6e–Tle).</p>
         </a>
         <a href="#/exercices" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
-          <div class="text-3xl mb-2 font-serif text-brand-500">④</div>
+          <div class="text-3xl mb-2 font-serif text-brand-500">②</div>
           <h3 class="font-semibold text-lg">Exercices interactifs</h3>
-          <p class="text-sm text-ink-500 mt-1">Quatre familles d'exercices alignées sur les modules MINESEC.</p>
+          <p class="text-sm text-ink-500 mt-1">4 types d'exercices adaptatifs (compréhension audio, reconnaissance, lecture, dictée) en 28 langues.</p>
         </a>
-        <a href="#/reseau" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition sm:col-span-2 lg:col-span-4">
-          <div class="flex items-center gap-4">
-            <div class="text-3xl font-serif text-brand-500 flex-shrink-0">⑤</div>
-            <div>
-              <h3 class="font-semibold text-lg">CamRhizome — Réseau intercommunautaire</h3>
-              <p class="text-sm text-ink-500 mt-1">Graphe interactif des connexions entre 20 communautés camerounaises · 302 arêtes · 5 plans d'analyse (historique, linguistique, géographique, social, cognitif) · données CERDOTOLA/UNESCO.</p>
-            </div>
-            <svg class="w-5 h-5 text-ink-300 flex-shrink-0 ml-auto group-hover:text-brand-500 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </div>
+        <a href="#/ressources" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-3xl mb-2 font-serif text-brand-500">③</div>
+          <h3 class="font-semibold text-lg">Ressources pédagogiques</h3>
+          <p class="text-sm text-ink-500 mt-1">Fiches de progression 6e–Tle, programmes et guides pédagogiques officiels MINESEC (ANELCAC).</p>
+        </a>
+        <a href="#/corpus-oral" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-3xl mb-2 font-serif text-brand-500">④</div>
+          <h3 class="font-semibold text-lg">Corpus oral 2014–2015</h3>
+          <p class="text-sm text-ink-500 mt-1">Catalogue d'enregistrements de terrain LCC (poésie, contes, récits) en 38 variétés de langues camerounaises.</p>
+        </a>
+        <a href="#/catalogue" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-3xl mb-2 font-serif text-brand-500">⑤</div>
+          <h3 class="font-semibold text-lg">Catalogue des langues</h3>
+          <p class="text-sm text-ink-500 mt-1">28 langues ALCAM et CERDOTOLA avec données audio MP3, transcription AGLC et traduction française.</p>
+        </a>
+        <a href="#/contribuer" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
+          <div class="text-3xl mb-2 font-serif text-brand-500">⑥</div>
+          <h3 class="font-semibold text-lg">Contribuer</h3>
+          <p class="text-sm text-ink-500 mt-1">Suggérer du contenu, signaler une erreur, proposer des ressources pour enrichir la plateforme.</p>
         </a>
       </div>
     </section>
@@ -434,41 +465,178 @@
   </template>
 
   <template id="tpl-apropos">
-    <section class="prose prose-ink max-w-3xl">
-      <h1 class="font-serif text-3xl">À propos de ce prototype</h1>
-      <p>
-        Ce prototype est un livrable du cours <strong>LACC2342 — Outils pour la production du matériel didactique numérique
-        et multimédia en langues camerounaises</strong> dispensé à l'École Normale Supérieure de Yaoundé par
-        le <strong>Prof. Emmanuel Ngue Um</strong> aux élèves-professeurs de Niveau 2.
+    <section class="max-w-3xl">
+      <h1 class="font-serif text-3xl mb-6">À propos de Likalo</h1>
+
+      <!-- Contact card -->
+      <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 mb-8 flex flex-col sm:flex-row gap-5 items-start">
+        <div class="w-16 h-16 rounded-full bg-brand-600 text-white grid place-items-center text-3xl font-serif shrink-0">N</div>
+        <div>
+          <div class="font-semibold text-xl text-ink-900">Prof. Emmanuel Ngue Um</div>
+          <div class="text-sm text-ink-600 mt-1">Concepteur et responsable de la plateforme</div>
+          <div class="text-sm text-ink-600">LACC2342 · École Normale Supérieure de Yaoundé</div>
+          <div class="mt-3 flex flex-wrap gap-3 text-sm">
+            <a href="mailto:ngueum@gmail.com" class="inline-flex items-center gap-1.5 text-brand-700 hover:text-brand-800 font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              ngueum@gmail.com
+            </a>
+            <a href="https://wa.me/237677066803" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-emerald-700 hover:text-emerald-800 font-medium">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.12 1.531 5.849L0 24l6.334-1.501A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818A9.818 9.818 0 012.182 12 9.818 9.818 0 0112 2.182 9.818 9.818 0 0121.818 12 9.818 9.818 0 0112 21.818z"/></svg>
+              +237 677 066 803
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6 text-ink-700 leading-relaxed">
+        <p>
+          <strong>Likalo</strong> est une plateforme interactive d'enseignement et d'apprentissage des langues et cultures
+          nationales camerounaises, développée dans le cadre du cours
+          <strong>LACC2342 — Outils pour la production du matériel didactique numérique et multimédia en langues camerounaises</strong>
+          dispensé à l'ENS Yaoundé.
+        </p>
+        <p>
+          Elle intègre les données <strong>ALCAM</strong> (publiées sur la plateforme
+          <a href="https://mozilladatacollective.com/organization/cmfv3ichk000amd07piai0zoz" target="_blank" rel="noopener" class="text-brand-700 underline">Mozilla Data Collective</a>
+          par l'Institut des Humanités numériques africaines), les questionnaires <strong>UNESCO/CERDOTOLA</strong>,
+          un corpus oral 2014–2015 de terrain (LCC1 et LCC2) et les ressources musicales <strong>EMAC</strong> (Ethnomusicologie du Cameroun, CERDOTOLA).
+        </p>
+
+        <h2 class="font-serif text-2xl text-ink-900 mt-8 pt-4 border-t border-ink-100">Programmes couverts</h2>
+        <p>La plateforme couvre l'intégralité des programmes MINESEC :</p>
+        <ul class="list-disc pl-6 space-y-1 text-sm">
+          <li><strong>Langues Nationales 6e/5e</strong> — Modules I à VI (50 h annuelles, 2 h hebdomadaires)</li>
+          <li><strong>Langues Nationales 4e/3e</strong> — Modules VII et VIII (25 h annuelles, 1 h hebdomadaire)</li>
+          <li><strong>Cultures Nationales 6e–Terminale</strong> — Modules C-I à C-V (diversité, modes de vie, événements, communauté)</li>
+        </ul>
+
+        <h2 class="font-serif text-2xl text-ink-900 mt-8 pt-4 border-t border-ink-100">Sources et licences</h2>
+        <ul class="list-disc pl-6 space-y-1 text-sm">
+          <li>Données ALCAM : Institut des Humanités numériques africaines, Mozilla Data Collective — CC-BY</li>
+          <li>Questionnaires : UNESCO/CERDOTOLA</li>
+          <li>Corpus oral 2014–2015 : ENS Yaoundé, Prof. Emmanuel Ngue Um</li>
+          <li>Ressources EMAC : CERDOTOLA</li>
+          <li>Fiches de progression : ANELCAC (Association nationale des enseignants de langues et cultures camerounaises)</li>
+          <li>Code de l'application : licence MIT</li>
+        </ul>
+      </div>
+    </section>
+  </template>
+
+  <!-- Template : Ressources pédagogiques -->
+  <template id="tpl-ressources">
+    <section>
+      <h1 class="font-serif text-3xl mb-2">Ressources pédagogiques</h1>
+      <p class="text-ink-600 mb-8 max-w-3xl">
+        Documents officiels du MINESEC et de l'ANELCAC (fiches de progression, programmes, guides pédagogiques)
+        pour l'enseignement des Langues Nationales et des Cultures Nationales de la 6e à la Terminale.
       </p>
-      <p>
-        Il démontre, à partir des ressources <strong>ALCAM</strong> publiées sur la plateforme
-        <a href="https://mozilladatacollective.com/organization/cmfv3ichk000amd07piai0zoz" target="_blank" rel="noopener">Mozilla Data Collective</a>
-        sous la bannière de l'<strong>Institut des Humanités numériques africaines</strong>,
-        comment articuler audio, transcription en Alphabet général des langues camerounaises (AGLC) et traduction française
-        au service de l'enseignement secondaire des langues nationales (programmes MINESEC, classes de 6<sup>e</sup>, 5<sup>e</sup>, 4<sup>e</sup>, 3<sup>e</sup>).
+
+      <!-- Fiches de progression -->
+      <div class="mb-10">
+        <h2 class="font-serif text-2xl mb-1">Fiches de progression ANELCAC</h2>
+        <p class="text-sm text-ink-500 mb-5">Planification séquentielle annuelle pour chaque niveau du premier et second cycle.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="ressources-fiches"></div>
+      </div>
+
+      <!-- Programmes et guides -->
+      <div>
+        <h2 class="font-serif text-2xl mb-1">Programmes &amp; guides officiels MINESEC</h2>
+        <p class="text-sm text-ink-500 mb-5">Programmes officiels et guides pédagogiques pour les enseignants de Langues Nationales et Cultures Nationales.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="ressources-guides"></div>
+      </div>
+    </section>
+  </template>
+
+  <!-- Template : Corpus oral -->
+  <template id="tpl-corpus-oral">
+    <section>
+      <h1 class="font-serif text-3xl mb-2">Corpus oral 2014–2015</h1>
+      <p class="text-ink-600 mb-3 max-w-3xl">
+        Enregistrements de terrain réalisés dans le cadre des cours LCC1 et LCC2 (Langues et Cultures Camerounaises)
+        à l'ENS Yaoundé en 2014–2015. Chaque fichier contient des productions orales authentiques (poésie, contes, récits, salutations)
+        dans une variété de langue camerounaise.
       </p>
-      <h2 class="font-serif text-2xl mt-8">Portée pédagogique</h2>
-      <ul>
-        <li><strong>Cadrage</strong> : approche par compétences et entrée par les situations de vie (MINESEC, 2014).</li>
-        <li><strong>Données</strong> : 152 phrases bulu avec audio MP3 et traduction française appariée (sur 184 audios totaux).</li>
-        <li><strong>Modules MINESEC ciblés</strong> : II (segmentaux), III (suprasegmentaux), IV (syntagme nominal), V (syntagme verbal), VI (phrase).</li>
-      </ul>
-      <h2 class="font-serif text-2xl mt-8">Étendre à une autre langue</h2>
-      <p>
-        Pour ajouter une langue ALCAM, il suffit de fournir un fichier <code>data/&lt;langue&gt;.json</code>
-        au même format que <code>data/bulu.json</code>, et de déposer les MP3 dans <code>audio/&lt;langue&gt;/</code>.
-        Le script <code>build_data.py</code> est fourni à titre d'exemple. La marche à suivre détaillée se trouve
-        dans le <code>README.md</code> du dépôt.
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8 text-sm text-amber-800">
+        <strong>Note technique :</strong> Les fichiers audio WAV originaux (100–500 Mo chacun) ne sont pas hébergés sur la plateforme en ligne.
+        Pour y accéder, contactez <a href="mailto:ngueum@gmail.com" class="underline">ngueum@gmail.com</a>
+        ou WhatsApp <a href="https://wa.me/237677066803" class="underline">+237 677 066 803</a>.
+      </div>
+
+      <!-- Filtre par session -->
+      <div class="flex flex-wrap gap-2 mb-6">
+        <button data-session="" class="corpus-filter px-4 py-1.5 rounded-full text-sm border border-brand-300 bg-brand-50 text-brand-700 font-medium is-active">Toutes les sessions</button>
+        <button data-session="LCC1" class="corpus-filter px-4 py-1.5 rounded-full text-sm border border-ink-200 bg-white text-ink-700">LCC1 — Premier cycle</button>
+        <button data-session="LCC2" class="corpus-filter px-4 py-1.5 rounded-full text-sm border border-ink-200 bg-white text-ink-700">LCC2 — Second cycle</button>
+      </div>
+
+      <div id="corpus-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+  </template>
+
+  <!-- Template : Contribuer -->
+  <template id="tpl-contribuer">
+    <section class="max-w-2xl">
+      <h1 class="font-serif text-3xl mb-2">Contribuer à Likalo</h1>
+      <p class="text-ink-600 mb-8">
+        Vous pouvez aider à enrichir la plateforme : proposer des ressources, signaler une erreur,
+        suggérer du contenu ou participer à la collecte de données linguistiques.
       </p>
-      <h2 class="font-serif text-2xl mt-8">Crédits & licence</h2>
-      <p>
-        Données ALCAM : Institut des Humanités numériques africaines, publiées sur Mozilla Data Collective.
-        Code de l'application : licence MIT. Données et audios : licence CC-BY (attribuer aux locuteurs et au dépositaire).
-      </p>
-      <p class="text-sm text-ink-500 mt-8">
-        Ce prototype a été réalisé en avril 2026 dans le cadre du semestre 2 de l'année universitaire 2025-2026.
-      </p>
+
+      <!-- Contact direct -->
+      <div class="bg-white border border-ink-100 rounded-2xl p-6 shadow-sm mb-8">
+        <h2 class="font-semibold text-lg mb-4">Contact direct</h2>
+        <div class="flex flex-col gap-3">
+          <a href="mailto:ngueum@gmail.com?subject=Contribution%20Likalo" class="inline-flex items-center gap-3 p-3 rounded-lg border border-brand-200 hover:bg-brand-50 transition">
+            <div class="w-10 h-10 grid place-items-center bg-brand-100 text-brand-700 rounded-lg shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <div class="font-medium text-ink-900">Par e-mail</div>
+              <div class="text-sm text-brand-700">ngueum@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://wa.me/237677066803?text=Bonjour%20Prof.%20Ngue%20Um,%20je%20souhaite%20contribuer%20%C3%A0%20la%20plateforme%20Likalo." target="_blank" rel="noopener" class="inline-flex items-center gap-3 p-3 rounded-lg border border-emerald-200 hover:bg-emerald-50 transition">
+            <div class="w-10 h-10 grid place-items-center bg-emerald-100 text-emerald-700 rounded-lg shrink-0">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.12 1.531 5.849L0 24l6.334-1.501A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818A9.818 9.818 0 012.182 12 9.818 9.818 0 0112 2.182 9.818 9.818 0 0121.818 12 9.818 9.818 0 0112 21.818z"/></svg>
+            </div>
+            <div>
+              <div class="font-medium text-ink-900">Par WhatsApp</div>
+              <div class="text-sm text-emerald-700">+237 677 066 803</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Formulaire de suggestion -->
+      <div class="bg-white border border-ink-100 rounded-2xl p-6 shadow-sm">
+        <h2 class="font-semibold text-lg mb-4">Formulaire de suggestion</h2>
+        <form id="contrib-form" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-ink-700 mb-1" for="contrib-type">Type de contribution</label>
+            <select id="contrib-type" class="w-full border border-ink-200 rounded-md px-3 py-2 bg-white text-sm">
+              <option value="correction">Correction d'une erreur</option>
+              <option value="ressource">Proposition de ressource</option>
+              <option value="langue">Ajout d'une langue</option>
+              <option value="audio">Enregistrement audio</option>
+              <option value="autre">Autre suggestion</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-ink-700 mb-1" for="contrib-nom">Votre nom (facultatif)</label>
+            <input id="contrib-nom" type="text" class="w-full border border-ink-200 rounded-md px-3 py-2 bg-white text-sm" placeholder="Nom ou pseudonyme" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-ink-700 mb-1" for="contrib-message">Message</label>
+            <textarea id="contrib-message" rows="5" class="w-full border border-ink-200 rounded-md px-3 py-2 bg-white text-sm resize-y" placeholder="Décrivez votre suggestion, correction ou ressource…" required></textarea>
+          </div>
+          <div id="contrib-feedback" class="hidden rounded-lg p-4 text-sm"></div>
+          <button type="submit" id="contrib-submit" class="w-full py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-medium text-sm">
+            Envoyer par e-mail
+          </button>
+          <p class="text-xs text-ink-400 text-center">Le formulaire génère un e-mail pré-rempli vers ngueum@gmail.com. Aucune donnée n'est stockée sur le serveur.</p>
+        </form>
+      </div>
     </section>
   </template>
 

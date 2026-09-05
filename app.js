@@ -197,13 +197,15 @@ function updateLangSelector() {
 // Routes statiques + routes paramétriques.
 // Chaque entrée paramétrique a la forme [regex, renderer].
 const STATIC_ROUTES = {
-  '/':            renderHome,
-  '/catalogue':   renderCatalogue,
-  '/lecons':      renderLecons,
-  '/vocabulaire': renderVocabulaire,
-  '/exercices':   renderExercices,
-  '/a-propos':    renderAPropos,
-  '/reseau':      renderReseau,
+  '/':             renderHome,
+  '/catalogue':    renderCatalogue,
+  '/lecons':       renderLecons,
+  '/vocabulaire':  renderVocabulaire,
+  '/exercices':    renderExercices,
+  '/ressources':   renderRessources,
+  '/corpus-oral':  renderCorpusOral,
+  '/contribuer':   renderContribuer,
+  '/a-propos':     renderAPropos,
 };
 
 const PARAM_ROUTES = [
@@ -238,12 +240,6 @@ function setActiveNav(path) {
 
 function render() {
   stopCurrentAudio();
-  // Restore default #app layout on every navigation (reset from /reseau full-bleed mode)
-  const appEl = $('#app');
-  if (appEl) {
-    appEl.className = 'max-w-6xl mx-auto px-4 py-8 min-h-[60vh]';
-    appEl.style.cssText = '';
-  }
   const { path, run } = resolveRoute();
   setActiveNav(path);
   run();
@@ -265,8 +261,10 @@ function mountTemplate(id) {
 
 function renderHome() {
   mountTemplate('tpl-home');
-  $('#stat-langues').textContent = state.langues.length;
-  $('#stat-phrases').textContent = state.vocabWithFr.length;
+  $('#stat-langues').textContent = state.langues.length || 28;
+  const leconsCount = $('#stat-lecons');
+  if (leconsCount) leconsCount.textContent = state.lessons.length || 26;
+  $('#stat-phrases').textContent = state.vocab.length;
   $('#stat-audios').textContent = state.vocab.filter(v => v.audio).length;
   const phrasesLangEl = $('#stat-phrases-lang');
   if (phrasesLangEl) phrasesLangEl.textContent = state.currentLangName;
@@ -405,20 +403,184 @@ function renderAPropos() {
   mountTemplate('tpl-apropos');
 }
 
-function renderReseau() {
-  const app = $('#app');
-  // Full-bleed override: remove container constraints for the graph view
-  app.className = '';
-  app.style.cssText = 'width:100%;height:calc(100vh - 65px);padding:0;margin:0;max-width:none;overflow:hidden;';
-  app.innerHTML = `
-    <iframe
-      src="reseau.html"
-      title="CamRhizome — Réseau intercommunautaire du Cameroun"
-      style="width:100%;height:100%;border:none;display:block;"
-      loading="lazy"
-      allow="fullscreen"
-    ></iframe>
-  `;
+/* ---------- Ressources pédagogiques ---------- */
+
+const FICHES_PROGRESSION = [
+  { niveau: '6e',   label: 'Sixième',    fichier: 'Proposition-Fiche-6è-ANELCAC.pdf',    couleur: 'bg-blue-50 border-blue-200 text-blue-800' },
+  { niveau: '5e',   label: 'Cinquième',  fichier: 'Proposition-Fiche-5è-ANELCAC.pdf',    couleur: 'bg-blue-50 border-blue-200 text-blue-800' },
+  { niveau: '4e',   label: 'Quatrième',  fichier: 'Proposition-Fiche-4è-ANELCAC.pdf',    couleur: 'bg-violet-50 border-violet-200 text-violet-800' },
+  { niveau: '3e',   label: 'Troisième',  fichier: 'Proposition-Fiche-3è-ANELCAC.pdf',    couleur: 'bg-violet-50 border-violet-200 text-violet-800' },
+  { niveau: '2nde', label: 'Seconde',    fichier: 'Proposition-Fiche-2nde-ANELCAC.pdf',  couleur: 'bg-amber-50 border-amber-200 text-amber-800' },
+  { niveau: '1ère', label: 'Première',   fichier: 'Proposition-Fiche-1ère-ANELCAC.pdf',  couleur: 'bg-amber-50 border-amber-200 text-amber-800' },
+  { niveau: 'Tle',  label: 'Terminale',  fichier: 'Proposition-Fiche-Tle-ANELCAC.pdf',   couleur: 'bg-amber-50 border-amber-200 text-amber-800' },
+];
+
+const GUIDES_PROGRAMMES = [
+  { titre: 'Programme Langues Nationales 6e/5e',          soustitre: 'MINESEC · Premier cycle',   fichier: 'PROGRAMME Langues Nationales 6e et 5e.pdf',     icon: '📘' },
+  { titre: 'Langues Nationales 4e/3e',                    soustitre: 'MINESEC · Premier cycle',   fichier: 'Langues nationales  4e 3e.pdf',                  icon: '📘' },
+  { titre: 'Guide pédagogique LN 4e/3e',                  soustitre: 'MINESEC · Premier cycle',   fichier: 'GUIDE DU PROGRAMME LN 4ème et 3ème.pdf',         icon: '📗' },
+  { titre: 'Programme Cultures Nationales 6e/5e',         soustitre: 'MINESEC · Premier cycle',   fichier: 'PROGRAMME des Cultures Natioanles 6e et 5e-2.pdf', icon: '📙' },
+  { titre: 'Cultures Nationales 4e/3e',                   soustitre: 'MINESEC · Premier cycle',   fichier: 'GUIDE DU PROGRAMME CN 4ème et 3ème.pdf',         icon: '📙' },
+  { titre: 'Guide CN second cycle',                       soustitre: 'MINESEC · Second cycle',    fichier: 'GUIDE DU PROGRAMME CN  second-cycle.pdf',        icon: '📙' },
+  { titre: 'Programme LN 2nde',                           soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes d\'études LN Classes de 2nde.pdf',    icon: '📘' },
+  { titre: 'Programmes LN 1ères',                         soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes LN - 1ères.pdf',                      icon: '📘' },
+  { titre: 'Programmes Langues Nationales Tle',           soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes Langues Nationales Tle.pdf',           icon: '📘' },
+  { titre: 'Programme CN 2nde',                           soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes d\'études CN Classes de 2nde .pdf',   icon: '📙' },
+  { titre: 'Programme CN 1ères',                          soustitre: 'MINESEC · Second cycle',    fichier: 'Programme CN - 1ères.pdf',                       icon: '📙' },
+  { titre: 'Programmes Cultures Nationales Tle',          soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes  Cultures Nationales Tle- .pdf',      icon: '📙' },
+  { titre: 'Guide des Arts 6e/5e',                        soustitre: 'MINESEC · Arts',            fichier: 'Guide des Arts-6è et 5è.pdf',                    icon: '🎨' },
+  { titre: 'Guide Arts second cycle',                     soustitre: 'MINESEC · Arts',            fichier: 'GUIDE DU PROGRAMME 2dn cycle  Arts.pdf',         icon: '🎨' },
+  { titre: 'Guide Culture Form 1 et 2 (anglophone)',      soustitre: 'MINESEC · Anglophone',      fichier: 'Guide Culture-Form 1 et 2.pdf',                  icon: '📕' },
+  { titre: 'Guide Langue Form 1 et 2 (anglophone)',       soustitre: 'MINESEC · Anglophone',      fichier: 'Guide langue-Form 1 et 2.pdf',                   icon: '📕' },
+  { titre: 'Guide Arts Form 1 et 2 (anglophone)',         soustitre: 'MINESEC · Anglophone',      fichier: 'Guide Arts-Form 1 et 2.pdf',                     icon: '🎨' },
+];
+
+function renderRessources() {
+  mountTemplate('tpl-ressources');
+
+  const fichesGrid = $('#ressources-fiches');
+  if (fichesGrid) {
+    fichesGrid.innerHTML = FICHES_PROGRESSION.map(f => `
+      <article class="bg-white border border-ink-100 rounded-xl p-5 hover:shadow transition">
+        <div class="flex items-start justify-between gap-3">
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border ${f.couleur} mb-2">${escapeHtml(f.niveau)}</span>
+            <h3 class="font-semibold text-ink-900">Classe de ${escapeHtml(f.label)}</h3>
+            <p class="text-xs text-ink-500 mt-0.5">Fiche de progression annuelle ANELCAC</p>
+          </div>
+          <div class="text-3xl shrink-0">📄</div>
+        </div>
+        <div class="mt-4 flex items-center gap-3">
+          <a href="Fiches-progression/${escapeHtml(f.fichier)}" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs rounded-lg font-medium">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Ouvrir PDF
+          </a>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  const guidesGrid = $('#ressources-guides');
+  if (guidesGrid) {
+    guidesGrid.innerHTML = GUIDES_PROGRAMMES.map(g => `
+      <article class="bg-white border border-ink-100 rounded-xl p-5 hover:shadow transition">
+        <div class="flex items-start gap-3">
+          <span class="text-3xl shrink-0">${g.icon}</span>
+          <div>
+            <h3 class="font-semibold text-ink-900 leading-snug">${escapeHtml(g.titre)}</h3>
+            <p class="text-xs text-ink-500 mt-0.5">${escapeHtml(g.soustitre)}</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <a href="Programmes-et-Guides-pedagogiques/${escapeHtml(g.fichier)}" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs rounded-lg font-medium">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Ouvrir PDF
+          </a>
+        </div>
+      </article>
+    `).join('');
+  }
+}
+
+/* ---------- Corpus oral ---------- */
+
+let _oralCorpus = null;
+
+async function loadOralCorpus() {
+  if (_oralCorpus) return _oralCorpus;
+  try {
+    _oralCorpus = await fetch('data/oral-corpus.json').then(r => r.json());
+  } catch {
+    _oralCorpus = [];
+  }
+  return _oralCorpus;
+}
+
+async function renderCorpusOral() {
+  mountTemplate('tpl-corpus-oral');
+  const corpus = await loadOralCorpus();
+  const grid = $('#corpus-grid');
+  if (!grid) return;
+
+  let activeSession = '';
+
+  function renderGrid() {
+    const items = activeSession ? corpus.filter(c => c.session === activeSession) : corpus;
+    if (!items.length) {
+      grid.innerHTML = `<div class="col-span-full text-center text-ink-400 py-12">Aucun enregistrement trouvé.</div>`;
+      return;
+    }
+    grid.innerHTML = items.map(c => `
+      <article class="bg-white border border-ink-100 rounded-xl p-5 hover:shadow transition">
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div>
+            <h3 class="font-serif text-xl text-ink-900">${escapeHtml(c.name)}</h3>
+            ${c.family !== '—' ? `<div class="text-xs text-ink-400 mt-0.5">${escapeHtml(c.family)}</div>` : ''}
+          </div>
+          <span class="text-xs font-semibold px-2 py-1 rounded-full ${c.session === 'LCC1' ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-violet-50 text-violet-700 border border-violet-200'}">${escapeHtml(c.session)}</span>
+        </div>
+        <p class="text-xs text-ink-500 mb-3">${escapeHtml(c.context)}</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-medium text-ink-700">${c.recordingCount} enregistrement${c.recordingCount > 1 ? 's' : ''}</span>
+          <span class="text-xs text-ink-400">${escapeHtml(c.year)}</span>
+        </div>
+        <div class="mt-3 border-t border-ink-100 pt-3">
+          ${c.recordings.map(r => `
+            <div class="flex items-center justify-between py-1">
+              <span class="text-xs text-ink-600 truncate max-w-[70%]" title="${escapeHtml(r.file)}">${escapeHtml(r.file)}</span>
+              <span class="text-xs text-ink-400 shrink-0">${r.sizeMb} Mo</span>
+            </div>
+          `).join('')}
+        </div>
+        <p class="mt-3 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-1">
+          Fichier WAV disponible sur demande — trop volumineux pour le web.
+        </p>
+      </article>
+    `).join('');
+  }
+
+  $$('.corpus-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.corpus-filter').forEach(b => {
+        b.classList.remove('is-active', 'bg-brand-50', 'border-brand-300', 'text-brand-700');
+        b.classList.add('bg-white', 'border-ink-200', 'text-ink-700');
+      });
+      btn.classList.add('is-active', 'bg-brand-50', 'border-brand-300', 'text-brand-700');
+      btn.classList.remove('bg-white', 'border-ink-200', 'text-ink-700');
+      activeSession = btn.dataset.session;
+      renderGrid();
+    });
+  });
+
+  renderGrid();
+}
+
+/* ---------- Contribuer ---------- */
+
+function renderContribuer() {
+  mountTemplate('tpl-contribuer');
+  const form = $('#contrib-form');
+  if (!form) return;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const type = $('#contrib-type').value;
+    const nom  = $('#contrib-nom').value.trim();
+    const msg  = $('#contrib-message').value.trim();
+    if (!msg) return;
+    const subject = encodeURIComponent(`[Likalo] Contribution — ${type}`);
+    const body = encodeURIComponent(
+      `Bonjour Prof. Ngue Um,\n\nType de contribution : ${type}\n${nom ? 'Nom : ' + nom + '\n' : ''}\nMessage :\n${msg}\n\n— Envoyé depuis la plateforme Likalo`
+    );
+    window.location.href = `mailto:ngueum@gmail.com?subject=${subject}&body=${body}`;
+    const fb = $('#contrib-feedback');
+    if (fb) {
+      fb.classList.remove('hidden');
+      fb.classList.add('bg-emerald-50', 'border', 'border-emerald-200', 'text-emerald-800');
+      fb.textContent = 'Votre client e-mail a été ouvert avec le message pré-rempli. Merci pour votre contribution !';
+    }
+  });
 }
 
 /* ---------- Leçons ---------- */
