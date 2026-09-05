@@ -4,127 +4,244 @@
     "name": "Bàsàa",
     "iso": "bas",
     "family": "Bantoue A.43",
+    "region": "Littoral, Centre, Sud",
     "audio": true,
-    "has_lessons": true
+    "emacCount": 7
   },
   {
     "slug": "ewondo",
     "name": "Èwòndó",
     "iso": "ewo",
     "family": "Bantoue A.72",
+    "region": "Centre",
     "audio": false,
-    "has_lessons": true
+    "emacCount": 9
   },
   {
     "slug": "bulu",
     "name": "Bulu",
     "iso": "bum",
     "family": "Bantoue A.74",
+    "region": "Sud",
     "audio": true,
-    "has_lessons": true
+    "emacCount": 9
   },
   {
     "slug": "gbaya",
     "name": "Gbáyá",
     "iso": "gya",
     "family": "Oubanguienne",
+    "region": "Est, Adamaoua",
     "audio": false,
-    "has_lessons": true
+    "emacCount": 0
   },
   {
     "slug": "tikar",
     "name": "Tikar",
     "iso": "tik",
     "family": "Bantoïde",
+    "region": "Centre, Adamaoua",
     "audio": false,
-    "has_lessons": true
+    "emacCount": 2
   },
   {
     "slug": "fong",
     "name": "Fòŋ",
     "iso": "—",
     "family": "Bantoue A.50",
+    "region": "Centre",
     "audio": true,
-    "has_lessons": true
+    "emacCount": 2
   },
   {
     "slug": "mvele",
     "name": "Mvélé",
     "iso": "—",
     "family": "Bantoue A.50",
+    "region": "Centre",
     "audio": true,
-    "has_lessons": true
+    "emacCount": 2
   },
   {
     "slug": "bakossi",
     "name": "Bakossi",
     "iso": "bss",
     "family": "Bantoue A.15",
+    "region": "Littoral, Sud-Ouest",
     "audio": true,
-    "has_lessons": true
+    "emacCount": 1
   },
   {
-    "slug": "tuki-tumbele",
-    "name": "Tuki-Tumbele",
+    "slug": "tuki",
+    "name": "Tuki",
+    "nameVariants": "Tumbele · Tukombe",
     "iso": "—",
     "family": "Bantoue A.60",
+    "region": "Centre",
     "audio": false,
-    "has_lessons": true
-  },
-  {
-    "slug": "tuki-tukombe",
-    "name": "Tuki-Tukombe",
-    "iso": "—",
-    "family": "Bantoue A.60",
-    "audio": false,
-    "has_lessons": true
+    "emacCount": 2,
+    "note": "Données issues des variantes Tumbele et Tukombe (sources ALCAM)"
   },
   {
     "slug": "balom",
     "name": "Balom",
     "iso": "—",
     "family": "Bantoue A.60",
+    "region": "Centre",
     "audio": false,
-    "has_lessons": true
+    "emacCount": 1
   },
   {
     "slug": "badjia",
     "name": "Bàdjíà",
     "iso": "—",
     "family": "Bantoue",
+    "region": "Littoral",
     "audio": false,
-    "has_lessons": true
+    "emacCount": 1
   },
   {
     "slug": "banoo",
     "name": "Banɔɔ",
     "iso": "—",
     "family": "Bantoue A.40",
+    "region": "Littoral",
     "audio": false,
-    "has_lessons": true
+    "emacCount": 1
   },
   {
     "slug": "mipa",
     "name": "Mìpá",
     "iso": "—",
     "family": "Bantoue",
+    "region": "Littoral",
     "audio": false,
-    "has_lessons": true
+    "emacCount": 1
   },
   {
     "slug": "yezoum",
     "name": "Yezoum",
     "iso": "—",
     "family": "Bantoue A.70",
+    "region": "Centre",
     "audio": true,
-    "has_lessons": true
+    "emacCount": 2
   },
   {
     "slug": "diboum",
     "name": "Diboum",
     "iso": "—",
     "family": "Bantoue",
-    "audio": false,
-    "has_lessons": true
+    "region": "Littoral",
+    "audio": true,
+    "emacCount": 2
+  },
+  {
+    "slug": "feefee",
+    "name": "Fe'fe'",
+    "iso": "fmp",
+    "family": "Bantoid — Grassfields",
+    "region": "Haut Nkam, Ouest",
+    "audio": true,
+    "emacCount": 2
+  },
+  {
+    "slug": "ghomala",
+    "name": "Ghomala'",
+    "iso": "bbj",
+    "family": "Bantoid — Grassfields",
+    "region": "Mifi, Ouest",
+    "audio": true,
+    "emacCount": 2
+  },
+  {
+    "slug": "ngemba",
+    "name": "Ngemba",
+    "iso": "—",
+    "family": "Bantoid — Grassfields",
+    "region": "Région de l'Ouest",
+    "audio": true,
+    "emacCount": 2
+  },
+  {
+    "slug": "ngiemboon",
+    "name": "Ngiemboon",
+    "iso": "nnh",
+    "family": "Bantoid — Grassfields",
+    "region": "Bamboutos, Ouest",
+    "audio": true,
+    "emacCount": 2
+  },
+  {
+    "slug": "ngomba",
+    "name": "Ngomba",
+    "iso": "jgo",
+    "family": "Bantoid — Grassfields",
+    "region": "Bamboutos, Ouest",
+    "audio": true,
+    "emacCount": 2
+  },
+  {
+    "slug": "mbo",
+    "name": "Mbo",
+    "iso": "mbo",
+    "family": "Bantoid — Mbam-Nkam",
+    "region": "Moungo, Littoral",
+    "audio": true,
+    "emacCount": 1
+  },
+  {
+    "slug": "kekem",
+    "name": "Kekem (Mbo)",
+    "iso": "mbo",
+    "family": "Bantoid — Mbam-Nkam",
+    "region": "Haut-Nkam, Ouest",
+    "audio": true,
+    "emacCount": 1
+  },
+  {
+    "slug": "eton",
+    "name": "Eton",
+    "iso": "etn",
+    "family": "Bantoue A.72 — Beti-Fang",
+    "region": "Centre",
+    "audio": true,
+    "emacCount": 3
+  },
+  {
+    "slug": "akoose",
+    "name": "Akoose",
+    "iso": "bss",
+    "family": "Bantoue A.15",
+    "region": "Littoral, Sud-Ouest",
+    "audio": true,
+    "emacCount": 1
+  },
+  {
+    "slug": "batanga",
+    "name": "Batanga",
+    "iso": "bnm",
+    "family": "Bantoue côtière",
+    "region": "Région du Sud",
+    "audio": true,
+    "emacCount": 1
+  },
+  {
+    "slug": "tupuri",
+    "name": "Tupuri",
+    "iso": "tui",
+    "family": "Tchadique",
+    "region": "Extrême-Nord",
+    "audio": true,
+    "emacCount": 0
+  },
+  {
+    "slug": "fulfulde",
+    "name": "Fulfulde d'Adamaoua",
+    "iso": "fub",
+    "family": "Atlantique-Congo",
+    "region": "Adamaoua, Nord",
+    "audio": true,
+    "emacCount": 0
   }
 ]

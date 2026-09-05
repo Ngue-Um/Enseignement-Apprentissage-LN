@@ -1,6 +1,6 @@
 {
-  "language": "mvele",
-  "languageName": "Mvélé",
+  "language": "akoose",
+  "languageName": "Akoose",
   "lessons": [
     {
       "id": "I-1",
@@ -14,7 +14,7 @@
       "objectives": [
         "Prendre conscience de la diversité linguistique du Cameroun (environ 280 langues selon le Mini-Atlas LACAGEO)",
         "Distinguer langue, dialecte et variante selon les définitions académiques",
-        "Nommer et situer Mvélé dans la classification géographique des langues du Cameroun",
+        "Nommer et situer Akoose dans la classification géographique des langues du Cameroun",
         "Adopter une attitude de respect envers toutes les langues"
       ],
       "vocabulary": [],
@@ -22,24 +22,24 @@
         "intro": "Leçon : Diversité linguistique et dialectes. Module : Module I — Diversité linguistique camerounaise.",
         "steps": [
           "**Mise en contexte :** Afficher la carte du Mini-Atlas linguistique du Cameroun. Demander aux élèves quelles langues sont parlées dans leur famille.",
-          "**Exploration :** Faire lire les définitions du Mini-Atlas (langue, dialecte, patois, langue nationale). Situer Mvélé dans sa région linguistique.",
+          "**Exploration :** Faire lire les définitions du Mini-Atlas (langue, dialecte, patois, langue nationale). Situer Akoose dans sa région linguistique.",
           "**Conceptualisation :** Expliquer la distinction langue / dialecte avec des exemples : les dialectes bulu, ewondo, eton, mangisa appartiennent tous à la langue béti-fang (Mini-Atlas).",
           "**Application :** Compléter un tableau : nom de la langue, famille, région principale, code ISO.",
-          "**Évaluation :** Chaque élève présente oralement Mvélé en indiquant famille et région."
+          "**Évaluation :** Chaque élève présente oralement Akoose en indiquant famille et région."
         ],
         "freedom": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées.",
         "tips": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées."
       },
       "student": {
-        "intro": "Le Cameroun est l'une des nations les plus riches en langues au monde — le Mini-Atlas linguistique en recense environ 280 ! Dans cette leçon, tu découvres la place de Mvélé dans cette grande famille.",
+        "intro": "Le Cameroun est l'une des nations les plus riches en langues au monde — le Mini-Atlas linguistique en recense environ 280 ! Dans cette leçon, tu découvres la place de Akoose dans cette grande famille.",
         "activities": [
-          "Observe la carte du Mini-Atlas et repère la zone où Mvélé est principalement parlé.",
-          "Recopie et complète : Mvélé appartient à la famille ___. Elle est surtout parlée dans la région ___.",
-          "Selon le Mini-Atlas, combien de langues vivantes compte la région de Mvélé ? Note ce chiffre.",
+          "Observe la carte du Mini-Atlas et repère la zone où Akoose est principalement parlé.",
+          "Recopie et complète : Akoose appartient à la famille ___. Elle est surtout parlée dans la région ___.",
+          "Selon le Mini-Atlas, combien de langues vivantes compte la région de Akoose ? Note ce chiffre.",
           "Enquête : demande à un adulte le nom de la langue dans laquelle il a été élevé et où elle est parlée.",
           "Mémorise : **dialecte** = variante intelligible d'une même langue ; **langue nationale** = langue d'une ethnie ne dépassant pas les frontières d'un État (ACA LAN)."
         ],
-        "memo": "Le Cameroun compte environ **280 langues** selon le Mini-Atlas LACAGEO. Mvélé appartient à une famille linguistique camerounaise et possède ses propres variantes dialectales. Selon l'ACA LAN, une langue nationale est une langue d'ethnie ne dépassant pas les frontières d'un État."
+        "memo": "Le Cameroun compte environ **280 langues** selon le Mini-Atlas LACAGEO. Akoose appartient à une famille linguistique camerounaise et possède ses propres variantes dialectales. Selon l'ACA LAN, une langue nationale est une langue d'ethnie ne dépassant pas les frontières d'un État."
       },
       "emacResources": []
     },
@@ -55,8 +55,8 @@
       "objectives": [
         "Citer les grandes aires linguistiques du Cameroun",
         "Lire et interpréter un extrait d'atlas linguistique (ALCAM / Mini-Atlas)",
-        "Classer Mvélé selon ses critères typologiques",
-        "Produire un court texte de présentation de Mvélé"
+        "Classer Akoose selon ses critères typologiques",
+        "Produire un court texte de présentation de Akoose"
       ],
       "vocabulary": [],
       "teacher": {
@@ -64,23 +64,23 @@
         "steps": [
           "**Mise en contexte :** Revenir sur les définitions. Combien de familles linguistiques les élèves se rappellent-ils ?",
           "**Présentation :** Les 8 familles linguistiques mondiales selon l'Ethnologue (Niger-Kordofan, Nilo-Saharienne, Afro-asiatique…). Situer les langues camerounaises dans cet ensemble.",
-          "**Explication :** Montrer comment retrouver Mvélé dans l'ALCAM : code ISO, famille, localisation.",
-          "**Pratique guidée :** En binôme, les élèves cherchent 3 langues voisines de Mvélé et notent leurs codes ISO.",
-          "**Production :** Paragraphe de 5 lignes présentant Mvélé (famille, région, locuteurs, particularité)."
+          "**Explication :** Montrer comment retrouver Akoose dans l'ALCAM : code ISO, famille, localisation.",
+          "**Pratique guidée :** En binôme, les élèves cherchent 3 langues voisines de Akoose et notent leurs codes ISO.",
+          "**Production :** Paragraphe de 5 lignes présentant Akoose (famille, région, locuteurs, particularité)."
         ],
         "freedom": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques.",
         "tips": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques."
       },
       "student": {
-        "intro": "Un atlas linguistique est une carte spécialisée. L'ALCAM (Atlas des Langues du Cameroun) et le Mini-Atlas LACAGEO te permettent de situer Mvélé précisément.",
+        "intro": "Un atlas linguistique est une carte spécialisée. L'ALCAM (Atlas des Langues du Cameroun) et le Mini-Atlas LACAGEO te permettent de situer Akoose précisément.",
         "activities": [
-          "Dans la carte du Mini-Atlas, repère Mvélé et note sa région administrative.",
-          "Liste 3 langues dont la zone est contiguë à celle de Mvélé.",
+          "Dans la carte du Mini-Atlas, repère Akoose et note sa région administrative.",
+          "Liste 3 langues dont la zone est contiguë à celle de Akoose.",
           "Classe ces 4 langues dans un tableau : Langue | Famille | Région principale.",
-          "Rédige un paragraphe de présentation de Mvélé avec au moins 5 informations tirées de l'atlas.",
+          "Rédige un paragraphe de présentation de Akoose avec au moins 5 informations tirées de l'atlas.",
           "Mémorise : **ISO 639** = codes internationaux des langues ; **ALCAM** = Atlas des Langues du Cameroun."
         ],
-        "memo": "L'**ALCAM** et le **Mini-Atlas LACAGEO** recensent et localisent toutes les langues nationales du Cameroun. Le Cameroun compte 8 familles linguistiques principales. Mvélé y figure avec sa famille et sa localisation. Savoir lire un atlas linguistique, c'est lire l'histoire des peuples."
+        "memo": "L'**ALCAM** et le **Mini-Atlas LACAGEO** recensent et localisent toutes les langues nationales du Cameroun. Le Cameroun compte 8 familles linguistiques principales. Akoose y figure avec sa famille et sa localisation. Savoir lire un atlas linguistique, c'est lire l'histoire des peuples."
       },
       "emacResources": []
     },
@@ -89,66 +89,22 @@
       "code": "II.1",
       "module": "M2-segmentaux",
       "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
-      "title": "Voyelles de Mvélé",
+      "title": "Voyelles de Akoose",
       "anelcac": "Voyelles AGLC — simples, spécifiques, complexes",
       "duration": "60 min",
       "level": "6e",
       "objectives": [
-        "Identifier les voyelles simples du système phonologique de Mvélé",
+        "Identifier les voyelles simples du système phonologique de Akoose",
         "Reconnaître les voyelles spécifiques absentes du français",
         "Prononcer correctement les voyelles en contexte de mot",
         "Transcrire des mots comportant des voyelles selon l'AGLC"
       ],
       "vocabulary": [
         {
-          "id": "c842e1b6f077",
-          "audio": "f2ae58b04ce9669bed896d15eac5799f.mp3",
-          "langText": "mís",
-          "langWord": "mís",
-          "frenchText": "yeux",
-          "frenchWord": "yeux",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "ed1439f71c7e",
-          "audio": "5f4deaa0fde92a61cc788fce712a8c71.mp3",
-          "langText": "mɔ́",
-          "langWord": "mɔ́",
-          "frenchText": "bras",
-          "frenchWord": "bras",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "d06453f60f0d",
-          "audio": "1c2783fe59bcbe2d074e7a1f2303f9d6.mp3",
-          "langText": "mɔ́p",
-          "langWord": "mɔ́p",
-          "frenchText": "nombrils",
-          "frenchWord": "nombrils",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "eada46fdfc22",
-          "audio": "b0ec7a62f21ea41c9940fcb69a6e6849.mp3",
-          "langText": "bòt",
-          "langWord": "bòt",
-          "frenchText": "personnes",
-          "frenchWord": "personnes",
-          "pos": "n",
-          "classNoun": "2",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "de6580c60838",
-          "audio": "9f70b418636e1d91964b0680fdf1c9ea.mp3",
-          "langText": "mə̀sup",
-          "langWord": "mə̀sup",
+          "id": "14232b54f087",
+          "audio": "0717288889d9b3e40111788ae3b89e85.mp3",
+          "langText": "děd ᷆",
+          "langWord": "děd ᷆",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -156,34 +112,89 @@
           "module": "M2-segmentaux"
         },
         {
-          "id": "6081ebfb4c93",
-          "audio": "ad8a190685808598dfad1291ea9b0f94.mp3",
-          "langText": "bitɛ́",
-          "langWord": "bitɛ́",
-          "frenchText": "les hommes partent à la guerre",
-          "frenchWord": "guerre",
+          "id": "2a6091ed3911",
+          "audio": "69f130b543df3d57980b7b7711309ed4.mp3",
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
           "pos": "n",
-          "classNoun": "8",
+          "classNoun": "-",
           "module": "M2-segmentaux"
         },
         {
-          "id": "1f73d15f89a2",
-          "audio": "8fb616ac3bfa32006a8199ad082aec5c.mp3",
-          "langText": "zɔ̀k",
-          "langWord": "zɔ̀k",
-          "frenchText": "il craint les éléphants",
-          "frenchWord": "éléphant",
+          "id": "9bd1e02cead6",
+          "audio": "cfda5b5dddc8683e810be0b6f346790e.mp3",
+          "langText": "mû",
+          "langWord": "mû",
+          "frenchText": "nez",
+          "frenchWord": "nez",
           "pos": "n",
-          "classNoun": "9",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "09e5c463f609",
+          "audio": "45c3eaa2211be68c402a0f4f46d2a944.mp3",
+          "langText": "abî",
+          "langWord": "abî",
+          "frenchText": "sein",
+          "frenchWord": "sein",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "5c0fb4ae92dd",
+          "audio": "39be65fb8cbe18f8e523ce6ff5f8c5c8.mp3",
+          "langText": "mətoŋ",
+          "langWord": "mətoŋ",
+          "frenchText": "nombrils",
+          "frenchWord": "nombrils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "15770cf47956",
+          "audio": "613cbbf47769aa82710c7bbc2d3426e7.mp3",
+          "langText": "mòd'",
+          "langWord": "mòd'",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "62eac55687e1",
+          "audio": "b048ff883e9e7c38edeb26d384e5f0bd.mp3",
+          "langText": "ɲǎ̰",
+          "langWord": "ɲǎ̰",
+          "frenchText": "leur mère est morte depuis quatre ans",
+          "frenchWord": "mère",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "bef2f64818f2",
+          "audio": "0db62a4fe264167eaa40f13dc879c0c8.mp3",
+          "langText": "mwǎn",
+          "langWord": "mwǎn",
+          "frenchText": "enfant",
+          "frenchWord": "enfant",
+          "pos": "n",
+          "classNoun": "-",
           "module": "M2-segmentaux"
         }
       ],
       "teacher": {
-        "intro": "Leçon : Voyelles de Mvélé. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
+        "intro": "Leçon : Voyelles de Akoose. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
         "steps": [
-          "**Mise en contexte :** Écrire au tableau des mots connus en Mvélé et demander quels sons les élèves entendent.",
-          "**Présentation :** Introduire l'AGLC. Écrire les voyelles simples de Mvélé au tableau en les articulant clairement.",
-          "**Explication :** Voyelles spécifiques de Mvélé absentes du français (nasales, d'aperture particulière…). Exercices d'écoute et répétition.",
+          "**Mise en contexte :** Écrire au tableau des mots connus en Akoose et demander quels sons les élèves entendent.",
+          "**Présentation :** Introduire l'AGLC. Écrire les voyelles simples de Akoose au tableau en les articulant clairement.",
+          "**Explication :** Voyelles spécifiques de Akoose absentes du français (nasales, d'aperture particulière…). Exercices d'écoute et répétition.",
           "**Application :** Liste de 10 mots — les élèves soulignent les voyelles et indiquent : simple ou spécifique.",
           "**Évaluation :** Dictée de 5 mots simples — les élèves les transcrivent avec les voyelles correctes."
         ],
@@ -191,15 +202,15 @@
         "tips": "Utiliser les exemples du vocabulaire ALCAM de la plateforme. Pour chaque voyelle spécifique, donner un mot-clé mémorisable."
       },
       "student": {
-        "intro": "Chaque langue a ses propres sons. En Mvélé, certaines voyelles n'existent pas en français. Cette leçon t'apprend à les entendre, les prononcer et les écrire.",
+        "intro": "Chaque langue a ses propres sons. En Akoose, certaines voyelles n'existent pas en français. Cette leçon t'apprend à les entendre, les prononcer et les écrire.",
         "activities": [
-          "Écoute les enregistrements du vocabulaire Mvélé et identifie les voyelles que tu entends.",
-          "Classe les voyelles : **Communes avec le français** | **Propres à Mvélé**.",
+          "Écoute les enregistrements du vocabulaire Akoose et identifie les voyelles que tu entends.",
+          "Classe les voyelles : **Communes avec le français** | **Propres à Akoose**.",
           "Transcris les 5 mots dictés en veillant à bien noter chaque voyelle.",
-          "Trouve 3 mots en Mvélé pour chaque voyelle spécifique et écris-les.",
+          "Trouve 3 mots en Akoose pour chaque voyelle spécifique et écris-les.",
           "Mémorise : **AGLC** = Alphabet Général des Langues Camerounaises, référence officielle."
         ],
-        "memo": "Le système vocalique de **Mvélé** comprend des voyelles simples et des voyelles spécifiques (ex. voyelles nasalisées). On les note grâce à l'**AGLC**. La maîtrise des voyelles est la base de la lecture et de l'écriture en Mvélé."
+        "memo": "Le système vocalique de **Akoose** comprend des voyelles simples et des voyelles spécifiques (ex. voyelles nasalisées). On les note grâce à l'**AGLC**. La maîtrise des voyelles est la base de la lecture et de l'écriture en Akoose."
       },
       "emacResources": []
     },
@@ -208,66 +219,22 @@
       "code": "II.2",
       "module": "M2-segmentaux",
       "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
-      "title": "Consonnes de Mvélé et production écrite",
+      "title": "Consonnes de Akoose et production écrite",
       "anelcac": "Consonnes — simples, spécifiques, complexes ; production écrite voyelles et consonnes",
       "duration": "60 min",
       "level": "6e",
       "objectives": [
-        "Identifier le système consonantique de Mvélé",
+        "Identifier le système consonantique de Akoose",
         "Reconnaître les consonnes spécifiques absentes du français",
         "Articuler correctement les consonnes en contexte",
         "Produire par écrit des mots avec voyelles et consonnes correctement notés"
       ],
       "vocabulary": [
         {
-          "id": "c842e1b6f077",
-          "audio": "f2ae58b04ce9669bed896d15eac5799f.mp3",
-          "langText": "mís",
-          "langWord": "mís",
-          "frenchText": "yeux",
-          "frenchWord": "yeux",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "ed1439f71c7e",
-          "audio": "5f4deaa0fde92a61cc788fce712a8c71.mp3",
-          "langText": "mɔ́",
-          "langWord": "mɔ́",
-          "frenchText": "bras",
-          "frenchWord": "bras",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "d06453f60f0d",
-          "audio": "1c2783fe59bcbe2d074e7a1f2303f9d6.mp3",
-          "langText": "mɔ́p",
-          "langWord": "mɔ́p",
-          "frenchText": "nombrils",
-          "frenchWord": "nombrils",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "eada46fdfc22",
-          "audio": "b0ec7a62f21ea41c9940fcb69a6e6849.mp3",
-          "langText": "bòt",
-          "langWord": "bòt",
-          "frenchText": "personnes",
-          "frenchWord": "personnes",
-          "pos": "n",
-          "classNoun": "2",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "de6580c60838",
-          "audio": "9f70b418636e1d91964b0680fdf1c9ea.mp3",
-          "langText": "mə̀sup",
-          "langWord": "mə̀sup",
+          "id": "14232b54f087",
+          "audio": "0717288889d9b3e40111788ae3b89e85.mp3",
+          "langText": "děd ᷆",
+          "langWord": "děd ᷆",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -275,50 +242,105 @@
           "module": "M2-segmentaux"
         },
         {
-          "id": "6081ebfb4c93",
-          "audio": "ad8a190685808598dfad1291ea9b0f94.mp3",
-          "langText": "bitɛ́",
-          "langWord": "bitɛ́",
-          "frenchText": "les hommes partent à la guerre",
-          "frenchWord": "guerre",
+          "id": "2a6091ed3911",
+          "audio": "69f130b543df3d57980b7b7711309ed4.mp3",
+          "langText": "ɲòŋ",
+          "langWord": "ɲòŋ",
+          "frenchText": "poil",
+          "frenchWord": "poil",
           "pos": "n",
-          "classNoun": "8",
+          "classNoun": "-",
           "module": "M2-segmentaux"
         },
         {
-          "id": "1f73d15f89a2",
-          "audio": "8fb616ac3bfa32006a8199ad082aec5c.mp3",
-          "langText": "zɔ̀k",
-          "langWord": "zɔ̀k",
-          "frenchText": "il craint les éléphants",
-          "frenchWord": "éléphant",
+          "id": "9bd1e02cead6",
+          "audio": "cfda5b5dddc8683e810be0b6f346790e.mp3",
+          "langText": "mû",
+          "langWord": "mû",
+          "frenchText": "nez",
+          "frenchWord": "nez",
           "pos": "n",
-          "classNoun": "9",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "09e5c463f609",
+          "audio": "45c3eaa2211be68c402a0f4f46d2a944.mp3",
+          "langText": "abî",
+          "langWord": "abî",
+          "frenchText": "sein",
+          "frenchWord": "sein",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "5c0fb4ae92dd",
+          "audio": "39be65fb8cbe18f8e523ce6ff5f8c5c8.mp3",
+          "langText": "mətoŋ",
+          "langWord": "mətoŋ",
+          "frenchText": "nombrils",
+          "frenchWord": "nombrils",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "15770cf47956",
+          "audio": "613cbbf47769aa82710c7bbc2d3426e7.mp3",
+          "langText": "mòd'",
+          "langWord": "mòd'",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "62eac55687e1",
+          "audio": "b048ff883e9e7c38edeb26d384e5f0bd.mp3",
+          "langText": "ɲǎ̰",
+          "langWord": "ɲǎ̰",
+          "frenchText": "leur mère est morte depuis quatre ans",
+          "frenchWord": "mère",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "bef2f64818f2",
+          "audio": "0db62a4fe264167eaa40f13dc879c0c8.mp3",
+          "langText": "mwǎn",
+          "langWord": "mwǎn",
+          "frenchText": "enfant",
+          "frenchWord": "enfant",
+          "pos": "n",
+          "classNoun": "-",
           "module": "M2-segmentaux"
         }
       ],
       "teacher": {
-        "intro": "Leçon : Consonnes de Mvélé et production écrite. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
+        "intro": "Leçon : Consonnes de Akoose et production écrite. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
         "steps": [
           "**Mise en contexte :** Rappeler les voyelles. Qu'est-ce qu'une consonne ?",
-          "**Présentation :** Tableau des consonnes de Mvélé selon l'AGLC. Insister sur les consonnes spécifiques (labio-vélaires, prénasalisées, implosives…).",
+          "**Présentation :** Tableau des consonnes de Akoose selon l'AGLC. Insister sur les consonnes spécifiques (labio-vélaires, prénasalisées, implosives…).",
           "**Explication :** Articuler les consonnes difficiles : isolément → syllabe → mot.",
           "**Application :** Paires minimales : écoute de mots qui ne diffèrent que par une consonne.",
-          "**Production :** 5 phrases simples en Mvélé avec transcription consonantique soignée."
+          "**Production :** 5 phrases simples en Akoose avec transcription consonantique soignée."
         ],
         "freedom": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées.",
         "tips": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées."
       },
       "student": {
-        "intro": "Après les voyelles, voici les consonnes de Mvélé ! Certaines sont uniques — tu ne les entendras qu'en Mvélé et dans quelques langues africaines voisines.",
+        "intro": "Après les voyelles, voici les consonnes de Akoose ! Certaines sont uniques — tu ne les entendras qu'en Akoose et dans quelques langues africaines voisines.",
         "activities": [
           "Écoute les paires minimales et coche le mot entendu (ex. bìlí / pìlí).",
           "Transcris 5 mots dictés en faisant attention aux consonnes spécifiques.",
           "Repère dans le vocabulaire tous les mots contenant une consonne prénasalisée. Combien en trouves-tu ?",
-          "Compose 3 phrases simples en Mvélé avec au moins une consonne spécifique chacune.",
+          "Compose 3 phrases simples en Akoose avec au moins une consonne spécifique chacune.",
           "Mémorise : **paire minimale** = deux mots identiques sauf en un phonème."
         ],
-        "memo": "Le système consonantique de **Mvélé** comprend des consonnes communes avec le français et des consonnes spécifiques (implosives, prénasalisées, labio-vélaires…). Les noter selon l'**AGLC** est indispensable pour la lecture et l'écriture."
+        "memo": "Le système consonantique de **Akoose** comprend des consonnes communes avec le français et des consonnes spécifiques (implosives, prénasalisées, labio-vélaires…). Les noter selon l'**AGLC** est indispensable pour la lecture et l'écriture."
       },
       "emacResources": []
     },
@@ -334,104 +356,104 @@
       "objectives": [
         "Définir le ton comme trait distinctif des langues à tons",
         "Distinguer ton lexical et ton grammatical",
-        "Identifier les tons simples de Mvélé",
+        "Identifier les tons simples de Akoose",
         "Transcrire des mots avec leurs tons selon l'AGLC"
       ],
       "vocabulary": [
         {
-          "id": "44bcd5f719e6",
-          "audio": "2806d70843e4ad9766323aa190aec958.mp3",
-          "langText": "mə̀ɲù",
-          "langWord": "mə̀ɲù",
-          "frenchText": "bouches",
-          "frenchWord": "bouches",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "be86cd5990c0",
-          "audio": "770b6070917e22cd93d6e508fa03bb26.mp3",
-          "langText": "mìló",
-          "langWord": "mìló",
-          "frenchText": "têtes",
-          "frenchWord": "têtes",
-          "pos": "n",
-          "classNoun": "4",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "ba9d56656b99",
-          "audio": "2f4cc4a7d9d7a6d23ba1b4cca76c0544.mp3",
-          "langText": "mì mvòát",
-          "langWord": "mì mvòát",
-          "frenchText": "poils",
-          "frenchWord": "poils",
-          "pos": "n",
-          "classNoun": "4",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "96958baacd55",
-          "audio": "1c40db0bcf65f8dae04ec78ab2f60597.mp3",
-          "langText": "mə̀sòŋ",
-          "langWord": "mə̀sòŋ",
-          "frenchText": "dents",
-          "frenchWord": "dents",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "cc6a7d409cac",
-          "audio": "563c17f8cdd2e7a7202156450614e19e.mp3",
-          "langText": "àyém",
-          "langWord": "àyém",
-          "frenchText": "langues",
-          "frenchWord": "langues",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "49460d1ec515",
-          "audio": "1436977ea51f3c7ace76c268abeb3124.mp3",
-          "langText": "móé",
-          "langWord": "móé",
-          "frenchText": "nez",
-          "frenchWord": "nez",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "5bced48c9e53",
-          "audio": "f366c3031cfaac2cc89c4e0c96632c5e.mp3",
-          "langText": "mə̀lɔ́",
-          "langWord": "mə̀lɔ́",
-          "frenchText": "oreilles",
-          "frenchWord": "oreilles",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "a854d7801e73",
-          "audio": "892d12bc401654e0237e0733d505b1fa.mp3",
-          "langText": "mə̀kíŋ",
-          "langWord": "mə̀kíŋ",
+          "id": "95caf9b4f436",
+          "audio": "7ad095bac11846901f1e3e0fd2331f3b.mp3",
+          "langText": "nàŋ éjē édɛ́ mɔ́: yēl é hénə̀?",
+          "langWord": "nàŋ éjē édɛ́ mɔ́: yēl é hénə̀?",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
           "classNoun": "",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "f93c9cea6a8c",
+          "audio": "6c5fc7c5ea1a7ab15075b66b8dcd194e.mp3",
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "d2b6afb7c281",
+          "audio": "7149db9f6fc51c587a6db3513ef83f13.mp3",
+          "langText": "à ŋkwàɣə́l écém",
+          "langWord": "ècém",
+          "frenchText": "il s'est mordu la langue",
+          "frenchWord": "langue",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "d317c12643e3",
+          "audio": "79604ab44f131ab767da26be6753069d.mp3",
+          "langText": "è'cém",
+          "langWord": "è'cém",
+          "frenchText": "langues",
+          "frenchWord": "langues",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "18511ab4ab59",
+          "audio": "bf9c136b752e2a7e12476284479b36f8.mp3",
+          "langText": "à wɔ́mɛ̀ dû",
+          "langWord": "dû",
+          "frenchText": "il se gratte le nez",
+          "frenchWord": "nez",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "433fda058f95",
+          "audio": "dc7b703c3275dafe707814e5bca74c21.mp3",
+          "langText": "mə̀bòl",
+          "langWord": "mə̀bòl",
+          "frenchText": "cous",
+          "frenchWord": "cous",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "52354e100415",
+          "audio": "af3f31eb3e7b9b61af5cb6532782939a.mp3",
+          "langText": "mə̀ká:",
+          "langWord": "mə̀ká:",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "4ba5db4f8354",
+          "audio": "88ae6b89c204cc0e64b8c3cb765f2e23.mp3",
+          "langText": "mə̀kù:",
+          "langWord": "mə̀kù:",
+          "frenchText": "jambes",
+          "frenchWord": "jambes",
+          "pos": "n",
+          "classNoun": "-",
           "module": "M3-suprasegmentaux"
         }
       ],
       "teacher": {
         "intro": "Leçon : Définition et fonction des tons. Module : Module III — Phonologie suprasegmentale : les tons.",
         "steps": [
-          "**Mise en contexte :** Prononcer deux mots de Mvélé qui s'écrivent pareil mais ont des tons différents et des sens différents.",
-          "**Présentation :** Définir le ton. Présenter les tons simples de Mvélé et leurs diacritiques AGLC.",
+          "**Mise en contexte :** Prononcer deux mots de Akoose qui s'écrivent pareil mais ont des tons différents et des sens différents.",
+          "**Présentation :** Définir le ton. Présenter les tons simples de Akoose et leurs diacritiques AGLC.",
           "**Explication :** Tons simples : haut (´), bas (`), moyen (¯). Faire répéter chaque ton.",
           "**Application :** Associer des mots enregistrés à leur notation tonale.",
           "**Évaluation :** Dictée de 5 mots — les élèves notent les tons."
@@ -440,7 +462,7 @@
         "tips": "Chanter les tons aide à les mémoriser. Utiliser une flûte ou siffler les mélodies tonales."
       },
       "student": {
-        "intro": "Mvélé est une langue à tons : la hauteur de ta voix change le sens du mot ! Tu vas apprendre à entendre et noter ces tons.",
+        "intro": "Akoose est une langue à tons : la hauteur de ta voix change le sens du mot ! Tu vas apprendre à entendre et noter ces tons.",
         "activities": [
           "Écoute les paires de mots. Pour chaque paire, les tons sont-ils identiques ou différents ?",
           "Transcris 5 mots avec leurs tons en utilisant les diacritiques AGLC (´ ` ¯).",
@@ -448,7 +470,7 @@
           "Chante les tons d'un mot de 3 syllabes en Haut-Bas-Haut, puis Bas-Haut-Bas. Quelle différence entends-tu ?",
           "Mémorise : ton haut = ´ ; ton bas = ` ; ton moyen = ¯."
         ],
-        "memo": "En **Mvélé**, le ton est phonologique : il distingue des mots de sens différents. Les **tons simples** sont le haut (´), le bas (`), et parfois le moyen (¯). On les note grâce aux diacritiques de l'**AGLC**."
+        "memo": "En **Akoose**, le ton est phonologique : il distingue des mots de sens différents. Les **tons simples** sont le haut (´), le bas (`), et parfois le moyen (¯). On les note grâce aux diacritiques de l'**AGLC**."
       },
       "emacResources": []
     },
@@ -462,98 +484,98 @@
       "duration": "60 min",
       "level": "5e",
       "objectives": [
-        "Identifier les tons complexes de Mvélé (montant, descendant)",
+        "Identifier les tons complexes de Akoose (montant, descendant)",
         "Trouver le ton d'un mot par la méthode d'isolement",
         "Transcrire des phrases avec notation tonale complète",
-        "Produire un court texte en Mvélé avec tons corrects"
+        "Produire un court texte en Akoose avec tons corrects"
       ],
       "vocabulary": [
         {
-          "id": "44bcd5f719e6",
-          "audio": "2806d70843e4ad9766323aa190aec958.mp3",
-          "langText": "mə̀ɲù",
-          "langWord": "mə̀ɲù",
-          "frenchText": "bouches",
-          "frenchWord": "bouches",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "be86cd5990c0",
-          "audio": "770b6070917e22cd93d6e508fa03bb26.mp3",
-          "langText": "mìló",
-          "langWord": "mìló",
-          "frenchText": "têtes",
-          "frenchWord": "têtes",
-          "pos": "n",
-          "classNoun": "4",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "ba9d56656b99",
-          "audio": "2f4cc4a7d9d7a6d23ba1b4cca76c0544.mp3",
-          "langText": "mì mvòát",
-          "langWord": "mì mvòát",
-          "frenchText": "poils",
-          "frenchWord": "poils",
-          "pos": "n",
-          "classNoun": "4",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "96958baacd55",
-          "audio": "1c40db0bcf65f8dae04ec78ab2f60597.mp3",
-          "langText": "mə̀sòŋ",
-          "langWord": "mə̀sòŋ",
-          "frenchText": "dents",
-          "frenchWord": "dents",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "cc6a7d409cac",
-          "audio": "563c17f8cdd2e7a7202156450614e19e.mp3",
-          "langText": "àyém",
-          "langWord": "àyém",
-          "frenchText": "langues",
-          "frenchWord": "langues",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "49460d1ec515",
-          "audio": "1436977ea51f3c7ace76c268abeb3124.mp3",
-          "langText": "móé",
-          "langWord": "móé",
-          "frenchText": "nez",
-          "frenchWord": "nez",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "5bced48c9e53",
-          "audio": "f366c3031cfaac2cc89c4e0c96632c5e.mp3",
-          "langText": "mə̀lɔ́",
-          "langWord": "mə̀lɔ́",
-          "frenchText": "oreilles",
-          "frenchWord": "oreilles",
-          "pos": "n",
-          "classNoun": "6",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "a854d7801e73",
-          "audio": "892d12bc401654e0237e0733d505b1fa.mp3",
-          "langText": "mə̀kíŋ",
-          "langWord": "mə̀kíŋ",
+          "id": "95caf9b4f436",
+          "audio": "7ad095bac11846901f1e3e0fd2331f3b.mp3",
+          "langText": "nàŋ éjē édɛ́ mɔ́: yēl é hénə̀?",
+          "langWord": "nàŋ éjē édɛ́ mɔ́: yēl é hénə̀?",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
           "classNoun": "",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "f93c9cea6a8c",
+          "audio": "6c5fc7c5ea1a7ab15075b66b8dcd194e.mp3",
+          "langText": "àsòŋ",
+          "langWord": "àsòŋ",
+          "frenchText": "dent",
+          "frenchWord": "dent",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "d2b6afb7c281",
+          "audio": "7149db9f6fc51c587a6db3513ef83f13.mp3",
+          "langText": "à ŋkwàɣə́l écém",
+          "langWord": "ècém",
+          "frenchText": "il s'est mordu la langue",
+          "frenchWord": "langue",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "d317c12643e3",
+          "audio": "79604ab44f131ab767da26be6753069d.mp3",
+          "langText": "è'cém",
+          "langWord": "è'cém",
+          "frenchText": "langues",
+          "frenchWord": "langues",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "18511ab4ab59",
+          "audio": "bf9c136b752e2a7e12476284479b36f8.mp3",
+          "langText": "à wɔ́mɛ̀ dû",
+          "langWord": "dû",
+          "frenchText": "il se gratte le nez",
+          "frenchWord": "nez",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "433fda058f95",
+          "audio": "dc7b703c3275dafe707814e5bca74c21.mp3",
+          "langText": "mə̀bòl",
+          "langWord": "mə̀bòl",
+          "frenchText": "cous",
+          "frenchWord": "cous",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "52354e100415",
+          "audio": "af3f31eb3e7b9b61af5cb6532782939a.mp3",
+          "langText": "mə̀ká:",
+          "langWord": "mə̀ká:",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M3-suprasegmentaux"
+        },
+        {
+          "id": "4ba5db4f8354",
+          "audio": "88ae6b89c204cc0e64b8c3cb765f2e23.mp3",
+          "langText": "mə̀kù:",
+          "langWord": "mə̀kù:",
+          "frenchText": "jambes",
+          "frenchWord": "jambes",
+          "pos": "n",
+          "classNoun": "-",
           "module": "M3-suprasegmentaux"
         }
       ],
@@ -563,22 +585,22 @@
           "**Mise en contexte :** Rappeler les tons simples. Annoncer que certaines syllabes portent deux tons à la suite.",
           "**Présentation :** Tons complexes : descendant (̂), montant (̌). Les faire entendre et reproduire.",
           "**Explication :** Méthode d'isolement : prononcer le mot avec un ton haut artificiel, puis bas, et écouter lequel semble naturel.",
-          "**Application :** Les élèves cherchent le ton de 10 mots en Mvélé à l'aide de la méthode d'isolement.",
-          "**Production :** Dialogue de 6 répliques en Mvélé avec notation tonale complète."
+          "**Application :** Les élèves cherchent le ton de 10 mots en Akoose à l'aide de la méthode d'isolement.",
+          "**Production :** Dialogue de 6 répliques en Akoose avec notation tonale complète."
         ],
         "freedom": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant.",
         "tips": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant."
       },
       "student": {
-        "intro": "Tu connais les tons simples. Maintenant, les tons complexes de Mvélé — des syllabes qui montent et descendent en même temps !",
+        "intro": "Tu connais les tons simples. Maintenant, les tons complexes de Akoose — des syllabes qui montent et descendent en même temps !",
         "activities": [
           "Écoute les mots enregistrés et classe-les : Ton simple | Ton complexe.",
           "Applique la méthode d'isolement à 5 mots : prononce-les haut, puis bas, et note le ton perçu.",
-          "Transcris un dialogue de 4 répliques en Mvélé avec tous les tons notés.",
-          "Produis un texte de 3 phrases en Mvélé sur une action de ta vie quotidienne, avec notation tonale.",
+          "Transcris un dialogue de 4 répliques en Akoose avec tous les tons notés.",
+          "Produis un texte de 3 phrases en Akoose sur une action de ta vie quotidienne, avec notation tonale.",
           "Mémorise : ton descendant = ̂ ; ton montant = ̌."
         ],
-        "memo": "Les **tons complexes** de **Mvélé** (descendant ̂, montant ̌) sont des mouvements mélodiques sur une seule syllabe. La **méthode d'isolement** permet de trouver le ton d'un mot inconnu. Une transcription en Mvélé sans tons est incomplète."
+        "memo": "Les **tons complexes** de **Akoose** (descendant ̂, montant ̌) sont des mouvements mélodiques sur une seule syllabe. La **méthode d'isolement** permet de trouver le ton d'un mot inconnu. Une transcription en Akoose sans tons est incomplète."
       },
       "emacResources": []
     },
@@ -592,107 +614,18 @@
       "duration": "60 min",
       "level": "5e",
       "objectives": [
-        "Identifier la structure du nom en Mvélé (base + affixes)",
-        "Reconnaître les classes nominales de Mvélé",
+        "Identifier la structure du nom en Akoose (base + affixes)",
+        "Reconnaître les classes nominales de Akoose",
         "Former le singulier et le pluriel des noms",
         "Employer les pronoms personnels correspondant aux classes nominales"
       ],
-      "vocabulary": [
-        {
-          "id": "7a2de05834a9",
-          "audio": "ee1ad49eceb6508ef34cfe082cc0d2c9.mp3",
-          "langText": "à mbə́bə̀ lə́ mùt ǹló é à ìáp kíŋ",
-          "langWord": "ǹló",
-          "frenchText": "il avait une grosse tête et un long cou.",
-          "frenchWord": "tête",
-          "pos": "n",
-          "classNoun": "3",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "96b968bcf166",
-          "audio": "b2394ad6d9575253fd22609a7df201b9.mp3",
-          "langText": "ínə̀ mə̀sòŋ mə́ mvú",
-          "langWord": "àsòŋ",
-          "frenchText": "ce sont des dents de chien.",
-          "frenchWord": "dent",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "00ace784eefb",
-          "audio": "b349803a3f0048e27048ac0a0f5ffabc.mp3",
-          "langText": "à ìà dzóé",
-          "langWord": "dʒóé",
-          "frenchText": "il se gratte le nez.",
-          "frenchWord": "nez",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "5665dac7f294",
-          "audio": "77621084e63b964cd6531f4220fa0aeb.mp3",
-          "langText": "kíŋ yé ì nə̀ ànɛ́n",
-          "langWord": "kíŋ",
-          "frenchText": "son cou est enflé",
-          "frenchWord": "cou",
-          "pos": "n",
-          "classNoun": "9",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "0c0e5202a6b4",
-          "audio": "424faf0a2b287c00fc95910da753e08e.mp3",
-          "langText": "à sòp mə̀bɛ́",
-          "langWord": "àbɛ́",
-          "frenchText": "elle se lave les seins.",
-          "frenchWord": "sein",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "2eb6fd40fa78",
-          "audio": "fd56b04277aa31ce568b7d83f7a3829d.mp3",
-          "langText": "ò bə̀lə́ ábùm ǹdzálán à mə̀ndíp",
-          "langWord": "àbùm",
-          "frenchText": "tu as le ventre plein d'eau",
-          "frenchWord": "ventre",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "7799a03da6fd",
-          "audio": "4afc7ff50c518fb196c0c3c738648c7e.mp3",
-          "langText": "à bə̀lə́ fól á wá",
-          "langWord": "fól",
-          "frenchText": "il y a une plaie au bras",
-          "frenchWord": "plaie",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "0999e1fca583",
-          "audio": "94bd4153535ea963bdc8b61d6bee0d7a.mp3",
-          "langText": "támbá îɲì ɛ́nə̀ àyàp",
-          "langWord": "támbá",
-          "frenchText": "les plumes des ailes sont longues.",
-          "frenchWord": "plume",
-          "pos": "n",
-          "classNoun": "3",
-          "module": "M4-syntagme-nominal"
-        }
-      ],
+      "vocabulary": [],
       "teacher": {
         "intro": "Leçon : La base nominale et les classes nominales. Module : Module IV — Le syntagme nominal.",
         "steps": [
-          "**Mise en contexte :** Écrire un nom en Mvélé au singulier et au pluriel. Qu'est-ce qui change ?",
+          "**Mise en contexte :** Écrire un nom en Akoose au singulier et au pluriel. Qu'est-ce qui change ?",
           "**Présentation :** Classe nominale : dans les langues bantu et bantoid, les noms sont regroupés en classes marquées par des préfixes.",
-          "**Explication :** Principales classes nominales de Mvélé avec préfixes au singulier et au pluriel.",
+          "**Explication :** Principales classes nominales de Akoose avec préfixes au singulier et au pluriel.",
           "**Application :** Tableau : singulier → pluriel pour 10 noms.",
           "**Évaluation :** Identifier la classe nominale de 5 noms."
         ],
@@ -700,15 +633,15 @@
         "tips": "Partir des noms que les élèves utilisent déjà. Les classes nominales corresponden souvent à des catégories sémantiques (humains, animaux, objets…)."
       },
       "student": {
-        "intro": "En Mvélé, les noms sont organisés en **classes**. Chaque classe a ses propres préfixes pour le singulier et le pluriel — un système beaucoup plus riche que le genre en français !",
+        "intro": "En Akoose, les noms sont organisés en **classes**. Chaque classe a ses propres préfixes pour le singulier et le pluriel — un système beaucoup plus riche que le genre en français !",
         "activities": [
-          "À partir du vocabulaire Mvélé, fais un tableau : Singulier | Pluriel | Classe nominale.",
+          "À partir du vocabulaire Akoose, fais un tableau : Singulier | Pluriel | Classe nominale.",
           "Identifie le préfixe de classe dans chaque nom. Surligne-le.",
           "Mets au pluriel les 5 noms suivants en changeant le préfixe selon la classe.",
           "Associe chaque nom à son pronom de classe correspondant.",
           "Mémorise : **classe nominale** = catégorie grammaticale des noms, marquée par des préfixes."
         ],
-        "memo": "En **Mvélé**, les noms sont organisés en **classes nominales** marquées par des préfixes. Le changement de préfixe indique le nombre. Pronoms, adjectifs et verbes s'accordent avec la classe du nom."
+        "memo": "En **Akoose**, les noms sont organisés en **classes nominales** marquées par des préfixes. Le changement de préfixe indique le nombre. Pronoms, adjectifs et verbes s'accordent avec la classe du nom."
       },
       "emacResources": []
     },
@@ -722,123 +655,34 @@
       "duration": "60 min",
       "level": "5e",
       "objectives": [
-        "Identifier les différents types de déterminants en Mvélé",
+        "Identifier les différents types de déterminants en Akoose",
         "Accorder les déterminants avec le nom selon la classe nominale",
         "Construire des syntagmes nominaux complexes",
         "Produire des phrases avec SN complets"
       ],
-      "vocabulary": [
-        {
-          "id": "7a2de05834a9",
-          "audio": "ee1ad49eceb6508ef34cfe082cc0d2c9.mp3",
-          "langText": "à mbə́bə̀ lə́ mùt ǹló é à ìáp kíŋ",
-          "langWord": "ǹló",
-          "frenchText": "il avait une grosse tête et un long cou.",
-          "frenchWord": "tête",
-          "pos": "n",
-          "classNoun": "3",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "96b968bcf166",
-          "audio": "b2394ad6d9575253fd22609a7df201b9.mp3",
-          "langText": "ínə̀ mə̀sòŋ mə́ mvú",
-          "langWord": "àsòŋ",
-          "frenchText": "ce sont des dents de chien.",
-          "frenchWord": "dent",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "00ace784eefb",
-          "audio": "b349803a3f0048e27048ac0a0f5ffabc.mp3",
-          "langText": "à ìà dzóé",
-          "langWord": "dʒóé",
-          "frenchText": "il se gratte le nez.",
-          "frenchWord": "nez",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "5665dac7f294",
-          "audio": "77621084e63b964cd6531f4220fa0aeb.mp3",
-          "langText": "kíŋ yé ì nə̀ ànɛ́n",
-          "langWord": "kíŋ",
-          "frenchText": "son cou est enflé",
-          "frenchWord": "cou",
-          "pos": "n",
-          "classNoun": "9",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "0c0e5202a6b4",
-          "audio": "424faf0a2b287c00fc95910da753e08e.mp3",
-          "langText": "à sòp mə̀bɛ́",
-          "langWord": "àbɛ́",
-          "frenchText": "elle se lave les seins.",
-          "frenchWord": "sein",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "2eb6fd40fa78",
-          "audio": "fd56b04277aa31ce568b7d83f7a3829d.mp3",
-          "langText": "ò bə̀lə́ ábùm ǹdzálán à mə̀ndíp",
-          "langWord": "àbùm",
-          "frenchText": "tu as le ventre plein d'eau",
-          "frenchWord": "ventre",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "7799a03da6fd",
-          "audio": "4afc7ff50c518fb196c0c3c738648c7e.mp3",
-          "langText": "à bə̀lə́ fól á wá",
-          "langWord": "fól",
-          "frenchText": "il y a une plaie au bras",
-          "frenchWord": "plaie",
-          "pos": "n",
-          "classNoun": "5",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "0999e1fca583",
-          "audio": "94bd4153535ea963bdc8b61d6bee0d7a.mp3",
-          "langText": "támbá îɲì ɛ́nə̀ àyàp",
-          "langWord": "támbá",
-          "frenchText": "les plumes des ailes sont longues.",
-          "frenchWord": "plume",
-          "pos": "n",
-          "classNoun": "3",
-          "module": "M4-syntagme-nominal"
-        }
-      ],
+      "vocabulary": [],
       "teacher": {
         "intro": "Leçon : Les déterminants du nom. Module : Module IV — Le syntagme nominal.",
         "steps": [
           "**Mise en contexte :** Écrire un SN simple. Comment l'enrichir ?",
-          "**Présentation :** Déterminants de Mvélé : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs.",
+          "**Présentation :** Déterminants de Akoose : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs.",
           "**Explication :** Chaque déterminant s'accorde avec la classe du nom (même préfixe ou suffixe de classe).",
           "**Application :** Compléter des SN avec le bon déterminant selon la classe.",
           "**Production :** 5 SN complexes (nom + 2 déterminants) intégrés dans des phrases."
         ],
-        "freedom": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Mvélé par rapport au français.",
-        "tips": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Mvélé par rapport au français."
+        "freedom": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Akoose par rapport au français.",
+        "tips": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Akoose par rapport au français."
       },
       "student": {
-        "intro": "Un nom avec ses déterminants devient beaucoup plus précis ! En Mvélé, les déterminants s'accordent avec la **classe du nom**.",
+        "intro": "Un nom avec ses déterminants devient beaucoup plus précis ! En Akoose, les déterminants s'accordent avec la **classe du nom**.",
         "activities": [
           "Complète les SN avec le bon déterminant possessif selon la classe du nom.",
-          "Souligne les déterminants dans 5 phrases en Mvélé et identifie leur type.",
+          "Souligne les déterminants dans 5 phrases en Akoose et identifie leur type.",
           "Transforme chaque SN simple en SN complexe en ajoutant un démonstratif et un numéral.",
-          "Rédige 5 phrases en Mvélé avec au moins deux déterminants par SN.",
+          "Rédige 5 phrases en Akoose avec au moins deux déterminants par SN.",
           "Mémorise : **accord de classe** = le déterminant change de forme selon la classe nominale."
         ],
-        "memo": "En **Mvélé**, tous les déterminants (possessifs, démonstratifs, numéraux, indéfinis, interrogatifs) s'accordent avec la **classe nominale** du nom. Un **SN complexe** = nom + base nominale + déterminants accordés."
+        "memo": "En **Akoose**, tous les déterminants (possessifs, démonstratifs, numéraux, indéfinis, interrogatifs) s'accordent avec la **classe nominale** du nom. Un **SN complexe** = nom + base nominale + déterminants accordés."
       },
       "emacResources": []
     },
@@ -852,7 +696,7 @@
       "duration": "60 min",
       "level": "4e",
       "objectives": [
-        "Identifier le radical verbal et les affixes de conjugaison en Mvélé",
+        "Identifier le radical verbal et les affixes de conjugaison en Akoose",
         "Conjuguer un verbe aux principaux temps verbaux",
         "Analyser la structure morphologique d'une forme verbale",
         "Employer correctement les formes verbales dans des phrases"
@@ -861,25 +705,25 @@
       "teacher": {
         "intro": "Leçon : Le radical verbal et la conjugaison. Module : Module V — Le syntagme verbal.",
         "steps": [
-          "**Mise en contexte :** Écrire une forme verbale en Mvélé et demander aux élèves d'identifier le radical.",
+          "**Mise en contexte :** Écrire une forme verbale en Akoose et demander aux élèves d'identifier le radical.",
           "**Présentation :** Décomposer une forme verbale : préfixe de sujet + marqueurs TAM + radical + suffixes.",
-          "**Explication :** Paradigme de conjugaison d'un verbe fréquent en Mvélé à plusieurs temps.",
+          "**Explication :** Paradigme de conjugaison d'un verbe fréquent en Akoose à plusieurs temps.",
           "**Application :** Conjugaison tableau : 3 verbes fréquents.",
-          "**Évaluation :** Traduire 5 phrases du français vers Mvélé."
+          "**Évaluation :** Traduire 5 phrases du français vers Akoose."
         ],
-        "freedom": "Le système TAM de Mvélé est souvent plus riche que celui du français. Commencer par les temps les plus usités.",
-        "tips": "Le système TAM de Mvélé est souvent plus riche que celui du français. Commencer par les temps les plus usités."
+        "freedom": "Le système TAM de Akoose est souvent plus riche que celui du français. Commencer par les temps les plus usités.",
+        "tips": "Le système TAM de Akoose est souvent plus riche que celui du français. Commencer par les temps les plus usités."
       },
       "student": {
-        "intro": "Le verbe est le cœur de la phrase en Mvélé. Il porte à lui seul le temps, l'aspect, le mode et le sujet ! Dans cette leçon, tu décortiques la mécanique verbale.",
+        "intro": "Le verbe est le cœur de la phrase en Akoose. Il porte à lui seul le temps, l'aspect, le mode et le sujet ! Dans cette leçon, tu décortiques la mécanique verbale.",
         "activities": [
-          "Décompose 5 formes verbales en Mvélé : préfixe de sujet | marqueur TAM | radical | suffixe.",
-          "Conjugue le verbe 'manger' en Mvélé à 3 temps différents pour toutes les personnes.",
-          "Identifie le temps verbal de 5 phrases en Mvélé et justifie ta réponse.",
-          "Traduis 3 phrases du français vers Mvélé en soignant la conjugaison.",
-          "Mémorise : **TAM** = Temps-Aspect-Mode ; c'est ce que les affixes verbaux expriment en Mvélé."
+          "Décompose 5 formes verbales en Akoose : préfixe de sujet | marqueur TAM | radical | suffixe.",
+          "Conjugue le verbe 'manger' en Akoose à 3 temps différents pour toutes les personnes.",
+          "Identifie le temps verbal de 5 phrases en Akoose et justifie ta réponse.",
+          "Traduis 3 phrases du français vers Akoose en soignant la conjugaison.",
+          "Mémorise : **TAM** = Temps-Aspect-Mode ; c'est ce que les affixes verbaux expriment en Akoose."
         ],
-        "memo": "En **Mvélé**, une forme verbale = préfixe de sujet + marqueurs TAM + radical + suffixes. Le système **TAM** (Temps-Aspect-Mode) exprime des nuances temporelles et aspectuelles plus précises qu'en français."
+        "memo": "En **Akoose**, une forme verbale = préfixe de sujet + marqueurs TAM + radical + suffixes. Le système **TAM** (Temps-Aspect-Mode) exprime des nuances temporelles et aspectuelles plus précises qu'en français."
       },
       "emacResources": []
     },
@@ -893,7 +737,7 @@
       "duration": "60 min",
       "level": "4e",
       "objectives": [
-        "Identifier et employer les principaux modes verbaux de Mvélé",
+        "Identifier et employer les principaux modes verbaux de Akoose",
         "Former la négation verbale",
         "Construire des SV simples et complexes",
         "Produire un texte avec diversité de modes et d'aspects"
@@ -902,17 +746,17 @@
       "teacher": {
         "intro": "Leçon : Modes verbaux et négation. Module : Module V — Le syntagme verbal.",
         "steps": [
-          "**Mise en contexte :** Donner un ordre en Mvélé. Quel mode est utilisé ?",
-          "**Présentation :** Modes de Mvélé : indicatif, impératif, et autres modes aspectuels.",
-          "**Explication :** Formation de la négation en Mvélé : préfixe, suffixe négatif, ou particule.",
+          "**Mise en contexte :** Donner un ordre en Akoose. Quel mode est utilisé ?",
+          "**Présentation :** Modes de Akoose : indicatif, impératif, et autres modes aspectuels.",
+          "**Explication :** Formation de la négation en Akoose : préfixe, suffixe négatif, ou particule.",
           "**Application :** Transformer 5 phrases affirmatives en négatives et vice versa.",
           "**Production :** Texte de 8 phrases alternant affirmation, négation et impératif."
         ],
-        "freedom": "La négation en Mvélé peut être double (encadrement du verbe) ou simple. Montrer les deux cas.",
-        "tips": "La négation en Mvélé peut être double (encadrement du verbe) ou simple. Montrer les deux cas."
+        "freedom": "La négation en Akoose peut être double (encadrement du verbe) ou simple. Montrer les deux cas.",
+        "tips": "La négation en Akoose peut être double (encadrement du verbe) ou simple. Montrer les deux cas."
       },
       "student": {
-        "intro": "Donner un ordre, exprimer un doute, nier une action — chaque nuance a sa forme en Mvélé !",
+        "intro": "Donner un ordre, exprimer un doute, nier une action — chaque nuance a sa forme en Akoose !",
         "activities": [
           "Mets les 5 phrases données à la forme négative.",
           "Transforme ces 5 affirmations en impératifs adressés à un ami.",
@@ -920,7 +764,7 @@
           "Rédige un dialogue de 6 répliques incluant au moins 2 impératifs et 2 négations.",
           "Mémorise : **mode** = manière d'envisager l'action ; **négation** = marque grammaticale niant l'action."
         ],
-        "memo": "En **Mvélé**, les modes principaux sont l'**indicatif** et l'**impératif**. La **négation** est marquée par une particule ou un affixe spécifique. La diversité des modes est une richesse expressive de Mvélé."
+        "memo": "En **Akoose**, les modes principaux sont l'**indicatif** et l'**impératif**. La **négation** est marquée par une particule ou un affixe spécifique. La diversité des modes est une richesse expressive de Akoose."
       },
       "emacResources": []
     },
@@ -928,23 +772,34 @@
       "id": "VI-1",
       "code": "VI.1",
       "module": "M6-phrase",
-      "moduleTitle": "Module VI — La phrase en Mvélé",
+      "moduleTitle": "Module VI — La phrase en Akoose",
       "title": "La phrase simple et ses types",
       "anelcac": "Phrase simple, interrogative, négative, impérative ; ordre des mots",
       "duration": "60 min",
       "level": "3e",
       "objectives": [
-        "Analyser la structure de la phrase simple en Mvélé",
+        "Analyser la structure de la phrase simple en Akoose",
         "Distinguer les 4 types de phrases",
         "Maîtriser l'ordre des constituants",
         "Produire des phrases simples variées"
       ],
       "vocabulary": [
         {
-          "id": "a103158cb8de",
-          "audio": "d748ad689de834cd4d2f6d26c3df9bcc.mp3",
-          "langText": "mì mvòát míé míá vín",
-          "langWord": "m̀vòát",
+          "id": "6253a0c0c2e7",
+          "audio": "101c8d0b3b9011033cfd99481e8fa29a.mp3",
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "8b9296056f41",
+          "audio": "f2fa99b1fcb405b6b2e83f3b7a4b6aab.mp3",
+          "langText": "ɓé hə́ntà:n měd ᷆",
+          "langWord": "měd ᷆",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -952,21 +807,10 @@
           "module": "M6-phrase"
         },
         {
-          "id": "221c42f8d466",
-          "audio": "aa320d8e9f6bb0b58e167328214948c4.mp3",
-          "langText": "àngə́də́k à ìà à ngə́də́k",
-          "langWord": "mìmbíɛ́n",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "4",
-          "module": "M6-phrase"
-        },
-        {
-          "id": "50fe9d338e24",
-          "audio": "7b7783c89cd70133f5ce3b3026e9501a.mp3",
-          "langText": "à sòp mə̀ kàn mə́ móán ù í",
-          "langWord": "àkàn",
+          "id": "2d051bf4268d",
+          "audio": "b3c15b8d5bb446e67119dbb5fd807e2a.mp3",
+          "langText": "à wó: ǹló m̀mə́ ŋkólɛ́ nɛ́ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -974,10 +818,21 @@
           "module": "M6-phrase"
         },
         {
-          "id": "d8354388ede6",
-          "audio": "03a37bb7cb782526b4e6c09be76a060e.mp3",
-          "langText": "mə́ fàp mə́ə́ nóàn yɛ́ɛ́lí má híè",
-          "langWord": "àfàp",
+          "id": "29222a00c3a0",
+          "audio": "a7108e1ee11c73a245c940bc114a4ae9.mp3",
+          "langText": "mə̀sòŋ mə́ mbwə́ ̄ mə́dé",
+          "langWord": "mə̀sòŋ",
+          "frenchText": "ce sont des dents de chiens",
+          "frenchWord": "dents",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "b019c3beec0d",
+          "audio": "1bcff9e3ad2ddb50f1dce304dfa1c11d.mp3",
+          "langText": "à wɔ́mɛ̀ mbéd:᷆ ə̀tû",
+          "langWord": "ètû",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -985,10 +840,32 @@
           "module": "M6-phrase"
         },
         {
-          "id": "d36486965e35",
-          "audio": "03544be58e6ed85d443d44e5b59fc134.mp3",
-          "langText": "má yɛ̌m ̀kìk ǹnóm ùé",
-          "langWord": "ǹnóm",
+          "id": "6491edf3de8a",
+          "audio": "cd37a57ee068a349223a3963fe777d83.mp3",
+          "langText": "à ɓɔ̀l á cídə́ mɔ́",
+          "langWord": "àbɔ̀l",
+          "frenchText": "son cou est enflé",
+          "frenchWord": "cou",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "a6a6a133c518",
+          "audio": "aef33c6ab3c74c6620692255f4421168.mp3",
+          "langText": "à wòpə̀ʔ ḿmə̀ mə̀bî",
+          "langWord": "mə̀bî",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "2bf2d2ad58fa",
+          "audio": "fef46a263ca8f2d81c17212016424f82.mp3",
+          "langText": "mə̀kǐ: médə́ mɔ́ ékā",
+          "langWord": "éká",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -997,27 +874,27 @@
         }
       ],
       "teacher": {
-        "intro": "Leçon : La phrase simple et ses types. Module : Module VI — La phrase en Mvélé.",
+        "intro": "Leçon : La phrase simple et ses types. Module : Module VI — La phrase en Akoose.",
         "steps": [
-          "**Mise en contexte :** Lire une phrase en Mvélé. Qui fait quoi ?",
-          "**Présentation :** Ordre de base des constituants en Mvélé. Comparer avec le français.",
+          "**Mise en contexte :** Lire une phrase en Akoose. Qui fait quoi ?",
+          "**Présentation :** Ordre de base des constituants en Akoose. Comparer avec le français.",
           "**Explication :** Les 4 types de phrases à partir d'une même phrase de base.",
           "**Application :** Transformer des phrases déclaratives en interrogatives, puis en négatives.",
           "**Production :** 8 phrases variées (2 par type) sur la vie scolaire."
         ],
-        "freedom": "L'ordre des mots en Mvélé peut différer du français. C'est une caractéristique typologique, pas une erreur.",
-        "tips": "L'ordre des mots en Mvélé peut différer du français. C'est une caractéristique typologique, pas une erreur."
+        "freedom": "L'ordre des mots en Akoose peut différer du français. C'est une caractéristique typologique, pas une erreur.",
+        "tips": "L'ordre des mots en Akoose peut différer du français. C'est une caractéristique typologique, pas une erreur."
       },
       "student": {
-        "intro": "Une phrase bien construite en Mvélé suit des règles précises. Tu apprends les types de phrases et l'ordre des mots.",
+        "intro": "Une phrase bien construite en Akoose suit des règles précises. Tu apprends les types de phrases et l'ordre des mots.",
         "activities": [
-          "Identifie l'ordre des constituants dans 5 phrases en Mvélé.",
+          "Identifie l'ordre des constituants dans 5 phrases en Akoose.",
           "Transforme 4 phrases déclaratives en interrogatives totales.",
           "Transforme ces 4 phrases en négatives.",
           "Rédige 2 phrases de chaque type (déclarative, interrogative, négative, impérative).",
-          "Mémorise : l'ordre de base en **Mvélé** est typologiquement stable."
+          "Mémorise : l'ordre de base en **Akoose** est typologiquement stable."
         ],
-        "memo": "La **phrase simple** en **Mvélé** a un ordre de constituants caractéristique. Les 4 types (déclarative, interrogative, négative, impérative) se forment avec des marques grammaticales spécifiques."
+        "memo": "La **phrase simple** en **Akoose** a un ordre de constituants caractéristique. Les 4 types (déclarative, interrogative, négative, impérative) se forment avec des marques grammaticales spécifiques."
       },
       "emacResources": []
     },
@@ -1025,23 +902,34 @@
       "id": "VI-2",
       "code": "VI.2",
       "module": "M6-phrase",
-      "moduleTitle": "Module VI — La phrase en Mvélé",
+      "moduleTitle": "Module VI — La phrase en Akoose",
       "title": "Connecteurs logiques et phrase complexe",
       "anelcac": "Connecteurs logiques, phrase complexe, coordination, subordination ; production écrite",
       "duration": "60 min",
       "level": "3e",
       "objectives": [
-        "Identifier les connecteurs logiques de Mvélé",
+        "Identifier les connecteurs logiques de Akoose",
         "Distinguer coordination et subordination",
         "Construire des phrases complexes",
         "Produire un texte cohérent avec diversité syntaxique"
       ],
       "vocabulary": [
         {
-          "id": "a103158cb8de",
-          "audio": "d748ad689de834cd4d2f6d26c3df9bcc.mp3",
-          "langText": "mì mvòát míé míá vín",
-          "langWord": "m̀vòát",
+          "id": "6253a0c0c2e7",
+          "audio": "101c8d0b3b9011033cfd99481e8fa29a.mp3",
+          "langText": "à wó mwǎ mpén mé ǹsyə̀l",
+          "langWord": "ǹsyə̀l",
+          "frenchText": "elle a une petite bouche",
+          "frenchWord": "bouche",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "8b9296056f41",
+          "audio": "f2fa99b1fcb405b6b2e83f3b7a4b6aab.mp3",
+          "langText": "ɓé hə́ntà:n měd ᷆",
+          "langWord": "měd ᷆",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -1049,21 +937,10 @@
           "module": "M6-phrase"
         },
         {
-          "id": "221c42f8d466",
-          "audio": "aa320d8e9f6bb0b58e167328214948c4.mp3",
-          "langText": "àngə́də́k à ìà à ngə́də́k",
-          "langWord": "mìmbíɛ́n",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "4",
-          "module": "M6-phrase"
-        },
-        {
-          "id": "50fe9d338e24",
-          "audio": "7b7783c89cd70133f5ce3b3026e9501a.mp3",
-          "langText": "à sòp mə̀ kàn mə́ móán ù í",
-          "langWord": "àkàn",
+          "id": "2d051bf4268d",
+          "audio": "b3c15b8d5bb446e67119dbb5fd807e2a.mp3",
+          "langText": "à wó: ǹló m̀mə́ ŋkólɛ́ nɛ́ àɓɔ̌l dɛ́ cábɛ́",
+          "langWord": "ǹló",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -1071,10 +948,21 @@
           "module": "M6-phrase"
         },
         {
-          "id": "d8354388ede6",
-          "audio": "03a37bb7cb782526b4e6c09be76a060e.mp3",
-          "langText": "mə́ fàp mə́ə́ nóàn yɛ́ɛ́lí má híè",
-          "langWord": "àfàp",
+          "id": "29222a00c3a0",
+          "audio": "a7108e1ee11c73a245c940bc114a4ae9.mp3",
+          "langText": "mə̀sòŋ mə́ mbwə́ ̄ mə́dé",
+          "langWord": "mə̀sòŋ",
+          "frenchText": "ce sont des dents de chiens",
+          "frenchWord": "dents",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "b019c3beec0d",
+          "audio": "1bcff9e3ad2ddb50f1dce304dfa1c11d.mp3",
+          "langText": "à wɔ́mɛ̀ mbéd:᷆ ə̀tû",
+          "langWord": "ètû",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -1082,10 +970,32 @@
           "module": "M6-phrase"
         },
         {
-          "id": "d36486965e35",
-          "audio": "03544be58e6ed85d443d44e5b59fc134.mp3",
-          "langText": "má yɛ̌m ̀kìk ǹnóm ùé",
-          "langWord": "ǹnóm",
+          "id": "6491edf3de8a",
+          "audio": "cd37a57ee068a349223a3963fe777d83.mp3",
+          "langText": "à ɓɔ̀l á cídə́ mɔ́",
+          "langWord": "àbɔ̀l",
+          "frenchText": "son cou est enflé",
+          "frenchWord": "cou",
+          "pos": "n",
+          "classNoun": "-",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "a6a6a133c518",
+          "audio": "aef33c6ab3c74c6620692255f4421168.mp3",
+          "langText": "à wòpə̀ʔ ḿmə̀ mə̀bî",
+          "langWord": "mə̀bî",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M6-phrase"
+        },
+        {
+          "id": "2bf2d2ad58fa",
+          "audio": "fef46a263ca8f2d81c17212016424f82.mp3",
+          "langText": "mə̀kǐ: médə́ mɔ́ ékā",
+          "langWord": "éká",
           "frenchText": "",
           "frenchWord": "",
           "pos": "",
@@ -1094,19 +1004,19 @@
         }
       ],
       "teacher": {
-        "intro": "Leçon : Connecteurs logiques et phrase complexe. Module : Module VI — La phrase en Mvélé.",
+        "intro": "Leçon : Connecteurs logiques et phrase complexe. Module : Module VI — La phrase en Akoose.",
         "steps": [
-          "**Mise en contexte :** Lire un court récit en Mvélé. Quels mots relient les phrases ?",
-          "**Présentation :** Connecteurs de Mvélé : conjonctions de coordination et de subordination.",
-          "**Explication :** Phrase complexe par coordination / par subordination. Exemples en Mvélé.",
+          "**Mise en contexte :** Lire un court récit en Akoose. Quels mots relient les phrases ?",
+          "**Présentation :** Connecteurs de Akoose : conjonctions de coordination et de subordination.",
+          "**Explication :** Phrase complexe par coordination / par subordination. Exemples en Akoose.",
           "**Application :** Relier 5 paires de phrases simples avec le connecteur approprié.",
           "**Production :** Texte de 10 phrases sur 'Une journée dans mon village' avec 5 connecteurs différents."
         ],
-        "freedom": "Les connecteurs de Mvélé ont souvent des équivalents français mais avec des positions syntaxiques différentes.",
-        "tips": "Les connecteurs de Mvélé ont souvent des équivalents français mais avec des positions syntaxiques différentes."
+        "freedom": "Les connecteurs de Akoose ont souvent des équivalents français mais avec des positions syntaxiques différentes.",
+        "tips": "Les connecteurs de Akoose ont souvent des équivalents français mais avec des positions syntaxiques différentes."
       },
       "student": {
-        "intro": "Pour raconter et argumenter, tu as besoin de relier tes phrases. Les **connecteurs logiques** de Mvélé sont tes outils !",
+        "intro": "Pour raconter et argumenter, tu as besoin de relier tes phrases. Les **connecteurs logiques** de Akoose sont tes outils !",
         "activities": [
           "Souligne tous les connecteurs dans le texte fourni.",
           "Classe-les : Addition | Cause | Conséquence | Opposition | Temps.",
@@ -1114,7 +1024,7 @@
           "Rédige un texte de 8 phrases avec au moins 4 connecteurs différents.",
           "Mémorise : coordination = même niveau ; subordination = une phrase dans une autre."
         ],
-        "memo": "En **Mvélé**, les **connecteurs logiques** permettent de construire des **phrases complexes** cohérentes. Varier les structures syntaxiques améliore la qualité de l'expression écrite et orale."
+        "memo": "En **Akoose**, les **connecteurs logiques** permettent de construire des **phrases complexes** cohérentes. Varier les structures syntaxiques améliore la qualité de l'expression écrite et orale."
       },
       "emacResources": []
     },
@@ -1123,23 +1033,23 @@
       "code": "VII.1",
       "module": "M7-quotidien1",
       "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
-      "title": "Se saluer, se présenter et interagir en Mvélé",
+      "title": "Se saluer, se présenter et interagir en Akoose",
       "anelcac": "Situations de communication quotidienne : salutations, présentations, formules de politesse",
       "duration": "60 min",
       "level": "4e",
       "objectives": [
         "Maîtriser les formules de salutation selon le contexte",
-        "Se présenter et présenter quelqu'un en Mvélé",
+        "Se présenter et présenter quelqu'un en Akoose",
         "Employer les formules de politesse et de respect",
         "Mener une brève conversation de la vie courante"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Se saluer, se présenter et interagir en Mvélé. Module : Module VII — Gestion du quotidien (Niveau 1).",
+        "intro": "Leçon : Se saluer, se présenter et interagir en Akoose. Module : Module VII — Gestion du quotidien (Niveau 1).",
         "steps": [
-          "**Mise en contexte :** Deux élèves se rencontrent au marché. Jouer la scène en français, puis demander comment dire en Mvélé.",
-          "**Présentation :** Salutations de Mvélé selon les moments de la journée, l'âge et le contexte.",
-          "**Explication :** Formules de respect envers les aînés, spécifiques à la culture Mvélé.",
+          "**Mise en contexte :** Deux élèves se rencontrent au marché. Jouer la scène en français, puis demander comment dire en Akoose.",
+          "**Présentation :** Salutations de Akoose selon les moments de la journée, l'âge et le contexte.",
+          "**Explication :** Formules de respect envers les aînés, spécifiques à la culture Akoose.",
           "**Jeu de rôle :** Par groupes de 2, simuler des rencontres dans des contextes variés (marché, école, cérémonie).",
           "**Production :** Dialogue de 10 répliques entre deux personnes de générations différentes."
         ],
@@ -1147,15 +1057,15 @@
         "tips": "Les règles de salutation reflètent des valeurs culturelles profondes. Valoriser les connaissances des élèves issus de familles locutrices."
       },
       "student": {
-        "intro": "Savoir saluer en Mvélé, c'est respecter la culture ! Les formules changent selon qui tu salues et à quel moment.",
+        "intro": "Savoir saluer en Akoose, c'est respecter la culture ! Les formules changent selon qui tu salues et à quel moment.",
         "activities": [
-          "Complète le tableau des salutations de Mvélé : Moment | Formule | Réponse attendue.",
+          "Complète le tableau des salutations de Akoose : Moment | Formule | Réponse attendue.",
           "Joue le rôle A : saluer un aîné au marché du matin.",
           "Invente un dialogue de 8 répliques entre un enfant et son grand-père.",
-          "Note 3 formules de politesse de Mvélé sans équivalent direct en français.",
-          "Mémorise les formules de salutation du matin, du soir et pour les aînés en Mvélé."
+          "Note 3 formules de politesse de Akoose sans équivalent direct en français.",
+          "Mémorise les formules de salutation du matin, du soir et pour les aînés en Akoose."
         ],
-        "memo": "Les **salutations** en **Mvélé** varient selon l'heure, le statut et le contexte social. Elles reflètent les valeurs de respect et de solidarité de la communauté."
+        "memo": "Les **salutations** en **Akoose** varient selon l'heure, le statut et le contexte social. Elles reflètent les valeurs de respect et de solidarité de la communauté."
       },
       "emacResources": []
     },
@@ -1169,7 +1079,7 @@
       "duration": "60 min",
       "level": "4e",
       "objectives": [
-        "Exprimer des besoins courants en Mvélé",
+        "Exprimer des besoins courants en Akoose",
         "Décrire des activités journalières",
         "Employer le vocabulaire des lieux et actions de la vie courante",
         "Produire un texte descriptif sur une journée type"
@@ -1178,25 +1088,25 @@
       "teacher": {
         "intro": "Leçon : Exprimer les besoins et les actions du quotidien. Module : Module VII — Gestion du quotidien (Niveau 1).",
         "steps": [
-          "**Mise en contexte :** Images de scènes de vie — marché, champ, école, maison. Comment les décrire en Mvélé ?",
+          "**Mise en contexte :** Images de scènes de vie — marché, champ, école, maison. Comment les décrire en Akoose ?",
           "**Présentation :** Vocabulaire thématique : alimentation, déplacements, activités domestiques.",
-          "**Simulation :** Scène du marché : acheteur et vendeur en Mvélé.",
-          "**Application :** Décrire sa journée en Mvélé (du lever au coucher).",
-          "**Production :** Texte de 10 phrases : 'Ma journée en Mvélé'."
+          "**Simulation :** Scène du marché : acheteur et vendeur en Akoose.",
+          "**Application :** Décrire sa journée en Akoose (du lever au coucher).",
+          "**Production :** Texte de 10 phrases : 'Ma journée en Akoose'."
         ],
         "freedom": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles.",
         "tips": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles."
       },
       "student": {
-        "intro": "Tu sais te saluer. Maintenant, tu vas te débrouiller dans des situations du quotidien en Mvélé : au marché, en route, à la maison.",
+        "intro": "Tu sais te saluer. Maintenant, tu vas te débrouiller dans des situations du quotidien en Akoose : au marché, en route, à la maison.",
         "activities": [
-          "Associe chaque image de scène de vie au mot ou à la phrase correspondant en Mvélé.",
-          "Joue le rôle du vendeur au marché : réponds aux demandes en Mvélé.",
+          "Associe chaque image de scène de vie au mot ou à la phrase correspondant en Akoose.",
+          "Joue le rôle du vendeur au marché : réponds aux demandes en Akoose.",
           "Rédige 5 phrases décrivant tes activités du matin depuis le réveil.",
-          "Traduis en Mvélé ces 5 phrases sur les déplacements quotidiens.",
-          "Mémorise 10 mots du quotidien en Mvélé avec leur traduction française."
+          "Traduis en Akoose ces 5 phrases sur les déplacements quotidiens.",
+          "Mémorise 10 mots du quotidien en Akoose avec leur traduction française."
         ],
-        "memo": "Le vocabulaire du **quotidien** en **Mvélé** couvre l'alimentation, les déplacements et les activités domestiques. Le maîtriser permet une communication fonctionnelle dans tous les contextes."
+        "memo": "Le vocabulaire du **quotidien** en **Akoose** couvre l'alimentation, les déplacements et les activités domestiques. Le maîtriser permet une communication fonctionnelle dans tous les contextes."
       },
       "emacResources": []
     },
@@ -1205,39 +1115,39 @@
       "code": "VIII.1",
       "module": "M8-quotidien2",
       "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
-      "title": "Argumenter et convaincre en Mvélé",
+      "title": "Argumenter et convaincre en Akoose",
       "anelcac": "Communication élaborée : argumentation, narration, discours formel",
       "duration": "60 min",
       "level": "3e",
       "objectives": [
-        "Construire une argumentation simple en Mvélé",
+        "Construire une argumentation simple en Akoose",
         "Employer les formules du discours formel",
         "Narrer un événement passé avec cohérence",
-        "Produire un discours oral de 2 minutes en Mvélé"
+        "Produire un discours oral de 2 minutes en Akoose"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Argumenter et convaincre en Mvélé. Module : Module VIII — Gestion du quotidien (Niveau 2).",
+        "intro": "Leçon : Argumenter et convaincre en Akoose. Module : Module VIII — Gestion du quotidien (Niveau 2).",
         "steps": [
-          "**Mise en contexte :** Lire un proverbe en Mvélé. Demander aux élèves de l'expliquer et de le défendre.",
-          "**Présentation :** Formules du discours oral formel en Mvélé : apostrophes, ouverture, clôture.",
+          "**Mise en contexte :** Lire un proverbe en Akoose. Demander aux élèves de l'expliquer et de le défendre.",
+          "**Présentation :** Formules du discours oral formel en Akoose : apostrophes, ouverture, clôture.",
           "**Explication :** Structure d'une argumentation : thèse → arguments → exemples → conclusion.",
-          "**Pratique :** Débat : pour ou contre l'utilisation du Mvélé à l'école ? Chaque groupe défend sa position.",
+          "**Pratique :** Débat : pour ou contre l'utilisation du Akoose à l'école ? Chaque groupe défend sa position.",
           "**Production :** Discours de 2 minutes sur un thème proposé."
         ],
         "freedom": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves.",
         "tips": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves."
       },
       "student": {
-        "intro": "Dans les cultures de Mvélé, la parole bien dite est une force. Tu apprends à argumenter et convaincre avec éloquence.",
+        "intro": "Dans les cultures de Akoose, la parole bien dite est une force. Tu apprends à argumenter et convaincre avec éloquence.",
         "activities": [
           "Identifie dans le texte : thèse, arguments, exemples.",
-          "Prépare 3 arguments pour défendre l'enseignement de Mvélé à l'école primaire.",
-          "Prononce un discours d'ouverture de cérémonie en Mvélé.",
-          "Narration : raconte en Mvélé un événement mémorable de ta vie scolaire.",
-          "Mémorise les formules d'ouverture et de clôture d'un discours formel en Mvélé."
+          "Prépare 3 arguments pour défendre l'enseignement de Akoose à l'école primaire.",
+          "Prononce un discours d'ouverture de cérémonie en Akoose.",
+          "Narration : raconte en Akoose un événement mémorable de ta vie scolaire.",
+          "Mémorise les formules d'ouverture et de clôture d'un discours formel en Akoose."
         ],
-        "memo": "L'**argumentation** en **Mvélé** suit : thèse → arguments → exemples → conclusion. Le **discours formel** obéit à des conventions culturelles précises. La maîtrise de l'oral élaboré est une compétence de haut niveau."
+        "memo": "L'**argumentation** en **Akoose** suit : thèse → arguments → exemples → conclusion. Le **discours formel** obéit à des conventions culturelles précises. La maîtrise de l'oral élaboré est une compétence de haut niveau."
       },
       "emacResources": []
     },
@@ -1251,7 +1161,7 @@
       "duration": "60 min",
       "level": "3e",
       "objectives": [
-        "Analyser la structure d'un conte ou d'une devinette en Mvélé",
+        "Analyser la structure d'un conte ou d'une devinette en Akoose",
         "Identifier les thèmes et valeurs véhiculés",
         "Rédiger un conte court en respectant les conventions du genre",
         "Utiliser la littérature orale comme ressource pédagogique"
@@ -1260,25 +1170,25 @@
       "teacher": {
         "intro": "Leçon : Littérature orale et production écrite avancée. Module : Module VIII — Gestion du quotidien (Niveau 2).",
         "steps": [
-          "**Mise en contexte :** Raconter ou faire écouter un conte bref en Mvélé.",
+          "**Mise en contexte :** Raconter ou faire écouter un conte bref en Akoose.",
           "**Présentation :** Genres de la littérature orale : contes, proverbes, devinettes, épopées.",
           "**Analyse :** Structure du conte : situation initiale → perturbation → péripéties → résolution → morale.",
           "**Application :** Analyser un conte fourni selon cette structure.",
-          "**Production :** Conte de 15 lignes minimum en Mvélé avec morale explicite."
+          "**Production :** Conte de 15 lignes minimum en Akoose avec morale explicite."
         ],
         "freedom": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible.",
         "tips": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible."
       },
       "student": {
-        "intro": "Les contes, proverbes et devinettes de Mvélé sont des œuvres littéraires à part entière. Tu les analyses et tu créeras le tien !",
+        "intro": "Les contes, proverbes et devinettes de Akoose sont des œuvres littéraires à part entière. Tu les analyses et tu créeras le tien !",
         "activities": [
           "Lis le conte fourni et identifie les 5 étapes de sa structure narrative.",
           "Relève 3 valeurs morales transmises par ce conte.",
-          "Traduis en français un proverbe en Mvélé et explique son sens figuré.",
-          "Rédige un conte court (15 lignes) en Mvélé avec une morale sur le travail ou le respect.",
+          "Traduis en français un proverbe en Akoose et explique son sens figuré.",
+          "Rédige un conte court (15 lignes) en Akoose avec une morale sur le travail ou le respect.",
           "Mémorise : conte = récit fictif à vocation éducative ; proverbe = formule brève de sagesse collective."
         ],
-        "memo": "La **littérature orale** de **Mvélé** (contes, proverbes, devinettes) transmet les valeurs de la communauté. Le conte a une structure en 5 étapes. La rédiger en Mvélé mobilise toutes les compétences linguistiques acquises."
+        "memo": "La **littérature orale** de **Akoose** (contes, proverbes, devinettes) transmet les valeurs de la communauté. Le conte a une structure en 5 étapes. La rédiger en Akoose mobilise toutes les compétences linguistiques acquises."
       },
       "emacResources": []
     },
@@ -1293,7 +1203,7 @@
       "level": "CN",
       "objectives": [
         "Identifier les quatre grandes aires culturelles du Cameroun",
-        "Situer la culture Mvélé dans son aire culturelle",
+        "Situer la culture Akoose dans son aire culturelle",
         "Décrire les traits distinctifs de chaque aire",
         "Valoriser la diversité culturelle comme richesse nationale"
       ],
@@ -1311,15 +1221,15 @@
         "tips": "Valoriser chaque culture. Éviter les hiérarchies culturelles. La diversité est une richesse."
       },
       "student": {
-        "intro": "Le Cameroun est 'l'Afrique en miniature' — sa diversité culturelle est extraordinaire. La culture de Mvélé s'inscrit dans une aire spécifique que tu vas découvrir.",
+        "intro": "Le Cameroun est 'l'Afrique en miniature' — sa diversité culturelle est extraordinaire. La culture de Akoose s'inscrit dans une aire spécifique que tu vas découvrir.",
         "activities": [
           "Sur la carte du Mini-Atlas, colorie les 4 aires culturelles en couleurs différentes.",
-          "Note dans quelle aire se situe la communauté Mvélé.",
+          "Note dans quelle aire se situe la communauté Akoose.",
           "Liste 3 traits culturels distinctifs de cette aire (alimentation, habitat, organisation sociale).",
           "Compare deux aires : qu'ont-elles en commun ? Qu'est-ce qui les distingue ?",
           "Mémorise les 4 grandes aires culturelles et leurs localisations."
         ],
-        "memo": "Le Cameroun compte 4 grandes **aires culturelles** : **Beti-Fang**, **Grassfields**, **Sawa** et **Soudano-sahélienne**. La communauté Mvélé s'inscrit dans l'une d'elles avec ses pratiques et valeurs spécifiques."
+        "memo": "Le Cameroun compte 4 grandes **aires culturelles** : **Beti-Fang**, **Grassfields**, **Sawa** et **Soudano-sahélienne**. La communauté Akoose s'inscrit dans l'une d'elles avec ses pratiques et valeurs spécifiques."
       },
       "emacResources": []
     },
@@ -1328,39 +1238,39 @@
       "code": "MC1.2",
       "module": "MC1-diversite-culturelle",
       "moduleTitle": "Module MC1 — Diversité culturelle camerounaise",
-      "title": "La culture Mvélé dans le contexte camerounais",
+      "title": "La culture Akoose dans le contexte camerounais",
       "anelcac": "Identité culturelle, patrimoine immatériel, langues et cultures",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
         "Définir la notion d'identité culturelle",
-        "Décrire les éléments constitutifs de la culture Mvélé",
+        "Décrire les éléments constitutifs de la culture Akoose",
         "Relier langue et culture",
-        "Produire un exposé sur la culture Mvélé"
+        "Produire un exposé sur la culture Akoose"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : La culture Mvélé dans le contexte camerounais. Module : Module MC1 — Diversité culturelle camerounaise.",
+        "intro": "Leçon : La culture Akoose dans le contexte camerounais. Module : Module MC1 — Diversité culturelle camerounaise.",
         "steps": [
           "**Mise en contexte :** Qu'est-ce qui vous rend différents des élèves d'une autre région ?",
-          "**Présentation :** Éléments de la culture Mvélé : langue, musique, gastronomie, valeurs, organisation sociale.",
+          "**Présentation :** Éléments de la culture Akoose : langue, musique, gastronomie, valeurs, organisation sociale.",
           "**Explication :** Patrimoine immatériel : ce qui ne se voit pas mais qui se transmet.",
-          "**Recherche :** Les élèves enquêtent auprès de leurs familles sur un élément culturel Mvélé.",
-          "**Production :** Exposé oral de 3 minutes sur un élément du patrimoine Mvélé."
+          "**Recherche :** Les élèves enquêtent auprès de leurs familles sur un élément culturel Akoose.",
+          "**Production :** Exposé oral de 3 minutes sur un élément du patrimoine Akoose."
         ],
         "freedom": "Transformer la classe en musée vivant : chaque élève apporte un objet, une recette, un proverbe.",
         "tips": "Transformer la classe en musée vivant : chaque élève apporte un objet, une recette, un proverbe."
       },
       "student": {
-        "intro": "Ta langue, c'est aussi ta culture. Tu vas explorer ce qui fait la richesse de la culture Mvélé.",
+        "intro": "Ta langue, c'est aussi ta culture. Tu vas explorer ce qui fait la richesse de la culture Akoose.",
         "activities": [
-          "Liste 5 éléments de la culture Mvélé : langue, musique, cuisine, valeurs, organisation.",
-          "Choisis un élément du patrimoine immatériel Mvélé et décris-le en 5 phrases.",
+          "Liste 5 éléments de la culture Akoose : langue, musique, cuisine, valeurs, organisation.",
+          "Choisis un élément du patrimoine immatériel Akoose et décris-le en 5 phrases.",
           "Prépare un exposé oral de 3 minutes (plan : présentation → description → importance).",
-          "Avec tes camarades, créez une affiche de la culture Mvélé.",
+          "Avec tes camarades, créez une affiche de la culture Akoose.",
           "Mémorise : **patrimoine immatériel** = savoirs et pratiques culturels transmis oralement."
         ],
-        "memo": "L'**identité culturelle** Mvélé s'exprime à travers la langue, la musique, la gastronomie et l'organisation sociale. Le **patrimoine immatériel** est aussi précieux que les monuments matériels."
+        "memo": "L'**identité culturelle** Akoose s'exprime à travers la langue, la musique, la gastronomie et l'organisation sociale. Le **patrimoine immatériel** est aussi précieux que les monuments matériels."
       },
       "emacResources": []
     },
@@ -1369,39 +1279,39 @@
       "code": "MC2.1",
       "module": "MC2-modes-de-vie",
       "moduleTitle": "Module MC2 — Modes de vie",
-      "title": "Pratiques culinaires et musicales de la communauté Mvélé",
+      "title": "Pratiques culinaires et musicales de la communauté Akoose",
       "anelcac": "Modes de vie : pratiques culinaires, pratiques musicales",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire les pratiques culinaires traditionnelles de Mvélé",
+        "Décrire les pratiques culinaires traditionnelles de Akoose",
         "Identifier les instruments et genres musicaux",
         "Expliquer le rôle social de la musique et de la cuisine",
-        "Présenter une recette ou un genre musical en Mvélé"
+        "Présenter une recette ou un genre musical en Akoose"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Pratiques culinaires et musicales de la communauté Mvélé. Module : Module MC2 — Modes de vie.",
+        "intro": "Leçon : Pratiques culinaires et musicales de la communauté Akoose. Module : Module MC2 — Modes de vie.",
         "steps": [
-          "**Mise en contexte :** Apporter un aliment traditionnel associé à Mvélé. Susciter la discussion.",
+          "**Mise en contexte :** Apporter un aliment traditionnel associé à Akoose. Susciter la discussion.",
           "**Présentation :** Plats, ingrédients et techniques culinaires. Instruments et genres musicaux.",
           "**Démonstration :** Faire écouter un morceau traditionnel de la région. Identifier les instruments.",
-          "**Application :** Décrire en Mvélé la préparation d'un plat simple.",
+          "**Application :** Décrire en Akoose la préparation d'un plat simple.",
           "**Production :** Présentation orale : une recette ou un genre musical."
         ],
         "freedom": "Cuisine et musique sont des portes d'entrée émotionnelles vers la culture. Maximiser les exemples concrets.",
         "tips": "Cuisine et musique sont des portes d'entrée émotionnelles vers la culture. Maximiser les exemples concrets."
       },
       "student": {
-        "intro": "La cuisine et la musique de la culture Mvélé racontent qui tu es. Tu les explores comme des expressions culturelles vivantes.",
+        "intro": "La cuisine et la musique de la culture Akoose racontent qui tu es. Tu les explores comme des expressions culturelles vivantes.",
         "activities": [
-          "Décris en Mvélé les étapes de préparation d'un plat traditionnel.",
+          "Décris en Akoose les étapes de préparation d'un plat traditionnel.",
           "Identifie 3 instruments de musique traditionnelle et explique leur usage.",
-          "Transcris le texte d'une chanson traditionnelle simple en Mvélé et traduis-la.",
-          "Présente oralement une recette en Mvélé (min. 6 étapes).",
-          "Mémorise les noms des principaux plats et instruments en Mvélé."
+          "Transcris le texte d'une chanson traditionnelle simple en Akoose et traduis-la.",
+          "Présente oralement une recette en Akoose (min. 6 étapes).",
+          "Mémorise les noms des principaux plats et instruments en Akoose."
         ],
-        "memo": "La **cuisine** et la **musique** traditionnelles sont des marqueurs identitaires forts de la culture Mvélé. Plats, instruments et genres musicaux ont souvent des noms en Mvélé qui ne se traduisent pas exactement."
+        "memo": "La **cuisine** et la **musique** traditionnelles sont des marqueurs identitaires forts de la culture Akoose. Plats, instruments et genres musicaux ont souvent des noms en Akoose qui ne se traduisent pas exactement."
       },
       "emacResources": []
     },
@@ -1410,19 +1320,19 @@
       "code": "MC2.2",
       "module": "MC2-modes-de-vie",
       "moduleTitle": "Module MC2 — Modes de vie",
-      "title": "Habitat traditionnel et vêtements de la communauté Mvélé",
+      "title": "Habitat traditionnel et vêtements de la communauté Akoose",
       "anelcac": "Modes de vie : pratiques vestimentaires, architecturales",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire l'habitat traditionnel de la communauté Mvélé",
+        "Décrire l'habitat traditionnel de la communauté Akoose",
         "Identifier les tenues vestimentaires et leur signification",
         "Expliquer l'évolution des modes de vie",
         "Produire un texte descriptif sur l'habitat ou le vêtement"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Habitat traditionnel et vêtements de la communauté Mvélé. Module : Module MC2 — Modes de vie.",
+        "intro": "Leçon : Habitat traditionnel et vêtements de la communauté Akoose. Module : Module MC2 — Modes de vie.",
         "steps": [
           "**Mise en contexte :** Photos d'habitations traditionnelles et modernes. Qu'est-ce qui a changé ?",
           "**Présentation :** Types d'habitations : matériaux, forme, organisation de l'espace.",
@@ -1434,15 +1344,15 @@
         "tips": "Éviter les présentations exotisantes. Comprendre la logique culturelle derrière les formes d'habitat et de vêtement."
       },
       "student": {
-        "intro": "La maison et les vêtements traditionnels racontent l'organisation sociale et les valeurs de la culture Mvélé.",
+        "intro": "La maison et les vêtements traditionnels racontent l'organisation sociale et les valeurs de la culture Akoose.",
         "activities": [
-          "Décris en Mvélé les matériaux et la disposition d'une habitation traditionnelle.",
+          "Décris en Akoose les matériaux et la disposition d'une habitation traditionnelle.",
           "Explique la signification d'une tenue vestimentaire lors d'une cérémonie.",
           "Compare habitation traditionnelle et moderne : 3 différences, 2 points communs.",
-          "Rédige un texte de 10 phrases sur l'évolution de l'habitat dans la communauté Mvélé.",
-          "Mémorise le vocabulaire Mvélé de l'habitat et du vêtement."
+          "Rédige un texte de 10 phrases sur l'évolution de l'habitat dans la communauté Akoose.",
+          "Mémorise le vocabulaire Akoose de l'habitat et du vêtement."
         ],
-        "memo": "L'**habitat traditionnel** et les **tenues vestimentaires** de la culture Mvélé reflètent des valeurs précises : organisation familiale, rôles sociaux, rapport au sacré."
+        "memo": "L'**habitat traditionnel** et les **tenues vestimentaires** de la culture Akoose reflètent des valeurs précises : organisation familiale, rôles sociaux, rapport au sacré."
       },
       "emacResources": []
     },
@@ -1451,19 +1361,19 @@
       "code": "MC3.1",
       "module": "MC3-evenements-marquants",
       "moduleTitle": "Module MC3 — Événements marquants de la vie",
-      "title": "Naissance et rites d'initiation dans la culture Mvélé",
+      "title": "Naissance et rites d'initiation dans la culture Akoose",
       "anelcac": "Événements marquants : naissance, éducation des enfants, rites d'initiation",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire les pratiques liées à la naissance en culture Mvélé",
+        "Décrire les pratiques liées à la naissance en culture Akoose",
         "Expliquer le rôle des rites d'initiation",
         "Analyser l'éducation traditionnelle de l'enfant",
-        "Produire un texte sur l'éducation dans la tradition Mvélé"
+        "Produire un texte sur l'éducation dans la tradition Akoose"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Naissance et rites d'initiation dans la culture Mvélé. Module : Module MC3 — Événements marquants de la vie.",
+        "intro": "Leçon : Naissance et rites d'initiation dans la culture Akoose. Module : Module MC3 — Événements marquants de la vie.",
         "steps": [
           "**Mise en contexte :** Que savent les élèves des pratiques entourant la naissance dans leur famille ?",
           "**Présentation :** Rites de naissance : attribution du nom, présentation à la famille, cérémonies.",
@@ -1475,15 +1385,15 @@
         "tips": "Certains rites sont confidentiels. Ne pas forcer les élèves à partager. Travailler sur les aspects publics."
       },
       "student": {
-        "intro": "Dans la culture Mvélé, naître et grandir sont des événements sociaux — toute la communauté participe à l'éducation de l'enfant.",
+        "intro": "Dans la culture Akoose, naître et grandir sont des événements sociaux — toute la communauté participe à l'éducation de l'enfant.",
         "activities": [
-          "Décris en 5 phrases un rite entourant la naissance dans la culture Mvélé.",
+          "Décris en 5 phrases un rite entourant la naissance dans la culture Akoose.",
           "Explique le rôle des grands-parents dans l'éducation traditionnelle.",
           "Compare éducation traditionnelle et scolaire : 3 complémentarités, 2 tensions.",
           "Rédige une lettre imaginaire d'un grand-père à son petit-enfant transmettant une valeur.",
-          "Mémorise les noms des principales étapes de la vie en Mvélé."
+          "Mémorise les noms des principales étapes de la vie en Akoose."
         ],
-        "memo": "Dans la culture **Mvélé**, la **naissance** et l'**initiation** sont des moments de socialisation intense. L'éducation traditionnelle repose sur la transmission orale et le rôle des aînés."
+        "memo": "Dans la culture **Akoose**, la **naissance** et l'**initiation** sont des moments de socialisation intense. L'éducation traditionnelle repose sur la transmission orale et le rôle des aînés."
       },
       "emacResources": []
     },
@@ -1492,19 +1402,19 @@
       "code": "MC3.2",
       "module": "MC3-evenements-marquants",
       "moduleTitle": "Module MC3 — Événements marquants de la vie",
-      "title": "Mariage, deuil et célébrations dans la culture Mvélé",
+      "title": "Mariage, deuil et célébrations dans la culture Akoose",
       "anelcac": "Événements marquants : mariage, mort et deuil, cérémonies",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire les pratiques matrimoniales de Mvélé",
+        "Décrire les pratiques matrimoniales de Akoose",
         "Analyser les rites funéraires",
         "Expliquer l'importance sociale des cérémonies",
         "Produire un récit sur une cérémonie"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Mariage, deuil et célébrations dans la culture Mvélé. Module : Module MC3 — Événements marquants de la vie.",
+        "intro": "Leçon : Mariage, deuil et célébrations dans la culture Akoose. Module : Module MC3 — Événements marquants de la vie.",
         "steps": [
           "**Mise en contexte :** Photos de cérémonies (mariage, funérailles). Qu'observent les élèves ?",
           "**Présentation :** Le mariage traditionnel : dot, cérémonies, rôle des familles.",
@@ -1516,15 +1426,15 @@
         "tips": "Aborder le deuil avec sensibilité. Certains élèves peuvent avoir récemment vécu un deuil."
       },
       "student": {
-        "intro": "Le mariage et les funérailles en culture Mvélé sont des actes sociaux qui cimentent la communauté.",
+        "intro": "Le mariage et les funérailles en culture Akoose sont des actes sociaux qui cimentent la communauté.",
         "activities": [
           "Décris les étapes du mariage traditionnel dans l'ordre chronologique.",
-          "Explique la signification symbolique de la dot dans la culture Mvélé.",
-          "Décris comment le deuil est géré dans la culture Mvélé.",
+          "Explique la signification symbolique de la dot dans la culture Akoose.",
+          "Décris comment le deuil est géré dans la culture Akoose.",
           "Rédige un texte de 12 phrases racontant une cérémonie de mariage.",
-          "Mémorise le vocabulaire du mariage et du deuil en Mvélé."
+          "Mémorise le vocabulaire du mariage et du deuil en Akoose."
         ],
-        "memo": "Le **mariage** et le **deuil** dans la culture **Mvélé** sont des événements communautaires structurants. La dot, les cérémonies et les rites funéraires expriment les valeurs de solidarité et de respect des ancêtres."
+        "memo": "Le **mariage** et le **deuil** dans la culture **Akoose** sont des événements communautaires structurants. La dot, les cérémonies et les rites funéraires expriment les valeurs de solidarité et de respect des ancêtres."
       },
       "emacResources": []
     },
@@ -1533,22 +1443,22 @@
       "code": "MC4.1",
       "module": "MC4-pratiques-communaute1",
       "moduleTitle": "Module MC4 — Pratiques en communauté (Niveau 1)",
-      "title": "Jeux traditionnels et organisation sociale en culture Mvélé",
+      "title": "Jeux traditionnels et organisation sociale en culture Akoose",
       "anelcac": "Pratiques communautaires Niv. 1 : jeux, économie traditionnelle, organisation sociale",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
         "Décrire les jeux traditionnels et leur rôle éducatif",
-        "Expliquer l'organisation sociale de la communauté Mvélé",
+        "Expliquer l'organisation sociale de la communauté Akoose",
         "Identifier les institutions traditionnelles (chefferie, conseil des anciens)",
         "Produire un texte sur l'organisation sociale"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Jeux traditionnels et organisation sociale en culture Mvélé. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
+        "intro": "Leçon : Jeux traditionnels et organisation sociale en culture Akoose. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
         "steps": [
           "**Mise en contexte :** Nommer un jeu traditionnel de la communauté et expliquer ses règles.",
-          "**Présentation :** Jeux traditionnels de Mvélé : règles, matériel, âges et genres concernés.",
+          "**Présentation :** Jeux traditionnels de Akoose : règles, matériel, âges et genres concernés.",
           "**Explication :** Organisation sociale : chefferie, conseil des anciens, sociétés, groupes d'âge.",
           "**Application :** Schéma de l'organisation sociale de la communauté.",
           "**Production :** Texte sur le rôle du chef ou du conseil des anciens."
@@ -1557,15 +1467,15 @@
         "tips": "Les jeux traditionnels sont souvent des métaphores de l'organisation sociale. Exploiter ce lien."
       },
       "student": {
-        "intro": "Les jeux transmettent des valeurs. Et l'organisation sociale de Mvélé est une œuvre collective sophistiquée.",
+        "intro": "Les jeux transmettent des valeurs. Et l'organisation sociale de Akoose est une œuvre collective sophistiquée.",
         "activities": [
-          "Décris les règles d'un jeu traditionnel en Mvélé (6 règles minimum).",
+          "Décris les règles d'un jeu traditionnel en Akoose (6 règles minimum).",
           "Explique ce que ce jeu apprend aux enfants.",
           "Dessine ou décris le schéma d'organisation sociale de la communauté.",
           "Rédige 8 phrases sur le rôle du conseil des anciens dans la résolution des conflits.",
-          "Mémorise les noms des principales instances sociales en Mvélé."
+          "Mémorise les noms des principales instances sociales en Akoose."
         ],
-        "memo": "La culture **Mvélé** dispose d'une **organisation sociale** structurée : chefferie, conseil des anciens, groupes d'âge. Les **jeux traditionnels** transmettent les valeurs et compétences nécessaires à la vie communautaire."
+        "memo": "La culture **Akoose** dispose d'une **organisation sociale** structurée : chefferie, conseil des anciens, groupes d'âge. Les **jeux traditionnels** transmettent les valeurs et compétences nécessaires à la vie communautaire."
       },
       "emacResources": []
     },
@@ -1574,21 +1484,21 @@
       "code": "MC4.2",
       "module": "MC4-pratiques-communaute1",
       "moduleTitle": "Module MC4 — Pratiques en communauté (Niveau 1)",
-      "title": "Économie traditionnelle de la communauté Mvélé",
+      "title": "Économie traditionnelle de la communauté Akoose",
       "anelcac": "Économie traditionnelle : agriculture, élevage, artisanat, commerce, solidarité",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire les activités économiques traditionnelles de Mvélé",
+        "Décrire les activités économiques traditionnelles de Akoose",
         "Expliquer les systèmes d'échange et de solidarité",
         "Analyser l'évolution de l'économie traditionnelle",
         "Produire un texte sur une activité économique"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Économie traditionnelle de la communauté Mvélé. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
+        "intro": "Leçon : Économie traditionnelle de la communauté Akoose. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
         "steps": [
-          "**Mise en contexte :** De quoi vivait la communauté Mvélé avant la colonisation ?",
+          "**Mise en contexte :** De quoi vivait la communauté Akoose avant la colonisation ?",
           "**Présentation :** Agriculture, élevage, chasse, pêche, artisanat : activités et savoirs techniques.",
           "**Explication :** Solidarité économique : tontines, entraide agricole, marchés périodiques.",
           "**Analyse :** Impact de la monétarisation et de la modernité.",
@@ -1598,15 +1508,15 @@
         "tips": "L'économie traditionnelle est souvent invisible dans les manuels. La rendre visible, c'est valoriser des savoirs réels et complexes."
       },
       "student": {
-        "intro": "L'économie traditionnelle de Mvélé est un système de solidarité et de savoir-faire sophistiqué.",
+        "intro": "L'économie traditionnelle de Akoose est un système de solidarité et de savoir-faire sophistiqué.",
         "activities": [
           "Liste les 5 principales activités économiques et les savoirs qu'elles requièrent.",
           "Explique le fonctionnement d'une tontine ou d'un système d'entraide agricole.",
           "Compare marché traditionnel et marché moderne : 3 différences.",
           "Rédige 10 phrases sur une activité artisanale traditionnelle.",
-          "Mémorise le vocabulaire économique traditionnel en Mvélé."
+          "Mémorise le vocabulaire économique traditionnel en Akoose."
         ],
-        "memo": "L'**économie traditionnelle** de Mvélé repose sur l'agriculture, l'artisanat et des systèmes de solidarité comme les tontines. Ces pratiques ont une logique interne complexe qui coexiste avec l'économie moderne."
+        "memo": "L'**économie traditionnelle** de Akoose repose sur l'agriculture, l'artisanat et des systèmes de solidarité comme les tontines. Ces pratiques ont une logique interne complexe qui coexiste avec l'économie moderne."
       },
       "emacResources": []
     },
@@ -1615,21 +1525,21 @@
       "code": "MC5.1",
       "module": "MC5-pratiques-communaute2",
       "moduleTitle": "Module MC5 — Pratiques en communauté (Niveau 2)",
-      "title": "Symbolique, rites et interdits en culture Mvélé",
+      "title": "Symbolique, rites et interdits en culture Akoose",
       "anelcac": "Pratiques communautaires Niv. 2 : symbolique, rites, interdits (tabous)",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Expliquer le rôle des symboles dans la culture Mvélé",
+        "Expliquer le rôle des symboles dans la culture Akoose",
         "Identifier des rites spécifiques et leur signification",
         "Analyser la fonction sociale des interdits",
         "Produire un texte analytique sur une pratique symbolique"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Symbolique, rites et interdits en culture Mvélé. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
+        "intro": "Leçon : Symbolique, rites et interdits en culture Akoose. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
         "steps": [
-          "**Mise en contexte :** Montrer un objet ou une couleur symbolique de Mvélé. Quelle est sa signification ?",
+          "**Mise en contexte :** Montrer un objet ou une couleur symbolique de Akoose. Quelle est sa signification ?",
           "**Présentation :** Symboles culturels : couleurs, objets, gestes, espaces sacrés.",
           "**Explication :** Rites spécifiques et leur logique. Les tabous : aliments, lieux, actions interdites.",
           "**Discussion :** La fonction des interdits : protection, cohésion sociale, transmission de valeurs.",
@@ -1639,15 +1549,15 @@
         "tips": "Aborder les rites et tabous avec respect et neutralité. L'objectif est de comprendre, non de juger."
       },
       "student": {
-        "intro": "Chaque geste, chaque couleur, chaque interdit en culture Mvélé a un sens. Tu décodes la symbolique culturelle de ta communauté.",
+        "intro": "Chaque geste, chaque couleur, chaque interdit en culture Akoose a un sens. Tu décodes la symbolique culturelle de ta communauté.",
         "activities": [
-          "Identifie 3 symboles importants de la culture Mvélé et explique leur signification.",
+          "Identifie 3 symboles importants de la culture Akoose et explique leur signification.",
           "Décris un rite culturel et analyse sa fonction sociale.",
           "Explique pourquoi les interdits culturels sont des régulateurs sociaux.",
           "Rédige un texte analytique de 10 phrases sur un interdit alimentaire ou spatial.",
-          "Mémorise le vocabulaire Mvélé des rites, symboles et interdits."
+          "Mémorise le vocabulaire Akoose des rites, symboles et interdits."
         ],
-        "memo": "La **symbolique** de la culture **Mvélé** exprime un système de valeurs cohérent. Les **rites** et les **interdits** ont une fonction de régulation sociale et de transmission des valeurs aux générations suivantes."
+        "memo": "La **symbolique** de la culture **Akoose** exprime un système de valeurs cohérent. Les **rites** et les **interdits** ont une fonction de régulation sociale et de transmission des valeurs aux générations suivantes."
       },
       "emacResources": []
     },
@@ -1656,39 +1566,39 @@
       "code": "MC5.2",
       "module": "MC5-pratiques-communaute2",
       "moduleTitle": "Module MC5 — Pratiques en communauté (Niveau 2)",
-      "title": "Médias traditionnels et transmission culturelle en Mvélé",
+      "title": "Médias traditionnels et transmission culturelle en Akoose",
       "anelcac": "Pratiques communautaires Niv. 2 : médias traditionnels, transmission intergénérationnelle",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Identifier les médias traditionnels de communication en culture Mvélé",
+        "Identifier les médias traditionnels de communication en culture Akoose",
         "Analyser les mécanismes de transmission culturelle intergénérationnelle",
         "Évaluer les défis contemporains de la transmission",
         "Produire un projet de valorisation culturelle"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Médias traditionnels et transmission culturelle en Mvélé. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
+        "intro": "Leçon : Médias traditionnels et transmission culturelle en Akoose. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
         "steps": [
-          "**Mise en contexte :** Avant la radio et internet, comment les nouvelles circulaient-elles dans la communauté Mvélé ?",
+          "**Mise en contexte :** Avant la radio et internet, comment les nouvelles circulaient-elles dans la communauté Akoose ?",
           "**Présentation :** Médias traditionnels : tam-tam, crieurs publics, griots, réunions de village, contes du soir.",
           "**Explication :** Mécanismes de transmission : bouche à oreille, apprentissage par exemple, cérémonies d'initiation.",
           "**Analyse :** Défis contemporains : exode rural, médias numériques, désintérêt des jeunes.",
-          "**Production :** Projet de classe pour valoriser la culture Mvélé (radio scolaire, journal bilingue, exposition)."
+          "**Production :** Projet de classe pour valoriser la culture Akoose (radio scolaire, journal bilingue, exposition)."
         ],
         "freedom": "Terminer par un projet concret de valorisation culturelle renforce l'engagement et donne du sens à l'ensemble de l'apprentissage CN.",
         "tips": "Terminer par un projet concret de valorisation culturelle renforce l'engagement et donne du sens à l'ensemble de l'apprentissage CN."
       },
       "student": {
-        "intro": "Comment une culture survit-elle ? Par ses **médias traditionnels** et sa **transmission intergénérationnelle**. Dans cette leçon finale, tu réfléchis à comment protéger la culture Mvélé aujourd'hui.",
+        "intro": "Comment une culture survit-elle ? Par ses **médias traditionnels** et sa **transmission intergénérationnelle**. Dans cette leçon finale, tu réfléchis à comment protéger la culture Akoose aujourd'hui.",
         "activities": [
           "Identifie 4 médias traditionnels et explique le rôle de chacun.",
-          "Interroge un aîné sur un savoir culturel Mvélé appris de ses parents. Rédige son témoignage.",
-          "Identifie 3 défis à la transmission de la culture Mvélé et propose des solutions.",
+          "Interroge un aîné sur un savoir culturel Akoose appris de ses parents. Rédige son témoignage.",
+          "Identifie 3 défis à la transmission de la culture Akoose et propose des solutions.",
           "Conçois un projet de valorisation : quel format, quel public, quel contenu ?",
-          "Mémorise les noms des principaux médias traditionnels en Mvélé."
+          "Mémorise les noms des principaux médias traditionnels en Akoose."
         ],
-        "memo": "Les **médias traditionnels** de la culture **Mvélé** (tam-tam, conteurs, réunions villageoises) assurent la transmission des savoirs et valeurs. Des actions concrètes de valorisation sont nécessaires pour assurer la survie de ce patrimoine."
+        "memo": "Les **médias traditionnels** de la culture **Akoose** (tam-tam, conteurs, réunions villageoises) assurent la transmission des savoirs et valeurs. Des actions concrètes de valorisation sont nécessaires pour assurer la survie de ce patrimoine."
       },
       "emacResources": []
     }

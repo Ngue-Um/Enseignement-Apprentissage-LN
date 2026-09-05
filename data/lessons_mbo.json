@@ -1,6 +1,6 @@
 {
-  "language": "fong",
-  "languageName": "Fòŋ",
+  "language": "mbo",
+  "languageName": "Mbo",
   "lessons": [
     {
       "id": "I-1",
@@ -14,7 +14,7 @@
       "objectives": [
         "Prendre conscience de la diversité linguistique du Cameroun (environ 280 langues selon le Mini-Atlas LACAGEO)",
         "Distinguer langue, dialecte et variante selon les définitions académiques",
-        "Nommer et situer Fòŋ dans la classification géographique des langues du Cameroun",
+        "Nommer et situer Mbo dans la classification géographique des langues du Cameroun",
         "Adopter une attitude de respect envers toutes les langues"
       ],
       "vocabulary": [],
@@ -22,24 +22,24 @@
         "intro": "Leçon : Diversité linguistique et dialectes. Module : Module I — Diversité linguistique camerounaise.",
         "steps": [
           "**Mise en contexte :** Afficher la carte du Mini-Atlas linguistique du Cameroun. Demander aux élèves quelles langues sont parlées dans leur famille.",
-          "**Exploration :** Faire lire les définitions du Mini-Atlas (langue, dialecte, patois, langue nationale). Situer Fòŋ dans sa région linguistique.",
+          "**Exploration :** Faire lire les définitions du Mini-Atlas (langue, dialecte, patois, langue nationale). Situer Mbo dans sa région linguistique.",
           "**Conceptualisation :** Expliquer la distinction langue / dialecte avec des exemples : les dialectes bulu, ewondo, eton, mangisa appartiennent tous à la langue béti-fang (Mini-Atlas).",
           "**Application :** Compléter un tableau : nom de la langue, famille, région principale, code ISO.",
-          "**Évaluation :** Chaque élève présente oralement Fòŋ en indiquant famille et région."
+          "**Évaluation :** Chaque élève présente oralement Mbo en indiquant famille et région."
         ],
         "freedom": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées.",
         "tips": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées."
       },
       "student": {
-        "intro": "Le Cameroun est l'une des nations les plus riches en langues au monde — le Mini-Atlas linguistique en recense environ 280 ! Dans cette leçon, tu découvres la place de Fòŋ dans cette grande famille.",
+        "intro": "Le Cameroun est l'une des nations les plus riches en langues au monde — le Mini-Atlas linguistique en recense environ 280 ! Dans cette leçon, tu découvres la place de Mbo dans cette grande famille.",
         "activities": [
-          "Observe la carte du Mini-Atlas et repère la zone où Fòŋ est principalement parlé.",
-          "Recopie et complète : Fòŋ appartient à la famille ___. Elle est surtout parlée dans la région ___.",
-          "Selon le Mini-Atlas, combien de langues vivantes compte la région de Fòŋ ? Note ce chiffre.",
+          "Observe la carte du Mini-Atlas et repère la zone où Mbo est principalement parlé.",
+          "Recopie et complète : Mbo appartient à la famille ___. Elle est surtout parlée dans la région ___.",
+          "Selon le Mini-Atlas, combien de langues vivantes compte la région de Mbo ? Note ce chiffre.",
           "Enquête : demande à un adulte le nom de la langue dans laquelle il a été élevé et où elle est parlée.",
           "Mémorise : **dialecte** = variante intelligible d'une même langue ; **langue nationale** = langue d'une ethnie ne dépassant pas les frontières d'un État (ACA LAN)."
         ],
-        "memo": "Le Cameroun compte environ **280 langues** selon le Mini-Atlas LACAGEO. Fòŋ appartient à une famille linguistique camerounaise et possède ses propres variantes dialectales. Selon l'ACA LAN, une langue nationale est une langue d'ethnie ne dépassant pas les frontières d'un État."
+        "memo": "Le Cameroun compte environ **280 langues** selon le Mini-Atlas LACAGEO. Mbo appartient à une famille linguistique camerounaise et possède ses propres variantes dialectales. Selon l'ACA LAN, une langue nationale est une langue d'ethnie ne dépassant pas les frontières d'un État."
       },
       "emacResources": []
     },
@@ -55,8 +55,8 @@
       "objectives": [
         "Citer les grandes aires linguistiques du Cameroun",
         "Lire et interpréter un extrait d'atlas linguistique (ALCAM / Mini-Atlas)",
-        "Classer Fòŋ selon ses critères typologiques",
-        "Produire un court texte de présentation de Fòŋ"
+        "Classer Mbo selon ses critères typologiques",
+        "Produire un court texte de présentation de Mbo"
       ],
       "vocabulary": [],
       "teacher": {
@@ -64,23 +64,23 @@
         "steps": [
           "**Mise en contexte :** Revenir sur les définitions. Combien de familles linguistiques les élèves se rappellent-ils ?",
           "**Présentation :** Les 8 familles linguistiques mondiales selon l'Ethnologue (Niger-Kordofan, Nilo-Saharienne, Afro-asiatique…). Situer les langues camerounaises dans cet ensemble.",
-          "**Explication :** Montrer comment retrouver Fòŋ dans l'ALCAM : code ISO, famille, localisation.",
-          "**Pratique guidée :** En binôme, les élèves cherchent 3 langues voisines de Fòŋ et notent leurs codes ISO.",
-          "**Production :** Paragraphe de 5 lignes présentant Fòŋ (famille, région, locuteurs, particularité)."
+          "**Explication :** Montrer comment retrouver Mbo dans l'ALCAM : code ISO, famille, localisation.",
+          "**Pratique guidée :** En binôme, les élèves cherchent 3 langues voisines de Mbo et notent leurs codes ISO.",
+          "**Production :** Paragraphe de 5 lignes présentant Mbo (famille, région, locuteurs, particularité)."
         ],
         "freedom": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques.",
         "tips": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques."
       },
       "student": {
-        "intro": "Un atlas linguistique est une carte spécialisée. L'ALCAM (Atlas des Langues du Cameroun) et le Mini-Atlas LACAGEO te permettent de situer Fòŋ précisément.",
+        "intro": "Un atlas linguistique est une carte spécialisée. L'ALCAM (Atlas des Langues du Cameroun) et le Mini-Atlas LACAGEO te permettent de situer Mbo précisément.",
         "activities": [
-          "Dans la carte du Mini-Atlas, repère Fòŋ et note sa région administrative.",
-          "Liste 3 langues dont la zone est contiguë à celle de Fòŋ.",
+          "Dans la carte du Mini-Atlas, repère Mbo et note sa région administrative.",
+          "Liste 3 langues dont la zone est contiguë à celle de Mbo.",
           "Classe ces 4 langues dans un tableau : Langue | Famille | Région principale.",
-          "Rédige un paragraphe de présentation de Fòŋ avec au moins 5 informations tirées de l'atlas.",
+          "Rédige un paragraphe de présentation de Mbo avec au moins 5 informations tirées de l'atlas.",
           "Mémorise : **ISO 639** = codes internationaux des langues ; **ALCAM** = Atlas des Langues du Cameroun."
         ],
-        "memo": "L'**ALCAM** et le **Mini-Atlas LACAGEO** recensent et localisent toutes les langues nationales du Cameroun. Le Cameroun compte 8 familles linguistiques principales. Fòŋ y figure avec sa famille et sa localisation. Savoir lire un atlas linguistique, c'est lire l'histoire des peuples."
+        "memo": "L'**ALCAM** et le **Mini-Atlas LACAGEO** recensent et localisent toutes les langues nationales du Cameroun. Le Cameroun compte 8 familles linguistiques principales. Mbo y figure avec sa famille et sa localisation. Savoir lire un atlas linguistique, c'est lire l'histoire des peuples."
       },
       "emacResources": []
     },
@@ -89,90 +89,112 @@
       "code": "II.1",
       "module": "M2-segmentaux",
       "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
-      "title": "Voyelles de Fòŋ",
+      "title": "Voyelles de Mbo",
       "anelcac": "Voyelles AGLC — simples, spécifiques, complexes",
       "duration": "60 min",
       "level": "6e",
       "objectives": [
-        "Identifier les voyelles simples du système phonologique de Fòŋ",
+        "Identifier les voyelles simples du système phonologique de Mbo",
         "Reconnaître les voyelles spécifiques absentes du français",
         "Prononcer correctement les voyelles en contexte de mot",
         "Transcrire des mots comportant des voyelles selon l'AGLC"
       ],
       "vocabulary": [
         {
-          "id": "184e87de4a03",
-          "audio": "f2ae58b04ce9669bed896d15eac5799f.mp3",
-          "langText": "mís",
-          "langWord": "mís",
-          "frenchText": "yeux",
-          "frenchWord": "yeux",
-          "pos": "n",
+          "id": "81927d420805",
+          "audio": "e10adffa3f6040f71794f697e6245a07.mp3",
+          "langText": "Esɔn étoom kwɛl.",
+          "langWord": "Esɔn étoom kwɛl.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "59e559cce898",
-          "audio": "e1bbe70c5479ee7827b3d8c797416b1d.mp3",
-          "langText": "mwé",
-          "langWord": "mwé",
-          "frenchText": "nez",
-          "frenchWord": "nez",
-          "pos": "n",
+          "id": "6d62bedaf5f6",
+          "audio": "dbdd4d8511d9219b73b74cd3cad9dc4b.mp3",
+          "langText": "Ŋ kɛ a dion.",
+          "langWord": "Ŋ kɛ a dion.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "e46615ee8836",
-          "audio": "aac95ee00c234246878f80c6916f7b8d.mp3",
-          "langText": "mɔ̄",
-          "langWord": "mɔ̄",
-          "frenchText": "bras",
-          "frenchWord": "bras",
-          "pos": "n",
+          "id": "8e4ace5fb21b",
+          "audio": "49dc8279a1f45e5cba19ae54aa15ff05.mp3",
+          "langText": "Băndɛm djoa bol.",
+          "langWord": "Băndɛm djoa bol.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "6366b62cbfa0",
-          "audio": "0ec8277c7e78959c681d1e2153035a8e.mp3",
-          "langText": "byē",
-          "langWord": "byē",
-          "frenchText": "griffes",
-          "frenchWord": "griffes",
-          "pos": "n",
+          "id": "81959202a35e",
+          "audio": "90879fffa0ced7a5bd1bea2027d9416b.mp3",
+          "langText": "Ponda esukul e boŋsa.",
+          "langWord": "Ponda esukul e boŋsa.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "62a426ef9339",
-          "audio": "1c2783fe59bcbe2d074e7a1f2303f9d6.mp3",
-          "langText": "mɔ́p",
-          "langWord": "mɔ́p",
-          "frenchText": "nombrils",
-          "frenchWord": "nombrils",
-          "pos": "n",
+          "id": "a72235b8e63c",
+          "audio": "08d15675e0d96bf394391b93155a18ca.mp3",
+          "langText": "Humsɛ toma mbwam",
+          "langWord": "Humsɛ toma mbwam",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "5e67fdfd91e8",
-          "audio": "6b379d1acd420fd9911e9a291eaf92bb.mp3",
-          "langText": "bɔ̂t",
-          "langWord": "bɔ̂t",
-          "frenchText": "personnes",
-          "frenchWord": "personnes",
-          "pos": "n",
+          "id": "13f4d451332c",
+          "audio": "d78f00c3e4559d104374e84d2ff6300d.mp3",
+          "langText": "Enɔki mbɛy e boŋsa.",
+          "langWord": "Enɔki mbɛy e boŋsa.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "eb5afa1812c5",
+          "audio": "b6c33dbb147c95d0894a68281e855b73.mp3",
+          "langText": "Băndɛm o boŋsa akisɛ.",
+          "langWord": "Băndɛm o boŋsa akisɛ.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "50a4cf3038de",
+          "audio": "6d1a596a3ced474b26182679c1f2db2b.mp3",
+          "langText": "Wasi saŋ mba nawa osim epuh.",
+          "langWord": "Wasi saŋ mba nawa osim epuh.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         }
       ],
       "teacher": {
-        "intro": "Leçon : Voyelles de Fòŋ. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
+        "intro": "Leçon : Voyelles de Mbo. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
         "steps": [
-          "**Mise en contexte :** Écrire au tableau des mots connus en Fòŋ et demander quels sons les élèves entendent.",
-          "**Présentation :** Introduire l'AGLC. Écrire les voyelles simples de Fòŋ au tableau en les articulant clairement.",
-          "**Explication :** Voyelles spécifiques de Fòŋ absentes du français (nasales, d'aperture particulière…). Exercices d'écoute et répétition.",
+          "**Mise en contexte :** Écrire au tableau des mots connus en Mbo et demander quels sons les élèves entendent.",
+          "**Présentation :** Introduire l'AGLC. Écrire les voyelles simples de Mbo au tableau en les articulant clairement.",
+          "**Explication :** Voyelles spécifiques de Mbo absentes du français (nasales, d'aperture particulière…). Exercices d'écoute et répétition.",
           "**Application :** Liste de 10 mots — les élèves soulignent les voyelles et indiquent : simple ou spécifique.",
           "**Évaluation :** Dictée de 5 mots simples — les élèves les transcrivent avec les voyelles correctes."
         ],
@@ -180,15 +202,15 @@
         "tips": "Utiliser les exemples du vocabulaire ALCAM de la plateforme. Pour chaque voyelle spécifique, donner un mot-clé mémorisable."
       },
       "student": {
-        "intro": "Chaque langue a ses propres sons. En Fòŋ, certaines voyelles n'existent pas en français. Cette leçon t'apprend à les entendre, les prononcer et les écrire.",
+        "intro": "Chaque langue a ses propres sons. En Mbo, certaines voyelles n'existent pas en français. Cette leçon t'apprend à les entendre, les prononcer et les écrire.",
         "activities": [
-          "Écoute les enregistrements du vocabulaire Fòŋ et identifie les voyelles que tu entends.",
-          "Classe les voyelles : **Communes avec le français** | **Propres à Fòŋ**.",
+          "Écoute les enregistrements du vocabulaire Mbo et identifie les voyelles que tu entends.",
+          "Classe les voyelles : **Communes avec le français** | **Propres à Mbo**.",
           "Transcris les 5 mots dictés en veillant à bien noter chaque voyelle.",
-          "Trouve 3 mots en Fòŋ pour chaque voyelle spécifique et écris-les.",
+          "Trouve 3 mots en Mbo pour chaque voyelle spécifique et écris-les.",
           "Mémorise : **AGLC** = Alphabet Général des Langues Camerounaises, référence officielle."
         ],
-        "memo": "Le système vocalique de **Fòŋ** comprend des voyelles simples et des voyelles spécifiques (ex. voyelles nasalisées). On les note grâce à l'**AGLC**. La maîtrise des voyelles est la base de la lecture et de l'écriture en Fòŋ."
+        "memo": "Le système vocalique de **Mbo** comprend des voyelles simples et des voyelles spécifiques (ex. voyelles nasalisées). On les note grâce à l'**AGLC**. La maîtrise des voyelles est la base de la lecture et de l'écriture en Mbo."
       },
       "emacResources": []
     },
@@ -197,106 +219,128 @@
       "code": "II.2",
       "module": "M2-segmentaux",
       "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
-      "title": "Consonnes de Fòŋ et production écrite",
+      "title": "Consonnes de Mbo et production écrite",
       "anelcac": "Consonnes — simples, spécifiques, complexes ; production écrite voyelles et consonnes",
       "duration": "60 min",
       "level": "6e",
       "objectives": [
-        "Identifier le système consonantique de Fòŋ",
+        "Identifier le système consonantique de Mbo",
         "Reconnaître les consonnes spécifiques absentes du français",
         "Articuler correctement les consonnes en contexte",
         "Produire par écrit des mots avec voyelles et consonnes correctement notés"
       ],
       "vocabulary": [
         {
-          "id": "184e87de4a03",
-          "audio": "f2ae58b04ce9669bed896d15eac5799f.mp3",
-          "langText": "mís",
-          "langWord": "mís",
-          "frenchText": "yeux",
-          "frenchWord": "yeux",
-          "pos": "n",
+          "id": "81927d420805",
+          "audio": "e10adffa3f6040f71794f697e6245a07.mp3",
+          "langText": "Esɔn étoom kwɛl.",
+          "langWord": "Esɔn étoom kwɛl.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "59e559cce898",
-          "audio": "e1bbe70c5479ee7827b3d8c797416b1d.mp3",
-          "langText": "mwé",
-          "langWord": "mwé",
-          "frenchText": "nez",
-          "frenchWord": "nez",
-          "pos": "n",
+          "id": "6d62bedaf5f6",
+          "audio": "dbdd4d8511d9219b73b74cd3cad9dc4b.mp3",
+          "langText": "Ŋ kɛ a dion.",
+          "langWord": "Ŋ kɛ a dion.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "e46615ee8836",
-          "audio": "aac95ee00c234246878f80c6916f7b8d.mp3",
-          "langText": "mɔ̄",
-          "langWord": "mɔ̄",
-          "frenchText": "bras",
-          "frenchWord": "bras",
-          "pos": "n",
+          "id": "8e4ace5fb21b",
+          "audio": "49dc8279a1f45e5cba19ae54aa15ff05.mp3",
+          "langText": "Băndɛm djoa bol.",
+          "langWord": "Băndɛm djoa bol.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "6366b62cbfa0",
-          "audio": "0ec8277c7e78959c681d1e2153035a8e.mp3",
-          "langText": "byē",
-          "langWord": "byē",
-          "frenchText": "griffes",
-          "frenchWord": "griffes",
-          "pos": "n",
+          "id": "81959202a35e",
+          "audio": "90879fffa0ced7a5bd1bea2027d9416b.mp3",
+          "langText": "Ponda esukul e boŋsa.",
+          "langWord": "Ponda esukul e boŋsa.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "62a426ef9339",
-          "audio": "1c2783fe59bcbe2d074e7a1f2303f9d6.mp3",
-          "langText": "mɔ́p",
-          "langWord": "mɔ́p",
-          "frenchText": "nombrils",
-          "frenchWord": "nombrils",
-          "pos": "n",
+          "id": "a72235b8e63c",
+          "audio": "08d15675e0d96bf394391b93155a18ca.mp3",
+          "langText": "Humsɛ toma mbwam",
+          "langWord": "Humsɛ toma mbwam",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         },
         {
-          "id": "5e67fdfd91e8",
-          "audio": "6b379d1acd420fd9911e9a291eaf92bb.mp3",
-          "langText": "bɔ̂t",
-          "langWord": "bɔ̂t",
-          "frenchText": "personnes",
-          "frenchWord": "personnes",
-          "pos": "n",
+          "id": "13f4d451332c",
+          "audio": "d78f00c3e4559d104374e84d2ff6300d.mp3",
+          "langText": "Enɔki mbɛy e boŋsa.",
+          "langWord": "Enɔki mbɛy e boŋsa.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "eb5afa1812c5",
+          "audio": "b6c33dbb147c95d0894a68281e855b73.mp3",
+          "langText": "Băndɛm o boŋsa akisɛ.",
+          "langWord": "Băndɛm o boŋsa akisɛ.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "50a4cf3038de",
+          "audio": "6d1a596a3ced474b26182679c1f2db2b.mp3",
+          "langText": "Wasi saŋ mba nawa osim epuh.",
+          "langWord": "Wasi saŋ mba nawa osim epuh.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M2-segmentaux"
         }
       ],
       "teacher": {
-        "intro": "Leçon : Consonnes de Fòŋ et production écrite. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
+        "intro": "Leçon : Consonnes de Mbo et production écrite. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
         "steps": [
           "**Mise en contexte :** Rappeler les voyelles. Qu'est-ce qu'une consonne ?",
-          "**Présentation :** Tableau des consonnes de Fòŋ selon l'AGLC. Insister sur les consonnes spécifiques (labio-vélaires, prénasalisées, implosives…).",
+          "**Présentation :** Tableau des consonnes de Mbo selon l'AGLC. Insister sur les consonnes spécifiques (labio-vélaires, prénasalisées, implosives…).",
           "**Explication :** Articuler les consonnes difficiles : isolément → syllabe → mot.",
           "**Application :** Paires minimales : écoute de mots qui ne diffèrent que par une consonne.",
-          "**Production :** 5 phrases simples en Fòŋ avec transcription consonantique soignée."
+          "**Production :** 5 phrases simples en Mbo avec transcription consonantique soignée."
         ],
         "freedom": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées.",
         "tips": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées."
       },
       "student": {
-        "intro": "Après les voyelles, voici les consonnes de Fòŋ ! Certaines sont uniques — tu ne les entendras qu'en Fòŋ et dans quelques langues africaines voisines.",
+        "intro": "Après les voyelles, voici les consonnes de Mbo ! Certaines sont uniques — tu ne les entendras qu'en Mbo et dans quelques langues africaines voisines.",
         "activities": [
           "Écoute les paires minimales et coche le mot entendu (ex. bìlí / pìlí).",
           "Transcris 5 mots dictés en faisant attention aux consonnes spécifiques.",
           "Repère dans le vocabulaire tous les mots contenant une consonne prénasalisée. Combien en trouves-tu ?",
-          "Compose 3 phrases simples en Fòŋ avec au moins une consonne spécifique chacune.",
+          "Compose 3 phrases simples en Mbo avec au moins une consonne spécifique chacune.",
           "Mémorise : **paire minimale** = deux mots identiques sauf en un phonème."
         ],
-        "memo": "Le système consonantique de **Fòŋ** comprend des consonnes communes avec le français et des consonnes spécifiques (implosives, prénasalisées, labio-vélaires…). Les noter selon l'**AGLC** est indispensable pour la lecture et l'écriture."
+        "memo": "Le système consonantique de **Mbo** comprend des consonnes communes avec le français et des consonnes spécifiques (implosives, prénasalisées, labio-vélaires…). Les noter selon l'**AGLC** est indispensable pour la lecture et l'écriture."
       },
       "emacResources": []
     },
@@ -312,95 +356,95 @@
       "objectives": [
         "Définir le ton comme trait distinctif des langues à tons",
         "Distinguer ton lexical et ton grammatical",
-        "Identifier les tons simples de Fòŋ",
+        "Identifier les tons simples de Mbo",
         "Transcrire des mots avec leurs tons selon l'AGLC"
       ],
       "vocabulary": [
         {
-          "id": "7ac3fe4fcc71",
-          "audio": "2806d70843e4ad9766323aa190aec958.mp3",
-          "langText": "mə̀ɲù",
-          "langWord": "mə̀ɲù",
-          "frenchText": "bouches",
-          "frenchWord": "bouches",
-          "pos": "n",
+          "id": "eb866a2d558e",
+          "audio": "af0a03b92a99e7d70a08d43b2c8f192a.mp3",
+          "langText": "Akɔŋki a kolɛɛ étóó mbwá.",
+          "langWord": "Akɔŋki a kolɛɛ étóó mbwá.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "a30d85762c4e",
-          "audio": "7d81916084d365b6db22a942cd02f418.mp3",
-          "langText": "mìnlō",
-          "langWord": "mìnlō",
-          "frenchText": "têtes",
-          "frenchWord": "têtes",
-          "pos": "n",
+          "id": "9435ccc7b0ea",
+          "audio": "63e75ff6c729b7fcffaa59d689472d69.mp3",
+          "langText": "Nzi ohul ni ohul i mbúe tana mbwá nzéé.",
+          "langWord": "Nzi ohul ni ohul i mbúe tana mbwá nzéé.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "8aa19be084a6",
-          "audio": "35c8165bfcd94edb2e5f58d954af4ec4.mp3",
-          "langText": "mìmvɔ̀t",
-          "langWord": "mìmvɔ̀t",
-          "frenchText": "poils",
-          "frenchWord": "poils",
-          "pos": "n",
+          "id": "82867709c41e",
+          "audio": "50a26f57a8d14d776cb07046141b2b4e.mp3",
+          "langText": "Nzá a dyâ mbaŋgēē?",
+          "langWord": "Nzá a dyâ mbaŋgēē?",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "669495d204c9",
-          "audio": "1c40db0bcf65f8dae04ec78ab2f60597.mp3",
-          "langText": "mə̀sòŋ",
-          "langWord": "mə̀sòŋ",
-          "frenchText": "dents",
-          "frenchWord": "dents",
-          "pos": "n",
+          "id": "2b13a5810c98",
+          "audio": "92b9e690c8f589235fb4afd9d872720a.mp3",
+          "langText": "Si jóka ehɔw mbóʼ á esukul.",
+          "langWord": "Si jóka ehɔw mbóʼ á esukul.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "5473f6bbbdd0",
-          "audio": "4849aa5f22818fe1a2ef3f8d36141537.mp3",
-          "langText": "àyɛ̄m",
-          "langWord": "àyɛ̄m",
-          "frenchText": "langues",
-          "frenchWord": "langues",
-          "pos": "n",
+          "id": "98f692f43e5e",
+          "audio": "f5595c60590b440e4413c21cf729883b.mp3",
+          "langText": "Awem ǹláá a nín a kέ dyǒm tê ni sú éƃa.",
+          "langWord": "Awem ǹláá a nín a kέ dyǒm tê ni sú éƃa.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "dd207a7f3d16",
-          "audio": "ff9d5a82bb03af86a8702e7b2f3649e0.mp3",
-          "langText": "mə̀lɔ̄",
-          "langWord": "mə̀lɔ̄",
-          "frenchText": "oreilles",
-          "frenchWord": "oreilles",
-          "pos": "n",
+          "id": "fc48cffb2f37",
+          "audio": "b4e582234ac5da73d1a5f87d3f0c2129.mp3",
+          "langText": "Ǹlém wá mi tê.",
+          "langWord": "Ǹlém wá mi tê.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "3bd51974ee51",
-          "audio": "bbe033dfae4ef9a268dd3e76221845d1.mp3",
-          "langText": "mə̀kyíŋ",
-          "langWord": "mə̀kyíŋ",
-          "frenchText": "cou",
-          "frenchWord": "cou",
-          "pos": "n",
+          "id": "e32f8ed4df7d",
+          "audio": "42023ba7bb5235c5fc2306b6aff948dd.mp3",
+          "langText": "O tí na nzá ?",
+          "langWord": "O tí na nzá ?",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "69028efc1ead",
-          "audio": "b3191b9225c700deae6af15337122528.mp3",
-          "langText": "mə̀bē",
-          "langWord": "mə̀bē",
-          "frenchText": "seins",
-          "frenchWord": "seins",
-          "pos": "n",
+          "id": "b3cd5f3a7063",
+          "audio": "e16507561b8dafe0c88003e3360ccab6.mp3",
+          "langText": "Nzá a lȃŋya sí jóm áyôl opûntil ?",
+          "langWord": "Nzá a lȃŋya sí jóm áyôl opûntil ?",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         }
@@ -408,8 +452,8 @@
       "teacher": {
         "intro": "Leçon : Définition et fonction des tons. Module : Module III — Phonologie suprasegmentale : les tons.",
         "steps": [
-          "**Mise en contexte :** Prononcer deux mots de Fòŋ qui s'écrivent pareil mais ont des tons différents et des sens différents.",
-          "**Présentation :** Définir le ton. Présenter les tons simples de Fòŋ et leurs diacritiques AGLC.",
+          "**Mise en contexte :** Prononcer deux mots de Mbo qui s'écrivent pareil mais ont des tons différents et des sens différents.",
+          "**Présentation :** Définir le ton. Présenter les tons simples de Mbo et leurs diacritiques AGLC.",
           "**Explication :** Tons simples : haut (´), bas (`), moyen (¯). Faire répéter chaque ton.",
           "**Application :** Associer des mots enregistrés à leur notation tonale.",
           "**Évaluation :** Dictée de 5 mots — les élèves notent les tons."
@@ -418,7 +462,7 @@
         "tips": "Chanter les tons aide à les mémoriser. Utiliser une flûte ou siffler les mélodies tonales."
       },
       "student": {
-        "intro": "Fòŋ est une langue à tons : la hauteur de ta voix change le sens du mot ! Tu vas apprendre à entendre et noter ces tons.",
+        "intro": "Mbo est une langue à tons : la hauteur de ta voix change le sens du mot ! Tu vas apprendre à entendre et noter ces tons.",
         "activities": [
           "Écoute les paires de mots. Pour chaque paire, les tons sont-ils identiques ou différents ?",
           "Transcris 5 mots avec leurs tons en utilisant les diacritiques AGLC (´ ` ¯).",
@@ -426,7 +470,7 @@
           "Chante les tons d'un mot de 3 syllabes en Haut-Bas-Haut, puis Bas-Haut-Bas. Quelle différence entends-tu ?",
           "Mémorise : ton haut = ´ ; ton bas = ` ; ton moyen = ¯."
         ],
-        "memo": "En **Fòŋ**, le ton est phonologique : il distingue des mots de sens différents. Les **tons simples** sont le haut (´), le bas (`), et parfois le moyen (¯). On les note grâce aux diacritiques de l'**AGLC**."
+        "memo": "En **Mbo**, le ton est phonologique : il distingue des mots de sens différents. Les **tons simples** sont le haut (´), le bas (`), et parfois le moyen (¯). On les note grâce aux diacritiques de l'**AGLC**."
       },
       "emacResources": []
     },
@@ -440,97 +484,97 @@
       "duration": "60 min",
       "level": "5e",
       "objectives": [
-        "Identifier les tons complexes de Fòŋ (montant, descendant)",
+        "Identifier les tons complexes de Mbo (montant, descendant)",
         "Trouver le ton d'un mot par la méthode d'isolement",
         "Transcrire des phrases avec notation tonale complète",
-        "Produire un court texte en Fòŋ avec tons corrects"
+        "Produire un court texte en Mbo avec tons corrects"
       ],
       "vocabulary": [
         {
-          "id": "7ac3fe4fcc71",
-          "audio": "2806d70843e4ad9766323aa190aec958.mp3",
-          "langText": "mə̀ɲù",
-          "langWord": "mə̀ɲù",
-          "frenchText": "bouches",
-          "frenchWord": "bouches",
-          "pos": "n",
+          "id": "eb866a2d558e",
+          "audio": "af0a03b92a99e7d70a08d43b2c8f192a.mp3",
+          "langText": "Akɔŋki a kolɛɛ étóó mbwá.",
+          "langWord": "Akɔŋki a kolɛɛ étóó mbwá.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "a30d85762c4e",
-          "audio": "7d81916084d365b6db22a942cd02f418.mp3",
-          "langText": "mìnlō",
-          "langWord": "mìnlō",
-          "frenchText": "têtes",
-          "frenchWord": "têtes",
-          "pos": "n",
+          "id": "9435ccc7b0ea",
+          "audio": "63e75ff6c729b7fcffaa59d689472d69.mp3",
+          "langText": "Nzi ohul ni ohul i mbúe tana mbwá nzéé.",
+          "langWord": "Nzi ohul ni ohul i mbúe tana mbwá nzéé.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "8aa19be084a6",
-          "audio": "35c8165bfcd94edb2e5f58d954af4ec4.mp3",
-          "langText": "mìmvɔ̀t",
-          "langWord": "mìmvɔ̀t",
-          "frenchText": "poils",
-          "frenchWord": "poils",
-          "pos": "n",
+          "id": "82867709c41e",
+          "audio": "50a26f57a8d14d776cb07046141b2b4e.mp3",
+          "langText": "Nzá a dyâ mbaŋgēē?",
+          "langWord": "Nzá a dyâ mbaŋgēē?",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "669495d204c9",
-          "audio": "1c40db0bcf65f8dae04ec78ab2f60597.mp3",
-          "langText": "mə̀sòŋ",
-          "langWord": "mə̀sòŋ",
-          "frenchText": "dents",
-          "frenchWord": "dents",
-          "pos": "n",
+          "id": "2b13a5810c98",
+          "audio": "92b9e690c8f589235fb4afd9d872720a.mp3",
+          "langText": "Si jóka ehɔw mbóʼ á esukul.",
+          "langWord": "Si jóka ehɔw mbóʼ á esukul.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "5473f6bbbdd0",
-          "audio": "4849aa5f22818fe1a2ef3f8d36141537.mp3",
-          "langText": "àyɛ̄m",
-          "langWord": "àyɛ̄m",
-          "frenchText": "langues",
-          "frenchWord": "langues",
-          "pos": "n",
+          "id": "98f692f43e5e",
+          "audio": "f5595c60590b440e4413c21cf729883b.mp3",
+          "langText": "Awem ǹláá a nín a kέ dyǒm tê ni sú éƃa.",
+          "langWord": "Awem ǹláá a nín a kέ dyǒm tê ni sú éƃa.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "dd207a7f3d16",
-          "audio": "ff9d5a82bb03af86a8702e7b2f3649e0.mp3",
-          "langText": "mə̀lɔ̄",
-          "langWord": "mə̀lɔ̄",
-          "frenchText": "oreilles",
-          "frenchWord": "oreilles",
-          "pos": "n",
+          "id": "fc48cffb2f37",
+          "audio": "b4e582234ac5da73d1a5f87d3f0c2129.mp3",
+          "langText": "Ǹlém wá mi tê.",
+          "langWord": "Ǹlém wá mi tê.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "3bd51974ee51",
-          "audio": "bbe033dfae4ef9a268dd3e76221845d1.mp3",
-          "langText": "mə̀kyíŋ",
-          "langWord": "mə̀kyíŋ",
-          "frenchText": "cou",
-          "frenchWord": "cou",
-          "pos": "n",
+          "id": "e32f8ed4df7d",
+          "audio": "42023ba7bb5235c5fc2306b6aff948dd.mp3",
+          "langText": "O tí na nzá ?",
+          "langWord": "O tí na nzá ?",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         },
         {
-          "id": "69028efc1ead",
-          "audio": "b3191b9225c700deae6af15337122528.mp3",
-          "langText": "mə̀bē",
-          "langWord": "mə̀bē",
-          "frenchText": "seins",
-          "frenchWord": "seins",
-          "pos": "n",
+          "id": "b3cd5f3a7063",
+          "audio": "e16507561b8dafe0c88003e3360ccab6.mp3",
+          "langText": "Nzá a lȃŋya sí jóm áyôl opûntil ?",
+          "langWord": "Nzá a lȃŋya sí jóm áyôl opûntil ?",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
           "classNoun": "",
           "module": "M3-suprasegmentaux"
         }
@@ -541,22 +585,22 @@
           "**Mise en contexte :** Rappeler les tons simples. Annoncer que certaines syllabes portent deux tons à la suite.",
           "**Présentation :** Tons complexes : descendant (̂), montant (̌). Les faire entendre et reproduire.",
           "**Explication :** Méthode d'isolement : prononcer le mot avec un ton haut artificiel, puis bas, et écouter lequel semble naturel.",
-          "**Application :** Les élèves cherchent le ton de 10 mots en Fòŋ à l'aide de la méthode d'isolement.",
-          "**Production :** Dialogue de 6 répliques en Fòŋ avec notation tonale complète."
+          "**Application :** Les élèves cherchent le ton de 10 mots en Mbo à l'aide de la méthode d'isolement.",
+          "**Production :** Dialogue de 6 répliques en Mbo avec notation tonale complète."
         ],
         "freedom": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant.",
         "tips": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant."
       },
       "student": {
-        "intro": "Tu connais les tons simples. Maintenant, les tons complexes de Fòŋ — des syllabes qui montent et descendent en même temps !",
+        "intro": "Tu connais les tons simples. Maintenant, les tons complexes de Mbo — des syllabes qui montent et descendent en même temps !",
         "activities": [
           "Écoute les mots enregistrés et classe-les : Ton simple | Ton complexe.",
           "Applique la méthode d'isolement à 5 mots : prononce-les haut, puis bas, et note le ton perçu.",
-          "Transcris un dialogue de 4 répliques en Fòŋ avec tous les tons notés.",
-          "Produis un texte de 3 phrases en Fòŋ sur une action de ta vie quotidienne, avec notation tonale.",
+          "Transcris un dialogue de 4 répliques en Mbo avec tous les tons notés.",
+          "Produis un texte de 3 phrases en Mbo sur une action de ta vie quotidienne, avec notation tonale.",
           "Mémorise : ton descendant = ̂ ; ton montant = ̌."
         ],
-        "memo": "Les **tons complexes** de **Fòŋ** (descendant ̂, montant ̌) sont des mouvements mélodiques sur une seule syllabe. La **méthode d'isolement** permet de trouver le ton d'un mot inconnu. Une transcription en Fòŋ sans tons est incomplète."
+        "memo": "Les **tons complexes** de **Mbo** (descendant ̂, montant ̌) sont des mouvements mélodiques sur une seule syllabe. La **méthode d'isolement** permet de trouver le ton d'un mot inconnu. Une transcription en Mbo sans tons est incomplète."
       },
       "emacResources": []
     },
@@ -570,107 +614,18 @@
       "duration": "60 min",
       "level": "5e",
       "objectives": [
-        "Identifier la structure du nom en Fòŋ (base + affixes)",
-        "Reconnaître les classes nominales de Fòŋ",
+        "Identifier la structure du nom en Mbo (base + affixes)",
+        "Reconnaître les classes nominales de Mbo",
         "Former le singulier et le pluriel des noms",
         "Employer les pronoms personnels correspondant aux classes nominales"
       ],
-      "vocabulary": [
-        {
-          "id": "ecb8e1ee9641",
-          "audio": "c51b803969335aaf3fff78bbec968eea.mp3",
-          "langText": "à bə̀lə̀ mān áɲū",
-          "langWord": "àɲù",
-          "frenchText": "elle a une petite bouche",
-          "frenchWord": "bouche",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "a065c6b1464e",
-          "audio": "0db872d62309c5ac3235af640f07caa5.mp3",
-          "langText": "à fȉk mís",
-          "langWord": "dís",
-          "frenchText": "ils se frottaient les yeux .",
-          "frenchWord": "oeil",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "6b74f47d7114",
-          "audio": "f387a988e764ae83aa6517d5340b6609.mp3",
-          "langText": "à bə̀lə́ ↓mòt ǹló àyì  àyàp tʃíŋ",
-          "langWord": "ǹló",
-          "frenchText": "il avait une grosse tête et un long cou.",
-          "frenchWord": "tête",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "9a2d2373b9f8",
-          "audio": "bb63e11878e048b86abd811e178116a8.mp3",
-          "langText": "à bə̀lə́ ↓mōt ǹló àyi  àyàp tʃíŋ",
-          "langWord": "ǹló",
-          "frenchText": "il avait une grosse tête et un long cou.",
-          "frenchWord": "tête",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "ad0a36a6c501",
-          "audio": "17e43be9315aad95a04d234d2bd3ab24.mp3",
-          "langText": "mìmvɔ̀t myé vín",
-          "langWord": "m̀mvɔ̀t",
-          "frenchText": "ses poils sont noirs.",
-          "frenchWord": "poil",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "2e3b216eca0f",
-          "audio": "fbe14e664863d205bd8fd2c34af5a3ca.mp3",
-          "langText": "mə̀sòŋ mə́ mvú",
-          "langWord": "àsòŋ",
-          "frenchText": "ce sont des dents de chien.",
-          "frenchWord": "dent",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "f5f807c76623",
-          "audio": "d71d83b6a4a15a877b76f7877dc1c893.mp3",
-          "langText": "à póp óyɛ́m",
-          "langWord": "òyɛ̄m",
-          "frenchText": "il s'est mordu la langue.",
-          "frenchWord": "langue",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "92c8c4efd8f1",
-          "audio": "5875db8248d955c298bd4a2e05236036.mp3",
-          "langText": "à yà:y dzoé",
-          "langWord": "dzoé",
-          "frenchText": "il se gratte le nez.",
-          "frenchWord": "nez",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        }
-      ],
+      "vocabulary": [],
       "teacher": {
         "intro": "Leçon : La base nominale et les classes nominales. Module : Module IV — Le syntagme nominal.",
         "steps": [
-          "**Mise en contexte :** Écrire un nom en Fòŋ au singulier et au pluriel. Qu'est-ce qui change ?",
+          "**Mise en contexte :** Écrire un nom en Mbo au singulier et au pluriel. Qu'est-ce qui change ?",
           "**Présentation :** Classe nominale : dans les langues bantu et bantoid, les noms sont regroupés en classes marquées par des préfixes.",
-          "**Explication :** Principales classes nominales de Fòŋ avec préfixes au singulier et au pluriel.",
+          "**Explication :** Principales classes nominales de Mbo avec préfixes au singulier et au pluriel.",
           "**Application :** Tableau : singulier → pluriel pour 10 noms.",
           "**Évaluation :** Identifier la classe nominale de 5 noms."
         ],
@@ -678,15 +633,15 @@
         "tips": "Partir des noms que les élèves utilisent déjà. Les classes nominales corresponden souvent à des catégories sémantiques (humains, animaux, objets…)."
       },
       "student": {
-        "intro": "En Fòŋ, les noms sont organisés en **classes**. Chaque classe a ses propres préfixes pour le singulier et le pluriel — un système beaucoup plus riche que le genre en français !",
+        "intro": "En Mbo, les noms sont organisés en **classes**. Chaque classe a ses propres préfixes pour le singulier et le pluriel — un système beaucoup plus riche que le genre en français !",
         "activities": [
-          "À partir du vocabulaire Fòŋ, fais un tableau : Singulier | Pluriel | Classe nominale.",
+          "À partir du vocabulaire Mbo, fais un tableau : Singulier | Pluriel | Classe nominale.",
           "Identifie le préfixe de classe dans chaque nom. Surligne-le.",
           "Mets au pluriel les 5 noms suivants en changeant le préfixe selon la classe.",
           "Associe chaque nom à son pronom de classe correspondant.",
           "Mémorise : **classe nominale** = catégorie grammaticale des noms, marquée par des préfixes."
         ],
-        "memo": "En **Fòŋ**, les noms sont organisés en **classes nominales** marquées par des préfixes. Le changement de préfixe indique le nombre. Pronoms, adjectifs et verbes s'accordent avec la classe du nom."
+        "memo": "En **Mbo**, les noms sont organisés en **classes nominales** marquées par des préfixes. Le changement de préfixe indique le nombre. Pronoms, adjectifs et verbes s'accordent avec la classe du nom."
       },
       "emacResources": []
     },
@@ -700,123 +655,34 @@
       "duration": "60 min",
       "level": "5e",
       "objectives": [
-        "Identifier les différents types de déterminants en Fòŋ",
+        "Identifier les différents types de déterminants en Mbo",
         "Accorder les déterminants avec le nom selon la classe nominale",
         "Construire des syntagmes nominaux complexes",
         "Produire des phrases avec SN complets"
       ],
-      "vocabulary": [
-        {
-          "id": "ecb8e1ee9641",
-          "audio": "c51b803969335aaf3fff78bbec968eea.mp3",
-          "langText": "à bə̀lə̀ mān áɲū",
-          "langWord": "àɲù",
-          "frenchText": "elle a une petite bouche",
-          "frenchWord": "bouche",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "a065c6b1464e",
-          "audio": "0db872d62309c5ac3235af640f07caa5.mp3",
-          "langText": "à fȉk mís",
-          "langWord": "dís",
-          "frenchText": "ils se frottaient les yeux .",
-          "frenchWord": "oeil",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "6b74f47d7114",
-          "audio": "f387a988e764ae83aa6517d5340b6609.mp3",
-          "langText": "à bə̀lə́ ↓mòt ǹló àyì  àyàp tʃíŋ",
-          "langWord": "ǹló",
-          "frenchText": "il avait une grosse tête et un long cou.",
-          "frenchWord": "tête",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "9a2d2373b9f8",
-          "audio": "bb63e11878e048b86abd811e178116a8.mp3",
-          "langText": "à bə̀lə́ ↓mōt ǹló àyi  àyàp tʃíŋ",
-          "langWord": "ǹló",
-          "frenchText": "il avait une grosse tête et un long cou.",
-          "frenchWord": "tête",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "ad0a36a6c501",
-          "audio": "17e43be9315aad95a04d234d2bd3ab24.mp3",
-          "langText": "mìmvɔ̀t myé vín",
-          "langWord": "m̀mvɔ̀t",
-          "frenchText": "ses poils sont noirs.",
-          "frenchWord": "poil",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "2e3b216eca0f",
-          "audio": "fbe14e664863d205bd8fd2c34af5a3ca.mp3",
-          "langText": "mə̀sòŋ mə́ mvú",
-          "langWord": "àsòŋ",
-          "frenchText": "ce sont des dents de chien.",
-          "frenchWord": "dent",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "f5f807c76623",
-          "audio": "d71d83b6a4a15a877b76f7877dc1c893.mp3",
-          "langText": "à póp óyɛ́m",
-          "langWord": "òyɛ̄m",
-          "frenchText": "il s'est mordu la langue.",
-          "frenchWord": "langue",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        },
-        {
-          "id": "92c8c4efd8f1",
-          "audio": "5875db8248d955c298bd4a2e05236036.mp3",
-          "langText": "à yà:y dzoé",
-          "langWord": "dzoé",
-          "frenchText": "il se gratte le nez.",
-          "frenchWord": "nez",
-          "pos": "n",
-          "classNoun": "",
-          "module": "M4-syntagme-nominal"
-        }
-      ],
+      "vocabulary": [],
       "teacher": {
         "intro": "Leçon : Les déterminants du nom. Module : Module IV — Le syntagme nominal.",
         "steps": [
           "**Mise en contexte :** Écrire un SN simple. Comment l'enrichir ?",
-          "**Présentation :** Déterminants de Fòŋ : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs.",
+          "**Présentation :** Déterminants de Mbo : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs.",
           "**Explication :** Chaque déterminant s'accorde avec la classe du nom (même préfixe ou suffixe de classe).",
           "**Application :** Compléter des SN avec le bon déterminant selon la classe.",
           "**Production :** 5 SN complexes (nom + 2 déterminants) intégrés dans des phrases."
         ],
-        "freedom": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Fòŋ par rapport au français.",
-        "tips": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Fòŋ par rapport au français."
+        "freedom": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Mbo par rapport au français.",
+        "tips": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Mbo par rapport au français."
       },
       "student": {
-        "intro": "Un nom avec ses déterminants devient beaucoup plus précis ! En Fòŋ, les déterminants s'accordent avec la **classe du nom**.",
+        "intro": "Un nom avec ses déterminants devient beaucoup plus précis ! En Mbo, les déterminants s'accordent avec la **classe du nom**.",
         "activities": [
           "Complète les SN avec le bon déterminant possessif selon la classe du nom.",
-          "Souligne les déterminants dans 5 phrases en Fòŋ et identifie leur type.",
+          "Souligne les déterminants dans 5 phrases en Mbo et identifie leur type.",
           "Transforme chaque SN simple en SN complexe en ajoutant un démonstratif et un numéral.",
-          "Rédige 5 phrases en Fòŋ avec au moins deux déterminants par SN.",
+          "Rédige 5 phrases en Mbo avec au moins deux déterminants par SN.",
           "Mémorise : **accord de classe** = le déterminant change de forme selon la classe nominale."
         ],
-        "memo": "En **Fòŋ**, tous les déterminants (possessifs, démonstratifs, numéraux, indéfinis, interrogatifs) s'accordent avec la **classe nominale** du nom. Un **SN complexe** = nom + base nominale + déterminants accordés."
+        "memo": "En **Mbo**, tous les déterminants (possessifs, démonstratifs, numéraux, indéfinis, interrogatifs) s'accordent avec la **classe nominale** du nom. Un **SN complexe** = nom + base nominale + déterminants accordés."
       },
       "emacResources": []
     },
@@ -830,7 +696,7 @@
       "duration": "60 min",
       "level": "4e",
       "objectives": [
-        "Identifier le radical verbal et les affixes de conjugaison en Fòŋ",
+        "Identifier le radical verbal et les affixes de conjugaison en Mbo",
         "Conjuguer un verbe aux principaux temps verbaux",
         "Analyser la structure morphologique d'une forme verbale",
         "Employer correctement les formes verbales dans des phrases"
@@ -839,25 +705,25 @@
       "teacher": {
         "intro": "Leçon : Le radical verbal et la conjugaison. Module : Module V — Le syntagme verbal.",
         "steps": [
-          "**Mise en contexte :** Écrire une forme verbale en Fòŋ et demander aux élèves d'identifier le radical.",
+          "**Mise en contexte :** Écrire une forme verbale en Mbo et demander aux élèves d'identifier le radical.",
           "**Présentation :** Décomposer une forme verbale : préfixe de sujet + marqueurs TAM + radical + suffixes.",
-          "**Explication :** Paradigme de conjugaison d'un verbe fréquent en Fòŋ à plusieurs temps.",
+          "**Explication :** Paradigme de conjugaison d'un verbe fréquent en Mbo à plusieurs temps.",
           "**Application :** Conjugaison tableau : 3 verbes fréquents.",
-          "**Évaluation :** Traduire 5 phrases du français vers Fòŋ."
+          "**Évaluation :** Traduire 5 phrases du français vers Mbo."
         ],
-        "freedom": "Le système TAM de Fòŋ est souvent plus riche que celui du français. Commencer par les temps les plus usités.",
-        "tips": "Le système TAM de Fòŋ est souvent plus riche que celui du français. Commencer par les temps les plus usités."
+        "freedom": "Le système TAM de Mbo est souvent plus riche que celui du français. Commencer par les temps les plus usités.",
+        "tips": "Le système TAM de Mbo est souvent plus riche que celui du français. Commencer par les temps les plus usités."
       },
       "student": {
-        "intro": "Le verbe est le cœur de la phrase en Fòŋ. Il porte à lui seul le temps, l'aspect, le mode et le sujet ! Dans cette leçon, tu décortiques la mécanique verbale.",
+        "intro": "Le verbe est le cœur de la phrase en Mbo. Il porte à lui seul le temps, l'aspect, le mode et le sujet ! Dans cette leçon, tu décortiques la mécanique verbale.",
         "activities": [
-          "Décompose 5 formes verbales en Fòŋ : préfixe de sujet | marqueur TAM | radical | suffixe.",
-          "Conjugue le verbe 'manger' en Fòŋ à 3 temps différents pour toutes les personnes.",
-          "Identifie le temps verbal de 5 phrases en Fòŋ et justifie ta réponse.",
-          "Traduis 3 phrases du français vers Fòŋ en soignant la conjugaison.",
-          "Mémorise : **TAM** = Temps-Aspect-Mode ; c'est ce que les affixes verbaux expriment en Fòŋ."
+          "Décompose 5 formes verbales en Mbo : préfixe de sujet | marqueur TAM | radical | suffixe.",
+          "Conjugue le verbe 'manger' en Mbo à 3 temps différents pour toutes les personnes.",
+          "Identifie le temps verbal de 5 phrases en Mbo et justifie ta réponse.",
+          "Traduis 3 phrases du français vers Mbo en soignant la conjugaison.",
+          "Mémorise : **TAM** = Temps-Aspect-Mode ; c'est ce que les affixes verbaux expriment en Mbo."
         ],
-        "memo": "En **Fòŋ**, une forme verbale = préfixe de sujet + marqueurs TAM + radical + suffixes. Le système **TAM** (Temps-Aspect-Mode) exprime des nuances temporelles et aspectuelles plus précises qu'en français."
+        "memo": "En **Mbo**, une forme verbale = préfixe de sujet + marqueurs TAM + radical + suffixes. Le système **TAM** (Temps-Aspect-Mode) exprime des nuances temporelles et aspectuelles plus précises qu'en français."
       },
       "emacResources": []
     },
@@ -871,7 +737,7 @@
       "duration": "60 min",
       "level": "4e",
       "objectives": [
-        "Identifier et employer les principaux modes verbaux de Fòŋ",
+        "Identifier et employer les principaux modes verbaux de Mbo",
         "Former la négation verbale",
         "Construire des SV simples et complexes",
         "Produire un texte avec diversité de modes et d'aspects"
@@ -880,17 +746,17 @@
       "teacher": {
         "intro": "Leçon : Modes verbaux et négation. Module : Module V — Le syntagme verbal.",
         "steps": [
-          "**Mise en contexte :** Donner un ordre en Fòŋ. Quel mode est utilisé ?",
-          "**Présentation :** Modes de Fòŋ : indicatif, impératif, et autres modes aspectuels.",
-          "**Explication :** Formation de la négation en Fòŋ : préfixe, suffixe négatif, ou particule.",
+          "**Mise en contexte :** Donner un ordre en Mbo. Quel mode est utilisé ?",
+          "**Présentation :** Modes de Mbo : indicatif, impératif, et autres modes aspectuels.",
+          "**Explication :** Formation de la négation en Mbo : préfixe, suffixe négatif, ou particule.",
           "**Application :** Transformer 5 phrases affirmatives en négatives et vice versa.",
           "**Production :** Texte de 8 phrases alternant affirmation, négation et impératif."
         ],
-        "freedom": "La négation en Fòŋ peut être double (encadrement du verbe) ou simple. Montrer les deux cas.",
-        "tips": "La négation en Fòŋ peut être double (encadrement du verbe) ou simple. Montrer les deux cas."
+        "freedom": "La négation en Mbo peut être double (encadrement du verbe) ou simple. Montrer les deux cas.",
+        "tips": "La négation en Mbo peut être double (encadrement du verbe) ou simple. Montrer les deux cas."
       },
       "student": {
-        "intro": "Donner un ordre, exprimer un doute, nier une action — chaque nuance a sa forme en Fòŋ !",
+        "intro": "Donner un ordre, exprimer un doute, nier une action — chaque nuance a sa forme en Mbo !",
         "activities": [
           "Mets les 5 phrases données à la forme négative.",
           "Transforme ces 5 affirmations en impératifs adressés à un ami.",
@@ -898,7 +764,7 @@
           "Rédige un dialogue de 6 répliques incluant au moins 2 impératifs et 2 négations.",
           "Mémorise : **mode** = manière d'envisager l'action ; **négation** = marque grammaticale niant l'action."
         ],
-        "memo": "En **Fòŋ**, les modes principaux sont l'**indicatif** et l'**impératif**. La **négation** est marquée par une particule ou un affixe spécifique. La diversité des modes est une richesse expressive de Fòŋ."
+        "memo": "En **Mbo**, les modes principaux sont l'**indicatif** et l'**impératif**. La **négation** est marquée par une particule ou un affixe spécifique. La diversité des modes est une richesse expressive de Mbo."
       },
       "emacResources": []
     },
@@ -906,40 +772,40 @@
       "id": "VI-1",
       "code": "VI.1",
       "module": "M6-phrase",
-      "moduleTitle": "Module VI — La phrase en Fòŋ",
+      "moduleTitle": "Module VI — La phrase en Mbo",
       "title": "La phrase simple et ses types",
       "anelcac": "Phrase simple, interrogative, négative, impérative ; ordre des mots",
       "duration": "60 min",
       "level": "3e",
       "objectives": [
-        "Analyser la structure de la phrase simple en Fòŋ",
+        "Analyser la structure de la phrase simple en Mbo",
         "Distinguer les 4 types de phrases",
         "Maîtriser l'ordre des constituants",
         "Produire des phrases simples variées"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : La phrase simple et ses types. Module : Module VI — La phrase en Fòŋ.",
+        "intro": "Leçon : La phrase simple et ses types. Module : Module VI — La phrase en Mbo.",
         "steps": [
-          "**Mise en contexte :** Lire une phrase en Fòŋ. Qui fait quoi ?",
-          "**Présentation :** Ordre de base des constituants en Fòŋ. Comparer avec le français.",
+          "**Mise en contexte :** Lire une phrase en Mbo. Qui fait quoi ?",
+          "**Présentation :** Ordre de base des constituants en Mbo. Comparer avec le français.",
           "**Explication :** Les 4 types de phrases à partir d'une même phrase de base.",
           "**Application :** Transformer des phrases déclaratives en interrogatives, puis en négatives.",
           "**Production :** 8 phrases variées (2 par type) sur la vie scolaire."
         ],
-        "freedom": "L'ordre des mots en Fòŋ peut différer du français. C'est une caractéristique typologique, pas une erreur.",
-        "tips": "L'ordre des mots en Fòŋ peut différer du français. C'est une caractéristique typologique, pas une erreur."
+        "freedom": "L'ordre des mots en Mbo peut différer du français. C'est une caractéristique typologique, pas une erreur.",
+        "tips": "L'ordre des mots en Mbo peut différer du français. C'est une caractéristique typologique, pas une erreur."
       },
       "student": {
-        "intro": "Une phrase bien construite en Fòŋ suit des règles précises. Tu apprends les types de phrases et l'ordre des mots.",
+        "intro": "Une phrase bien construite en Mbo suit des règles précises. Tu apprends les types de phrases et l'ordre des mots.",
         "activities": [
-          "Identifie l'ordre des constituants dans 5 phrases en Fòŋ.",
+          "Identifie l'ordre des constituants dans 5 phrases en Mbo.",
           "Transforme 4 phrases déclaratives en interrogatives totales.",
           "Transforme ces 4 phrases en négatives.",
           "Rédige 2 phrases de chaque type (déclarative, interrogative, négative, impérative).",
-          "Mémorise : l'ordre de base en **Fòŋ** est typologiquement stable."
+          "Mémorise : l'ordre de base en **Mbo** est typologiquement stable."
         ],
-        "memo": "La **phrase simple** en **Fòŋ** a un ordre de constituants caractéristique. Les 4 types (déclarative, interrogative, négative, impérative) se forment avec des marques grammaticales spécifiques."
+        "memo": "La **phrase simple** en **Mbo** a un ordre de constituants caractéristique. Les 4 types (déclarative, interrogative, négative, impérative) se forment avec des marques grammaticales spécifiques."
       },
       "emacResources": []
     },
@@ -947,32 +813,32 @@
       "id": "VI-2",
       "code": "VI.2",
       "module": "M6-phrase",
-      "moduleTitle": "Module VI — La phrase en Fòŋ",
+      "moduleTitle": "Module VI — La phrase en Mbo",
       "title": "Connecteurs logiques et phrase complexe",
       "anelcac": "Connecteurs logiques, phrase complexe, coordination, subordination ; production écrite",
       "duration": "60 min",
       "level": "3e",
       "objectives": [
-        "Identifier les connecteurs logiques de Fòŋ",
+        "Identifier les connecteurs logiques de Mbo",
         "Distinguer coordination et subordination",
         "Construire des phrases complexes",
         "Produire un texte cohérent avec diversité syntaxique"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Connecteurs logiques et phrase complexe. Module : Module VI — La phrase en Fòŋ.",
+        "intro": "Leçon : Connecteurs logiques et phrase complexe. Module : Module VI — La phrase en Mbo.",
         "steps": [
-          "**Mise en contexte :** Lire un court récit en Fòŋ. Quels mots relient les phrases ?",
-          "**Présentation :** Connecteurs de Fòŋ : conjonctions de coordination et de subordination.",
-          "**Explication :** Phrase complexe par coordination / par subordination. Exemples en Fòŋ.",
+          "**Mise en contexte :** Lire un court récit en Mbo. Quels mots relient les phrases ?",
+          "**Présentation :** Connecteurs de Mbo : conjonctions de coordination et de subordination.",
+          "**Explication :** Phrase complexe par coordination / par subordination. Exemples en Mbo.",
           "**Application :** Relier 5 paires de phrases simples avec le connecteur approprié.",
           "**Production :** Texte de 10 phrases sur 'Une journée dans mon village' avec 5 connecteurs différents."
         ],
-        "freedom": "Les connecteurs de Fòŋ ont souvent des équivalents français mais avec des positions syntaxiques différentes.",
-        "tips": "Les connecteurs de Fòŋ ont souvent des équivalents français mais avec des positions syntaxiques différentes."
+        "freedom": "Les connecteurs de Mbo ont souvent des équivalents français mais avec des positions syntaxiques différentes.",
+        "tips": "Les connecteurs de Mbo ont souvent des équivalents français mais avec des positions syntaxiques différentes."
       },
       "student": {
-        "intro": "Pour raconter et argumenter, tu as besoin de relier tes phrases. Les **connecteurs logiques** de Fòŋ sont tes outils !",
+        "intro": "Pour raconter et argumenter, tu as besoin de relier tes phrases. Les **connecteurs logiques** de Mbo sont tes outils !",
         "activities": [
           "Souligne tous les connecteurs dans le texte fourni.",
           "Classe-les : Addition | Cause | Conséquence | Opposition | Temps.",
@@ -980,7 +846,7 @@
           "Rédige un texte de 8 phrases avec au moins 4 connecteurs différents.",
           "Mémorise : coordination = même niveau ; subordination = une phrase dans une autre."
         ],
-        "memo": "En **Fòŋ**, les **connecteurs logiques** permettent de construire des **phrases complexes** cohérentes. Varier les structures syntaxiques améliore la qualité de l'expression écrite et orale."
+        "memo": "En **Mbo**, les **connecteurs logiques** permettent de construire des **phrases complexes** cohérentes. Varier les structures syntaxiques améliore la qualité de l'expression écrite et orale."
       },
       "emacResources": []
     },
@@ -989,23 +855,23 @@
       "code": "VII.1",
       "module": "M7-quotidien1",
       "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
-      "title": "Se saluer, se présenter et interagir en Fòŋ",
+      "title": "Se saluer, se présenter et interagir en Mbo",
       "anelcac": "Situations de communication quotidienne : salutations, présentations, formules de politesse",
       "duration": "60 min",
       "level": "4e",
       "objectives": [
         "Maîtriser les formules de salutation selon le contexte",
-        "Se présenter et présenter quelqu'un en Fòŋ",
+        "Se présenter et présenter quelqu'un en Mbo",
         "Employer les formules de politesse et de respect",
         "Mener une brève conversation de la vie courante"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Se saluer, se présenter et interagir en Fòŋ. Module : Module VII — Gestion du quotidien (Niveau 1).",
+        "intro": "Leçon : Se saluer, se présenter et interagir en Mbo. Module : Module VII — Gestion du quotidien (Niveau 1).",
         "steps": [
-          "**Mise en contexte :** Deux élèves se rencontrent au marché. Jouer la scène en français, puis demander comment dire en Fòŋ.",
-          "**Présentation :** Salutations de Fòŋ selon les moments de la journée, l'âge et le contexte.",
-          "**Explication :** Formules de respect envers les aînés, spécifiques à la culture Fòŋ.",
+          "**Mise en contexte :** Deux élèves se rencontrent au marché. Jouer la scène en français, puis demander comment dire en Mbo.",
+          "**Présentation :** Salutations de Mbo selon les moments de la journée, l'âge et le contexte.",
+          "**Explication :** Formules de respect envers les aînés, spécifiques à la culture Mbo.",
           "**Jeu de rôle :** Par groupes de 2, simuler des rencontres dans des contextes variés (marché, école, cérémonie).",
           "**Production :** Dialogue de 10 répliques entre deux personnes de générations différentes."
         ],
@@ -1013,15 +879,15 @@
         "tips": "Les règles de salutation reflètent des valeurs culturelles profondes. Valoriser les connaissances des élèves issus de familles locutrices."
       },
       "student": {
-        "intro": "Savoir saluer en Fòŋ, c'est respecter la culture ! Les formules changent selon qui tu salues et à quel moment.",
+        "intro": "Savoir saluer en Mbo, c'est respecter la culture ! Les formules changent selon qui tu salues et à quel moment.",
         "activities": [
-          "Complète le tableau des salutations de Fòŋ : Moment | Formule | Réponse attendue.",
+          "Complète le tableau des salutations de Mbo : Moment | Formule | Réponse attendue.",
           "Joue le rôle A : saluer un aîné au marché du matin.",
           "Invente un dialogue de 8 répliques entre un enfant et son grand-père.",
-          "Note 3 formules de politesse de Fòŋ sans équivalent direct en français.",
-          "Mémorise les formules de salutation du matin, du soir et pour les aînés en Fòŋ."
+          "Note 3 formules de politesse de Mbo sans équivalent direct en français.",
+          "Mémorise les formules de salutation du matin, du soir et pour les aînés en Mbo."
         ],
-        "memo": "Les **salutations** en **Fòŋ** varient selon l'heure, le statut et le contexte social. Elles reflètent les valeurs de respect et de solidarité de la communauté."
+        "memo": "Les **salutations** en **Mbo** varient selon l'heure, le statut et le contexte social. Elles reflètent les valeurs de respect et de solidarité de la communauté."
       },
       "emacResources": []
     },
@@ -1035,7 +901,7 @@
       "duration": "60 min",
       "level": "4e",
       "objectives": [
-        "Exprimer des besoins courants en Fòŋ",
+        "Exprimer des besoins courants en Mbo",
         "Décrire des activités journalières",
         "Employer le vocabulaire des lieux et actions de la vie courante",
         "Produire un texte descriptif sur une journée type"
@@ -1044,25 +910,25 @@
       "teacher": {
         "intro": "Leçon : Exprimer les besoins et les actions du quotidien. Module : Module VII — Gestion du quotidien (Niveau 1).",
         "steps": [
-          "**Mise en contexte :** Images de scènes de vie — marché, champ, école, maison. Comment les décrire en Fòŋ ?",
+          "**Mise en contexte :** Images de scènes de vie — marché, champ, école, maison. Comment les décrire en Mbo ?",
           "**Présentation :** Vocabulaire thématique : alimentation, déplacements, activités domestiques.",
-          "**Simulation :** Scène du marché : acheteur et vendeur en Fòŋ.",
-          "**Application :** Décrire sa journée en Fòŋ (du lever au coucher).",
-          "**Production :** Texte de 10 phrases : 'Ma journée en Fòŋ'."
+          "**Simulation :** Scène du marché : acheteur et vendeur en Mbo.",
+          "**Application :** Décrire sa journée en Mbo (du lever au coucher).",
+          "**Production :** Texte de 10 phrases : 'Ma journée en Mbo'."
         ],
         "freedom": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles.",
         "tips": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles."
       },
       "student": {
-        "intro": "Tu sais te saluer. Maintenant, tu vas te débrouiller dans des situations du quotidien en Fòŋ : au marché, en route, à la maison.",
+        "intro": "Tu sais te saluer. Maintenant, tu vas te débrouiller dans des situations du quotidien en Mbo : au marché, en route, à la maison.",
         "activities": [
-          "Associe chaque image de scène de vie au mot ou à la phrase correspondant en Fòŋ.",
-          "Joue le rôle du vendeur au marché : réponds aux demandes en Fòŋ.",
+          "Associe chaque image de scène de vie au mot ou à la phrase correspondant en Mbo.",
+          "Joue le rôle du vendeur au marché : réponds aux demandes en Mbo.",
           "Rédige 5 phrases décrivant tes activités du matin depuis le réveil.",
-          "Traduis en Fòŋ ces 5 phrases sur les déplacements quotidiens.",
-          "Mémorise 10 mots du quotidien en Fòŋ avec leur traduction française."
+          "Traduis en Mbo ces 5 phrases sur les déplacements quotidiens.",
+          "Mémorise 10 mots du quotidien en Mbo avec leur traduction française."
         ],
-        "memo": "Le vocabulaire du **quotidien** en **Fòŋ** couvre l'alimentation, les déplacements et les activités domestiques. Le maîtriser permet une communication fonctionnelle dans tous les contextes."
+        "memo": "Le vocabulaire du **quotidien** en **Mbo** couvre l'alimentation, les déplacements et les activités domestiques. Le maîtriser permet une communication fonctionnelle dans tous les contextes."
       },
       "emacResources": []
     },
@@ -1071,39 +937,39 @@
       "code": "VIII.1",
       "module": "M8-quotidien2",
       "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
-      "title": "Argumenter et convaincre en Fòŋ",
+      "title": "Argumenter et convaincre en Mbo",
       "anelcac": "Communication élaborée : argumentation, narration, discours formel",
       "duration": "60 min",
       "level": "3e",
       "objectives": [
-        "Construire une argumentation simple en Fòŋ",
+        "Construire une argumentation simple en Mbo",
         "Employer les formules du discours formel",
         "Narrer un événement passé avec cohérence",
-        "Produire un discours oral de 2 minutes en Fòŋ"
+        "Produire un discours oral de 2 minutes en Mbo"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Argumenter et convaincre en Fòŋ. Module : Module VIII — Gestion du quotidien (Niveau 2).",
+        "intro": "Leçon : Argumenter et convaincre en Mbo. Module : Module VIII — Gestion du quotidien (Niveau 2).",
         "steps": [
-          "**Mise en contexte :** Lire un proverbe en Fòŋ. Demander aux élèves de l'expliquer et de le défendre.",
-          "**Présentation :** Formules du discours oral formel en Fòŋ : apostrophes, ouverture, clôture.",
+          "**Mise en contexte :** Lire un proverbe en Mbo. Demander aux élèves de l'expliquer et de le défendre.",
+          "**Présentation :** Formules du discours oral formel en Mbo : apostrophes, ouverture, clôture.",
           "**Explication :** Structure d'une argumentation : thèse → arguments → exemples → conclusion.",
-          "**Pratique :** Débat : pour ou contre l'utilisation du Fòŋ à l'école ? Chaque groupe défend sa position.",
+          "**Pratique :** Débat : pour ou contre l'utilisation du Mbo à l'école ? Chaque groupe défend sa position.",
           "**Production :** Discours de 2 minutes sur un thème proposé."
         ],
         "freedom": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves.",
         "tips": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves."
       },
       "student": {
-        "intro": "Dans les cultures de Fòŋ, la parole bien dite est une force. Tu apprends à argumenter et convaincre avec éloquence.",
+        "intro": "Dans les cultures de Mbo, la parole bien dite est une force. Tu apprends à argumenter et convaincre avec éloquence.",
         "activities": [
           "Identifie dans le texte : thèse, arguments, exemples.",
-          "Prépare 3 arguments pour défendre l'enseignement de Fòŋ à l'école primaire.",
-          "Prononce un discours d'ouverture de cérémonie en Fòŋ.",
-          "Narration : raconte en Fòŋ un événement mémorable de ta vie scolaire.",
-          "Mémorise les formules d'ouverture et de clôture d'un discours formel en Fòŋ."
+          "Prépare 3 arguments pour défendre l'enseignement de Mbo à l'école primaire.",
+          "Prononce un discours d'ouverture de cérémonie en Mbo.",
+          "Narration : raconte en Mbo un événement mémorable de ta vie scolaire.",
+          "Mémorise les formules d'ouverture et de clôture d'un discours formel en Mbo."
         ],
-        "memo": "L'**argumentation** en **Fòŋ** suit : thèse → arguments → exemples → conclusion. Le **discours formel** obéit à des conventions culturelles précises. La maîtrise de l'oral élaboré est une compétence de haut niveau."
+        "memo": "L'**argumentation** en **Mbo** suit : thèse → arguments → exemples → conclusion. Le **discours formel** obéit à des conventions culturelles précises. La maîtrise de l'oral élaboré est une compétence de haut niveau."
       },
       "emacResources": []
     },
@@ -1117,7 +983,7 @@
       "duration": "60 min",
       "level": "3e",
       "objectives": [
-        "Analyser la structure d'un conte ou d'une devinette en Fòŋ",
+        "Analyser la structure d'un conte ou d'une devinette en Mbo",
         "Identifier les thèmes et valeurs véhiculés",
         "Rédiger un conte court en respectant les conventions du genre",
         "Utiliser la littérature orale comme ressource pédagogique"
@@ -1126,25 +992,25 @@
       "teacher": {
         "intro": "Leçon : Littérature orale et production écrite avancée. Module : Module VIII — Gestion du quotidien (Niveau 2).",
         "steps": [
-          "**Mise en contexte :** Raconter ou faire écouter un conte bref en Fòŋ.",
+          "**Mise en contexte :** Raconter ou faire écouter un conte bref en Mbo.",
           "**Présentation :** Genres de la littérature orale : contes, proverbes, devinettes, épopées.",
           "**Analyse :** Structure du conte : situation initiale → perturbation → péripéties → résolution → morale.",
           "**Application :** Analyser un conte fourni selon cette structure.",
-          "**Production :** Conte de 15 lignes minimum en Fòŋ avec morale explicite."
+          "**Production :** Conte de 15 lignes minimum en Mbo avec morale explicite."
         ],
         "freedom": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible.",
         "tips": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible."
       },
       "student": {
-        "intro": "Les contes, proverbes et devinettes de Fòŋ sont des œuvres littéraires à part entière. Tu les analyses et tu créeras le tien !",
+        "intro": "Les contes, proverbes et devinettes de Mbo sont des œuvres littéraires à part entière. Tu les analyses et tu créeras le tien !",
         "activities": [
           "Lis le conte fourni et identifie les 5 étapes de sa structure narrative.",
           "Relève 3 valeurs morales transmises par ce conte.",
-          "Traduis en français un proverbe en Fòŋ et explique son sens figuré.",
-          "Rédige un conte court (15 lignes) en Fòŋ avec une morale sur le travail ou le respect.",
+          "Traduis en français un proverbe en Mbo et explique son sens figuré.",
+          "Rédige un conte court (15 lignes) en Mbo avec une morale sur le travail ou le respect.",
           "Mémorise : conte = récit fictif à vocation éducative ; proverbe = formule brève de sagesse collective."
         ],
-        "memo": "La **littérature orale** de **Fòŋ** (contes, proverbes, devinettes) transmet les valeurs de la communauté. Le conte a une structure en 5 étapes. La rédiger en Fòŋ mobilise toutes les compétences linguistiques acquises."
+        "memo": "La **littérature orale** de **Mbo** (contes, proverbes, devinettes) transmet les valeurs de la communauté. Le conte a une structure en 5 étapes. La rédiger en Mbo mobilise toutes les compétences linguistiques acquises."
       },
       "emacResources": []
     },
@@ -1159,7 +1025,7 @@
       "level": "CN",
       "objectives": [
         "Identifier les quatre grandes aires culturelles du Cameroun",
-        "Situer la culture Fòŋ dans son aire culturelle",
+        "Situer la culture Mbo dans son aire culturelle",
         "Décrire les traits distinctifs de chaque aire",
         "Valoriser la diversité culturelle comme richesse nationale"
       ],
@@ -1177,15 +1043,15 @@
         "tips": "Valoriser chaque culture. Éviter les hiérarchies culturelles. La diversité est une richesse."
       },
       "student": {
-        "intro": "Le Cameroun est 'l'Afrique en miniature' — sa diversité culturelle est extraordinaire. La culture de Fòŋ s'inscrit dans une aire spécifique que tu vas découvrir.",
+        "intro": "Le Cameroun est 'l'Afrique en miniature' — sa diversité culturelle est extraordinaire. La culture de Mbo s'inscrit dans une aire spécifique que tu vas découvrir.",
         "activities": [
           "Sur la carte du Mini-Atlas, colorie les 4 aires culturelles en couleurs différentes.",
-          "Note dans quelle aire se situe la communauté Fòŋ.",
+          "Note dans quelle aire se situe la communauté Mbo.",
           "Liste 3 traits culturels distinctifs de cette aire (alimentation, habitat, organisation sociale).",
           "Compare deux aires : qu'ont-elles en commun ? Qu'est-ce qui les distingue ?",
           "Mémorise les 4 grandes aires culturelles et leurs localisations."
         ],
-        "memo": "Le Cameroun compte 4 grandes **aires culturelles** : **Beti-Fang**, **Grassfields**, **Sawa** et **Soudano-sahélienne**. La communauté Fòŋ s'inscrit dans l'une d'elles avec ses pratiques et valeurs spécifiques."
+        "memo": "Le Cameroun compte 4 grandes **aires culturelles** : **Beti-Fang**, **Grassfields**, **Sawa** et **Soudano-sahélienne**. La communauté Mbo s'inscrit dans l'une d'elles avec ses pratiques et valeurs spécifiques."
       },
       "emacResources": []
     },
@@ -1194,39 +1060,39 @@
       "code": "MC1.2",
       "module": "MC1-diversite-culturelle",
       "moduleTitle": "Module MC1 — Diversité culturelle camerounaise",
-      "title": "La culture Fòŋ dans le contexte camerounais",
+      "title": "La culture Mbo dans le contexte camerounais",
       "anelcac": "Identité culturelle, patrimoine immatériel, langues et cultures",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
         "Définir la notion d'identité culturelle",
-        "Décrire les éléments constitutifs de la culture Fòŋ",
+        "Décrire les éléments constitutifs de la culture Mbo",
         "Relier langue et culture",
-        "Produire un exposé sur la culture Fòŋ"
+        "Produire un exposé sur la culture Mbo"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : La culture Fòŋ dans le contexte camerounais. Module : Module MC1 — Diversité culturelle camerounaise.",
+        "intro": "Leçon : La culture Mbo dans le contexte camerounais. Module : Module MC1 — Diversité culturelle camerounaise.",
         "steps": [
           "**Mise en contexte :** Qu'est-ce qui vous rend différents des élèves d'une autre région ?",
-          "**Présentation :** Éléments de la culture Fòŋ : langue, musique, gastronomie, valeurs, organisation sociale.",
+          "**Présentation :** Éléments de la culture Mbo : langue, musique, gastronomie, valeurs, organisation sociale.",
           "**Explication :** Patrimoine immatériel : ce qui ne se voit pas mais qui se transmet.",
-          "**Recherche :** Les élèves enquêtent auprès de leurs familles sur un élément culturel Fòŋ.",
-          "**Production :** Exposé oral de 3 minutes sur un élément du patrimoine Fòŋ."
+          "**Recherche :** Les élèves enquêtent auprès de leurs familles sur un élément culturel Mbo.",
+          "**Production :** Exposé oral de 3 minutes sur un élément du patrimoine Mbo."
         ],
         "freedom": "Transformer la classe en musée vivant : chaque élève apporte un objet, une recette, un proverbe.",
         "tips": "Transformer la classe en musée vivant : chaque élève apporte un objet, une recette, un proverbe."
       },
       "student": {
-        "intro": "Ta langue, c'est aussi ta culture. Tu vas explorer ce qui fait la richesse de la culture Fòŋ.",
+        "intro": "Ta langue, c'est aussi ta culture. Tu vas explorer ce qui fait la richesse de la culture Mbo.",
         "activities": [
-          "Liste 5 éléments de la culture Fòŋ : langue, musique, cuisine, valeurs, organisation.",
-          "Choisis un élément du patrimoine immatériel Fòŋ et décris-le en 5 phrases.",
+          "Liste 5 éléments de la culture Mbo : langue, musique, cuisine, valeurs, organisation.",
+          "Choisis un élément du patrimoine immatériel Mbo et décris-le en 5 phrases.",
           "Prépare un exposé oral de 3 minutes (plan : présentation → description → importance).",
-          "Avec tes camarades, créez une affiche de la culture Fòŋ.",
+          "Avec tes camarades, créez une affiche de la culture Mbo.",
           "Mémorise : **patrimoine immatériel** = savoirs et pratiques culturels transmis oralement."
         ],
-        "memo": "L'**identité culturelle** Fòŋ s'exprime à travers la langue, la musique, la gastronomie et l'organisation sociale. Le **patrimoine immatériel** est aussi précieux que les monuments matériels."
+        "memo": "L'**identité culturelle** Mbo s'exprime à travers la langue, la musique, la gastronomie et l'organisation sociale. Le **patrimoine immatériel** est aussi précieux que les monuments matériels."
       },
       "emacResources": []
     },
@@ -1235,39 +1101,39 @@
       "code": "MC2.1",
       "module": "MC2-modes-de-vie",
       "moduleTitle": "Module MC2 — Modes de vie",
-      "title": "Pratiques culinaires et musicales de la communauté Fòŋ",
+      "title": "Pratiques culinaires et musicales de la communauté Mbo",
       "anelcac": "Modes de vie : pratiques culinaires, pratiques musicales",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire les pratiques culinaires traditionnelles de Fòŋ",
+        "Décrire les pratiques culinaires traditionnelles de Mbo",
         "Identifier les instruments et genres musicaux",
         "Expliquer le rôle social de la musique et de la cuisine",
-        "Présenter une recette ou un genre musical en Fòŋ"
+        "Présenter une recette ou un genre musical en Mbo"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Pratiques culinaires et musicales de la communauté Fòŋ. Module : Module MC2 — Modes de vie.",
+        "intro": "Leçon : Pratiques culinaires et musicales de la communauté Mbo. Module : Module MC2 — Modes de vie.",
         "steps": [
-          "**Mise en contexte :** Apporter un aliment traditionnel associé à Fòŋ. Susciter la discussion.",
+          "**Mise en contexte :** Apporter un aliment traditionnel associé à Mbo. Susciter la discussion.",
           "**Présentation :** Plats, ingrédients et techniques culinaires. Instruments et genres musicaux.",
           "**Démonstration :** Faire écouter un morceau traditionnel de la région. Identifier les instruments.",
-          "**Application :** Décrire en Fòŋ la préparation d'un plat simple.",
+          "**Application :** Décrire en Mbo la préparation d'un plat simple.",
           "**Production :** Présentation orale : une recette ou un genre musical."
         ],
         "freedom": "Cuisine et musique sont des portes d'entrée émotionnelles vers la culture. Maximiser les exemples concrets.",
         "tips": "Cuisine et musique sont des portes d'entrée émotionnelles vers la culture. Maximiser les exemples concrets."
       },
       "student": {
-        "intro": "La cuisine et la musique de la culture Fòŋ racontent qui tu es. Tu les explores comme des expressions culturelles vivantes.",
+        "intro": "La cuisine et la musique de la culture Mbo racontent qui tu es. Tu les explores comme des expressions culturelles vivantes.",
         "activities": [
-          "Décris en Fòŋ les étapes de préparation d'un plat traditionnel.",
+          "Décris en Mbo les étapes de préparation d'un plat traditionnel.",
           "Identifie 3 instruments de musique traditionnelle et explique leur usage.",
-          "Transcris le texte d'une chanson traditionnelle simple en Fòŋ et traduis-la.",
-          "Présente oralement une recette en Fòŋ (min. 6 étapes).",
-          "Mémorise les noms des principaux plats et instruments en Fòŋ."
+          "Transcris le texte d'une chanson traditionnelle simple en Mbo et traduis-la.",
+          "Présente oralement une recette en Mbo (min. 6 étapes).",
+          "Mémorise les noms des principaux plats et instruments en Mbo."
         ],
-        "memo": "La **cuisine** et la **musique** traditionnelles sont des marqueurs identitaires forts de la culture Fòŋ. Plats, instruments et genres musicaux ont souvent des noms en Fòŋ qui ne se traduisent pas exactement."
+        "memo": "La **cuisine** et la **musique** traditionnelles sont des marqueurs identitaires forts de la culture Mbo. Plats, instruments et genres musicaux ont souvent des noms en Mbo qui ne se traduisent pas exactement."
       },
       "emacResources": []
     },
@@ -1276,19 +1142,19 @@
       "code": "MC2.2",
       "module": "MC2-modes-de-vie",
       "moduleTitle": "Module MC2 — Modes de vie",
-      "title": "Habitat traditionnel et vêtements de la communauté Fòŋ",
+      "title": "Habitat traditionnel et vêtements de la communauté Mbo",
       "anelcac": "Modes de vie : pratiques vestimentaires, architecturales",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire l'habitat traditionnel de la communauté Fòŋ",
+        "Décrire l'habitat traditionnel de la communauté Mbo",
         "Identifier les tenues vestimentaires et leur signification",
         "Expliquer l'évolution des modes de vie",
         "Produire un texte descriptif sur l'habitat ou le vêtement"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Habitat traditionnel et vêtements de la communauté Fòŋ. Module : Module MC2 — Modes de vie.",
+        "intro": "Leçon : Habitat traditionnel et vêtements de la communauté Mbo. Module : Module MC2 — Modes de vie.",
         "steps": [
           "**Mise en contexte :** Photos d'habitations traditionnelles et modernes. Qu'est-ce qui a changé ?",
           "**Présentation :** Types d'habitations : matériaux, forme, organisation de l'espace.",
@@ -1300,15 +1166,15 @@
         "tips": "Éviter les présentations exotisantes. Comprendre la logique culturelle derrière les formes d'habitat et de vêtement."
       },
       "student": {
-        "intro": "La maison et les vêtements traditionnels racontent l'organisation sociale et les valeurs de la culture Fòŋ.",
+        "intro": "La maison et les vêtements traditionnels racontent l'organisation sociale et les valeurs de la culture Mbo.",
         "activities": [
-          "Décris en Fòŋ les matériaux et la disposition d'une habitation traditionnelle.",
+          "Décris en Mbo les matériaux et la disposition d'une habitation traditionnelle.",
           "Explique la signification d'une tenue vestimentaire lors d'une cérémonie.",
           "Compare habitation traditionnelle et moderne : 3 différences, 2 points communs.",
-          "Rédige un texte de 10 phrases sur l'évolution de l'habitat dans la communauté Fòŋ.",
-          "Mémorise le vocabulaire Fòŋ de l'habitat et du vêtement."
+          "Rédige un texte de 10 phrases sur l'évolution de l'habitat dans la communauté Mbo.",
+          "Mémorise le vocabulaire Mbo de l'habitat et du vêtement."
         ],
-        "memo": "L'**habitat traditionnel** et les **tenues vestimentaires** de la culture Fòŋ reflètent des valeurs précises : organisation familiale, rôles sociaux, rapport au sacré."
+        "memo": "L'**habitat traditionnel** et les **tenues vestimentaires** de la culture Mbo reflètent des valeurs précises : organisation familiale, rôles sociaux, rapport au sacré."
       },
       "emacResources": []
     },
@@ -1317,19 +1183,19 @@
       "code": "MC3.1",
       "module": "MC3-evenements-marquants",
       "moduleTitle": "Module MC3 — Événements marquants de la vie",
-      "title": "Naissance et rites d'initiation dans la culture Fòŋ",
+      "title": "Naissance et rites d'initiation dans la culture Mbo",
       "anelcac": "Événements marquants : naissance, éducation des enfants, rites d'initiation",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire les pratiques liées à la naissance en culture Fòŋ",
+        "Décrire les pratiques liées à la naissance en culture Mbo",
         "Expliquer le rôle des rites d'initiation",
         "Analyser l'éducation traditionnelle de l'enfant",
-        "Produire un texte sur l'éducation dans la tradition Fòŋ"
+        "Produire un texte sur l'éducation dans la tradition Mbo"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Naissance et rites d'initiation dans la culture Fòŋ. Module : Module MC3 — Événements marquants de la vie.",
+        "intro": "Leçon : Naissance et rites d'initiation dans la culture Mbo. Module : Module MC3 — Événements marquants de la vie.",
         "steps": [
           "**Mise en contexte :** Que savent les élèves des pratiques entourant la naissance dans leur famille ?",
           "**Présentation :** Rites de naissance : attribution du nom, présentation à la famille, cérémonies.",
@@ -1341,15 +1207,15 @@
         "tips": "Certains rites sont confidentiels. Ne pas forcer les élèves à partager. Travailler sur les aspects publics."
       },
       "student": {
-        "intro": "Dans la culture Fòŋ, naître et grandir sont des événements sociaux — toute la communauté participe à l'éducation de l'enfant.",
+        "intro": "Dans la culture Mbo, naître et grandir sont des événements sociaux — toute la communauté participe à l'éducation de l'enfant.",
         "activities": [
-          "Décris en 5 phrases un rite entourant la naissance dans la culture Fòŋ.",
+          "Décris en 5 phrases un rite entourant la naissance dans la culture Mbo.",
           "Explique le rôle des grands-parents dans l'éducation traditionnelle.",
           "Compare éducation traditionnelle et scolaire : 3 complémentarités, 2 tensions.",
           "Rédige une lettre imaginaire d'un grand-père à son petit-enfant transmettant une valeur.",
-          "Mémorise les noms des principales étapes de la vie en Fòŋ."
+          "Mémorise les noms des principales étapes de la vie en Mbo."
         ],
-        "memo": "Dans la culture **Fòŋ**, la **naissance** et l'**initiation** sont des moments de socialisation intense. L'éducation traditionnelle repose sur la transmission orale et le rôle des aînés."
+        "memo": "Dans la culture **Mbo**, la **naissance** et l'**initiation** sont des moments de socialisation intense. L'éducation traditionnelle repose sur la transmission orale et le rôle des aînés."
       },
       "emacResources": []
     },
@@ -1358,19 +1224,19 @@
       "code": "MC3.2",
       "module": "MC3-evenements-marquants",
       "moduleTitle": "Module MC3 — Événements marquants de la vie",
-      "title": "Mariage, deuil et célébrations dans la culture Fòŋ",
+      "title": "Mariage, deuil et célébrations dans la culture Mbo",
       "anelcac": "Événements marquants : mariage, mort et deuil, cérémonies",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire les pratiques matrimoniales de Fòŋ",
+        "Décrire les pratiques matrimoniales de Mbo",
         "Analyser les rites funéraires",
         "Expliquer l'importance sociale des cérémonies",
         "Produire un récit sur une cérémonie"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Mariage, deuil et célébrations dans la culture Fòŋ. Module : Module MC3 — Événements marquants de la vie.",
+        "intro": "Leçon : Mariage, deuil et célébrations dans la culture Mbo. Module : Module MC3 — Événements marquants de la vie.",
         "steps": [
           "**Mise en contexte :** Photos de cérémonies (mariage, funérailles). Qu'observent les élèves ?",
           "**Présentation :** Le mariage traditionnel : dot, cérémonies, rôle des familles.",
@@ -1382,15 +1248,15 @@
         "tips": "Aborder le deuil avec sensibilité. Certains élèves peuvent avoir récemment vécu un deuil."
       },
       "student": {
-        "intro": "Le mariage et les funérailles en culture Fòŋ sont des actes sociaux qui cimentent la communauté.",
+        "intro": "Le mariage et les funérailles en culture Mbo sont des actes sociaux qui cimentent la communauté.",
         "activities": [
           "Décris les étapes du mariage traditionnel dans l'ordre chronologique.",
-          "Explique la signification symbolique de la dot dans la culture Fòŋ.",
-          "Décris comment le deuil est géré dans la culture Fòŋ.",
+          "Explique la signification symbolique de la dot dans la culture Mbo.",
+          "Décris comment le deuil est géré dans la culture Mbo.",
           "Rédige un texte de 12 phrases racontant une cérémonie de mariage.",
-          "Mémorise le vocabulaire du mariage et du deuil en Fòŋ."
+          "Mémorise le vocabulaire du mariage et du deuil en Mbo."
         ],
-        "memo": "Le **mariage** et le **deuil** dans la culture **Fòŋ** sont des événements communautaires structurants. La dot, les cérémonies et les rites funéraires expriment les valeurs de solidarité et de respect des ancêtres."
+        "memo": "Le **mariage** et le **deuil** dans la culture **Mbo** sont des événements communautaires structurants. La dot, les cérémonies et les rites funéraires expriment les valeurs de solidarité et de respect des ancêtres."
       },
       "emacResources": []
     },
@@ -1399,22 +1265,22 @@
       "code": "MC4.1",
       "module": "MC4-pratiques-communaute1",
       "moduleTitle": "Module MC4 — Pratiques en communauté (Niveau 1)",
-      "title": "Jeux traditionnels et organisation sociale en culture Fòŋ",
+      "title": "Jeux traditionnels et organisation sociale en culture Mbo",
       "anelcac": "Pratiques communautaires Niv. 1 : jeux, économie traditionnelle, organisation sociale",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
         "Décrire les jeux traditionnels et leur rôle éducatif",
-        "Expliquer l'organisation sociale de la communauté Fòŋ",
+        "Expliquer l'organisation sociale de la communauté Mbo",
         "Identifier les institutions traditionnelles (chefferie, conseil des anciens)",
         "Produire un texte sur l'organisation sociale"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Jeux traditionnels et organisation sociale en culture Fòŋ. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
+        "intro": "Leçon : Jeux traditionnels et organisation sociale en culture Mbo. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
         "steps": [
           "**Mise en contexte :** Nommer un jeu traditionnel de la communauté et expliquer ses règles.",
-          "**Présentation :** Jeux traditionnels de Fòŋ : règles, matériel, âges et genres concernés.",
+          "**Présentation :** Jeux traditionnels de Mbo : règles, matériel, âges et genres concernés.",
           "**Explication :** Organisation sociale : chefferie, conseil des anciens, sociétés, groupes d'âge.",
           "**Application :** Schéma de l'organisation sociale de la communauté.",
           "**Production :** Texte sur le rôle du chef ou du conseil des anciens."
@@ -1423,15 +1289,15 @@
         "tips": "Les jeux traditionnels sont souvent des métaphores de l'organisation sociale. Exploiter ce lien."
       },
       "student": {
-        "intro": "Les jeux transmettent des valeurs. Et l'organisation sociale de Fòŋ est une œuvre collective sophistiquée.",
+        "intro": "Les jeux transmettent des valeurs. Et l'organisation sociale de Mbo est une œuvre collective sophistiquée.",
         "activities": [
-          "Décris les règles d'un jeu traditionnel en Fòŋ (6 règles minimum).",
+          "Décris les règles d'un jeu traditionnel en Mbo (6 règles minimum).",
           "Explique ce que ce jeu apprend aux enfants.",
           "Dessine ou décris le schéma d'organisation sociale de la communauté.",
           "Rédige 8 phrases sur le rôle du conseil des anciens dans la résolution des conflits.",
-          "Mémorise les noms des principales instances sociales en Fòŋ."
+          "Mémorise les noms des principales instances sociales en Mbo."
         ],
-        "memo": "La culture **Fòŋ** dispose d'une **organisation sociale** structurée : chefferie, conseil des anciens, groupes d'âge. Les **jeux traditionnels** transmettent les valeurs et compétences nécessaires à la vie communautaire."
+        "memo": "La culture **Mbo** dispose d'une **organisation sociale** structurée : chefferie, conseil des anciens, groupes d'âge. Les **jeux traditionnels** transmettent les valeurs et compétences nécessaires à la vie communautaire."
       },
       "emacResources": []
     },
@@ -1440,21 +1306,21 @@
       "code": "MC4.2",
       "module": "MC4-pratiques-communaute1",
       "moduleTitle": "Module MC4 — Pratiques en communauté (Niveau 1)",
-      "title": "Économie traditionnelle de la communauté Fòŋ",
+      "title": "Économie traditionnelle de la communauté Mbo",
       "anelcac": "Économie traditionnelle : agriculture, élevage, artisanat, commerce, solidarité",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Décrire les activités économiques traditionnelles de Fòŋ",
+        "Décrire les activités économiques traditionnelles de Mbo",
         "Expliquer les systèmes d'échange et de solidarité",
         "Analyser l'évolution de l'économie traditionnelle",
         "Produire un texte sur une activité économique"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Économie traditionnelle de la communauté Fòŋ. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
+        "intro": "Leçon : Économie traditionnelle de la communauté Mbo. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
         "steps": [
-          "**Mise en contexte :** De quoi vivait la communauté Fòŋ avant la colonisation ?",
+          "**Mise en contexte :** De quoi vivait la communauté Mbo avant la colonisation ?",
           "**Présentation :** Agriculture, élevage, chasse, pêche, artisanat : activités et savoirs techniques.",
           "**Explication :** Solidarité économique : tontines, entraide agricole, marchés périodiques.",
           "**Analyse :** Impact de la monétarisation et de la modernité.",
@@ -1464,15 +1330,15 @@
         "tips": "L'économie traditionnelle est souvent invisible dans les manuels. La rendre visible, c'est valoriser des savoirs réels et complexes."
       },
       "student": {
-        "intro": "L'économie traditionnelle de Fòŋ est un système de solidarité et de savoir-faire sophistiqué.",
+        "intro": "L'économie traditionnelle de Mbo est un système de solidarité et de savoir-faire sophistiqué.",
         "activities": [
           "Liste les 5 principales activités économiques et les savoirs qu'elles requièrent.",
           "Explique le fonctionnement d'une tontine ou d'un système d'entraide agricole.",
           "Compare marché traditionnel et marché moderne : 3 différences.",
           "Rédige 10 phrases sur une activité artisanale traditionnelle.",
-          "Mémorise le vocabulaire économique traditionnel en Fòŋ."
+          "Mémorise le vocabulaire économique traditionnel en Mbo."
         ],
-        "memo": "L'**économie traditionnelle** de Fòŋ repose sur l'agriculture, l'artisanat et des systèmes de solidarité comme les tontines. Ces pratiques ont une logique interne complexe qui coexiste avec l'économie moderne."
+        "memo": "L'**économie traditionnelle** de Mbo repose sur l'agriculture, l'artisanat et des systèmes de solidarité comme les tontines. Ces pratiques ont une logique interne complexe qui coexiste avec l'économie moderne."
       },
       "emacResources": []
     },
@@ -1481,21 +1347,21 @@
       "code": "MC5.1",
       "module": "MC5-pratiques-communaute2",
       "moduleTitle": "Module MC5 — Pratiques en communauté (Niveau 2)",
-      "title": "Symbolique, rites et interdits en culture Fòŋ",
+      "title": "Symbolique, rites et interdits en culture Mbo",
       "anelcac": "Pratiques communautaires Niv. 2 : symbolique, rites, interdits (tabous)",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Expliquer le rôle des symboles dans la culture Fòŋ",
+        "Expliquer le rôle des symboles dans la culture Mbo",
         "Identifier des rites spécifiques et leur signification",
         "Analyser la fonction sociale des interdits",
         "Produire un texte analytique sur une pratique symbolique"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Symbolique, rites et interdits en culture Fòŋ. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
+        "intro": "Leçon : Symbolique, rites et interdits en culture Mbo. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
         "steps": [
-          "**Mise en contexte :** Montrer un objet ou une couleur symbolique de Fòŋ. Quelle est sa signification ?",
+          "**Mise en contexte :** Montrer un objet ou une couleur symbolique de Mbo. Quelle est sa signification ?",
           "**Présentation :** Symboles culturels : couleurs, objets, gestes, espaces sacrés.",
           "**Explication :** Rites spécifiques et leur logique. Les tabous : aliments, lieux, actions interdites.",
           "**Discussion :** La fonction des interdits : protection, cohésion sociale, transmission de valeurs.",
@@ -1505,15 +1371,15 @@
         "tips": "Aborder les rites et tabous avec respect et neutralité. L'objectif est de comprendre, non de juger."
       },
       "student": {
-        "intro": "Chaque geste, chaque couleur, chaque interdit en culture Fòŋ a un sens. Tu décodes la symbolique culturelle de ta communauté.",
+        "intro": "Chaque geste, chaque couleur, chaque interdit en culture Mbo a un sens. Tu décodes la symbolique culturelle de ta communauté.",
         "activities": [
-          "Identifie 3 symboles importants de la culture Fòŋ et explique leur signification.",
+          "Identifie 3 symboles importants de la culture Mbo et explique leur signification.",
           "Décris un rite culturel et analyse sa fonction sociale.",
           "Explique pourquoi les interdits culturels sont des régulateurs sociaux.",
           "Rédige un texte analytique de 10 phrases sur un interdit alimentaire ou spatial.",
-          "Mémorise le vocabulaire Fòŋ des rites, symboles et interdits."
+          "Mémorise le vocabulaire Mbo des rites, symboles et interdits."
         ],
-        "memo": "La **symbolique** de la culture **Fòŋ** exprime un système de valeurs cohérent. Les **rites** et les **interdits** ont une fonction de régulation sociale et de transmission des valeurs aux générations suivantes."
+        "memo": "La **symbolique** de la culture **Mbo** exprime un système de valeurs cohérent. Les **rites** et les **interdits** ont une fonction de régulation sociale et de transmission des valeurs aux générations suivantes."
       },
       "emacResources": []
     },
@@ -1522,39 +1388,39 @@
       "code": "MC5.2",
       "module": "MC5-pratiques-communaute2",
       "moduleTitle": "Module MC5 — Pratiques en communauté (Niveau 2)",
-      "title": "Médias traditionnels et transmission culturelle en Fòŋ",
+      "title": "Médias traditionnels et transmission culturelle en Mbo",
       "anelcac": "Pratiques communautaires Niv. 2 : médias traditionnels, transmission intergénérationnelle",
       "duration": "60 min",
       "level": "CN",
       "objectives": [
-        "Identifier les médias traditionnels de communication en culture Fòŋ",
+        "Identifier les médias traditionnels de communication en culture Mbo",
         "Analyser les mécanismes de transmission culturelle intergénérationnelle",
         "Évaluer les défis contemporains de la transmission",
         "Produire un projet de valorisation culturelle"
       ],
       "vocabulary": [],
       "teacher": {
-        "intro": "Leçon : Médias traditionnels et transmission culturelle en Fòŋ. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
+        "intro": "Leçon : Médias traditionnels et transmission culturelle en Mbo. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
         "steps": [
-          "**Mise en contexte :** Avant la radio et internet, comment les nouvelles circulaient-elles dans la communauté Fòŋ ?",
+          "**Mise en contexte :** Avant la radio et internet, comment les nouvelles circulaient-elles dans la communauté Mbo ?",
           "**Présentation :** Médias traditionnels : tam-tam, crieurs publics, griots, réunions de village, contes du soir.",
           "**Explication :** Mécanismes de transmission : bouche à oreille, apprentissage par exemple, cérémonies d'initiation.",
           "**Analyse :** Défis contemporains : exode rural, médias numériques, désintérêt des jeunes.",
-          "**Production :** Projet de classe pour valoriser la culture Fòŋ (radio scolaire, journal bilingue, exposition)."
+          "**Production :** Projet de classe pour valoriser la culture Mbo (radio scolaire, journal bilingue, exposition)."
         ],
         "freedom": "Terminer par un projet concret de valorisation culturelle renforce l'engagement et donne du sens à l'ensemble de l'apprentissage CN.",
         "tips": "Terminer par un projet concret de valorisation culturelle renforce l'engagement et donne du sens à l'ensemble de l'apprentissage CN."
       },
       "student": {
-        "intro": "Comment une culture survit-elle ? Par ses **médias traditionnels** et sa **transmission intergénérationnelle**. Dans cette leçon finale, tu réfléchis à comment protéger la culture Fòŋ aujourd'hui.",
+        "intro": "Comment une culture survit-elle ? Par ses **médias traditionnels** et sa **transmission intergénérationnelle**. Dans cette leçon finale, tu réfléchis à comment protéger la culture Mbo aujourd'hui.",
         "activities": [
           "Identifie 4 médias traditionnels et explique le rôle de chacun.",
-          "Interroge un aîné sur un savoir culturel Fòŋ appris de ses parents. Rédige son témoignage.",
-          "Identifie 3 défis à la transmission de la culture Fòŋ et propose des solutions.",
+          "Interroge un aîné sur un savoir culturel Mbo appris de ses parents. Rédige son témoignage.",
+          "Identifie 3 défis à la transmission de la culture Mbo et propose des solutions.",
           "Conçois un projet de valorisation : quel format, quel public, quel contenu ?",
-          "Mémorise les noms des principaux médias traditionnels en Fòŋ."
+          "Mémorise les noms des principaux médias traditionnels en Mbo."
         ],
-        "memo": "Les **médias traditionnels** de la culture **Fòŋ** (tam-tam, conteurs, réunions villageoises) assurent la transmission des savoirs et valeurs. Des actions concrètes de valorisation sont nécessaires pour assurer la survie de ce patrimoine."
+        "memo": "Les **médias traditionnels** de la culture **Mbo** (tam-tam, conteurs, réunions villageoises) assurent la transmission des savoirs et valeurs. Des actions concrètes de valorisation sont nécessaires pour assurer la survie de ce patrimoine."
       },
       "emacResources": []
     }

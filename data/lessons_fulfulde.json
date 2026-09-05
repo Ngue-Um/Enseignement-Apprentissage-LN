@@ -1,0 +1,1250 @@
+{
+  "language": "fulfulde",
+  "languageName": "Fulfulde d'Adamaoua",
+  "lessons": [
+    {
+      "id": "I-1",
+      "code": "I.1",
+      "module": "M1-diversite",
+      "moduleTitle": "Module I — Diversité linguistique camerounaise",
+      "title": "Diversité linguistique et dialectes",
+      "anelcac": "Notions de diversité linguistique, dialectes, noms des langues, classification géographique",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Prendre conscience de la diversité linguistique du Cameroun (environ 280 langues selon le Mini-Atlas LACAGEO)",
+        "Distinguer langue, dialecte et variante selon les définitions académiques",
+        "Nommer et situer Fulfulde d'Adamaoua dans la classification géographique des langues du Cameroun",
+        "Adopter une attitude de respect envers toutes les langues"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Diversité linguistique et dialectes. Module : Module I — Diversité linguistique camerounaise.",
+        "steps": [
+          "**Mise en contexte :** Afficher la carte du Mini-Atlas linguistique du Cameroun. Demander aux élèves quelles langues sont parlées dans leur famille.",
+          "**Exploration :** Faire lire les définitions du Mini-Atlas (langue, dialecte, patois, langue nationale). Situer Fulfulde d'Adamaoua dans sa région linguistique.",
+          "**Conceptualisation :** Expliquer la distinction langue / dialecte avec des exemples : les dialectes bulu, ewondo, eton, mangisa appartiennent tous à la langue béti-fang (Mini-Atlas).",
+          "**Application :** Compléter un tableau : nom de la langue, famille, région principale, code ISO.",
+          "**Évaluation :** Chaque élève présente oralement Fulfulde d'Adamaoua en indiquant famille et région."
+        ],
+        "freedom": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées.",
+        "tips": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées."
+      },
+      "student": {
+        "intro": "Le Cameroun est l'une des nations les plus riches en langues au monde — le Mini-Atlas linguistique en recense environ 280 ! Dans cette leçon, tu découvres la place de Fulfulde d'Adamaoua dans cette grande famille.",
+        "activities": [
+          "Observe la carte du Mini-Atlas et repère la zone où Fulfulde d'Adamaoua est principalement parlé.",
+          "Recopie et complète : Fulfulde d'Adamaoua appartient à la famille ___. Elle est surtout parlée dans la région ___.",
+          "Selon le Mini-Atlas, combien de langues vivantes compte la région de Fulfulde d'Adamaoua ? Note ce chiffre.",
+          "Enquête : demande à un adulte le nom de la langue dans laquelle il a été élevé et où elle est parlée.",
+          "Mémorise : **dialecte** = variante intelligible d'une même langue ; **langue nationale** = langue d'une ethnie ne dépassant pas les frontières d'un État (ACA LAN)."
+        ],
+        "memo": "Le Cameroun compte environ **280 langues** selon le Mini-Atlas LACAGEO. Fulfulde d'Adamaoua appartient à une famille linguistique camerounaise et possède ses propres variantes dialectales. Selon l'ACA LAN, une langue nationale est une langue d'ethnie ne dépassant pas les frontières d'un État."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "I-2",
+      "code": "I.2",
+      "module": "M1-diversite",
+      "moduleTitle": "Module I — Diversité linguistique camerounaise",
+      "title": "Classification des langues et atlas linguistique",
+      "anelcac": "Classification des langues du Cameroun : aires linguistiques, familles, atlas ALCAM",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Citer les grandes aires linguistiques du Cameroun",
+        "Lire et interpréter un extrait d'atlas linguistique (ALCAM / Mini-Atlas)",
+        "Classer Fulfulde d'Adamaoua selon ses critères typologiques",
+        "Produire un court texte de présentation de Fulfulde d'Adamaoua"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Classification des langues et atlas linguistique. Module : Module I — Diversité linguistique camerounaise.",
+        "steps": [
+          "**Mise en contexte :** Revenir sur les définitions. Combien de familles linguistiques les élèves se rappellent-ils ?",
+          "**Présentation :** Les 8 familles linguistiques mondiales selon l'Ethnologue (Niger-Kordofan, Nilo-Saharienne, Afro-asiatique…). Situer les langues camerounaises dans cet ensemble.",
+          "**Explication :** Montrer comment retrouver Fulfulde d'Adamaoua dans l'ALCAM : code ISO, famille, localisation.",
+          "**Pratique guidée :** En binôme, les élèves cherchent 3 langues voisines de Fulfulde d'Adamaoua et notent leurs codes ISO.",
+          "**Production :** Paragraphe de 5 lignes présentant Fulfulde d'Adamaoua (famille, région, locuteurs, particularité)."
+        ],
+        "freedom": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques.",
+        "tips": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques."
+      },
+      "student": {
+        "intro": "Un atlas linguistique est une carte spécialisée. L'ALCAM (Atlas des Langues du Cameroun) et le Mini-Atlas LACAGEO te permettent de situer Fulfulde d'Adamaoua précisément.",
+        "activities": [
+          "Dans la carte du Mini-Atlas, repère Fulfulde d'Adamaoua et note sa région administrative.",
+          "Liste 3 langues dont la zone est contiguë à celle de Fulfulde d'Adamaoua.",
+          "Classe ces 4 langues dans un tableau : Langue | Famille | Région principale.",
+          "Rédige un paragraphe de présentation de Fulfulde d'Adamaoua avec au moins 5 informations tirées de l'atlas.",
+          "Mémorise : **ISO 639** = codes internationaux des langues ; **ALCAM** = Atlas des Langues du Cameroun."
+        ],
+        "memo": "L'**ALCAM** et le **Mini-Atlas LACAGEO** recensent et localisent toutes les langues nationales du Cameroun. Le Cameroun compte 8 familles linguistiques principales. Fulfulde d'Adamaoua y figure avec sa famille et sa localisation. Savoir lire un atlas linguistique, c'est lire l'histoire des peuples."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "II-1",
+      "code": "II.1",
+      "module": "M2-segmentaux",
+      "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
+      "title": "Voyelles de Fulfulde d'Adamaoua",
+      "anelcac": "Voyelles AGLC — simples, spécifiques, complexes",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Identifier les voyelles simples du système phonologique de Fulfulde d'Adamaoua",
+        "Reconnaître les voyelles spécifiques absentes du français",
+        "Prononcer correctement les voyelles en contexte de mot",
+        "Transcrire des mots comportant des voyelles selon l'AGLC"
+      ],
+      "vocabulary": [
+        {
+          "id": "81b448fa1fca",
+          "audio": "1911feddd483b3f667da6d3c2af2c939.mp3",
+          "langText": "An goɗɗo waddani ma ɓoomere a ɗon huuwana mo.",
+          "langWord": "An goɗɗo waddani ma ɓoomere a ɗon huuwana mo.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "557c5f5b9796",
+          "audio": "24d18494db7ed447e8dcf0e5fad24f9e.mp3",
+          "langText": "O waddani ma sokoliire a annda ko woni nder sokoliire",
+          "langWord": "O waddani ma sokoliire a annda ko woni nder sokoliire",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "17d1689e6962",
+          "audio": "ac9c1f7f32c09af60d7858d74b803784.mp3",
+          "langText": "Ɗo fisti nder sokoliire ɗo ndaara ko woni nder ton.",
+          "langWord": "Ɗo fisti nder sokoliire ɗo ndaara ko woni nder ton.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "6ec4b73ab4c4",
+          "audio": "b9dc3f9119730a58d50b50735f6a6720.mp3",
+          "langText": "Gudiijo numti bana nii, hooyi sokoliire ɗon fisti,",
+          "langWord": "Gudiijo numti bana nii, hooyi sokoliire ɗon fisti,",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc24050db6dc",
+          "audio": "e70e61b2c0654b230a8ce9dd3363b73a.mp3",
+          "langText": "Tawi sokoliire ɗon pat heewi ceeli kusel.",
+          "langWord": "Tawi sokoliire ɗon pat heewi ceeli kusel.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "c66d48c9d43d",
+          "audio": "0f9cb0b1e9054f46fe1b81f3e93bf70c.mp3",
+          "langText": "Fowru boo laari anndaa ɗum kusel wonno haa ton,",
+          "langWord": "Fowru boo laari anndaa ɗum kusel wonno haa ton,",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "62413aaa979e",
+          "audio": "7895b0fd623bf3364765bad3e41658d1.mp3",
+          "langText": "Miccitake ɗum yiɗi haa hooca kusel O heɓaay dabare, huunde naawi ɗum fayin.",
+          "langWord": "Miccitake ɗum yiɗi haa hooca kusel O heɓaay dabare, huunde naawi ɗum fayin.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "74e3ea58f196",
+          "audio": "a61872f4a0a68aaf795e7b4cfc23e4b7.mp3",
+          "langText": "Munyi, munyi, wi’i gudiijo : taataa tappu laɓi ki, sey mi tindine laɓi am no waari.",
+          "langWord": "Munyi, munyi, wi’i gudiijo : taataa tappu laɓi ki, sey mi tindine laɓi am no waari.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon : Voyelles de Fulfulde d'Adamaoua. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
+        "steps": [
+          "**Mise en contexte :** Écrire au tableau des mots connus en Fulfulde d'Adamaoua et demander quels sons les élèves entendent.",
+          "**Présentation :** Introduire l'AGLC. Écrire les voyelles simples de Fulfulde d'Adamaoua au tableau en les articulant clairement.",
+          "**Explication :** Voyelles spécifiques de Fulfulde d'Adamaoua absentes du français (nasales, d'aperture particulière…). Exercices d'écoute et répétition.",
+          "**Application :** Liste de 10 mots — les élèves soulignent les voyelles et indiquent : simple ou spécifique.",
+          "**Évaluation :** Dictée de 5 mots simples — les élèves les transcrivent avec les voyelles correctes."
+        ],
+        "freedom": "Utiliser les exemples du vocabulaire ALCAM de la plateforme. Pour chaque voyelle spécifique, donner un mot-clé mémorisable.",
+        "tips": "Utiliser les exemples du vocabulaire ALCAM de la plateforme. Pour chaque voyelle spécifique, donner un mot-clé mémorisable."
+      },
+      "student": {
+        "intro": "Chaque langue a ses propres sons. En Fulfulde d'Adamaoua, certaines voyelles n'existent pas en français. Cette leçon t'apprend à les entendre, les prononcer et les écrire.",
+        "activities": [
+          "Écoute les enregistrements du vocabulaire Fulfulde d'Adamaoua et identifie les voyelles que tu entends.",
+          "Classe les voyelles : **Communes avec le français** | **Propres à Fulfulde d'Adamaoua**.",
+          "Transcris les 5 mots dictés en veillant à bien noter chaque voyelle.",
+          "Trouve 3 mots en Fulfulde d'Adamaoua pour chaque voyelle spécifique et écris-les.",
+          "Mémorise : **AGLC** = Alphabet Général des Langues Camerounaises, référence officielle."
+        ],
+        "memo": "Le système vocalique de **Fulfulde d'Adamaoua** comprend des voyelles simples et des voyelles spécifiques (ex. voyelles nasalisées). On les note grâce à l'**AGLC**. La maîtrise des voyelles est la base de la lecture et de l'écriture en Fulfulde d'Adamaoua."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "II-2",
+      "code": "II.2",
+      "module": "M2-segmentaux",
+      "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
+      "title": "Consonnes de Fulfulde d'Adamaoua et production écrite",
+      "anelcac": "Consonnes — simples, spécifiques, complexes ; production écrite voyelles et consonnes",
+      "duration": "60 min",
+      "level": "6e",
+      "objectives": [
+        "Identifier le système consonantique de Fulfulde d'Adamaoua",
+        "Reconnaître les consonnes spécifiques absentes du français",
+        "Articuler correctement les consonnes en contexte",
+        "Produire par écrit des mots avec voyelles et consonnes correctement notés"
+      ],
+      "vocabulary": [
+        {
+          "id": "81b448fa1fca",
+          "audio": "1911feddd483b3f667da6d3c2af2c939.mp3",
+          "langText": "An goɗɗo waddani ma ɓoomere a ɗon huuwana mo.",
+          "langWord": "An goɗɗo waddani ma ɓoomere a ɗon huuwana mo.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "557c5f5b9796",
+          "audio": "24d18494db7ed447e8dcf0e5fad24f9e.mp3",
+          "langText": "O waddani ma sokoliire a annda ko woni nder sokoliire",
+          "langWord": "O waddani ma sokoliire a annda ko woni nder sokoliire",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "17d1689e6962",
+          "audio": "ac9c1f7f32c09af60d7858d74b803784.mp3",
+          "langText": "Ɗo fisti nder sokoliire ɗo ndaara ko woni nder ton.",
+          "langWord": "Ɗo fisti nder sokoliire ɗo ndaara ko woni nder ton.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "6ec4b73ab4c4",
+          "audio": "b9dc3f9119730a58d50b50735f6a6720.mp3",
+          "langText": "Gudiijo numti bana nii, hooyi sokoliire ɗon fisti,",
+          "langWord": "Gudiijo numti bana nii, hooyi sokoliire ɗon fisti,",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "dc24050db6dc",
+          "audio": "e70e61b2c0654b230a8ce9dd3363b73a.mp3",
+          "langText": "Tawi sokoliire ɗon pat heewi ceeli kusel.",
+          "langWord": "Tawi sokoliire ɗon pat heewi ceeli kusel.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "c66d48c9d43d",
+          "audio": "0f9cb0b1e9054f46fe1b81f3e93bf70c.mp3",
+          "langText": "Fowru boo laari anndaa ɗum kusel wonno haa ton,",
+          "langWord": "Fowru boo laari anndaa ɗum kusel wonno haa ton,",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "62413aaa979e",
+          "audio": "7895b0fd623bf3364765bad3e41658d1.mp3",
+          "langText": "Miccitake ɗum yiɗi haa hooca kusel O heɓaay dabare, huunde naawi ɗum fayin.",
+          "langWord": "Miccitake ɗum yiɗi haa hooca kusel O heɓaay dabare, huunde naawi ɗum fayin.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        },
+        {
+          "id": "74e3ea58f196",
+          "audio": "a61872f4a0a68aaf795e7b4cfc23e4b7.mp3",
+          "langText": "Munyi, munyi, wi’i gudiijo : taataa tappu laɓi ki, sey mi tindine laɓi am no waari.",
+          "langWord": "Munyi, munyi, wi’i gudiijo : taataa tappu laɓi ki, sey mi tindine laɓi am no waari.",
+          "frenchText": "",
+          "frenchWord": "",
+          "pos": "",
+          "classNoun": "",
+          "module": "M2-segmentaux"
+        }
+      ],
+      "teacher": {
+        "intro": "Leçon : Consonnes de Fulfulde d'Adamaoua et production écrite. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
+        "steps": [
+          "**Mise en contexte :** Rappeler les voyelles. Qu'est-ce qu'une consonne ?",
+          "**Présentation :** Tableau des consonnes de Fulfulde d'Adamaoua selon l'AGLC. Insister sur les consonnes spécifiques (labio-vélaires, prénasalisées, implosives…).",
+          "**Explication :** Articuler les consonnes difficiles : isolément → syllabe → mot.",
+          "**Application :** Paires minimales : écoute de mots qui ne diffèrent que par une consonne.",
+          "**Production :** 5 phrases simples en Fulfulde d'Adamaoua avec transcription consonantique soignée."
+        ],
+        "freedom": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées.",
+        "tips": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées."
+      },
+      "student": {
+        "intro": "Après les voyelles, voici les consonnes de Fulfulde d'Adamaoua ! Certaines sont uniques — tu ne les entendras qu'en Fulfulde d'Adamaoua et dans quelques langues africaines voisines.",
+        "activities": [
+          "Écoute les paires minimales et coche le mot entendu (ex. bìlí / pìlí).",
+          "Transcris 5 mots dictés en faisant attention aux consonnes spécifiques.",
+          "Repère dans le vocabulaire tous les mots contenant une consonne prénasalisée. Combien en trouves-tu ?",
+          "Compose 3 phrases simples en Fulfulde d'Adamaoua avec au moins une consonne spécifique chacune.",
+          "Mémorise : **paire minimale** = deux mots identiques sauf en un phonème."
+        ],
+        "memo": "Le système consonantique de **Fulfulde d'Adamaoua** comprend des consonnes communes avec le français et des consonnes spécifiques (implosives, prénasalisées, labio-vélaires…). Les noter selon l'**AGLC** est indispensable pour la lecture et l'écriture."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "III-1",
+      "code": "III.1",
+      "module": "M3-suprasegmentaux",
+      "moduleTitle": "Module III — Phonologie suprasegmentale : les tons",
+      "title": "Définition et fonction des tons",
+      "anelcac": "Tons — définition, fonction, présentation ; tons simples (haut, bas, moyen)",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Définir le ton comme trait distinctif des langues à tons",
+        "Distinguer ton lexical et ton grammatical",
+        "Identifier les tons simples de Fulfulde d'Adamaoua",
+        "Transcrire des mots avec leurs tons selon l'AGLC"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Définition et fonction des tons. Module : Module III — Phonologie suprasegmentale : les tons.",
+        "steps": [
+          "**Mise en contexte :** Prononcer deux mots de Fulfulde d'Adamaoua qui s'écrivent pareil mais ont des tons différents et des sens différents.",
+          "**Présentation :** Définir le ton. Présenter les tons simples de Fulfulde d'Adamaoua et leurs diacritiques AGLC.",
+          "**Explication :** Tons simples : haut (´), bas (`), moyen (¯). Faire répéter chaque ton.",
+          "**Application :** Associer des mots enregistrés à leur notation tonale.",
+          "**Évaluation :** Dictée de 5 mots — les élèves notent les tons."
+        ],
+        "freedom": "Chanter les tons aide à les mémoriser. Utiliser une flûte ou siffler les mélodies tonales.",
+        "tips": "Chanter les tons aide à les mémoriser. Utiliser une flûte ou siffler les mélodies tonales."
+      },
+      "student": {
+        "intro": "Fulfulde d'Adamaoua est une langue à tons : la hauteur de ta voix change le sens du mot ! Tu vas apprendre à entendre et noter ces tons.",
+        "activities": [
+          "Écoute les paires de mots. Pour chaque paire, les tons sont-ils identiques ou différents ?",
+          "Transcris 5 mots avec leurs tons en utilisant les diacritiques AGLC (´ ` ¯).",
+          "Cherche 2 mots dans le vocabulaire qui ne diffèrent que par le ton. Quel est le sens de chacun ?",
+          "Chante les tons d'un mot de 3 syllabes en Haut-Bas-Haut, puis Bas-Haut-Bas. Quelle différence entends-tu ?",
+          "Mémorise : ton haut = ´ ; ton bas = ` ; ton moyen = ¯."
+        ],
+        "memo": "En **Fulfulde d'Adamaoua**, le ton est phonologique : il distingue des mots de sens différents. Les **tons simples** sont le haut (´), le bas (`), et parfois le moyen (¯). On les note grâce aux diacritiques de l'**AGLC**."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "III-2",
+      "code": "III.2",
+      "module": "M3-suprasegmentaux",
+      "moduleTitle": "Module III — Phonologie suprasegmentale : les tons",
+      "title": "Tons complexes et production écrite tonée",
+      "anelcac": "Tons complexes (montants, descendants) ; recherche du ton d'un mot ; production écrite à tons",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Identifier les tons complexes de Fulfulde d'Adamaoua (montant, descendant)",
+        "Trouver le ton d'un mot par la méthode d'isolement",
+        "Transcrire des phrases avec notation tonale complète",
+        "Produire un court texte en Fulfulde d'Adamaoua avec tons corrects"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Tons complexes et production écrite tonée. Module : Module III — Phonologie suprasegmentale : les tons.",
+        "steps": [
+          "**Mise en contexte :** Rappeler les tons simples. Annoncer que certaines syllabes portent deux tons à la suite.",
+          "**Présentation :** Tons complexes : descendant (̂), montant (̌). Les faire entendre et reproduire.",
+          "**Explication :** Méthode d'isolement : prononcer le mot avec un ton haut artificiel, puis bas, et écouter lequel semble naturel.",
+          "**Application :** Les élèves cherchent le ton de 10 mots en Fulfulde d'Adamaoua à l'aide de la méthode d'isolement.",
+          "**Production :** Dialogue de 6 répliques en Fulfulde d'Adamaoua avec notation tonale complète."
+        ],
+        "freedom": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant.",
+        "tips": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant."
+      },
+      "student": {
+        "intro": "Tu connais les tons simples. Maintenant, les tons complexes de Fulfulde d'Adamaoua — des syllabes qui montent et descendent en même temps !",
+        "activities": [
+          "Écoute les mots enregistrés et classe-les : Ton simple | Ton complexe.",
+          "Applique la méthode d'isolement à 5 mots : prononce-les haut, puis bas, et note le ton perçu.",
+          "Transcris un dialogue de 4 répliques en Fulfulde d'Adamaoua avec tous les tons notés.",
+          "Produis un texte de 3 phrases en Fulfulde d'Adamaoua sur une action de ta vie quotidienne, avec notation tonale.",
+          "Mémorise : ton descendant = ̂ ; ton montant = ̌."
+        ],
+        "memo": "Les **tons complexes** de **Fulfulde d'Adamaoua** (descendant ̂, montant ̌) sont des mouvements mélodiques sur une seule syllabe. La **méthode d'isolement** permet de trouver le ton d'un mot inconnu. Une transcription en Fulfulde d'Adamaoua sans tons est incomplète."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "IV-1",
+      "code": "IV.1",
+      "module": "M4-syntagme-nominal",
+      "moduleTitle": "Module IV — Le syntagme nominal",
+      "title": "La base nominale et les classes nominales",
+      "anelcac": "SN : constituants, nom base+affixes, classes nominales, pronoms personnels",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Identifier la structure du nom en Fulfulde d'Adamaoua (base + affixes)",
+        "Reconnaître les classes nominales de Fulfulde d'Adamaoua",
+        "Former le singulier et le pluriel des noms",
+        "Employer les pronoms personnels correspondant aux classes nominales"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : La base nominale et les classes nominales. Module : Module IV — Le syntagme nominal.",
+        "steps": [
+          "**Mise en contexte :** Écrire un nom en Fulfulde d'Adamaoua au singulier et au pluriel. Qu'est-ce qui change ?",
+          "**Présentation :** Classe nominale : dans les langues bantu et bantoid, les noms sont regroupés en classes marquées par des préfixes.",
+          "**Explication :** Principales classes nominales de Fulfulde d'Adamaoua avec préfixes au singulier et au pluriel.",
+          "**Application :** Tableau : singulier → pluriel pour 10 noms.",
+          "**Évaluation :** Identifier la classe nominale de 5 noms."
+        ],
+        "freedom": "Partir des noms que les élèves utilisent déjà. Les classes nominales corresponden souvent à des catégories sémantiques (humains, animaux, objets…).",
+        "tips": "Partir des noms que les élèves utilisent déjà. Les classes nominales corresponden souvent à des catégories sémantiques (humains, animaux, objets…)."
+      },
+      "student": {
+        "intro": "En Fulfulde d'Adamaoua, les noms sont organisés en **classes**. Chaque classe a ses propres préfixes pour le singulier et le pluriel — un système beaucoup plus riche que le genre en français !",
+        "activities": [
+          "À partir du vocabulaire Fulfulde d'Adamaoua, fais un tableau : Singulier | Pluriel | Classe nominale.",
+          "Identifie le préfixe de classe dans chaque nom. Surligne-le.",
+          "Mets au pluriel les 5 noms suivants en changeant le préfixe selon la classe.",
+          "Associe chaque nom à son pronom de classe correspondant.",
+          "Mémorise : **classe nominale** = catégorie grammaticale des noms, marquée par des préfixes."
+        ],
+        "memo": "En **Fulfulde d'Adamaoua**, les noms sont organisés en **classes nominales** marquées par des préfixes. Le changement de préfixe indique le nombre. Pronoms, adjectifs et verbes s'accordent avec la classe du nom."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "IV-2",
+      "code": "IV.2",
+      "module": "M4-syntagme-nominal",
+      "moduleTitle": "Module IV — Le syntagme nominal",
+      "title": "Les déterminants du nom",
+      "anelcac": "Déterminants : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs ; accord de classe",
+      "duration": "60 min",
+      "level": "5e",
+      "objectives": [
+        "Identifier les différents types de déterminants en Fulfulde d'Adamaoua",
+        "Accorder les déterminants avec le nom selon la classe nominale",
+        "Construire des syntagmes nominaux complexes",
+        "Produire des phrases avec SN complets"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Les déterminants du nom. Module : Module IV — Le syntagme nominal.",
+        "steps": [
+          "**Mise en contexte :** Écrire un SN simple. Comment l'enrichir ?",
+          "**Présentation :** Déterminants de Fulfulde d'Adamaoua : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs.",
+          "**Explication :** Chaque déterminant s'accorde avec la classe du nom (même préfixe ou suffixe de classe).",
+          "**Application :** Compléter des SN avec le bon déterminant selon la classe.",
+          "**Production :** 5 SN complexes (nom + 2 déterminants) intégrés dans des phrases."
+        ],
+        "freedom": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Fulfulde d'Adamaoua par rapport au français.",
+        "tips": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Fulfulde d'Adamaoua par rapport au français."
+      },
+      "student": {
+        "intro": "Un nom avec ses déterminants devient beaucoup plus précis ! En Fulfulde d'Adamaoua, les déterminants s'accordent avec la **classe du nom**.",
+        "activities": [
+          "Complète les SN avec le bon déterminant possessif selon la classe du nom.",
+          "Souligne les déterminants dans 5 phrases en Fulfulde d'Adamaoua et identifie leur type.",
+          "Transforme chaque SN simple en SN complexe en ajoutant un démonstratif et un numéral.",
+          "Rédige 5 phrases en Fulfulde d'Adamaoua avec au moins deux déterminants par SN.",
+          "Mémorise : **accord de classe** = le déterminant change de forme selon la classe nominale."
+        ],
+        "memo": "En **Fulfulde d'Adamaoua**, tous les déterminants (possessifs, démonstratifs, numéraux, indéfinis, interrogatifs) s'accordent avec la **classe nominale** du nom. Un **SN complexe** = nom + base nominale + déterminants accordés."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "V-1",
+      "code": "V.1",
+      "module": "M5-syntagme-verbal",
+      "moduleTitle": "Module V — Le syntagme verbal",
+      "title": "Le radical verbal et la conjugaison",
+      "anelcac": "SV : constituants, radical, affixes, conjugaison, temps verbaux",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Identifier le radical verbal et les affixes de conjugaison en Fulfulde d'Adamaoua",
+        "Conjuguer un verbe aux principaux temps verbaux",
+        "Analyser la structure morphologique d'une forme verbale",
+        "Employer correctement les formes verbales dans des phrases"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Le radical verbal et la conjugaison. Module : Module V — Le syntagme verbal.",
+        "steps": [
+          "**Mise en contexte :** Écrire une forme verbale en Fulfulde d'Adamaoua et demander aux élèves d'identifier le radical.",
+          "**Présentation :** Décomposer une forme verbale : préfixe de sujet + marqueurs TAM + radical + suffixes.",
+          "**Explication :** Paradigme de conjugaison d'un verbe fréquent en Fulfulde d'Adamaoua à plusieurs temps.",
+          "**Application :** Conjugaison tableau : 3 verbes fréquents.",
+          "**Évaluation :** Traduire 5 phrases du français vers Fulfulde d'Adamaoua."
+        ],
+        "freedom": "Le système TAM de Fulfulde d'Adamaoua est souvent plus riche que celui du français. Commencer par les temps les plus usités.",
+        "tips": "Le système TAM de Fulfulde d'Adamaoua est souvent plus riche que celui du français. Commencer par les temps les plus usités."
+      },
+      "student": {
+        "intro": "Le verbe est le cœur de la phrase en Fulfulde d'Adamaoua. Il porte à lui seul le temps, l'aspect, le mode et le sujet ! Dans cette leçon, tu décortiques la mécanique verbale.",
+        "activities": [
+          "Décompose 5 formes verbales en Fulfulde d'Adamaoua : préfixe de sujet | marqueur TAM | radical | suffixe.",
+          "Conjugue le verbe 'manger' en Fulfulde d'Adamaoua à 3 temps différents pour toutes les personnes.",
+          "Identifie le temps verbal de 5 phrases en Fulfulde d'Adamaoua et justifie ta réponse.",
+          "Traduis 3 phrases du français vers Fulfulde d'Adamaoua en soignant la conjugaison.",
+          "Mémorise : **TAM** = Temps-Aspect-Mode ; c'est ce que les affixes verbaux expriment en Fulfulde d'Adamaoua."
+        ],
+        "memo": "En **Fulfulde d'Adamaoua**, une forme verbale = préfixe de sujet + marqueurs TAM + radical + suffixes. Le système **TAM** (Temps-Aspect-Mode) exprime des nuances temporelles et aspectuelles plus précises qu'en français."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "V-2",
+      "code": "V.2",
+      "module": "M5-syntagme-verbal",
+      "moduleTitle": "Module V — Le syntagme verbal",
+      "title": "Modes verbaux et négation",
+      "anelcac": "Modes : indicatif, impératif ; négation ; production écrite SV simple/complexe",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Identifier et employer les principaux modes verbaux de Fulfulde d'Adamaoua",
+        "Former la négation verbale",
+        "Construire des SV simples et complexes",
+        "Produire un texte avec diversité de modes et d'aspects"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Modes verbaux et négation. Module : Module V — Le syntagme verbal.",
+        "steps": [
+          "**Mise en contexte :** Donner un ordre en Fulfulde d'Adamaoua. Quel mode est utilisé ?",
+          "**Présentation :** Modes de Fulfulde d'Adamaoua : indicatif, impératif, et autres modes aspectuels.",
+          "**Explication :** Formation de la négation en Fulfulde d'Adamaoua : préfixe, suffixe négatif, ou particule.",
+          "**Application :** Transformer 5 phrases affirmatives en négatives et vice versa.",
+          "**Production :** Texte de 8 phrases alternant affirmation, négation et impératif."
+        ],
+        "freedom": "La négation en Fulfulde d'Adamaoua peut être double (encadrement du verbe) ou simple. Montrer les deux cas.",
+        "tips": "La négation en Fulfulde d'Adamaoua peut être double (encadrement du verbe) ou simple. Montrer les deux cas."
+      },
+      "student": {
+        "intro": "Donner un ordre, exprimer un doute, nier une action — chaque nuance a sa forme en Fulfulde d'Adamaoua !",
+        "activities": [
+          "Mets les 5 phrases données à la forme négative.",
+          "Transforme ces 5 affirmations en impératifs adressés à un ami.",
+          "Identifie le mode et la polarité (affirm./négat.) de chaque phrase dans le texte fourni.",
+          "Rédige un dialogue de 6 répliques incluant au moins 2 impératifs et 2 négations.",
+          "Mémorise : **mode** = manière d'envisager l'action ; **négation** = marque grammaticale niant l'action."
+        ],
+        "memo": "En **Fulfulde d'Adamaoua**, les modes principaux sont l'**indicatif** et l'**impératif**. La **négation** est marquée par une particule ou un affixe spécifique. La diversité des modes est une richesse expressive de Fulfulde d'Adamaoua."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "VI-1",
+      "code": "VI.1",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase en Fulfulde d'Adamaoua",
+      "title": "La phrase simple et ses types",
+      "anelcac": "Phrase simple, interrogative, négative, impérative ; ordre des mots",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Analyser la structure de la phrase simple en Fulfulde d'Adamaoua",
+        "Distinguer les 4 types de phrases",
+        "Maîtriser l'ordre des constituants",
+        "Produire des phrases simples variées"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : La phrase simple et ses types. Module : Module VI — La phrase en Fulfulde d'Adamaoua.",
+        "steps": [
+          "**Mise en contexte :** Lire une phrase en Fulfulde d'Adamaoua. Qui fait quoi ?",
+          "**Présentation :** Ordre de base des constituants en Fulfulde d'Adamaoua. Comparer avec le français.",
+          "**Explication :** Les 4 types de phrases à partir d'une même phrase de base.",
+          "**Application :** Transformer des phrases déclaratives en interrogatives, puis en négatives.",
+          "**Production :** 8 phrases variées (2 par type) sur la vie scolaire."
+        ],
+        "freedom": "L'ordre des mots en Fulfulde d'Adamaoua peut différer du français. C'est une caractéristique typologique, pas une erreur.",
+        "tips": "L'ordre des mots en Fulfulde d'Adamaoua peut différer du français. C'est une caractéristique typologique, pas une erreur."
+      },
+      "student": {
+        "intro": "Une phrase bien construite en Fulfulde d'Adamaoua suit des règles précises. Tu apprends les types de phrases et l'ordre des mots.",
+        "activities": [
+          "Identifie l'ordre des constituants dans 5 phrases en Fulfulde d'Adamaoua.",
+          "Transforme 4 phrases déclaratives en interrogatives totales.",
+          "Transforme ces 4 phrases en négatives.",
+          "Rédige 2 phrases de chaque type (déclarative, interrogative, négative, impérative).",
+          "Mémorise : l'ordre de base en **Fulfulde d'Adamaoua** est typologiquement stable."
+        ],
+        "memo": "La **phrase simple** en **Fulfulde d'Adamaoua** a un ordre de constituants caractéristique. Les 4 types (déclarative, interrogative, négative, impérative) se forment avec des marques grammaticales spécifiques."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "VI-2",
+      "code": "VI.2",
+      "module": "M6-phrase",
+      "moduleTitle": "Module VI — La phrase en Fulfulde d'Adamaoua",
+      "title": "Connecteurs logiques et phrase complexe",
+      "anelcac": "Connecteurs logiques, phrase complexe, coordination, subordination ; production écrite",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Identifier les connecteurs logiques de Fulfulde d'Adamaoua",
+        "Distinguer coordination et subordination",
+        "Construire des phrases complexes",
+        "Produire un texte cohérent avec diversité syntaxique"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Connecteurs logiques et phrase complexe. Module : Module VI — La phrase en Fulfulde d'Adamaoua.",
+        "steps": [
+          "**Mise en contexte :** Lire un court récit en Fulfulde d'Adamaoua. Quels mots relient les phrases ?",
+          "**Présentation :** Connecteurs de Fulfulde d'Adamaoua : conjonctions de coordination et de subordination.",
+          "**Explication :** Phrase complexe par coordination / par subordination. Exemples en Fulfulde d'Adamaoua.",
+          "**Application :** Relier 5 paires de phrases simples avec le connecteur approprié.",
+          "**Production :** Texte de 10 phrases sur 'Une journée dans mon village' avec 5 connecteurs différents."
+        ],
+        "freedom": "Les connecteurs de Fulfulde d'Adamaoua ont souvent des équivalents français mais avec des positions syntaxiques différentes.",
+        "tips": "Les connecteurs de Fulfulde d'Adamaoua ont souvent des équivalents français mais avec des positions syntaxiques différentes."
+      },
+      "student": {
+        "intro": "Pour raconter et argumenter, tu as besoin de relier tes phrases. Les **connecteurs logiques** de Fulfulde d'Adamaoua sont tes outils !",
+        "activities": [
+          "Souligne tous les connecteurs dans le texte fourni.",
+          "Classe-les : Addition | Cause | Conséquence | Opposition | Temps.",
+          "Relie 5 paires de phrases avec le connecteur le plus approprié.",
+          "Rédige un texte de 8 phrases avec au moins 4 connecteurs différents.",
+          "Mémorise : coordination = même niveau ; subordination = une phrase dans une autre."
+        ],
+        "memo": "En **Fulfulde d'Adamaoua**, les **connecteurs logiques** permettent de construire des **phrases complexes** cohérentes. Varier les structures syntaxiques améliore la qualité de l'expression écrite et orale."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "VII-1",
+      "code": "VII.1",
+      "module": "M7-quotidien1",
+      "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+      "title": "Se saluer, se présenter et interagir en Fulfulde d'Adamaoua",
+      "anelcac": "Situations de communication quotidienne : salutations, présentations, formules de politesse",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Maîtriser les formules de salutation selon le contexte",
+        "Se présenter et présenter quelqu'un en Fulfulde d'Adamaoua",
+        "Employer les formules de politesse et de respect",
+        "Mener une brève conversation de la vie courante"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Se saluer, se présenter et interagir en Fulfulde d'Adamaoua. Module : Module VII — Gestion du quotidien (Niveau 1).",
+        "steps": [
+          "**Mise en contexte :** Deux élèves se rencontrent au marché. Jouer la scène en français, puis demander comment dire en Fulfulde d'Adamaoua.",
+          "**Présentation :** Salutations de Fulfulde d'Adamaoua selon les moments de la journée, l'âge et le contexte.",
+          "**Explication :** Formules de respect envers les aînés, spécifiques à la culture Fulfulde d'Adamaoua.",
+          "**Jeu de rôle :** Par groupes de 2, simuler des rencontres dans des contextes variés (marché, école, cérémonie).",
+          "**Production :** Dialogue de 10 répliques entre deux personnes de générations différentes."
+        ],
+        "freedom": "Les règles de salutation reflètent des valeurs culturelles profondes. Valoriser les connaissances des élèves issus de familles locutrices.",
+        "tips": "Les règles de salutation reflètent des valeurs culturelles profondes. Valoriser les connaissances des élèves issus de familles locutrices."
+      },
+      "student": {
+        "intro": "Savoir saluer en Fulfulde d'Adamaoua, c'est respecter la culture ! Les formules changent selon qui tu salues et à quel moment.",
+        "activities": [
+          "Complète le tableau des salutations de Fulfulde d'Adamaoua : Moment | Formule | Réponse attendue.",
+          "Joue le rôle A : saluer un aîné au marché du matin.",
+          "Invente un dialogue de 8 répliques entre un enfant et son grand-père.",
+          "Note 3 formules de politesse de Fulfulde d'Adamaoua sans équivalent direct en français.",
+          "Mémorise les formules de salutation du matin, du soir et pour les aînés en Fulfulde d'Adamaoua."
+        ],
+        "memo": "Les **salutations** en **Fulfulde d'Adamaoua** varient selon l'heure, le statut et le contexte social. Elles reflètent les valeurs de respect et de solidarité de la communauté."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "VII-2",
+      "code": "VII.2",
+      "module": "M7-quotidien1",
+      "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+      "title": "Exprimer les besoins et les actions du quotidien",
+      "anelcac": "Situations de vie : achats, demandes de service, déplacements, activités journalières",
+      "duration": "60 min",
+      "level": "4e",
+      "objectives": [
+        "Exprimer des besoins courants en Fulfulde d'Adamaoua",
+        "Décrire des activités journalières",
+        "Employer le vocabulaire des lieux et actions de la vie courante",
+        "Produire un texte descriptif sur une journée type"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Exprimer les besoins et les actions du quotidien. Module : Module VII — Gestion du quotidien (Niveau 1).",
+        "steps": [
+          "**Mise en contexte :** Images de scènes de vie — marché, champ, école, maison. Comment les décrire en Fulfulde d'Adamaoua ?",
+          "**Présentation :** Vocabulaire thématique : alimentation, déplacements, activités domestiques.",
+          "**Simulation :** Scène du marché : acheteur et vendeur en Fulfulde d'Adamaoua.",
+          "**Application :** Décrire sa journée en Fulfulde d'Adamaoua (du lever au coucher).",
+          "**Production :** Texte de 10 phrases : 'Ma journée en Fulfulde d'Adamaoua'."
+        ],
+        "freedom": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles.",
+        "tips": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles."
+      },
+      "student": {
+        "intro": "Tu sais te saluer. Maintenant, tu vas te débrouiller dans des situations du quotidien en Fulfulde d'Adamaoua : au marché, en route, à la maison.",
+        "activities": [
+          "Associe chaque image de scène de vie au mot ou à la phrase correspondant en Fulfulde d'Adamaoua.",
+          "Joue le rôle du vendeur au marché : réponds aux demandes en Fulfulde d'Adamaoua.",
+          "Rédige 5 phrases décrivant tes activités du matin depuis le réveil.",
+          "Traduis en Fulfulde d'Adamaoua ces 5 phrases sur les déplacements quotidiens.",
+          "Mémorise 10 mots du quotidien en Fulfulde d'Adamaoua avec leur traduction française."
+        ],
+        "memo": "Le vocabulaire du **quotidien** en **Fulfulde d'Adamaoua** couvre l'alimentation, les déplacements et les activités domestiques. Le maîtriser permet une communication fonctionnelle dans tous les contextes."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "VIII-1",
+      "code": "VIII.1",
+      "module": "M8-quotidien2",
+      "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
+      "title": "Argumenter et convaincre en Fulfulde d'Adamaoua",
+      "anelcac": "Communication élaborée : argumentation, narration, discours formel",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Construire une argumentation simple en Fulfulde d'Adamaoua",
+        "Employer les formules du discours formel",
+        "Narrer un événement passé avec cohérence",
+        "Produire un discours oral de 2 minutes en Fulfulde d'Adamaoua"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Argumenter et convaincre en Fulfulde d'Adamaoua. Module : Module VIII — Gestion du quotidien (Niveau 2).",
+        "steps": [
+          "**Mise en contexte :** Lire un proverbe en Fulfulde d'Adamaoua. Demander aux élèves de l'expliquer et de le défendre.",
+          "**Présentation :** Formules du discours oral formel en Fulfulde d'Adamaoua : apostrophes, ouverture, clôture.",
+          "**Explication :** Structure d'une argumentation : thèse → arguments → exemples → conclusion.",
+          "**Pratique :** Débat : pour ou contre l'utilisation du Fulfulde d'Adamaoua à l'école ? Chaque groupe défend sa position.",
+          "**Production :** Discours de 2 minutes sur un thème proposé."
+        ],
+        "freedom": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves.",
+        "tips": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves."
+      },
+      "student": {
+        "intro": "Dans les cultures de Fulfulde d'Adamaoua, la parole bien dite est une force. Tu apprends à argumenter et convaincre avec éloquence.",
+        "activities": [
+          "Identifie dans le texte : thèse, arguments, exemples.",
+          "Prépare 3 arguments pour défendre l'enseignement de Fulfulde d'Adamaoua à l'école primaire.",
+          "Prononce un discours d'ouverture de cérémonie en Fulfulde d'Adamaoua.",
+          "Narration : raconte en Fulfulde d'Adamaoua un événement mémorable de ta vie scolaire.",
+          "Mémorise les formules d'ouverture et de clôture d'un discours formel en Fulfulde d'Adamaoua."
+        ],
+        "memo": "L'**argumentation** en **Fulfulde d'Adamaoua** suit : thèse → arguments → exemples → conclusion. Le **discours formel** obéit à des conventions culturelles précises. La maîtrise de l'oral élaboré est une compétence de haut niveau."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "VIII-2",
+      "code": "VIII.2",
+      "module": "M8-quotidien2",
+      "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
+      "title": "Littérature orale et production écrite avancée",
+      "anelcac": "Littérature orale : proverbes, contes, devinettes ; production écrite longue",
+      "duration": "60 min",
+      "level": "3e",
+      "objectives": [
+        "Analyser la structure d'un conte ou d'une devinette en Fulfulde d'Adamaoua",
+        "Identifier les thèmes et valeurs véhiculés",
+        "Rédiger un conte court en respectant les conventions du genre",
+        "Utiliser la littérature orale comme ressource pédagogique"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Littérature orale et production écrite avancée. Module : Module VIII — Gestion du quotidien (Niveau 2).",
+        "steps": [
+          "**Mise en contexte :** Raconter ou faire écouter un conte bref en Fulfulde d'Adamaoua.",
+          "**Présentation :** Genres de la littérature orale : contes, proverbes, devinettes, épopées.",
+          "**Analyse :** Structure du conte : situation initiale → perturbation → péripéties → résolution → morale.",
+          "**Application :** Analyser un conte fourni selon cette structure.",
+          "**Production :** Conte de 15 lignes minimum en Fulfulde d'Adamaoua avec morale explicite."
+        ],
+        "freedom": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible.",
+        "tips": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible."
+      },
+      "student": {
+        "intro": "Les contes, proverbes et devinettes de Fulfulde d'Adamaoua sont des œuvres littéraires à part entière. Tu les analyses et tu créeras le tien !",
+        "activities": [
+          "Lis le conte fourni et identifie les 5 étapes de sa structure narrative.",
+          "Relève 3 valeurs morales transmises par ce conte.",
+          "Traduis en français un proverbe en Fulfulde d'Adamaoua et explique son sens figuré.",
+          "Rédige un conte court (15 lignes) en Fulfulde d'Adamaoua avec une morale sur le travail ou le respect.",
+          "Mémorise : conte = récit fictif à vocation éducative ; proverbe = formule brève de sagesse collective."
+        ],
+        "memo": "La **littérature orale** de **Fulfulde d'Adamaoua** (contes, proverbes, devinettes) transmet les valeurs de la communauté. Le conte a une structure en 5 étapes. La rédiger en Fulfulde d'Adamaoua mobilise toutes les compétences linguistiques acquises."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC1-1",
+      "code": "MC1.1",
+      "module": "MC1-diversite-culturelle",
+      "moduleTitle": "Module MC1 — Diversité culturelle camerounaise",
+      "title": "Aires culturelles du Cameroun",
+      "anelcac": "Aires culturelles : Beti-Fang, Grassfield, Sawa, Soudano-sahélienne",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Identifier les quatre grandes aires culturelles du Cameroun",
+        "Situer la culture Fulfulde d'Adamaoua dans son aire culturelle",
+        "Décrire les traits distinctifs de chaque aire",
+        "Valoriser la diversité culturelle comme richesse nationale"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Aires culturelles du Cameroun. Module : Module MC1 — Diversité culturelle camerounaise.",
+        "steps": [
+          "**Mise en contexte :** Afficher la carte du Mini-Atlas culturel. Demander aux élèves de situer leur culture.",
+          "**Présentation :** Les 4 aires : Beti-Fang (Centre-Sud), Grassfields (Ouest-Nord-Ouest), Sawa (côte), Soudano-sahélienne (nord).",
+          "**Explication :** Caractéristiques culturelles de chaque aire : organisation sociale, agriculture, art, musique.",
+          "**Application :** Chaque élève présente 3 éléments culturels de son aire.",
+          "**Évaluation :** Carte à compléter + court texte comparatif."
+        ],
+        "freedom": "Valoriser chaque culture. Éviter les hiérarchies culturelles. La diversité est une richesse.",
+        "tips": "Valoriser chaque culture. Éviter les hiérarchies culturelles. La diversité est une richesse."
+      },
+      "student": {
+        "intro": "Le Cameroun est 'l'Afrique en miniature' — sa diversité culturelle est extraordinaire. La culture de Fulfulde d'Adamaoua s'inscrit dans une aire spécifique que tu vas découvrir.",
+        "activities": [
+          "Sur la carte du Mini-Atlas, colorie les 4 aires culturelles en couleurs différentes.",
+          "Note dans quelle aire se situe la communauté Fulfulde d'Adamaoua.",
+          "Liste 3 traits culturels distinctifs de cette aire (alimentation, habitat, organisation sociale).",
+          "Compare deux aires : qu'ont-elles en commun ? Qu'est-ce qui les distingue ?",
+          "Mémorise les 4 grandes aires culturelles et leurs localisations."
+        ],
+        "memo": "Le Cameroun compte 4 grandes **aires culturelles** : **Beti-Fang**, **Grassfields**, **Sawa** et **Soudano-sahélienne**. La communauté Fulfulde d'Adamaoua s'inscrit dans l'une d'elles avec ses pratiques et valeurs spécifiques."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC1-2",
+      "code": "MC1.2",
+      "module": "MC1-diversite-culturelle",
+      "moduleTitle": "Module MC1 — Diversité culturelle camerounaise",
+      "title": "La culture Fulfulde d'Adamaoua dans le contexte camerounais",
+      "anelcac": "Identité culturelle, patrimoine immatériel, langues et cultures",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Définir la notion d'identité culturelle",
+        "Décrire les éléments constitutifs de la culture Fulfulde d'Adamaoua",
+        "Relier langue et culture",
+        "Produire un exposé sur la culture Fulfulde d'Adamaoua"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : La culture Fulfulde d'Adamaoua dans le contexte camerounais. Module : Module MC1 — Diversité culturelle camerounaise.",
+        "steps": [
+          "**Mise en contexte :** Qu'est-ce qui vous rend différents des élèves d'une autre région ?",
+          "**Présentation :** Éléments de la culture Fulfulde d'Adamaoua : langue, musique, gastronomie, valeurs, organisation sociale.",
+          "**Explication :** Patrimoine immatériel : ce qui ne se voit pas mais qui se transmet.",
+          "**Recherche :** Les élèves enquêtent auprès de leurs familles sur un élément culturel Fulfulde d'Adamaoua.",
+          "**Production :** Exposé oral de 3 minutes sur un élément du patrimoine Fulfulde d'Adamaoua."
+        ],
+        "freedom": "Transformer la classe en musée vivant : chaque élève apporte un objet, une recette, un proverbe.",
+        "tips": "Transformer la classe en musée vivant : chaque élève apporte un objet, une recette, un proverbe."
+      },
+      "student": {
+        "intro": "Ta langue, c'est aussi ta culture. Tu vas explorer ce qui fait la richesse de la culture Fulfulde d'Adamaoua.",
+        "activities": [
+          "Liste 5 éléments de la culture Fulfulde d'Adamaoua : langue, musique, cuisine, valeurs, organisation.",
+          "Choisis un élément du patrimoine immatériel Fulfulde d'Adamaoua et décris-le en 5 phrases.",
+          "Prépare un exposé oral de 3 minutes (plan : présentation → description → importance).",
+          "Avec tes camarades, créez une affiche de la culture Fulfulde d'Adamaoua.",
+          "Mémorise : **patrimoine immatériel** = savoirs et pratiques culturels transmis oralement."
+        ],
+        "memo": "L'**identité culturelle** Fulfulde d'Adamaoua s'exprime à travers la langue, la musique, la gastronomie et l'organisation sociale. Le **patrimoine immatériel** est aussi précieux que les monuments matériels."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC2-1",
+      "code": "MC2.1",
+      "module": "MC2-modes-de-vie",
+      "moduleTitle": "Module MC2 — Modes de vie",
+      "title": "Pratiques culinaires et musicales de la communauté Fulfulde d'Adamaoua",
+      "anelcac": "Modes de vie : pratiques culinaires, pratiques musicales",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Décrire les pratiques culinaires traditionnelles de Fulfulde d'Adamaoua",
+        "Identifier les instruments et genres musicaux",
+        "Expliquer le rôle social de la musique et de la cuisine",
+        "Présenter une recette ou un genre musical en Fulfulde d'Adamaoua"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Pratiques culinaires et musicales de la communauté Fulfulde d'Adamaoua. Module : Module MC2 — Modes de vie.",
+        "steps": [
+          "**Mise en contexte :** Apporter un aliment traditionnel associé à Fulfulde d'Adamaoua. Susciter la discussion.",
+          "**Présentation :** Plats, ingrédients et techniques culinaires. Instruments et genres musicaux.",
+          "**Démonstration :** Faire écouter un morceau traditionnel de la région. Identifier les instruments.",
+          "**Application :** Décrire en Fulfulde d'Adamaoua la préparation d'un plat simple.",
+          "**Production :** Présentation orale : une recette ou un genre musical."
+        ],
+        "freedom": "Cuisine et musique sont des portes d'entrée émotionnelles vers la culture. Maximiser les exemples concrets.",
+        "tips": "Cuisine et musique sont des portes d'entrée émotionnelles vers la culture. Maximiser les exemples concrets."
+      },
+      "student": {
+        "intro": "La cuisine et la musique de la culture Fulfulde d'Adamaoua racontent qui tu es. Tu les explores comme des expressions culturelles vivantes.",
+        "activities": [
+          "Décris en Fulfulde d'Adamaoua les étapes de préparation d'un plat traditionnel.",
+          "Identifie 3 instruments de musique traditionnelle et explique leur usage.",
+          "Transcris le texte d'une chanson traditionnelle simple en Fulfulde d'Adamaoua et traduis-la.",
+          "Présente oralement une recette en Fulfulde d'Adamaoua (min. 6 étapes).",
+          "Mémorise les noms des principaux plats et instruments en Fulfulde d'Adamaoua."
+        ],
+        "memo": "La **cuisine** et la **musique** traditionnelles sont des marqueurs identitaires forts de la culture Fulfulde d'Adamaoua. Plats, instruments et genres musicaux ont souvent des noms en Fulfulde d'Adamaoua qui ne se traduisent pas exactement."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC2-2",
+      "code": "MC2.2",
+      "module": "MC2-modes-de-vie",
+      "moduleTitle": "Module MC2 — Modes de vie",
+      "title": "Habitat traditionnel et vêtements de la communauté Fulfulde d'Adamaoua",
+      "anelcac": "Modes de vie : pratiques vestimentaires, architecturales",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Décrire l'habitat traditionnel de la communauté Fulfulde d'Adamaoua",
+        "Identifier les tenues vestimentaires et leur signification",
+        "Expliquer l'évolution des modes de vie",
+        "Produire un texte descriptif sur l'habitat ou le vêtement"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Habitat traditionnel et vêtements de la communauté Fulfulde d'Adamaoua. Module : Module MC2 — Modes de vie.",
+        "steps": [
+          "**Mise en contexte :** Photos d'habitations traditionnelles et modernes. Qu'est-ce qui a changé ?",
+          "**Présentation :** Types d'habitations : matériaux, forme, organisation de l'espace.",
+          "**Explication :** Tenues vestimentaires : couleurs, tissus, accessoires et significations sociales.",
+          "**Analyse :** Quels éléments traditionnels persistent ? Lesquels ont changé ?",
+          "**Production :** Texte descriptif illustré sur un habitat ou une tenue."
+        ],
+        "freedom": "Éviter les présentations exotisantes. Comprendre la logique culturelle derrière les formes d'habitat et de vêtement.",
+        "tips": "Éviter les présentations exotisantes. Comprendre la logique culturelle derrière les formes d'habitat et de vêtement."
+      },
+      "student": {
+        "intro": "La maison et les vêtements traditionnels racontent l'organisation sociale et les valeurs de la culture Fulfulde d'Adamaoua.",
+        "activities": [
+          "Décris en Fulfulde d'Adamaoua les matériaux et la disposition d'une habitation traditionnelle.",
+          "Explique la signification d'une tenue vestimentaire lors d'une cérémonie.",
+          "Compare habitation traditionnelle et moderne : 3 différences, 2 points communs.",
+          "Rédige un texte de 10 phrases sur l'évolution de l'habitat dans la communauté Fulfulde d'Adamaoua.",
+          "Mémorise le vocabulaire Fulfulde d'Adamaoua de l'habitat et du vêtement."
+        ],
+        "memo": "L'**habitat traditionnel** et les **tenues vestimentaires** de la culture Fulfulde d'Adamaoua reflètent des valeurs précises : organisation familiale, rôles sociaux, rapport au sacré."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC3-1",
+      "code": "MC3.1",
+      "module": "MC3-evenements-marquants",
+      "moduleTitle": "Module MC3 — Événements marquants de la vie",
+      "title": "Naissance et rites d'initiation dans la culture Fulfulde d'Adamaoua",
+      "anelcac": "Événements marquants : naissance, éducation des enfants, rites d'initiation",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Décrire les pratiques liées à la naissance en culture Fulfulde d'Adamaoua",
+        "Expliquer le rôle des rites d'initiation",
+        "Analyser l'éducation traditionnelle de l'enfant",
+        "Produire un texte sur l'éducation dans la tradition Fulfulde d'Adamaoua"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Naissance et rites d'initiation dans la culture Fulfulde d'Adamaoua. Module : Module MC3 — Événements marquants de la vie.",
+        "steps": [
+          "**Mise en contexte :** Que savent les élèves des pratiques entourant la naissance dans leur famille ?",
+          "**Présentation :** Rites de naissance : attribution du nom, présentation à la famille, cérémonies.",
+          "**Explication :** L'éducation traditionnelle : rôle des aînés, apprentissage par imitation.",
+          "**Discussion :** Les rites d'initiation : leur sens, contenu, évolution contemporaine.",
+          "**Production :** Texte narratif sur un rite de naissance ou d'initiation."
+        ],
+        "freedom": "Certains rites sont confidentiels. Ne pas forcer les élèves à partager. Travailler sur les aspects publics.",
+        "tips": "Certains rites sont confidentiels. Ne pas forcer les élèves à partager. Travailler sur les aspects publics."
+      },
+      "student": {
+        "intro": "Dans la culture Fulfulde d'Adamaoua, naître et grandir sont des événements sociaux — toute la communauté participe à l'éducation de l'enfant.",
+        "activities": [
+          "Décris en 5 phrases un rite entourant la naissance dans la culture Fulfulde d'Adamaoua.",
+          "Explique le rôle des grands-parents dans l'éducation traditionnelle.",
+          "Compare éducation traditionnelle et scolaire : 3 complémentarités, 2 tensions.",
+          "Rédige une lettre imaginaire d'un grand-père à son petit-enfant transmettant une valeur.",
+          "Mémorise les noms des principales étapes de la vie en Fulfulde d'Adamaoua."
+        ],
+        "memo": "Dans la culture **Fulfulde d'Adamaoua**, la **naissance** et l'**initiation** sont des moments de socialisation intense. L'éducation traditionnelle repose sur la transmission orale et le rôle des aînés."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC3-2",
+      "code": "MC3.2",
+      "module": "MC3-evenements-marquants",
+      "moduleTitle": "Module MC3 — Événements marquants de la vie",
+      "title": "Mariage, deuil et célébrations dans la culture Fulfulde d'Adamaoua",
+      "anelcac": "Événements marquants : mariage, mort et deuil, cérémonies",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Décrire les pratiques matrimoniales de Fulfulde d'Adamaoua",
+        "Analyser les rites funéraires",
+        "Expliquer l'importance sociale des cérémonies",
+        "Produire un récit sur une cérémonie"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Mariage, deuil et célébrations dans la culture Fulfulde d'Adamaoua. Module : Module MC3 — Événements marquants de la vie.",
+        "steps": [
+          "**Mise en contexte :** Photos de cérémonies (mariage, funérailles). Qu'observent les élèves ?",
+          "**Présentation :** Le mariage traditionnel : dot, cérémonies, rôle des familles.",
+          "**Explication :** Les funérailles et le deuil : durée, étapes, obligations sociales.",
+          "**Analyse :** Pourquoi ces cérémonies renforcent-elles les liens communautaires ?",
+          "**Production :** Récit d'une cérémonie imaginaire (10-15 phrases)."
+        ],
+        "freedom": "Aborder le deuil avec sensibilité. Certains élèves peuvent avoir récemment vécu un deuil.",
+        "tips": "Aborder le deuil avec sensibilité. Certains élèves peuvent avoir récemment vécu un deuil."
+      },
+      "student": {
+        "intro": "Le mariage et les funérailles en culture Fulfulde d'Adamaoua sont des actes sociaux qui cimentent la communauté.",
+        "activities": [
+          "Décris les étapes du mariage traditionnel dans l'ordre chronologique.",
+          "Explique la signification symbolique de la dot dans la culture Fulfulde d'Adamaoua.",
+          "Décris comment le deuil est géré dans la culture Fulfulde d'Adamaoua.",
+          "Rédige un texte de 12 phrases racontant une cérémonie de mariage.",
+          "Mémorise le vocabulaire du mariage et du deuil en Fulfulde d'Adamaoua."
+        ],
+        "memo": "Le **mariage** et le **deuil** dans la culture **Fulfulde d'Adamaoua** sont des événements communautaires structurants. La dot, les cérémonies et les rites funéraires expriment les valeurs de solidarité et de respect des ancêtres."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC4-1",
+      "code": "MC4.1",
+      "module": "MC4-pratiques-communaute1",
+      "moduleTitle": "Module MC4 — Pratiques en communauté (Niveau 1)",
+      "title": "Jeux traditionnels et organisation sociale en culture Fulfulde d'Adamaoua",
+      "anelcac": "Pratiques communautaires Niv. 1 : jeux, économie traditionnelle, organisation sociale",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Décrire les jeux traditionnels et leur rôle éducatif",
+        "Expliquer l'organisation sociale de la communauté Fulfulde d'Adamaoua",
+        "Identifier les institutions traditionnelles (chefferie, conseil des anciens)",
+        "Produire un texte sur l'organisation sociale"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Jeux traditionnels et organisation sociale en culture Fulfulde d'Adamaoua. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
+        "steps": [
+          "**Mise en contexte :** Nommer un jeu traditionnel de la communauté et expliquer ses règles.",
+          "**Présentation :** Jeux traditionnels de Fulfulde d'Adamaoua : règles, matériel, âges et genres concernés.",
+          "**Explication :** Organisation sociale : chefferie, conseil des anciens, sociétés, groupes d'âge.",
+          "**Application :** Schéma de l'organisation sociale de la communauté.",
+          "**Production :** Texte sur le rôle du chef ou du conseil des anciens."
+        ],
+        "freedom": "Les jeux traditionnels sont souvent des métaphores de l'organisation sociale. Exploiter ce lien.",
+        "tips": "Les jeux traditionnels sont souvent des métaphores de l'organisation sociale. Exploiter ce lien."
+      },
+      "student": {
+        "intro": "Les jeux transmettent des valeurs. Et l'organisation sociale de Fulfulde d'Adamaoua est une œuvre collective sophistiquée.",
+        "activities": [
+          "Décris les règles d'un jeu traditionnel en Fulfulde d'Adamaoua (6 règles minimum).",
+          "Explique ce que ce jeu apprend aux enfants.",
+          "Dessine ou décris le schéma d'organisation sociale de la communauté.",
+          "Rédige 8 phrases sur le rôle du conseil des anciens dans la résolution des conflits.",
+          "Mémorise les noms des principales instances sociales en Fulfulde d'Adamaoua."
+        ],
+        "memo": "La culture **Fulfulde d'Adamaoua** dispose d'une **organisation sociale** structurée : chefferie, conseil des anciens, groupes d'âge. Les **jeux traditionnels** transmettent les valeurs et compétences nécessaires à la vie communautaire."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC4-2",
+      "code": "MC4.2",
+      "module": "MC4-pratiques-communaute1",
+      "moduleTitle": "Module MC4 — Pratiques en communauté (Niveau 1)",
+      "title": "Économie traditionnelle de la communauté Fulfulde d'Adamaoua",
+      "anelcac": "Économie traditionnelle : agriculture, élevage, artisanat, commerce, solidarité",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Décrire les activités économiques traditionnelles de Fulfulde d'Adamaoua",
+        "Expliquer les systèmes d'échange et de solidarité",
+        "Analyser l'évolution de l'économie traditionnelle",
+        "Produire un texte sur une activité économique"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Économie traditionnelle de la communauté Fulfulde d'Adamaoua. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
+        "steps": [
+          "**Mise en contexte :** De quoi vivait la communauté Fulfulde d'Adamaoua avant la colonisation ?",
+          "**Présentation :** Agriculture, élevage, chasse, pêche, artisanat : activités et savoirs techniques.",
+          "**Explication :** Solidarité économique : tontines, entraide agricole, marchés périodiques.",
+          "**Analyse :** Impact de la monétarisation et de la modernité.",
+          "**Production :** Texte descriptif sur une activité économique traditionnelle."
+        ],
+        "freedom": "L'économie traditionnelle est souvent invisible dans les manuels. La rendre visible, c'est valoriser des savoirs réels et complexes.",
+        "tips": "L'économie traditionnelle est souvent invisible dans les manuels. La rendre visible, c'est valoriser des savoirs réels et complexes."
+      },
+      "student": {
+        "intro": "L'économie traditionnelle de Fulfulde d'Adamaoua est un système de solidarité et de savoir-faire sophistiqué.",
+        "activities": [
+          "Liste les 5 principales activités économiques et les savoirs qu'elles requièrent.",
+          "Explique le fonctionnement d'une tontine ou d'un système d'entraide agricole.",
+          "Compare marché traditionnel et marché moderne : 3 différences.",
+          "Rédige 10 phrases sur une activité artisanale traditionnelle.",
+          "Mémorise le vocabulaire économique traditionnel en Fulfulde d'Adamaoua."
+        ],
+        "memo": "L'**économie traditionnelle** de Fulfulde d'Adamaoua repose sur l'agriculture, l'artisanat et des systèmes de solidarité comme les tontines. Ces pratiques ont une logique interne complexe qui coexiste avec l'économie moderne."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC5-1",
+      "code": "MC5.1",
+      "module": "MC5-pratiques-communaute2",
+      "moduleTitle": "Module MC5 — Pratiques en communauté (Niveau 2)",
+      "title": "Symbolique, rites et interdits en culture Fulfulde d'Adamaoua",
+      "anelcac": "Pratiques communautaires Niv. 2 : symbolique, rites, interdits (tabous)",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Expliquer le rôle des symboles dans la culture Fulfulde d'Adamaoua",
+        "Identifier des rites spécifiques et leur signification",
+        "Analyser la fonction sociale des interdits",
+        "Produire un texte analytique sur une pratique symbolique"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Symbolique, rites et interdits en culture Fulfulde d'Adamaoua. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
+        "steps": [
+          "**Mise en contexte :** Montrer un objet ou une couleur symbolique de Fulfulde d'Adamaoua. Quelle est sa signification ?",
+          "**Présentation :** Symboles culturels : couleurs, objets, gestes, espaces sacrés.",
+          "**Explication :** Rites spécifiques et leur logique. Les tabous : aliments, lieux, actions interdites.",
+          "**Discussion :** La fonction des interdits : protection, cohésion sociale, transmission de valeurs.",
+          "**Production :** Analyse d'un rite ou d'un interdit (description → signification → fonction sociale)."
+        ],
+        "freedom": "Aborder les rites et tabous avec respect et neutralité. L'objectif est de comprendre, non de juger.",
+        "tips": "Aborder les rites et tabous avec respect et neutralité. L'objectif est de comprendre, non de juger."
+      },
+      "student": {
+        "intro": "Chaque geste, chaque couleur, chaque interdit en culture Fulfulde d'Adamaoua a un sens. Tu décodes la symbolique culturelle de ta communauté.",
+        "activities": [
+          "Identifie 3 symboles importants de la culture Fulfulde d'Adamaoua et explique leur signification.",
+          "Décris un rite culturel et analyse sa fonction sociale.",
+          "Explique pourquoi les interdits culturels sont des régulateurs sociaux.",
+          "Rédige un texte analytique de 10 phrases sur un interdit alimentaire ou spatial.",
+          "Mémorise le vocabulaire Fulfulde d'Adamaoua des rites, symboles et interdits."
+        ],
+        "memo": "La **symbolique** de la culture **Fulfulde d'Adamaoua** exprime un système de valeurs cohérent. Les **rites** et les **interdits** ont une fonction de régulation sociale et de transmission des valeurs aux générations suivantes."
+      },
+      "emacResources": []
+    },
+    {
+      "id": "MC5-2",
+      "code": "MC5.2",
+      "module": "MC5-pratiques-communaute2",
+      "moduleTitle": "Module MC5 — Pratiques en communauté (Niveau 2)",
+      "title": "Médias traditionnels et transmission culturelle en Fulfulde d'Adamaoua",
+      "anelcac": "Pratiques communautaires Niv. 2 : médias traditionnels, transmission intergénérationnelle",
+      "duration": "60 min",
+      "level": "CN",
+      "objectives": [
+        "Identifier les médias traditionnels de communication en culture Fulfulde d'Adamaoua",
+        "Analyser les mécanismes de transmission culturelle intergénérationnelle",
+        "Évaluer les défis contemporains de la transmission",
+        "Produire un projet de valorisation culturelle"
+      ],
+      "vocabulary": [],
+      "teacher": {
+        "intro": "Leçon : Médias traditionnels et transmission culturelle en Fulfulde d'Adamaoua. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
+        "steps": [
+          "**Mise en contexte :** Avant la radio et internet, comment les nouvelles circulaient-elles dans la communauté Fulfulde d'Adamaoua ?",
+          "**Présentation :** Médias traditionnels : tam-tam, crieurs publics, griots, réunions de village, contes du soir.",
+          "**Explication :** Mécanismes de transmission : bouche à oreille, apprentissage par exemple, cérémonies d'initiation.",
+          "**Analyse :** Défis contemporains : exode rural, médias numériques, désintérêt des jeunes.",
+          "**Production :** Projet de classe pour valoriser la culture Fulfulde d'Adamaoua (radio scolaire, journal bilingue, exposition)."
+        ],
+        "freedom": "Terminer par un projet concret de valorisation culturelle renforce l'engagement et donne du sens à l'ensemble de l'apprentissage CN.",
+        "tips": "Terminer par un projet concret de valorisation culturelle renforce l'engagement et donne du sens à l'ensemble de l'apprentissage CN."
+      },
+      "student": {
+        "intro": "Comment une culture survit-elle ? Par ses **médias traditionnels** et sa **transmission intergénérationnelle**. Dans cette leçon finale, tu réfléchis à comment protéger la culture Fulfulde d'Adamaoua aujourd'hui.",
+        "activities": [
+          "Identifie 4 médias traditionnels et explique le rôle de chacun.",
+          "Interroge un aîné sur un savoir culturel Fulfulde d'Adamaoua appris de ses parents. Rédige son témoignage.",
+          "Identifie 3 défis à la transmission de la culture Fulfulde d'Adamaoua et propose des solutions.",
+          "Conçois un projet de valorisation : quel format, quel public, quel contenu ?",
+          "Mémorise les noms des principaux médias traditionnels en Fulfulde d'Adamaoua."
+        ],
+        "memo": "Les **médias traditionnels** de la culture **Fulfulde d'Adamaoua** (tam-tam, conteurs, réunions villageoises) assurent la transmission des savoirs et valeurs. Des actions concrètes de valorisation sont nécessaires pour assurer la survie de ce patrimoine."
+      },
+      "emacResources": []
+    }
+  ]
+}
