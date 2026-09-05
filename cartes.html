@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Cartes linguistiques — Likalo</title>
+  <meta name="description" content="Mini-Atlas linguistique du Cameroun — répartition des langues par région, langues en danger, familles linguistiques. Source : LACAGEO 2013."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand: { 50:'#fef7ed',100:'#fdecd3',200:'#fbd5a5',300:'#f7b96d',400:'#f29232',500:'#ee780f',600:'#df5e05',700:'#b94608',800:'#94380e',900:'#782f10' },
+          ink: { 50:'#f7f7f6',100:'#e6e5e2',200:'#cdcbc4',300:'#aba89e',400:'#878478',500:'#6d695e',600:'#5a574d',700:'#48453e',800:'#3d3a35',900:'#26241f' }
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Lora','Georgia','serif'] }
+      }}
+    }
+  </script>
+  <style>
+    .region-card { transition: transform 0.15s, box-shadow 0.15s; }
+    .region-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+    .danger-pill { display: inline-block; padding: 1px 8px; border-radius: 9999px; font-size: 0.7rem; font-weight: 600; }
+  </style>
+</head>
+<body class="bg-ink-50 text-ink-900 font-sans antialiased min-h-screen">
+
+<!-- Header -->
+<header class="border-b border-ink-100 bg-white sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <a href="#/" onclick="window.location='index.html'" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-lg bg-brand-500 text-white grid place-items-center font-bold font-serif text-lg shadow-sm group-hover:bg-brand-600 transition">L</div>
+      <div class="leading-tight">
+        <div class="font-semibold text-ink-900">Likalo</div>
+        <div class="text-xs text-ink-500">Cartes linguistiques</div>
+      </div>
+    </a>
+    <nav class="hidden sm:flex items-center gap-2 text-sm">
+      <a href="index.html" class="px-3 py-2 rounded-md hover:bg-ink-100 text-ink-600">← Plateforme</a>
+      <a href="reseau.html" class="px-3 py-2 rounded-md hover:bg-ink-100 text-ink-600">🕸 CamRhizome</a>
+      <a href="Mini-atlas-linguistique-du-Cameroon.pdf" target="_blank" class="px-3 py-2 rounded-md bg-brand-50 hover:bg-brand-100 text-brand-700 font-medium">↓ Mini-Atlas PDF</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="bg-white border-b border-ink-100 py-10 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <div class="flex-1">
+        <p class="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-2">Mini-Atlas linguistique du Cameroun · LACAGEO 2013</p>
+        <h1 class="font-serif text-3xl sm:text-4xl text-ink-900 mb-4">Diversité linguistique<br/>du Cameroun</h1>
+        <p class="text-ink-600 max-w-xl leading-relaxed">Le Cameroun compte <strong>environ 280 langues vivantes</strong> réparties en 10 régions administratives. Ce tableau de bord synthétise les données du Mini-Atlas LACAGEO (2013) — langues par région, langues en danger, familles linguistiques, langues transnationales.</p>
+        <div class="flex flex-wrap gap-3 mt-5">
+          <a href="Mini-atlas-linguistique-du-Cameroon.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 font-medium text-sm transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Télécharger le Mini-Atlas PDF
+          </a>
+          <a href="reseau.html" class="inline-flex items-center gap-2 px-4 py-2 border border-ink-200 text-ink-700 rounded-lg hover:bg-ink-100 font-medium text-sm transition">
+            🕸 Explorer CamRhizome
+          </a>
+        </div>
+      </div>
+      <!-- Global stats -->
+      <div class="grid grid-cols-2 gap-3 min-w-[280px]">
+        <div class="bg-brand-50 rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold text-brand-700">~280</div>
+          <div class="text-xs text-brand-600 mt-1 font-medium">langues vivantes</div>
+        </div>
+        <div class="bg-ink-100 rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold text-ink-700">10</div>
+          <div class="text-xs text-ink-500 mt-1 font-medium">régions</div>
+        </div>
+        <div class="bg-amber-50 rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold text-amber-700">6909</div>
+          <div class="text-xs text-amber-700 mt-1 font-medium">langues dans le monde</div>
+        </div>
+        <div class="bg-red-50 rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold text-red-600">8</div>
+          <div class="text-xs text-red-600 mt-1 font-medium">familles linguistiques</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Définitions -->
+<section class="max-w-6xl mx-auto px-4 py-8">
+  <h2 class="font-serif text-xl text-ink-800 mb-4">Définitions clés <span class="text-sm font-sans font-normal text-ink-400">(Mini-Atlas LACAGEO / ACA LAN)</span></h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="bg-white rounded-xl p-4 border border-ink-100">
+      <div class="font-semibold text-ink-800 mb-1">Langue</div>
+      <p class="text-sm text-ink-600">Système d'expression propre non directement intelligible par les locuteurs d'une autre langue.</p>
+    </div>
+    <div class="bg-white rounded-xl p-4 border border-ink-100">
+      <div class="font-semibold text-ink-800 mb-1">Dialecte</div>
+      <p class="text-sm text-ink-600">Variante locale d'une même langue, intelligible avec un petit effort. Ex. : bulu, ewondo, eton, mangisa → langue béti-fang.</p>
+    </div>
+    <div class="bg-white rounded-xl p-4 border border-ink-100">
+      <div class="font-semibold text-ink-800 mb-1">Langue nationale / locale</div>
+      <p class="text-sm text-ink-600">Langue d'une ethnie faisant partie d'une nation, ne dépassant pas les frontières d'un État (ACA LAN).</p>
+    </div>
+    <div class="bg-white rounded-xl p-4 border border-ink-100">
+      <div class="font-semibold text-ink-800 mb-1">Langue maternelle</div>
+      <p class="text-sm text-ink-600">Premier moyen d'expression acquis pendant l'enfance, par lequel l'enfant se socialise.</p>
+    </div>
+    <div class="bg-white rounded-xl p-4 border border-ink-100">
+      <div class="font-semibold text-ink-800 mb-1">Langue véhiculaire</div>
+      <p class="text-sm text-ink-600">Langue servant à la communication entre différentes communautés linguistiques. Ex. : pidgin-english (NO/SO), fulfulde (Nord).</p>
+    </div>
+    <div class="bg-white rounded-xl p-4 border border-ink-100">
+      <div class="font-semibold text-ink-800 mb-1">Langue transnationale</div>
+      <p class="text-sm text-ink-600">Langue parlée de part et d'autre de deux pays limitrophes (ex. fulfulde, gbaya, tupuri).</p>
+    </div>
+  </div>
+</section>
+
+<!-- Région cards -->
+<section class="max-w-6xl mx-auto px-4 pb-12">
+  <h2 class="font-serif text-xl text-ink-800 mb-1">Données par région</h2>
+  <p class="text-sm text-ink-400 mb-6">Source : Mini-Atlas linguistique du Cameroun, LACAGEO 2013</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="regions-grid"></div>
+</section>
+
+<!-- Familles linguistiques -->
+<section class="bg-white border-t border-ink-100 py-10 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-serif text-xl text-ink-800 mb-4">Familles linguistiques d'Afrique <span class="text-sm font-sans font-normal text-ink-400">(Ethnologue 2012, SIL)</span></h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div class="bg-blue-50 rounded-lg px-4 py-3"><div class="font-semibold text-blue-800 text-sm">Niger-Kordofan</div><div class="text-xs text-blue-600 mt-0.5">Dont langues bantu camerounaises</div></div>
+      <div class="bg-green-50 rounded-lg px-4 py-3"><div class="font-semibold text-green-800 text-sm">Nilo-Saharienne</div><div class="text-xs text-green-600 mt-0.5">Présente dans le Grand Nord</div></div>
+      <div class="bg-orange-50 rounded-lg px-4 py-3"><div class="font-semibold text-orange-800 text-sm">Afro-asiatique</div><div class="text-xs text-orange-600 mt-0.5">Tchadique (Extrême-Nord)</div></div>
+      <div class="bg-purple-50 rounded-lg px-4 py-3"><div class="font-semibold text-purple-800 text-sm">Indo-Européenne</div><div class="text-xs text-purple-600 mt-0.5">Langues officielles héritées</div></div>
+      <div class="bg-yellow-50 rounded-lg px-4 py-3"><div class="font-semibold text-yellow-800 text-sm">Khoisan</div><div class="text-xs text-yellow-600 mt-0.5">Présence marginale</div></div>
+      <div class="bg-red-50 rounded-lg px-4 py-3"><div class="font-semibold text-red-800 text-sm">Finno-Ougrienne</div><div class="text-xs text-red-600 mt-0.5">Non représentée au Cameroun</div></div>
+      <div class="bg-teal-50 rounded-lg px-4 py-3"><div class="font-semibold text-teal-800 text-sm">Américaine</div><div class="text-xs text-teal-600 mt-0.5">Non représentée au Cameroun</div></div>
+      <div class="bg-pink-50 rounded-lg px-4 py-3"><div class="font-semibold text-pink-800 text-sm">Asie & Polynésie</div><div class="text-xs text-pink-600 mt-0.5">Non représentée au Cameroun</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Langues en danger -->
+<section class="max-w-6xl mx-auto px-4 py-10">
+  <h2 class="font-serif text-xl text-ink-800 mb-1">Langues en danger ou éteintes <span class="text-sm font-sans font-normal text-ink-400">(UNESCO / SIL)</span></h2>
+  <p class="text-sm text-ink-500 mb-6">Sélection tirée du Mini-Atlas LACAGEO — certaines langues ont disparu depuis 2013.</p>
+  <div class="overflow-x-auto rounded-xl border border-ink-100">
+    <table class="w-full text-sm bg-white">
+      <thead>
+        <tr class="border-b border-ink-100 text-left">
+          <th class="px-4 py-3 font-semibold text-ink-700">Langue</th>
+          <th class="px-4 py-3 font-semibold text-ink-700">Région</th>
+          <th class="px-4 py-3 font-semibold text-ink-700">Statut</th>
+          <th class="px-4 py-3 font-semibold text-ink-700">Locuteurs</th>
+        </tr>
+      </thead>
+      <tbody id="endangered-table"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-ink-100 bg-white mt-4">
+  <div class="max-w-6xl mx-auto px-4 py-5 text-sm text-ink-500 flex flex-col sm:flex-row justify-between gap-3">
+    <div>© 2026 <strong class="text-ink-700">Likalo</strong> · Prof. Emmanuel Ngue Um · <a href="mailto:ngueum@gmail.com" class="hover:text-brand-700 underline">ngueum@gmail.com</a></div>
+    <div class="flex gap-3 items-center">
+      <a href="index.html" class="hover:text-brand-700">Plateforme</a>·
+      <a href="reseau.html" class="hover:text-brand-700">CamRhizome</a>·
+      <a href="Mini-atlas-linguistique-du-Cameroon.pdf" target="_blank" class="hover:text-brand-700 underline">Mini-Atlas PDF</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── Data from Mini-Atlas LACAGEO 2013 ───────────────────────────────────────
+const REGIONS = [
+  {
+    name: "Extrême-Nord",
+    color: "amber",
+    superficie: "34246 km²",
+    langVivantes: "~50",
+    langEteintes: "—",
+    langTransnat: "~15",
+    langEnDanger: "—",
+    vehiculaire: "Fulfulde, Arabe choa",
+    notes: "Zone tchadique (Afro-asiatique) et nilo-saharienne. Lac Tchad, parc de Waza.",
+    highlight: ["fulfulde", "arabe-choa", "kotoko", "mandara", "tupuri"]
+  },
+  {
+    name: "Nord",
+    color: "orange",
+    superficie: "66090 km²",
+    langVivantes: "31",
+    langEteintes: "9",
+    langTransnat: "17",
+    langEnDanger: "3",
+    vehiculaire: "Fulfulde",
+    notes: "4 parcs nationaux. Langues éteintes : ngong, duli, gey, nimbari, ndai, to, nagumi, mome, oblo.",
+    highlight: ["fulfulde", "gbaya", "duru", "nizaa", "mono"]
+  },
+  {
+    name: "Adamaoua",
+    color: "yellow",
+    superficie: "63701 km²",
+    langVivantes: "~45",
+    langEteintes: "—",
+    langTransnat: "~13",
+    langEnDanger: "—",
+    vehiculaire: "Fulfulde d'Adamaoua",
+    notes: "Hauteurs du plateau, source du fleuve Sanaga. Langues adamawa et bantoïdes.",
+    highlight: ["fulfulde", "gbaya", "dookamombe", "vute-debayo", "bangkwanja", "nizaa"]
+  },
+  {
+    name: "Nord-Ouest",
+    color: "green",
+    superficie: "17812 km²",
+    langVivantes: "41",
+    langEteintes: "14",
+    langTransnat: "15",
+    langEnDanger: "—",
+    vehiculaire: "Pidgin-English",
+    notes: "Région à très forte densité linguistique. Grassfields. Langue véhiculaire : pidgin-english.",
+    highlight: ["mungaka", "kensweinsei", "oku", "ngemba", "ngiemboon", "lamnso"]
+  },
+  {
+    name: "Ouest",
+    color: "teal",
+    superficie: "13872 km²",
+    langVivantes: "~35",
+    langEteintes: "—",
+    langTransnat: "—",
+    langEnDanger: "—",
+    vehiculaire: "Ghomala' / Fe'fe'",
+    notes: "Hauts plateaux, lacs Banendjing et Bamkim. Grassfields bantoid.",
+    highlight: ["ghomala", "feefee", "ngiemboon", "ngomba", "mbo", "kekem"]
+  },
+  {
+    name: "Littoral",
+    color: "blue",
+    superficie: "20248 km²",
+    langVivantes: "~45",
+    langEteintes: "—",
+    langTransnat: "~10",
+    langEnDanger: "—",
+    vehiculaire: "Français / Pidgin",
+    notes: "Région la plus urbanisée. Douala, capitale économique. Langues wouri, bassa, mbo.",
+    highlight: ["basaa", "douala", "wouri", "mbo", "bakossi", "bamileke-diaspora"]
+  },
+  {
+    name: "Centre",
+    color: "sky",
+    superficie: "68926 km²",
+    langVivantes: "~40",
+    langEteintes: "~5",
+    langTransnat: "—",
+    langEnDanger: "5",
+    vehiculaire: "Ewondo / Français",
+    notes: "Yaoundé, capitale politique. Forêt équatoriale. Langues béti-fang dominantes.",
+    highlight: ["ewondo", "bulu", "eton", "mvele", "baka", "bagyeli"]
+  },
+  {
+    name: "Sud",
+    color: "emerald",
+    superficie: "47110 km²",
+    langVivantes: "~25",
+    langEteintes: "—",
+    langTransnat: "~8",
+    langEnDanger: "~3",
+    vehiculaire: "Ewondo / Bulu",
+    notes: "Forêt dense, frontières Gabon/RCA/Congo. Langues béti-fang, baka.",
+    highlight: ["bulu", "ewondo-evuzok", "bagyeli-bakola", "kwasio-ngumba", "yasa"]
+  },
+  {
+    name: "Est",
+    color: "violet",
+    superficie: "109002 km²",
+    langVivantes: "~30",
+    langEteintes: "—",
+    langTransnat: "~12",
+    langEnDanger: "—",
+    vehiculaire: "Français / Gbaya",
+    notes: "Plus grande région. Forêt équatoriale. Langues bantu de l'Est et gbaya.",
+    highlight: ["gbaya", "kako", "zimé", "badjoue", "kpere", "mpomoo-bakwele"]
+  },
+  {
+    name: "Sud-Ouest",
+    color: "rose",
+    superficie: "25410 km²",
+    langVivantes: "~35",
+    langEteintes: "—",
+    langTransnat: "~10",
+    langEnDanger: "5",
+    vehiculaire: "Pidgin-English",
+    notes: "Mont Cameroun. Langue véhiculaire : pidgin-english. Côte atlantique.",
+    highlight: ["bakossi", "akoose", "balong", "bafaw", "upper-bayang", "oroko"]
+  }
+];
+
+const ENDANGERED = [
+  { lang: "yasa", region: "Sud", status: "en danger", speakers: "1490" },
+  { lang: "bagyéli (bakola)", region: "Sud / Littoral", status: "vulnérable", speakers: "~3000" },
+  { lang: "mono", region: "Nord", status: "en danger", speakers: "300" },
+  { lang: "dama", region: "Nord", status: "en danger sévère", speakers: "50" },
+  { lang: "pam", region: "Nord", status: "en danger critique", speakers: "30" },
+  { lang: "isu", region: "Sud-Ouest", status: "en danger", speakers: "800" },
+  { lang: "bakole", region: "Sud-Ouest", status: "en danger critique", speakers: "300" },
+  { lang: "bubia", region: "Sud-Ouest", status: "en danger", speakers: "600" },
+  { lang: "eman", region: "Sud-Ouest", status: "en danger", speakers: "800" },
+  { lang: "ugaré", region: "Sud-Ouest", status: "en danger critique", speakers: "?" },
+  { lang: "ngong", region: "Nord", status: "éteinte", speakers: "0" },
+  { lang: "duli", region: "Nord", status: "éteinte", speakers: "0" },
+  { lang: "gey", region: "Nord", status: "éteinte", speakers: "0" },
+  { lang: "nimbari", region: "Nord", status: "éteinte", speakers: "0" },
+  { lang: "ndai", region: "Nord", status: "éteinte", speakers: "0" },
+  { lang: "nagumi", region: "Nord", status: "éteinte", speakers: "0" },
+  { lang: "mome", region: "Nord", status: "éteinte", speakers: "0" },
+  { lang: "oblo", region: "Nord", status: "éteinte", speakers: "0" }
+];
+
+// ─── Render regions ────────────────────────────────────────────────────────
+const colorMap = {
+  amber: { bg: "bg-amber-50", border: "border-amber-200", badge: "bg-amber-100 text-amber-800", title: "text-amber-900", stat: "text-amber-700" },
+  orange: { bg: "bg-orange-50", border: "border-orange-200", badge: "bg-orange-100 text-orange-800", title: "text-orange-900", stat: "text-orange-700" },
+  yellow: { bg: "bg-yellow-50", border: "border-yellow-200", badge: "bg-yellow-100 text-yellow-800", title: "text-yellow-900", stat: "text-yellow-700" },
+  green: { bg: "bg-green-50", border: "border-green-200", badge: "bg-green-100 text-green-800", title: "text-green-900", stat: "text-green-700" },
+  teal: { bg: "bg-teal-50", border: "border-teal-200", badge: "bg-teal-100 text-teal-800", title: "text-teal-900", stat: "text-teal-700" },
+  blue: { bg: "bg-blue-50", border: "border-blue-200", badge: "bg-blue-100 text-blue-800", title: "text-blue-900", stat: "text-blue-700" },
+  sky: { bg: "bg-sky-50", border: "border-sky-200", badge: "bg-sky-100 text-sky-800", title: "text-sky-900", stat: "text-sky-700" },
+  emerald: { bg: "bg-emerald-50", border: "border-emerald-200", badge: "bg-emerald-100 text-emerald-800", title: "text-emerald-900", stat: "text-emerald-700" },
+  violet: { bg: "bg-violet-50", border: "border-violet-200", badge: "bg-violet-100 text-violet-800", title: "text-violet-900", stat: "text-violet-700" },
+  rose: { bg: "bg-rose-50", border: "border-rose-200", badge: "bg-rose-100 text-rose-800", title: "text-rose-900", stat: "text-rose-700" }
+};
+
+const grid = document.getElementById("regions-grid");
+REGIONS.forEach(r => {
+  const c = colorMap[r.color] || colorMap.blue;
+  const dangerBadge = r.langEnDanger && r.langEnDanger !== "—"
+    ? `<span class="danger-pill bg-red-100 text-red-700 ml-1">${r.langEnDanger} en danger</span>`
+    : "";
+  const card = document.createElement("div");
+  card.className = `region-card ${c.bg} border ${c.border} rounded-2xl p-5 cursor-default`;
+  card.innerHTML = `
+    <div class="flex items-start justify-between mb-3">
+      <h3 class="font-serif font-semibold text-lg ${c.title}">Région du ${r.name}</h3>
+      <span class="${c.badge} text-xs font-semibold px-2 py-0.5 rounded-full">${r.superficie}</span>
+    </div>
+    <div class="grid grid-cols-2 gap-2 mb-3">
+      <div class="bg-white/70 rounded-lg px-3 py-2 text-center">
+        <div class="text-xl font-bold ${c.stat}">${r.langVivantes}</div>
+        <div class="text-xs text-ink-500">langues vivantes</div>
+      </div>
+      <div class="bg-white/70 rounded-lg px-3 py-2 text-center">
+        <div class="text-xl font-bold ${c.stat}">${r.langTransnat}</div>
+        <div class="text-xs text-ink-500">transnationales</div>
+      </div>
+      ${r.langEteintes !== "—" ? `
+      <div class="bg-white/70 rounded-lg px-3 py-2 text-center">
+        <div class="text-xl font-bold text-ink-500">${r.langEteintes}</div>
+        <div class="text-xs text-ink-500">éteintes</div>
+      </div>` : ""}
+      ${r.langEnDanger !== "—" ? `
+      <div class="bg-red-50 rounded-lg px-3 py-2 text-center">
+        <div class="text-xl font-bold text-red-600">${r.langEnDanger}</div>
+        <div class="text-xs text-red-500">en danger</div>
+      </div>` : ""}
+    </div>
+    <p class="text-xs text-ink-500 mb-2">${r.notes}</p>
+    <div class="flex flex-wrap gap-1 mt-2">
+      <span class="text-xs text-ink-400 font-medium mr-1">Véhiculaire :</span>
+      <span class="text-xs ${c.badge} px-2 py-0.5 rounded-full">${r.vehiculaire}</span>
+    </div>
+    ${r.highlight.length ? `
+    <div class="mt-3 pt-3 border-t border-white/60">
+      <div class="text-xs text-ink-400 font-medium mb-1.5">Langues représentatives</div>
+      <div class="flex flex-wrap gap-1">${r.highlight.map(l => `<span class="text-xs bg-white/80 text-ink-600 px-2 py-0.5 rounded-full border border-ink-100">${l}</span>`).join("")}</div>
+    </div>` : ""}
+  `;
+  grid.appendChild(card);
+});
+
+// ─── Render endangered table ───────────────────────────────────────────────
+const tbody = document.getElementById("endangered-table");
+const statusColor = s => {
+  if (s === "éteinte") return "bg-gray-100 text-gray-600";
+  if (s.includes("critique")) return "bg-red-100 text-red-700";
+  if (s.includes("sévère")) return "bg-orange-100 text-orange-700";
+  if (s === "en danger") return "bg-amber-100 text-amber-700";
+  return "bg-yellow-100 text-yellow-700";
+};
+ENDANGERED.forEach((e, i) => {
+  const tr = document.createElement("tr");
+  tr.className = i % 2 === 0 ? "border-b border-ink-50" : "border-b border-ink-50 bg-ink-50/40";
+  tr.innerHTML = `
+    <td class="px-4 py-2.5 font-medium text-ink-800">${e.lang}</td>
+    <td class="px-4 py-2.5 text-ink-600">${e.region}</td>
+    <td class="px-4 py-2.5"><span class="danger-pill ${statusColor(e.status)}">${e.status}</span></td>
+    <td class="px-4 py-2.5 text-ink-600">${e.speakers}</td>
+  `;
+  tbody.appendChild(tr);
+});
+</script>
+<!-- GoatCounter — remplacez VOTRE-CODE par votre code GoatCounter -->
+<script data-goatcounter="https://VOTRE-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

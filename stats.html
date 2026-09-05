@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Statistiques de fréquentation — Likalo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand: { 50:'#fef7ed',500:'#ee780f',600:'#df5e05',700:'#b94608' },
+          ink: { 50:'#f7f7f6',100:'#e6e5e2',200:'#cdcbc4',400:'#878478',500:'#6d695e',700:'#48453e',900:'#26241f' }
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Lora','Georgia','serif'] }
+      }}
+    }
+  </script>
+</head>
+<body class="bg-ink-50 text-ink-900 font-sans antialiased min-h-screen">
+
+<header class="border-b border-ink-100 bg-white sticky top-0 z-30">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-lg bg-brand-500 text-white grid place-items-center font-bold font-serif text-lg shadow-sm">L</div>
+      <div class="leading-tight">
+        <div class="font-semibold text-ink-900">Likalo</div>
+        <div class="text-xs text-ink-500">Statistiques de fréquentation</div>
+      </div>
+    </a>
+    <a href="index.html" class="text-sm px-3 py-2 rounded-md hover:bg-ink-100 text-ink-600">← Plateforme</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-10">
+
+  <h1 class="font-serif text-3xl text-ink-900 mb-2">Statistiques d'utilisation</h1>
+  <p class="text-ink-500 mb-8">Fréquentation de la plateforme Likalo — données GoatCounter (sans cookies, respectueuses de la vie privée).</p>
+
+  <!-- Setup notice (shown until GOATCOUNTER_CODE is set) -->
+  <div id="setup-notice" class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
+    <div class="flex gap-3 items-start">
+      <div class="text-2xl">⚙️</div>
+      <div>
+        <div class="font-semibold text-amber-900 mb-1">Configuration requise — 2 minutes</div>
+        <p class="text-sm text-amber-800 mb-3">Pour activer le suivi de fréquentation, créez un compte gratuit GoatCounter et remplacez <code class="bg-amber-100 px-1 rounded">VOTRE-CODE</code> dans les fichiers HTML.</p>
+        <ol class="text-sm text-amber-800 space-y-1 list-decimal list-inside">
+          <li>Allez sur <a href="https://www.goatcounter.com" target="_blank" class="underline font-medium hover:text-amber-900">goatcounter.com</a> → <strong>Sign up for free</strong></li>
+          <li>Choisissez un code site, ex. <code class="bg-amber-100 px-1 rounded">likalo</code> → l'URL de votre tableau de bord sera <code class="bg-amber-100 px-1 rounded">https://likalo.goatcounter.com</code></li>
+          <li>Dans <code class="bg-amber-100 px-1 rounded">index.html</code>, <code class="bg-amber-100 px-1 rounded">cartes.html</code>, <code class="bg-amber-100 px-1 rounded">reseau.html</code> et <code class="bg-amber-100 px-1 rounded">stats.html</code>, remplacez <code class="bg-amber-100 px-1 rounded">VOTRE-CODE</code> par votre code GoatCounter</li>
+          <li>Commitez et pushez — le comptage démarre immédiatement</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live dashboard embed -->
+  <div class="bg-white rounded-2xl border border-ink-100 overflow-hidden mb-8">
+    <div class="px-6 py-4 border-b border-ink-100 flex items-center justify-between">
+      <div>
+        <div class="font-semibold text-ink-800">Tableau de bord en direct</div>
+        <div class="text-xs text-ink-400 mt-0.5">Mis à jour en temps réel par GoatCounter</div>
+      </div>
+      <a id="goat-link" href="https://VOTRE-CODE.goatcounter.com" target="_blank"
+         class="text-sm px-3 py-1.5 bg-brand-50 hover:bg-brand-100 text-brand-700 rounded-lg font-medium transition">
+        Ouvrir le tableau de bord ↗
+      </a>
+    </div>
+    <!-- GoatCounter public stats widget -->
+    <div class="p-6">
+      <div id="gchart" class="w-full rounded-lg overflow-hidden min-h-[300px] flex items-center justify-center bg-ink-50 text-ink-400 text-sm">
+        Le graphique de fréquentation apparaîtra ici une fois le compte GoatCounter configuré et les premières visites enregistrées.
+      </div>
+    </div>
+  </div>
+
+  <!-- Metric cards (populated by GoatCounter API once configured) -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+    <div class="bg-white rounded-xl border border-ink-100 p-5 text-center">
+      <div class="text-3xl font-bold text-brand-600" id="stat-today">—</div>
+      <div class="text-xs text-ink-500 mt-1">visites aujourd'hui</div>
+    </div>
+    <div class="bg-white rounded-xl border border-ink-100 p-5 text-center">
+      <div class="text-3xl font-bold text-ink-700" id="stat-week">—</div>
+      <div class="text-xs text-ink-500 mt-1">cette semaine</div>
+    </div>
+    <div class="bg-white rounded-xl border border-ink-100 p-5 text-center">
+      <div class="text-3xl font-bold text-ink-700" id="stat-month">—</div>
+      <div class="text-xs text-ink-500 mt-1">ce mois</div>
+    </div>
+    <div class="bg-white rounded-xl border border-ink-100 p-5 text-center">
+      <div class="text-3xl font-bold text-ink-700" id="stat-total">—</div>
+      <div class="text-xs text-ink-500 mt-1">total</div>
+    </div>
+  </div>
+
+  <!-- Top pages -->
+  <div class="bg-white rounded-2xl border border-ink-100 p-6 mb-8">
+    <h2 class="font-semibold text-ink-800 mb-4">Pages les plus visitées</h2>
+    <div id="top-pages" class="space-y-2 text-sm text-ink-500 italic">
+      Données disponibles après configuration et premières visites.
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div class="bg-ink-100 rounded-2xl p-6">
+    <h2 class="font-semibold text-ink-800 mb-3">Comment ça marche</h2>
+    <div class="grid sm:grid-cols-3 gap-4 text-sm text-ink-600">
+      <div class="bg-white rounded-xl p-4">
+        <div class="font-semibold text-ink-800 mb-1">🔒 Sans cookies</div>
+        GoatCounter ne dépose aucun cookie et ne trace pas les utilisateurs individuellement. Conforme RGPD, aucun bandeau cookies nécessaire.
+      </div>
+      <div class="bg-white rounded-xl p-4">
+        <div class="font-semibold text-ink-800 mb-1">📊 Ce qui est mesuré</div>
+        Pages vues, visiteurs uniques, pays d'origine, navigateurs, pages les plus populaires, heures de pointe.
+      </div>
+      <div class="bg-white rounded-xl p-4">
+        <div class="font-semibold text-ink-800 mb-1">🆓 Gratuit</div>
+        GoatCounter est gratuit pour les projets open source et non commerciaux. Aucune limite de pages vues.
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="border-t border-ink-100 bg-white mt-10">
+  <div class="max-w-5xl mx-auto px-4 py-5 text-sm text-ink-500 flex justify-between items-center">
+    <div>© 2026 <strong class="text-ink-700">Likalo</strong> · Prof. Emmanuel Ngue Um</div>
+    <div>Analytics par <a href="https://www.goatcounter.com" target="_blank" class="underline hover:text-brand-700">GoatCounter</a> — open source, sans cookies</div>
+  </div>
+</footer>
+
+<!-- GoatCounter tracking — remplacez VOTRE-CODE par votre code GoatCounter -->
+<script data-goatcounter="https://VOTRE-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<script>
+// Once GoatCounter is configured, update the dashboard link
+const code = new URL(document.querySelector('[data-goatcounter]').dataset.goatcounter).hostname.split('.')[0];
+if (code && code !== 'VOTRE-CODE') {
+  document.getElementById('setup-notice').style.display = 'none';
+  document.getElementById('goat-link').href = `https://${code}.goatcounter.com`;
+
+  // Load GoatCounter public stats via their API
+  const base = `https://${code}.goatcounter.com`;
+
+  // Embed the GoatCounter chart widget
+  const chart = document.getElementById('gchart');
+  chart.innerHTML = `<iframe src="${base}/plot.svg" width="100%" height="300" frameborder="0" style="border:none;width:100%" loading="lazy"></iframe>`;
+
+  // Fetch stats via GoatCounter public JSON API
+  async function loadStats(period, elId) {
+    try {
+      const r = await fetch(`${base}/api/v0/stats/total?period=${period}`, {mode:'cors'});
+      if (r.ok) {
+        const d = await r.json();
+        document.getElementById(elId).textContent = (d.total || '—').toLocaleString('fr-FR');
+      }
+    } catch(e) {}
+  }
+  loadStats('day', 'stat-today');
+  loadStats('week', 'stat-week');
+  loadStats('month', 'stat-month');
+  loadStats('year', 'stat-total');
+
+  // Top pages
+  async function loadTopPages() {
+    try {
+      const r = await fetch(`${base}/api/v0/stats/hits?limit=8`, {mode:'cors'});
+      if (r.ok) {
+        const d = await r.json();
+        const el = document.getElementById('top-pages');
+        if (d.hits && d.hits.length) {
+          el.innerHTML = d.hits.map(h => `
+            <div class="flex items-center justify-between py-2 border-b border-ink-50 last:border-0">
+              <span class="font-mono text-ink-700">${h.path || '/'}</span>
+              <span class="font-semibold text-ink-800">${(h.count||0).toLocaleString('fr-FR')} vues</span>
+            </div>`).join('');
+        }
+      }
+    } catch(e) {}
+  }
+  loadTopPages();
+}
+</script>
+
+</body>
+</html>
