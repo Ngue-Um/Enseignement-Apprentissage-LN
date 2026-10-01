@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <title>CamRhizome — Réseau Intercommunautaire du Cameroun · Likalo</title>
 <link rel="icon" href="assets/favicon.svg"/>
 
@@ -54,28 +54,87 @@
     font-size: 11px; font-weight: 600;
     padding: 1px 7px; margin: 2px 2px;
   }
+
+  /* ── Responsive / mobile ─────────────────────────────────────────────── */
+  body { height: 100vh; height: 100dvh; }
+  #cy { touch-action: none; }
+  #sidebar-backdrop { display: none; }
+  .map-ctrl {
+    width: 40px; height: 40px; display: grid; place-items: center;
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08); font-size: 18px; font-weight: 700; color: #475569;
+  }
+  .map-ctrl:active { background: #f1f5f9; }
+
+  @media (max-width: 767px) {
+    /* Sidebar becomes an off-canvas drawer */
+    #sidebar {
+      position: fixed; top: 0; left: 0; bottom: 0;
+      width: 85vw; max-width: 320px; z-index: 40;
+      transform: translateX(-105%);
+      transition: transform .25s ease;
+      box-shadow: 0 10px 40px rgba(15,23,42,.25);
+    }
+    #sidebar.open { transform: translateX(0); }
+    #sidebar { overflow-y: auto !important; -webkit-overflow-scrolling: touch; }
+    #sidebar > #community-wrap { flex: none; overflow: visible; }
+    #sidebar > #legend-wrap { max-height: none; overflow: visible; }
+    #sidebar-backdrop.open {
+      display: block; position: fixed; inset: 0;
+      background: rgba(15,23,42,.45); z-index: 35;
+    }
+    /* Detail panel becomes a bottom sheet */
+    #detail-panel {
+      top: auto; bottom: 0; left: 0; right: 0;
+      width: 100%; height: auto;
+      max-height: 55vh; max-height: 55dvh;
+      border-left: 0; border-top: 1px solid #e2e8f0;
+      border-radius: 18px 18px 0 0;
+      transform: translateY(105%);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    #detail-panel.open { transform: translateY(0); }
+    /* Bigger touch targets */
+    .plane-btn.tag { font-size: 12.5px; padding: 6px 10px; }
+    .layout-btn { padding: 8px 12px !important; font-size: 13px !important; }
+    #community-list > div { padding-top: 10px; padding-bottom: 10px; }
+    #search { font-size: 16px; } /* prevents iOS zoom on focus */
+    #weight-slider { height: 28px; }
+  }
 </style>
 </head>
 <body class="bg-slate-50 text-slate-800 overflow-hidden" style="height:100vh; display:flex; flex-direction:column;">
 
 <!-- ══ NAV BAR ══════════════════════════════════════════════════════════════ -->
-<nav class="bg-white border-b border-slate-200 px-4 py-2 flex items-center gap-4 z-10 flex-shrink-0">
-  <a href="#/" class="flex items-center gap-2 font-black text-indigo-700 text-lg no-underline">
+<nav class="bg-white border-b border-slate-200 px-3 sm:px-4 py-2 flex items-center gap-2 sm:gap-4 z-10 flex-shrink-0">
+  <button id="btn-sidebar" type="button" class="md:hidden flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-600 text-sm font-semibold" aria-label="Ouvrir les filtres" aria-controls="sidebar" aria-expanded="false">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <span>Filtres</span>
+  </button>
+  <a href="index.html" class="flex items-center gap-2 font-black text-indigo-700 text-lg no-underline">
     <span class="bg-indigo-700 text-white rounded px-1.5 py-0.5 text-sm">L</span>
     <span>Likalo</span>
   </a>
-  <span class="text-slate-300">|</span>
-  <span class="font-semibold text-slate-700">CamRhizome</span>
-  <span class="ml-auto text-xs text-slate-400 hidden sm:block">
+  <span class="text-slate-300 hidden sm:inline">|</span>
+  <span class="font-semibold text-slate-700 hidden sm:inline">CamRhizome</span>
+  <span class="ml-auto text-xs text-slate-400 hidden lg:block">
     Réseau multiplex inter-communautaire · Données CERDOTOLA/UNESCO
   </span>
+  <a href="index.html" class="ml-auto lg:ml-0 text-xs sm:text-sm px-2.5 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 whitespace-nowrap">← Plateforme</a>
 </nav>
 
 <!-- ══ MAIN LAYOUT ══════════════════════════════════════════════════════════ -->
 <div class="flex flex-1 overflow-hidden relative">
 
   <!-- ── LEFT SIDEBAR ──────────────────────────────────────────────────────── -->
-  <aside id="sidebar" class="w-64 bg-white border-r border-slate-200 flex flex-col overflow-hidden flex-shrink-0">
+  <div id="sidebar-backdrop"></div>
+  <aside id="sidebar" class="w-64 bg-white border-r border-slate-200 flex flex-col overflow-hidden flex-shrink-0" aria-label="Filtres et liste des communautés">
+
+    <!-- Mobile drawer header -->
+    <div class="md:hidden flex items-center justify-between px-3 py-2 border-b border-slate-100">
+      <span class="font-bold text-slate-700">CamRhizome · Filtres</span>
+      <button id="btn-sidebar-close" type="button" class="text-slate-400 hover:text-slate-700 text-2xl leading-none px-2" aria-label="Fermer">✕</button>
+    </div>
 
     <!-- Search -->
     <div class="p-3 border-b border-slate-100">
@@ -116,7 +175,7 @@
     </div>
 
     <!-- Community list -->
-    <div class="flex-1 overflow-y-auto">
+    <div id="community-wrap" class="flex-1 overflow-y-auto">
       <div class="text-xs font-bold uppercase tracking-wide text-slate-400 px-3 pt-3 pb-1">
         Communautés <span id="node-count" class="text-indigo-500"></span>
       </div>
@@ -124,7 +183,7 @@
     </div>
 
     <!-- Legend -->
-    <div class="p-3 border-t border-slate-100 bg-slate-50">
+    <div id="legend-wrap" class="p-3 border-t border-slate-100 bg-slate-50 max-h-[30%] overflow-y-auto">
       <div class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">Familles linguistiques</div>
       <div id="legend" class="space-y-1"></div>
     </div>
@@ -143,26 +202,36 @@
     </div>
 
     <!-- Top-right stats bar -->
-    <div id="stats-bar" class="hidden absolute top-3 right-3 bg-white/90 backdrop-blur rounded-xl shadow text-xs px-4 py-2 text-slate-600 space-x-4">
+    <div id="stats-bar" class="hidden absolute top-2 right-2 sm:top-3 sm:right-3 bg-white/90 backdrop-blur rounded-xl shadow text-[11px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 text-slate-600 space-x-3 sm:space-x-4">
       <span>Nœuds : <strong id="stat-nodes" class="text-indigo-600"></strong></span>
-      <span>Arêtes visibles : <strong id="stat-edges" class="text-indigo-600"></strong></span>
+      <span><span class="hidden sm:inline">Arêtes visibles</span><span class="sm:hidden">Liens</span> : <strong id="stat-edges" class="text-indigo-600"></strong></span>
+    </div>
+
+    <!-- Touch hint (mobile only, fades out) -->
+    <div id="touch-hint" class="md:hidden hidden absolute bottom-4 left-3 bg-indigo-600 text-white text-[11px] rounded-lg px-3 py-1.5 shadow transition-opacity duration-700">
+      Pincez pour zoomer · touchez un nœud
     </div>
 
     <!-- Reset / fit button -->
-    <button id="btn-fit" class="hidden absolute bottom-4 right-4 bg-white shadow rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50 border border-slate-200">
-      ⊞ Ajuster la vue
-    </button>
+    <div id="map-controls" class="hidden absolute bottom-4 right-3 sm:right-4 flex flex-col items-end gap-2" style="margin-bottom:env(safe-area-inset-bottom)">
+      <button id="btn-zoom-in"  type="button" class="map-ctrl" aria-label="Zoomer">+</button>
+      <button id="btn-zoom-out" type="button" class="map-ctrl" aria-label="Dézoomer">−</button>
+      <button id="btn-fit" type="button" class="bg-white shadow rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50 border border-slate-200" aria-label="Ajuster la vue">
+        ⊞ <span class="hidden sm:inline">Ajuster la vue</span>
+      </button>
+    </div>
   </div>
 
   <!-- ── DETAIL PANEL (slides in from right) ───────────────────────────────── -->
   <div id="detail-panel"
-    class="absolute top-0 right-0 h-full w-80 bg-white border-l border-slate-200 shadow-2xl overflow-y-auto z-20 flex flex-col">
-    <div class="flex items-start justify-between p-4 border-b border-slate-100">
+    class="absolute top-0 right-0 h-full w-80 max-w-full bg-white border-l border-slate-200 shadow-2xl overflow-y-auto z-20 flex flex-col">
+    <div class="md:hidden flex justify-center pt-2"><span class="w-10 h-1.5 rounded-full bg-slate-200"></span></div>
+    <div class="flex items-start justify-between p-4 border-b border-slate-100 sticky top-0 bg-white z-10">
       <div>
         <div id="dp-title" class="font-black text-lg text-indigo-700"></div>
         <div id="dp-emic"  class="text-xs text-slate-400 mt-0.5"></div>
       </div>
-      <button id="dp-close" class="text-slate-300 hover:text-slate-600 text-xl leading-none mt-0.5">✕</button>
+      <button id="dp-close" type="button" class="text-slate-400 hover:text-slate-600 text-2xl leading-none -mt-1 px-2" aria-label="Fermer">✕</button>
     </div>
     <div id="dp-body" class="p-4 space-y-4 flex-1 text-sm"></div>
   </div>
@@ -210,8 +279,11 @@ const FC_LABEL = {
 // ── State ───────────────────────────────────────────────────────────────────
 let cy, graphData;
 let activePlanes = new Set(['hist','ling','geo','social','cogn']);
+const mqMobile = window.matchMedia('(max-width: 767px)');
+const isMobile = () => mqMobile.matches;
 let minWeight = 0.10;
 let activeLayout = 'cose';
+let baseZoom = 1;   // zoom level of the "whole graph" view
 
 // ── Inline data (no server required) ────────────────────────────────────────
 (function() {
@@ -221,6 +293,10 @@ let activeLayout = 'cose';
 })();
 
 function init(data) {
+  // Sync weight slider with the initial threshold
+  document.getElementById('weight-slider').value = Math.round(minWeight * 100);
+  document.getElementById('weight-val').textContent = minWeight.toFixed(2);
+
   // Build community list sidebar
   buildSidebar(data.nodes);
   buildLegend(data.nodes);
@@ -236,16 +312,28 @@ function init(data) {
     wheelSensitivity: 0.3,
     minZoom: 0.1,
     maxZoom: 5,
+    pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+    hideEdgesOnViewport: isMobile(),   // smoother pan/zoom on phones
+    textureOnViewport: false,
   });
 
   cy.ready(() => {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('stats-bar').classList.remove('hidden');
-    document.getElementById('btn-fit').classList.remove('hidden');
+    document.getElementById('map-controls').classList.remove('hidden');
     updateStats();
+    baseZoom = cy.zoom(); updateLabelVisibility();
+    if (isMobile()) {
+      const hint = document.getElementById('touch-hint');
+      hint.classList.remove('hidden');
+      setTimeout(() => { hint.style.opacity = '0'; }, 3500);
+      setTimeout(() => { hint.classList.add('hidden'); }, 4300);
+    }
   });
 
-  cy.on('tap', 'node', e => showDetail(e.target));
+  cy.on('tap', 'node', e => { showDetail(e.target); focusOn(e.target); });
+  cy.on('zoom', updateLabelVisibility);
+  cy.on('layoutstop', () => { baseZoom = cy.zoom(); updateLabelVisibility(); });
   cy.on('tap', e => { if (e.target === cy) closeDetail(); });
 
   setupControls();
@@ -288,15 +376,15 @@ function cyStyles() {
         'background-color':   ele => FC_COLOR[ele.data('fc')] || '#94a3b8',
         'label':              'data(label)',
         'color':              '#1e293b',
-        'font-size':          '11px',
+        'font-size':          isMobile() ? '13px' : '11px',
         'font-weight':        '700',
         'text-valign':        'bottom',
         'text-halign':        'center',
         'text-margin-y':      4,
         'text-outline-color': '#ffffff',
         'text-outline-width': 2,
-        'width':              34,
-        'height':             34,
+        'width':              isMobile() ? 28 : 34,
+        'height':             isMobile() ? 28 : 34,
         'border-color':       '#ffffff',
         'border-width':       2,
         'shadow-blur':        8,
@@ -320,13 +408,22 @@ function cyStyles() {
       style: { 'opacity': 1 }
     },
     {
+      // Mobile overview: hide labels until the user zooms in (avoids unreadable clutter)
+      selector: 'node.nolabel',
+      style: { 'label': '' }
+    },
+    {
+      selector: 'node.nolabel.highlighted, node.nolabel:selected',
+      style: { 'label': 'data(label)' }
+    },
+    {
       selector: 'node.dimmed',
       style: { 'opacity': 0.2 }
     },
     {
       selector: 'edge',
       style: {
-        'width':            ele => Math.max(1, ele.data('weight') * 6),
+        'width':            ele => Math.max(isMobile() ? 0.6 : 1, ele.data('weight') * (isMobile() ? 4 : 6)),
         'line-color':       ele => PLANE_COLOR[ele.data('plane')] || '#94a3b8',
         'opacity':          0.55,
         'curve-style':      'bezier',
@@ -349,16 +446,17 @@ function cyStyles() {
 // ── Layout configs ────────────────────────────────────────────────────────────
 function layoutConfig(name) {
   name = name || activeLayout;
-  const base = { animate: true, animationDuration: 600 };
+  const m = isMobile();
+  const base = { animate: !m, animationDuration: 600, fit: true, padding: m ? 16 : 30 };
   if (name === 'cose') return {
     ...base, name: 'cose',
-    idealEdgeLength: 120, nodeOverlap: 20,
+    idealEdgeLength: m ? 90 : 120, nodeOverlap: 20,
     nodeRepulsion: () => 8000,
     edgeElasticity: () => 32,
     gravity: 0.2, numIter: 1000, coolingFactor: 0.95,
   };
-  if (name === 'circle') return { ...base, name: 'circle', radius: 280, padding: 40 };
-  return { ...base, name: 'grid', padding: 30 };
+  if (name === 'circle') return m ? { ...base, name: 'circle' } : { ...base, name: 'circle', radius: 280, padding: 40 };
+  return { ...base, name: 'grid', padding: m ? 16 : 30 };
 }
 
 // ── Sidebar community list ────────────────────────────────────────────────────
@@ -378,8 +476,9 @@ function buildSidebar(nodes) {
       if (!cy) return;
       const node = cy.getElementById(n.id);
       if (node.length) {
-        cy.animate({ fit: { eles: node.closedNeighborhood(), padding: 80 }, duration: 500 });
+        closeSidebar();
         showDetail(node);
+        focusOn(node, true);
       }
     });
     el.appendChild(dot);
@@ -468,7 +567,9 @@ function showDetail(node) {
   node.removeClass('dimmed').addClass('highlighted');
   node.closedNeighborhood().removeClass('dimmed').addClass('highlighted');
 
-  document.getElementById('detail-panel').classList.add('open');
+  const panel = document.getElementById('detail-panel');
+  panel.scrollTop = 0;
+  panel.classList.add('open');
 }
 
 function section(title, content) {
@@ -528,7 +629,29 @@ function setupControls() {
 
   // Fit button
   document.getElementById('btn-fit').addEventListener('click', () => {
-    cy.fit(cy.elements(':visible'), 40);
+    cy.fit(cy.elements(':visible'), isMobile() ? 16 : 40);
+    baseZoom = cy.zoom(); updateLabelVisibility();
+  });
+
+  // Zoom buttons (useful on touch screens)
+  const zoomBy = f => {
+    const c = { x: cy.width() / 2, y: cy.height() / 2 };
+    cy.animate({ zoom: { level: cy.zoom() * f, renderedPosition: c }, duration: 200 });
+  };
+  document.getElementById('btn-zoom-in').addEventListener('click', () => zoomBy(1.4));
+  document.getElementById('btn-zoom-out').addEventListener('click', () => zoomBy(1 / 1.4));
+
+  // Mobile drawer
+  document.getElementById('btn-sidebar').addEventListener('click', openSidebar);
+  document.getElementById('btn-sidebar-close').addEventListener('click', closeSidebar);
+  document.getElementById('sidebar-backdrop').addEventListener('click', closeSidebar);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeSidebar(); closeDetail(); } });
+
+  // Keep the graph sized correctly on rotation / resize
+  let rt;
+  window.addEventListener('resize', () => {
+    clearTimeout(rt);
+    rt = setTimeout(() => { cy.resize(); cy.fit(cy.elements(':visible'), isMobile() ? 16 : 40); baseZoom = cy.zoom(); updateLabelVisibility(); }, 200);
   });
 
   // Search
@@ -551,6 +674,48 @@ function setupControls() {
       cy.elements().removeClass('dimmed highlighted');
     }
   });
+}
+
+// ── Label visibility (mobile) ────────────────────────────────────────────────
+function updateLabelVisibility() {
+  if (!cy) return;
+  const hide = isMobile() && cy.zoom() < baseZoom * 1.6;
+  cy.batch(() => {
+    if (hide) cy.nodes().addClass('nolabel'); else cy.nodes().removeClass('nolabel');
+  });
+}
+
+// ── Focus a node: on phones, keep it visible ABOVE the bottom sheet ─────────
+function focusOn(node, withNeighbours) {
+  const eles = withNeighbours ? node.closedNeighborhood() : node;
+  if (!isMobile()) {
+    if (withNeighbours) cy.animate({ fit: { eles, padding: 80 }, duration: 500 });
+    return;
+  }
+  const sheet = document.getElementById('detail-panel');
+  const sheetH = Math.min(sheet.offsetHeight || 0, window.innerHeight * 0.55);
+  const pad = 30;
+  const availW = cy.width(), availH = Math.max(120, cy.height() - sheetH);
+  const bb = eles.boundingBox();
+  let zoom = withNeighbours
+    ? Math.min((availW - 2 * pad) / Math.max(bb.w, 1), (availH - 2 * pad) / Math.max(bb.h, 1))
+    : Math.max(cy.zoom(), baseZoom * 1.8);
+  zoom = Math.max(cy.minZoom(), Math.min(zoom, 2.5));
+  const cx = bb.x1 + bb.w / 2, cyy = bb.y1 + bb.h / 2;
+  cy.animate({ zoom, pan: { x: availW / 2 - zoom * cx, y: availH / 2 - zoom * cyy }, duration: 450 });
+}
+
+// ── Mobile drawer helpers ────────────────────────────────────────────────────
+function openSidebar() {
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('sidebar-backdrop').classList.add('open');
+  document.getElementById('btn-sidebar').setAttribute('aria-expanded', 'true');
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebar-backdrop').classList.remove('open');
+  const b = document.getElementById('btn-sidebar');
+  if (b) b.setAttribute('aria-expanded', 'false');
 }
 
 // ── Rebuild edge visibility ───────────────────────────────────────────────────
@@ -583,6 +748,6 @@ function updateStats() {
 }
 </script>
 <!-- GoatCounter — remplacez VOTRE-CODE par votre code GoatCounter -->
-<script data-goatcounter="https://LIKALO.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://VOTRE-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

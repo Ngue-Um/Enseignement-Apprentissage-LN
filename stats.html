@@ -21,7 +21,7 @@
 <body class="bg-ink-50 text-ink-900 font-sans antialiased min-h-screen">
 
 <header class="border-b border-ink-100 bg-white sticky top-0 z-30">
-  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
     <a href="index.html" class="flex items-center gap-3 group">
       <div class="w-10 h-10 rounded-lg bg-brand-500 text-white grid place-items-center font-bold font-serif text-lg shadow-sm">L</div>
       <div class="leading-tight">
@@ -33,7 +33,7 @@
   </div>
 </header>
 
-<main class="max-w-5xl mx-auto px-4 py-10">
+<main class="max-w-5xl mx-auto px-4 py-6 sm:py-10">
 
   <h1 class="font-serif text-3xl text-ink-900 mb-2">Statistiques d'utilisation</h1>
   <p class="text-ink-500 mb-8">Fréquentation de la plateforme Likalo — données GoatCounter (sans cookies, respectueuses de la vie privée).</p>
@@ -57,7 +57,7 @@
 
   <!-- Live dashboard embed -->
   <div class="bg-white rounded-2xl border border-ink-100 overflow-hidden mb-8">
-    <div class="px-6 py-4 border-b border-ink-100 flex items-center justify-between">
+    <div class="px-4 sm:px-6 py-4 border-b border-ink-100 flex flex-wrap items-center justify-between gap-3">
       <div>
         <div class="font-semibold text-ink-800">Tableau de bord en direct</div>
         <div class="text-xs text-ink-400 mt-0.5">Mis à jour en temps réel par GoatCounter</div>
@@ -68,8 +68,8 @@
       </a>
     </div>
     <!-- GoatCounter public stats widget -->
-    <div class="p-6">
-      <div id="gchart" class="w-full rounded-lg overflow-hidden min-h-[300px] flex items-center justify-center bg-ink-50 text-ink-400 text-sm">
+    <div class="p-4 sm:p-6">
+      <div id="gchart" class="w-full rounded-lg overflow-hidden min-h-[200px] sm:min-h-[300px] flex items-center justify-center bg-ink-50 text-ink-400 text-sm p-4 text-center">
         Le graphique de fréquentation apparaîtra ici une fois le compte GoatCounter configuré et les premières visites enregistrées.
       </div>
     </div>
@@ -125,14 +125,14 @@
 </main>
 
 <footer class="border-t border-ink-100 bg-white mt-10">
-  <div class="max-w-5xl mx-auto px-4 py-5 text-sm text-ink-500 flex justify-between items-center">
+  <div class="max-w-5xl mx-auto px-4 py-5 text-sm text-ink-500 flex flex-col sm:flex-row justify-between sm:items-center gap-2">
     <div>© 2026 <strong class="text-ink-700">Likalo</strong> · Prof. Emmanuel Ngue Um</div>
     <div>Analytics par <a href="https://www.goatcounter.com" target="_blank" class="underline hover:text-brand-700">GoatCounter</a> — open source, sans cookies</div>
   </div>
 </footer>
 
 <!-- GoatCounter tracking — remplacez VOTRE-CODE par votre code GoatCounter -->
-<script data-goatcounter="https://LIKALO.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://VOTRE-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 <script>
 // Once GoatCounter is configured, update the dashboard link
@@ -173,8 +173,8 @@ if (code && code !== 'VOTRE-CODE') {
         if (d.hits && d.hits.length) {
           el.innerHTML = d.hits.map(h => `
             <div class="flex items-center justify-between py-2 border-b border-ink-50 last:border-0">
-              <span class="font-mono text-ink-700">${h.path || '/'}</span>
-              <span class="font-semibold text-ink-800">${(h.count||0).toLocaleString('fr-FR')} vues</span>
+              <span class="font-mono text-ink-700 break-all mr-3">${h.path || '/'}</span>
+              <span class="font-semibold text-ink-800 shrink-0">${(h.count||0).toLocaleString('fr-FR')} vues</span>
             </div>`).join('');
         }
       }

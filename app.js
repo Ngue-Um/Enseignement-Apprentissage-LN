@@ -377,11 +377,11 @@ function renderVocabulaire() {
     const mod = MODULES[it.module] || { num: '—', label: '' };
     const hasAudio = !!it.audio;
     return `
-      <article class="bg-white border border-ink-100 rounded-lg p-4 flex items-center gap-4">
+      <article class="bg-white border border-ink-100 rounded-lg p-3 sm:p-4 flex items-center gap-3 sm:gap-4">
         ${hasAudio ? `
         <button class="play-btn shrink-0" data-audio="${escapeHtml(it.audio)}" aria-label="Écouter">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <span>Écouter</span>
+          <span class="hidden sm:inline">Écouter</span>
         </button>` : `<span class="w-8 shrink-0"></span>`}
         <div class="flex-1 min-w-0">
           <p class="lang-text text-lg text-ink-900 truncate" title="${escapeHtml(it.langText)}">${escapeHtml(it.langText)}</p>
@@ -916,8 +916,8 @@ function renderRound(kind, round) {
   const score = state.scores[kind];
   const pct = score.total === 0 ? 0 : Math.round(100 * score.correct / score.total);
   const header = `
-    <div class="bg-white border border-ink-100 rounded-xl p-5 mb-5">
-      <div class="flex items-center justify-between gap-3">
+    <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-5 mb-5">
+      <div class="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
         <button id="exo-back" class="text-sm text-ink-500 hover:text-ink-700 inline-flex items-center gap-1">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
           Retour
@@ -935,7 +935,7 @@ function renderRound(kind, round) {
 
   if (round.mode === 'dictee') {
     return header + `
-      <div class="bg-white border border-ink-100 rounded-xl p-6">
+      <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-6">
         <p class="text-sm text-ink-500 mb-2">Écoute la phrase et écris-la dans l'orthographe AGLC.</p>
         <button class="play-btn" id="exo-play" data-audio="${escapeHtml(round.target.audio)}">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -953,7 +953,7 @@ function renderRound(kind, round) {
 
   if (round.mode === 'audio-fr') {
     return header + `
-      <div class="bg-white border border-ink-100 rounded-xl p-6">
+      <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-6">
         <p class="text-sm text-ink-500 mb-2">Écoute la phrase et choisis la bonne traduction.</p>
         <button class="play-btn" id="exo-play" data-audio="${escapeHtml(round.target.audio)}">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -971,9 +971,9 @@ function renderRound(kind, round) {
 
   if (round.mode === 'text-audio') {
     return header + `
-      <div class="bg-white border border-ink-100 rounded-xl p-6">
+      <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-6">
         <p class="text-sm text-ink-500 mb-2">Lis cette phrase et choisis l'audio qui lui correspond.</p>
-        <p class="lang-text text-2xl text-ink-900 my-4">${escapeHtml(round.target.langText)}</p>
+        <p class="lang-text text-xl sm:text-2xl text-ink-900 my-4 break-words">${escapeHtml(round.target.langText)}</p>
         <div class="grid sm:grid-cols-3 gap-3 mt-5">
           ${round.choices.map((c, i) => `
             <button class="choice flex items-center justify-between" data-i="${i}" data-correct="${c.correct ? '1' : '0'}" data-audio="${escapeHtml(c.audio)}">
@@ -994,9 +994,9 @@ function renderRound(kind, round) {
 
   if (round.mode === 'text-fr') {
     return header + `
-      <div class="bg-white border border-ink-100 rounded-xl p-6">
+      <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-6">
         <p class="text-sm text-ink-500 mb-2">Lis cette phrase en ${escapeHtml(state.currentLangName)} et choisis sa traduction française.</p>
-        <p class="lang-text text-2xl text-ink-900 my-4">${escapeHtml(round.target.langText)}</p>
+        <p class="lang-text text-xl sm:text-2xl text-ink-900 my-4 break-words">${escapeHtml(round.target.langText)}</p>
         <div class="grid sm:grid-cols-2 gap-3 mt-5">
           ${round.choices.map((c, i) => `
             <button class="choice" data-i="${i}" data-correct="${c.correct ? '1' : '0'}">${escapeHtml(c.label)}</button>

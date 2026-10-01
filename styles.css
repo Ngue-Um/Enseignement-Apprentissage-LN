@@ -128,3 +128,24 @@ template { display: none; }
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* ---------- Mobile / responsive safeguards ---------- */
+
+/* Never let a wide element create horizontal scrolling on phones.
+   (overflow-x: clip keeps the sticky header working, unlike hidden) */
+html, body { max-width: 100%; overflow-x: clip; }
+
+/* Long words in African-language transcriptions or file names wrap instead of overflowing */
+.lang-text, h1, h2, h3 { overflow-wrap: anywhere; }
+
+img, video, audio, iframe, svg { max-width: 100%; }
+audio { width: 100%; }
+
+/* Comfortable touch targets */
+@media (max-width: 640px) {
+  .choice { padding: .85rem .9rem; font-size: 1rem; }
+  .play-btn { padding: .5rem .75rem; }
+  #mobile-menu a { padding-top: .7rem; padding-bottom: .7rem; }
+  /* 16px inputs prevent iOS Safari from zooming on focus */
+  input, select, textarea { font-size: 16px !important; }
+}

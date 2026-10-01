@@ -30,7 +30,7 @@
 <!-- Header -->
 <header class="border-b border-ink-100 bg-white sticky top-0 z-30">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-    <a href="#/" onclick="window.location='index.html'" class="flex items-center gap-3 group">
+    <a href="index.html" class="flex items-center gap-3 group">
       <div class="w-10 h-10 rounded-lg bg-brand-500 text-white grid place-items-center font-bold font-serif text-lg shadow-sm group-hover:bg-brand-600 transition">L</div>
       <div class="leading-tight">
         <div class="font-semibold text-ink-900">Likalo</div>
@@ -42,16 +42,26 @@
       <a href="reseau.html" class="px-3 py-2 rounded-md hover:bg-ink-100 text-ink-600">🕸 CamRhizome</a>
       <a href="Mini-atlas-linguistique-du-Cameroon.pdf" target="_blank" class="px-3 py-2 rounded-md bg-brand-50 hover:bg-brand-100 text-brand-700 font-medium">↓ Mini-Atlas PDF</a>
     </nav>
+    <button id="cartes-menu-btn" type="button" class="sm:hidden p-2 -mr-2 rounded-md hover:bg-ink-100" aria-label="Menu" aria-controls="cartes-menu" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="cartes-menu" class="sm:hidden hidden border-t border-ink-100 bg-white">
+    <div class="px-4 py-2 flex flex-col text-base">
+      <a href="index.html" class="px-3 py-3 rounded-md hover:bg-ink-100 text-ink-700">← Plateforme</a>
+      <a href="reseau.html" class="px-3 py-3 rounded-md hover:bg-ink-100 text-ink-700">🕸 CamRhizome</a>
+      <a href="Mini-atlas-linguistique-du-Cameroon.pdf" target="_blank" class="px-3 py-3 rounded-md bg-brand-50 text-brand-700 font-medium">↓ Mini-Atlas PDF</a>
+    </div>
   </div>
 </header>
 
 <!-- Hero -->
-<section class="bg-white border-b border-ink-100 py-10 px-4">
+<section class="bg-white border-b border-ink-100 py-8 sm:py-10 px-4">
   <div class="max-w-6xl mx-auto">
     <div class="flex flex-col md:flex-row gap-8 items-start">
       <div class="flex-1">
         <p class="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-2">Mini-Atlas linguistique du Cameroun · LACAGEO 2013</p>
-        <h1 class="font-serif text-3xl sm:text-4xl text-ink-900 mb-4">Diversité linguistique<br/>du Cameroun</h1>
+        <h1 class="font-serif text-3xl sm:text-4xl text-ink-900 mb-4">Diversité linguistique<br class="hidden sm:inline"/> du Cameroun</h1>
         <p class="text-ink-600 max-w-xl leading-relaxed">Le Cameroun compte <strong>environ 280 langues vivantes</strong> réparties en 10 régions administratives. Ce tableau de bord synthétise les données du Mini-Atlas LACAGEO (2013) — langues par région, langues en danger, familles linguistiques, langues transnationales.</p>
         <div class="flex flex-wrap gap-3 mt-5">
           <a href="Mini-atlas-linguistique-du-Cameroon.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 font-medium text-sm transition">
@@ -64,7 +74,7 @@
         </div>
       </div>
       <!-- Global stats -->
-      <div class="grid grid-cols-2 gap-3 min-w-[280px]">
+      <div class="grid grid-cols-2 gap-3 w-full md:w-auto md:min-w-[280px]">
         <div class="bg-brand-50 rounded-xl p-4 text-center">
           <div class="text-3xl font-bold text-brand-700">~280</div>
           <div class="text-xs text-brand-600 mt-1 font-medium">langues vivantes</div>
@@ -146,7 +156,7 @@
   <h2 class="font-serif text-xl text-ink-800 mb-1">Langues en danger ou éteintes <span class="text-sm font-sans font-normal text-ink-400">(UNESCO / SIL)</span></h2>
   <p class="text-sm text-ink-500 mb-6">Sélection tirée du Mini-Atlas LACAGEO — certaines langues ont disparu depuis 2013.</p>
   <div class="overflow-x-auto rounded-xl border border-ink-100">
-    <table class="w-full text-sm bg-white">
+    <table class="w-full min-w-[480px] text-sm bg-white">
       <thead>
         <tr class="border-b border-ink-100 text-left">
           <th class="px-4 py-3 font-semibold text-ink-700">Langue</th>
@@ -164,7 +174,7 @@
 <footer class="border-t border-ink-100 bg-white mt-4">
   <div class="max-w-6xl mx-auto px-4 py-5 text-sm text-ink-500 flex flex-col sm:flex-row justify-between gap-3">
     <div>© 2026 <strong class="text-ink-700">Likalo</strong> · Prof. Emmanuel Ngue Um · <a href="mailto:ngueum@gmail.com" class="hover:text-brand-700 underline">ngueum@gmail.com</a></div>
-    <div class="flex gap-3 items-center">
+    <div class="flex flex-wrap gap-x-3 gap-y-2 items-center">
       <a href="index.html" class="hover:text-brand-700">Plateforme</a>·
       <a href="reseau.html" class="hover:text-brand-700">CamRhizome</a>·
       <a href="Mini-atlas-linguistique-du-Cameroon.pdf" target="_blank" class="hover:text-brand-700 underline">Mini-Atlas PDF</a>
@@ -173,6 +183,16 @@
 </footer>
 
 <script>
+// ─── Mobile menu ─────────────────────────────────────────────────────────────
+(function () {
+  const btn = document.getElementById('cartes-menu-btn');
+  const menu = document.getElementById('cartes-menu');
+  btn.addEventListener('click', () => {
+    const open = menu.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
+  });
+})();
+
 // ─── Data from Mini-Atlas LACAGEO 2013 ───────────────────────────────────────
 const REGIONS = [
   {
@@ -341,9 +361,9 @@ REGIONS.forEach(r => {
   const card = document.createElement("div");
   card.className = `region-card ${c.bg} border ${c.border} rounded-2xl p-5 cursor-default`;
   card.innerHTML = `
-    <div class="flex items-start justify-between mb-3">
+    <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
       <h3 class="font-serif font-semibold text-lg ${c.title}">Région du ${r.name}</h3>
-      <span class="${c.badge} text-xs font-semibold px-2 py-0.5 rounded-full">${r.superficie}</span>
+      <span class="${c.badge} text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap">${r.superficie}</span>
     </div>
     <div class="grid grid-cols-2 gap-2 mb-3">
       <div class="bg-white/70 rounded-lg px-3 py-2 text-center">
@@ -401,6 +421,6 @@ ENDANGERED.forEach((e, i) => {
 });
 </script>
 <!-- GoatCounter — remplacez VOTRE-CODE par votre code GoatCounter -->
-<script data-goatcounter="https://LIKALO.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://VOTRE-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

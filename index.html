@@ -62,7 +62,7 @@
           <div class="text-xs text-ink-500">Langues &amp; Cultures Camerounaises</div>
         </div>
       </a>
-      <nav id="main-nav" class="hidden sm:flex items-center gap-1 text-sm flex-wrap">
+      <nav id="main-nav" class="hidden lg:flex items-center gap-1 text-sm flex-wrap justify-end">
         <a href="#/" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Accueil</a>
         <a href="#/catalogue" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Langues</a>
         <a href="#/lecons" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Leçons</a>
@@ -78,12 +78,12 @@
           <!-- rempli dynamiquement par JS -->
         </select>
       </nav>
-      <button id="mobile-toggle" class="sm:hidden p-2 rounded-md hover:bg-ink-100" aria-label="Menu">
+      <button id="mobile-toggle" class="lg:hidden p-2 -mr-2 rounded-md hover:bg-ink-100" aria-label="Menu" aria-controls="mobile-menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
-    <div id="mobile-menu" class="sm:hidden hidden border-t border-ink-100 bg-white">
-      <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col text-sm">
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-ink-100 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto">
+      <div class="max-w-6xl mx-auto px-4 py-2 grid grid-cols-1 sm:grid-cols-2 gap-1 text-base">
         <a href="#/" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Accueil</a>
         <a href="#/catalogue" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Langues</a>
         <a href="#/lecons" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Leçons</a>
@@ -95,7 +95,7 @@
         <a href="#/a-propos" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">À propos</a>
         <a href="cartes.html" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100 border border-ink-200 text-ink-600">🗺 Cartes</a>
         <a href="reseau.html" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100 border border-ink-200 text-ink-600" title="CamRhizome — Réseau intercommunautaire du Cameroun">🕸 CamRhizome</a>
-        <div class="px-3 py-2 border-t border-ink-100 mt-1">
+        <div class="px-3 py-2 border-t border-ink-100 mt-1 sm:col-span-2">
           <label class="text-xs text-ink-400 uppercase tracking-wide block mb-1">Langue active</label>
           <select id="mobile-lang-selector" class="lang-selector w-full border border-ink-200 rounded-md px-2 py-1.5 bg-white text-sm text-ink-700 cursor-pointer" title="Changer de langue" onchange="switchLanguage(this.value)">
             <!-- rempli dynamiquement par JS -->
@@ -106,7 +106,7 @@
   </header>
 
   <!-- Main -->
-  <main id="app" class="max-w-6xl mx-auto px-4 py-8 min-h-[60vh]">
+  <main id="app" class="max-w-6xl mx-auto px-4 py-6 sm:py-8 min-h-[60vh]">
     <div class="text-center text-ink-500 py-20">Chargement…</div>
   </main>
 
@@ -120,7 +120,7 @@
           <a href="mailto:ngueum@gmail.com" class="hover:text-brand-700 underline">ngueum@gmail.com</a> ·
           <a href="https://wa.me/237677066803" target="_blank" rel="noopener" class="hover:text-brand-700 underline">+237 677 066 803</a>
         </div>
-        <div class="flex flex-wrap items-center gap-3">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
           <a href="#/ressources" class="hover:text-brand-700">Ressources</a>
           <span class="text-ink-300">·</span>
           <a href="#/corpus-oral" class="hover:text-brand-700">Corpus oral</a>
@@ -146,7 +146,7 @@
 
   <!-- GoatCounter — suivi de fréquentation sans cookies (RGPD) -->
   <!-- Remplacez VOTRE-CODE par votre code GoatCounter après inscription sur goatcounter.com -->
-  <script data-goatcounter="https://LIKALO.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://VOTRE-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
   <!-- Templates -->
   <template id="tpl-home">
@@ -154,8 +154,8 @@
       <div class="grid lg:grid-cols-2 gap-10 items-center">
         <div>
           <span class="inline-block text-xs font-semibold text-brand-700 bg-brand-100 px-3 py-1 rounded-full">Prototype LACC2342 · ENS Yaoundé</span>
-          <h1 class="mt-4 font-serif text-4xl sm:text-5xl leading-tight text-ink-900">
-            <span class="text-brand-600">Likalo</span> — Apprendre les langues<br/>et cultures camerounaises.
+          <h1 class="mt-4 font-serif text-3xl sm:text-5xl leading-tight text-ink-900">
+            <span class="text-brand-600">Likalo</span> — Apprendre les langues<br class="hidden sm:inline"/> et cultures camerounaises.
           </h1>
           <p class="mt-5 text-lg text-ink-600 max-w-xl">
             Plateforme interactive d'enseignement des langues et cultures nationales camerounaises.
@@ -180,7 +180,7 @@
               </a>
             </div>
           </div>
-          <dl class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <dl class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center sm:text-left">
             <div>
               <dt class="text-3xl font-serif text-brand-600" id="stat-langues">28</dt>
               <dd class="text-xs text-ink-500 uppercase tracking-wide">Langues</dd>
@@ -297,9 +297,9 @@
             d'activités pour l'élève, à partir du corpus ALCAM.
           </p>
         </div>
-        <div class="flex items-center gap-2">
-          <label class="text-sm text-ink-500" for="lecons-filter">Module</label>
-          <select id="lecons-filter" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm">
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <label class="text-sm text-ink-500 shrink-0" for="lecons-filter">Module</label>
+          <select id="lecons-filter" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm w-full sm:w-auto min-w-0 max-w-full">
             <option value="">Tous les modules</option>
             <optgroup label="Classes de 6e et 5e">
               <option value="M1-diversite">I — Diversité linguistique camerounaise (6e)</option>
@@ -328,14 +328,14 @@
           Toutes les leçons
         </a>
       </div>
-      <header class="mb-8 bg-white border border-ink-100 rounded-2xl p-6 shadow-sm">
+      <header class="mb-8 bg-white border border-ink-100 rounded-2xl p-4 sm:p-6 shadow-sm">
         <div class="flex flex-wrap items-start justify-between gap-3">
           <div>
             <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide" id="lecon-module-tag"></div>
-            <h1 class="font-serif text-3xl mt-1" id="lecon-title"></h1>
+            <h1 class="font-serif text-2xl sm:text-3xl mt-1 break-words" id="lecon-title"></h1>
             <p class="text-sm text-ink-500 mt-2"><span id="lecon-meta"></span></p>
           </div>
-          <div class="flex flex-col items-stretch gap-2 min-w-[10rem]">
+          <div class="flex flex-col items-stretch gap-1 sm:gap-2 sm:min-w-[10rem]">
             <span class="text-xs uppercase tracking-wide text-ink-400">Code</span>
             <span class="font-serif text-3xl text-brand-600" id="lecon-code"></span>
           </div>
@@ -354,7 +354,7 @@
 
       <div class="grid lg:grid-cols-2 gap-6 items-start" id="lecon-panes">
         <!-- Panneau Enseignant -->
-        <article id="lecon-teacher-pane" class="bg-white border border-ink-100 rounded-2xl p-6 shadow-sm">
+        <article id="lecon-teacher-pane" class="bg-white border border-ink-100 rounded-2xl p-4 sm:p-6 shadow-sm">
           <div class="flex items-center gap-3 mb-4 pb-4 border-b border-ink-100">
             <div class="w-10 h-10 grid place-items-center rounded-lg bg-brand-100 text-brand-700">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m0 0l-3-3m3 3l3-3"/></svg>
@@ -377,7 +377,7 @@
         </article>
 
         <!-- Panneau Élève -->
-        <article id="lecon-student-pane" class="bg-white border border-ink-100 rounded-2xl p-6 shadow-sm">
+        <article id="lecon-student-pane" class="bg-white border border-ink-100 rounded-2xl p-4 sm:p-6 shadow-sm">
           <div class="flex items-center gap-3 mb-4 pb-4 border-b border-ink-100">
             <div class="w-10 h-10 grid place-items-center rounded-lg bg-emerald-100 text-emerald-700">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
@@ -398,7 +398,7 @@
 
       <!-- Ressources musicales EMAC -->
       <section id="lecon-emac-section" class="mt-8 hidden">
-        <div class="flex items-center gap-3 mb-4">
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
           <h2 class="font-serif text-2xl">Ressources musicales EMAC</h2>
           <span class="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded-full font-semibold">Ethnomusicologie du Cameroun · CERDOTOLA</span>
         </div>
@@ -416,7 +416,7 @@
       </section>
 
       <!-- Navigation entre leçons -->
-      <nav class="mt-10 flex items-center justify-between gap-4 border-t border-ink-100 pt-6" id="lecon-nav">
+      <nav class="mt-10 flex flex-wrap items-center justify-between gap-3 sm:gap-4 border-t border-ink-100 pt-6" id="lecon-nav">
       </nav>
     </section>
   </template>
@@ -428,9 +428,9 @@
           <h1 class="font-serif text-3xl mb-2">Vocabulaire — <span id="vocab-lang-title">Bulu</span></h1>
           <p class="text-ink-600 max-w-2xl">Écoutez chaque phrase, lisez sa transcription en AGLC et sa traduction française. Filtrez par module MINESEC.</p>
         </div>
-        <div class="flex items-center gap-2">
-          <label class="text-sm text-ink-500" for="vocab-filter">Module</label>
-          <select id="vocab-filter" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm">
+        <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+          <label class="text-sm text-ink-500 shrink-0" for="vocab-filter">Module</label>
+          <select id="vocab-filter" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm flex-1 sm:flex-none min-w-0">
             <option value="">Tous</option>
             <option value="M2-segmentaux">II — Productions segmentales</option>
             <option value="M3-suprasegmentaux">III — Suprasegmentaux</option>
@@ -438,7 +438,7 @@
             <option value="M5-syntagme-verbal">V — Syntagme verbal</option>
             <option value="M6-phrase">VI — La phrase</option>
           </select>
-          <input id="vocab-search" type="search" placeholder="Rechercher…" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm w-40 sm:w-56" />
+          <input id="vocab-search" type="search" placeholder="Rechercher…" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-base sm:text-sm w-full sm:w-56" />
         </div>
       </div>
       <div id="vocab-list" class="space-y-3"></div>
@@ -483,7 +483,7 @@
       <h1 class="font-serif text-3xl mb-6">À propos de Likalo</h1>
 
       <!-- Contact card -->
-      <div class="bg-brand-50 border border-brand-200 rounded-2xl p-6 mb-8 flex flex-col sm:flex-row gap-5 items-start">
+      <div class="bg-brand-50 border border-brand-200 rounded-2xl p-4 sm:p-6 mb-8 flex flex-col sm:flex-row gap-5 items-start">
         <div class="w-16 h-16 rounded-full bg-brand-600 text-white grid place-items-center text-3xl font-serif shrink-0">N</div>
         <div>
           <div class="font-semibold text-xl text-ink-900">Prof. Emmanuel Ngue Um</div>
@@ -598,7 +598,7 @@
       </p>
 
       <!-- Contact direct -->
-      <div class="bg-white border border-ink-100 rounded-2xl p-6 shadow-sm mb-8">
+      <div class="bg-white border border-ink-100 rounded-2xl p-4 sm:p-6 shadow-sm mb-8">
         <h2 class="font-semibold text-lg mb-4">Contact direct</h2>
         <div class="flex flex-col gap-3">
           <a href="mailto:ngueum@gmail.com?subject=Contribution%20Likalo" class="inline-flex items-center gap-3 p-3 rounded-lg border border-brand-200 hover:bg-brand-50 transition">
@@ -623,7 +623,7 @@
       </div>
 
       <!-- Formulaire de suggestion -->
-      <div class="bg-white border border-ink-100 rounded-2xl p-6 shadow-sm">
+      <div class="bg-white border border-ink-100 rounded-2xl p-4 sm:p-6 shadow-sm">
         <h2 class="font-semibold text-lg mb-4">Formulaire de suggestion</h2>
         <form id="contrib-form" class="space-y-4">
           <div>
@@ -638,11 +638,11 @@
           </div>
           <div>
             <label class="block text-sm font-medium text-ink-700 mb-1" for="contrib-nom">Votre nom (facultatif)</label>
-            <input id="contrib-nom" type="text" class="w-full border border-ink-200 rounded-md px-3 py-2 bg-white text-sm" placeholder="Nom ou pseudonyme" />
+            <input id="contrib-nom" type="text" class="w-full border border-ink-200 rounded-md px-3 py-2 bg-white text-base sm:text-sm" placeholder="Nom ou pseudonyme" />
           </div>
           <div>
             <label class="block text-sm font-medium text-ink-700 mb-1" for="contrib-message">Message</label>
-            <textarea id="contrib-message" rows="5" class="w-full border border-ink-200 rounded-md px-3 py-2 bg-white text-sm resize-y" placeholder="Décrivez votre suggestion, correction ou ressource…" required></textarea>
+            <textarea id="contrib-message" rows="5" class="w-full border border-ink-200 rounded-md px-3 py-2 bg-white text-base sm:text-sm resize-y" placeholder="Décrivez votre suggestion, correction ou ressource…" required></textarea>
           </div>
           <div id="contrib-feedback" class="hidden rounded-lg p-4 text-sm"></div>
           <button type="submit" id="contrib-submit" class="w-full py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-medium text-sm">
