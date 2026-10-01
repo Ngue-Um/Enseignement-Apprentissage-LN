@@ -1,0 +1,1482 @@
+/* Likalo — Enseignement/Apprentissage des Langues et Cultures Camerounaises
+ * Application monopage (vanilla JS).
+ * Routes par hash :
+ *   #/             -> Accueil
+ *   #/catalogue    -> Catalogue des 16 langues
+ *   #/lecons       -> Index des leçons (langue active)
+ *   #/lecon/:id    -> Fiche enseignant + élève d'une leçon
+ *   #/vocabulaire  -> Liste du vocabulaire (langue active)
+ *   #/exercices    -> Quatre familles d'exercices
+ *   #/a-propos     -> À propos
+ *   #/cultures     -> Fiches culturelles des communautés (#/cultures/CODE ouvre une fiche)
+ *   #/culture/CODE/lecon/ID -> Leçon de culture d'une communauté
+ *
+ * Langue active : state.currentLang (défaut : 'bulu')
+ * Changement via switchLanguage(slug) qui recharge vocab + leçons.
+ * Modules langues  : M1–M8  (MINESEC Langues Nationales)
+ * Modules cultures : MC1–MC5 (MINESEC Cultures Nationales)
+ */
+
+const state = {
+  langues: [],        // catalogue des 16 langues ALCAM
+  currentLang: 'bulu',  // langue active
+  currentLangName: 'Bulu',
+  vocab: [],          // phrases de la langue active
+  vocabWithFr: [],    // vocab filtré (traduction non vide)
+  lessons: [],        // leçons de la langue active
+  audioBase: 'audio/bulu/',
+  emacBase: 'audio/emac/',
+  currentAudio: null,
+  preferredPane: 'teacher',  // mémoire de session pour la bascule mobile
+  scores: {           // scores en mémoire seulement (jamais persistés)
+    comprehension: { correct: 0, total: 0 },
+    reconnaissance: { correct: 0, total: 0 },
+    lecture: { correct: 0, total: 0 },
+    dictee: { correct: 0, total: 0 },
+  }
+};
+
+const MODULES = {
+  /* ── Langues Nationales (MINESEC) ── */
+  'M1-diversite':        { num: 'I',    label: 'Diversité linguistique camerounaise', type: 'langue' },
+  'M2-segmentaux':       { num: 'II',   label: 'Productions segmentales',             type: 'langue' },
+  'M3-suprasegmentaux':  { num: 'III',  label: 'Suprasegmentaux',                     type: 'langue' },
+  'M4-syntagme-nominal': { num: 'IV',   label: 'Syntagme nominal',                    type: 'langue' },
+  'M5-syntagme-verbal':  { num: 'V',    label: 'Syntagme verbal',                     type: 'langue' },
+  'M6-phrase':           { num: 'VI',   label: 'La phrase',                           type: 'langue' },
+  'M7-quotidien-1':      { num: 'VII',  label: 'Gestion du quotidien — Niveau 1',     type: 'langue' },
+  'M8-quotidien-2':      { num: 'VIII', label: 'Gestion du quotidien — Niveau 2',     type: 'langue' },
+  /* ── Cultures Nationales (MINESEC) ── */
+  'MC1-diversite-culturelle':  { num: 'C-I',   label: 'Diversité culturelle camerounaise',             type: 'culture' },
+  'MC2-modes-de-vie':          { num: 'C-II',  label: 'Pratiques culturelles — Modes de vie',          type: 'culture' },
+  'MC3-evenements':            { num: 'C-III', label: 'Pratiques culturelles — Événements de la vie',  type: 'culture' },
+  'MC4-communaute-1':          { num: 'C-IV',  label: 'Pratiques culturelles en communauté — Niv. I',  type: 'culture' },
+  'MC5-communaute-2':          { num: 'C-V',   label: 'Pratiques culturelles en communauté — Niv. II', type: 'culture' },
+};
+
+/* Les fichiers de leçons utilisent parfois d'anciens identifiants de modules :
+   on les ramène aux identifiants canoniques ci-dessus. */
+const MODULE_ALIASES = {
+  'M7-quotidien1': 'M7-quotidien-1',
+  'M8-quotidien2': 'M8-quotidien-2',
+  'MC3-evenements-marquants': 'MC3-evenements',
+  'MC4-pratiques-communaute1': 'MC4-communaute-1',
+  'MC5-pratiques-communaute2': 'MC5-communaute-2',
+};
+
+/** Accepte les étapes au format objet {title, instruction} ou chaîne « **Titre :** texte ». */
+function normalizeStep(x) {
+  if (x && typeof x === 'object') return x;
+  const str = String(x || '');
+  const m = str.match(/^\*\*(.+?)\*\*\s*:?\s*([\s\S]*)$/);
+  if (m) return { title: m[1].replace(/\s*:\s*$/, ''), instruction: m[2] };
+  return { title: '', instruction: str };
+}
+
+function normalizeLesson(L) {
+  if (MODULE_ALIASES[L.module]) L.module = MODULE_ALIASES[L.module];
+  if (L.teacher) L.teacher.steps = (L.teacher.steps || []).map(normalizeStep);
+  if (L.student) L.student.activities = (L.student.activities || []).map(normalizeStep);
+  L.objectives = L.objectives || [];
+  L.vocabulary = L.vocabulary || [];
+  return L;
+}
+
+const EXO_LABELS = {
+  comprehension:  'Audio → Traduction française',
+  reconnaissance: 'Texte lang. → Audio',
+  lecture:        'Texte lang. → Traduction française',
+  dictee:         'Audio → Transcription AGLC',
+};
+
+/* ---------- Utilitaires ---------- */
+
+function $(sel, root = document) { return root.querySelector(sel); }
+function $$(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
+
+function escapeHtml(str) {
+  return String(str ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function pickN(arr, n, exclude = new Set()) {
+  const pool = arr.filter(x => !exclude.has(x));
+  return shuffle(pool).slice(0, n);
+}
+
+function stopCurrentAudio() {
+  if (state.currentAudio) {
+    state.currentAudio.pause();
+    state.currentAudio.currentTime = 0;
+    state.currentAudio = null;
+  }
+  $$('.play-btn.is-playing').forEach(b => b.classList.remove('is-playing'));
+}
+
+function playAudio(url, btn = null) {
+  stopCurrentAudio();
+  const a = new Audio(url);
+  state.currentAudio = a;
+  if (btn) btn.classList.add('is-playing');
+  a.addEventListener('ended', () => { if (btn) btn.classList.remove('is-playing'); state.currentAudio = null; });
+  a.addEventListener('pause', () => { if (btn) btn.classList.remove('is-playing'); });
+  a.addEventListener('error', () => { if (btn) btn.classList.remove('is-playing'); state.currentAudio = null; });
+  a.play().catch(() => { if (btn) btn.classList.remove('is-playing'); });
+}
+
+function normalizeForCompare(s) {
+  if (!s) return '';
+  return s.toString()
+    .normalize('NFC')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .replace(/[.,;:!?()\[\]"'«»]/g, '')
+    .trim();
+}
+
+function similarity(a, b) {
+  // Levenshtein normalisé en pourcentage
+  a = normalizeForCompare(a);
+  b = normalizeForCompare(b);
+  if (!a && !b) return 100;
+  if (!a || !b) return 0;
+  const m = a.length, n = b.length;
+  const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      dp[i][j] = a[i - 1] === b[j - 1]
+        ? dp[i - 1][j - 1]
+        : 1 + Math.min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1]);
+    }
+  }
+  const dist = dp[m][n];
+  return Math.round((1 - dist / Math.max(m, n)) * 100);
+}
+
+/* ---------- Chargement des données ---------- */
+
+async function loadData() {
+  const [langues, vocab, lessons] = await Promise.all([
+    fetch('data/languages.json').then(r => r.json()),
+    fetch(`data/${state.currentLang}.json`).then(r => r.json()).catch(() => []),
+    fetch(`data/lessons_${state.currentLang}.json`).then(r => r.json()).catch(() => ({ lessons: [] })),
+  ]);
+  state.langues = langues;
+  state.vocab = vocab;
+  state.vocabWithFr = vocab.filter(b => b.frenchText && b.langText);
+  state.lessons = (lessons.lessons || []).map(normalizeLesson);
+  const langInfo = langues.find(l => l.slug === state.currentLang);
+  state.currentLangName = langInfo ? langInfo.name : state.currentLang;
+  state.audioBase = `audio/${state.currentLang}/`;
+  // Populate all language selectors (nav + mobile)
+  ['nav-lang-selector', 'mobile-lang-selector'].forEach(id => {
+    const sel = document.getElementById(id);
+    if (sel && !sel.options.length) {
+      langues.forEach(l => {
+        const opt = new Option(l.name, l.slug);
+        sel.add(opt);
+      });
+    }
+    if (sel) sel.value = state.currentLang;
+  });
+  return { langues, vocab, lessons };
+}
+
+async function switchLanguage(slug) {
+  if (state.currentLang === slug) return;
+  state.currentLang = slug;
+  stopCurrentAudio();
+  const [vocab, lessons] = await Promise.all([
+    fetch(`data/${slug}.json`).then(r => r.json()).catch(() => []),
+    fetch(`data/lessons_${slug}.json`).then(r => r.json()).catch(() => ({ lessons: [] })),
+  ]);
+  state.vocab = vocab;
+  state.vocabWithFr = vocab.filter(b => b.frenchText && b.langText);
+  state.lessons = (lessons.lessons || []).map(normalizeLesson);
+  const langInfo = state.langues.find(l => l.slug === slug);
+  state.currentLangName = langInfo ? langInfo.name : slug;
+  state.audioBase = `audio/${slug}/`;
+  render();
+  updateLangSelector();
+}
+
+function updateLangSelector() {
+  const navSel = document.getElementById('nav-lang-selector');
+  if (navSel) navSel.value = state.currentLang;
+  $$('.lang-selector').forEach(sel => { sel.value = state.currentLang; });
+}
+
+/* ---------- Routeur ---------- */
+
+// Routes statiques + routes paramétriques.
+// Chaque entrée paramétrique a la forme [regex, renderer].
+const STATIC_ROUTES = {
+  '/':             renderHome,
+  '/catalogue':    renderCatalogue,
+  '/lecons':       renderLecons,
+  '/vocabulaire':  renderVocabulaire,
+  '/exercices':    renderExercices,
+  '/ressources':   renderRessources,
+  '/corpus-oral':  renderCorpusOral,
+  '/contribuer':   renderContribuer,
+  '/a-propos':     renderAPropos,
+  '/cultures':     () => renderCultures(),
+};
+
+const PARAM_ROUTES = [
+  [/^\/lecon\/([A-Za-z0-9-]+)$/, (id) => renderLecon(id)],
+  [/^\/cultures\/([A-Z0-9]+)$/, (code) => renderCultures(code)],
+  [/^\/culture\/([A-Z0-9]+)\/lecon\/([A-Za-z0-9-]+)$/, (code, id) => renderCultureLesson(code, id)],
+];
+
+function resolveRoute() {
+  const path = location.hash.replace(/^#/, '') || '/';
+  if (STATIC_ROUTES[path]) {
+    return { path, run: STATIC_ROUTES[path] };
+  }
+  for (const [re, fn] of PARAM_ROUTES) {
+    const m = path.match(re);
+    if (m) return { path, run: () => fn(...m.slice(1)) };
+  }
+  return { path: '/', run: STATIC_ROUTES['/'] };
+}
+
+function navigate(path) {
+  if (location.hash !== '#' + path) location.hash = path;
+}
+
+function setActiveNav(path) {
+  // Surligne le lien dont le préfixe correspond.
+  $$('.nav-link').forEach(a => {
+    const target = a.getAttribute('href').replace(/^#/, '');
+    const active = path === target
+      || (target !== '/' && path.startsWith(target));
+    a.classList.toggle('active', active);
+  });
+}
+
+function render() {
+  stopCurrentAudio();
+  const { path, run } = resolveRoute();
+  // Ouvrir / fermer une fiche culturelle sans recharger la liste (garde le défilement)
+  const cm = path.match(/^\/cultures(?:\/([A-Z0-9]+))?$/);
+  if (cm && $('#cultures-grid')) {
+    setActiveNav(path);
+    if (cm[1]) openCultureModal(cm[1]); else closeCultureModal();
+    return;
+  }
+  closeCultureModal();
+  setActiveNav(path);
+  run();
+  $('#mobile-menu')?.classList.add('hidden');
+  window.scrollTo(0, 0);
+}
+
+window.addEventListener('hashchange', render);
+
+/* ---------- Vues ---------- */
+
+function mountTemplate(id) {
+  const tpl = document.getElementById(id);
+  const node = tpl.content.cloneNode(true);
+  const app = $('#app');
+  app.innerHTML = '';
+  app.appendChild(node);
+}
+
+function renderHome() {
+  mountTemplate('tpl-home');
+  $('#stat-langues').textContent = state.langues.length || 28;
+  const leconsCount = $('#stat-lecons');
+  if (leconsCount) leconsCount.textContent = state.lessons.length || 26;
+  $('#stat-phrases').textContent = state.vocab.length;
+  $('#stat-audios').textContent = state.vocab.filter(v => v.audio).length;
+  const phrasesLangEl = $('#stat-phrases-lang');
+  if (phrasesLangEl) phrasesLangEl.textContent = state.currentLangName;
+  const demoLangName = $('#demo-lang-name');
+  if (demoLangName) demoLangName.textContent = state.currentLangName;
+  const demoBadgeLang = $('#demo-badge-lang');
+  if (demoBadgeLang) demoBadgeLang.textContent = state.currentLangName;
+
+  // Phrase de démo : prendre un exemple sympa
+  const demo = state.vocabWithFr.find(d => d.langText.length > 8 && d.langText.length < 25)
+            || state.vocabWithFr[0];
+  if (demo) {
+    $('#demo-lang').textContent = demo.langText;
+    $('#demo-french').textContent = demo.frenchText;
+    const btn = $('#demo-play');
+    if (demo.audio) {
+      btn.addEventListener('click', () => playAudio(state.audioBase + demo.audio, btn));
+    } else {
+      btn.style.display = 'none';
+    }
+  }
+
+  // Injecter le sélecteur de langue dans la home si présent
+  const langSel = $('#home-lang-selector');
+  if (langSel) {
+    langSel.innerHTML = state.langues.map(l =>
+      `<option value="${escapeHtml(l.slug)}" ${l.slug===state.currentLang?'selected':''}>${escapeHtml(l.name)}</option>`
+    ).join('');
+    langSel.value = state.currentLang;
+    langSel.classList.add('lang-selector');
+    langSel.addEventListener('change', () => switchLanguage(langSel.value));
+  }
+}
+
+function renderCatalogue() {
+  mountTemplate('tpl-catalogue');
+  const grid = $('#catalogue-grid');
+  grid.innerHTML = state.langues.map(l => {
+    const isActive = l.slug === state.currentLang;
+    const emacBadge = l.emacCount > 0
+      ? `<span class="text-xs font-semibold bg-amber-100 text-amber-800 px-2 py-1 rounded-full">${l.emacCount} audio EMAC</span>`
+      : '';
+    const audioBadge = l.audio
+      ? '<span class="text-xs font-semibold bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full">Synthèse vocale</span>'
+      : '';
+    return `
+    <article class="bg-white rounded-xl border ${isActive ? 'border-brand-400 ring-2 ring-brand-200' : 'border-ink-100'} p-5">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <h3 class="font-serif text-xl text-ink-900 lang-text">${escapeHtml(l.name)}</h3>
+          <div class="text-xs text-ink-500 mt-0.5">ISO ${escapeHtml(l.iso)} · ${escapeHtml(l.family)}</div>
+          ${l.region ? `<div class="text-xs text-ink-400 mt-0.5">Région : ${escapeHtml(l.region)}</div>` : ''}
+        </div>
+        <div class="flex flex-col gap-1 items-end">${audioBadge}${emacBadge}</div>
+      </div>
+      <p class="text-sm text-ink-500 mt-3">
+        ${l.audio
+          ? 'Dataset complet : audios MP3, transcription AGLC, traduction française.'
+          : 'Dataset textuel ALCAM disponible.'}
+        ${l.emacCount > 0 ? ` Ressources musicales EMAC intégrées dans les leçons.` : ''}
+      </p>
+      <div class="mt-4 flex items-center gap-3">
+        <button class="text-sm font-medium text-brand-700 hover:text-brand-800 switch-lang-btn" data-slug="${escapeHtml(l.slug)}">
+          ${isActive ? '✓ Langue active' : 'Activer →'}
+        </button>
+        <a href="https://mozilladatacollective.com/organization/cmfv3ichk000amd07piai0zoz" target="_blank" rel="noopener"
+           class="text-sm text-ink-500 hover:text-ink-700 underline">mdc</a>
+      </div>
+    </article>`;
+  }).join('');
+
+  $$('.switch-lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchLanguage(btn.dataset.slug));
+  });
+}
+
+function renderVocabulaire() {
+  mountTemplate('tpl-vocabulaire');
+  const list = $('#vocab-list');
+  const empty = $('#vocab-empty');
+  const filter = $('#vocab-filter');
+  const search = $('#vocab-search');
+
+  // Titre de langue si présent
+  const title = $('#vocab-lang-title');
+  if (title) title.textContent = state.currentLangName;
+
+  function update() {
+    const mod = filter.value;
+    const q = normalizeForCompare(search.value);
+    const items = state.vocabWithFr.filter(it => {
+      if (mod && it.module !== mod) return false;
+      if (!q) return true;
+      return normalizeForCompare(it.langText).includes(q)
+        || normalizeForCompare(it.frenchText).includes(q);
+    });
+    if (!items.length) {
+      list.innerHTML = '';
+      empty.classList.remove('hidden');
+      return;
+    }
+    empty.classList.add('hidden');
+    list.innerHTML = items.slice(0, 100).map(it => renderVocabRow(it)).join('');
+    list.querySelectorAll('[data-audio]').forEach(btn => {
+      btn.addEventListener('click', () => playAudio(state.audioBase + btn.dataset.audio, btn));
+    });
+  }
+
+  function renderVocabRow(it) {
+    const mod = MODULES[it.module] || { num: '—', label: '' };
+    const hasAudio = !!it.audio;
+    return `
+      <article class="bg-white border border-ink-100 rounded-lg p-3 sm:p-4 flex items-center gap-3 sm:gap-4">
+        ${hasAudio ? `
+        <button class="play-btn shrink-0" data-audio="${escapeHtml(it.audio)}" aria-label="Écouter">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <span class="hidden sm:inline">Écouter</span>
+        </button>` : `<span class="w-8 shrink-0"></span>`}
+        <div class="flex-1 min-w-0">
+          <p class="lang-text text-lg text-ink-900 truncate" title="${escapeHtml(it.langText)}">${escapeHtml(it.langText)}</p>
+          <p class="text-sm text-ink-500 truncate" title="${escapeHtml(it.frenchText)}">${escapeHtml(it.frenchText)}</p>
+        </div>
+        <div class="text-xs text-ink-400 hidden sm:block whitespace-nowrap">
+          Module ${mod.num}
+        </div>
+      </article>
+    `;
+  }
+
+  filter.addEventListener('change', update);
+  search.addEventListener('input', update);
+  update();
+}
+
+function renderAPropos() {
+  mountTemplate('tpl-apropos');
+}
+
+/* ---------- Ressources pédagogiques ---------- */
+
+const FICHES_PROGRESSION = [
+  { niveau: '6e',   label: 'Sixième',    fichier: 'Proposition-Fiche-6è-ANELCAC.pdf',    couleur: 'bg-blue-50 border-blue-200 text-blue-800' },
+  { niveau: '5e',   label: 'Cinquième',  fichier: 'Proposition-Fiche-5è-ANELCAC.pdf',    couleur: 'bg-blue-50 border-blue-200 text-blue-800' },
+  { niveau: '4e',   label: 'Quatrième',  fichier: 'Proposition-Fiche-4è-ANELCAC.pdf',    couleur: 'bg-violet-50 border-violet-200 text-violet-800' },
+  { niveau: '3e',   label: 'Troisième',  fichier: 'Proposition-Fiche-3è-ANELCAC.pdf',    couleur: 'bg-violet-50 border-violet-200 text-violet-800' },
+  { niveau: '2nde', label: 'Seconde',    fichier: 'Proposition-Fiche-2nde-ANELCAC.pdf',  couleur: 'bg-amber-50 border-amber-200 text-amber-800' },
+  { niveau: '1ère', label: 'Première',   fichier: 'Proposition-Fiche-1ère-ANELCAC.pdf',  couleur: 'bg-amber-50 border-amber-200 text-amber-800' },
+  { niveau: 'Tle',  label: 'Terminale',  fichier: 'Proposition-Fiche-Tle-ANELCAC.pdf',   couleur: 'bg-amber-50 border-amber-200 text-amber-800' },
+];
+
+const GUIDES_PROGRAMMES = [
+  { titre: 'Programme Langues Nationales 6e/5e',          soustitre: 'MINESEC · Premier cycle',   fichier: 'PROGRAMME Langues Nationales 6e et 5e.pdf',     icon: '📘' },
+  { titre: 'Langues Nationales 4e/3e',                    soustitre: 'MINESEC · Premier cycle',   fichier: 'Langues nationales  4e 3e.pdf',                  icon: '📘' },
+  { titre: 'Guide pédagogique LN 4e/3e',                  soustitre: 'MINESEC · Premier cycle',   fichier: 'GUIDE DU PROGRAMME LN 4ème et 3ème.pdf',         icon: '📗' },
+  { titre: 'Programme Cultures Nationales 6e/5e',         soustitre: 'MINESEC · Premier cycle',   fichier: 'PROGRAMME des Cultures Natioanles 6e et 5e-2.pdf', icon: '📙' },
+  { titre: 'Cultures Nationales 4e/3e',                   soustitre: 'MINESEC · Premier cycle',   fichier: 'GUIDE DU PROGRAMME CN 4ème et 3ème.pdf',         icon: '📙' },
+  { titre: 'Guide CN second cycle',                       soustitre: 'MINESEC · Second cycle',    fichier: 'GUIDE DU PROGRAMME CN  second-cycle.pdf',        icon: '📙' },
+  { titre: 'Programme LN 2nde',                           soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes d\'études LN Classes de 2nde.pdf',    icon: '📘' },
+  { titre: 'Programmes LN 1ères',                         soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes LN - 1ères.pdf',                      icon: '📘' },
+  { titre: 'Programmes Langues Nationales Tle',           soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes Langues Nationales Tle.pdf',           icon: '📘' },
+  { titre: 'Programme CN 2nde',                           soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes d\'études CN Classes de 2nde .pdf',   icon: '📙' },
+  { titre: 'Programme CN 1ères',                          soustitre: 'MINESEC · Second cycle',    fichier: 'Programme CN - 1ères.pdf',                       icon: '📙' },
+  { titre: 'Programmes Cultures Nationales Tle',          soustitre: 'MINESEC · Second cycle',    fichier: 'Programmes  Cultures Nationales Tle- .pdf',      icon: '📙' },
+  { titre: 'Guide des Arts 6e/5e',                        soustitre: 'MINESEC · Arts',            fichier: 'Guide des Arts-6è et 5è.pdf',                    icon: '🎨' },
+  { titre: 'Guide Arts second cycle',                     soustitre: 'MINESEC · Arts',            fichier: 'GUIDE DU PROGRAMME 2dn cycle  Arts.pdf',         icon: '🎨' },
+  { titre: 'Guide Culture Form 1 et 2 (anglophone)',      soustitre: 'MINESEC · Anglophone',      fichier: 'Guide Culture-Form 1 et 2.pdf',                  icon: '📕' },
+  { titre: 'Guide Langue Form 1 et 2 (anglophone)',       soustitre: 'MINESEC · Anglophone',      fichier: 'Guide langue-Form 1 et 2.pdf',                   icon: '📕' },
+  { titre: 'Guide Arts Form 1 et 2 (anglophone)',         soustitre: 'MINESEC · Anglophone',      fichier: 'Guide Arts-Form 1 et 2.pdf',                     icon: '🎨' },
+];
+
+function renderRessources() {
+  mountTemplate('tpl-ressources');
+
+  const fichesGrid = $('#ressources-fiches');
+  if (fichesGrid) {
+    fichesGrid.innerHTML = FICHES_PROGRESSION.map(f => `
+      <article class="bg-white border border-ink-100 rounded-xl p-5 hover:shadow transition">
+        <div class="flex items-start justify-between gap-3">
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border ${f.couleur} mb-2">${escapeHtml(f.niveau)}</span>
+            <h3 class="font-semibold text-ink-900">Classe de ${escapeHtml(f.label)}</h3>
+            <p class="text-xs text-ink-500 mt-0.5">Fiche de progression annuelle ANELCAC</p>
+          </div>
+          <div class="text-3xl shrink-0">📄</div>
+        </div>
+        <div class="mt-4 flex items-center gap-3">
+          <a href="Fiches-progression/${escapeHtml(f.fichier)}" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs rounded-lg font-medium">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Ouvrir PDF
+          </a>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  const guidesGrid = $('#ressources-guides');
+  if (guidesGrid) {
+    guidesGrid.innerHTML = GUIDES_PROGRAMMES.map(g => `
+      <article class="bg-white border border-ink-100 rounded-xl p-5 hover:shadow transition">
+        <div class="flex items-start gap-3">
+          <span class="text-3xl shrink-0">${g.icon}</span>
+          <div>
+            <h3 class="font-semibold text-ink-900 leading-snug">${escapeHtml(g.titre)}</h3>
+            <p class="text-xs text-ink-500 mt-0.5">${escapeHtml(g.soustitre)}</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <a href="Programmes-et-Guides-pedagogiques/${escapeHtml(g.fichier)}" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs rounded-lg font-medium">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Ouvrir PDF
+          </a>
+        </div>
+      </article>
+    `).join('');
+  }
+}
+
+/* ---------- Corpus oral ---------- */
+
+let _oralCorpus = null;
+
+async function loadOralCorpus() {
+  if (_oralCorpus) return _oralCorpus;
+  try {
+    _oralCorpus = await fetch('data/oral-corpus.json').then(r => r.json());
+  } catch {
+    _oralCorpus = [];
+  }
+  return _oralCorpus;
+}
+
+async function renderCorpusOral() {
+  mountTemplate('tpl-corpus-oral');
+  const corpus = await loadOralCorpus();
+  const grid = $('#corpus-grid');
+  if (!grid) return;
+
+  let activeSession = '';
+
+  function renderGrid() {
+    const items = activeSession ? corpus.filter(c => c.session === activeSession) : corpus;
+    if (!items.length) {
+      grid.innerHTML = `<div class="col-span-full text-center text-ink-400 py-12">Aucun enregistrement trouvé.</div>`;
+      return;
+    }
+    grid.innerHTML = items.map(c => `
+      <article class="bg-white border border-ink-100 rounded-xl p-5 hover:shadow transition">
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div>
+            <h3 class="font-serif text-xl text-ink-900">${escapeHtml(c.name)}</h3>
+            ${c.family !== '—' ? `<div class="text-xs text-ink-400 mt-0.5">${escapeHtml(c.family)}</div>` : ''}
+          </div>
+          <span class="text-xs font-semibold px-2 py-1 rounded-full ${c.session === 'LCC1' ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-violet-50 text-violet-700 border border-violet-200'}">${escapeHtml(c.session)}</span>
+        </div>
+        <p class="text-xs text-ink-500 mb-3">${escapeHtml(c.context)}</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-medium text-ink-700">${c.recordingCount} enregistrement${c.recordingCount > 1 ? 's' : ''}</span>
+          <span class="text-xs text-ink-400">${escapeHtml(c.year)}</span>
+        </div>
+        <div class="mt-3 border-t border-ink-100 pt-3">
+          ${c.recordings.map(r => `
+            <div class="flex items-center justify-between py-1">
+              <span class="text-xs text-ink-600 truncate max-w-[70%]" title="${escapeHtml(r.file)}">${escapeHtml(r.file)}</span>
+              <span class="text-xs text-ink-400 shrink-0">${r.sizeMb} Mo</span>
+            </div>
+          `).join('')}
+        </div>
+        <p class="mt-3 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded px-2 py-1">
+          Fichier WAV disponible sur demande — trop volumineux pour le web.
+        </p>
+      </article>
+    `).join('');
+  }
+
+  $$('.corpus-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.corpus-filter').forEach(b => {
+        b.classList.remove('is-active', 'bg-brand-50', 'border-brand-300', 'text-brand-700');
+        b.classList.add('bg-white', 'border-ink-200', 'text-ink-700');
+      });
+      btn.classList.add('is-active', 'bg-brand-50', 'border-brand-300', 'text-brand-700');
+      btn.classList.remove('bg-white', 'border-ink-200', 'text-ink-700');
+      activeSession = btn.dataset.session;
+      renderGrid();
+    });
+  });
+
+  renderGrid();
+}
+
+/* ---------- Contribuer ---------- */
+
+function renderContribuer() {
+  mountTemplate('tpl-contribuer');
+  const form = $('#contrib-form');
+  if (!form) return;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const type = $('#contrib-type').value;
+    const nom  = $('#contrib-nom').value.trim();
+    const msg  = $('#contrib-message').value.trim();
+    if (!msg) return;
+    const subject = encodeURIComponent(`[Likalo] Contribution — ${type}`);
+    const body = encodeURIComponent(
+      `Bonjour Prof. Ngue Um,\n\nType de contribution : ${type}\n${nom ? 'Nom : ' + nom + '\n' : ''}\nMessage :\n${msg}\n\n— Envoyé depuis la plateforme Likalo`
+    );
+    window.location.href = `mailto:ngueum@gmail.com?subject=${subject}&body=${body}`;
+    const fb = $('#contrib-feedback');
+    if (fb) {
+      fb.classList.remove('hidden');
+      fb.classList.add('bg-emerald-50', 'border', 'border-emerald-200', 'text-emerald-800');
+      fb.textContent = 'Votre client e-mail a été ouvert avec le message pré-rempli. Merci pour votre contribution !';
+    }
+  });
+}
+
+/* ---------- Leçons ---------- */
+
+const MODULE_ORDER = [
+  /* Langues Nationales */
+  'M1-diversite',
+  'M2-segmentaux',
+  'M3-suprasegmentaux',
+  'M4-syntagme-nominal',
+  'M5-syntagme-verbal',
+  'M6-phrase',
+  'M7-quotidien-1',
+  'M8-quotidien-2',
+  /* Cultures Nationales */
+  'MC1-diversite-culturelle',
+  'MC2-modes-de-vie',
+  'MC3-evenements',
+  'MC4-communaute-1',
+  'MC5-communaute-2',
+];
+
+function renderLecons() {
+  mountTemplate('tpl-lecons');
+  // Update title with current language name
+  const leconsTitleEl = $('#lecons-title');
+  if (leconsTitleEl) leconsTitleEl.textContent = `Leçons — ${state.currentLangName}`;
+  const root = $('#lecons-modules');
+  const filter = $('#lecons-filter');
+
+  function update() {
+    const sel = filter.value;
+    const lessons = state.lessons.filter(L => !sel || L.module === sel);
+
+    // Regrouper par module en respectant l'ordre MINESEC
+    const byMod = {};
+    for (const L of lessons) {
+      (byMod[L.module] ||= []).push(L);
+    }
+
+    if (!lessons.length) {
+      root.innerHTML = `<div class="text-center text-ink-400 py-12">Aucune leçon dans ce module.</div>`;
+      return;
+    }
+
+    // Split modules into langue vs culture domains
+    const langMods    = MODULE_ORDER.filter(m => byMod[m] && (MODULES[m]?.type !== 'culture'));
+    const cultureMods = MODULE_ORDER.filter(m => byMod[m] && (MODULES[m]?.type === 'culture'));
+
+    function renderDomain(mods, domainTitle, domainColor) {
+      if (!mods.length) return '';
+      return `
+        <div class="mb-2">
+          <h2 class="font-serif text-xl font-semibold ${domainColor} mb-4 pb-1 border-b border-ink-100">${domainTitle}</h2>
+          <div class="space-y-8">
+            ${mods.map(m => {
+              const list = byMod[m];
+              const meta = MODULES[m] || { num: '?', label: '' };
+              return `
+                <div>
+                  <h3 class="font-serif text-lg text-ink-900 mb-1">Module ${meta.num} — ${escapeHtml(meta.label)}</h3>
+                  <p class="text-sm text-ink-500 mb-3">${list.length} leçon${list.length > 1 ? 's' : ''}</p>
+                  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    ${list.map(renderLeconCard).join('')}
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>`;
+    }
+
+    root.innerHTML =
+      renderDomain(langMods,    '🗣 Langues Nationales',  'text-ink-900') +
+      renderDomain(cultureMods, '🏺 Cultures Nationales', 'text-emerald-800');
+  }
+
+  filter.addEventListener('change', update);
+  update();
+}
+
+function renderLeconCard(L) {
+  const objectives = L.objectives.slice(0, 2).map(o => escapeHtml(o)).join(' · ');
+  const isCulture  = (MODULES[L.module]?.type === 'culture');
+  const borderCls  = isCulture ? 'hover:border-emerald-400' : 'hover:border-brand-300';
+  const codeCls    = isCulture ? 'text-emerald-700' : 'text-brand-600';
+  const badge      = isCulture
+    ? `<span class="text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-full">Culture</span>`
+    : '';
+  return `
+    <a href="#/lecon/${escapeHtml(L.id)}" class="group block bg-white border border-ink-100 rounded-xl p-5 ${borderCls} hover:shadow transition">
+      <div class="flex items-center justify-between gap-3 mb-2">
+        <span class="font-serif text-2xl ${codeCls}">${escapeHtml(L.code)}</span>
+        <div class="flex items-center gap-2">
+          ${badge}
+          <span class="text-xs text-ink-400 uppercase tracking-wide">${escapeHtml(L.level)}</span>
+        </div>
+      </div>
+      <h3 class="font-semibold text-lg text-ink-900 group-hover:text-brand-700">${escapeHtml(L.title)}</h3>
+      <p class="text-sm text-ink-500 mt-2 line-clamp-2">${objectives}</p>
+      <div class="mt-3 flex items-center gap-3 text-xs text-ink-400">
+        ${L.vocabulary.length ? `<span>${L.vocabulary.length} item${L.vocabulary.length > 1 ? 's' : ''} vocab</span><span>·</span>` : ''}
+        <span class="${isCulture ? 'text-emerald-700' : 'text-brand-700'} font-medium">Ouvrir →</span>
+      </div>
+    </a>
+  `;
+}
+
+function renderLecon(id) {
+  const L = state.lessons.find(x => x.id === id);
+  if (L) {
+    renderLessonView(L, state.lessons, {
+      backHref: '#/lecons', backLabel: 'Toutes les leçons', linkBase: '#/lecon/',
+      cultureCode: L.cultureCode || '',
+    });
+    return;
+  }
+  if (!L) {
+    $('#app').innerHTML = `
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 text-amber-800 max-w-2xl mx-auto">
+        <h2 class="font-semibold text-lg">Leçon introuvable</h2>
+        <p class="mt-2 text-sm">L'identifiant <code>${escapeHtml(id)}</code> ne correspond à aucune leçon.</p>
+        <p class="mt-3"><a class="text-amber-900 underline" href="#/lecons">Retour aux leçons</a></p>
+      </div>`;
+    return;
+  }
+}
+
+function renderLessonView(L, lessons, opts) {
+  const id = L.id;
+  mountTemplate('tpl-lecon');
+  const meta = MODULES[L.module] || { num: '?', label: '' };
+  const back = $('#lecon-back');
+  if (back) { back.href = opts.backHref; $('#lecon-back-label').textContent = opts.backLabel; }
+
+  $('#lecon-module-tag').textContent = `Module ${meta.num} — ${meta.label}`;
+  $('#lecon-title').textContent = L.title;
+  $('#lecon-code').textContent = L.code;
+  $('#lecon-meta').innerHTML = `Durée indicative : ${escapeHtml(L.duration)} · Niveau : ${escapeHtml(L.level)}` +
+    (opts.subtitle ? ` · ${escapeHtml(opts.subtitle)}` : '') +
+    (opts.cultureCode ? ` · <a class="text-emerald-700 underline" href="#/cultures/${escapeHtml(opts.cultureCode)}">Fiche culturelle complète</a>` : '');
+
+  $('#lecon-objectives').innerHTML = L.objectives
+    .map(o => `<li>${escapeHtml(o)}</li>`).join('');
+
+  // Panneau enseignant
+  $('#lecon-teacher-intro').innerHTML = md(L.teacher.intro) +
+    (L.situation ? `<span class="block mt-2"><strong>Situation :</strong> ${md(L.situation)}</span>` : '') +
+    (L.materiel ? `<span class="block mt-2"><strong>Matériel :</strong> ${md(L.materiel)}</span>` : '');
+  $('#lecon-teacher-steps').innerHTML = L.teacher.steps.map((s, i) => `
+    <li class="relative pl-12">
+      <span class="absolute left-0 top-0 w-9 h-9 grid place-items-center rounded-full bg-brand-100 text-brand-700 font-serif font-semibold">${i + 1}</span>
+      ${s.title ? `<div class="font-semibold text-ink-900">${md(s.title)}</div>` : ''}
+      <p class="text-sm text-ink-700 mt-1">${md(s.instruction)}</p>
+    </li>
+  `).join('');
+  $('#lecon-teacher-freedom').innerHTML = md(L.teacher.freedom);
+  $('#lecon-teacher-tips').innerHTML = md(L.teacher.tips);
+
+  // Panneau élève
+  $('#lecon-student-intro').innerHTML = md(L.student.intro);
+  $('#lecon-student-activities').innerHTML = L.student.activities.map((a, i) => `
+    <li class="relative pl-12">
+      <span class="absolute left-0 top-0 w-9 h-9 grid place-items-center rounded-full bg-emerald-100 text-emerald-700 font-serif font-semibold">${i + 1}</span>
+      ${a.title ? `<div class="font-semibold text-ink-900">${md(a.title)}</div>` : ''}
+      <p class="text-sm text-ink-700 mt-1">${md(a.instruction)}</p>
+    </li>
+  `).join('');
+  $('#lecon-student-memo').innerHTML = md(L.student.memo);
+
+  // Vocabulaire ALCAM
+  $('#lecon-voc-count').textContent = `${L.vocabulary.length} entrée${L.vocabulary.length > 1 ? 's' : ''}`;
+  $('#lecon-voc-section')?.classList.toggle('hidden', !L.vocabulary.length);
+  $('#lecon-voc-list').innerHTML = L.vocabulary.map(it => {
+    const hasAudio = !!it.audio;
+    return `
+    <article class="bg-white border border-ink-100 rounded-lg p-3 flex items-center gap-3">
+      ${hasAudio ? `
+      <button class="play-btn shrink-0" data-audio="${escapeHtml(it.audio)}" aria-label="Écouter">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>` : `<span class="w-8 shrink-0 text-center text-ink-300 text-xs">—</span>`}
+      <div class="flex-1 min-w-0">
+        <p class="lang-text text-base text-ink-900 truncate" title="${escapeHtml(it.langText)}">${escapeHtml(it.langText)}</p>
+        <p class="text-xs text-ink-500 truncate" title="${escapeHtml(it.frenchText)}">${escapeHtml(it.frenchText)}</p>
+      </div>
+    </article>`;
+  }).join('');
+  $$('#lecon-voc-list [data-audio]').forEach(btn => {
+    btn.addEventListener('click', () => playAudio(state.audioBase + btn.dataset.audio, btn));
+  });
+
+  // Ressources musicales EMAC
+  const emacSection = $('#lecon-emac-section');
+  if (emacSection) {
+    const resources = L.emacResources || [];
+    if (resources.length > 0) {
+      emacSection.classList.remove('hidden');
+      $('#lecon-emac-list').innerHTML = resources.map(e => `
+        <article class="bg-amber-50 border border-amber-200 rounded-lg p-3 flex items-center gap-3">
+          <button class="play-btn shrink-0 text-amber-700" data-emac="${escapeHtml(e.file)}" aria-label="Écouter ${escapeHtml(e.title)}">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-medium text-ink-900 truncate">${escapeHtml(e.title)}</p>
+            <p class="text-xs text-ink-500">${escapeHtml(e.genre)} · ${escapeHtml(e.ethnic)}</p>
+          </div>
+        </article>
+      `).join('');
+      $$('#lecon-emac-list [data-emac]').forEach(btn => {
+        btn.addEventListener('click', () => playAudio(state.emacBase + btn.dataset.emac, btn));
+      });
+    } else {
+      emacSection.classList.add('hidden');
+    }
+  }
+
+  // Bascule mobile teacher / student
+  applyPaneVisibility();
+  $$('.lecon-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.preferredPane = btn.dataset.pane;
+      $$('.lecon-toggle-btn').forEach(b => b.classList.toggle('is-active', b === btn));
+      applyPaneVisibility();
+    });
+  });
+
+  // Navigation prev / next
+  const idx = lessons.findIndex(x => x.id === id);
+  const prev = lessons[idx - 1];
+  const next = lessons[idx + 1];
+  $('#lecon-nav').innerHTML = `
+    ${prev
+      ? `<a href="${opts.linkBase}${escapeHtml(prev.id)}" class="inline-flex items-center gap-2 text-sm text-ink-700 hover:text-brand-700">
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+           ${escapeHtml(prev.code)} · ${escapeHtml(prev.title)}
+         </a>`
+      : '<span></span>'}
+    ${next
+      ? `<a href="${opts.linkBase}${escapeHtml(next.id)}" class="inline-flex items-center gap-2 text-sm text-ink-700 hover:text-brand-700">
+           ${escapeHtml(next.code)} · ${escapeHtml(next.title)}
+           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+         </a>`
+      : '<span></span>'}
+  `;
+}
+
+function applyPaneVisibility() {
+  const teacher = $('#lecon-teacher-pane');
+  const student = $('#lecon-student-pane');
+  // Sur lg+, les deux panneaux s'affichent côte-à-côte (toggle masqué).
+  // Sur < lg, le toggle pilote la visibilité.
+  if (!teacher || !student) return;
+  // On utilise une classe spécifique pour ne masquer qu'en mode mobile
+  teacher.classList.toggle('is-hidden-mobile', state.preferredPane !== 'teacher');
+  student.classList.toggle('is-hidden-mobile', state.preferredPane !== 'student');
+  $$('.lecon-toggle-btn').forEach(b => {
+    b.classList.toggle('is-active', b.dataset.pane === state.preferredPane);
+  });
+}
+
+/* ---------- Exercices ---------- */
+
+function renderExercices() {
+  mountTemplate('tpl-exercices');
+  // Update title and exercise labels with current language name
+  const exoTitleEl = $('#exo-title');
+  if (exoTitleEl) exoTitleEl.textContent = `Exercices interactifs — ${state.currentLangName}`;
+  const lang = state.currentLangName;
+  const reconLabel = $('#exo-label-reconnaissance');
+  if (reconLabel) reconLabel.textContent = `Texte ${lang} → Audio correspondant`;
+  const lectureLabel = $('#exo-label-lecture');
+  if (lectureLabel) lectureLabel.textContent = `Texte ${lang} → Traduction française`;
+  const compDesc = $('#exo-desc-comprehension');
+  if (compDesc) compDesc.textContent = `Écoute la phrase en ${lang} et choisis la bonne traduction française parmi quatre.`;
+  const reconDesc = $('#exo-desc-reconnaissance');
+  if (reconDesc) reconDesc.textContent = `Lis la phrase en ${lang} et choisis, parmi trois enregistrements, celui qui lui correspond.`;
+  const lectureDesc = $('#exo-desc-lecture');
+  if (lectureDesc) lectureDesc.textContent = `Sans audio, traduis depuis le ${lang} écrit. Idéal pour réviser la phonologie de l'AGLC.`;
+  $$('.exo-card').forEach(card => {
+    card.addEventListener('click', () => startExercise(card.dataset.exo));
+  });
+}
+
+function startExercise(kind) {
+  const stage = $('#exo-stage');
+  $('#exo-menu').classList.add('hidden');
+  stage.classList.remove('hidden');
+  state.scores[kind] = { correct: 0, total: 0 };
+
+  function newRound() {
+    const round =
+      kind === 'comprehension'  ? buildComprehensionRound() :
+      kind === 'reconnaissance' ? buildReconnaissanceRound() :
+      kind === 'lecture'        ? buildLectureRound() :
+      kind === 'dictee'         ? buildDicteeRound() : null;
+
+    stage.innerHTML = renderRound(kind, round);
+    bindRound(kind, round, stage, newRound);
+  }
+
+  $('#exo-stage').innerHTML = '';
+  newRound();
+}
+
+function backToMenu() {
+  $('#exo-menu').classList.remove('hidden');
+  $('#exo-stage').classList.add('hidden');
+  $('#exo-stage').innerHTML = '';
+  stopCurrentAudio();
+}
+
+function buildComprehensionRound() {
+  // Audio → traduction française (seulement pour les langues avec audio)
+  const pool = state.vocabWithFr.filter(it => it.audio);
+  if (!pool.length) return buildLectureRound(); // fallback si pas d'audio
+  const target = pick(pool);
+  const choices = shuffle([target, ...pickN(pool, 3, new Set([target]))]).map(it => ({
+    label: it.frenchText, correct: it === target,
+  }));
+  return { target, choices, mode: 'audio-fr' };
+}
+
+function buildReconnaissanceRound() {
+  // Texte langue → audio
+  const pool = state.vocabWithFr.filter(it => it.audio);
+  if (!pool.length) return buildLectureRound();
+  const target = pick(pool);
+  const choices = shuffle([target, ...pickN(pool, 2, new Set([target]))]).map(it => ({
+    label: 'Écouter', audio: it.audio, correct: it === target,
+  }));
+  return { target, choices, mode: 'text-audio' };
+}
+
+function buildLectureRound() {
+  const target = pick(state.vocabWithFr);
+  const choices = shuffle([target, ...pickN(state.vocabWithFr, 3, new Set([target]))]).map(it => ({
+    label: it.frenchText, correct: it === target,
+  }));
+  return { target, choices, mode: 'text-fr' };
+}
+
+function buildDicteeRound() {
+  const pool = state.vocabWithFr.filter(it => it.audio && it.langText.length <= 25);
+  if (!pool.length) return buildLectureRound();
+  const target = pick(pool);
+  return { target, mode: 'dictee' };
+}
+
+function renderRound(kind, round) {
+  const score = state.scores[kind];
+  const pct = score.total === 0 ? 0 : Math.round(100 * score.correct / score.total);
+  const header = `
+    <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-5 mb-5">
+      <div class="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+        <button id="exo-back" class="text-sm text-ink-500 hover:text-ink-700 inline-flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Retour
+        </button>
+        <div class="text-sm text-ink-500">
+          <span class="font-medium text-ink-700">${EXO_LABELS[kind]}</span>
+          · score ${score.correct}/${score.total} (${pct}%)
+        </div>
+      </div>
+      <div class="progress-track mt-3">
+        <div class="progress-fill" style="width: ${pct}%"></div>
+      </div>
+    </div>
+  `;
+
+  if (round.mode === 'dictee') {
+    return header + `
+      <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-6">
+        <p class="text-sm text-ink-500 mb-2">Écoute la phrase et écris-la dans l'orthographe AGLC.</p>
+        <button class="play-btn" id="exo-play" data-audio="${escapeHtml(round.target.audio)}">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <span>Écouter</span>
+        </button>
+        <textarea id="exo-input" rows="3" class="lang-text mt-4 w-full border border-ink-200 rounded-md p-3 text-lg focus:outline-none focus:ring-2 focus:ring-brand-300" placeholder="Écris ce que tu entends…"></textarea>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <button id="exo-validate" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-sm font-medium">Valider</button>
+          <button id="exo-skip" class="px-4 py-2 bg-white border border-ink-200 hover:border-ink-300 text-ink-700 rounded-lg text-sm">Passer</button>
+        </div>
+        <div id="exo-feedback" class="mt-4 hidden"></div>
+      </div>
+    `;
+  }
+
+  if (round.mode === 'audio-fr') {
+    return header + `
+      <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-6">
+        <p class="text-sm text-ink-500 mb-2">Écoute la phrase et choisis la bonne traduction.</p>
+        <button class="play-btn" id="exo-play" data-audio="${escapeHtml(round.target.audio)}">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <span>Écouter</span>
+        </button>
+        <div class="grid sm:grid-cols-2 gap-3 mt-5">
+          ${round.choices.map((c, i) => `
+            <button class="choice" data-i="${i}" data-correct="${c.correct ? '1' : '0'}">${escapeHtml(c.label)}</button>
+          `).join('')}
+        </div>
+        <div id="exo-feedback" class="mt-4 hidden"></div>
+      </div>
+    `;
+  }
+
+  if (round.mode === 'text-audio') {
+    return header + `
+      <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-6">
+        <p class="text-sm text-ink-500 mb-2">Lis cette phrase et choisis l'audio qui lui correspond.</p>
+        <p class="lang-text text-xl sm:text-2xl text-ink-900 my-4 break-words">${escapeHtml(round.target.langText)}</p>
+        <div class="grid sm:grid-cols-3 gap-3 mt-5">
+          ${round.choices.map((c, i) => `
+            <button class="choice flex items-center justify-between" data-i="${i}" data-correct="${c.correct ? '1' : '0'}" data-audio="${escapeHtml(c.audio)}">
+              <span class="inline-flex items-center gap-2">
+                <span class="w-8 h-8 grid place-items-center bg-ink-900 text-white rounded-md">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                Audio ${i + 1}
+              </span>
+              <span class="text-xs text-ink-400">à choisir</span>
+            </button>
+          `).join('')}
+        </div>
+        <div id="exo-feedback" class="mt-4 hidden"></div>
+      </div>
+    `;
+  }
+
+  if (round.mode === 'text-fr') {
+    return header + `
+      <div class="bg-white border border-ink-100 rounded-xl p-4 sm:p-6">
+        <p class="text-sm text-ink-500 mb-2">Lis cette phrase en ${escapeHtml(state.currentLangName)} et choisis sa traduction française.</p>
+        <p class="lang-text text-xl sm:text-2xl text-ink-900 my-4 break-words">${escapeHtml(round.target.langText)}</p>
+        <div class="grid sm:grid-cols-2 gap-3 mt-5">
+          ${round.choices.map((c, i) => `
+            <button class="choice" data-i="${i}" data-correct="${c.correct ? '1' : '0'}">${escapeHtml(c.label)}</button>
+          `).join('')}
+        </div>
+        <div id="exo-feedback" class="mt-4 hidden"></div>
+      </div>
+    `;
+  }
+}
+
+function bindRound(kind, round, root, nextRound) {
+  $('#exo-back')?.addEventListener('click', backToMenu);
+
+  if (round.mode === 'dictee') {
+    const playBtn = $('#exo-play');
+    const input = $('#exo-input');
+    const fb = $('#exo-feedback');
+    playBtn.addEventListener('click', () => playAudio(state.audioBase + round.target.audio, playBtn));
+
+    function evaluate() {
+      const user = input.value.trim();
+      const expected = round.target.langText;
+      const sim = similarity(user, expected);
+      const ok = sim >= 80;
+      state.scores[kind].total += 1;
+      if (ok) state.scores[kind].correct += 1;
+
+      fb.classList.remove('hidden');
+      fb.innerHTML = `
+        <div class="rounded-lg p-4 ${ok ? 'bg-emerald-50 border border-emerald-200' : 'bg-amber-50 border border-amber-200'}">
+          <p class="text-sm font-semibold ${ok ? 'text-emerald-800' : 'text-amber-800'}">
+            ${ok ? '✓ Bien' : '≈ À améliorer'} — similarité ${sim}%
+          </p>
+          <div class="mt-2 text-sm">
+            <p><span class="text-ink-500">Réponse attendue :</span> <span class="lang-text">${escapeHtml(expected)}</span></p>
+            <p><span class="text-ink-500">Traduction :</span> <em class="text-ink-600">${escapeHtml(round.target.frenchText)}</em></p>
+          </div>
+          <button id="exo-next" class="mt-3 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-sm">Suivant</button>
+        </div>
+      `;
+      $('#exo-next').addEventListener('click', nextRound);
+      $('#exo-validate').setAttribute('disabled', 'true');
+      $('#exo-skip').setAttribute('disabled', 'true');
+      input.setAttribute('readonly', 'true');
+    }
+
+    $('#exo-validate').addEventListener('click', evaluate);
+    $('#exo-skip').addEventListener('click', () => {
+      state.scores[kind].total += 1;
+      fb.classList.remove('hidden');
+      fb.innerHTML = `
+        <div class="rounded-lg p-4 bg-ink-100 border border-ink-200">
+          <p class="text-sm font-semibold text-ink-700">Phrase passée</p>
+          <p class="mt-2 text-sm"><span class="text-ink-500">Réponse :</span> <span class="lang-text">${escapeHtml(round.target.langText)}</span></p>
+          <p class="text-sm"><em class="text-ink-600">${escapeHtml(round.target.frenchText)}</em></p>
+          <button id="exo-next" class="mt-3 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-sm">Suivant</button>
+        </div>
+      `;
+      $('#exo-next').addEventListener('click', nextRound);
+      $('#exo-validate').setAttribute('disabled', 'true');
+      $('#exo-skip').setAttribute('disabled', 'true');
+    });
+
+    setTimeout(() => input.focus(), 50);
+    return;
+  }
+
+  // Tous les autres modes : QCM
+  const playBtn = $('#exo-play');
+  if (playBtn) {
+    playBtn.addEventListener('click', () => playAudio(state.audioBase + round.target.audio, playBtn));
+    // jouer automatiquement après un court délai
+    setTimeout(() => playBtn.click(), 200);
+  }
+
+  const choices = $$('#exo-stage .choice');
+  choices.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // text-audio : jouer l'audio cliqué (premier clic), valider au second clic ?
+      // Simplification : jouer ET valider en même temps.
+      if (round.mode === 'text-audio' && btn.dataset.audio) {
+        playAudio(state.audioBase + btn.dataset.audio, btn);
+      }
+      if (btn.dataset.evaluated) return;
+      // Marquer toutes les choix comme évalués
+      choices.forEach(b => { b.dataset.evaluated = '1'; b.setAttribute('disabled', 'true'); });
+      const ok = btn.dataset.correct === '1';
+      state.scores[kind].total += 1;
+      if (ok) state.scores[kind].correct += 1;
+      // Retour visuel
+      choices.forEach(b => {
+        if (b.dataset.correct === '1') b.classList.add('is-correct');
+        if (b === btn && !ok) b.classList.add('is-wrong');
+      });
+      const fb = $('#exo-feedback');
+      fb.classList.remove('hidden');
+      fb.innerHTML = `
+        <div class="rounded-lg p-4 ${ok ? 'bg-emerald-50 border border-emerald-200' : 'bg-amber-50 border border-amber-200'}">
+          <p class="text-sm font-semibold ${ok ? 'text-emerald-800' : 'text-amber-800'}">
+            ${ok ? '✓ Bonne réponse' : '✗ Réponse incorrecte'}
+          </p>
+          <div class="mt-2 text-sm">
+            <p><span class="text-ink-500">Phrase :</span> <span class="lang-text">${escapeHtml(round.target.langText)}</span></p>
+            <p><span class="text-ink-500">Traduction :</span> <em class="text-ink-600">${escapeHtml(round.target.frenchText)}</em></p>
+          </div>
+          <button id="exo-next" class="mt-3 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-sm">Question suivante</button>
+        </div>
+      `;
+      $('#exo-next').addEventListener('click', nextRound);
+    });
+  });
+}
+
+
+/* ====================================================================== */
+/* ---------- Cultures : fiches des communautés + leçons de culture ----- */
+/* ====================================================================== */
+
+const FC_COLOR = {
+  bantoid: '#818cf8', bantu: '#22d3ee', ubangian: '#f97316', adamawa: '#84cc16',
+  chadic: '#facc15', nilosaharan: '#e879f9', atlantic: '#fb7185', other: '#94a3b8',
+};
+
+state.cultures = null;          // index des communautés
+state.cultureDetail = {};       // cache des fiches complètes
+state.cultureFilter = { q: '', region: '' };
+
+async function loadCulturesIndex() {
+  if (!state.cultures) {
+    state.cultures = await fetch('data/cultures/index.json').then(r => r.json());
+  }
+  return state.cultures;
+}
+
+async function loadCulture(code) {
+  if (!state.cultureDetail[code]) {
+    const d = await fetch(`data/cultures/${code}.json`).then(r => {
+      if (!r.ok) throw new Error('not found');
+      return r.json();
+    });
+    (d.lessons || []).forEach(normalizeLesson);
+    state.cultureDetail[code] = d;
+  }
+  return state.cultureDetail[code];
+}
+
+/** Petit rendu markdown : **gras** uniquement (après échappement). */
+function md(s) {
+  return escapeHtml(s || '').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}
+
+function cultureCard(c) {
+  return `
+    <button type="button" data-code="${escapeHtml(c.code)}" class="culture-card text-left bg-white border border-ink-100 rounded-xl p-4 sm:p-5 hover:border-emerald-400 hover:shadow transition w-full">
+      <div class="flex items-start gap-3">
+        <span class="mt-1.5 w-3 h-3 rounded-full shrink-0" style="background:${FC_COLOR[c.fc] || '#94a3b8'}"></span>
+        <div class="min-w-0 flex-1">
+          <h3 class="font-semibold text-lg text-ink-900 leading-snug">${escapeHtml(c.name)}</h3>
+          <p class="text-xs text-ink-500 mt-0.5">${escapeHtml(c.region)} · ${escapeHtml(c.family)}</p>
+          <p class="text-sm text-ink-600 mt-2 line-clamp-3">${escapeHtml(c.overview)}</p>
+          <span class="inline-block mt-3 text-sm font-medium text-emerald-700">Ouvrir la fiche →</span>
+        </div>
+      </div>
+    </button>`;
+}
+
+async function renderCultures(code) {
+  mountTemplate('tpl-cultures');
+  const grid = $('#cultures-grid');
+  grid.innerHTML = '<div class="text-center text-ink-400 py-12 col-span-full">Chargement…</div>';
+  let data;
+  try { data = await loadCulturesIndex(); }
+  catch (e) {
+    grid.innerHTML = '<div class="text-center text-amber-700 py-12 col-span-full">Impossible de charger les fiches culturelles.</div>';
+    return;
+  }
+  const regionSel = $('#cultures-region');
+  regionSel.innerHTML = '<option value="">Toutes les régions</option>' +
+    data.regions.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(r)}</option>`).join('');
+  const search = $('#cultures-search');
+  search.value = state.cultureFilter.q;
+  regionSel.value = state.cultureFilter.region;
+
+  // Légende des familles
+  const used = [...new Set(data.communities.map(c => c.fc))];
+  $('#cultures-legend').innerHTML = used.map(fc => `
+    <span class="inline-flex items-center gap-1.5 text-xs text-ink-600 mr-3 mb-1">
+      <span class="w-2.5 h-2.5 rounded-full" style="background:${FC_COLOR[fc]}"></span>${escapeHtml(data.families[fc] || fc)}
+    </span>`).join('');
+
+  function update() {
+    const q = state.cultureFilter.q.toLowerCase().trim();
+    const reg = state.cultureFilter.region;
+    const list = data.communities.filter(c => {
+      const hay = [c.name, c.autonym, c.region, c.place, c.parler, c.family].join(' ').toLowerCase();
+      return (!q || hay.includes(q)) && (!reg || c.region.split(/\s*\/\s*/).includes(reg) || c.region.includes(reg));
+    }).sort((a, b) => a.name.localeCompare(b.name, 'fr'));
+    $('#cultures-count').textContent = `${list.length} communauté${list.length > 1 ? 's' : ''}`;
+    grid.innerHTML = list.length ? list.map(cultureCard).join('')
+      : '<div class="text-center text-ink-400 py-12 col-span-full">Aucune communauté ne correspond.</div>';
+  }
+  search.addEventListener('input', () => { state.cultureFilter.q = search.value; update(); });
+  regionSel.addEventListener('change', () => { state.cultureFilter.region = regionSel.value; update(); });
+  grid.addEventListener('click', e => {
+    const b = e.target.closest('[data-code]');
+    if (b) location.hash = `#/cultures/${b.dataset.code}`;
+  });
+  update();
+  if (code) openCultureModal(code);
+}
+
+/* ---------- Fenêtre (modale) d'une communauté ---------- */
+
+function ensureCultureModal() {
+  let m = $('#culture-modal');
+  if (m) return m;
+  m = document.createElement('div');
+  m.id = 'culture-modal';
+  m.className = 'fixed inset-0 z-50 hidden';
+  m.setAttribute('role', 'dialog');
+  m.setAttribute('aria-modal', 'true');
+  m.innerHTML = `
+    <div class="culture-modal-backdrop absolute inset-0 bg-ink-900/50"></div>
+    <div class="culture-modal-panel absolute inset-0 sm:inset-auto sm:left-1/2 sm:top-6 sm:bottom-6 sm:-translate-x-1/2 sm:w-[min(48rem,calc(100vw-2rem))] bg-white sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+      <div id="culture-modal-head" class="shrink-0 border-b border-ink-100 px-4 sm:px-6 py-3 flex items-start gap-3 bg-white"></div>
+      <div id="culture-modal-body" class="flex-1 overflow-y-auto overscroll-contain px-4 sm:px-6 py-5"></div>
+    </div>`;
+  document.body.appendChild(m);
+  m.querySelector('.culture-modal-backdrop').addEventListener('click', closeCultureModal);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !m.classList.contains('hidden')) closeCultureModal();
+  });
+  return m;
+}
+
+function closeCultureModal() {
+  const m = $('#culture-modal');
+  if (!m || m.classList.contains('hidden')) return;
+  m.classList.add('hidden');
+  document.documentElement.classList.remove('modal-open');
+  if (/^#\/cultures\//.test(location.hash)) {
+    history.replaceState(null, '', '#/cultures');
+  }
+}
+
+function listBlock(title, items, emptyText) {
+  if (!items || !items.length) return '';
+  return `
+    <details class="culture-acc">
+      <summary>${escapeHtml(title)} <span class="text-ink-400 font-normal">(${items.length})</span></summary>
+      <dl class="mt-3 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+        ${items.map(x => `
+          <div class="flex gap-2 border-b border-ink-50 pb-1.5">
+            <dt class="lang-text font-semibold text-ink-900 shrink-0 max-w-[45%]">${escapeHtml(x.form)}</dt>
+            <dd class="text-ink-600 min-w-0">${escapeHtml(x.meaning || '—')}</dd>
+          </div>`).join('')}
+      </dl>
+    </details>`;
+}
+
+async function openCultureModal(code) {
+  const m = ensureCultureModal();
+  const head = $('#culture-modal-head');
+  const body = $('#culture-modal-body');
+  head.innerHTML = '';
+  body.innerHTML = '<div class="text-center text-ink-400 py-12">Chargement de la fiche…</div>';
+  m.classList.remove('hidden');
+  document.documentElement.classList.add('modal-open');
+  let c;
+  try { c = await loadCulture(code); }
+  catch (e) {
+    body.innerHTML = '<div class="text-center text-amber-700 py-12">Fiche introuvable.</div>';
+    head.innerHTML = `<button type="button" class="ml-auto text-2xl text-ink-400 px-2" aria-label="Fermer" data-close>✕</button>`;
+    head.querySelector('[data-close]').addEventListener('click', closeCultureModal);
+    return;
+  }
+  head.innerHTML = `
+    <span class="mt-2 w-3 h-3 rounded-full shrink-0" style="background:${FC_COLOR[c.fc] || '#94a3b8'}"></span>
+    <div class="min-w-0 flex-1">
+      <h2 class="font-serif text-xl sm:text-2xl text-ink-900 leading-tight">${escapeHtml(c.name)}</h2>
+      <p class="text-xs text-ink-500 mt-0.5">${escapeHtml(c.region)} · ${escapeHtml(c.family)}</p>
+    </div>
+    <button type="button" class="shrink-0 -mr-2 w-10 h-10 grid place-items-center rounded-lg text-2xl text-ink-400 hover:bg-ink-100 hover:text-ink-700" aria-label="Fermer" data-close>✕</button>`;
+  head.querySelector('[data-close]').addEventListener('click', closeCultureModal);
+
+  const facts = [
+    ['Nom que se donne le groupe', c.autonym ? `${c.autonym}${c.autonymMeaning ? ' — ' + c.autonymMeaning : ''}` : ''],
+    ['Autres noms', c.exonyms],
+    ['Langue', c.parler],
+    ['Lieu de référence', c.place],
+  ].filter(([, v]) => v);
+
+  const expr = (c.expressions || []).map(g => `
+    <details class="culture-acc culture-acc-sub">
+      <summary>${escapeHtml(g.title)} <span class="text-ink-400 font-normal">(${g.items.length})</span></summary>
+      <ul class="mt-2 divide-y divide-ink-50">
+        ${g.items.map(e => `
+          <li class="py-2">
+            <p class="lang-text text-base text-ink-900">${escapeHtml(e.lang)}</p>
+            <p class="text-sm text-ink-600">${escapeHtml(e.fr)}${e.gloss ? ` <span class="text-ink-400">· ${escapeHtml(e.gloss)}</span>` : ''}</p>
+          </li>`).join('')}
+      </ul>
+    </details>`).join('');
+
+  const nums = (c.nombres || []);
+  const numsHtml = nums.length ? `
+    <details class="culture-acc">
+      <summary>Compter <span class="text-ink-400 font-normal">(${nums.length} nombres)</span></summary>
+      <div class="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-2">
+        ${nums.map(x => `
+          <div class="rounded-lg bg-ink-50 px-3 py-2">
+            <div class="text-xs text-ink-400">${x.n}${x.gloss && x.gloss !== String(x.n) ? ' · ' + escapeHtml(x.gloss) : ''}</div>
+            <div class="lang-text text-ink-900">${escapeHtml(x.lang)}</div>
+          </div>`).join('')}
+      </div>
+    </details>` : '';
+
+  const lessonsHtml = (c.lessons || []).map(L => `
+    <a href="#/culture/${escapeHtml(c.code)}/lecon/${escapeHtml(L.id)}" class="flex items-center gap-3 bg-emerald-50/60 border border-emerald-100 rounded-lg px-3 py-2.5 hover:border-emerald-400">
+      <span class="font-serif text-emerald-700 w-12 shrink-0">${escapeHtml(L.code)}</span>
+      <span class="text-sm text-ink-800 min-w-0">${escapeHtml(L.title)}</span>
+    </a>`).join('');
+
+  body.innerHTML = `
+    <p class="text-ink-700 leading-relaxed">${escapeHtml(c.overview)}</p>
+    <dl class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
+      ${facts.map(([k, v]) => `
+        <div class="rounded-lg border border-ink-100 px-3 py-2">
+          <dt class="text-xs uppercase tracking-wide text-ink-400">${escapeHtml(k)}</dt>
+          <dd class="text-ink-800 mt-0.5">${escapeHtml(v)}</dd>
+        </div>`).join('')}
+    </dl>
+    <div class="mt-4 flex flex-wrap gap-2 text-sm">
+      <a href="#culture-lessons-anchor" data-jump class="px-3 py-1.5 rounded-full bg-emerald-600 text-white font-medium">📚 Leçons de culture</a>
+      <a href="reseau.html#${escapeHtml(c.code)}" class="px-3 py-1.5 rounded-full border border-ink-200 text-ink-700">🕸 Voir dans CamRhizome</a>
+      ${c.lang ? `<a href="#/lecons" data-lang="${escapeHtml(c.lang)}" class="px-3 py-1.5 rounded-full border border-ink-200 text-ink-700">🗣 Leçons de langue</a>` : ''}
+    </div>
+
+    <h3 class="font-serif text-lg mt-6 mb-2">La communauté en détail</h3>
+    ${c.sections.map((s, i) => `
+      <details class="culture-acc" ${i === 0 ? 'open' : ''}>
+        <summary>${escapeHtml(s.title)}</summary>
+        <ul class="mt-2 space-y-2 text-sm text-ink-700 list-disc pl-5">
+          ${s.items.map(x => `<li>${escapeHtml(x)}</li>`).join('')}
+        </ul>
+      </details>`).join('')}
+
+    <h3 class="font-serif text-lg mt-6 mb-2">Noms de personnes, de clans et de lieux</h3>
+    ${listBlock('Noms de personnes', c.lists.anthroponymes)}
+    ${listBlock('Noms de clans et de lignées', c.lists.ethnonymes)}
+    ${listBlock('Noms de lieux', c.lists.toponymes)}
+    ${(c.lists.anthroponymes.length + c.lists.ethnonymes.length + c.lists.toponymes.length) ? '' : '<p class="text-sm text-ink-400">Pas de liste disponible pour cette communauté.</p>'}
+
+    <h3 class="font-serif text-lg mt-6 mb-2">Parler au quotidien</h3>
+    ${expr || '<p class="text-sm text-ink-400">Pas d\'expressions disponibles pour cette communauté.</p>'}
+    ${numsHtml}
+
+    <h3 id="culture-lessons-anchor" class="font-serif text-lg mt-6 mb-2">Leçons de culture (programme MINESEC)</h3>
+    <p class="text-sm text-ink-500 mb-3">Dix leçons clé-en-main (fiche enseignant + fiche élève), construites selon la démarche du guide pédagogique des Cultures Nationales, à partir des données de cette communauté.</p>
+    <div class="grid gap-2">${lessonsHtml}</div>
+
+    <p class="mt-8 text-xs text-ink-400 border-t border-ink-100 pt-3">Synthèse rédigée à partir d'informations recueillies auprès de membres de la communauté. Les mots en langue sont transcrits tels qu'ils ont été fournis.</p>`;
+  body.scrollTop = 0;
+  const jump = body.querySelector('[data-jump]');
+  jump?.addEventListener('click', e => {
+    e.preventDefault();
+    $('#culture-lessons-anchor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  body.querySelector('[data-lang]')?.addEventListener('click', async e => {
+    e.preventDefault();
+    closeCultureModal();
+    await switchLanguage(e.currentTarget.dataset.lang);
+    location.hash = '#/lecons';
+  });
+}
+
+async function renderCultureLesson(code, id) {
+  $('#app').innerHTML = '<div class="text-center text-ink-400 py-20">Chargement…</div>';
+  let c;
+  try { c = await loadCulture(code); } catch (e) { c = null; }
+  const L = c && c.lessons.find(x => x.id === id);
+  if (!L) {
+    $('#app').innerHTML = `
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 text-amber-800 max-w-2xl mx-auto">
+        <h2 class="font-semibold text-lg">Leçon introuvable</h2>
+        <p class="mt-3"><a class="text-amber-900 underline" href="#/cultures">Retour aux cultures</a></p>
+      </div>`;
+    return;
+  }
+  renderLessonView(L, c.lessons, {
+    backHref: `#/cultures/${code}`,
+    backLabel: `Fiche : ${c.name}`,
+    linkBase: `#/culture/${code}/lecon/`,
+    subtitle: c.name,
+  });
+}
+
+/* ---------- Démarrage ---------- */
+
+(async function init() {
+  // Menu mobile
+  $('#mobile-toggle').addEventListener('click', () => {
+    $('#mobile-menu').classList.toggle('hidden');
+  });
+
+  // Récupérer la langue depuis le hash si spécifiée (#/langue/basaa)
+  const langMatch = location.hash.match(/#\/langue\/([a-z-]+)/);
+  if (langMatch) state.currentLang = langMatch[1];
+
+  try {
+    await loadData();
+  } catch (e) {
+    $('#app').innerHTML = `
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 text-amber-800 max-w-2xl mx-auto">
+        <h2 class="font-semibold text-lg">Impossible de charger les données</h2>
+        <p class="mt-2 text-sm">Vérifiez que <code>data/languages.json</code> et les fichiers JSON de langue sont présents et accessibles.
+        Si vous testez en local, servez le dossier avec <code>python -m http.server</code>.</p>
+        <pre class="mt-3 text-xs bg-white p-2 rounded">${escapeHtml(String(e))}</pre>
+      </div>`;
+    return;
+  }
+
+  render();
+})();

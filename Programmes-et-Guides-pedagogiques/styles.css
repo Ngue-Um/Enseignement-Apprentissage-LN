@@ -1,0 +1,171 @@
+/* ALCAM Apprendre — styles complémentaires à Tailwind */
+
+.lang-text {
+  font-family: 'Lora', Georgia, serif;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
+/* Active nav link */
+.nav-link.active {
+  background-color: #fef7ed; /* brand-50 */
+  color: #b94608; /* brand-700 */
+  font-weight: 600;
+}
+
+/* Card hover micro-interaction */
+.exo-card:active {
+  transform: scale(0.99);
+}
+
+/* Audio play button */
+.play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: #26241f;
+  color: #fff;
+  padding: .35rem .75rem;
+  border-radius: .5rem;
+  font-size: .8rem;
+  font-weight: 500;
+  transition: background .15s ease;
+}
+.play-btn:hover { background: #48453e; }
+.play-btn:focus-visible { outline: 2px solid #f29232; outline-offset: 2px; }
+.play-btn[disabled] {
+  background: #aba89e;
+  cursor: not-allowed;
+}
+.play-btn.is-playing {
+  background: #ee780f;
+}
+
+/* Choice buttons in exercises */
+.choice {
+  width: 100%;
+  text-align: left;
+  padding: .9rem 1rem;
+  border-radius: .6rem;
+  border: 1px solid #e6e5e2;
+  background: #fff;
+  transition: all .15s ease;
+  font-size: 1rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.choice:hover { border-color: #aba89e; }
+.choice:focus-visible {
+  outline: 2px solid #f29232;
+  outline-offset: 2px;
+}
+.choice.is-correct {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #065f46;
+}
+.choice.is-wrong {
+  background: #fef2f2;
+  border-color: #f87171;
+  color: #991b1b;
+}
+.choice[disabled] {
+  cursor: default;
+  opacity: 1; /* on garde lisible */
+}
+
+/* Pulse the play icon when playing */
+.is-playing svg {
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .55; }
+}
+
+/* Progress bar */
+.progress-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #e6e5e2;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f29232, #ee780f);
+  transition: width .3s ease;
+}
+
+/* Make sure pre-rendered template content is hidden */
+template { display: none; }
+
+/* ---------- Leçons : bascule mobile teacher / student ---------- */
+
+/* Bouton de bascule (visible < 1024px). */
+.lecon-toggle-btn {
+  background: transparent;
+  color: #5a574d;
+  transition: all .15s ease;
+}
+.lecon-toggle-btn.is-active {
+  background: #ffffff;
+  color: #b94608;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+/* Sur écrans étroits, on masque le panneau non sélectionné.
+   Sur écrans larges (≥ 1024px), les deux panneaux sont toujours visibles. */
+@media (max-width: 1023px) {
+  #lecon-teacher-pane.is-hidden-mobile,
+  #lecon-student-pane.is-hidden-mobile {
+    display: none;
+  }
+}
+
+/* Tronquer un paragraphe à 2 lignes (utilisé sur les cartes de leçons). */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- Mobile / responsive safeguards ---------- */
+
+/* Never let a wide element create horizontal scrolling on phones.
+   (overflow-x: clip keeps the sticky header working, unlike hidden) */
+html, body { max-width: 100%; overflow-x: clip; }
+
+/* Long words in African-language transcriptions or file names wrap instead of overflowing */
+.lang-text, h1, h2, h3 { overflow-wrap: anywhere; }
+
+img, video, audio, iframe, svg { max-width: 100%; }
+audio { width: 100%; }
+
+/* Comfortable touch targets */
+@media (max-width: 640px) {
+  .choice { padding: .85rem .9rem; font-size: 1rem; }
+  .play-btn { padding: .5rem .75rem; }
+  #mobile-menu a { padding-top: .7rem; padding-bottom: .7rem; }
+  /* 16px inputs prevent iOS Safari from zooming on focus */
+  input, select, textarea { font-size: 16px !important; }
+}
+
+/* ---------- Fiches culturelles ---------- */
+html.modal-open, html.modal-open body { overflow: hidden; }
+.culture-acc {
+  border: 1px solid #e6e5e2; border-radius: .75rem; background: #fff;
+  padding: .25rem .9rem; margin-bottom: .5rem;
+}
+.culture-acc > summary {
+  cursor: pointer; list-style: none; font-weight: 600; color: #26241f;
+  padding: .6rem 0; display: flex; align-items: center; gap: .5rem;
+}
+.culture-acc > summary::-webkit-details-marker { display: none; }
+.culture-acc > summary::after {
+  content: '+'; margin-left: auto; font-weight: 400; font-size: 1.25rem; color: #878478;
+}
+.culture-acc[open] > summary::after { content: '–'; }
+.culture-acc[open] { padding-bottom: .8rem; }
+.culture-acc-sub { background: #f7f7f6; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+#culture-modal-body { -webkit-overflow-scrolling: touch; padding-bottom: calc(1.25rem + env(safe-area-inset-bottom)); }
