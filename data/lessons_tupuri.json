@@ -1,1428 +1,2018 @@
 {
-  "language": "tupuri",
-  "languageName": "Tupuri",
-  "lessons": [
+ "language": "tupuri",
+ "languageName": "Tupuri",
+ "lessons": [
+  {
+   "id": "I-1",
+   "code": "I.1",
+   "module": "M1-diversite",
+   "moduleTitle": "Module I — Diversité linguistique camerounaise",
+   "title": "Diversité linguistique et dialectes",
+   "anelcac": "Notions de diversité linguistique, dialectes, noms des langues, classification géographique",
+   "duration": "60 min",
+   "level": "6e",
+   "objectives": [
+    "Prendre conscience de la diversité linguistique du Cameroun (environ 280 langues selon le Mini-Atlas LACAGEO)",
+    "Distinguer langue, dialecte et variante selon les définitions académiques",
+    "Nommer et situer Tupuri dans la classification géographique des langues du Cameroun",
+    "Adopter une attitude de respect envers toutes les langues"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Diversité linguistique et dialectes. Module : Module I — Diversité linguistique camerounaise.",
+    "steps": [
+     "**Mise en contexte :** Afficher la carte du Mini-Atlas linguistique du Cameroun. Demander aux élèves quelles langues sont parlées dans leur famille.",
+     "**Exploration :** Faire lire les définitions du Mini-Atlas (langue, dialecte, patois, langue nationale). Situer Tupuri dans sa région linguistique.",
+     "**Conceptualisation :** Expliquer la distinction langue / dialecte avec des exemples : les dialectes bulu, ewondo, eton, mangisa appartiennent tous à la langue béti-fang (Mini-Atlas).",
+     "**Application :** Compléter un tableau : nom de la langue, famille, région principale, code ISO.",
+     "**Évaluation :** Chaque élève présente oralement Tupuri en indiquant famille et région."
+    ],
+    "freedom": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées.",
+    "tips": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées."
+   },
+   "student": {
+    "intro": "Le Cameroun est l'une des nations les plus riches en langues au monde — le Mini-Atlas linguistique en recense environ 280 ! Dans cette leçon, tu découvres la place de Tupuri dans cette grande famille.",
+    "activities": [
+     "Observe la carte du Mini-Atlas et repère la zone où Tupuri est principalement parlé.",
+     "Recopie et complète : Tupuri appartient à la famille ___. Elle est surtout parlée dans la région ___.",
+     "Selon le Mini-Atlas, combien de langues vivantes compte la région de Tupuri ? Note ce chiffre.",
+     "Enquête : demande à un adulte le nom de la langue dans laquelle il a été élevé et où elle est parlée.",
+     "Mémorise : **dialecte** = variante intelligible d'une même langue ; **langue nationale** = langue d'une ethnie ne dépassant pas les frontières d'un État (ACA LAN)."
+    ],
+    "memo": "Le Cameroun compte environ **280 langues** selon le Mini-Atlas LACAGEO. Tupuri appartient à une famille linguistique camerounaise et possède ses propres variantes dialectales. Selon l'ACA LAN, une langue nationale est une langue d'ethnie ne dépassant pas les frontières d'un État."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "I-2",
+   "code": "I.2",
+   "module": "M1-diversite",
+   "moduleTitle": "Module I — Diversité linguistique camerounaise",
+   "title": "Classification des langues et atlas linguistique",
+   "anelcac": "Classification des langues du Cameroun : aires linguistiques, familles, atlas ALCAM",
+   "duration": "60 min",
+   "level": "6e",
+   "objectives": [
+    "Citer les grandes aires linguistiques du Cameroun",
+    "Lire et interpréter un extrait d'atlas linguistique (ALCAM / Mini-Atlas)",
+    "Classer Tupuri selon ses critères typologiques",
+    "Produire un court texte de présentation de Tupuri"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Classification des langues et atlas linguistique. Module : Module I — Diversité linguistique camerounaise.",
+    "steps": [
+     "**Mise en contexte :** Revenir sur les définitions. Combien de familles linguistiques les élèves se rappellent-ils ?",
+     "**Présentation :** Les 8 familles linguistiques mondiales selon l'Ethnologue (Niger-Kordofan, Nilo-Saharienne, Afro-asiatique…). Situer les langues camerounaises dans cet ensemble.",
+     "**Explication :** Montrer comment retrouver Tupuri dans l'ALCAM : code ISO, famille, localisation.",
+     "**Pratique guidée :** En binôme, les élèves cherchent 3 langues voisines de Tupuri et notent leurs codes ISO.",
+     "**Production :** Paragraphe de 5 lignes présentant Tupuri (famille, région, locuteurs, particularité)."
+    ],
+    "freedom": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques.",
+    "tips": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques."
+   },
+   "student": {
+    "intro": "Un atlas linguistique est une carte spécialisée. L'ALCAM (Atlas des Langues du Cameroun) et le Mini-Atlas LACAGEO te permettent de situer Tupuri précisément.",
+    "activities": [
+     "Dans la carte du Mini-Atlas, repère Tupuri et note sa région administrative.",
+     "Liste 3 langues dont la zone est contiguë à celle de Tupuri.",
+     "Classe ces 4 langues dans un tableau : Langue | Famille | Région principale.",
+     "Rédige un paragraphe de présentation de Tupuri avec au moins 5 informations tirées de l'atlas.",
+     "Mémorise : **ISO 639** = codes internationaux des langues ; **ALCAM** = Atlas des Langues du Cameroun."
+    ],
+    "memo": "L'**ALCAM** et le **Mini-Atlas LACAGEO** recensent et localisent toutes les langues nationales du Cameroun. Le Cameroun compte 8 familles linguistiques principales. Tupuri y figure avec sa famille et sa localisation. Savoir lire un atlas linguistique, c'est lire l'histoire des peuples."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "II-1",
+   "code": "II.1",
+   "module": "M2-segmentaux",
+   "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
+   "title": "Voyelles de Tupuri",
+   "anelcac": "Voyelles AGLC — simples, spécifiques, complexes",
+   "duration": "60 min",
+   "level": "6e",
+   "objectives": [
+    "Identifier les voyelles simples du système phonologique de Tupuri",
+    "Reconnaître les voyelles spécifiques absentes du français",
+    "Prononcer correctement les voyelles en contexte de mot",
+    "Transcrire des mots comportant des voyelles selon l'AGLC"
+   ],
+   "vocabulary": [
     {
-      "id": "I-1",
-      "code": "I.1",
-      "module": "M1-diversite",
-      "moduleTitle": "Module I — Diversité linguistique camerounaise",
-      "title": "Diversité linguistique et dialectes",
-      "anelcac": "Notions de diversité linguistique, dialectes, noms des langues, classification géographique",
-      "duration": "60 min",
-      "level": "6e",
-      "objectives": [
-        "Prendre conscience de la diversité linguistique du Cameroun (environ 280 langues selon le Mini-Atlas LACAGEO)",
-        "Distinguer langue, dialecte et variante selon les définitions académiques",
-        "Nommer et situer Tupuri dans la classification géographique des langues du Cameroun",
-        "Adopter une attitude de respect envers toutes les langues"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Diversité linguistique et dialectes. Module : Module I — Diversité linguistique camerounaise.",
-        "steps": [
-          "**Mise en contexte :** Afficher la carte du Mini-Atlas linguistique du Cameroun. Demander aux élèves quelles langues sont parlées dans leur famille.",
-          "**Exploration :** Faire lire les définitions du Mini-Atlas (langue, dialecte, patois, langue nationale). Situer Tupuri dans sa région linguistique.",
-          "**Conceptualisation :** Expliquer la distinction langue / dialecte avec des exemples : les dialectes bulu, ewondo, eton, mangisa appartiennent tous à la langue béti-fang (Mini-Atlas).",
-          "**Application :** Compléter un tableau : nom de la langue, famille, région principale, code ISO.",
-          "**Évaluation :** Chaque élève présente oralement Tupuri en indiquant famille et région."
-        ],
-        "freedom": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées.",
-        "tips": "Le Mini-Atlas LACAGEO (2013) distingue environ 280 langues vivantes au Cameroun. Le nombre exact varie selon les critères (SIL : 274, Ethnologue : 279). Valoriser toutes les langues citées."
-      },
-      "student": {
-        "intro": "Le Cameroun est l'une des nations les plus riches en langues au monde — le Mini-Atlas linguistique en recense environ 280 ! Dans cette leçon, tu découvres la place de Tupuri dans cette grande famille.",
-        "activities": [
-          "Observe la carte du Mini-Atlas et repère la zone où Tupuri est principalement parlé.",
-          "Recopie et complète : Tupuri appartient à la famille ___. Elle est surtout parlée dans la région ___.",
-          "Selon le Mini-Atlas, combien de langues vivantes compte la région de Tupuri ? Note ce chiffre.",
-          "Enquête : demande à un adulte le nom de la langue dans laquelle il a été élevé et où elle est parlée.",
-          "Mémorise : **dialecte** = variante intelligible d'une même langue ; **langue nationale** = langue d'une ethnie ne dépassant pas les frontières d'un État (ACA LAN)."
-        ],
-        "memo": "Le Cameroun compte environ **280 langues** selon le Mini-Atlas LACAGEO. Tupuri appartient à une famille linguistique camerounaise et possède ses propres variantes dialectales. Selon l'ACA LAN, une langue nationale est une langue d'ethnie ne dépassant pas les frontières d'un État."
-      },
-      "emacResources": []
+     "id": "3aa769fdb4d3",
+     "audio": "3fb9f8af5fb47271ed800dc6e2919b89.mp3",
+     "langText": "Maysay de sa' hããre",
+     "langWord": "Maysay de sa' hããre",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
     },
     {
-      "id": "I-2",
-      "code": "I.2",
-      "module": "M1-diversite",
-      "moduleTitle": "Module I — Diversité linguistique camerounaise",
-      "title": "Classification des langues et atlas linguistique",
-      "anelcac": "Classification des langues du Cameroun : aires linguistiques, familles, atlas ALCAM",
-      "duration": "60 min",
-      "level": "6e",
-      "objectives": [
-        "Citer les grandes aires linguistiques du Cameroun",
-        "Lire et interpréter un extrait d'atlas linguistique (ALCAM / Mini-Atlas)",
-        "Classer Tupuri selon ses critères typologiques",
-        "Produire un court texte de présentation de Tupuri"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Classification des langues et atlas linguistique. Module : Module I — Diversité linguistique camerounaise.",
-        "steps": [
-          "**Mise en contexte :** Revenir sur les définitions. Combien de familles linguistiques les élèves se rappellent-ils ?",
-          "**Présentation :** Les 8 familles linguistiques mondiales selon l'Ethnologue (Niger-Kordofan, Nilo-Saharienne, Afro-asiatique…). Situer les langues camerounaises dans cet ensemble.",
-          "**Explication :** Montrer comment retrouver Tupuri dans l'ALCAM : code ISO, famille, localisation.",
-          "**Pratique guidée :** En binôme, les élèves cherchent 3 langues voisines de Tupuri et notent leurs codes ISO.",
-          "**Production :** Paragraphe de 5 lignes présentant Tupuri (famille, région, locuteurs, particularité)."
-        ],
-        "freedom": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques.",
-        "tips": "L'ALCAM en ligne est sur le Mozilla Data Collective. Le Mini-Atlas LACAGEO couvre toutes les régions administratives avec cartes et statistiques."
-      },
-      "student": {
-        "intro": "Un atlas linguistique est une carte spécialisée. L'ALCAM (Atlas des Langues du Cameroun) et le Mini-Atlas LACAGEO te permettent de situer Tupuri précisément.",
-        "activities": [
-          "Dans la carte du Mini-Atlas, repère Tupuri et note sa région administrative.",
-          "Liste 3 langues dont la zone est contiguë à celle de Tupuri.",
-          "Classe ces 4 langues dans un tableau : Langue | Famille | Région principale.",
-          "Rédige un paragraphe de présentation de Tupuri avec au moins 5 informations tirées de l'atlas.",
-          "Mémorise : **ISO 639** = codes internationaux des langues ; **ALCAM** = Atlas des Langues du Cameroun."
-        ],
-        "memo": "L'**ALCAM** et le **Mini-Atlas LACAGEO** recensent et localisent toutes les langues nationales du Cameroun. Le Cameroun compte 8 familles linguistiques principales. Tupuri y figure avec sa famille et sa localisation. Savoir lire un atlas linguistique, c'est lire l'histoire des peuples."
-      },
-      "emacResources": []
+     "id": "4e01e82de371",
+     "audio": "dac7c0bc044c203cd4d95fa81808fcba.mp3",
+     "langText": "Maysay de maŋ hããre ti",
+     "langWord": "Maysay de maŋ hããre ti",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
     },
     {
-      "id": "II-1",
-      "code": "II.1",
-      "module": "M2-segmentaux",
-      "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
-      "title": "Voyelles de Tupuri",
-      "anelcac": "Voyelles AGLC — simples, spécifiques, complexes",
-      "duration": "60 min",
-      "level": "6e",
-      "objectives": [
-        "Identifier les voyelles simples du système phonologique de Tupuri",
-        "Reconnaître les voyelles spécifiques absentes du français",
-        "Prononcer correctement les voyelles en contexte de mot",
-        "Transcrire des mots comportant des voyelles selon l'AGLC"
-      ],
-      "vocabulary": [
-        {
-          "id": "3aa769fdb4d3",
-          "audio": "3fb9f8af5fb47271ed800dc6e2919b89.mp3",
-          "langText": "Maysay de sa' hããre",
-          "langWord": "Maysay de sa' hããre",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "4e01e82de371",
-          "audio": "dac7c0bc044c203cd4d95fa81808fcba.mp3",
-          "langText": "Maysay de maŋ hããre ti",
-          "langWord": "Maysay de maŋ hããre ti",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "b30b3877d932",
-          "audio": "ab3cf291f9ca9de98bcda070f4a78fd9.mp3",
-          "langText": "Cɔɓwɛ hee taarag ɓaale ɓɛ gà",
-          "langWord": "Cɔɓwɛ hee taarag ɓaale ɓɛ gà",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "2854d0711faf",
-          "audio": "d6dafed242e9677aa191e233a173a515.mp3",
-          "langText": "Maywããyaŋ de ko Laasɛnwa",
-          "langWord": "Maywããyaŋ de ko Laasɛnwa",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "0af6ac237efc",
-          "audio": "4de0072f8c8148268019ae7cfb54c1b6.mp3",
-          "langText": "Cooren rug de wɔɔrɛ debaŋ",
-          "langWord": "Cooren rug de wɔɔrɛ debaŋ",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "10b8c934709a",
-          "audio": "f40ff8963283abcc69a114f58936c0fb.mp3",
-          "langText": "Cooren ndar ti kluuri debaŋ",
-          "langWord": "Cooren ndar ti kluuri debaŋ",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "04ffc5aeab20",
-          "audio": "6564eb0f3703905dd1c13a25f7976ca7.mp3",
-          "langText": "Wããniwa wɔ de kee kɛfdɛr ma had jag depùr de Taynenwa",
-          "langWord": "Wããniwa wɔ de kee kɛfdɛr ma had jag depùr de Taynenwa",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "dacae5379f0e",
-          "audio": "c054fd3d9f7640e2088c57020e9a2e78.mp3",
-          "langText": "kããɗa de maŋ ti Lɛ'kããwa de bìi",
-          "langWord": "kããɗa de maŋ ti Lɛ'kããwa de bìi",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        }
-      ],
-      "teacher": {
-        "intro": "Leçon : Voyelles de Tupuri. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
-        "steps": [
-          "**Mise en contexte :** Écrire au tableau des mots connus en Tupuri et demander quels sons les élèves entendent.",
-          "**Présentation :** Introduire l'AGLC. Écrire les voyelles simples de Tupuri au tableau en les articulant clairement.",
-          "**Explication :** Voyelles spécifiques de Tupuri absentes du français (nasales, d'aperture particulière…). Exercices d'écoute et répétition.",
-          "**Application :** Liste de 10 mots — les élèves soulignent les voyelles et indiquent : simple ou spécifique.",
-          "**Évaluation :** Dictée de 5 mots simples — les élèves les transcrivent avec les voyelles correctes."
-        ],
-        "freedom": "Utiliser les exemples du vocabulaire ALCAM de la plateforme. Pour chaque voyelle spécifique, donner un mot-clé mémorisable.",
-        "tips": "Utiliser les exemples du vocabulaire ALCAM de la plateforme. Pour chaque voyelle spécifique, donner un mot-clé mémorisable."
-      },
-      "student": {
-        "intro": "Chaque langue a ses propres sons. En Tupuri, certaines voyelles n'existent pas en français. Cette leçon t'apprend à les entendre, les prononcer et les écrire.",
-        "activities": [
-          "Écoute les enregistrements du vocabulaire Tupuri et identifie les voyelles que tu entends.",
-          "Classe les voyelles : **Communes avec le français** | **Propres à Tupuri**.",
-          "Transcris les 5 mots dictés en veillant à bien noter chaque voyelle.",
-          "Trouve 3 mots en Tupuri pour chaque voyelle spécifique et écris-les.",
-          "Mémorise : **AGLC** = Alphabet Général des Langues Camerounaises, référence officielle."
-        ],
-        "memo": "Le système vocalique de **Tupuri** comprend des voyelles simples et des voyelles spécifiques (ex. voyelles nasalisées). On les note grâce à l'**AGLC**. La maîtrise des voyelles est la base de la lecture et de l'écriture en Tupuri."
-      },
-      "emacResources": []
+     "id": "b30b3877d932",
+     "audio": "ab3cf291f9ca9de98bcda070f4a78fd9.mp3",
+     "langText": "Cɔɓwɛ hee taarag ɓaale ɓɛ gà",
+     "langWord": "Cɔɓwɛ hee taarag ɓaale ɓɛ gà",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
     },
     {
-      "id": "II-2",
-      "code": "II.2",
-      "module": "M2-segmentaux",
-      "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
-      "title": "Consonnes de Tupuri et production écrite",
-      "anelcac": "Consonnes — simples, spécifiques, complexes ; production écrite voyelles et consonnes",
-      "duration": "60 min",
-      "level": "6e",
-      "objectives": [
-        "Identifier le système consonantique de Tupuri",
-        "Reconnaître les consonnes spécifiques absentes du français",
-        "Articuler correctement les consonnes en contexte",
-        "Produire par écrit des mots avec voyelles et consonnes correctement notés"
-      ],
-      "vocabulary": [
-        {
-          "id": "3aa769fdb4d3",
-          "audio": "3fb9f8af5fb47271ed800dc6e2919b89.mp3",
-          "langText": "Maysay de sa' hããre",
-          "langWord": "Maysay de sa' hããre",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "4e01e82de371",
-          "audio": "dac7c0bc044c203cd4d95fa81808fcba.mp3",
-          "langText": "Maysay de maŋ hããre ti",
-          "langWord": "Maysay de maŋ hããre ti",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "b30b3877d932",
-          "audio": "ab3cf291f9ca9de98bcda070f4a78fd9.mp3",
-          "langText": "Cɔɓwɛ hee taarag ɓaale ɓɛ gà",
-          "langWord": "Cɔɓwɛ hee taarag ɓaale ɓɛ gà",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "2854d0711faf",
-          "audio": "d6dafed242e9677aa191e233a173a515.mp3",
-          "langText": "Maywããyaŋ de ko Laasɛnwa",
-          "langWord": "Maywããyaŋ de ko Laasɛnwa",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "0af6ac237efc",
-          "audio": "4de0072f8c8148268019ae7cfb54c1b6.mp3",
-          "langText": "Cooren rug de wɔɔrɛ debaŋ",
-          "langWord": "Cooren rug de wɔɔrɛ debaŋ",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "10b8c934709a",
-          "audio": "f40ff8963283abcc69a114f58936c0fb.mp3",
-          "langText": "Cooren ndar ti kluuri debaŋ",
-          "langWord": "Cooren ndar ti kluuri debaŋ",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "04ffc5aeab20",
-          "audio": "6564eb0f3703905dd1c13a25f7976ca7.mp3",
-          "langText": "Wããniwa wɔ de kee kɛfdɛr ma had jag depùr de Taynenwa",
-          "langWord": "Wããniwa wɔ de kee kɛfdɛr ma had jag depùr de Taynenwa",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        },
-        {
-          "id": "dacae5379f0e",
-          "audio": "c054fd3d9f7640e2088c57020e9a2e78.mp3",
-          "langText": "kããɗa de maŋ ti Lɛ'kããwa de bìi",
-          "langWord": "kããɗa de maŋ ti Lɛ'kããwa de bìi",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M2-segmentaux"
-        }
-      ],
-      "teacher": {
-        "intro": "Leçon : Consonnes de Tupuri et production écrite. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
-        "steps": [
-          "**Mise en contexte :** Rappeler les voyelles. Qu'est-ce qu'une consonne ?",
-          "**Présentation :** Tableau des consonnes de Tupuri selon l'AGLC. Insister sur les consonnes spécifiques (labio-vélaires, prénasalisées, implosives…).",
-          "**Explication :** Articuler les consonnes difficiles : isolément → syllabe → mot.",
-          "**Application :** Paires minimales : écoute de mots qui ne diffèrent que par une consonne.",
-          "**Production :** 5 phrases simples en Tupuri avec transcription consonantique soignée."
-        ],
-        "freedom": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées.",
-        "tips": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées."
-      },
-      "student": {
-        "intro": "Après les voyelles, voici les consonnes de Tupuri ! Certaines sont uniques — tu ne les entendras qu'en Tupuri et dans quelques langues africaines voisines.",
-        "activities": [
-          "Écoute les paires minimales et coche le mot entendu (ex. bìlí / pìlí).",
-          "Transcris 5 mots dictés en faisant attention aux consonnes spécifiques.",
-          "Repère dans le vocabulaire tous les mots contenant une consonne prénasalisée. Combien en trouves-tu ?",
-          "Compose 3 phrases simples en Tupuri avec au moins une consonne spécifique chacune.",
-          "Mémorise : **paire minimale** = deux mots identiques sauf en un phonème."
-        ],
-        "memo": "Le système consonantique de **Tupuri** comprend des consonnes communes avec le français et des consonnes spécifiques (implosives, prénasalisées, labio-vélaires…). Les noter selon l'**AGLC** est indispensable pour la lecture et l'écriture."
-      },
-      "emacResources": []
+     "id": "2854d0711faf",
+     "audio": "d6dafed242e9677aa191e233a173a515.mp3",
+     "langText": "Maywããyaŋ de ko Laasɛnwa",
+     "langWord": "Maywããyaŋ de ko Laasɛnwa",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
     },
     {
-      "id": "III-1",
-      "code": "III.1",
-      "module": "M3-suprasegmentaux",
-      "moduleTitle": "Module III — Phonologie suprasegmentale : les tons",
-      "title": "Définition et fonction des tons",
-      "anelcac": "Tons — définition, fonction, présentation ; tons simples (haut, bas, moyen)",
-      "duration": "60 min",
-      "level": "5e",
-      "objectives": [
-        "Définir le ton comme trait distinctif des langues à tons",
-        "Distinguer ton lexical et ton grammatical",
-        "Identifier les tons simples de Tupuri",
-        "Transcrire des mots avec leurs tons selon l'AGLC"
-      ],
-      "vocabulary": [
-        {
-          "id": "d73c83f9a449",
-          "audio": "beb98c22e3dc074c827b24830de8d989.mp3",
-          "langText": "À diŋ coore garà sawcày",
-          "langWord": "À diŋ coore garà sawcày",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "df0e7c4a343a",
-          "audio": "bf63c30dcb21f965003735e46ba2f798.mp3",
-          "langText": "Á laa wããre jobo gà hase",
-          "langWord": "Á laa wããre jobo gà hase",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "f5120c1e5246",
-          "audio": "ad8e9d049016589818794b18a5ce232f.mp3",
-          "langText": "Daŋra ɗaa cúgí",
-          "langWord": "Daŋra ɗaa cúgí",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "9b6f968b4175",
-          "audio": "0f48b0c3f4e1ad2450c715cd93a5764d.mp3",
-          "langText": "ndi ko gà mamú",
-          "langWord": "ndi ko gà mamú",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "645b3a1f0a37",
-          "audio": "8745ef739dd5eda7c2de002e30385637.mp3",
-          "langText": "Wel-wɛrdày de kɔɗ dɛ̀ɛrɛ̀ wɔ",
-          "langWord": "Wel-wɛrdày de kɔɗ dɛ̀ɛrɛ̀ wɔ",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "873dfdd17b8c",
-          "audio": "15281c9842876f04df7140ed9c4ef224.mp3",
-          "langText": "Dɛ̀ɛrɛ̀ ɓɛ̀n wɔ de gɔɓre",
-          "langWord": "Dɛ̀ɛrɛ̀ ɓɛ̀n wɔ de gɔɓre",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "370e3c722231",
-          "audio": "61206dad73d29d658c860a5fe476d85c.mp3",
-          "langText": "́Bàl maa re coore jar gɔ no",
-          "langWord": "́Bàl maa re coore jar gɔ no",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "9fa0e0390a89",
-          "audio": "8d9ea6dcc1fb350c0f6cc0bbdb0081c1.mp3",
-          "langText": "Wǔr bày de naage wà ɗa",
-          "langWord": "Wǔr bày de naage wà ɗa",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        }
-      ],
-      "teacher": {
-        "intro": "Leçon : Définition et fonction des tons. Module : Module III — Phonologie suprasegmentale : les tons.",
-        "steps": [
-          "**Mise en contexte :** Prononcer deux mots de Tupuri qui s'écrivent pareil mais ont des tons différents et des sens différents.",
-          "**Présentation :** Définir le ton. Présenter les tons simples de Tupuri et leurs diacritiques AGLC.",
-          "**Explication :** Tons simples : haut (´), bas (`), moyen (¯). Faire répéter chaque ton.",
-          "**Application :** Associer des mots enregistrés à leur notation tonale.",
-          "**Évaluation :** Dictée de 5 mots — les élèves notent les tons."
-        ],
-        "freedom": "Chanter les tons aide à les mémoriser. Utiliser une flûte ou siffler les mélodies tonales.",
-        "tips": "Chanter les tons aide à les mémoriser. Utiliser une flûte ou siffler les mélodies tonales."
-      },
-      "student": {
-        "intro": "Tupuri est une langue à tons : la hauteur de ta voix change le sens du mot ! Tu vas apprendre à entendre et noter ces tons.",
-        "activities": [
-          "Écoute les paires de mots. Pour chaque paire, les tons sont-ils identiques ou différents ?",
-          "Transcris 5 mots avec leurs tons en utilisant les diacritiques AGLC (´ ` ¯).",
-          "Cherche 2 mots dans le vocabulaire qui ne diffèrent que par le ton. Quel est le sens de chacun ?",
-          "Chante les tons d'un mot de 3 syllabes en Haut-Bas-Haut, puis Bas-Haut-Bas. Quelle différence entends-tu ?",
-          "Mémorise : ton haut = ´ ; ton bas = ` ; ton moyen = ¯."
-        ],
-        "memo": "En **Tupuri**, le ton est phonologique : il distingue des mots de sens différents. Les **tons simples** sont le haut (´), le bas (`), et parfois le moyen (¯). On les note grâce aux diacritiques de l'**AGLC**."
-      },
-      "emacResources": []
+     "id": "0af6ac237efc",
+     "audio": "4de0072f8c8148268019ae7cfb54c1b6.mp3",
+     "langText": "Cooren rug de wɔɔrɛ debaŋ",
+     "langWord": "Cooren rug de wɔɔrɛ debaŋ",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
     },
     {
-      "id": "III-2",
-      "code": "III.2",
-      "module": "M3-suprasegmentaux",
-      "moduleTitle": "Module III — Phonologie suprasegmentale : les tons",
-      "title": "Tons complexes et production écrite tonée",
-      "anelcac": "Tons complexes (montants, descendants) ; recherche du ton d'un mot ; production écrite à tons",
-      "duration": "60 min",
-      "level": "5e",
-      "objectives": [
-        "Identifier les tons complexes de Tupuri (montant, descendant)",
-        "Trouver le ton d'un mot par la méthode d'isolement",
-        "Transcrire des phrases avec notation tonale complète",
-        "Produire un court texte en Tupuri avec tons corrects"
-      ],
-      "vocabulary": [
-        {
-          "id": "d73c83f9a449",
-          "audio": "beb98c22e3dc074c827b24830de8d989.mp3",
-          "langText": "À diŋ coore garà sawcày",
-          "langWord": "À diŋ coore garà sawcày",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "df0e7c4a343a",
-          "audio": "bf63c30dcb21f965003735e46ba2f798.mp3",
-          "langText": "Á laa wããre jobo gà hase",
-          "langWord": "Á laa wããre jobo gà hase",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "f5120c1e5246",
-          "audio": "ad8e9d049016589818794b18a5ce232f.mp3",
-          "langText": "Daŋra ɗaa cúgí",
-          "langWord": "Daŋra ɗaa cúgí",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "9b6f968b4175",
-          "audio": "0f48b0c3f4e1ad2450c715cd93a5764d.mp3",
-          "langText": "ndi ko gà mamú",
-          "langWord": "ndi ko gà mamú",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "645b3a1f0a37",
-          "audio": "8745ef739dd5eda7c2de002e30385637.mp3",
-          "langText": "Wel-wɛrdày de kɔɗ dɛ̀ɛrɛ̀ wɔ",
-          "langWord": "Wel-wɛrdày de kɔɗ dɛ̀ɛrɛ̀ wɔ",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "873dfdd17b8c",
-          "audio": "15281c9842876f04df7140ed9c4ef224.mp3",
-          "langText": "Dɛ̀ɛrɛ̀ ɓɛ̀n wɔ de gɔɓre",
-          "langWord": "Dɛ̀ɛrɛ̀ ɓɛ̀n wɔ de gɔɓre",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "370e3c722231",
-          "audio": "61206dad73d29d658c860a5fe476d85c.mp3",
-          "langText": "́Bàl maa re coore jar gɔ no",
-          "langWord": "́Bàl maa re coore jar gɔ no",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        },
-        {
-          "id": "9fa0e0390a89",
-          "audio": "8d9ea6dcc1fb350c0f6cc0bbdb0081c1.mp3",
-          "langText": "Wǔr bày de naage wà ɗa",
-          "langWord": "Wǔr bày de naage wà ɗa",
-          "frenchText": "",
-          "frenchWord": "",
-          "pos": "",
-          "classNoun": "",
-          "module": "M3-suprasegmentaux"
-        }
-      ],
-      "teacher": {
-        "intro": "Leçon : Tons complexes et production écrite tonée. Module : Module III — Phonologie suprasegmentale : les tons.",
-        "steps": [
-          "**Mise en contexte :** Rappeler les tons simples. Annoncer que certaines syllabes portent deux tons à la suite.",
-          "**Présentation :** Tons complexes : descendant (̂), montant (̌). Les faire entendre et reproduire.",
-          "**Explication :** Méthode d'isolement : prononcer le mot avec un ton haut artificiel, puis bas, et écouter lequel semble naturel.",
-          "**Application :** Les élèves cherchent le ton de 10 mots en Tupuri à l'aide de la méthode d'isolement.",
-          "**Production :** Dialogue de 6 répliques en Tupuri avec notation tonale complète."
-        ],
-        "freedom": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant.",
-        "tips": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant."
-      },
-      "student": {
-        "intro": "Tu connais les tons simples. Maintenant, les tons complexes de Tupuri — des syllabes qui montent et descendent en même temps !",
-        "activities": [
-          "Écoute les mots enregistrés et classe-les : Ton simple | Ton complexe.",
-          "Applique la méthode d'isolement à 5 mots : prononce-les haut, puis bas, et note le ton perçu.",
-          "Transcris un dialogue de 4 répliques en Tupuri avec tous les tons notés.",
-          "Produis un texte de 3 phrases en Tupuri sur une action de ta vie quotidienne, avec notation tonale.",
-          "Mémorise : ton descendant = ̂ ; ton montant = ̌."
-        ],
-        "memo": "Les **tons complexes** de **Tupuri** (descendant ̂, montant ̌) sont des mouvements mélodiques sur une seule syllabe. La **méthode d'isolement** permet de trouver le ton d'un mot inconnu. Une transcription en Tupuri sans tons est incomplète."
-      },
-      "emacResources": []
+     "id": "10b8c934709a",
+     "audio": "f40ff8963283abcc69a114f58936c0fb.mp3",
+     "langText": "Cooren ndar ti kluuri debaŋ",
+     "langWord": "Cooren ndar ti kluuri debaŋ",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
     },
     {
-      "id": "IV-1",
-      "code": "IV.1",
-      "module": "M4-syntagme-nominal",
-      "moduleTitle": "Module IV — Le syntagme nominal",
-      "title": "La base nominale et les classes nominales",
-      "anelcac": "SN : constituants, nom base+affixes, classes nominales, pronoms personnels",
-      "duration": "60 min",
-      "level": "5e",
-      "objectives": [
-        "Identifier la structure du nom en Tupuri (base + affixes)",
-        "Reconnaître les classes nominales de Tupuri",
-        "Former le singulier et le pluriel des noms",
-        "Employer les pronoms personnels correspondant aux classes nominales"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : La base nominale et les classes nominales. Module : Module IV — Le syntagme nominal.",
-        "steps": [
-          "**Mise en contexte :** Écrire un nom en Tupuri au singulier et au pluriel. Qu'est-ce qui change ?",
-          "**Présentation :** Classe nominale : dans les langues bantu et bantoid, les noms sont regroupés en classes marquées par des préfixes.",
-          "**Explication :** Principales classes nominales de Tupuri avec préfixes au singulier et au pluriel.",
-          "**Application :** Tableau : singulier → pluriel pour 10 noms.",
-          "**Évaluation :** Identifier la classe nominale de 5 noms."
-        ],
-        "freedom": "Partir des noms que les élèves utilisent déjà. Les classes nominales corresponden souvent à des catégories sémantiques (humains, animaux, objets…).",
-        "tips": "Partir des noms que les élèves utilisent déjà. Les classes nominales corresponden souvent à des catégories sémantiques (humains, animaux, objets…)."
-      },
-      "student": {
-        "intro": "En Tupuri, les noms sont organisés en **classes**. Chaque classe a ses propres préfixes pour le singulier et le pluriel — un système beaucoup plus riche que le genre en français !",
-        "activities": [
-          "À partir du vocabulaire Tupuri, fais un tableau : Singulier | Pluriel | Classe nominale.",
-          "Identifie le préfixe de classe dans chaque nom. Surligne-le.",
-          "Mets au pluriel les 5 noms suivants en changeant le préfixe selon la classe.",
-          "Associe chaque nom à son pronom de classe correspondant.",
-          "Mémorise : **classe nominale** = catégorie grammaticale des noms, marquée par des préfixes."
-        ],
-        "memo": "En **Tupuri**, les noms sont organisés en **classes nominales** marquées par des préfixes. Le changement de préfixe indique le nombre. Pronoms, adjectifs et verbes s'accordent avec la classe du nom."
-      },
-      "emacResources": []
+     "id": "04ffc5aeab20",
+     "audio": "6564eb0f3703905dd1c13a25f7976ca7.mp3",
+     "langText": "Wããniwa wɔ de kee kɛfdɛr ma had jag depùr de Taynenwa",
+     "langWord": "Wããniwa wɔ de kee kɛfdɛr ma had jag depùr de Taynenwa",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
     },
     {
-      "id": "IV-2",
-      "code": "IV.2",
-      "module": "M4-syntagme-nominal",
-      "moduleTitle": "Module IV — Le syntagme nominal",
-      "title": "Les déterminants du nom",
-      "anelcac": "Déterminants : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs ; accord de classe",
-      "duration": "60 min",
-      "level": "5e",
-      "objectives": [
-        "Identifier les différents types de déterminants en Tupuri",
-        "Accorder les déterminants avec le nom selon la classe nominale",
-        "Construire des syntagmes nominaux complexes",
-        "Produire des phrases avec SN complets"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Les déterminants du nom. Module : Module IV — Le syntagme nominal.",
-        "steps": [
-          "**Mise en contexte :** Écrire un SN simple. Comment l'enrichir ?",
-          "**Présentation :** Déterminants de Tupuri : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs.",
-          "**Explication :** Chaque déterminant s'accorde avec la classe du nom (même préfixe ou suffixe de classe).",
-          "**Application :** Compléter des SN avec le bon déterminant selon la classe.",
-          "**Production :** 5 SN complexes (nom + 2 déterminants) intégrés dans des phrases."
-        ],
-        "freedom": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Tupuri par rapport au français.",
-        "tips": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Tupuri par rapport au français."
-      },
-      "student": {
-        "intro": "Un nom avec ses déterminants devient beaucoup plus précis ! En Tupuri, les déterminants s'accordent avec la **classe du nom**.",
-        "activities": [
-          "Complète les SN avec le bon déterminant possessif selon la classe du nom.",
-          "Souligne les déterminants dans 5 phrases en Tupuri et identifie leur type.",
-          "Transforme chaque SN simple en SN complexe en ajoutant un démonstratif et un numéral.",
-          "Rédige 5 phrases en Tupuri avec au moins deux déterminants par SN.",
-          "Mémorise : **accord de classe** = le déterminant change de forme selon la classe nominale."
-        ],
-        "memo": "En **Tupuri**, tous les déterminants (possessifs, démonstratifs, numéraux, indéfinis, interrogatifs) s'accordent avec la **classe nominale** du nom. Un **SN complexe** = nom + base nominale + déterminants accordés."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "V-1",
-      "code": "V.1",
-      "module": "M5-syntagme-verbal",
-      "moduleTitle": "Module V — Le syntagme verbal",
-      "title": "Le radical verbal et la conjugaison",
-      "anelcac": "SV : constituants, radical, affixes, conjugaison, temps verbaux",
-      "duration": "60 min",
-      "level": "4e",
-      "objectives": [
-        "Identifier le radical verbal et les affixes de conjugaison en Tupuri",
-        "Conjuguer un verbe aux principaux temps verbaux",
-        "Analyser la structure morphologique d'une forme verbale",
-        "Employer correctement les formes verbales dans des phrases"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Le radical verbal et la conjugaison. Module : Module V — Le syntagme verbal.",
-        "steps": [
-          "**Mise en contexte :** Écrire une forme verbale en Tupuri et demander aux élèves d'identifier le radical.",
-          "**Présentation :** Décomposer une forme verbale : préfixe de sujet + marqueurs TAM + radical + suffixes.",
-          "**Explication :** Paradigme de conjugaison d'un verbe fréquent en Tupuri à plusieurs temps.",
-          "**Application :** Conjugaison tableau : 3 verbes fréquents.",
-          "**Évaluation :** Traduire 5 phrases du français vers Tupuri."
-        ],
-        "freedom": "Le système TAM de Tupuri est souvent plus riche que celui du français. Commencer par les temps les plus usités.",
-        "tips": "Le système TAM de Tupuri est souvent plus riche que celui du français. Commencer par les temps les plus usités."
-      },
-      "student": {
-        "intro": "Le verbe est le cœur de la phrase en Tupuri. Il porte à lui seul le temps, l'aspect, le mode et le sujet ! Dans cette leçon, tu décortiques la mécanique verbale.",
-        "activities": [
-          "Décompose 5 formes verbales en Tupuri : préfixe de sujet | marqueur TAM | radical | suffixe.",
-          "Conjugue le verbe 'manger' en Tupuri à 3 temps différents pour toutes les personnes.",
-          "Identifie le temps verbal de 5 phrases en Tupuri et justifie ta réponse.",
-          "Traduis 3 phrases du français vers Tupuri en soignant la conjugaison.",
-          "Mémorise : **TAM** = Temps-Aspect-Mode ; c'est ce que les affixes verbaux expriment en Tupuri."
-        ],
-        "memo": "En **Tupuri**, une forme verbale = préfixe de sujet + marqueurs TAM + radical + suffixes. Le système **TAM** (Temps-Aspect-Mode) exprime des nuances temporelles et aspectuelles plus précises qu'en français."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "V-2",
-      "code": "V.2",
-      "module": "M5-syntagme-verbal",
-      "moduleTitle": "Module V — Le syntagme verbal",
-      "title": "Modes verbaux et négation",
-      "anelcac": "Modes : indicatif, impératif ; négation ; production écrite SV simple/complexe",
-      "duration": "60 min",
-      "level": "4e",
-      "objectives": [
-        "Identifier et employer les principaux modes verbaux de Tupuri",
-        "Former la négation verbale",
-        "Construire des SV simples et complexes",
-        "Produire un texte avec diversité de modes et d'aspects"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Modes verbaux et négation. Module : Module V — Le syntagme verbal.",
-        "steps": [
-          "**Mise en contexte :** Donner un ordre en Tupuri. Quel mode est utilisé ?",
-          "**Présentation :** Modes de Tupuri : indicatif, impératif, et autres modes aspectuels.",
-          "**Explication :** Formation de la négation en Tupuri : préfixe, suffixe négatif, ou particule.",
-          "**Application :** Transformer 5 phrases affirmatives en négatives et vice versa.",
-          "**Production :** Texte de 8 phrases alternant affirmation, négation et impératif."
-        ],
-        "freedom": "La négation en Tupuri peut être double (encadrement du verbe) ou simple. Montrer les deux cas.",
-        "tips": "La négation en Tupuri peut être double (encadrement du verbe) ou simple. Montrer les deux cas."
-      },
-      "student": {
-        "intro": "Donner un ordre, exprimer un doute, nier une action — chaque nuance a sa forme en Tupuri !",
-        "activities": [
-          "Mets les 5 phrases données à la forme négative.",
-          "Transforme ces 5 affirmations en impératifs adressés à un ami.",
-          "Identifie le mode et la polarité (affirm./négat.) de chaque phrase dans le texte fourni.",
-          "Rédige un dialogue de 6 répliques incluant au moins 2 impératifs et 2 négations.",
-          "Mémorise : **mode** = manière d'envisager l'action ; **négation** = marque grammaticale niant l'action."
-        ],
-        "memo": "En **Tupuri**, les modes principaux sont l'**indicatif** et l'**impératif**. La **négation** est marquée par une particule ou un affixe spécifique. La diversité des modes est une richesse expressive de Tupuri."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "VI-1",
-      "code": "VI.1",
-      "module": "M6-phrase",
-      "moduleTitle": "Module VI — La phrase en Tupuri",
-      "title": "La phrase simple et ses types",
-      "anelcac": "Phrase simple, interrogative, négative, impérative ; ordre des mots",
-      "duration": "60 min",
-      "level": "3e",
-      "objectives": [
-        "Analyser la structure de la phrase simple en Tupuri",
-        "Distinguer les 4 types de phrases",
-        "Maîtriser l'ordre des constituants",
-        "Produire des phrases simples variées"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : La phrase simple et ses types. Module : Module VI — La phrase en Tupuri.",
-        "steps": [
-          "**Mise en contexte :** Lire une phrase en Tupuri. Qui fait quoi ?",
-          "**Présentation :** Ordre de base des constituants en Tupuri. Comparer avec le français.",
-          "**Explication :** Les 4 types de phrases à partir d'une même phrase de base.",
-          "**Application :** Transformer des phrases déclaratives en interrogatives, puis en négatives.",
-          "**Production :** 8 phrases variées (2 par type) sur la vie scolaire."
-        ],
-        "freedom": "L'ordre des mots en Tupuri peut différer du français. C'est une caractéristique typologique, pas une erreur.",
-        "tips": "L'ordre des mots en Tupuri peut différer du français. C'est une caractéristique typologique, pas une erreur."
-      },
-      "student": {
-        "intro": "Une phrase bien construite en Tupuri suit des règles précises. Tu apprends les types de phrases et l'ordre des mots.",
-        "activities": [
-          "Identifie l'ordre des constituants dans 5 phrases en Tupuri.",
-          "Transforme 4 phrases déclaratives en interrogatives totales.",
-          "Transforme ces 4 phrases en négatives.",
-          "Rédige 2 phrases de chaque type (déclarative, interrogative, négative, impérative).",
-          "Mémorise : l'ordre de base en **Tupuri** est typologiquement stable."
-        ],
-        "memo": "La **phrase simple** en **Tupuri** a un ordre de constituants caractéristique. Les 4 types (déclarative, interrogative, négative, impérative) se forment avec des marques grammaticales spécifiques."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "VI-2",
-      "code": "VI.2",
-      "module": "M6-phrase",
-      "moduleTitle": "Module VI — La phrase en Tupuri",
-      "title": "Connecteurs logiques et phrase complexe",
-      "anelcac": "Connecteurs logiques, phrase complexe, coordination, subordination ; production écrite",
-      "duration": "60 min",
-      "level": "3e",
-      "objectives": [
-        "Identifier les connecteurs logiques de Tupuri",
-        "Distinguer coordination et subordination",
-        "Construire des phrases complexes",
-        "Produire un texte cohérent avec diversité syntaxique"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Connecteurs logiques et phrase complexe. Module : Module VI — La phrase en Tupuri.",
-        "steps": [
-          "**Mise en contexte :** Lire un court récit en Tupuri. Quels mots relient les phrases ?",
-          "**Présentation :** Connecteurs de Tupuri : conjonctions de coordination et de subordination.",
-          "**Explication :** Phrase complexe par coordination / par subordination. Exemples en Tupuri.",
-          "**Application :** Relier 5 paires de phrases simples avec le connecteur approprié.",
-          "**Production :** Texte de 10 phrases sur 'Une journée dans mon village' avec 5 connecteurs différents."
-        ],
-        "freedom": "Les connecteurs de Tupuri ont souvent des équivalents français mais avec des positions syntaxiques différentes.",
-        "tips": "Les connecteurs de Tupuri ont souvent des équivalents français mais avec des positions syntaxiques différentes."
-      },
-      "student": {
-        "intro": "Pour raconter et argumenter, tu as besoin de relier tes phrases. Les **connecteurs logiques** de Tupuri sont tes outils !",
-        "activities": [
-          "Souligne tous les connecteurs dans le texte fourni.",
-          "Classe-les : Addition | Cause | Conséquence | Opposition | Temps.",
-          "Relie 5 paires de phrases avec le connecteur le plus approprié.",
-          "Rédige un texte de 8 phrases avec au moins 4 connecteurs différents.",
-          "Mémorise : coordination = même niveau ; subordination = une phrase dans une autre."
-        ],
-        "memo": "En **Tupuri**, les **connecteurs logiques** permettent de construire des **phrases complexes** cohérentes. Varier les structures syntaxiques améliore la qualité de l'expression écrite et orale."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "VII-1",
-      "code": "VII.1",
-      "module": "M7-quotidien1",
-      "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
-      "title": "Se saluer, se présenter et interagir en Tupuri",
-      "anelcac": "Situations de communication quotidienne : salutations, présentations, formules de politesse",
-      "duration": "60 min",
-      "level": "4e",
-      "objectives": [
-        "Maîtriser les formules de salutation selon le contexte",
-        "Se présenter et présenter quelqu'un en Tupuri",
-        "Employer les formules de politesse et de respect",
-        "Mener une brève conversation de la vie courante"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Se saluer, se présenter et interagir en Tupuri. Module : Module VII — Gestion du quotidien (Niveau 1).",
-        "steps": [
-          "**Mise en contexte :** Deux élèves se rencontrent au marché. Jouer la scène en français, puis demander comment dire en Tupuri.",
-          "**Présentation :** Salutations de Tupuri selon les moments de la journée, l'âge et le contexte.",
-          "**Explication :** Formules de respect envers les aînés, spécifiques à la culture Tupuri.",
-          "**Jeu de rôle :** Par groupes de 2, simuler des rencontres dans des contextes variés (marché, école, cérémonie).",
-          "**Production :** Dialogue de 10 répliques entre deux personnes de générations différentes."
-        ],
-        "freedom": "Les règles de salutation reflètent des valeurs culturelles profondes. Valoriser les connaissances des élèves issus de familles locutrices.",
-        "tips": "Les règles de salutation reflètent des valeurs culturelles profondes. Valoriser les connaissances des élèves issus de familles locutrices."
-      },
-      "student": {
-        "intro": "Savoir saluer en Tupuri, c'est respecter la culture ! Les formules changent selon qui tu salues et à quel moment.",
-        "activities": [
-          "Complète le tableau des salutations de Tupuri : Moment | Formule | Réponse attendue.",
-          "Joue le rôle A : saluer un aîné au marché du matin.",
-          "Invente un dialogue de 8 répliques entre un enfant et son grand-père.",
-          "Note 3 formules de politesse de Tupuri sans équivalent direct en français.",
-          "Mémorise les formules de salutation du matin, du soir et pour les aînés en Tupuri."
-        ],
-        "memo": "Les **salutations** en **Tupuri** varient selon l'heure, le statut et le contexte social. Elles reflètent les valeurs de respect et de solidarité de la communauté."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "VII-2",
-      "code": "VII.2",
-      "module": "M7-quotidien1",
-      "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
-      "title": "Exprimer les besoins et les actions du quotidien",
-      "anelcac": "Situations de vie : achats, demandes de service, déplacements, activités journalières",
-      "duration": "60 min",
-      "level": "4e",
-      "objectives": [
-        "Exprimer des besoins courants en Tupuri",
-        "Décrire des activités journalières",
-        "Employer le vocabulaire des lieux et actions de la vie courante",
-        "Produire un texte descriptif sur une journée type"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Exprimer les besoins et les actions du quotidien. Module : Module VII — Gestion du quotidien (Niveau 1).",
-        "steps": [
-          "**Mise en contexte :** Images de scènes de vie — marché, champ, école, maison. Comment les décrire en Tupuri ?",
-          "**Présentation :** Vocabulaire thématique : alimentation, déplacements, activités domestiques.",
-          "**Simulation :** Scène du marché : acheteur et vendeur en Tupuri.",
-          "**Application :** Décrire sa journée en Tupuri (du lever au coucher).",
-          "**Production :** Texte de 10 phrases : 'Ma journée en Tupuri'."
-        ],
-        "freedom": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles.",
-        "tips": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles."
-      },
-      "student": {
-        "intro": "Tu sais te saluer. Maintenant, tu vas te débrouiller dans des situations du quotidien en Tupuri : au marché, en route, à la maison.",
-        "activities": [
-          "Associe chaque image de scène de vie au mot ou à la phrase correspondant en Tupuri.",
-          "Joue le rôle du vendeur au marché : réponds aux demandes en Tupuri.",
-          "Rédige 5 phrases décrivant tes activités du matin depuis le réveil.",
-          "Traduis en Tupuri ces 5 phrases sur les déplacements quotidiens.",
-          "Mémorise 10 mots du quotidien en Tupuri avec leur traduction française."
-        ],
-        "memo": "Le vocabulaire du **quotidien** en **Tupuri** couvre l'alimentation, les déplacements et les activités domestiques. Le maîtriser permet une communication fonctionnelle dans tous les contextes."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "VIII-1",
-      "code": "VIII.1",
-      "module": "M8-quotidien2",
-      "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
-      "title": "Argumenter et convaincre en Tupuri",
-      "anelcac": "Communication élaborée : argumentation, narration, discours formel",
-      "duration": "60 min",
-      "level": "3e",
-      "objectives": [
-        "Construire une argumentation simple en Tupuri",
-        "Employer les formules du discours formel",
-        "Narrer un événement passé avec cohérence",
-        "Produire un discours oral de 2 minutes en Tupuri"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Argumenter et convaincre en Tupuri. Module : Module VIII — Gestion du quotidien (Niveau 2).",
-        "steps": [
-          "**Mise en contexte :** Lire un proverbe en Tupuri. Demander aux élèves de l'expliquer et de le défendre.",
-          "**Présentation :** Formules du discours oral formel en Tupuri : apostrophes, ouverture, clôture.",
-          "**Explication :** Structure d'une argumentation : thèse → arguments → exemples → conclusion.",
-          "**Pratique :** Débat : pour ou contre l'utilisation du Tupuri à l'école ? Chaque groupe défend sa position.",
-          "**Production :** Discours de 2 minutes sur un thème proposé."
-        ],
-        "freedom": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves.",
-        "tips": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves."
-      },
-      "student": {
-        "intro": "Dans les cultures de Tupuri, la parole bien dite est une force. Tu apprends à argumenter et convaincre avec éloquence.",
-        "activities": [
-          "Identifie dans le texte : thèse, arguments, exemples.",
-          "Prépare 3 arguments pour défendre l'enseignement de Tupuri à l'école primaire.",
-          "Prononce un discours d'ouverture de cérémonie en Tupuri.",
-          "Narration : raconte en Tupuri un événement mémorable de ta vie scolaire.",
-          "Mémorise les formules d'ouverture et de clôture d'un discours formel en Tupuri."
-        ],
-        "memo": "L'**argumentation** en **Tupuri** suit : thèse → arguments → exemples → conclusion. Le **discours formel** obéit à des conventions culturelles précises. La maîtrise de l'oral élaboré est une compétence de haut niveau."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "VIII-2",
-      "code": "VIII.2",
-      "module": "M8-quotidien2",
-      "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
-      "title": "Littérature orale et production écrite avancée",
-      "anelcac": "Littérature orale : proverbes, contes, devinettes ; production écrite longue",
-      "duration": "60 min",
-      "level": "3e",
-      "objectives": [
-        "Analyser la structure d'un conte ou d'une devinette en Tupuri",
-        "Identifier les thèmes et valeurs véhiculés",
-        "Rédiger un conte court en respectant les conventions du genre",
-        "Utiliser la littérature orale comme ressource pédagogique"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Littérature orale et production écrite avancée. Module : Module VIII — Gestion du quotidien (Niveau 2).",
-        "steps": [
-          "**Mise en contexte :** Raconter ou faire écouter un conte bref en Tupuri.",
-          "**Présentation :** Genres de la littérature orale : contes, proverbes, devinettes, épopées.",
-          "**Analyse :** Structure du conte : situation initiale → perturbation → péripéties → résolution → morale.",
-          "**Application :** Analyser un conte fourni selon cette structure.",
-          "**Production :** Conte de 15 lignes minimum en Tupuri avec morale explicite."
-        ],
-        "freedom": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible.",
-        "tips": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible."
-      },
-      "student": {
-        "intro": "Les contes, proverbes et devinettes de Tupuri sont des œuvres littéraires à part entière. Tu les analyses et tu créeras le tien !",
-        "activities": [
-          "Lis le conte fourni et identifie les 5 étapes de sa structure narrative.",
-          "Relève 3 valeurs morales transmises par ce conte.",
-          "Traduis en français un proverbe en Tupuri et explique son sens figuré.",
-          "Rédige un conte court (15 lignes) en Tupuri avec une morale sur le travail ou le respect.",
-          "Mémorise : conte = récit fictif à vocation éducative ; proverbe = formule brève de sagesse collective."
-        ],
-        "memo": "La **littérature orale** de **Tupuri** (contes, proverbes, devinettes) transmet les valeurs de la communauté. Le conte a une structure en 5 étapes. La rédiger en Tupuri mobilise toutes les compétences linguistiques acquises."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC1-1",
-      "code": "MC1.1",
-      "module": "MC1-diversite-culturelle",
-      "moduleTitle": "Module MC1 — Diversité culturelle camerounaise",
-      "title": "Aires culturelles du Cameroun",
-      "anelcac": "Aires culturelles : Beti-Fang, Grassfield, Sawa, Soudano-sahélienne",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Identifier les quatre grandes aires culturelles du Cameroun",
-        "Situer la culture Tupuri dans son aire culturelle",
-        "Décrire les traits distinctifs de chaque aire",
-        "Valoriser la diversité culturelle comme richesse nationale"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Aires culturelles du Cameroun. Module : Module MC1 — Diversité culturelle camerounaise.",
-        "steps": [
-          "**Mise en contexte :** Afficher la carte du Mini-Atlas culturel. Demander aux élèves de situer leur culture.",
-          "**Présentation :** Les 4 aires : Beti-Fang (Centre-Sud), Grassfields (Ouest-Nord-Ouest), Sawa (côte), Soudano-sahélienne (nord).",
-          "**Explication :** Caractéristiques culturelles de chaque aire : organisation sociale, agriculture, art, musique.",
-          "**Application :** Chaque élève présente 3 éléments culturels de son aire.",
-          "**Évaluation :** Carte à compléter + court texte comparatif."
-        ],
-        "freedom": "Valoriser chaque culture. Éviter les hiérarchies culturelles. La diversité est une richesse.",
-        "tips": "Valoriser chaque culture. Éviter les hiérarchies culturelles. La diversité est une richesse."
-      },
-      "student": {
-        "intro": "Le Cameroun est 'l'Afrique en miniature' — sa diversité culturelle est extraordinaire. La culture de Tupuri s'inscrit dans une aire spécifique que tu vas découvrir.",
-        "activities": [
-          "Sur la carte du Mini-Atlas, colorie les 4 aires culturelles en couleurs différentes.",
-          "Note dans quelle aire se situe la communauté Tupuri.",
-          "Liste 3 traits culturels distinctifs de cette aire (alimentation, habitat, organisation sociale).",
-          "Compare deux aires : qu'ont-elles en commun ? Qu'est-ce qui les distingue ?",
-          "Mémorise les 4 grandes aires culturelles et leurs localisations."
-        ],
-        "memo": "Le Cameroun compte 4 grandes **aires culturelles** : **Beti-Fang**, **Grassfields**, **Sawa** et **Soudano-sahélienne**. La communauté Tupuri s'inscrit dans l'une d'elles avec ses pratiques et valeurs spécifiques."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC1-2",
-      "code": "MC1.2",
-      "module": "MC1-diversite-culturelle",
-      "moduleTitle": "Module MC1 — Diversité culturelle camerounaise",
-      "title": "La culture Tupuri dans le contexte camerounais",
-      "anelcac": "Identité culturelle, patrimoine immatériel, langues et cultures",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Définir la notion d'identité culturelle",
-        "Décrire les éléments constitutifs de la culture Tupuri",
-        "Relier langue et culture",
-        "Produire un exposé sur la culture Tupuri"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : La culture Tupuri dans le contexte camerounais. Module : Module MC1 — Diversité culturelle camerounaise.",
-        "steps": [
-          "**Mise en contexte :** Qu'est-ce qui vous rend différents des élèves d'une autre région ?",
-          "**Présentation :** Éléments de la culture Tupuri : langue, musique, gastronomie, valeurs, organisation sociale.",
-          "**Explication :** Patrimoine immatériel : ce qui ne se voit pas mais qui se transmet.",
-          "**Recherche :** Les élèves enquêtent auprès de leurs familles sur un élément culturel Tupuri.",
-          "**Production :** Exposé oral de 3 minutes sur un élément du patrimoine Tupuri."
-        ],
-        "freedom": "Transformer la classe en musée vivant : chaque élève apporte un objet, une recette, un proverbe.",
-        "tips": "Transformer la classe en musée vivant : chaque élève apporte un objet, une recette, un proverbe."
-      },
-      "student": {
-        "intro": "Ta langue, c'est aussi ta culture. Tu vas explorer ce qui fait la richesse de la culture Tupuri.",
-        "activities": [
-          "Liste 5 éléments de la culture Tupuri : langue, musique, cuisine, valeurs, organisation.",
-          "Choisis un élément du patrimoine immatériel Tupuri et décris-le en 5 phrases.",
-          "Prépare un exposé oral de 3 minutes (plan : présentation → description → importance).",
-          "Avec tes camarades, créez une affiche de la culture Tupuri.",
-          "Mémorise : **patrimoine immatériel** = savoirs et pratiques culturels transmis oralement."
-        ],
-        "memo": "L'**identité culturelle** Tupuri s'exprime à travers la langue, la musique, la gastronomie et l'organisation sociale. Le **patrimoine immatériel** est aussi précieux que les monuments matériels."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC2-1",
-      "code": "MC2.1",
-      "module": "MC2-modes-de-vie",
-      "moduleTitle": "Module MC2 — Modes de vie",
-      "title": "Pratiques culinaires et musicales de la communauté Tupuri",
-      "anelcac": "Modes de vie : pratiques culinaires, pratiques musicales",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Décrire les pratiques culinaires traditionnelles de Tupuri",
-        "Identifier les instruments et genres musicaux",
-        "Expliquer le rôle social de la musique et de la cuisine",
-        "Présenter une recette ou un genre musical en Tupuri"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Pratiques culinaires et musicales de la communauté Tupuri. Module : Module MC2 — Modes de vie.",
-        "steps": [
-          "**Mise en contexte :** Apporter un aliment traditionnel associé à Tupuri. Susciter la discussion.",
-          "**Présentation :** Plats, ingrédients et techniques culinaires. Instruments et genres musicaux.",
-          "**Démonstration :** Faire écouter un morceau traditionnel de la région. Identifier les instruments.",
-          "**Application :** Décrire en Tupuri la préparation d'un plat simple.",
-          "**Production :** Présentation orale : une recette ou un genre musical."
-        ],
-        "freedom": "Cuisine et musique sont des portes d'entrée émotionnelles vers la culture. Maximiser les exemples concrets.",
-        "tips": "Cuisine et musique sont des portes d'entrée émotionnelles vers la culture. Maximiser les exemples concrets."
-      },
-      "student": {
-        "intro": "La cuisine et la musique de la culture Tupuri racontent qui tu es. Tu les explores comme des expressions culturelles vivantes.",
-        "activities": [
-          "Décris en Tupuri les étapes de préparation d'un plat traditionnel.",
-          "Identifie 3 instruments de musique traditionnelle et explique leur usage.",
-          "Transcris le texte d'une chanson traditionnelle simple en Tupuri et traduis-la.",
-          "Présente oralement une recette en Tupuri (min. 6 étapes).",
-          "Mémorise les noms des principaux plats et instruments en Tupuri."
-        ],
-        "memo": "La **cuisine** et la **musique** traditionnelles sont des marqueurs identitaires forts de la culture Tupuri. Plats, instruments et genres musicaux ont souvent des noms en Tupuri qui ne se traduisent pas exactement."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC2-2",
-      "code": "MC2.2",
-      "module": "MC2-modes-de-vie",
-      "moduleTitle": "Module MC2 — Modes de vie",
-      "title": "Habitat traditionnel et vêtements de la communauté Tupuri",
-      "anelcac": "Modes de vie : pratiques vestimentaires, architecturales",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Décrire l'habitat traditionnel de la communauté Tupuri",
-        "Identifier les tenues vestimentaires et leur signification",
-        "Expliquer l'évolution des modes de vie",
-        "Produire un texte descriptif sur l'habitat ou le vêtement"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Habitat traditionnel et vêtements de la communauté Tupuri. Module : Module MC2 — Modes de vie.",
-        "steps": [
-          "**Mise en contexte :** Photos d'habitations traditionnelles et modernes. Qu'est-ce qui a changé ?",
-          "**Présentation :** Types d'habitations : matériaux, forme, organisation de l'espace.",
-          "**Explication :** Tenues vestimentaires : couleurs, tissus, accessoires et significations sociales.",
-          "**Analyse :** Quels éléments traditionnels persistent ? Lesquels ont changé ?",
-          "**Production :** Texte descriptif illustré sur un habitat ou une tenue."
-        ],
-        "freedom": "Éviter les présentations exotisantes. Comprendre la logique culturelle derrière les formes d'habitat et de vêtement.",
-        "tips": "Éviter les présentations exotisantes. Comprendre la logique culturelle derrière les formes d'habitat et de vêtement."
-      },
-      "student": {
-        "intro": "La maison et les vêtements traditionnels racontent l'organisation sociale et les valeurs de la culture Tupuri.",
-        "activities": [
-          "Décris en Tupuri les matériaux et la disposition d'une habitation traditionnelle.",
-          "Explique la signification d'une tenue vestimentaire lors d'une cérémonie.",
-          "Compare habitation traditionnelle et moderne : 3 différences, 2 points communs.",
-          "Rédige un texte de 10 phrases sur l'évolution de l'habitat dans la communauté Tupuri.",
-          "Mémorise le vocabulaire Tupuri de l'habitat et du vêtement."
-        ],
-        "memo": "L'**habitat traditionnel** et les **tenues vestimentaires** de la culture Tupuri reflètent des valeurs précises : organisation familiale, rôles sociaux, rapport au sacré."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC3-1",
-      "code": "MC3.1",
-      "module": "MC3-evenements-marquants",
-      "moduleTitle": "Module MC3 — Événements marquants de la vie",
-      "title": "Naissance et rites d'initiation dans la culture Tupuri",
-      "anelcac": "Événements marquants : naissance, éducation des enfants, rites d'initiation",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Décrire les pratiques liées à la naissance en culture Tupuri",
-        "Expliquer le rôle des rites d'initiation",
-        "Analyser l'éducation traditionnelle de l'enfant",
-        "Produire un texte sur l'éducation dans la tradition Tupuri"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Naissance et rites d'initiation dans la culture Tupuri. Module : Module MC3 — Événements marquants de la vie.",
-        "steps": [
-          "**Mise en contexte :** Que savent les élèves des pratiques entourant la naissance dans leur famille ?",
-          "**Présentation :** Rites de naissance : attribution du nom, présentation à la famille, cérémonies.",
-          "**Explication :** L'éducation traditionnelle : rôle des aînés, apprentissage par imitation.",
-          "**Discussion :** Les rites d'initiation : leur sens, contenu, évolution contemporaine.",
-          "**Production :** Texte narratif sur un rite de naissance ou d'initiation."
-        ],
-        "freedom": "Certains rites sont confidentiels. Ne pas forcer les élèves à partager. Travailler sur les aspects publics.",
-        "tips": "Certains rites sont confidentiels. Ne pas forcer les élèves à partager. Travailler sur les aspects publics."
-      },
-      "student": {
-        "intro": "Dans la culture Tupuri, naître et grandir sont des événements sociaux — toute la communauté participe à l'éducation de l'enfant.",
-        "activities": [
-          "Décris en 5 phrases un rite entourant la naissance dans la culture Tupuri.",
-          "Explique le rôle des grands-parents dans l'éducation traditionnelle.",
-          "Compare éducation traditionnelle et scolaire : 3 complémentarités, 2 tensions.",
-          "Rédige une lettre imaginaire d'un grand-père à son petit-enfant transmettant une valeur.",
-          "Mémorise les noms des principales étapes de la vie en Tupuri."
-        ],
-        "memo": "Dans la culture **Tupuri**, la **naissance** et l'**initiation** sont des moments de socialisation intense. L'éducation traditionnelle repose sur la transmission orale et le rôle des aînés."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC3-2",
-      "code": "MC3.2",
-      "module": "MC3-evenements-marquants",
-      "moduleTitle": "Module MC3 — Événements marquants de la vie",
-      "title": "Mariage, deuil et célébrations dans la culture Tupuri",
-      "anelcac": "Événements marquants : mariage, mort et deuil, cérémonies",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Décrire les pratiques matrimoniales de Tupuri",
-        "Analyser les rites funéraires",
-        "Expliquer l'importance sociale des cérémonies",
-        "Produire un récit sur une cérémonie"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Mariage, deuil et célébrations dans la culture Tupuri. Module : Module MC3 — Événements marquants de la vie.",
-        "steps": [
-          "**Mise en contexte :** Photos de cérémonies (mariage, funérailles). Qu'observent les élèves ?",
-          "**Présentation :** Le mariage traditionnel : dot, cérémonies, rôle des familles.",
-          "**Explication :** Les funérailles et le deuil : durée, étapes, obligations sociales.",
-          "**Analyse :** Pourquoi ces cérémonies renforcent-elles les liens communautaires ?",
-          "**Production :** Récit d'une cérémonie imaginaire (10-15 phrases)."
-        ],
-        "freedom": "Aborder le deuil avec sensibilité. Certains élèves peuvent avoir récemment vécu un deuil.",
-        "tips": "Aborder le deuil avec sensibilité. Certains élèves peuvent avoir récemment vécu un deuil."
-      },
-      "student": {
-        "intro": "Le mariage et les funérailles en culture Tupuri sont des actes sociaux qui cimentent la communauté.",
-        "activities": [
-          "Décris les étapes du mariage traditionnel dans l'ordre chronologique.",
-          "Explique la signification symbolique de la dot dans la culture Tupuri.",
-          "Décris comment le deuil est géré dans la culture Tupuri.",
-          "Rédige un texte de 12 phrases racontant une cérémonie de mariage.",
-          "Mémorise le vocabulaire du mariage et du deuil en Tupuri."
-        ],
-        "memo": "Le **mariage** et le **deuil** dans la culture **Tupuri** sont des événements communautaires structurants. La dot, les cérémonies et les rites funéraires expriment les valeurs de solidarité et de respect des ancêtres."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC4-1",
-      "code": "MC4.1",
-      "module": "MC4-pratiques-communaute1",
-      "moduleTitle": "Module MC4 — Pratiques en communauté (Niveau 1)",
-      "title": "Jeux traditionnels et organisation sociale en culture Tupuri",
-      "anelcac": "Pratiques communautaires Niv. 1 : jeux, économie traditionnelle, organisation sociale",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Décrire les jeux traditionnels et leur rôle éducatif",
-        "Expliquer l'organisation sociale de la communauté Tupuri",
-        "Identifier les institutions traditionnelles (chefferie, conseil des anciens)",
-        "Produire un texte sur l'organisation sociale"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Jeux traditionnels et organisation sociale en culture Tupuri. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
-        "steps": [
-          "**Mise en contexte :** Nommer un jeu traditionnel de la communauté et expliquer ses règles.",
-          "**Présentation :** Jeux traditionnels de Tupuri : règles, matériel, âges et genres concernés.",
-          "**Explication :** Organisation sociale : chefferie, conseil des anciens, sociétés, groupes d'âge.",
-          "**Application :** Schéma de l'organisation sociale de la communauté.",
-          "**Production :** Texte sur le rôle du chef ou du conseil des anciens."
-        ],
-        "freedom": "Les jeux traditionnels sont souvent des métaphores de l'organisation sociale. Exploiter ce lien.",
-        "tips": "Les jeux traditionnels sont souvent des métaphores de l'organisation sociale. Exploiter ce lien."
-      },
-      "student": {
-        "intro": "Les jeux transmettent des valeurs. Et l'organisation sociale de Tupuri est une œuvre collective sophistiquée.",
-        "activities": [
-          "Décris les règles d'un jeu traditionnel en Tupuri (6 règles minimum).",
-          "Explique ce que ce jeu apprend aux enfants.",
-          "Dessine ou décris le schéma d'organisation sociale de la communauté.",
-          "Rédige 8 phrases sur le rôle du conseil des anciens dans la résolution des conflits.",
-          "Mémorise les noms des principales instances sociales en Tupuri."
-        ],
-        "memo": "La culture **Tupuri** dispose d'une **organisation sociale** structurée : chefferie, conseil des anciens, groupes d'âge. Les **jeux traditionnels** transmettent les valeurs et compétences nécessaires à la vie communautaire."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC4-2",
-      "code": "MC4.2",
-      "module": "MC4-pratiques-communaute1",
-      "moduleTitle": "Module MC4 — Pratiques en communauté (Niveau 1)",
-      "title": "Économie traditionnelle de la communauté Tupuri",
-      "anelcac": "Économie traditionnelle : agriculture, élevage, artisanat, commerce, solidarité",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Décrire les activités économiques traditionnelles de Tupuri",
-        "Expliquer les systèmes d'échange et de solidarité",
-        "Analyser l'évolution de l'économie traditionnelle",
-        "Produire un texte sur une activité économique"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Économie traditionnelle de la communauté Tupuri. Module : Module MC4 — Pratiques en communauté (Niveau 1).",
-        "steps": [
-          "**Mise en contexte :** De quoi vivait la communauté Tupuri avant la colonisation ?",
-          "**Présentation :** Agriculture, élevage, chasse, pêche, artisanat : activités et savoirs techniques.",
-          "**Explication :** Solidarité économique : tontines, entraide agricole, marchés périodiques.",
-          "**Analyse :** Impact de la monétarisation et de la modernité.",
-          "**Production :** Texte descriptif sur une activité économique traditionnelle."
-        ],
-        "freedom": "L'économie traditionnelle est souvent invisible dans les manuels. La rendre visible, c'est valoriser des savoirs réels et complexes.",
-        "tips": "L'économie traditionnelle est souvent invisible dans les manuels. La rendre visible, c'est valoriser des savoirs réels et complexes."
-      },
-      "student": {
-        "intro": "L'économie traditionnelle de Tupuri est un système de solidarité et de savoir-faire sophistiqué.",
-        "activities": [
-          "Liste les 5 principales activités économiques et les savoirs qu'elles requièrent.",
-          "Explique le fonctionnement d'une tontine ou d'un système d'entraide agricole.",
-          "Compare marché traditionnel et marché moderne : 3 différences.",
-          "Rédige 10 phrases sur une activité artisanale traditionnelle.",
-          "Mémorise le vocabulaire économique traditionnel en Tupuri."
-        ],
-        "memo": "L'**économie traditionnelle** de Tupuri repose sur l'agriculture, l'artisanat et des systèmes de solidarité comme les tontines. Ces pratiques ont une logique interne complexe qui coexiste avec l'économie moderne."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC5-1",
-      "code": "MC5.1",
-      "module": "MC5-pratiques-communaute2",
-      "moduleTitle": "Module MC5 — Pratiques en communauté (Niveau 2)",
-      "title": "Symbolique, rites et interdits en culture Tupuri",
-      "anelcac": "Pratiques communautaires Niv. 2 : symbolique, rites, interdits (tabous)",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Expliquer le rôle des symboles dans la culture Tupuri",
-        "Identifier des rites spécifiques et leur signification",
-        "Analyser la fonction sociale des interdits",
-        "Produire un texte analytique sur une pratique symbolique"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Symbolique, rites et interdits en culture Tupuri. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
-        "steps": [
-          "**Mise en contexte :** Montrer un objet ou une couleur symbolique de Tupuri. Quelle est sa signification ?",
-          "**Présentation :** Symboles culturels : couleurs, objets, gestes, espaces sacrés.",
-          "**Explication :** Rites spécifiques et leur logique. Les tabous : aliments, lieux, actions interdites.",
-          "**Discussion :** La fonction des interdits : protection, cohésion sociale, transmission de valeurs.",
-          "**Production :** Analyse d'un rite ou d'un interdit (description → signification → fonction sociale)."
-        ],
-        "freedom": "Aborder les rites et tabous avec respect et neutralité. L'objectif est de comprendre, non de juger.",
-        "tips": "Aborder les rites et tabous avec respect et neutralité. L'objectif est de comprendre, non de juger."
-      },
-      "student": {
-        "intro": "Chaque geste, chaque couleur, chaque interdit en culture Tupuri a un sens. Tu décodes la symbolique culturelle de ta communauté.",
-        "activities": [
-          "Identifie 3 symboles importants de la culture Tupuri et explique leur signification.",
-          "Décris un rite culturel et analyse sa fonction sociale.",
-          "Explique pourquoi les interdits culturels sont des régulateurs sociaux.",
-          "Rédige un texte analytique de 10 phrases sur un interdit alimentaire ou spatial.",
-          "Mémorise le vocabulaire Tupuri des rites, symboles et interdits."
-        ],
-        "memo": "La **symbolique** de la culture **Tupuri** exprime un système de valeurs cohérent. Les **rites** et les **interdits** ont une fonction de régulation sociale et de transmission des valeurs aux générations suivantes."
-      },
-      "emacResources": []
-    },
-    {
-      "id": "MC5-2",
-      "code": "MC5.2",
-      "module": "MC5-pratiques-communaute2",
-      "moduleTitle": "Module MC5 — Pratiques en communauté (Niveau 2)",
-      "title": "Médias traditionnels et transmission culturelle en Tupuri",
-      "anelcac": "Pratiques communautaires Niv. 2 : médias traditionnels, transmission intergénérationnelle",
-      "duration": "60 min",
-      "level": "CN",
-      "objectives": [
-        "Identifier les médias traditionnels de communication en culture Tupuri",
-        "Analyser les mécanismes de transmission culturelle intergénérationnelle",
-        "Évaluer les défis contemporains de la transmission",
-        "Produire un projet de valorisation culturelle"
-      ],
-      "vocabulary": [],
-      "teacher": {
-        "intro": "Leçon : Médias traditionnels et transmission culturelle en Tupuri. Module : Module MC5 — Pratiques en communauté (Niveau 2).",
-        "steps": [
-          "**Mise en contexte :** Avant la radio et internet, comment les nouvelles circulaient-elles dans la communauté Tupuri ?",
-          "**Présentation :** Médias traditionnels : tam-tam, crieurs publics, griots, réunions de village, contes du soir.",
-          "**Explication :** Mécanismes de transmission : bouche à oreille, apprentissage par exemple, cérémonies d'initiation.",
-          "**Analyse :** Défis contemporains : exode rural, médias numériques, désintérêt des jeunes.",
-          "**Production :** Projet de classe pour valoriser la culture Tupuri (radio scolaire, journal bilingue, exposition)."
-        ],
-        "freedom": "Terminer par un projet concret de valorisation culturelle renforce l'engagement et donne du sens à l'ensemble de l'apprentissage CN.",
-        "tips": "Terminer par un projet concret de valorisation culturelle renforce l'engagement et donne du sens à l'ensemble de l'apprentissage CN."
-      },
-      "student": {
-        "intro": "Comment une culture survit-elle ? Par ses **médias traditionnels** et sa **transmission intergénérationnelle**. Dans cette leçon finale, tu réfléchis à comment protéger la culture Tupuri aujourd'hui.",
-        "activities": [
-          "Identifie 4 médias traditionnels et explique le rôle de chacun.",
-          "Interroge un aîné sur un savoir culturel Tupuri appris de ses parents. Rédige son témoignage.",
-          "Identifie 3 défis à la transmission de la culture Tupuri et propose des solutions.",
-          "Conçois un projet de valorisation : quel format, quel public, quel contenu ?",
-          "Mémorise les noms des principaux médias traditionnels en Tupuri."
-        ],
-        "memo": "Les **médias traditionnels** de la culture **Tupuri** (tam-tam, conteurs, réunions villageoises) assurent la transmission des savoirs et valeurs. Des actions concrètes de valorisation sont nécessaires pour assurer la survie de ce patrimoine."
-      },
-      "emacResources": []
+     "id": "dacae5379f0e",
+     "audio": "c054fd3d9f7640e2088c57020e9a2e78.mp3",
+     "langText": "kããɗa de maŋ ti Lɛ'kããwa de bìi",
+     "langWord": "kããɗa de maŋ ti Lɛ'kããwa de bìi",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
     }
-  ]
+   ],
+   "teacher": {
+    "intro": "Leçon : Voyelles de Tupuri. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
+    "steps": [
+     "**Mise en contexte :** Écrire au tableau des mots connus en Tupuri et demander quels sons les élèves entendent.",
+     "**Présentation :** Introduire l'AGLC. Écrire les voyelles simples de Tupuri au tableau en les articulant clairement.",
+     "**Explication :** Voyelles spécifiques de Tupuri absentes du français (nasales, d'aperture particulière…). Exercices d'écoute et répétition.",
+     "**Application :** Liste de 10 mots — les élèves soulignent les voyelles et indiquent : simple ou spécifique.",
+     "**Évaluation :** Dictée de 5 mots simples — les élèves les transcrivent avec les voyelles correctes."
+    ],
+    "freedom": "Utiliser les exemples du vocabulaire ALCAM de la plateforme. Pour chaque voyelle spécifique, donner un mot-clé mémorisable.",
+    "tips": "Utiliser les exemples du vocabulaire ALCAM de la plateforme. Pour chaque voyelle spécifique, donner un mot-clé mémorisable."
+   },
+   "student": {
+    "intro": "Chaque langue a ses propres sons. En Tupuri, certaines voyelles n'existent pas en français. Cette leçon t'apprend à les entendre, les prononcer et les écrire.",
+    "activities": [
+     "Écoute les enregistrements du vocabulaire Tupuri et identifie les voyelles que tu entends.",
+     "Classe les voyelles : **Communes avec le français** | **Propres à Tupuri**.",
+     "Transcris les 5 mots dictés en veillant à bien noter chaque voyelle.",
+     "Trouve 3 mots en Tupuri pour chaque voyelle spécifique et écris-les.",
+     "Mémorise : **AGLC** = Alphabet Général des Langues Camerounaises, référence officielle."
+    ],
+    "memo": "Le système vocalique de **Tupuri** comprend des voyelles simples et des voyelles spécifiques (ex. voyelles nasalisées). On les note grâce à l'**AGLC**. La maîtrise des voyelles est la base de la lecture et de l'écriture en Tupuri."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "II-2",
+   "code": "II.2",
+   "module": "M2-segmentaux",
+   "moduleTitle": "Module II — Phonologie segmentale : voyelles et consonnes",
+   "title": "Consonnes de Tupuri et production écrite",
+   "anelcac": "Consonnes — simples, spécifiques, complexes ; production écrite voyelles et consonnes",
+   "duration": "60 min",
+   "level": "6e",
+   "objectives": [
+    "Identifier le système consonantique de Tupuri",
+    "Reconnaître les consonnes spécifiques absentes du français",
+    "Articuler correctement les consonnes en contexte",
+    "Produire par écrit des mots avec voyelles et consonnes correctement notés"
+   ],
+   "vocabulary": [
+    {
+     "id": "3aa769fdb4d3",
+     "audio": "3fb9f8af5fb47271ed800dc6e2919b89.mp3",
+     "langText": "Maysay de sa' hããre",
+     "langWord": "Maysay de sa' hããre",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
+    },
+    {
+     "id": "4e01e82de371",
+     "audio": "dac7c0bc044c203cd4d95fa81808fcba.mp3",
+     "langText": "Maysay de maŋ hããre ti",
+     "langWord": "Maysay de maŋ hããre ti",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
+    },
+    {
+     "id": "b30b3877d932",
+     "audio": "ab3cf291f9ca9de98bcda070f4a78fd9.mp3",
+     "langText": "Cɔɓwɛ hee taarag ɓaale ɓɛ gà",
+     "langWord": "Cɔɓwɛ hee taarag ɓaale ɓɛ gà",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
+    },
+    {
+     "id": "2854d0711faf",
+     "audio": "d6dafed242e9677aa191e233a173a515.mp3",
+     "langText": "Maywããyaŋ de ko Laasɛnwa",
+     "langWord": "Maywããyaŋ de ko Laasɛnwa",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
+    },
+    {
+     "id": "0af6ac237efc",
+     "audio": "4de0072f8c8148268019ae7cfb54c1b6.mp3",
+     "langText": "Cooren rug de wɔɔrɛ debaŋ",
+     "langWord": "Cooren rug de wɔɔrɛ debaŋ",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
+    },
+    {
+     "id": "10b8c934709a",
+     "audio": "f40ff8963283abcc69a114f58936c0fb.mp3",
+     "langText": "Cooren ndar ti kluuri debaŋ",
+     "langWord": "Cooren ndar ti kluuri debaŋ",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
+    },
+    {
+     "id": "04ffc5aeab20",
+     "audio": "6564eb0f3703905dd1c13a25f7976ca7.mp3",
+     "langText": "Wããniwa wɔ de kee kɛfdɛr ma had jag depùr de Taynenwa",
+     "langWord": "Wããniwa wɔ de kee kɛfdɛr ma had jag depùr de Taynenwa",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
+    },
+    {
+     "id": "dacae5379f0e",
+     "audio": "c054fd3d9f7640e2088c57020e9a2e78.mp3",
+     "langText": "kããɗa de maŋ ti Lɛ'kããwa de bìi",
+     "langWord": "kããɗa de maŋ ti Lɛ'kããwa de bìi",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M2-segmentaux"
+    }
+   ],
+   "teacher": {
+    "intro": "Leçon : Consonnes de Tupuri et production écrite. Module : Module II — Phonologie segmentale : voyelles et consonnes.",
+    "steps": [
+     "**Mise en contexte :** Rappeler les voyelles. Qu'est-ce qu'une consonne ?",
+     "**Présentation :** Tableau des consonnes de Tupuri selon l'AGLC. Insister sur les consonnes spécifiques (labio-vélaires, prénasalisées, implosives…).",
+     "**Explication :** Articuler les consonnes difficiles : isolément → syllabe → mot.",
+     "**Application :** Paires minimales : écoute de mots qui ne diffèrent que par une consonne.",
+     "**Production :** 5 phrases simples en Tupuri avec transcription consonantique soignée."
+    ],
+    "freedom": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées.",
+    "tips": "Les consonnes implosives et prénasalisées sont souvent les plus difficiles pour les élèves alphabétisés en français. Multiplier les écoutes répétées."
+   },
+   "student": {
+    "intro": "Après les voyelles, voici les consonnes de Tupuri ! Certaines sont uniques — tu ne les entendras qu'en Tupuri et dans quelques langues africaines voisines.",
+    "activities": [
+     "Écoute les paires minimales et coche le mot entendu (ex. bìlí / pìlí).",
+     "Transcris 5 mots dictés en faisant attention aux consonnes spécifiques.",
+     "Repère dans le vocabulaire tous les mots contenant une consonne prénasalisée. Combien en trouves-tu ?",
+     "Compose 3 phrases simples en Tupuri avec au moins une consonne spécifique chacune.",
+     "Mémorise : **paire minimale** = deux mots identiques sauf en un phonème."
+    ],
+    "memo": "Le système consonantique de **Tupuri** comprend des consonnes communes avec le français et des consonnes spécifiques (implosives, prénasalisées, labio-vélaires…). Les noter selon l'**AGLC** est indispensable pour la lecture et l'écriture."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "III-1",
+   "code": "III.1",
+   "module": "M3-suprasegmentaux",
+   "moduleTitle": "Module III — Phonologie suprasegmentale : les tons",
+   "title": "Définition et fonction des tons",
+   "anelcac": "Tons — définition, fonction, présentation ; tons simples (haut, bas, moyen)",
+   "duration": "60 min",
+   "level": "5e",
+   "objectives": [
+    "Définir le ton comme trait distinctif des langues à tons",
+    "Distinguer ton lexical et ton grammatical",
+    "Identifier les tons simples de Tupuri",
+    "Transcrire des mots avec leurs tons selon l'AGLC"
+   ],
+   "vocabulary": [
+    {
+     "id": "d73c83f9a449",
+     "audio": "beb98c22e3dc074c827b24830de8d989.mp3",
+     "langText": "À diŋ coore garà sawcày",
+     "langWord": "À diŋ coore garà sawcày",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "df0e7c4a343a",
+     "audio": "bf63c30dcb21f965003735e46ba2f798.mp3",
+     "langText": "Á laa wããre jobo gà hase",
+     "langWord": "Á laa wããre jobo gà hase",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "f5120c1e5246",
+     "audio": "ad8e9d049016589818794b18a5ce232f.mp3",
+     "langText": "Daŋra ɗaa cúgí",
+     "langWord": "Daŋra ɗaa cúgí",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "9b6f968b4175",
+     "audio": "0f48b0c3f4e1ad2450c715cd93a5764d.mp3",
+     "langText": "ndi ko gà mamú",
+     "langWord": "ndi ko gà mamú",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "645b3a1f0a37",
+     "audio": "8745ef739dd5eda7c2de002e30385637.mp3",
+     "langText": "Wel-wɛrdày de kɔɗ dɛ̀ɛrɛ̀ wɔ",
+     "langWord": "Wel-wɛrdày de kɔɗ dɛ̀ɛrɛ̀ wɔ",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "873dfdd17b8c",
+     "audio": "15281c9842876f04df7140ed9c4ef224.mp3",
+     "langText": "Dɛ̀ɛrɛ̀ ɓɛ̀n wɔ de gɔɓre",
+     "langWord": "Dɛ̀ɛrɛ̀ ɓɛ̀n wɔ de gɔɓre",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "370e3c722231",
+     "audio": "61206dad73d29d658c860a5fe476d85c.mp3",
+     "langText": "́Bàl maa re coore jar gɔ no",
+     "langWord": "́Bàl maa re coore jar gɔ no",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "9fa0e0390a89",
+     "audio": "8d9ea6dcc1fb350c0f6cc0bbdb0081c1.mp3",
+     "langText": "Wǔr bày de naage wà ɗa",
+     "langWord": "Wǔr bày de naage wà ɗa",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    }
+   ],
+   "teacher": {
+    "intro": "Leçon : Définition et fonction des tons. Module : Module III — Phonologie suprasegmentale : les tons.",
+    "steps": [
+     "**Mise en contexte :** Prononcer deux mots de Tupuri qui s'écrivent pareil mais ont des tons différents et des sens différents.",
+     "**Présentation :** Définir le ton. Présenter les tons simples de Tupuri et leurs diacritiques AGLC.",
+     "**Explication :** Tons simples : haut (´), bas (`), moyen (¯). Faire répéter chaque ton.",
+     "**Application :** Associer des mots enregistrés à leur notation tonale.",
+     "**Évaluation :** Dictée de 5 mots — les élèves notent les tons."
+    ],
+    "freedom": "Chanter les tons aide à les mémoriser. Utiliser une flûte ou siffler les mélodies tonales.",
+    "tips": "Chanter les tons aide à les mémoriser. Utiliser une flûte ou siffler les mélodies tonales."
+   },
+   "student": {
+    "intro": "Tupuri est une langue à tons : la hauteur de ta voix change le sens du mot ! Tu vas apprendre à entendre et noter ces tons.",
+    "activities": [
+     "Écoute les paires de mots. Pour chaque paire, les tons sont-ils identiques ou différents ?",
+     "Transcris 5 mots avec leurs tons en utilisant les diacritiques AGLC (´ ` ¯).",
+     "Cherche 2 mots dans le vocabulaire qui ne diffèrent que par le ton. Quel est le sens de chacun ?",
+     "Chante les tons d'un mot de 3 syllabes en Haut-Bas-Haut, puis Bas-Haut-Bas. Quelle différence entends-tu ?",
+     "Mémorise : ton haut = ´ ; ton bas = ` ; ton moyen = ¯."
+    ],
+    "memo": "En **Tupuri**, le ton est phonologique : il distingue des mots de sens différents. Les **tons simples** sont le haut (´), le bas (`), et parfois le moyen (¯). On les note grâce aux diacritiques de l'**AGLC**."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "III-2",
+   "code": "III.2",
+   "module": "M3-suprasegmentaux",
+   "moduleTitle": "Module III — Phonologie suprasegmentale : les tons",
+   "title": "Tons complexes et production écrite tonée",
+   "anelcac": "Tons complexes (montants, descendants) ; recherche du ton d'un mot ; production écrite à tons",
+   "duration": "60 min",
+   "level": "5e",
+   "objectives": [
+    "Identifier les tons complexes de Tupuri (montant, descendant)",
+    "Trouver le ton d'un mot par la méthode d'isolement",
+    "Transcrire des phrases avec notation tonale complète",
+    "Produire un court texte en Tupuri avec tons corrects"
+   ],
+   "vocabulary": [
+    {
+     "id": "d73c83f9a449",
+     "audio": "beb98c22e3dc074c827b24830de8d989.mp3",
+     "langText": "À diŋ coore garà sawcày",
+     "langWord": "À diŋ coore garà sawcày",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "df0e7c4a343a",
+     "audio": "bf63c30dcb21f965003735e46ba2f798.mp3",
+     "langText": "Á laa wããre jobo gà hase",
+     "langWord": "Á laa wããre jobo gà hase",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "f5120c1e5246",
+     "audio": "ad8e9d049016589818794b18a5ce232f.mp3",
+     "langText": "Daŋra ɗaa cúgí",
+     "langWord": "Daŋra ɗaa cúgí",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "9b6f968b4175",
+     "audio": "0f48b0c3f4e1ad2450c715cd93a5764d.mp3",
+     "langText": "ndi ko gà mamú",
+     "langWord": "ndi ko gà mamú",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "645b3a1f0a37",
+     "audio": "8745ef739dd5eda7c2de002e30385637.mp3",
+     "langText": "Wel-wɛrdày de kɔɗ dɛ̀ɛrɛ̀ wɔ",
+     "langWord": "Wel-wɛrdày de kɔɗ dɛ̀ɛrɛ̀ wɔ",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "873dfdd17b8c",
+     "audio": "15281c9842876f04df7140ed9c4ef224.mp3",
+     "langText": "Dɛ̀ɛrɛ̀ ɓɛ̀n wɔ de gɔɓre",
+     "langWord": "Dɛ̀ɛrɛ̀ ɓɛ̀n wɔ de gɔɓre",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "370e3c722231",
+     "audio": "61206dad73d29d658c860a5fe476d85c.mp3",
+     "langText": "́Bàl maa re coore jar gɔ no",
+     "langWord": "́Bàl maa re coore jar gɔ no",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    },
+    {
+     "id": "9fa0e0390a89",
+     "audio": "8d9ea6dcc1fb350c0f6cc0bbdb0081c1.mp3",
+     "langText": "Wǔr bày de naage wà ɗa",
+     "langWord": "Wǔr bày de naage wà ɗa",
+     "frenchText": "",
+     "frenchWord": "",
+     "pos": "",
+     "classNoun": "",
+     "module": "M3-suprasegmentaux"
+    }
+   ],
+   "teacher": {
+    "intro": "Leçon : Tons complexes et production écrite tonée. Module : Module III — Phonologie suprasegmentale : les tons.",
+    "steps": [
+     "**Mise en contexte :** Rappeler les tons simples. Annoncer que certaines syllabes portent deux tons à la suite.",
+     "**Présentation :** Tons complexes : descendant (̂), montant (̌). Les faire entendre et reproduire.",
+     "**Explication :** Méthode d'isolement : prononcer le mot avec un ton haut artificiel, puis bas, et écouter lequel semble naturel.",
+     "**Application :** Les élèves cherchent le ton de 10 mots en Tupuri à l'aide de la méthode d'isolement.",
+     "**Production :** Dialogue de 6 répliques en Tupuri avec notation tonale complète."
+    ],
+    "freedom": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant.",
+    "tips": "Le ton complexe descendant est souvent le plus fréquent. Commencer par lui avant le montant."
+   },
+   "student": {
+    "intro": "Tu connais les tons simples. Maintenant, les tons complexes de Tupuri — des syllabes qui montent et descendent en même temps !",
+    "activities": [
+     "Écoute les mots enregistrés et classe-les : Ton simple | Ton complexe.",
+     "Applique la méthode d'isolement à 5 mots : prononce-les haut, puis bas, et note le ton perçu.",
+     "Transcris un dialogue de 4 répliques en Tupuri avec tous les tons notés.",
+     "Produis un texte de 3 phrases en Tupuri sur une action de ta vie quotidienne, avec notation tonale.",
+     "Mémorise : ton descendant = ̂ ; ton montant = ̌."
+    ],
+    "memo": "Les **tons complexes** de **Tupuri** (descendant ̂, montant ̌) sont des mouvements mélodiques sur une seule syllabe. La **méthode d'isolement** permet de trouver le ton d'un mot inconnu. Une transcription en Tupuri sans tons est incomplète."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "IV-1",
+   "code": "IV.1",
+   "module": "M4-syntagme-nominal",
+   "moduleTitle": "Module IV — Le syntagme nominal",
+   "title": "La base nominale et les classes nominales",
+   "anelcac": "SN : constituants, nom base+affixes, classes nominales, pronoms personnels",
+   "duration": "60 min",
+   "level": "5e",
+   "objectives": [
+    "Identifier la structure du nom en Tupuri (base + affixes)",
+    "Reconnaître les classes nominales de Tupuri",
+    "Former le singulier et le pluriel des noms",
+    "Employer les pronoms personnels correspondant aux classes nominales"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : La base nominale et les classes nominales. Module : Module IV — Le syntagme nominal.",
+    "steps": [
+     "**Mise en contexte :** Écrire un nom en Tupuri au singulier et au pluriel. Qu'est-ce qui change ?",
+     "**Présentation :** Classe nominale : dans les langues bantu et bantoid, les noms sont regroupés en classes marquées par des préfixes.",
+     "**Explication :** Principales classes nominales de Tupuri avec préfixes au singulier et au pluriel.",
+     "**Application :** Tableau : singulier → pluriel pour 10 noms.",
+     "**Évaluation :** Identifier la classe nominale de 5 noms."
+    ],
+    "freedom": "Partir des noms que les élèves utilisent déjà. Les classes nominales corresponden souvent à des catégories sémantiques (humains, animaux, objets…).",
+    "tips": "Partir des noms que les élèves utilisent déjà. Les classes nominales corresponden souvent à des catégories sémantiques (humains, animaux, objets…)."
+   },
+   "student": {
+    "intro": "En Tupuri, les noms sont organisés en **classes**. Chaque classe a ses propres préfixes pour le singulier et le pluriel — un système beaucoup plus riche que le genre en français !",
+    "activities": [
+     "À partir du vocabulaire Tupuri, fais un tableau : Singulier | Pluriel | Classe nominale.",
+     "Identifie le préfixe de classe dans chaque nom. Surligne-le.",
+     "Mets au pluriel les 5 noms suivants en changeant le préfixe selon la classe.",
+     "Associe chaque nom à son pronom de classe correspondant.",
+     "Mémorise : **classe nominale** = catégorie grammaticale des noms, marquée par des préfixes."
+    ],
+    "memo": "En **Tupuri**, les noms sont organisés en **classes nominales** marquées par des préfixes. Le changement de préfixe indique le nombre. Pronoms, adjectifs et verbes s'accordent avec la classe du nom."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "IV-2",
+   "code": "IV.2",
+   "module": "M4-syntagme-nominal",
+   "moduleTitle": "Module IV — Le syntagme nominal",
+   "title": "Les déterminants du nom",
+   "anelcac": "Déterminants : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs ; accord de classe",
+   "duration": "60 min",
+   "level": "5e",
+   "objectives": [
+    "Identifier les différents types de déterminants en Tupuri",
+    "Accorder les déterminants avec le nom selon la classe nominale",
+    "Construire des syntagmes nominaux complexes",
+    "Produire des phrases avec SN complets"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Les déterminants du nom. Module : Module IV — Le syntagme nominal.",
+    "steps": [
+     "**Mise en contexte :** Écrire un SN simple. Comment l'enrichir ?",
+     "**Présentation :** Déterminants de Tupuri : possessifs, démonstratifs, numéraux, indéfinis, interrogatifs.",
+     "**Explication :** Chaque déterminant s'accorde avec la classe du nom (même préfixe ou suffixe de classe).",
+     "**Application :** Compléter des SN avec le bon déterminant selon la classe.",
+     "**Production :** 5 SN complexes (nom + 2 déterminants) intégrés dans des phrases."
+    ],
+    "freedom": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Tupuri par rapport au français.",
+    "tips": "Insister sur les accords de classe — l'une des caractéristiques les plus distinctives de Tupuri par rapport au français."
+   },
+   "student": {
+    "intro": "Un nom avec ses déterminants devient beaucoup plus précis ! En Tupuri, les déterminants s'accordent avec la **classe du nom**.",
+    "activities": [
+     "Complète les SN avec le bon déterminant possessif selon la classe du nom.",
+     "Souligne les déterminants dans 5 phrases en Tupuri et identifie leur type.",
+     "Transforme chaque SN simple en SN complexe en ajoutant un démonstratif et un numéral.",
+     "Rédige 5 phrases en Tupuri avec au moins deux déterminants par SN.",
+     "Mémorise : **accord de classe** = le déterminant change de forme selon la classe nominale."
+    ],
+    "memo": "En **Tupuri**, tous les déterminants (possessifs, démonstratifs, numéraux, indéfinis, interrogatifs) s'accordent avec la **classe nominale** du nom. Un **SN complexe** = nom + base nominale + déterminants accordés."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "V-1",
+   "code": "V.1",
+   "module": "M5-syntagme-verbal",
+   "moduleTitle": "Module V — Le syntagme verbal",
+   "title": "Le radical verbal et la conjugaison",
+   "anelcac": "SV : constituants, radical, affixes, conjugaison, temps verbaux",
+   "duration": "60 min",
+   "level": "4e",
+   "objectives": [
+    "Identifier le radical verbal et les affixes de conjugaison en Tupuri",
+    "Conjuguer un verbe aux principaux temps verbaux",
+    "Analyser la structure morphologique d'une forme verbale",
+    "Employer correctement les formes verbales dans des phrases"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Le radical verbal et la conjugaison. Module : Module V — Le syntagme verbal.",
+    "steps": [
+     "**Mise en contexte :** Écrire une forme verbale en Tupuri et demander aux élèves d'identifier le radical.",
+     "**Présentation :** Décomposer une forme verbale : préfixe de sujet + marqueurs TAM + radical + suffixes.",
+     "**Explication :** Paradigme de conjugaison d'un verbe fréquent en Tupuri à plusieurs temps.",
+     "**Application :** Conjugaison tableau : 3 verbes fréquents.",
+     "**Évaluation :** Traduire 5 phrases du français vers Tupuri."
+    ],
+    "freedom": "Le système TAM de Tupuri est souvent plus riche que celui du français. Commencer par les temps les plus usités.",
+    "tips": "Le système TAM de Tupuri est souvent plus riche que celui du français. Commencer par les temps les plus usités."
+   },
+   "student": {
+    "intro": "Le verbe est le cœur de la phrase en Tupuri. Il porte à lui seul le temps, l'aspect, le mode et le sujet ! Dans cette leçon, tu décortiques la mécanique verbale.",
+    "activities": [
+     "Décompose 5 formes verbales en Tupuri : préfixe de sujet | marqueur TAM | radical | suffixe.",
+     "Conjugue le verbe 'manger' en Tupuri à 3 temps différents pour toutes les personnes.",
+     "Identifie le temps verbal de 5 phrases en Tupuri et justifie ta réponse.",
+     "Traduis 3 phrases du français vers Tupuri en soignant la conjugaison.",
+     "Mémorise : **TAM** = Temps-Aspect-Mode ; c'est ce que les affixes verbaux expriment en Tupuri."
+    ],
+    "memo": "En **Tupuri**, une forme verbale = préfixe de sujet + marqueurs TAM + radical + suffixes. Le système **TAM** (Temps-Aspect-Mode) exprime des nuances temporelles et aspectuelles plus précises qu'en français."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "V-2",
+   "code": "V.2",
+   "module": "M5-syntagme-verbal",
+   "moduleTitle": "Module V — Le syntagme verbal",
+   "title": "Modes verbaux et négation",
+   "anelcac": "Modes : indicatif, impératif ; négation ; production écrite SV simple/complexe",
+   "duration": "60 min",
+   "level": "4e",
+   "objectives": [
+    "Identifier et employer les principaux modes verbaux de Tupuri",
+    "Former la négation verbale",
+    "Construire des SV simples et complexes",
+    "Produire un texte avec diversité de modes et d'aspects"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Modes verbaux et négation. Module : Module V — Le syntagme verbal.",
+    "steps": [
+     "**Mise en contexte :** Donner un ordre en Tupuri. Quel mode est utilisé ?",
+     "**Présentation :** Modes de Tupuri : indicatif, impératif, et autres modes aspectuels.",
+     "**Explication :** Formation de la négation en Tupuri : préfixe, suffixe négatif, ou particule.",
+     "**Application :** Transformer 5 phrases affirmatives en négatives et vice versa.",
+     "**Production :** Texte de 8 phrases alternant affirmation, négation et impératif."
+    ],
+    "freedom": "La négation en Tupuri peut être double (encadrement du verbe) ou simple. Montrer les deux cas.",
+    "tips": "La négation en Tupuri peut être double (encadrement du verbe) ou simple. Montrer les deux cas."
+   },
+   "student": {
+    "intro": "Donner un ordre, exprimer un doute, nier une action — chaque nuance a sa forme en Tupuri !",
+    "activities": [
+     "Mets les 5 phrases données à la forme négative.",
+     "Transforme ces 5 affirmations en impératifs adressés à un ami.",
+     "Identifie le mode et la polarité (affirm./négat.) de chaque phrase dans le texte fourni.",
+     "Rédige un dialogue de 6 répliques incluant au moins 2 impératifs et 2 négations.",
+     "Mémorise : **mode** = manière d'envisager l'action ; **négation** = marque grammaticale niant l'action."
+    ],
+    "memo": "En **Tupuri**, les modes principaux sont l'**indicatif** et l'**impératif**. La **négation** est marquée par une particule ou un affixe spécifique. La diversité des modes est une richesse expressive de Tupuri."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "VI-1",
+   "code": "VI.1",
+   "module": "M6-phrase",
+   "moduleTitle": "Module VI — La phrase en Tupuri",
+   "title": "La phrase simple et ses types",
+   "anelcac": "Phrase simple, interrogative, négative, impérative ; ordre des mots",
+   "duration": "60 min",
+   "level": "3e",
+   "objectives": [
+    "Analyser la structure de la phrase simple en Tupuri",
+    "Distinguer les 4 types de phrases",
+    "Maîtriser l'ordre des constituants",
+    "Produire des phrases simples variées"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : La phrase simple et ses types. Module : Module VI — La phrase en Tupuri.",
+    "steps": [
+     "**Mise en contexte :** Lire une phrase en Tupuri. Qui fait quoi ?",
+     "**Présentation :** Ordre de base des constituants en Tupuri. Comparer avec le français.",
+     "**Explication :** Les 4 types de phrases à partir d'une même phrase de base.",
+     "**Application :** Transformer des phrases déclaratives en interrogatives, puis en négatives.",
+     "**Production :** 8 phrases variées (2 par type) sur la vie scolaire."
+    ],
+    "freedom": "L'ordre des mots en Tupuri peut différer du français. C'est une caractéristique typologique, pas une erreur.",
+    "tips": "L'ordre des mots en Tupuri peut différer du français. C'est une caractéristique typologique, pas une erreur."
+   },
+   "student": {
+    "intro": "Une phrase bien construite en Tupuri suit des règles précises. Tu apprends les types de phrases et l'ordre des mots.",
+    "activities": [
+     "Identifie l'ordre des constituants dans 5 phrases en Tupuri.",
+     "Transforme 4 phrases déclaratives en interrogatives totales.",
+     "Transforme ces 4 phrases en négatives.",
+     "Rédige 2 phrases de chaque type (déclarative, interrogative, négative, impérative).",
+     "Mémorise : l'ordre de base en **Tupuri** est typologiquement stable."
+    ],
+    "memo": "La **phrase simple** en **Tupuri** a un ordre de constituants caractéristique. Les 4 types (déclarative, interrogative, négative, impérative) se forment avec des marques grammaticales spécifiques."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "VI-2",
+   "code": "VI.2",
+   "module": "M6-phrase",
+   "moduleTitle": "Module VI — La phrase en Tupuri",
+   "title": "Connecteurs logiques et phrase complexe",
+   "anelcac": "Connecteurs logiques, phrase complexe, coordination, subordination ; production écrite",
+   "duration": "60 min",
+   "level": "3e",
+   "objectives": [
+    "Identifier les connecteurs logiques de Tupuri",
+    "Distinguer coordination et subordination",
+    "Construire des phrases complexes",
+    "Produire un texte cohérent avec diversité syntaxique"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Connecteurs logiques et phrase complexe. Module : Module VI — La phrase en Tupuri.",
+    "steps": [
+     "**Mise en contexte :** Lire un court récit en Tupuri. Quels mots relient les phrases ?",
+     "**Présentation :** Connecteurs de Tupuri : conjonctions de coordination et de subordination.",
+     "**Explication :** Phrase complexe par coordination / par subordination. Exemples en Tupuri.",
+     "**Application :** Relier 5 paires de phrases simples avec le connecteur approprié.",
+     "**Production :** Texte de 10 phrases sur 'Une journée dans mon village' avec 5 connecteurs différents."
+    ],
+    "freedom": "Les connecteurs de Tupuri ont souvent des équivalents français mais avec des positions syntaxiques différentes.",
+    "tips": "Les connecteurs de Tupuri ont souvent des équivalents français mais avec des positions syntaxiques différentes."
+   },
+   "student": {
+    "intro": "Pour raconter et argumenter, tu as besoin de relier tes phrases. Les **connecteurs logiques** de Tupuri sont tes outils !",
+    "activities": [
+     "Souligne tous les connecteurs dans le texte fourni.",
+     "Classe-les : Addition | Cause | Conséquence | Opposition | Temps.",
+     "Relie 5 paires de phrases avec le connecteur le plus approprié.",
+     "Rédige un texte de 8 phrases avec au moins 4 connecteurs différents.",
+     "Mémorise : coordination = même niveau ; subordination = une phrase dans une autre."
+    ],
+    "memo": "En **Tupuri**, les **connecteurs logiques** permettent de construire des **phrases complexes** cohérentes. Varier les structures syntaxiques améliore la qualité de l'expression écrite et orale."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "VII-1",
+   "code": "VII.1",
+   "module": "M7-quotidien1",
+   "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+   "title": "Se saluer, se présenter et interagir en Tupuri",
+   "anelcac": "Situations de communication quotidienne : salutations, présentations, formules de politesse",
+   "duration": "60 min",
+   "level": "4e",
+   "objectives": [
+    "Maîtriser les formules de salutation selon le contexte",
+    "Se présenter et présenter quelqu'un en Tupuri",
+    "Employer les formules de politesse et de respect",
+    "Mener une brève conversation de la vie courante"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Se saluer, se présenter et interagir en Tupuri. Module : Module VII — Gestion du quotidien (Niveau 1).",
+    "steps": [
+     "**Mise en contexte :** Deux élèves se rencontrent au marché. Jouer la scène en français, puis demander comment dire en Tupuri.",
+     "**Présentation :** Salutations de Tupuri selon les moments de la journée, l'âge et le contexte.",
+     "**Explication :** Formules de respect envers les aînés, spécifiques à la culture Tupuri.",
+     "**Jeu de rôle :** Par groupes de 2, simuler des rencontres dans des contextes variés (marché, école, cérémonie).",
+     "**Production :** Dialogue de 10 répliques entre deux personnes de générations différentes."
+    ],
+    "freedom": "Les règles de salutation reflètent des valeurs culturelles profondes. Valoriser les connaissances des élèves issus de familles locutrices.",
+    "tips": "Les règles de salutation reflètent des valeurs culturelles profondes. Valoriser les connaissances des élèves issus de familles locutrices."
+   },
+   "student": {
+    "intro": "Savoir saluer en Tupuri, c'est respecter la culture ! Les formules changent selon qui tu salues et à quel moment.",
+    "activities": [
+     "Complète le tableau des salutations de Tupuri : Moment | Formule | Réponse attendue.",
+     "Joue le rôle A : saluer un aîné au marché du matin.",
+     "Invente un dialogue de 8 répliques entre un enfant et son grand-père.",
+     "Note 3 formules de politesse de Tupuri sans équivalent direct en français.",
+     "Mémorise les formules de salutation du matin, du soir et pour les aînés en Tupuri."
+    ],
+    "memo": "Les **salutations** en **Tupuri** varient selon l'heure, le statut et le contexte social. Elles reflètent les valeurs de respect et de solidarité de la communauté."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "VII-2",
+   "code": "VII.2",
+   "module": "M7-quotidien1",
+   "moduleTitle": "Module VII — Gestion du quotidien (Niveau 1)",
+   "title": "Exprimer les besoins et les actions du quotidien",
+   "anelcac": "Situations de vie : achats, demandes de service, déplacements, activités journalières",
+   "duration": "60 min",
+   "level": "4e",
+   "objectives": [
+    "Exprimer des besoins courants en Tupuri",
+    "Décrire des activités journalières",
+    "Employer le vocabulaire des lieux et actions de la vie courante",
+    "Produire un texte descriptif sur une journée type"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Exprimer les besoins et les actions du quotidien. Module : Module VII — Gestion du quotidien (Niveau 1).",
+    "steps": [
+     "**Mise en contexte :** Images de scènes de vie — marché, champ, école, maison. Comment les décrire en Tupuri ?",
+     "**Présentation :** Vocabulaire thématique : alimentation, déplacements, activités domestiques.",
+     "**Simulation :** Scène du marché : acheteur et vendeur en Tupuri.",
+     "**Application :** Décrire sa journée en Tupuri (du lever au coucher).",
+     "**Production :** Texte de 10 phrases : 'Ma journée en Tupuri'."
+    ],
+    "freedom": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles.",
+    "tips": "Le vocabulaire du quotidien est le plus motivant. Relier les mots ALCAM à des situations réelles."
+   },
+   "student": {
+    "intro": "Tu sais te saluer. Maintenant, tu vas te débrouiller dans des situations du quotidien en Tupuri : au marché, en route, à la maison.",
+    "activities": [
+     "Associe chaque image de scène de vie au mot ou à la phrase correspondant en Tupuri.",
+     "Joue le rôle du vendeur au marché : réponds aux demandes en Tupuri.",
+     "Rédige 5 phrases décrivant tes activités du matin depuis le réveil.",
+     "Traduis en Tupuri ces 5 phrases sur les déplacements quotidiens.",
+     "Mémorise 10 mots du quotidien en Tupuri avec leur traduction française."
+    ],
+    "memo": "Le vocabulaire du **quotidien** en **Tupuri** couvre l'alimentation, les déplacements et les activités domestiques. Le maîtriser permet une communication fonctionnelle dans tous les contextes."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "VIII-1",
+   "code": "VIII.1",
+   "module": "M8-quotidien2",
+   "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
+   "title": "Argumenter et convaincre en Tupuri",
+   "anelcac": "Communication élaborée : argumentation, narration, discours formel",
+   "duration": "60 min",
+   "level": "3e",
+   "objectives": [
+    "Construire une argumentation simple en Tupuri",
+    "Employer les formules du discours formel",
+    "Narrer un événement passé avec cohérence",
+    "Produire un discours oral de 2 minutes en Tupuri"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Argumenter et convaincre en Tupuri. Module : Module VIII — Gestion du quotidien (Niveau 2).",
+    "steps": [
+     "**Mise en contexte :** Lire un proverbe en Tupuri. Demander aux élèves de l'expliquer et de le défendre.",
+     "**Présentation :** Formules du discours oral formel en Tupuri : apostrophes, ouverture, clôture.",
+     "**Explication :** Structure d'une argumentation : thèse → arguments → exemples → conclusion.",
+     "**Pratique :** Débat : pour ou contre l'utilisation du Tupuri à l'école ? Chaque groupe défend sa position.",
+     "**Production :** Discours de 2 minutes sur un thème proposé."
+    ],
+    "freedom": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves.",
+    "tips": "L'art oratoire est très valorisé dans les cultures camerounaises. S'appuyer sur cette tradition pour motiver les élèves."
+   },
+   "student": {
+    "intro": "Dans les cultures de Tupuri, la parole bien dite est une force. Tu apprends à argumenter et convaincre avec éloquence.",
+    "activities": [
+     "Identifie dans le texte : thèse, arguments, exemples.",
+     "Prépare 3 arguments pour défendre l'enseignement de Tupuri à l'école primaire.",
+     "Prononce un discours d'ouverture de cérémonie en Tupuri.",
+     "Narration : raconte en Tupuri un événement mémorable de ta vie scolaire.",
+     "Mémorise les formules d'ouverture et de clôture d'un discours formel en Tupuri."
+    ],
+    "memo": "L'**argumentation** en **Tupuri** suit : thèse → arguments → exemples → conclusion. Le **discours formel** obéit à des conventions culturelles précises. La maîtrise de l'oral élaboré est une compétence de haut niveau."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "VIII-2",
+   "code": "VIII.2",
+   "module": "M8-quotidien2",
+   "moduleTitle": "Module VIII — Gestion du quotidien (Niveau 2)",
+   "title": "Littérature orale et production écrite avancée",
+   "anelcac": "Littérature orale : proverbes, contes, devinettes ; production écrite longue",
+   "duration": "60 min",
+   "level": "3e",
+   "objectives": [
+    "Analyser la structure d'un conte ou d'une devinette en Tupuri",
+    "Identifier les thèmes et valeurs véhiculés",
+    "Rédiger un conte court en respectant les conventions du genre",
+    "Utiliser la littérature orale comme ressource pédagogique"
+   ],
+   "vocabulary": [],
+   "teacher": {
+    "intro": "Leçon : Littérature orale et production écrite avancée. Module : Module VIII — Gestion du quotidien (Niveau 2).",
+    "steps": [
+     "**Mise en contexte :** Raconter ou faire écouter un conte bref en Tupuri.",
+     "**Présentation :** Genres de la littérature orale : contes, proverbes, devinettes, épopées.",
+     "**Analyse :** Structure du conte : situation initiale → perturbation → péripéties → résolution → morale.",
+     "**Application :** Analyser un conte fourni selon cette structure.",
+     "**Production :** Conte de 15 lignes minimum en Tupuri avec morale explicite."
+    ],
+    "freedom": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible.",
+    "tips": "La littérature orale est un trésor culturel menacé. Inviter des conteurs communautaires si possible."
+   },
+   "student": {
+    "intro": "Les contes, proverbes et devinettes de Tupuri sont des œuvres littéraires à part entière. Tu les analyses et tu créeras le tien !",
+    "activities": [
+     "Lis le conte fourni et identifie les 5 étapes de sa structure narrative.",
+     "Relève 3 valeurs morales transmises par ce conte.",
+     "Traduis en français un proverbe en Tupuri et explique son sens figuré.",
+     "Rédige un conte court (15 lignes) en Tupuri avec une morale sur le travail ou le respect.",
+     "Mémorise : conte = récit fictif à vocation éducative ; proverbe = formule brève de sagesse collective."
+    ],
+    "memo": "La **littérature orale** de **Tupuri** (contes, proverbes, devinettes) transmet les valeurs de la communauté. Le conte a une structure en 5 étapes. La rédiger en Tupuri mobilise toutes les compétences linguistiques acquises."
+   },
+   "emacResources": []
+  },
+  {
+   "id": "MC1-1",
+   "code": "MC1.1",
+   "module": "MC1-diversite-culturelle",
+   "moduleTitle": "Module C-I — Diversité culturelle camerounaise",
+   "title": "Qui sont les Toupouri (Dziguilao) ? Identité, langue et territoire",
+   "anelcac": "Aires culturelles, identité culturelle, peuplement",
+   "duration": "55 min",
+   "level": "6e",
+   "objectives": [
+    "Nommer la communauté Toupouri (Dziguilao) et expliquer son nom",
+    "Situer son territoire et ses voisins",
+    "Raconter son origine selon la tradition"
+   ],
+   "vocabulary": [],
+   "competence": "Présenter la communauté Toupouri (Dziguilao) (nom, langue, territoire, voisins, origine) et la situer dans la diversité culturelle du Cameroun.",
+   "situation": "Un correspondant d'une autre région te demande de lui présenter la communauté Toupouri (Dziguilao) : qui sont-ils, où vivent-ils, d'où viennent-ils ?",
+   "materiel": "Carte du Cameroun, fiche culturelle de la communauté (rubrique « Cultures » de Likalo).",
+   "teacher": {
+    "intro": "Compétence attendue : Présenter la communauté Toupouri (Dziguilao) (nom, langue, territoire, voisins, origine) et la situer dans la diversité culturelle du Cameroun.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Un correspondant d'une autre région te demande de lui présenter la communauté Toupouri (Dziguilao) : qui sont-ils, où vivent-ils, d'où viennent-ils ? » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Comment les Toupouri (Dziguilao) se nomment-ils eux-mêmes et que signifie ce nom ? — Quelle langue parlent-ils, et où la parle-t-on aussi ? — Avec quels peuples vivent-ils ? — D'où sont-ils venus, selon la tradition ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • Groupe majoritaire, autrefois très isolé, aujourd'hui mêlé aux Peuls (notamment à Guidiguis) et voisin des Moundang. • Le toupouri se parle au Tchad et, au Cameroun, jusqu'à Touboro, Nkoteng et Mbandjock. • Groupe largement autochtone et endogame ; les hommes, plus mobiles, se marient davantage au-dehors. • Terre ancestrale « conquise au prix du sang ». • Venus du Soudan par le Tchad, ils ont perdu le lien avec le Soudan mais restent très proches des Toupouri du Tchad."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "Majoritaires dans leur zone, les Toupouri, longtemps très isolés, côtoient aujourd'hui Peuls et Moundang. Venus du Soudan par le Tchad, avec lequel ils vivent « en fraternité absolue », ils organisent leur société autour des doore (chefs de terre), des notables de clan et des initiés maagay. Agriculture, élevage, bil-bil et poterie les font vivre, et la fête du coq, le feo kake, ouvre chaque année en octobre la nouvelle année."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Sur une carte du Cameroun, situe la communauté Toupouri (Dziguilao) et ses voisins, puis rédige 5 phrases pour la présenter à ton correspondant."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Découvre la communauté Toupouri (Dziguilao) : son nom, sa langue, ses voisins et son histoire.",
+    "activities": [
+     {
+      "title": "Je comprends le nom",
+      "instruction": "Explique le nom que se donnent les Toupouri (Dziguilao) (Toupouri) et sa signification."
+     },
+     {
+      "title": "Je situe",
+      "instruction": "Sur une carte, place la communauté, sa région et ses voisins."
+     },
+     {
+      "title": "Je retrace l'histoire",
+      "instruction": "Dessine sur une frise ou une carte le parcours de migration raconté par la tradition."
+     },
+     {
+      "title": "Je compare",
+      "instruction": "Compare l'origine de ce peuple avec celle de ta propre communauté : 2 ressemblances, 2 différences."
+     }
+    ],
+    "memo": "Majoritaires dans leur zone, les Toupouri, longtemps très isolés, côtoient aujourd'hui Peuls et Moundang. Venus du Soudan par le Tchad, avec lequel ils vivent « en fraternité absolue », ils organisent leur société autour des doore (chefs de terre), des notables de clan et des initiés maagay. Agriculture, élevage, bil-bil et poterie les font vivre, et la fête du coq, le feo kake, ouvre chaque année en octobre la nouvelle année."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  },
+  {
+   "id": "MC1-2",
+   "code": "MC1.2",
+   "module": "MC1-diversite-culturelle",
+   "moduleTitle": "Module C-I — Diversité culturelle camerounaise",
+   "title": "Le pouvoir et l'organisation sociale chez les Toupouri (Dziguilao)",
+   "anelcac": "Organisation sociopolitique, règles de vie commune",
+   "duration": "55 min",
+   "level": "6e",
+   "objectives": [
+    "Identifier les autorités traditionnelles",
+    "Expliquer le mode de prise de décision",
+    "Relever les règles de déférence"
+   ],
+   "vocabulary": [],
+   "competence": "Décrire comment les Toupouri (Dziguilao) organisent le pouvoir, prennent les décisions et règlent la vie commune.",
+   "situation": "Une décision importante doit être prise pour tout le village Toupouri (Dziguilao). Qui décide, et comment ?",
+   "materiel": "Fiche culturelle de la communauté, papier et feutres pour l'organigramme.",
+   "teacher": {
+    "intro": "Compétence attendue : Décrire comment les Toupouri (Dziguilao) organisent le pouvoir, prennent les décisions et règlent la vie commune.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Une décision importante doit être prise pour tout le village Toupouri (Dziguilao). Qui décide, et comment ? » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Qui détient l'autorité ? — Comment les décisions sont-elles prises (consensus, vote, décision du chef) ? — Quelles règles de respect et de déférence observe-t-on ? — Quels groupes ou sociétés jouent un rôle particulier ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • Le wandoore (au Tchad) et les doore dirigent ; les notables sont les chefs de quartier et de clan (trois à Dziguilao) ; les forgerons forment une caste, les moungouri. • Les décisions se prennent par consensus entre les doore et les notables. • On ne se marie pas dans son propre clan ; les beaux-parents peuvent plaisanter entre eux, en vertu de l'alliance. • Les maagay conduisent l'initiation. • La femme s'incline ou s'agenouille avant de tendre l'eau ou tout objet."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "Le wandoore (au Tchad) et les doore dirigent ; les notables sont les chefs de quartier et de clan (trois à Dziguilao) ; les forgerons forment une caste, les moungouri. Les décisions se prennent par consensus entre les doore et les notables. On ne se marie pas dans son propre clan ; les beaux-parents peuvent plaisanter entre eux, en vertu de l'alliance."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Réalise un schéma (organigramme) du pouvoir chez les Toupouri (Dziguilao), puis explique en 3 phrases comment une décision est prise."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Comment vit-on ensemble chez les Toupouri (Dziguilao) ? Qui décide, et comment se montre-t-on le respect ?",
+    "activities": [
+     {
+      "title": "Je schématise",
+      "instruction": "Dessine l'organigramme : chef, notables, familles, population."
+     },
+     {
+      "title": "J'explique",
+      "instruction": "Décris le chemin d'une décision, de la discussion à l'annonce publique."
+     },
+     {
+      "title": "Je relève",
+      "instruction": "Note deux règles de respect ou de déférence et explique leur sens."
+     },
+     {
+      "title": "Je débats",
+      "instruction": "En groupe : quels avantages a la prise de décision par consensus ?"
+     }
+    ],
+    "memo": "Le wandoore (au Tchad) et les doore dirigent ; les notables sont les chefs de quartier et de clan (trois à Dziguilao) ; les forgerons forment une caste, les moungouri. Les décisions se prennent par consensus entre les doore et les notables. On ne se marie pas dans son propre clan ; les beaux-parents peuvent plaisanter entre eux, en vertu de l'alliance."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  },
+  {
+   "id": "MC2-1",
+   "code": "MC2.1",
+   "module": "MC2-modes-de-vie",
+   "moduleTitle": "Module C-II — Pratiques culturelles : modes de vie",
+   "title": "Cuisine et boissons traditionnelles des Toupouri (Dziguilao)",
+   "anelcac": "Modes de vie : pratiques culinaires",
+   "duration": "55 min",
+   "level": "6e",
+   "objectives": [
+    "Nommer des mets et boissons traditionnels",
+    "Décrire une préparation",
+    "Relier l'alimentation au milieu de vie"
+   ],
+   "vocabulary": [
+    {
+     "langText": "couscous de mil rouge et jaune",
+     "frenchText": "—"
+    },
+    {
+     "langText": "sauces bay chèrè et tchenglèrè",
+     "frenchText": "—"
+    },
+    {
+     "langText": "feuilles de baobab",
+     "frenchText": "konkon"
+    },
+    {
+     "langText": "viande de bœuf et de chèvre",
+     "frenchText": "—"
+    },
+    {
+     "langText": "bil-bil",
+     "frenchText": "—"
+    },
+    {
+     "langText": "arki",
+     "frenchText": "—"
+    }
+   ],
+   "competence": "Identifier les mets et boissons traditionnels des Toupouri (Dziguilao), en décrire la préparation et en dégager la portée culturelle.",
+   "situation": "Ta classe prépare une foire culinaire. Ton groupe doit présenter un plat traditionnel des Toupouri (Dziguilao).",
+   "materiel": "Fiche culturelle, images ou ingrédients locaux, matériel d'affichage.",
+   "teacher": {
+    "intro": "Compétence attendue : Identifier les mets et boissons traditionnels des Toupouri (Dziguilao), en décrire la préparation et en dégager la portée culturelle.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Ta classe prépare une foire culinaire. Ton groupe doit présenter un plat traditionnel des Toupouri (Dziguilao). » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Quels sont les principaux mets et boissons ? — De quels produits sont-ils faits ? D'où viennent ces produits ? — Qui les prépare, et en quelles occasions ? — Que disent-ils du milieu de vie de la communauté ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • Mets traditionnels : couscous de mil rouge et jaune, sauces bay chèrè et tchenglèrè, feuilles de baobab (konkon), viande de bœuf et de chèvre. • Boissons : bil-bil, arki. • Hommes : agriculture, élevage, commerce. Femmes : agriculture, poterie, vente de bil-bil."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "Les Toupouri (Dziguilao) se nourrissent surtout de couscous de mil rouge et jaune, sauces bay chèrè et tchenglèrè, feuilles de baobab, viande de bœuf et de chèvre. Boissons traditionnelles : bil-bil, arki. Ces mets sont liés aux activités du groupe et aux produits de son milieu."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Choisis un mets des Toupouri (Dziguilao) : rédige sa fiche (nom dans la langue, ingrédients, étapes, occasion où on le sert)."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Découvre ce que l'on mange et boit traditionnellement chez les Toupouri (Dziguilao).",
+    "activities": [
+     {
+      "title": "Je nomme",
+      "instruction": "Écris le nom local et la traduction de trois mets ou boissons."
+     },
+     {
+      "title": "J'enquête",
+      "instruction": "Demande à un aîné comment on prépare l'un de ces mets et note les étapes."
+     },
+     {
+      "title": "Je relie",
+      "instruction": "Relie chaque mets aux activités du groupe (agriculture, pêche, élevage…)."
+     },
+     {
+      "title": "Je présente",
+      "instruction": "Prépare une affiche pour la foire culinaire de la classe."
+     }
+    ],
+    "memo": "Les Toupouri (Dziguilao) se nourrissent surtout de couscous de mil rouge et jaune, sauces bay chèrè et tchenglèrè, feuilles de baobab, viande de bœuf et de chèvre. Boissons traditionnelles : bil-bil, arki. Ces mets sont liés aux activités du groupe et aux produits de son milieu."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  },
+  {
+   "id": "MC2-2",
+   "code": "MC2.2",
+   "module": "MC2-modes-de-vie",
+   "moduleTitle": "Module C-II — Pratiques culturelles : modes de vie",
+   "title": "Vêtements, parures et artisanat des Toupouri (Dziguilao)",
+   "anelcac": "Modes de vie : pratiques vestimentaires, artisanat",
+   "duration": "55 min",
+   "level": "6e",
+   "objectives": [
+    "Décrire l'habillement traditionnel",
+    "Identifier des objets artisanaux et leur usage",
+    "Expliquer les critères de beauté"
+   ],
+   "vocabulary": [
+    {
+     "langText": "cotonnades tissées",
+     "frenchText": "—"
+    },
+    {
+     "langText": "canaris",
+     "frenchText": "—"
+    },
+    {
+     "langText": "chapeaux",
+     "frenchText": "—"
+    }
+   ],
+   "competence": "Décrire l'habillement, les parures et les objets artisanaux des Toupouri (Dziguilao), et expliquer leur usage et leur valeur.",
+   "situation": "Un musée te demande de préparer une vitrine sur l'habillement et l'artisanat des Toupouri (Dziguilao).",
+   "materiel": "Fiche culturelle, objets ou photos d'objets artisanaux, matériaux de récupération.",
+   "teacher": {
+    "intro": "Compétence attendue : Décrire l'habillement, les parures et les objets artisanaux des Toupouri (Dziguilao), et expliquer leur usage et leur valeur.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Un musée te demande de préparer une vitrine sur l'habillement et l'artisanat des Toupouri (Dziguilao). » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Comment s'habillait-on autrefois, et aujourd'hui ? — Les vêtements indiquent-ils un statut ou une occasion ? — Quels objets fabrique-t-on, avec quels matériaux, pour quels usages ? — Quels sont les critères de beauté ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • Autrefois, cache-sexe de peau, tissage du coton, vêtements de feuilles. • Séduction : regard, tenue, démarche ; la femme peut offrir la cola à l'homme. • Hommes : agriculture, élevage, commerce. Femmes : agriculture, poterie, vente de bil-bil. • Artisanat ancestral : canaris pour la maison et la vente, chapeaux contre le soleil. • Beauté : l'homme à la barbe et à la moustache fournies, de taille et de corpulence moyennes ; la femme de taille moyenne, aux sourcils et cheveux fournis."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "Autrefois, cache-sexe de peau, tissage du coton, vêtements de feuilles. Séduction : regard, tenue, démarche ; la femme peut offrir la cola à l'homme. Hommes : agriculture, élevage, commerce. Femmes : agriculture, poterie, vente de bil-bil."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Dessine et légende un vêtement ou un objet artisanal des Toupouri (Dziguilao), en précisant matériau, usage et occasion."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Découvre comment s'habillent les Toupouri (Dziguilao) et quels objets ils fabriquent.",
+    "activities": [
+     {
+      "title": "J'observe",
+      "instruction": "Décris un vêtement ou un objet traditionnel : forme, matériau, couleur."
+     },
+     {
+      "title": "J'explique",
+      "instruction": "Dis à quoi sert cet objet ou à quelle occasion on porte ce vêtement."
+     },
+     {
+      "title": "Je compare",
+      "instruction": "Compare l'habillement d'autrefois et celui d'aujourd'hui."
+     },
+     {
+      "title": "Je crée",
+      "instruction": "Fabrique en classe un petit objet inspiré de l'artisanat étudié."
+     }
+    ],
+    "memo": "Autrefois, cache-sexe de peau, tissage du coton, vêtements de feuilles. Séduction : regard, tenue, démarche ; la femme peut offrir la cola à l'homme. Hommes : agriculture, élevage, commerce. Femmes : agriculture, poterie, vente de bil-bil."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  },
+  {
+   "id": "MC3-1",
+   "code": "MC3.1",
+   "module": "MC3-evenements-marquants",
+   "moduleTitle": "Module C-III — Événements marquants de la vie",
+   "title": "Naissance, nom et passage à l'âge adulte chez les Toupouri (Dziguilao)",
+   "anelcac": "Événements marquants : naissance, attribution du nom, initiation",
+   "duration": "55 min",
+   "level": "5e",
+   "objectives": [
+    "Expliquer le sens d'une naissance",
+    "Décrire l'attribution du nom",
+    "Décrire le passage à l'âge adulte"
+   ],
+   "vocabulary": [
+    {
+     "langText": "Djourreo",
+     "frenchText": "“celui qui te soutient”"
+    },
+    {
+     "langText": "Wangkague",
+     "frenchText": "“né le mois de la fête du coq”"
+    },
+    {
+     "langText": "Beldo",
+     "frenchText": "il est yeigneux , endurant"
+    },
+    {
+     "langText": "Danwe",
+     "frenchText": "Il est toujours premier"
+    },
+    {
+     "langText": "Houli",
+     "frenchText": "pierre"
+    },
+    {
+     "langText": "Mayssay",
+     "frenchText": "“qui a battu quelqu’un” “qui a renversé”"
+    },
+    {
+     "langText": "Kaouga",
+     "frenchText": "“le survivant”"
+    },
+    {
+     "langText": "Tagga",
+     "frenchText": "“unique”"
+    }
+   ],
+   "competence": "Expliquer comment les Toupouri (Dziguilao) accueillent l'enfant, lui donnent un nom et marquent son entrée dans l'âge adulte.",
+   "situation": "Un enfant vient de naître dans une famille Toupouri (Dziguilao). Comment va-t-on le nommer, et comment deviendra-t-il adulte ?",
+   "materiel": "Fiche culturelle (rubrique « Les noms »).",
+   "teacher": {
+    "intro": "Compétence attendue : Expliquer comment les Toupouri (Dziguilao) accueillent l'enfant, lui donnent un nom et marquent son entrée dans l'âge adulte.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Un enfant vient de naître dans une famille Toupouri (Dziguilao). Comment va-t-on le nommer, et comment deviendra-t-il adulte ? » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Que représente une naissance pour la communauté ? — Qui donne le nom, quand et comment ? — Le nom peut-il changer au cours de la vie ? — Quand et comment devient-on homme ou femme ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • May- marque les noms de femmes, Pa- ou Wa- ceux d'hommes. • Le nom est donné selon les circonstances, parfois révélé en rêve ; il change une fois, lors de l'initiation. • On appelle chacun par son nom propre. • L'enfant est un don de Dieu ; le père offre des pattes de bœuf pour le bouillon de la mère. La mort ramène chez les aïeux, qui se manifestent par les rêves et les rituels. • Le garçon devient homme vers 18 ans (carrure, voix grave) ; la jeune fille vers 15 ans, avec la puberté."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "May- marque les noms de femmes, Pa- ou Wa- ceux d'hommes. Le nom est donné selon les circonstances, parfois révélé en rêve ; il change une fois, lors de l'initiation. On appelle chacun par son nom propre."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Explique la signification de trois noms de personnes Toupouri (Dziguilao) et décris le moment où un enfant reçoit son nom."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Découvre comment les Toupouri (Dziguilao) nomment leurs enfants et marquent le passage à l'âge adulte.",
+    "activities": [
+     {
+      "title": "Je découvre des noms",
+      "instruction": "Choisis trois noms de personnes dans la liste et explique leur sens."
+     },
+     {
+      "title": "J'enquête sur mon nom",
+      "instruction": "Demande à tes parents pourquoi on t'a donné ton nom et partage-le."
+     },
+     {
+      "title": "J'explique",
+      "instruction": "Décris comment on devient adulte dans cette communauté."
+     },
+     {
+      "title": "Je compare",
+      "instruction": "Compare avec les pratiques de ta famille."
+     }
+    ],
+    "memo": "May- marque les noms de femmes, Pa- ou Wa- ceux d'hommes. Le nom est donné selon les circonstances, parfois révélé en rêve ; il change une fois, lors de l'initiation. On appelle chacun par son nom propre."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  },
+  {
+   "id": "MC3-2",
+   "code": "MC3.2",
+   "module": "MC3-evenements-marquants",
+   "moduleTitle": "Module C-III — Événements marquants de la vie",
+   "title": "Le mariage et la dot chez les Toupouri (Dziguilao)",
+   "anelcac": "Événements marquants : mariage",
+   "duration": "55 min",
+   "level": "5e",
+   "objectives": [
+    "Ordonner les étapes du mariage",
+    "Expliquer la symbolique de la dot",
+    "Comparer hier et aujourd'hui"
+   ],
+   "vocabulary": [
+    {
+     "langText": "« argent de l'eau »",
+     "frenchText": "—"
+    },
+    {
+     "langText": "bœufs ou chèvres",
+     "frenchText": "—"
+    },
+    {
+     "langText": "lance",
+     "frenchText": "—"
+    }
+   ],
+   "competence": "Décrire les étapes du mariage traditionnel Toupouri (Dziguilao), les éléments de la dot et leur symbolique.",
+   "situation": "Ton grand frère veut épouser une jeune femme Toupouri (Dziguilao). Quelles étapes devra-t-il respecter ?",
+   "materiel": "Fiche culturelle, accessoires pour la mise en scène.",
+   "teacher": {
+    "intro": "Compétence attendue : Décrire les étapes du mariage traditionnel Toupouri (Dziguilao), les éléments de la dot et leur symbolique.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Ton grand frère veut épouser une jeune femme Toupouri (Dziguilao). Quelles étapes devra-t-il respecter ? » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Qui choisit le conjoint ? Se marie-t-on dans le groupe ou en dehors ? — Quelles sont les étapes du mariage ? — Que contient la dot, et que symbolise chaque élément ? — Où vit le couple après le mariage ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • Parenté patrilinéaire ; la jeune femme rejoint son mari. • Le garçon devient homme vers 18 ans (carrure, voix grave) ; la jeune fille vers 15 ans, avec la puberté. • Autrefois, il fallait beaucoup de bœufs et l'on imposait le mari aux jeunes filles ; aujourd'hui, elles choisissent et la dot s'adapte. • Étapes : choix de la jeune fille, demande, remise de « l'argent de l'eau » qui ouvre les fiançailles (pour vêtir et honorer la fiancée), dot en bœufs ou chèvres, avec une lance."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "Autrefois, il fallait beaucoup de bœufs et l'on imposait le mari aux jeunes filles ; aujourd'hui, elles choisissent et la dot s'adapte. Étapes : choix de la jeune fille, demande, remise de « l'argent de l'eau » qui ouvre les fiançailles (pour vêtir et honorer la fiancée), dot en bœufs ou chèvres, avec une lance."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Simule en groupe la demande en mariage chez les Toupouri (Dziguilao), puis explique la signification de deux éléments de la dot."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Découvre les étapes du mariage traditionnel chez les Toupouri (Dziguilao).",
+    "activities": [
+     {
+      "title": "J'ordonne",
+      "instruction": "Remets dans l'ordre les étapes du mariage."
+     },
+     {
+      "title": "J'explique",
+      "instruction": "Explique ce que symbolise chaque élément de la dot."
+     },
+     {
+      "title": "Je joue",
+      "instruction": "En groupe, mets en scène la demande en mariage."
+     },
+     {
+      "title": "Je réfléchis",
+      "instruction": "Qu'est-ce qui a changé dans le mariage aujourd'hui ?"
+     }
+    ],
+    "memo": "Autrefois, il fallait beaucoup de bœufs et l'on imposait le mari aux jeunes filles ; aujourd'hui, elles choisissent et la dot s'adapte. Étapes : choix de la jeune fille, demande, remise de « l'argent de l'eau » qui ouvre les fiançailles (pour vêtir et honorer la fiancée), dot en bœufs ou chèvres, avec une lance."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  },
+  {
+   "id": "MC4-1",
+   "code": "MC4.1",
+   "module": "MC4-pratiques-communaute1",
+   "moduleTitle": "Module C-IV — Pratiques culturelles dans les communautés (Niveau I)",
+   "title": "Les loisirs : musiques et danses traditionnelles des Toupouri (Dziguilao)",
+   "anelcac": "Pratiques en communauté : loisirs, danses traditionnelles",
+   "duration": "55 min",
+   "level": "4e",
+   "objectives": [
+    "Identifier les danses et leurs occasions",
+    "Décrire une danse et ses instruments",
+    "Exécuter la danse"
+   ],
+   "vocabulary": [
+    {
+     "langText": "gourna",
+     "frenchText": "mixte"
+    },
+    {
+     "langText": "dilna",
+     "frenchText": "hommes"
+    },
+    {
+     "langText": "wiile",
+     "frenchText": "femmes"
+    },
+    {
+     "langText": "tam-tam",
+     "frenchText": "mangoura"
+    },
+    {
+     "langText": "flûte",
+     "frenchText": "—"
+    },
+    {
+     "langText": "guitare",
+     "frenchText": "—"
+    }
+   ],
+   "competence": "Identifier les danses traditionnelles des Toupouri (Dziguilao), choisir la plus représentative, la décrire, en dégager la portée culturelle et la simuler.",
+   "situation": "Participation à la vie culturelle en famille et en société : la classe prépare une prestation de danse Toupouri (Dziguilao) pour la journée culturelle.",
+   "materiel": "Instruments ou enregistrements, tenues, espace dégagé.",
+   "teacher": {
+    "intro": "Compétence attendue : Identifier les danses traditionnelles des Toupouri (Dziguilao), choisir la plus représentative, la décrire, en dégager la portée culturelle et la simuler.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Participation à la vie culturelle en famille et en société : la classe prépare une prestation de danse Toupouri (Dziguilao) pour la journée culturelle. » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Quelles danses pratique-t-on, et à quelles occasions ? — Qui danse (hommes, femmes, enfants, initiés) ? Quand et où ? — Quels instruments, quels chants, quelles tenues ? — Quelle est la signification culturelle de la danse choisie ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • Danses : gourna et waywa (mixtes), dilna et siila (hommes), wiile (femmes), doundouloun. • Instruments : tam-tam (mangoura), flûte, bâton, lance, crochet, guitare. • Fête : le feo kake (fête du coq), chaque année en octobre."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "Chez les Toupouri (Dziguilao), les danses traditionnelles (gourna, dilna, wiile) accompagnent les grands moments de la vie : fêtes, deuils, mariages, initiations. Instruments : tam-tam, flûte, guitare. Fête(s) : feo kake, fête du coq, fête des moungouri."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Décris une danse des Toupouri (Dziguilao) (participants, moment, instruments, gestes, sens) puis exécute-la avec ton groupe."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Découvre les musiques et les danses des Toupouri (Dziguilao), puis apprends à en exécuter une.",
+    "activities": [
+     {
+      "title": "J'identifie",
+      "instruction": "Liste les danses et dis à quelle occasion chacune est pratiquée."
+     },
+     {
+      "title": "Je décris",
+      "instruction": "Choisis la danse la plus représentative : participants, instruments, tenue, gestes."
+     },
+     {
+      "title": "Je comprends",
+      "instruction": "Explique si c'est une danse de joie, de deuil, d'initiation ou de guerre."
+     },
+     {
+      "title": "Je pratique",
+      "instruction": "Avec ton groupe, simule la danse devant la classe."
+     }
+    ],
+    "memo": "Chez les Toupouri (Dziguilao), les danses traditionnelles (gourna, dilna, wiile) accompagnent les grands moments de la vie : fêtes, deuils, mariages, initiations. Instruments : tam-tam, flûte, guitare. Fête(s) : feo kake, fête du coq, fête des moungouri."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  },
+  {
+   "id": "MC4-2",
+   "code": "MC4.2",
+   "module": "MC4-pratiques-communaute1",
+   "moduleTitle": "Module C-IV — Pratiques culturelles dans les communautés (Niveau I)",
+   "title": "Économie traditionnelle et accès à la terre chez les Toupouri (Dziguilao)",
+   "anelcac": "Pratiques en communauté : économie traditionnelle",
+   "duration": "55 min",
+   "level": "4e",
+   "objectives": [
+    "Identifier les activités économiques",
+    "Expliquer la répartition des tâches",
+    "Expliquer l'accès à la terre"
+   ],
+   "vocabulary": [
+    {
+     "langText": "agriculture",
+     "frenchText": "—"
+    },
+    {
+     "langText": "élevage",
+     "frenchText": "—"
+    },
+    {
+     "langText": "commerce",
+     "frenchText": "—"
+    },
+    {
+     "langText": "agriculture",
+     "frenchText": "—"
+    },
+    {
+     "langText": "poterie",
+     "frenchText": "—"
+    },
+    {
+     "langText": "vente de bil-bil",
+     "frenchText": "—"
+    }
+   ],
+   "competence": "Décrire les activités économiques des Toupouri (Dziguilao), la répartition des tâches entre hommes et femmes et les règles d'accès à la terre.",
+   "situation": "Un projet de développement veut aider les Toupouri (Dziguilao). Il faut d'abord comprendre comment ils travaillent et qui possède la terre.",
+   "materiel": "Fiche culturelle, calendrier vierge.",
+   "teacher": {
+    "intro": "Compétence attendue : Décrire les activités économiques des Toupouri (Dziguilao), la répartition des tâches entre hommes et femmes et les règles d'accès à la terre.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Un projet de développement veut aider les Toupouri (Dziguilao). Il faut d'abord comprendre comment ils travaillent et qui possède la terre. » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Quelles sont les activités des hommes ? des femmes ? — À qui appartient la terre et comment y accède-t-on ? — Quels produits vend-on ou échange-t-on ? — Ces activités ont-elles changé ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • Hommes : agriculture, élevage, commerce. Femmes : agriculture, poterie, vente de bil-bil. • La terre appartient aux hommes ; on hérite de son père ou l'on défriche son espace. • Artisanat ancestral : canaris pour la maison et la vente, chapeaux contre le soleil."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "Hommes : agriculture, élevage, commerce. Femmes : agriculture, poterie, vente de bil-bil. La terre appartient aux hommes ; on hérite de son père ou l'on défriche son espace."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Réalise un tableau à deux colonnes (hommes / femmes) des activités des Toupouri (Dziguilao), puis explique comment on accède à la terre."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Découvre comment les Toupouri (Dziguilao) vivent de leur travail.",
+    "activities": [
+     {
+      "title": "Je classe",
+      "instruction": "Classe les activités dans un tableau hommes / femmes."
+     },
+     {
+      "title": "J'explique",
+      "instruction": "Explique comment on obtient une terre à cultiver."
+     },
+     {
+      "title": "Je calcule",
+      "instruction": "Imagine le calendrier d'une année de travail (saisons, récoltes, fêtes)."
+     },
+     {
+      "title": "Je propose",
+      "instruction": "Propose une idée de projet qui valorise un savoir-faire local."
+     }
+    ],
+    "memo": "Hommes : agriculture, élevage, commerce. Femmes : agriculture, poterie, vente de bil-bil. La terre appartient aux hommes ; on hérite de son père ou l'on défriche son espace."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  },
+  {
+   "id": "MC5-1",
+   "code": "MC5.1",
+   "module": "MC5-pratiques-communaute2",
+   "moduleTitle": "Module C-V — Pratiques culturelles dans les communautés (Niveau II)",
+   "title": "Croyances, lieux sacrés et interdits chez les Toupouri (Dziguilao)",
+   "anelcac": "Pratiques en communauté : symbolique, rites, interdits",
+   "duration": "55 min",
+   "level": "3e",
+   "objectives": [
+    "Expliquer les croyances liées à la vie et à la mort",
+    "Identifier des lieux sacrés",
+    "Expliquer le rôle des interdits"
+   ],
+   "vocabulary": [
+    {
+     "langText": "terre sacrée",
+     "frenchText": "Djaksiri"
+    },
+    {
+     "langText": "arbre djatobe",
+     "frenchText": "—"
+    },
+    {
+     "langText": "bosquets sacrés",
+     "frenchText": "—"
+    },
+    {
+     "langText": "parler de l'initiation",
+     "frenchText": "—"
+    },
+    {
+     "langText": "inceste",
+     "frenchText": "—"
+    },
+    {
+     "langText": "adultère",
+     "frenchText": "—"
+    }
+   ],
+   "competence": "Expliquer les croyances, les lieux sacrés et les interdits des Toupouri (Dziguilao), et leur rôle dans la régulation de la vie sociale.",
+   "situation": "Un visiteur arrive chez les Toupouri (Dziguilao). Quels lieux et quelles règles doit-il absolument respecter ?",
+   "materiel": "Fiche culturelle.",
+   "teacher": {
+    "intro": "Compétence attendue : Expliquer les croyances, les lieux sacrés et les interdits des Toupouri (Dziguilao), et leur rôle dans la régulation de la vie sociale.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Un visiteur arrive chez les Toupouri (Dziguilao). Quels lieux et quelles règles doit-il absolument respecter ? » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Quelles sont les croyances sur la naissance et la mort ? — Quels lieux sont sacrés, et pourquoi ? — Quels sont les principaux interdits, et pour qui ? — Comment les fautes graves étaient-elles réparées ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • Cultes : le feo kake, fête du coq, en octobre au début des récoltes et de la nouvelle année ; la fête des moungouri ; l'arbre sacré djatobe. • Lieux sacrés marqués par des arbres : Djaksiri (terre sacrée), Koumaijwa, Padde, Guirsay, Bobio, Wersore, Dziguilao. • L'enfant est un don de Dieu ; le père offre des pattes de bœuf pour le bouillon de la mère. La mort ramène chez les aïeux, qui se manifestent par les rêves et les rituels. • Tabous : parler de l'initiation, l'inceste ; interdits : l'adultère, frapper ses aînés (oncles, tantes). • Divination par les œufs, l'eau, le miroir ; il existe des oracles (halgue, djarkounene)."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "Cultes : le feo kake, fête du coq, en octobre au début des récoltes et de la nouvelle année ; la fête des moungouri ; l'arbre sacré djatobe. Lieux sacrés marqués par des arbres : Djaksiri (terre sacrée), Koumaijwa, Padde, Guirsay, Bobio, Wersore, Dziguilao."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Rédige un petit guide de bonne conduite pour un visiteur chez les Toupouri (Dziguilao) (3 lieux ou règles à respecter, avec leur raison)."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Découvre ce que croient les Toupouri (Dziguilao), les lieux qu'ils respectent et les interdits qu'ils observent.",
+    "activities": [
+     {
+      "title": "J'identifie",
+      "instruction": "Relève deux lieux sacrés et ce qu'ils rappellent."
+     },
+     {
+      "title": "J'explique",
+      "instruction": "Explique l'utilité d'un interdit pour la vie du groupe."
+     },
+     {
+      "title": "Je respecte",
+      "instruction": "Rédige le guide du visiteur respectueux."
+     },
+     {
+      "title": "Je compare",
+      "instruction": "Compare avec un interdit connu dans ta famille."
+     }
+    ],
+    "memo": "Cultes : le feo kake, fête du coq, en octobre au début des récoltes et de la nouvelle année ; la fête des moungouri ; l'arbre sacré djatobe. Lieux sacrés marqués par des arbres : Djaksiri (terre sacrée), Koumaijwa, Padde, Guirsay, Bobio, Wersore, Dziguilao."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  },
+  {
+   "id": "MC5-2",
+   "code": "MC5.2",
+   "module": "MC5-pratiques-communaute2",
+   "moduleTitle": "Module C-V — Pratiques culturelles dans les communautés (Niveau II)",
+   "title": "Saluer, se présenter et compter en Toupouri",
+   "anelcac": "Médias traditionnels et transmission : la langue au quotidien",
+   "duration": "55 min",
+   "level": "3e",
+   "objectives": [
+    "Saluer selon le moment de la journée",
+    "Se présenter",
+    "Compter de 1 à 10"
+   ],
+   "vocabulary": [
+    {
+     "langText": "Ine/ Lla",
+     "frenchText": "Salut (formule neutre, à toute heure)"
+    },
+    {
+     "langText": "Ndo nayaola/Ndo naawé",
+     "frenchText": "salutations du matin (une personne)"
+    },
+    {
+     "langText": "Ndo nayaola/Ndo naawé",
+     "frenchText": "salutations du matin (plusieurs personnes)"
+    },
+    {
+     "langText": "Nday/ naawe",
+     "frenchText": "salutations du matin (en signe de déférence/respect)"
+    },
+    {
+     "langText": "Ndo siyaola/Ndo siwé",
+     "frenchText": "salutations de la mi-journée (une personne)"
+    },
+    {
+     "langText": "Bong",
+     "frenchText": "1 — Un"
+    },
+    {
+     "langText": "Bogè",
+     "frenchText": "2 — Deux"
+    },
+    {
+     "langText": "Swa’a",
+     "frenchText": "3 — Trois"
+    },
+    {
+     "langText": "Naa",
+     "frenchText": "4 — Quatre"
+    },
+    {
+     "langText": "Dwee",
+     "frenchText": "5 — Cinq"
+    },
+    {
+     "langText": "Hira’a",
+     "frenchText": "6 — Six"
+    },
+    {
+     "langText": "Harname",
+     "frenchText": "7 — Sept"
+    },
+    {
+     "langText": "Nenma’a",
+     "frenchText": "8 — Huit"
+    },
+    {
+     "langText": "Kaawa’a",
+     "frenchText": "9 — Neuf"
+    },
+    {
+     "langText": "Hwale",
+     "frenchText": "10 — Dix"
+    }
+   ],
+   "competence": "Utiliser les formules de salutation et de présentation des Toupouri (Dziguilao) et compter de 1 à 10, en respectant les usages.",
+   "situation": "Tu rends visite à une famille Toupouri (Dziguilao). Salue-la, présente-toi et participe au partage des noix de cola en comptant.",
+   "materiel": "Fiche culturelle (rubriques « Expressions usuelles » et « Compter »), noix de cola ou petits objets.",
+   "teacher": {
+    "intro": "Compétence attendue : Utiliser les formules de salutation et de présentation des Toupouri (Dziguilao) et compter de 1 à 10, en respectant les usages.",
+    "steps": [
+     {
+      "title": "Découverte de la situation (5 min)",
+      "instruction": "Écrivez la situation au tableau et faites-la lire : « Tu rends visite à une famille Toupouri (Dziguilao). Salue-la, présente-toi et participe au partage des noix de cola en comptant. » Les élèves réfléchissent individuellement."
+     },
+     {
+      "title": "Traitement de la situation (5 min)",
+      "instruction": "Questions pour guider l'analyse : — Comment salue-t-on selon le moment de la journée ? — Comment se présenter (nom, origine, lieu d'habitation) ? — Comment compte-t-on de 1 à 10 ? Le système est-il décimal, vigésimal… ? — Pourquoi la langue est-elle un outil de transmission ?"
+     },
+     {
+      "title": "Confrontation des résultats (5 min)",
+      "instruction": "Comparez les réponses des groupes, retenez au tableau les propositions justes et identifiez ce que la classe ne sait pas encore."
+     },
+     {
+      "title": "Mobilisation des ressources (20 min)",
+      "instruction": "Présentez, ou faites découvrir par les élèves, les éléments suivants : • La langue de la communauté est le Toupouri. • Formules de salutation : Ine/ Lla = Salut (formule neutre, à toute heure); Ndo nayaola/Ndo naawé = salutations du matin (une personne); Ndo nayaola/Ndo naawé = salutations du matin (plusieurs personnes). • Compter de 1 à 5 : Bong, Bogè, Swa’a, Naa, Dwee. • On appelle chacun par son nom propre. • Tchaossala, le plus ancien ancêtre cité, fut une figure de la résistance aux conquêtes peules."
+     },
+     {
+      "title": "Consolidation des acquis — trace écrite (5 min)",
+      "instruction": "Saluer et compter en Toupouri sont les premiers pas pour communiquer avec les Toupouri (Dziguilao). Les formules de politesse expriment le respect dû aux personnes selon le moment de la journée et leur rang."
+     },
+     {
+      "title": "Évaluation des acquis (10 min)",
+      "instruction": "Jeu de rôle à deux : saluer, se présenter, demander l'origine de l'autre et compter des objets de 1 à 10."
+     },
+     {
+      "title": "Remédiation (5 min)",
+      "instruction": "Corrigez collectivement ; reprenez avec les élèves en difficulté un seul élément de la trace écrite, à l'aide d'un exemple concret tiré de leur propre communauté."
+     }
+    ],
+    "freedom": "Certains savoirs (rites, lieux sacrés, sociétés d'initiés) sont réservés : on n'aborde en classe que ce que la communauté rend public, avec respect et sans jugement. Comparez avec la culture des élèves.",
+    "tips": "Approche recommandée par le guide pédagogique des Cultures Nationales : méthodes actives et participatives (« apprendre en faisant »). Invitez si possible une personne ressource de la communauté, ou proposez une enquête auprès des aînés."
+   },
+   "student": {
+    "intro": "Apprends à saluer, te présenter et compter en Toupouri.",
+    "activities": [
+     {
+      "title": "Je salue",
+      "instruction": "Apprends les formules de salutation du matin, de la mi-journée et du soir."
+     },
+     {
+      "title": "Je me présente",
+      "instruction": "Dis ton nom, ton origine et où tu habites."
+     },
+     {
+      "title": "Je compte",
+      "instruction": "Compte des objets de 1 à 10."
+     },
+     {
+      "title": "Je transmets",
+      "instruction": "Enseigne une formule à un camarade ou à un membre de ta famille."
+     }
+    ],
+    "memo": "Saluer et compter en Toupouri sont les premiers pas pour communiquer avec les Toupouri (Dziguilao). Les formules de politesse expriment le respect dû aux personnes selon le moment de la journée et leur rang."
+   },
+   "emacResources": [],
+   "cultureCode": "TUPU"
+  }
+ ]
 }
