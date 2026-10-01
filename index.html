@@ -150,7 +150,15 @@
 
   <!-- GoatCounter — suivi de fréquentation sans cookies (RGPD) -->
   <!-- Remplacez VOTRE-CODE par votre code GoatCounter après inscription sur goatcounter.com -->
-  <script data-goatcounter="https://VOTRE-CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://likalo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+    // Comptabilise chaque section (#/lecons, #/cultures/BASA…) comme une page distincte
+    window.addEventListener('hashchange', function () {
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({ path: location.pathname + location.hash.replace(/^#/, '') });
+      }
+    });
+  </script>
 
   <!-- Templates -->
   <template id="tpl-home">
