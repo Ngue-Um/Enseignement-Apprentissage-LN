@@ -8,6 +8,8 @@
  *   #/vocabulaire  -> Liste du vocabulaire (langue active)
  *   #/exercices    -> Quatre familles d'exercices
  *   #/a-propos     -> À propos
+ *   #/cultures     -> Fiches culturelles des communautés (#/cultures/CODE ouvre une fiche)
+ *   #/culture/CODE/lecon/ID -> Leçon de culture d'une communauté
  *
  * Langue active : state.currentLang (défaut : 'bulu')
  * Changement via switchLanguage(slug) qui recharge vocab + leçons.
@@ -51,6 +53,34 @@ const MODULES = {
   'MC4-communaute-1':          { num: 'C-IV',  label: 'Pratiques culturelles en communauté — Niv. I',  type: 'culture' },
   'MC5-communaute-2':          { num: 'C-V',   label: 'Pratiques culturelles en communauté — Niv. II', type: 'culture' },
 };
+
+/* Les fichiers de leçons utilisent parfois d'anciens identifiants de modules :
+   on les ramène aux identifiants canoniques ci-dessus. */
+const MODULE_ALIASES = {
+  'M7-quotidien1': 'M7-quotidien-1',
+  'M8-quotidien2': 'M8-quotidien-2',
+  'MC3-evenements-marquants': 'MC3-evenements',
+  'MC4-pratiques-communaute1': 'MC4-communaute-1',
+  'MC5-pratiques-communaute2': 'MC5-communaute-2',
+};
+
+/** Accepte les étapes au format objet {title, instruction} ou chaîne « **Titre :** texte ». */
+function normalizeStep(x) {
+  if (x && typeof x === 'object') return x;
+  const str = String(x || '');
+  const m = str.match(/^\*\*(.+?)\*\*\s*:?\s*([\s\S]*)$/);
+  if (m) return { title: m[1].replace(/\s*:\s*$/, ''), instruction: m[2] };
+  return { title: '', instruction: str };
+}
+
+function normalizeLesson(L) {
+  if (MODULE_ALIASES[L.module]) L.module = MODULE_ALIASES[L.module];
+  if (L.teacher) L.teacher.steps = (L.teacher.steps || []).map(normalizeStep);
+  if (L.student) L.student.activities = (L.student.activities || []).map(normalizeStep);
+  L.objectives = L.objectives || [];
+  L.vocabulary = L.vocabulary || [];
+  return L;
+}
 
 const EXO_LABELS = {
   comprehension:  'Audio → Traduction française',
@@ -150,7 +180,7 @@ async function loadData() {
   state.langues = langues;
   state.vocab = vocab;
   state.vocabWithFr = vocab.filter(b => b.frenchText && b.langText);
-  state.lessons = lessons.lessons || [];
+  state.lessons = (lessons.lessons || []).map(normalizeLesson);
   const langInfo = langues.find(l => l.slug === state.currentLang);
   state.currentLangName = langInfo ? langInfo.name : state.currentLang;
   state.audioBase = `audio/${state.currentLang}/`;
@@ -178,7 +208,7 @@ async function switchLanguage(slug) {
   ]);
   state.vocab = vocab;
   state.vocabWithFr = vocab.filter(b => b.frenchText && b.langText);
-  state.lessons = lessons.lessons || [];
+  state.lessons = (lessons.lessons || []).map(normalizeLesson);
   const langInfo = state.langues.find(l => l.slug === slug);
   state.currentLangName = langInfo ? langInfo.name : slug;
   state.audioBase = `audio/${slug}/`;
@@ -206,10 +236,13 @@ const STATIC_ROUTES = {
   '/corpus-oral':  renderCorpusOral,
   '/contribuer':   renderContribuer,
   '/a-propos':     renderAPropos,
+  '/cultures':     () => renderCultures(),
 };
 
 const PARAM_ROUTES = [
   [/^\/lecon\/([A-Za-z0-9-]+)$/, (id) => renderLecon(id)],
+  [/^\/cultures\/([A-Z0-9]+)$/, (code) => renderCultures(code)],
+  [/^\/culture\/([A-Z0-9]+)\/lecon\/([A-Za-z0-9-]+)$/, (code, id) => renderCultureLesson(code, id)],
 ];
 
 function resolveRoute() {
@@ -241,6 +274,14 @@ function setActiveNav(path) {
 function render() {
   stopCurrentAudio();
   const { path, run } = resolveRoute();
+  // Ouvrir / fermer une fiche culturelle sans recharger la liste (garde le défilement)
+  const cm = path.match(/^\/cultures(?:\/([A-Z0-9]+))?$/);
+  if (cm && $('#cultures-grid')) {
+    setActiveNav(path);
+    if (cm[1]) openCultureModal(cm[1]); else closeCultureModal();
+    return;
+  }
+  closeCultureModal();
   setActiveNav(path);
   run();
   $('#mobile-menu')?.classList.add('hidden');
@@ -691,6 +732,13 @@ function renderLeconCard(L) {
 
 function renderLecon(id) {
   const L = state.lessons.find(x => x.id === id);
+  if (L) {
+    renderLessonView(L, state.lessons, {
+      backHref: '#/lecons', backLabel: 'Toutes les leçons', linkBase: '#/lecon/',
+      cultureCode: L.cultureCode || '',
+    });
+    return;
+  }
   if (!L) {
     $('#app').innerHTML = `
       <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 text-amber-800 max-w-2xl mx-auto">
@@ -700,43 +748,53 @@ function renderLecon(id) {
       </div>`;
     return;
   }
+}
 
+function renderLessonView(L, lessons, opts) {
+  const id = L.id;
   mountTemplate('tpl-lecon');
   const meta = MODULES[L.module] || { num: '?', label: '' };
+  const back = $('#lecon-back');
+  if (back) { back.href = opts.backHref; $('#lecon-back-label').textContent = opts.backLabel; }
 
   $('#lecon-module-tag').textContent = `Module ${meta.num} — ${meta.label}`;
   $('#lecon-title').textContent = L.title;
   $('#lecon-code').textContent = L.code;
-  $('#lecon-meta').textContent = `Durée indicative : ${L.duration} · Niveau : ${L.level}`;
+  $('#lecon-meta').innerHTML = `Durée indicative : ${escapeHtml(L.duration)} · Niveau : ${escapeHtml(L.level)}` +
+    (opts.subtitle ? ` · ${escapeHtml(opts.subtitle)}` : '') +
+    (opts.cultureCode ? ` · <a class="text-emerald-700 underline" href="#/cultures/${escapeHtml(opts.cultureCode)}">Fiche culturelle complète</a>` : '');
 
   $('#lecon-objectives').innerHTML = L.objectives
     .map(o => `<li>${escapeHtml(o)}</li>`).join('');
 
   // Panneau enseignant
-  $('#lecon-teacher-intro').textContent = L.teacher.intro;
+  $('#lecon-teacher-intro').innerHTML = md(L.teacher.intro) +
+    (L.situation ? `<span class="block mt-2"><strong>Situation :</strong> ${md(L.situation)}</span>` : '') +
+    (L.materiel ? `<span class="block mt-2"><strong>Matériel :</strong> ${md(L.materiel)}</span>` : '');
   $('#lecon-teacher-steps').innerHTML = L.teacher.steps.map((s, i) => `
     <li class="relative pl-12">
       <span class="absolute left-0 top-0 w-9 h-9 grid place-items-center rounded-full bg-brand-100 text-brand-700 font-serif font-semibold">${i + 1}</span>
-      <div class="font-semibold text-ink-900">${escapeHtml(s.title)}</div>
-      <p class="text-sm text-ink-700 mt-1">${escapeHtml(s.instruction)}</p>
+      ${s.title ? `<div class="font-semibold text-ink-900">${md(s.title)}</div>` : ''}
+      <p class="text-sm text-ink-700 mt-1">${md(s.instruction)}</p>
     </li>
   `).join('');
-  $('#lecon-teacher-freedom').textContent = L.teacher.freedom;
-  $('#lecon-teacher-tips').textContent = L.teacher.tips;
+  $('#lecon-teacher-freedom').innerHTML = md(L.teacher.freedom);
+  $('#lecon-teacher-tips').innerHTML = md(L.teacher.tips);
 
   // Panneau élève
-  $('#lecon-student-intro').textContent = L.student.intro;
+  $('#lecon-student-intro').innerHTML = md(L.student.intro);
   $('#lecon-student-activities').innerHTML = L.student.activities.map((a, i) => `
     <li class="relative pl-12">
       <span class="absolute left-0 top-0 w-9 h-9 grid place-items-center rounded-full bg-emerald-100 text-emerald-700 font-serif font-semibold">${i + 1}</span>
-      <div class="font-semibold text-ink-900">${escapeHtml(a.title)}</div>
-      <p class="text-sm text-ink-700 mt-1">${escapeHtml(a.instruction)}</p>
+      ${a.title ? `<div class="font-semibold text-ink-900">${md(a.title)}</div>` : ''}
+      <p class="text-sm text-ink-700 mt-1">${md(a.instruction)}</p>
     </li>
   `).join('');
-  $('#lecon-student-memo').textContent = L.student.memo;
+  $('#lecon-student-memo').innerHTML = md(L.student.memo);
 
   // Vocabulaire ALCAM
   $('#lecon-voc-count').textContent = `${L.vocabulary.length} entrée${L.vocabulary.length > 1 ? 's' : ''}`;
+  $('#lecon-voc-section')?.classList.toggle('hidden', !L.vocabulary.length);
   $('#lecon-voc-list').innerHTML = L.vocabulary.map(it => {
     const hasAudio = !!it.audio;
     return `
@@ -791,18 +849,18 @@ function renderLecon(id) {
   });
 
   // Navigation prev / next
-  const idx = state.lessons.findIndex(x => x.id === id);
-  const prev = state.lessons[idx - 1];
-  const next = state.lessons[idx + 1];
+  const idx = lessons.findIndex(x => x.id === id);
+  const prev = lessons[idx - 1];
+  const next = lessons[idx + 1];
   $('#lecon-nav').innerHTML = `
     ${prev
-      ? `<a href="#/lecon/${escapeHtml(prev.id)}" class="inline-flex items-center gap-2 text-sm text-ink-700 hover:text-brand-700">
+      ? `<a href="${opts.linkBase}${escapeHtml(prev.id)}" class="inline-flex items-center gap-2 text-sm text-ink-700 hover:text-brand-700">
            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
            ${escapeHtml(prev.code)} · ${escapeHtml(prev.title)}
          </a>`
       : '<span></span>'}
     ${next
-      ? `<a href="#/lecon/${escapeHtml(next.id)}" class="inline-flex items-center gap-2 text-sm text-ink-700 hover:text-brand-700">
+      ? `<a href="${opts.linkBase}${escapeHtml(next.id)}" class="inline-flex items-center gap-2 text-sm text-ink-700 hover:text-brand-700">
            ${escapeHtml(next.code)} · ${escapeHtml(next.title)}
            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
          </a>`
@@ -1108,6 +1166,290 @@ function bindRound(kind, round, root, nextRound) {
       `;
       $('#exo-next').addEventListener('click', nextRound);
     });
+  });
+}
+
+
+/* ====================================================================== */
+/* ---------- Cultures : fiches des communautés + leçons de culture ----- */
+/* ====================================================================== */
+
+const FC_COLOR = {
+  bantoid: '#818cf8', bantu: '#22d3ee', ubangian: '#f97316', adamawa: '#84cc16',
+  chadic: '#facc15', nilosaharan: '#e879f9', atlantic: '#fb7185', other: '#94a3b8',
+};
+
+state.cultures = null;          // index des communautés
+state.cultureDetail = {};       // cache des fiches complètes
+state.cultureFilter = { q: '', region: '' };
+
+async function loadCulturesIndex() {
+  if (!state.cultures) {
+    state.cultures = await fetch('data/cultures/index.json').then(r => r.json());
+  }
+  return state.cultures;
+}
+
+async function loadCulture(code) {
+  if (!state.cultureDetail[code]) {
+    const d = await fetch(`data/cultures/${code}.json`).then(r => {
+      if (!r.ok) throw new Error('not found');
+      return r.json();
+    });
+    (d.lessons || []).forEach(normalizeLesson);
+    state.cultureDetail[code] = d;
+  }
+  return state.cultureDetail[code];
+}
+
+/** Petit rendu markdown : **gras** uniquement (après échappement). */
+function md(s) {
+  return escapeHtml(s || '').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}
+
+function cultureCard(c) {
+  return `
+    <button type="button" data-code="${escapeHtml(c.code)}" class="culture-card text-left bg-white border border-ink-100 rounded-xl p-4 sm:p-5 hover:border-emerald-400 hover:shadow transition w-full">
+      <div class="flex items-start gap-3">
+        <span class="mt-1.5 w-3 h-3 rounded-full shrink-0" style="background:${FC_COLOR[c.fc] || '#94a3b8'}"></span>
+        <div class="min-w-0 flex-1">
+          <h3 class="font-semibold text-lg text-ink-900 leading-snug">${escapeHtml(c.name)}</h3>
+          <p class="text-xs text-ink-500 mt-0.5">${escapeHtml(c.region)} · ${escapeHtml(c.family)}</p>
+          <p class="text-sm text-ink-600 mt-2 line-clamp-3">${escapeHtml(c.overview)}</p>
+          <span class="inline-block mt-3 text-sm font-medium text-emerald-700">Ouvrir la fiche →</span>
+        </div>
+      </div>
+    </button>`;
+}
+
+async function renderCultures(code) {
+  mountTemplate('tpl-cultures');
+  const grid = $('#cultures-grid');
+  grid.innerHTML = '<div class="text-center text-ink-400 py-12 col-span-full">Chargement…</div>';
+  let data;
+  try { data = await loadCulturesIndex(); }
+  catch (e) {
+    grid.innerHTML = '<div class="text-center text-amber-700 py-12 col-span-full">Impossible de charger les fiches culturelles.</div>';
+    return;
+  }
+  const regionSel = $('#cultures-region');
+  regionSel.innerHTML = '<option value="">Toutes les régions</option>' +
+    data.regions.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(r)}</option>`).join('');
+  const search = $('#cultures-search');
+  search.value = state.cultureFilter.q;
+  regionSel.value = state.cultureFilter.region;
+
+  // Légende des familles
+  const used = [...new Set(data.communities.map(c => c.fc))];
+  $('#cultures-legend').innerHTML = used.map(fc => `
+    <span class="inline-flex items-center gap-1.5 text-xs text-ink-600 mr-3 mb-1">
+      <span class="w-2.5 h-2.5 rounded-full" style="background:${FC_COLOR[fc]}"></span>${escapeHtml(data.families[fc] || fc)}
+    </span>`).join('');
+
+  function update() {
+    const q = state.cultureFilter.q.toLowerCase().trim();
+    const reg = state.cultureFilter.region;
+    const list = data.communities.filter(c => {
+      const hay = [c.name, c.autonym, c.region, c.place, c.parler, c.family].join(' ').toLowerCase();
+      return (!q || hay.includes(q)) && (!reg || c.region.split(/\s*\/\s*/).includes(reg) || c.region.includes(reg));
+    }).sort((a, b) => a.name.localeCompare(b.name, 'fr'));
+    $('#cultures-count').textContent = `${list.length} communauté${list.length > 1 ? 's' : ''}`;
+    grid.innerHTML = list.length ? list.map(cultureCard).join('')
+      : '<div class="text-center text-ink-400 py-12 col-span-full">Aucune communauté ne correspond.</div>';
+  }
+  search.addEventListener('input', () => { state.cultureFilter.q = search.value; update(); });
+  regionSel.addEventListener('change', () => { state.cultureFilter.region = regionSel.value; update(); });
+  grid.addEventListener('click', e => {
+    const b = e.target.closest('[data-code]');
+    if (b) location.hash = `#/cultures/${b.dataset.code}`;
+  });
+  update();
+  if (code) openCultureModal(code);
+}
+
+/* ---------- Fenêtre (modale) d'une communauté ---------- */
+
+function ensureCultureModal() {
+  let m = $('#culture-modal');
+  if (m) return m;
+  m = document.createElement('div');
+  m.id = 'culture-modal';
+  m.className = 'fixed inset-0 z-50 hidden';
+  m.setAttribute('role', 'dialog');
+  m.setAttribute('aria-modal', 'true');
+  m.innerHTML = `
+    <div class="culture-modal-backdrop absolute inset-0 bg-ink-900/50"></div>
+    <div class="culture-modal-panel absolute inset-0 sm:inset-auto sm:left-1/2 sm:top-6 sm:bottom-6 sm:-translate-x-1/2 sm:w-[min(48rem,calc(100vw-2rem))] bg-white sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+      <div id="culture-modal-head" class="shrink-0 border-b border-ink-100 px-4 sm:px-6 py-3 flex items-start gap-3 bg-white"></div>
+      <div id="culture-modal-body" class="flex-1 overflow-y-auto overscroll-contain px-4 sm:px-6 py-5"></div>
+    </div>`;
+  document.body.appendChild(m);
+  m.querySelector('.culture-modal-backdrop').addEventListener('click', closeCultureModal);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !m.classList.contains('hidden')) closeCultureModal();
+  });
+  return m;
+}
+
+function closeCultureModal() {
+  const m = $('#culture-modal');
+  if (!m || m.classList.contains('hidden')) return;
+  m.classList.add('hidden');
+  document.documentElement.classList.remove('modal-open');
+  if (/^#\/cultures\//.test(location.hash)) {
+    history.replaceState(null, '', '#/cultures');
+  }
+}
+
+function listBlock(title, items, emptyText) {
+  if (!items || !items.length) return '';
+  return `
+    <details class="culture-acc">
+      <summary>${escapeHtml(title)} <span class="text-ink-400 font-normal">(${items.length})</span></summary>
+      <dl class="mt-3 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+        ${items.map(x => `
+          <div class="flex gap-2 border-b border-ink-50 pb-1.5">
+            <dt class="lang-text font-semibold text-ink-900 shrink-0 max-w-[45%]">${escapeHtml(x.form)}</dt>
+            <dd class="text-ink-600 min-w-0">${escapeHtml(x.meaning || '—')}</dd>
+          </div>`).join('')}
+      </dl>
+    </details>`;
+}
+
+async function openCultureModal(code) {
+  const m = ensureCultureModal();
+  const head = $('#culture-modal-head');
+  const body = $('#culture-modal-body');
+  head.innerHTML = '';
+  body.innerHTML = '<div class="text-center text-ink-400 py-12">Chargement de la fiche…</div>';
+  m.classList.remove('hidden');
+  document.documentElement.classList.add('modal-open');
+  let c;
+  try { c = await loadCulture(code); }
+  catch (e) {
+    body.innerHTML = '<div class="text-center text-amber-700 py-12">Fiche introuvable.</div>';
+    head.innerHTML = `<button type="button" class="ml-auto text-2xl text-ink-400 px-2" aria-label="Fermer" data-close>✕</button>`;
+    head.querySelector('[data-close]').addEventListener('click', closeCultureModal);
+    return;
+  }
+  head.innerHTML = `
+    <span class="mt-2 w-3 h-3 rounded-full shrink-0" style="background:${FC_COLOR[c.fc] || '#94a3b8'}"></span>
+    <div class="min-w-0 flex-1">
+      <h2 class="font-serif text-xl sm:text-2xl text-ink-900 leading-tight">${escapeHtml(c.name)}</h2>
+      <p class="text-xs text-ink-500 mt-0.5">${escapeHtml(c.region)} · ${escapeHtml(c.family)}</p>
+    </div>
+    <button type="button" class="shrink-0 -mr-2 w-10 h-10 grid place-items-center rounded-lg text-2xl text-ink-400 hover:bg-ink-100 hover:text-ink-700" aria-label="Fermer" data-close>✕</button>`;
+  head.querySelector('[data-close]').addEventListener('click', closeCultureModal);
+
+  const facts = [
+    ['Nom que se donne le groupe', c.autonym ? `${c.autonym}${c.autonymMeaning ? ' — ' + c.autonymMeaning : ''}` : ''],
+    ['Autres noms', c.exonyms],
+    ['Langue', c.parler],
+    ['Lieu de référence', c.place],
+  ].filter(([, v]) => v);
+
+  const expr = (c.expressions || []).map(g => `
+    <details class="culture-acc culture-acc-sub">
+      <summary>${escapeHtml(g.title)} <span class="text-ink-400 font-normal">(${g.items.length})</span></summary>
+      <ul class="mt-2 divide-y divide-ink-50">
+        ${g.items.map(e => `
+          <li class="py-2">
+            <p class="lang-text text-base text-ink-900">${escapeHtml(e.lang)}</p>
+            <p class="text-sm text-ink-600">${escapeHtml(e.fr)}${e.gloss ? ` <span class="text-ink-400">· ${escapeHtml(e.gloss)}</span>` : ''}</p>
+          </li>`).join('')}
+      </ul>
+    </details>`).join('');
+
+  const nums = (c.nombres || []);
+  const numsHtml = nums.length ? `
+    <details class="culture-acc">
+      <summary>Compter <span class="text-ink-400 font-normal">(${nums.length} nombres)</span></summary>
+      <div class="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-2">
+        ${nums.map(x => `
+          <div class="rounded-lg bg-ink-50 px-3 py-2">
+            <div class="text-xs text-ink-400">${x.n}${x.gloss && x.gloss !== String(x.n) ? ' · ' + escapeHtml(x.gloss) : ''}</div>
+            <div class="lang-text text-ink-900">${escapeHtml(x.lang)}</div>
+          </div>`).join('')}
+      </div>
+    </details>` : '';
+
+  const lessonsHtml = (c.lessons || []).map(L => `
+    <a href="#/culture/${escapeHtml(c.code)}/lecon/${escapeHtml(L.id)}" class="flex items-center gap-3 bg-emerald-50/60 border border-emerald-100 rounded-lg px-3 py-2.5 hover:border-emerald-400">
+      <span class="font-serif text-emerald-700 w-12 shrink-0">${escapeHtml(L.code)}</span>
+      <span class="text-sm text-ink-800 min-w-0">${escapeHtml(L.title)}</span>
+    </a>`).join('');
+
+  body.innerHTML = `
+    <p class="text-ink-700 leading-relaxed">${escapeHtml(c.overview)}</p>
+    <dl class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
+      ${facts.map(([k, v]) => `
+        <div class="rounded-lg border border-ink-100 px-3 py-2">
+          <dt class="text-xs uppercase tracking-wide text-ink-400">${escapeHtml(k)}</dt>
+          <dd class="text-ink-800 mt-0.5">${escapeHtml(v)}</dd>
+        </div>`).join('')}
+    </dl>
+    <div class="mt-4 flex flex-wrap gap-2 text-sm">
+      <a href="#culture-lessons-anchor" data-jump class="px-3 py-1.5 rounded-full bg-emerald-600 text-white font-medium">📚 Leçons de culture</a>
+      <a href="reseau.html#${escapeHtml(c.code)}" class="px-3 py-1.5 rounded-full border border-ink-200 text-ink-700">🕸 Voir dans CamRhizome</a>
+      ${c.lang ? `<a href="#/lecons" data-lang="${escapeHtml(c.lang)}" class="px-3 py-1.5 rounded-full border border-ink-200 text-ink-700">🗣 Leçons de langue</a>` : ''}
+    </div>
+
+    <h3 class="font-serif text-lg mt-6 mb-2">La communauté en détail</h3>
+    ${c.sections.map((s, i) => `
+      <details class="culture-acc" ${i === 0 ? 'open' : ''}>
+        <summary>${escapeHtml(s.title)}</summary>
+        <ul class="mt-2 space-y-2 text-sm text-ink-700 list-disc pl-5">
+          ${s.items.map(x => `<li>${escapeHtml(x)}</li>`).join('')}
+        </ul>
+      </details>`).join('')}
+
+    <h3 class="font-serif text-lg mt-6 mb-2">Noms de personnes, de clans et de lieux</h3>
+    ${listBlock('Noms de personnes', c.lists.anthroponymes)}
+    ${listBlock('Noms de clans et de lignées', c.lists.ethnonymes)}
+    ${listBlock('Noms de lieux', c.lists.toponymes)}
+    ${(c.lists.anthroponymes.length + c.lists.ethnonymes.length + c.lists.toponymes.length) ? '' : '<p class="text-sm text-ink-400">Pas de liste disponible pour cette communauté.</p>'}
+
+    <h3 class="font-serif text-lg mt-6 mb-2">Parler au quotidien</h3>
+    ${expr || '<p class="text-sm text-ink-400">Pas d\'expressions disponibles pour cette communauté.</p>'}
+    ${numsHtml}
+
+    <h3 id="culture-lessons-anchor" class="font-serif text-lg mt-6 mb-2">Leçons de culture (programme MINESEC)</h3>
+    <p class="text-sm text-ink-500 mb-3">Dix leçons clé-en-main (fiche enseignant + fiche élève), construites selon la démarche du guide pédagogique des Cultures Nationales, à partir des données de cette communauté.</p>
+    <div class="grid gap-2">${lessonsHtml}</div>
+
+    <p class="mt-8 text-xs text-ink-400 border-t border-ink-100 pt-3">Synthèse rédigée à partir d'informations recueillies auprès de membres de la communauté. Les mots en langue sont transcrits tels qu'ils ont été fournis.</p>`;
+  body.scrollTop = 0;
+  const jump = body.querySelector('[data-jump]');
+  jump?.addEventListener('click', e => {
+    e.preventDefault();
+    $('#culture-lessons-anchor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  body.querySelector('[data-lang]')?.addEventListener('click', async e => {
+    e.preventDefault();
+    closeCultureModal();
+    await switchLanguage(e.currentTarget.dataset.lang);
+    location.hash = '#/lecons';
+  });
+}
+
+async function renderCultureLesson(code, id) {
+  $('#app').innerHTML = '<div class="text-center text-ink-400 py-20">Chargement…</div>';
+  let c;
+  try { c = await loadCulture(code); } catch (e) { c = null; }
+  const L = c && c.lessons.find(x => x.id === id);
+  if (!L) {
+    $('#app').innerHTML = `
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 text-amber-800 max-w-2xl mx-auto">
+        <h2 class="font-semibold text-lg">Leçon introuvable</h2>
+        <p class="mt-3"><a class="text-amber-900 underline" href="#/cultures">Retour aux cultures</a></p>
+      </div>`;
+    return;
+  }
+  renderLessonView(L, c.lessons, {
+    backHref: `#/cultures/${code}`,
+    backLabel: `Fiche : ${c.name}`,
+    linkBase: `#/culture/${code}/lecon/`,
+    subtitle: c.name,
   });
 }
 

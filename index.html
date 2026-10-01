@@ -54,7 +54,7 @@
 
   <!-- Header -->
   <header class="border-b border-ink-100 bg-white sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
       <a href="#/" class="flex items-center gap-3 group">
         <div class="w-10 h-10 rounded-lg bg-brand-500 text-white grid place-items-center font-bold font-serif text-lg shadow-sm group-hover:bg-brand-600 transition">L</div>
         <div class="leading-tight">
@@ -62,31 +62,33 @@
           <div class="text-xs text-ink-500">Langues &amp; Cultures Camerounaises</div>
         </div>
       </a>
-      <nav id="main-nav" class="hidden lg:flex items-center gap-1 text-sm flex-wrap justify-end">
-        <a href="#/" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Accueil</a>
-        <a href="#/catalogue" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Langues</a>
-        <a href="#/lecons" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Leçons</a>
-        <a href="#/vocabulaire" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Vocabulaire</a>
-        <a href="#/exercices" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Exercices</a>
-        <a href="#/ressources" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Ressources</a>
-        <a href="#/corpus-oral" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Corpus oral</a>
-        <a href="#/contribuer" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100 text-brand-700 font-medium">Contribuer</a>
-        <a href="#/a-propos" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">À propos</a>
-        <a href="cartes.html" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100 border border-ink-200 text-ink-600" title="Mini-Atlas linguistique du Cameroun">🗺 Cartes</a>
-        <a href="reseau.html" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100 border border-ink-200 text-ink-600" title="CamRhizome — Réseau intercommunautaire du Cameroun">🕸 CamRhizome</a>
+      <nav id="main-nav" class="hidden xl:flex items-center gap-0.5 text-sm flex-wrap justify-end">
+        <a href="#/" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100">Accueil</a>
+        <a href="#/catalogue" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100">Langues</a>
+        <a href="#/lecons" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100">Leçons</a>
+        <a href="#/cultures" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100 text-emerald-700 font-medium">Cultures</a>
+        <a href="#/vocabulaire" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100">Vocabulaire</a>
+        <a href="#/exercices" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100">Exercices</a>
+        <a href="#/ressources" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100">Ressources</a>
+        <a href="#/corpus-oral" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100">Corpus oral</a>
+        <a href="#/contribuer" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100 text-brand-700 font-medium">Contribuer</a>
+        <a href="#/a-propos" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100">À propos</a>
+        <a href="cartes.html" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100 border border-ink-200 text-ink-600" title="Mini-Atlas linguistique du Cameroun">🗺 Cartes</a>
+        <a href="reseau.html" class="nav-link px-2 py-2 rounded-md hover:bg-ink-100 border border-ink-200 text-ink-600" title="CamRhizome — Réseau intercommunautaire du Cameroun">🕸 CamRhizome</a>
         <select id="nav-lang-selector" class="lang-selector ml-2 border border-ink-200 rounded-md px-2 py-1 bg-white text-sm text-ink-700 cursor-pointer" title="Changer de langue" onchange="switchLanguage(this.value)">
           <!-- rempli dynamiquement par JS -->
         </select>
       </nav>
-      <button id="mobile-toggle" class="lg:hidden p-2 -mr-2 rounded-md hover:bg-ink-100" aria-label="Menu" aria-controls="mobile-menu">
+      <button id="mobile-toggle" class="xl:hidden p-2 -mr-2 rounded-md hover:bg-ink-100" aria-label="Menu" aria-controls="mobile-menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
-    <div id="mobile-menu" class="lg:hidden hidden border-t border-ink-100 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto">
+    <div id="mobile-menu" class="xl:hidden hidden border-t border-ink-100 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto">
       <div class="max-w-6xl mx-auto px-4 py-2 grid grid-cols-1 sm:grid-cols-2 gap-1 text-base">
         <a href="#/" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Accueil</a>
         <a href="#/catalogue" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Langues</a>
         <a href="#/lecons" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Leçons</a>
+        <a href="#/cultures" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100 text-emerald-700 font-medium">Cultures</a>
         <a href="#/vocabulaire" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Vocabulaire</a>
         <a href="#/exercices" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Exercices</a>
         <a href="#/ressources" class="nav-link px-3 py-2 rounded-md hover:bg-ink-100">Ressources</a>
@@ -124,6 +126,8 @@
           <a href="#/ressources" class="hover:text-brand-700">Ressources</a>
           <span class="text-ink-300">·</span>
           <a href="#/corpus-oral" class="hover:text-brand-700">Corpus oral</a>
+          <span class="text-ink-300">·</span>
+          <a href="#/cultures" class="hover:text-brand-700">Cultures</a>
           <span class="text-ink-300">·</span>
           <a href="#/contribuer" class="hover:text-brand-700">Contribuer</a>
           <span class="text-ink-300">·</span>
@@ -262,6 +266,11 @@
           <h3 class="font-semibold text-lg">Catalogue des langues</h3>
           <p class="text-sm text-ink-500 mt-1">28 langues ALCAM et CERDOTOLA avec données audio MP3, transcription AGLC et traduction française.</p>
         </a>
+        <a href="#/cultures" class="group block bg-white rounded-xl border border-emerald-200 p-6 hover:border-emerald-400 hover:shadow transition sm:col-span-2 lg:col-span-3">
+          <div class="text-3xl mb-2 font-serif text-emerald-600">⑦</div>
+          <h3 class="font-semibold text-lg">Cultures du Cameroun</h3>
+          <p class="text-sm text-ink-500 mt-1">51 fiches de communautés : organisation sociale, mariage, croyances, cuisine, danses, noms, expressions usuelles et numération, avec 10 leçons de culture clé-en-main pour chacune.</p>
+        </a>
         <a href="#/contribuer" class="group block bg-white rounded-xl border border-ink-100 p-6 hover:border-brand-300 hover:shadow transition">
           <div class="text-3xl mb-2 font-serif text-brand-500">⑥</div>
           <h3 class="font-semibold text-lg">Contribuer</h3>
@@ -313,6 +322,13 @@
               <option value="M7-quotidien-1">VII — Gestion du quotidien Niveau 1 (4e)</option>
               <option value="M8-quotidien-2">VIII — Gestion du quotidien Niveau 2 (3e)</option>
             </optgroup>
+            <optgroup label="Cultures Nationales">
+              <option value="MC1-diversite-culturelle">C-I — Diversité culturelle</option>
+              <option value="MC2-modes-de-vie">C-II — Modes de vie</option>
+              <option value="MC3-evenements">C-III — Événements de la vie</option>
+              <option value="MC4-communaute-1">C-IV — Pratiques en communauté (Niv. I)</option>
+              <option value="MC5-communaute-2">C-V — Pratiques en communauté (Niv. II)</option>
+            </optgroup>
           </select>
         </div>
       </div>
@@ -323,9 +339,9 @@
   <template id="tpl-lecon">
     <section>
       <div class="mb-6">
-        <a href="#/lecons" class="inline-flex items-center gap-1 text-sm text-ink-500 hover:text-ink-700">
+        <a id="lecon-back" href="#/lecons" class="inline-flex items-center gap-1 text-sm text-ink-500 hover:text-ink-700">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-          Toutes les leçons
+          <span id="lecon-back-label">Toutes les leçons</span>
         </a>
       </div>
       <header class="mb-8 bg-white border border-ink-100 rounded-2xl p-4 sm:p-6 shadow-sm">
@@ -406,10 +422,10 @@
         <div id="lecon-emac-list" class="grid sm:grid-cols-2 gap-3"></div>
       </section>
 
-      <!-- Vocabulaire ALCAM mobilisé -->
-      <section class="mt-8">
-        <div class="flex items-center justify-between gap-3 mb-4">
-          <h2 class="font-serif text-2xl">Vocabulaire ALCAM mobilisé</h2>
+      <!-- Vocabulaire mobilisé -->
+      <section id="lecon-voc-section" class="mt-8">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <h2 class="font-serif text-2xl">Vocabulaire mobilisé</h2>
           <span id="lecon-voc-count" class="text-xs text-ink-400 uppercase tracking-wide"></span>
         </div>
         <div id="lecon-voc-list" class="grid sm:grid-cols-2 gap-3"></div>
@@ -418,6 +434,25 @@
       <!-- Navigation entre leçons -->
       <nav class="mt-10 flex flex-wrap items-center justify-between gap-3 sm:gap-4 border-t border-ink-100 pt-6" id="lecon-nav">
       </nav>
+    </section>
+  </template>
+
+  <template id="tpl-cultures">
+    <section>
+      <h1 class="font-serif text-3xl mb-2">Cultures du Cameroun</h1>
+      <p class="text-ink-600 max-w-3xl mb-6">
+        Fiches de 51 communautés : identité, territoire, organisation sociale, mariage, croyances, économie,
+        habillement, musiques et danses, noms, expressions usuelles et façons de compter. Touchez une communauté
+        pour ouvrir sa fiche et ses dix leçons de culture.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-2 sm:items-center mb-3">
+        <input id="cultures-search" type="search" placeholder="Rechercher une communauté, une langue, un lieu…"
+          class="border border-ink-200 rounded-md px-3 py-2 bg-white text-base sm:text-sm w-full sm:w-80" />
+        <select id="cultures-region" class="border border-ink-200 rounded-md px-3 py-2 bg-white text-sm w-full sm:w-auto"></select>
+        <span id="cultures-count" class="text-xs text-ink-400 uppercase tracking-wide sm:ml-auto"></span>
+      </div>
+      <div id="cultures-legend" class="mb-5 flex flex-wrap"></div>
+      <div id="cultures-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
     </section>
   </template>
 
