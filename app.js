@@ -11,7 +11,7 @@
  *   #/cultures     -> Fiches culturelles des communautés (#/cultures/CODE ouvre une fiche)
  *   #/culture/CODE/lecon/ID -> Leçon de culture d'une communauté
  *
- * Langue active : state.currentLang (défaut : 'bulu')
+ * Langue active : state.currentLang (aucune par défaut : l'utilisateur choisit)
  * Changement via switchLanguage(slug) qui recharge vocab + leçons.
  * Modules langues  : M1–M8  (MINESEC Langues Nationales)
  * Modules cultures : MC1–MC5 (MINESEC Cultures Nationales)
@@ -19,12 +19,12 @@
 
 const state = {
   langues: [],        // catalogue des 16 langues ALCAM
-  currentLang: 'bulu',  // langue active
-  currentLangName: 'Bulu',
+  currentLang: null,  // langue active (aucune tant que l'utilisateur n'a pas choisi)
+  currentLangName: '',
   vocab: [],          // phrases de la langue active
   vocabWithFr: [],    // vocab filtré (traduction non vide)
   lessons: [],        // leçons de la langue active
-  audioBase: 'audio/bulu/',
+  audioBase: '',
   emacBase: 'audio/emac/',
   currentAudio: null,
   preferredPane: 'teacher',  // mémoire de session pour la bascule mobile
@@ -174,33 +174,37 @@ function similarity(a, b) {
 async function loadData() {
   const [langues, vocab, lessons] = await Promise.all([
     fetch('data/languages.json').then(r => r.json()),
-    fetch(`data/${state.currentLang}.json`).then(r => r.json()).catch(() => []),
-    fetch(`data/lessons_${state.currentLang}.json`).then(r => r.json()).catch(() => ({ lessons: [] })),
+    state.currentLang ? fetch(`data/${state.currentLang}.json`).then(r => r.json()).catch(() => []) : [],
+    state.currentLang ? fetch(`data/lessons_${state.currentLang}.json`).then(r => r.json()).catch(() => ({ lessons: [] })) : { lessons: [] },
   ]);
   state.langues = langues;
+  if (state.currentLang && !langues.some(l => l.slug === state.currentLang)) state.currentLang = null;
   state.vocab = vocab;
   state.vocabWithFr = vocab.filter(b => b.frenchText && b.langText);
   state.lessons = (lessons.lessons || []).map(normalizeLesson);
   const langInfo = langues.find(l => l.slug === state.currentLang);
-  state.currentLangName = langInfo ? langInfo.name : state.currentLang;
-  state.audioBase = `audio/${state.currentLang}/`;
+  state.currentLangName = langInfo ? langInfo.name : '';
+  state.audioBase = state.currentLang ? `audio/${state.currentLang}/` : '';
   // Populate all language selectors (nav + mobile)
   ['nav-lang-selector', 'mobile-lang-selector'].forEach(id => {
     const sel = document.getElementById(id);
     if (sel && !sel.options.length) {
+      sel.add(new Option('🌐 Choisir une langue', ''));
+      sel.options[0].disabled = true;
       langues.forEach(l => {
         const opt = new Option(l.name, l.slug);
         sel.add(opt);
       });
     }
-    if (sel) sel.value = state.currentLang;
+    if (sel) sel.value = state.currentLang || '';
   });
   return { langues, vocab, lessons };
 }
 
 async function switchLanguage(slug) {
-  if (state.currentLang === slug) return;
+  if (!slug || state.currentLang === slug) return;
   state.currentLang = slug;
+  try { sessionStorage.setItem('likalo-lang', slug); } catch (e) {}
   stopCurrentAudio();
   const [vocab, lessons] = await Promise.all([
     fetch(`data/${slug}.json`).then(r => r.json()).catch(() => []),
@@ -218,8 +222,8 @@ async function switchLanguage(slug) {
 
 function updateLangSelector() {
   const navSel = document.getElementById('nav-lang-selector');
-  if (navSel) navSel.value = state.currentLang;
-  $$('.lang-selector').forEach(sel => { sel.value = state.currentLang; });
+  if (navSel) navSel.value = state.currentLang || '';
+  $$('.lang-selector').forEach(sel => { sel.value = state.currentLang || ''; });
 }
 
 /* ---------- Routeur ---------- */
@@ -300,13 +304,69 @@ function mountTemplate(id) {
   app.appendChild(node);
 }
 
+/* ---------- Choix de la langue (aucune langue par défaut) ---------- */
+
+const langKey = t => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+function langChooserHtml(compact) {
+  return `
+    <input type="search" class="lang-choose-search w-full border border-ink-200 rounded-lg px-3 py-2 text-base sm:text-sm mb-3"
+           placeholder="Rechercher une langue…" aria-label="Rechercher une langue">
+    <div class="lang-choose-grid grid grid-cols-2 ${compact ? '' : 'sm:grid-cols-3 lg:grid-cols-4'} gap-2 ${compact ? 'max-h-72 overflow-y-auto pr-1' : ''}">
+      ${state.langues.map(l => `
+        <button type="button" data-slug="${escapeHtml(l.slug)}" data-q="${escapeHtml(langKey(l.name + ' ' + (l.region || '') + ' ' + l.slug))}"
+                class="text-left px-3 py-2 rounded-lg border border-ink-100 bg-white hover:border-brand-400 hover:bg-brand-50 transition">
+          <span class="block font-medium text-ink-800 lang-text">${escapeHtml(l.name)}</span>
+          ${l.region ? `<span class="block text-xs text-ink-400 truncate">${escapeHtml(l.region)}</span>` : ''}
+        </button>`).join('')}
+    </div>`;
+}
+
+function wireLangChooser(root) {
+  const search = root.querySelector('.lang-choose-search');
+  const btns = [...root.querySelectorAll('[data-slug]')];
+  search?.addEventListener('input', () => {
+    const q = langKey(search.value).trim();
+    btns.forEach(b => { b.style.display = !q || b.dataset.q.includes(q) ? '' : 'none'; });
+  });
+  btns.forEach(b => b.addEventListener('click', () => switchLanguage(b.dataset.slug)));
+}
+
+/* Affiché à la place d'une page qui dépend d'une langue tant qu'aucune n'est choisie. */
+function renderLangGate(what) {
+  $('#app').innerHTML = `
+    <section class="max-w-4xl mx-auto">
+      <h1 class="font-serif text-2xl sm:text-3xl text-ink-900">Choisissez une langue</h1>
+      <p class="mt-2 text-ink-600">${escapeHtml(what)} Sélectionnez la langue avec laquelle vous souhaitez travailler ; vous pourrez en changer à tout moment depuis le menu.</p>
+      <div class="mt-5 bg-ink-50 border border-ink-100 rounded-2xl p-4 sm:p-6">${langChooserHtml(false)}</div>
+    </section>`;
+  wireLangChooser($('#app'));
+}
+
+function needsLang(what) {
+  if (state.currentLang) return false;
+  renderLangGate(what);
+  return true;
+}
+
 function renderHome() {
   mountTemplate('tpl-home');
   $('#stat-langues').textContent = state.langues.length || 28;
   const leconsCount = $('#stat-lecons');
   if (leconsCount) leconsCount.textContent = state.lessons.length || 26;
-  $('#stat-phrases').textContent = state.vocab.length;
-  $('#stat-audios').textContent = state.vocab.filter(v => v.audio).length;
+  $('#stat-phrases').textContent = state.currentLang ? state.vocab.length : '—';
+  $('#stat-audios').textContent = state.currentLang ? state.vocab.filter(v => v.audio).length : '—';
+  if (!state.currentLang) {
+    const card = $('#home-demo-card');
+    if (card) {
+      card.innerHTML = `
+        <div class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Pour commencer</div>
+        <h2 class="font-serif text-2xl text-ink-900 mt-1">Choisissez votre langue</h2>
+        <p class="text-sm text-ink-500 mt-1 mb-4">Leçons, vocabulaire et exercices s'adaptent à la langue choisie.</p>
+        ${langChooserHtml(true)}`;
+      wireLangChooser(card);
+    }
+  }
   const phrasesLangEl = $('#stat-phrases-lang');
   if (phrasesLangEl) phrasesLangEl.textContent = state.currentLangName;
   const demoLangName = $('#demo-lang-name');
@@ -383,6 +443,7 @@ function renderCatalogue() {
 }
 
 function renderVocabulaire() {
+  if (needsLang('Le vocabulaire est présenté langue par langue.')) return;
   mountTemplate('tpl-vocabulaire');
   const list = $('#vocab-list');
   const empty = $('#vocab-empty');
@@ -645,6 +706,7 @@ const MODULE_ORDER = [
 ];
 
 function renderLecons() {
+  if (needsLang('Les leçons sont proposées dans chacune des langues de la plateforme.')) return;
   mountTemplate('tpl-lecons');
   // Update title with current language name
   const leconsTitleEl = $('#lecons-title');
@@ -731,6 +793,7 @@ function renderLeconCard(L) {
 }
 
 function renderLecon(id) {
+  if (needsLang('Cette leçon existe dans chacune des langues de la plateforme.')) return;
   const L = state.lessons.find(x => x.id === id);
   if (L) {
     renderLessonView(L, state.lessons, {
@@ -885,6 +948,7 @@ function applyPaneVisibility() {
 /* ---------- Exercices ---------- */
 
 function renderExercices() {
+  if (needsLang('Les exercices se font dans la langue de votre choix.')) return;
   mountTemplate('tpl-exercices');
   // Update title and exercise labels with current language name
   const exoTitleEl = $('#exo-title');
@@ -1464,6 +1528,7 @@ async function renderCultureLesson(code, id) {
   // Récupérer la langue depuis le hash si spécifiée (#/langue/basaa)
   const langMatch = location.hash.match(/#\/langue\/([a-z-]+)/);
   if (langMatch) state.currentLang = langMatch[1];
+  else { try { state.currentLang = sessionStorage.getItem('likalo-lang') || null; } catch (e) {} }
 
   try {
     await loadData();

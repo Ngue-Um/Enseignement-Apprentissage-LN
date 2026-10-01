@@ -155,7 +155,7 @@
     // Comptabilise chaque section (#/lecons, #/cultures/BASA…) comme une page distincte
     window.addEventListener('hashchange', function () {
       if (window.goatcounter && window.goatcounter.count) {
-        window.goatcounter.count({ path: location.pathname + location.hash.replace(/^#/, '') });
+        window.goatcounter.count({ path: location.pathname.replace(/index\.html$/, '') + location.hash });
       }
     });
   </script>
@@ -213,7 +213,7 @@
         </div>
 
         <div class="relative">
-          <div class="bg-white rounded-2xl shadow-lg border border-ink-100 p-6">
+          <div id="home-demo-card" class="bg-white rounded-2xl shadow-lg border border-ink-100 p-4 sm:p-6">
             <div class="flex items-center gap-3 mb-4">
               <div class="w-10 h-10 grid place-items-center bg-brand-100 text-brand-700 rounded-lg">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>

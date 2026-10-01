@@ -97,7 +97,7 @@
 
   <!-- Top pages -->
   <div class="bg-white rounded-2xl border border-ink-100 p-6 mb-8">
-    <h2 class="font-semibold text-ink-800 mb-4">Pages les plus visitées</h2>
+    <h2 class="font-semibold text-ink-800 mb-4">Fréquentation par section</h2>
     <div id="top-pages" class="space-y-2 text-sm text-ink-500 italic">
       Données disponibles après configuration et premières visites.
     </div>
@@ -135,53 +135,65 @@
 <script data-goatcounter="https://likalo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 <script>
-// Once GoatCounter is configured, update the dashboard link
+// Statistiques publiques GoatCounter (aucun mot de passe ni jeton dans cette page).
+// Nécessite, sur likalo.goatcounter.com : Settings → « Allow adding visitor counts on your website ».
 const code = new URL(document.querySelector('[data-goatcounter]').dataset.goatcounter).hostname.split('.')[0];
-if (code && code !== 'VOTRE-CODE') {
-  document.getElementById('setup-notice').style.display = 'none';
-  document.getElementById('goat-link').href = `https://${code}.goatcounter.com`;
+const base = `https://${code}.goatcounter.com`;
+const SITE = location.pathname.replace(/stats\.html$/, '');   // ex. /Enseignement-Apprentissage-LN/
+document.getElementById('setup-notice').style.display = 'none';
+document.getElementById('goat-link').href = base;
 
-  // Load GoatCounter public stats via their API
-  const base = `https://${code}.goatcounter.com`;
+const iso = d => d.toISOString().slice(0, 10);
+const today = new Date();
+const daysAgo = n => { const d = new Date(today); d.setDate(d.getDate() - n); return d; };
 
-  // Embed the GoatCounter chart widget
-  const chart = document.getElementById('gchart');
-  chart.innerHTML = `<iframe src="${base}/plot.svg" width="100%" height="300" frameborder="0" style="border:none;width:100%" loading="lazy"></iframe>`;
-
-  // Fetch stats via GoatCounter public JSON API
-  async function loadStats(period, elId) {
-    try {
-      const r = await fetch(`${base}/api/v0/stats/total?period=${period}`, {mode:'cors'});
-      if (r.ok) {
-        const d = await r.json();
-        document.getElementById(elId).textContent = (d.total || '—').toLocaleString('fr-FR');
-      }
-    } catch(e) {}
-  }
-  loadStats('day', 'stat-today');
-  loadStats('week', 'stat-week');
-  loadStats('month', 'stat-month');
-  loadStats('year', 'stat-total');
-
-  // Top pages
-  async function loadTopPages() {
-    try {
-      const r = await fetch(`${base}/api/v0/stats/hits?limit=8`, {mode:'cors'});
-      if (r.ok) {
-        const d = await r.json();
-        const el = document.getElementById('top-pages');
-        if (d.hits && d.hits.length) {
-          el.innerHTML = d.hits.map(h => `
-            <div class="flex items-center justify-between py-2 border-b border-ink-50 last:border-0">
-              <span class="font-mono text-ink-700 break-all mr-3">${h.path || '/'}</span>
-              <span class="font-semibold text-ink-800 shrink-0">${(h.count||0).toLocaleString('fr-FR')} vues</span>
-            </div>`).join('');
-        }
-      }
-    } catch(e) {}
-  }
-  loadTopPages();
+async function counter(path, start) {
+  const q = start ? `?start=${iso(start)}` : '';
+  const r = await fetch(`${base}/counter/${encodeURIComponent(path)}.json${q}`);
+  if (r.status === 404) return '0';
+  if (!r.ok) throw new Error(r.status);
+  return (await r.json()).count;
 }
+
+let blocked = false;
+async function fill(id, start) {
+  try { document.getElementById(id).textContent = await counter('TOTAL', start); }
+  catch (e) { blocked = true; }
+}
+
+(async () => {
+  await Promise.all([
+    fill('stat-today', today), fill('stat-week', daysAgo(6)),
+    fill('stat-month', daysAgo(29)), fill('stat-total', null),
+  ]);
+
+  const chart = document.getElementById('gchart');
+  if (blocked) {
+    chart.innerHTML = `Les chiffres publics ne sont pas encore activés. Sur <a class="underline" href="${base}/settings/main" target="_blank">${code}.goatcounter.com → Settings</a>, cochez <strong>« Allow adding visitor counts on your website »</strong>, puis enregistrez.`;
+    return;
+  }
+  chart.innerHTML = `Graphiques détaillés (heures, pays, navigateurs, provenance) : <a class="underline ml-1" href="${base}" target="_blank">ouvrir le tableau de bord ↗</a>`;
+
+  // Fréquentation par section du site
+  const SECTIONS = [
+    ['Accueil', SITE], ['Leçons', SITE + '#/lecons'], ['Cultures', SITE + '#/cultures'],
+    ['Vocabulaire', SITE + '#/vocabulaire'], ['Exercices', SITE + '#/exercices'],
+    ['Corpus oral', SITE + '#/corpus-oral'], ['Catalogue', SITE + '#/catalogue'],
+    ['Ressources', SITE + '#/ressources'], ['CamRhizome', SITE + 'reseau.html'], ['Cartes', SITE + 'cartes.html'],
+  ];
+  const rows = await Promise.all(SECTIONS.map(async ([label, path]) => {
+    try { return [label, await counter(path, null)]; } catch (e) { return [label, '—']; }
+  }));
+  const num = v => parseInt(String(v).replace(/\D/g, '')) || 0;
+  rows.sort((a, b) => num(b[1]) - num(a[1]));
+  const el = document.getElementById('top-pages');
+  el.classList.remove('italic');
+  el.innerHTML = rows.map(([label, n]) => `
+    <div class="flex items-center justify-between py-2 border-b border-ink-50 last:border-0">
+      <span class="text-ink-700 mr-3">${label}</span>
+      <span class="font-semibold text-ink-800 shrink-0">${n} vues</span>
+    </div>`).join('');
+})();
 </script>
 
 </body>
