@@ -28,6 +28,10 @@
     .leaflet-container { font-family: Inter, system-ui, sans-serif; background: #eef2f3; }
     .reg-label { background: transparent; border: 0; box-shadow: none; font-weight: 600; font-size: 12px; color: #3d3a35; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }
     .reg-label::before { display: none; }
+    .lang-label { display: none; background: transparent; border: 0; box-shadow: none; padding: 0 2px; font-size: 11px; font-style: italic; color: #b91c1c; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 2px #fff; }
+    .lang-label::before { display: none; }
+    .show-labels .lang-label { display: block; }
+    .dot { display:inline-block; width:10px; height:10px; border-radius:9999px; vertical-align:middle; margin-right:6px; border:1.5px solid rgba(0,0,0,.35); }
     .hot { cursor: pointer; }
     .hot-pulse { animation: pulse 1.2s ease-in-out 3; }
     @keyframes pulse { 0%,100% { stroke-opacity: 1; } 50% { stroke-opacity: .2; } }
@@ -66,9 +70,12 @@
     <div id="map-cm" class="map-box absolute inset-0"></div>
     <div id="map-rg" class="map-box absolute inset-0 hidden"></div>
     <div class="absolute top-3 left-14 right-3 z-[1000] flex flex-wrap items-center gap-2 pointer-events-none">
-      <nav id="crumbs" class="pointer-events-auto bg-white/95 border border-ink-200 rounded-lg px-3 py-1.5 text-sm shadow-sm"></nav>
-      <label id="toggle-cult" class="pointer-events-auto bg-white/95 border border-ink-200 rounded-lg px-3 py-1.5 text-sm shadow-sm flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" id="show-cult" checked class="accent-emerald-600"/> <span>Communautés (fiches culturelles)</span>
+      <nav id="crumbs" class="pointer-events-auto bg-white/95 border border-ink-200 rounded-lg px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm shadow-sm"></nav>
+      <label id="toggle-cult" class="pointer-events-auto bg-white/95 border border-ink-200 rounded-lg px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm shadow-sm flex items-center gap-1.5 sm:gap-2 cursor-pointer">
+        <input type="checkbox" id="show-cult" checked class="accent-emerald-600"/> <span>Communautés</span><span class="hidden sm:inline">&nbsp;(fiches culturelles)</span>
+      </label>
+      <label id="toggle-langs" class="pointer-events-auto bg-white/95 border border-ink-200 rounded-lg px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm shadow-sm flex items-center gap-1.5 sm:gap-2 cursor-pointer">
+        <input type="checkbox" id="show-langs" checked class="accent-orange-600"/> <span class="hidden sm:inline">Toutes les langues du Mini-Atlas</span><span class="sm:hidden">Langues</span>
       </label>
     </div>
   </div>
@@ -87,6 +94,7 @@
   const ORDER = ['Extrême-Nord','Nord','Adamaoua','Nord-Ouest','Ouest','Sud-Ouest','Littoral','Centre','Sud','Est'];
 
   let A, GEO, CULT = [], LANGS = [];
+  let langLayer, langMarks = {};
   let mapCm, mapRg, regionLayer, cultLayer, imgLayer, hotLayer, curRegion = null, hotByKey = {};
 
   async function getJSON(p) {
@@ -110,7 +118,7 @@
   const cultName = code => (CULT.find(c => c.code === code) || {}).name || code;
 
   /* ---------- panneau ---------- */
-  function panel(html) { const p = $('#panel'); p.innerHTML = html; p.scrollTop = 0; if (window.innerWidth < 1024) p.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  function panel(html, stay) { const p = $('#panel'); p.innerHTML = html; p.scrollTop = 0; if (!stay && window.innerWidth < 1024) p.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 
   function linkButtons(courses, cultures) {
     let h = '';
@@ -128,7 +136,13 @@
     panel(`
       <p class="text-xs font-semibold uppercase tracking-widest text-brand-600">Mini-Atlas linguistique du Cameroun · LACAGEO 2013</p>
       <h1 class="font-serif text-2xl text-ink-900 mt-1">Atlas linguistique interactif</h1>
-      <p class="text-sm text-ink-600 mt-2">Touchez une région pour voir sa carte d'identité et ses langues, puis ouvrez la carte détaillée du Mini-Atlas : chaque nom de langue y est cliquable. Les points verts sont les communautés qui ont une fiche culturelle sur Likalo.</p>
+      <p class="text-sm text-ink-600 mt-2">Chaque point est une langue figurant sur les cartes du Mini-Atlas : touchez-le pour l'identifier et trouver ses ressources. Zoomez pour afficher les noms. Touchez une région pour voir sa carte d'identité, puis ouvrez la carte détaillée du Mini-Atlas, où chaque nom de langue est aussi cliquable.</p>
+      <ul class="text-sm text-ink-700 mt-3 space-y-1">
+        <li><span class="dot" style="background:#f97316"></span><span>Langue avec leçons ou fiche culturelle sur Likalo</span></li>
+        <li><span class="dot" style="background:#64748b"></span><span>Autre langue du Mini-Atlas</span></li>
+        <li><span class="dot" style="background:#ef4444"></span><span>Langue en danger ou éteinte (UNESCO, SIL)</span></li>
+        <li><span class="dot" style="background:#10b981"></span><span>Communauté avec fiche culturelle</span></li>
+      </ul>
       <div class="grid grid-cols-2 gap-2 mt-4">
         <div class="bg-brand-50 rounded-lg p-3"><div class="text-2xl font-bold text-brand-700">10</div><div class="text-xs text-brand-700">régions</div></div>
         <div class="bg-ink-100 rounded-lg p-3"><div class="text-2xl font-bold text-ink-700">${tot}</div><div class="text-xs text-ink-600">noms de langues sur les cartes</div></div>
@@ -137,7 +151,7 @@
       <div class="grid grid-cols-2 gap-2">${ORDER.map(r => `<button data-reg="${esc(r)}" class="text-left px-3 py-2 rounded-lg border border-ink-100 hover:border-brand-300 hover:bg-brand-50">
         <span class="inline-block w-2.5 h-2.5 rounded-full mr-1.5 align-middle" style="background:${REG_COLORS[r]}"></span><span class="font-medium">${esc(r)}</span>
         <span class="block text-xs text-ink-400">${A.regions[r].langs.length} <span>langues</span></span></button>`).join('')}</div>
-      <p class="text-xs text-ink-400 mt-6">Source : Mini-Atlas linguistique du Cameroun (LACAGEO, 2013). Positions des communautés : approximatives (localité de référence). <a class="underline" href="cartes.html">Définitions et données générales</a></p>`);
+      <p class="text-xs text-ink-400 mt-6">Source : Mini-Atlas linguistique du Cameroun (LACAGEO, 2013). Positions des langues : d'après l'emplacement de leur nom sur les cartes du Mini-Atlas ; positions des communautés : localité de référence. Toutes les positions sont approximatives. <a class="underline" href="cartes.html">Définitions et données générales</a></p>`, true);
     $('#panel').querySelectorAll('[data-reg]').forEach(b => b.onclick = () => go('#/r/' + encodeURIComponent(b.dataset.reg) + '/info'));
   }
 
@@ -171,7 +185,7 @@
     p.querySelectorAll('[data-i]').forEach(b => b.onclick = () => go('#/r/' + encodeURIComponent(r) + '/' + b.dataset.i));
   }
 
-  function langPanel(r, i) {
+  function langPanel(r, i, nat) {
     const R = A.regions[r], L = R.langs[i];
     const lk = linksFor(L);
     const others = [];
@@ -182,7 +196,9 @@
       <h1 class="font-serif text-2xl text-ink-900 mt-1">${esc(L.name)}</h1>
       <p class="text-sm text-ink-500"><span>Région :</span> <span>${esc(r)}</span>${st ? ` · <span class="text-red-700 font-medium">${esc(st)}</span>` : ''}</p>
       <div class="flex flex-wrap gap-2 mt-3">
-        ${L.boxes.length ? `<button data-show class="px-3 py-1.5 rounded-lg border border-ink-200 hover:bg-ink-100 text-sm">📍 Voir sur la carte</button>` : ''}
+        ${nat ? `<button data-detail class="px-3 py-1.5 rounded-lg border border-ink-200 hover:bg-ink-100 text-sm">🗺 Voir sur la carte détaillée</button>`
+              : (L.boxes.length ? `<button data-show class="px-3 py-1.5 rounded-lg border border-ink-200 hover:bg-ink-100 text-sm">📍 Voir sur la carte</button>` : '')}
+        ${!nat && L.pts && L.pts.length ? `<button data-geo class="px-3 py-1.5 rounded-lg border border-ink-200 hover:bg-ink-100 text-sm">🇨🇲 Voir sur la carte du Cameroun</button>` : ''}
         <a class="px-3 py-1.5 rounded-lg border border-ink-200 hover:bg-ink-100 text-sm" href="https://glottolog.org/glottolog?search=${encodeURIComponent(L.main)}" target="_blank" rel="noopener">Glottolog ↗</a>
       </div>
       ${linkButtons(lk.courses, lk.cultures)}
@@ -191,7 +207,9 @@
     const p = $('#panel');
     p.querySelector('[data-reg]').onclick = () => go('#/r/' + encodeURIComponent(r) + '/info');
     p.querySelector('[data-show]')?.addEventListener('click', () => focusLang(i));
-    p.querySelectorAll('[data-o]').forEach(b => b.onclick = () => { const [r2, j] = b.dataset.o.split('|'); go('#/r/' + encodeURIComponent(r2) + '/' + j); });
+    p.querySelector('[data-detail]')?.addEventListener('click', () => go('#/r/' + encodeURIComponent(r) + '/' + i));
+    p.querySelector('[data-geo]')?.addEventListener('click', () => go('#/n/' + encodeURIComponent(r) + '/' + i));
+    p.querySelectorAll('[data-o]').forEach(b => b.onclick = () => { const [r2, j] = b.dataset.o.split('|'); go((nat ? '#/n/' : '#/r/') + encodeURIComponent(r2) + '/' + j); });
   }
 
   function cultPanel(code) {
@@ -227,6 +245,21 @@
       radius: 6, color: '#065f46', weight: 1.5, fillColor: '#10b981', fillOpacity: 0.95
     }).bindTooltip(c.name).on('click', e => { L.DomEvent.stop(e); go('#/c/' + c.code); }))).addTo(mapCm);
     $('#show-cult').onchange = e => e.target.checked ? cultLayer.addTo(mapCm) : cultLayer.remove();
+    const marks = [];
+    ORDER.forEach(r => A.regions[r].langs.forEach((Lg, i) => {
+      const lk = linksFor(Lg), linked = lk.courses.length || lk.cultures.length, endangered = !!A.regions[r].status[Lg.main];
+      const fill = linked ? '#f97316' : (endangered ? '#ef4444' : '#64748b');
+      (Lg.pts || []).forEach(([lat, lon, approx]) => {
+        const mk = L.circleMarker([lat, lon], { radius: linked ? 5.5 : 4.5, color: '#ffffff', weight: 1.2, fillColor: fill, fillOpacity: 0.95, dashArray: approx ? '2 2' : null })
+          .bindTooltip(Lg.name, { permanent: true, direction: 'right', offset: [5, 0], className: 'lang-label' })
+          .on('click', e => { L.DomEvent.stop(e); go('#/n/' + encodeURIComponent(r) + '/' + i); });
+        (langMarks[r + '|' + i] = langMarks[r + '|' + i] || []).push(mk); marks.push(mk);
+      });
+    }));
+    langLayer = L.layerGroup(marks).addTo(mapCm);
+    $('#show-langs').onchange = e => e.target.checked ? langLayer.addTo(mapCm) : langLayer.remove();
+    const lbl = () => mapCm.getContainer().classList.toggle('show-labels', mapCm.getZoom() >= 7.5);
+    mapCm.on('zoomend', lbl); lbl();
   }
 
   /* ---------- carte détaillée d'une région (image du Mini-Atlas) ---------- */
@@ -266,6 +299,7 @@
     $('#map-cm').classList.toggle('hidden', which !== 'cm');
     $('#map-rg').classList.toggle('hidden', which !== 'rg');
     $('#toggle-cult').classList.toggle('hidden', which !== 'cm');
+    $('#toggle-langs').classList.toggle('hidden', which !== 'cm');
     setTimeout(() => (which === 'cm' ? mapCm : mapRg).invalidateSize(), 0);
   }
   function crumbs(parts) {
@@ -288,6 +322,18 @@
       if (m[2] !== undefined) { const i = +m[2]; langPanel(r, i); setTimeout(() => focusLang(i), 300); }
       else { clearSel(); regionPanel(r); }
       return;
+    }
+    if ((m = h.match(/^\/n\/([^/]+)\/(\d+)$/)) && A.regions[m[1]] && A.regions[m[1]].langs[+m[2]]) {
+      const r = m[1], i = +m[2], Lg = A.regions[r].langs[i];
+      setView('cm'); crumbs([['Cameroun', '#/'], [r, '#/r/' + encodeURIComponent(r) + '/info'], [Lg.name]]);
+      Object.values(langMarks).flat().forEach(mk => mk.setStyle({ weight: 1.2, color: '#ffffff' }));
+      const mks = langMarks[r + '|' + i] || [];
+      if (mks.length) {
+        if (!mapCm.hasLayer(langLayer)) { langLayer.addTo(mapCm); $('#show-langs').checked = true; }
+        mks.forEach(mk => { mk.setStyle({ weight: 4, color: '#111827' }); mk.bringToFront(); });
+        mapCm.flyToBounds(L.featureGroup(mks).getBounds().pad(0.5), { maxZoom: 8, duration: 0.6 });
+      }
+      return langPanel(r, i, true);
     }
     if ((m = h.match(/^\/c\/([A-Z0-9]+)$/))) {
       setView('cm'); crumbs([['Cameroun', '#/'], [cultName(m[1])]]);
@@ -334,6 +380,11 @@
       CULT = cult.communities.map(c => Object.assign({}, c, { regionFr: (cultFr.communities.find(x => x.code === c.code) || {}).region }));
       LANGS = langs.map(l => Object.assign({}, l, { regionFr: (langsFr.find(x => x.slug === l.slug) || {}).region }));
       initCm(); initSearch();
+      // la mise en page (Tailwind) peut arriver après Leaflet : on recalcule la taille des cartes
+      let t; new ResizeObserver(() => { clearTimeout(t); t = setTimeout(() => {
+        mapCm.invalidateSize(); if (mapRg) mapRg.invalidateSize();
+        if (!location.hash || location.hash === '#/' || location.hash === '#') mapCm.fitBounds(regionLayer.getBounds(), { padding: [10, 10] });
+      }, 120); }).observe($('#map-wrap'));
       window.addEventListener('hashchange', route);
       route();
     })
