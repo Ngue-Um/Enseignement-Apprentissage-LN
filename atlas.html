@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <script src="i18n.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Atlas linguistique interactif — Likalo</title>
+  <meta name="description" content="Atlas linguistique interactif du Cameroun d'après le Mini-Atlas LACAGEO (2013) : régions, langues, langues en danger, liens vers les leçons de langue et les fiches culturelles."/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand: { 50:'#fef7ed',100:'#fdecd3',200:'#fbd5a5',300:'#f7b96d',400:'#f29232',500:'#ee780f',600:'#df5e05',700:'#b94608',800:'#94380e',900:'#782f10' },
+          ink: { 50:'#f7f7f6',100:'#e6e5e2',200:'#cdcbc4',300:'#aba89e',400:'#878478',500:'#6d695e',600:'#5a574d',700:'#48453e',800:'#3d3a35',900:'#26241f' }
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Lora','Georgia','serif'] }
+      }}
+    }
+  </script>
+  <style>
+    html, body { height: 100%; }
+    .map-box { background: #eef2f3; }
+    .leaflet-container { font-family: Inter, system-ui, sans-serif; background: #eef2f3; }
+    .reg-label { background: transparent; border: 0; box-shadow: none; font-weight: 600; font-size: 12px; color: #3d3a35; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }
+    .reg-label::before { display: none; }
+    .hot { cursor: pointer; }
+    .hot-pulse { animation: pulse 1.2s ease-in-out 3; }
+    @keyframes pulse { 0%,100% { stroke-opacity: 1; } 50% { stroke-opacity: .2; } }
+    .chip { display:inline-flex; align-items:center; gap:4px; padding:3px 10px; border-radius:9999px; border:1px solid #e6e5e2; background:#fff; font-size:13px; line-height:1.3; cursor:pointer; }
+    .chip:hover { border-color:#f29232; background:#fef7ed; }
+    .chip.linked { border-color:#fbd5a5; background:#fef7ed; font-weight:600; }
+    .chip.danger { border-color:#fecaca; background:#fef2f2; }
+    .results button:hover, .results button.on { background:#fef7ed; }
+    @media (max-width: 1023px) { #map-wrap { height: 58vh; min-height: 340px; } }
+    @media (min-width: 1024px) { #layout { height: calc(100vh - 65px); } #map-wrap { height: 100%; } #panel { height: 100%; overflow-y: auto; } }
+  </style>
+</head>
+<body class="bg-ink-50 text-ink-900 font-sans antialiased">
+
+<header class="border-b border-ink-100 bg-white sticky top-0 z-[1100]">
+  <div class="px-4 py-2.5 flex items-center gap-3">
+    <a href="index.html" class="flex items-center gap-3 shrink-0">
+      <div class="w-10 h-10 rounded-lg bg-brand-500 text-white grid place-items-center font-bold font-serif text-lg shadow-sm">L</div>
+      <div class="leading-tight hidden sm:block">
+        <div class="font-semibold text-ink-900">Likalo</div>
+        <div class="text-xs text-ink-500">Atlas linguistique interactif</div>
+      </div>
+    </a>
+    <div class="relative flex-1 max-w-md ml-auto">
+      <input id="search" type="search" autocomplete="off" placeholder="Rechercher une langue…" aria-label="Rechercher une langue"
+             class="w-full border border-ink-200 rounded-lg px-3 py-2 text-base sm:text-sm bg-white"/>
+      <div id="results" class="results hidden absolute left-0 right-0 mt-1 bg-white border border-ink-200 rounded-lg shadow-lg max-h-80 overflow-y-auto z-[1200]"></div>
+    </div>
+    <div data-ui-toggle class="shrink-0"></div>
+    <a href="index.html" class="hidden md:inline text-sm px-3 py-2 rounded-md hover:bg-ink-100 text-ink-600 whitespace-nowrap">← Plateforme</a>
+  </div>
+</header>
+
+<div id="layout" class="lg:grid lg:grid-cols-[1fr_400px]">
+  <div id="map-wrap" class="relative">
+    <div id="map-cm" class="map-box absolute inset-0"></div>
+    <div id="map-rg" class="map-box absolute inset-0 hidden"></div>
+    <div class="absolute top-3 left-14 right-3 z-[1000] flex flex-wrap items-center gap-2 pointer-events-none">
+      <nav id="crumbs" class="pointer-events-auto bg-white/95 border border-ink-200 rounded-lg px-3 py-1.5 text-sm shadow-sm"></nav>
+      <label id="toggle-cult" class="pointer-events-auto bg-white/95 border border-ink-200 rounded-lg px-3 py-1.5 text-sm shadow-sm flex items-center gap-2 cursor-pointer">
+        <input type="checkbox" id="show-cult" checked class="accent-emerald-600"/> <span>Communautés (fiches culturelles)</span>
+      </label>
+    </div>
+  </div>
+  <aside id="panel" class="bg-white border-l border-ink-100 p-4 sm:p-5"></aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function () {
+  const EN = window.LIKALO_UI === 'en';
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z]/g, '');
+  const REG_COLORS = { 'Extrême-Nord':'#f4d58d','Nord':'#f6c28b','Adamaoua':'#e9d8a6','Nord-Ouest':'#b8d8ba','Ouest':'#9fd3c7',
+    'Littoral':'#a7c7e7','Centre':'#c3b1e1','Sud':'#b5e0b3','Est':'#d7b9d5','Sud-Ouest':'#f2b5b5' };
+  const ORDER = ['Extrême-Nord','Nord','Adamaoua','Nord-Ouest','Ouest','Sud-Ouest','Littoral','Centre','Sud','Est'];
+
+  let A, GEO, CULT = [], LANGS = [];
+  let mapCm, mapRg, regionLayer, cultLayer, imgLayer, hotLayer, curRegion = null, hotByKey = {};
+
+  async function getJSON(p) {
+    if (EN) { try { const r = await fetch('data/en/' + p); if (r.ok) return r.json(); } catch (e) {} }
+    const r = await fetch('data/' + p); return r.json();
+  }
+
+  /* ---------- liens vers les cours et les fiches ---------- */
+  function linksFor(lang) {
+    const keys = [norm(lang.main)].concat((lang.name.match(/\(([^)]*)\)/g) || []).join(',').replace(/[()]/g, '').split(',').map(norm));
+    const courses = new Set(), cultures = new Set();
+    for (const k of keys) {
+      for (const [lk, v] of Object.entries(A.links)) {
+        if (k && norm(lk) === k) { v.courses.forEach(c => courses.add(c)); v.cultures.forEach(c => cultures.add(c)); }
+      }
+    }
+    return { courses: [...courses], cultures: [...cultures] };
+  }
+  const regionsOf = s => String(s || '').split(/\s*[,/]\s*/).map(t => t.replace(/^Région (de l'|du |de la )/, '').trim()).filter(t => ORDER.includes(t));
+  const langName = slug => (LANGS.find(l => l.slug === slug) || {}).name || slug;
+  const cultName = code => (CULT.find(c => c.code === code) || {}).name || code;
+
+  /* ---------- panneau ---------- */
+  function panel(html) { const p = $('#panel'); p.innerHTML = html; p.scrollTop = 0; if (window.innerWidth < 1024) p.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+
+  function linkButtons(courses, cultures) {
+    let h = '';
+    if (courses.length) h += `<div class="mt-4"><div class="text-xs uppercase tracking-wide text-ink-400 mb-1.5">Leçons de langue</div><div class="flex flex-wrap gap-2">` +
+      courses.map(s => `<a class="px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium" href="index.html#/langue/${esc(s)}">📘 ${esc(langName(s))}</a>`).join('') + `</div></div>`;
+    if (cultures.length) h += `<div class="mt-4"><div class="text-xs uppercase tracking-wide text-ink-400 mb-1.5">Fiches culturelles et leçons de culture</div><div class="flex flex-col gap-2">` +
+      cultures.map(c => `<div class="flex flex-wrap items-center gap-2"><a class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium" href="index.html#/cultures/${esc(c)}">📚 ${esc(cultName(c))}</a>` +
+        `<a class="px-3 py-1.5 rounded-lg border border-ink-200 hover:bg-ink-100 text-sm" href="reseau.html#${esc(c)}">🕸 CamRhizome</a></div>`).join('') + `</div></div>`;
+    if (!courses.length && !cultures.length) h += `<p class="mt-4 text-sm text-ink-500">Pas encore de leçon ni de fiche culturelle pour cette langue sur Likalo.</p>`;
+    return h;
+  }
+
+  function homePanel() {
+    const tot = ORDER.reduce((n, r) => n + A.regions[r].langs.length, 0);
+    panel(`
+      <p class="text-xs font-semibold uppercase tracking-widest text-brand-600">Mini-Atlas linguistique du Cameroun · LACAGEO 2013</p>
+      <h1 class="font-serif text-2xl text-ink-900 mt-1">Atlas linguistique interactif</h1>
+      <p class="text-sm text-ink-600 mt-2">Touchez une région pour voir sa carte d'identité et ses langues, puis ouvrez la carte détaillée du Mini-Atlas : chaque nom de langue y est cliquable. Les points verts sont les communautés qui ont une fiche culturelle sur Likalo.</p>
+      <div class="grid grid-cols-2 gap-2 mt-4">
+        <div class="bg-brand-50 rounded-lg p-3"><div class="text-2xl font-bold text-brand-700">10</div><div class="text-xs text-brand-700">régions</div></div>
+        <div class="bg-ink-100 rounded-lg p-3"><div class="text-2xl font-bold text-ink-700">${tot}</div><div class="text-xs text-ink-600">noms de langues sur les cartes</div></div>
+      </div>
+      <h2 class="font-semibold text-ink-800 mt-5 mb-2">Régions</h2>
+      <div class="grid grid-cols-2 gap-2">${ORDER.map(r => `<button data-reg="${esc(r)}" class="text-left px-3 py-2 rounded-lg border border-ink-100 hover:border-brand-300 hover:bg-brand-50">
+        <span class="inline-block w-2.5 h-2.5 rounded-full mr-1.5 align-middle" style="background:${REG_COLORS[r]}"></span><span class="font-medium">${esc(r)}</span>
+        <span class="block text-xs text-ink-400">${A.regions[r].langs.length} <span>langues</span></span></button>`).join('')}</div>
+      <p class="text-xs text-ink-400 mt-6">Source : Mini-Atlas linguistique du Cameroun (LACAGEO, 2013). Positions des communautés : approximatives (localité de référence). <a class="underline" href="cartes.html">Définitions et données générales</a></p>`);
+    $('#panel').querySelectorAll('[data-reg]').forEach(b => b.onclick = () => go('#/r/' + encodeURIComponent(b.dataset.reg) + '/info'));
+  }
+
+  function regionPanel(r) {
+    const R = A.regions[r];
+    const courses = LANGS.filter(l => regionsOf(l.regionFr || l.region).includes(r));
+    const cults = CULT.filter(c => c.regionFr === r || (c.regionFr || '').split(' / ').includes(r));
+    const chips = R.langs.map((L, i) => {
+      const lk = linksFor(L);
+      const cls = (lk.courses.length || lk.cultures.length) ? 'linked' : (R.status[L.main] ? 'danger' : '');
+      return `<button class="chip ${cls}" data-i="${i}">${esc(L.name)}${(lk.courses.length || lk.cultures.length) ? ' ★' : ''}</button>`;
+    }).join(' ');
+    const status = Object.entries(R.status);
+    panel(`
+      <button class="text-sm text-ink-500 hover:text-ink-800" data-home>← <span>Cameroun</span></button>
+      <h1 class="font-serif text-2xl text-ink-900 mt-1">${esc(r)}</h1>
+      <button data-open class="mt-3 w-full px-4 py-2.5 rounded-lg bg-ink-900 hover:bg-ink-700 text-white text-sm font-medium">🗺 Ouvrir la carte détaillée du Mini-Atlas</button>
+      <h2 class="font-semibold text-ink-800 mt-5 mb-2">Carte d'identité de la région</h2>
+      <dl class="text-sm divide-y divide-ink-100 border border-ink-100 rounded-lg">${R.card.map(([k, v]) => `<div class="flex justify-between gap-3 px-3 py-1.5"><dt class="text-ink-500">${esc(k)}</dt><dd class="font-medium text-right">${esc(v)}</dd></div>`).join('')}</dl>
+      ${status.length ? `<h2 class="font-semibold text-ink-800 mt-5 mb-2">Langues éteintes ou en danger <span class="font-normal text-xs text-ink-400">(UNESCO, SIL)</span></h2>
+        <ul class="text-sm grid grid-cols-2 gap-x-3 gap-y-1">${status.map(([k, v]) => `<li><span class="font-medium">${esc(k)}</span> <span class="text-red-700">${esc(v)}</span></li>`).join('')}</ul>` : ''}
+      <h2 class="font-semibold text-ink-800 mt-5 mb-1">Langues sur la carte <span class="font-normal text-xs text-ink-400">(${R.langs.length})</span></h2>
+      <p class="text-xs text-ink-500 mb-2">★ = leçons ou fiche culturelle disponibles sur Likalo.</p>
+      <div class="flex flex-wrap gap-1.5">${chips}</div>
+      ${courses.length ? `<h2 class="font-semibold text-ink-800 mt-5 mb-2">Cours de langue de la région</h2><div class="flex flex-wrap gap-2">${courses.map(l => `<a class="chip linked" href="index.html#/langue/${esc(l.slug)}">📘 ${esc(l.name)}</a>`).join('')}</div>` : ''}
+      ${cults.length ? `<h2 class="font-semibold text-ink-800 mt-5 mb-2">Fiches culturelles de la région</h2><div class="flex flex-wrap gap-2">${cults.map(c => `<a class="chip" href="index.html#/cultures/${esc(c.code)}">📚 ${esc(c.name)}</a>`).join('')}</div>` : ''}
+    `);
+    const p = $('#panel');
+    p.querySelector('[data-home]').onclick = () => go('#/');
+    p.querySelector('[data-open]').onclick = () => go('#/r/' + encodeURIComponent(r));
+    p.querySelectorAll('[data-i]').forEach(b => b.onclick = () => go('#/r/' + encodeURIComponent(r) + '/' + b.dataset.i));
+  }
+
+  function langPanel(r, i) {
+    const R = A.regions[r], L = R.langs[i];
+    const lk = linksFor(L);
+    const others = [];
+    ORDER.forEach(r2 => A.regions[r2].langs.forEach((L2, j) => { if (r2 !== r && norm(L2.main) === norm(L.main)) others.push([r2, j]); }));
+    const st = R.status[L.main];
+    panel(`
+      <button class="text-sm text-ink-500 hover:text-ink-800" data-reg>← <span>${esc(r)}</span></button>
+      <h1 class="font-serif text-2xl text-ink-900 mt-1">${esc(L.name)}</h1>
+      <p class="text-sm text-ink-500"><span>Région :</span> <span>${esc(r)}</span>${st ? ` · <span class="text-red-700 font-medium">${esc(st)}</span>` : ''}</p>
+      <div class="flex flex-wrap gap-2 mt-3">
+        ${L.boxes.length ? `<button data-show class="px-3 py-1.5 rounded-lg border border-ink-200 hover:bg-ink-100 text-sm">📍 Voir sur la carte</button>` : ''}
+        <a class="px-3 py-1.5 rounded-lg border border-ink-200 hover:bg-ink-100 text-sm" href="https://glottolog.org/glottolog?search=${encodeURIComponent(L.main)}" target="_blank" rel="noopener">Glottolog ↗</a>
+      </div>
+      ${linkButtons(lk.courses, lk.cultures)}
+      ${others.length ? `<div class="mt-5"><div class="text-xs uppercase tracking-wide text-ink-400 mb-1.5">Aussi présente dans</div><div class="flex flex-wrap gap-2">${others.map(([r2, j]) => `<button class="chip" data-o="${esc(r2)}|${j}">${esc(r2)}</button>`).join('')}</div></div>` : ''}
+      <p class="text-xs text-ink-400 mt-6">Nom tel qu'il figure sur la carte du Mini-Atlas (LACAGEO, 2013) ; les noms entre parenthèses sont d'autres dénominations.</p>`);
+    const p = $('#panel');
+    p.querySelector('[data-reg]').onclick = () => go('#/r/' + encodeURIComponent(r) + '/info');
+    p.querySelector('[data-show]')?.addEventListener('click', () => focusLang(i));
+    p.querySelectorAll('[data-o]').forEach(b => b.onclick = () => { const [r2, j] = b.dataset.o.split('|'); go('#/r/' + encodeURIComponent(r2) + '/' + j); });
+  }
+
+  function cultPanel(code) {
+    const c = CULT.find(x => x.code === code); if (!c) return homePanel();
+    panel(`
+      <button class="text-sm text-ink-500 hover:text-ink-800" data-home>← <span>Cameroun</span></button>
+      <h1 class="font-serif text-2xl text-ink-900 mt-1">${esc(c.name)}</h1>
+      <p class="text-sm text-ink-500">${esc(c.region)} · ${esc(c.parler || '')}</p>
+      <p class="text-sm text-ink-700 mt-3">${esc(c.overview || '')}</p>
+      ${linkButtons([], [code])}
+      ${c.regionFr && A.regions[c.regionFr] ? `<button data-r class="mt-4 px-3 py-1.5 rounded-lg border border-ink-200 hover:bg-ink-100 text-sm">🗺 <span>Carte de la région :</span> <span>${esc(c.regionFr)}</span></button>` : ''}
+      <p class="text-xs text-ink-400 mt-6">Position approximative (localité de référence de la communauté).</p>`);
+    $('#panel').querySelector('[data-home]').onclick = () => go('#/');
+    $('#panel').querySelector('[data-r]')?.addEventListener('click', () => go('#/r/' + encodeURIComponent(c.regionFr) + '/info'));
+  }
+
+  /* ---------- carte du Cameroun ---------- */
+  function initCm() {
+    mapCm = L.map('map-cm', { zoomSnap: 0.25, attributionControl: true, minZoom: 5, maxZoom: 10 });
+    mapCm.attributionControl.setPrefix(false).addAttribution('Limites : geoBoundaries (CC BY 4.0) · Mini-Atlas LACAGEO 2013');
+    regionLayer = L.geoJSON(GEO, {
+      style: f => ({ color: '#ffffff', weight: 1.5, fillColor: REG_COLORS[f.properties.name] || '#ddd', fillOpacity: 0.9 }),
+      onEachFeature: (f, layer) => {
+        const n = f.properties.name;
+        layer.bindTooltip(n, { permanent: true, direction: 'center', className: 'reg-label' });
+        layer.on({ click: () => go('#/r/' + encodeURIComponent(n) + '/info'),
+                   mouseover: e => e.target.setStyle({ fillOpacity: 1, weight: 3 }),
+                   mouseout: e => regionLayer.resetStyle(e.target) });
+      }
+    }).addTo(mapCm);
+    mapCm.fitBounds(regionLayer.getBounds(), { padding: [10, 10] });
+    cultLayer = L.layerGroup(CULT.filter(c => A.places[c.code]).map(c => L.circleMarker(A.places[c.code], {
+      radius: 6, color: '#065f46', weight: 1.5, fillColor: '#10b981', fillOpacity: 0.95
+    }).bindTooltip(c.name).on('click', e => { L.DomEvent.stop(e); go('#/c/' + c.code); }))).addTo(mapCm);
+    $('#show-cult').onchange = e => e.target.checked ? cultLayer.addTo(mapCm) : cultLayer.remove();
+  }
+
+  /* ---------- carte détaillée d'une région (image du Mini-Atlas) ---------- */
+  function showRegionMap(r) {
+    const R = A.regions[r];
+    if (!mapRg) mapRg = L.map('map-rg', { crs: L.CRS.Simple, zoomSnap: 0.25, minZoom: -3, maxZoom: 2, attributionControl: true });
+    mapRg.attributionControl.setPrefix(false);
+    if (curRegion !== r) {
+      if (imgLayer) imgLayer.remove(); if (hotLayer) hotLayer.remove();
+      const b = [[-R.h, 0], [0, R.w]];
+      imgLayer = L.imageOverlay(R.img, b, { attribution: '© LACAGEO 2013 — Mini-Atlas linguistique du Cameroun' }).addTo(mapRg);
+      hotByKey = {};
+      hotLayer = L.layerGroup(R.langs.flatMap((Lg, i) => Lg.boxes.map(([x, y, w, h]) => {
+        const rect = L.rectangle([[-(y + h), x], [-y, x + w]], { color: '#df5e05', weight: 0, fillColor: '#ee780f', fillOpacity: 0, className: 'hot' })
+          .bindTooltip(Lg.name, { direction: 'top' })
+          .on('mouseover', e => e.target.setStyle({ weight: 2, fillOpacity: 0.15 }))
+          .on('mouseout', e => { if (!e.target._sel) e.target.setStyle({ weight: 0, fillOpacity: 0 }); })
+          .on('click', e => { L.DomEvent.stop(e); go('#/r/' + encodeURIComponent(r) + '/' + i); });
+        (hotByKey[i] = hotByKey[i] || []).push(rect); return rect;
+      }))).addTo(mapRg);
+      mapRg.setMaxBounds(L.latLngBounds(b).pad(0.2));
+      curRegion = r;
+      setTimeout(() => { mapRg.invalidateSize(); mapRg.fitBounds(b); }, 0);
+    }
+  }
+  function clearSel() { Object.values(hotByKey).flat().forEach(h => { h._sel = false; h.setStyle({ weight: 0, fillOpacity: 0 }); }); }
+  function focusLang(i) {
+    clearSel();
+    const hs = hotByKey[i] || []; if (!hs.length) return;
+    hs.forEach(h => { h._sel = true; h.setStyle({ weight: 3, fillOpacity: 0.2 }); });
+    const g = L.featureGroup(hs);
+    mapRg.flyToBounds(g.getBounds().pad(hs.length > 1 ? 0.3 : 3), { duration: 0.6, maxZoom: 0.5 });
+  }
+
+  /* ---------- navigation ---------- */
+  function setView(which) {
+    $('#map-cm').classList.toggle('hidden', which !== 'cm');
+    $('#map-rg').classList.toggle('hidden', which !== 'rg');
+    $('#toggle-cult').classList.toggle('hidden', which !== 'cm');
+    setTimeout(() => (which === 'cm' ? mapCm : mapRg).invalidateSize(), 0);
+  }
+  function crumbs(parts) {
+    $('#crumbs').innerHTML = parts.map(([t, h]) => h ? `<a href="${h}" class="text-brand-700 hover:underline">${esc(t)}</a>` : `<span class="font-medium">${esc(t)}</span>`).join(' <span class="text-ink-300">›</span> ');
+  }
+  function go(h) { if (location.hash === h) route(); else location.hash = h; }
+
+  function route() {
+    const h = decodeURIComponent(location.hash.replace(/^#/, ''));
+    let m;
+    if ((m = h.match(/^\/r\/([^/]+)(?:\/(info|\d+))?$/)) && A.regions[m[1]]) {
+      const r = m[1];
+      if (m[2] === 'info') {
+        setView('cm'); crumbs([['Cameroun', '#/'], [r]]);
+        regionLayer.eachLayer(l => { if (l.feature.properties.name === r) mapCm.flyToBounds(l.getBounds(), { padding: [20, 20], duration: 0.5 }); });
+        return regionPanel(r);
+      }
+      setView('rg'); showRegionMap(r);
+      crumbs([['Cameroun', '#/'], [r, '#/r/' + encodeURIComponent(r) + '/info'], ['Carte détaillée']]);
+      if (m[2] !== undefined) { const i = +m[2]; langPanel(r, i); setTimeout(() => focusLang(i), 300); }
+      else { clearSel(); regionPanel(r); }
+      return;
+    }
+    if ((m = h.match(/^\/c\/([A-Z0-9]+)$/))) {
+      setView('cm'); crumbs([['Cameroun', '#/'], [cultName(m[1])]]);
+      if (A.places[m[1]]) mapCm.flyTo(A.places[m[1]], 8, { duration: 0.5 });
+      return cultPanel(m[1]);
+    }
+    if ((m = h.match(/^\/l\/([a-z-]+)$/))) {   // depuis une leçon de langue : #/l/<slug>
+      for (const r of ORDER) {
+        const i = A.regions[r].langs.findIndex(L => linksFor(L).courses.includes(m[1]));
+        if (i >= 0) return go('#/r/' + encodeURIComponent(r) + '/' + i);
+      }
+    }
+    setView('cm'); crumbs([['Cameroun']]);
+    if (regionLayer) mapCm.flyToBounds(regionLayer.getBounds(), { padding: [10, 10], duration: 0.4 });
+    homePanel();
+  }
+
+  /* ---------- recherche ---------- */
+  function initSearch() {
+    const idx = [];
+    ORDER.forEach(r => A.regions[r].langs.forEach((L, i) => idx.push({ r, i, name: L.name, k: norm(L.name), linked: linksFor(L) })));
+    const inp = $('#search'), res = $('#results');
+    const close = () => res.classList.add('hidden');
+    inp.addEventListener('input', () => {
+      const q = norm(inp.value);
+      if (!q) return close();
+      const hits = idx.filter(x => x.k.includes(q)).sort((a, b) => a.k.indexOf(q) - b.k.indexOf(q)).slice(0, 30);
+      res.innerHTML = hits.length ? hits.map(x => `<button class="block w-full text-left px-3 py-2 text-sm border-b border-ink-50" data-r="${esc(x.r)}" data-i="${x.i}">
+        <span class="font-medium">${esc(x.name)}</span>${(x.linked.courses.length || x.linked.cultures.length) ? ' ★' : ''} <span class="text-ink-400">· <span>${esc(x.r)}</span></span></button>`).join('')
+        : `<div class="px-3 py-2 text-sm text-ink-500">Aucune langue trouvée.</div>`;
+      res.classList.remove('hidden');
+      res.querySelectorAll('[data-r]').forEach(b => b.onclick = () => { close(); inp.blur(); go('#/r/' + encodeURIComponent(b.dataset.r) + '/' + b.dataset.i); });
+    });
+    inp.addEventListener('keydown', e => { if (e.key === 'Enter') res.querySelector('[data-r]')?.click(); if (e.key === 'Escape') close(); });
+    document.addEventListener('click', e => { if (!e.target.closest('#results') && e.target !== inp) close(); });
+  }
+
+  /* ---------- démarrage ---------- */
+  Promise.all([fetch('data/atlas.json').then(r => r.json()), fetch('data/atlas-regions.json').then(r => r.json()),
+               getJSON('cultures/index.json'), getJSON('languages.json'), fetch('data/languages.json').then(r => r.json()),
+               fetch('data/cultures/index.json').then(r => r.json())])
+    .then(([a, geo, cult, langs, langsFr, cultFr]) => {
+      A = a; GEO = geo;
+      CULT = cult.communities.map(c => Object.assign({}, c, { regionFr: (cultFr.communities.find(x => x.code === c.code) || {}).region }));
+      LANGS = langs.map(l => Object.assign({}, l, { regionFr: (langsFr.find(x => x.slug === l.slug) || {}).region }));
+      initCm(); initSearch();
+      window.addEventListener('hashchange', route);
+      route();
+    })
+    .catch(e => { $('#panel').innerHTML = `<p class="text-red-700 text-sm">Impossible de charger l'atlas : ${esc(e)}</p>`; });
+})();
+</script>
+<script data-goatcounter="https://likalo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

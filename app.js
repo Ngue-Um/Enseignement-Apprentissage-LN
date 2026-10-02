@@ -268,6 +268,13 @@ const STATIC_ROUTES = {
 };
 
 const PARAM_ROUTES = [
+  [/^\/langue\/([a-z-]+)$/, async (slug) => {
+    if (state.langues.some(l => l.slug === slug)) {
+      await switchLanguage(slug);
+      try { sessionStorage.setItem('likalo-lang', slug); } catch (e) {}
+      location.replace('#/lecons');
+    } else location.replace('#/');
+  }],
   [/^\/lecon\/([A-Za-z0-9-]+)$/, (id) => renderLecon(id)],
   [/^\/cultures\/([A-Z0-9]+)$/, (code) => renderCultures(code)],
   [/^\/culture\/([A-Z0-9]+)\/lecon\/([A-Za-z0-9-]+)$/, (code, id) => renderCultureLesson(code, id)],
@@ -849,7 +856,10 @@ function renderLessonView(L, lessons, opts) {
   $('#lecon-code').textContent = L.code;
   $('#lecon-meta').innerHTML = `Durée indicative : ${escapeHtml(L.duration)} · Niveau : ${escapeHtml(L.level)}` +
     (opts.subtitle ? ` · ${escapeHtml(opts.subtitle)}` : '') +
-    (opts.cultureCode ? ` · <a class="text-emerald-700 underline" href="#/cultures/${escapeHtml(opts.cultureCode)}">Fiche culturelle complète</a>` : '');
+    (opts.cultureCode ? ` · <a class="text-emerald-700 underline" href="#/cultures/${escapeHtml(opts.cultureCode)}">Fiche culturelle complète</a>` : '') +
+    (/^(M1|MC1)/.test(L.module || '')
+      ? ` · <a class="text-brand-700 underline" href="atlas.html#/${(opts.atlasCode || opts.cultureCode) ? 'c/' + escapeHtml(opts.atlasCode || opts.cultureCode) : 'l/' + escapeHtml(state.currentLang || '')}">🗺 Atlas linguistique interactif</a>`
+      : '');
 
   $('#lecon-objectives').innerHTML = L.objectives
     .map(o => `<li>${escapeHtml(o)}</li>`).join('');
@@ -1476,6 +1486,7 @@ async function openCultureModal(code) {
     <div class="mt-4 flex flex-wrap gap-2 text-sm">
       <a href="#culture-lessons-anchor" data-jump class="px-3 py-1.5 rounded-full bg-emerald-600 text-white font-medium">📚 Leçons de culture</a>
       <a href="reseau.html#${escapeHtml(c.code)}" class="px-3 py-1.5 rounded-full border border-ink-200 text-ink-700">🕸 Voir dans CamRhizome</a>
+      <a href="atlas.html#/c/${escapeHtml(c.code)}" class="px-3 py-1.5 rounded-full border border-ink-200 text-ink-700">🗺 Voir dans l'atlas</a>
       ${c.lang ? `<a href="#/lecons" data-lang="${escapeHtml(c.lang)}" class="px-3 py-1.5 rounded-full border border-ink-200 text-ink-700">🗣 Leçons de langue</a>` : ''}
     </div>
 
@@ -1535,6 +1546,7 @@ async function renderCultureLesson(code, id) {
     backLabel: `Fiche : ${c.name}`,
     linkBase: `#/culture/${code}/lecon/`,
     subtitle: c.name,
+    atlasCode: code,
   });
 }
 
