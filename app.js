@@ -171,11 +171,35 @@ function similarity(a, b) {
 
 /* ---------- Chargement des données ---------- */
 
+/* Interface en anglais : les contenus traduits sont lus dans data/en/ (repli sur data/ si absent). */
+const UI_EN = window.LIKALO_UI === 'en';
+async function fetchData(path) {
+  if (UI_EN) {
+    try { const r = await fetch('data/en/' + path); if (r.ok) return await r.json(); } catch (e) {}
+  }
+  const r = await fetch('data/' + path);
+  if (!r.ok) throw new Error(path + ' : ' + r.status);
+  return r.json();
+}
+let _glosses = null;
+async function loadVocab(slug) {
+  const vocab = await fetch(`data/${slug}.json`).then(r => r.json()).catch(() => []);
+  if (!UI_EN) return vocab;
+  if (!_glosses) _glosses = await fetch('data/en/glosses.json').then(r => r.json()).catch(() => ({}));
+  vocab.forEach(it => {
+    for (const k of ['frenchText', 'frenchWord']) {
+      const v = (it[k] || '').trim();
+      if (v && _glosses[v]) it[k] = _glosses[v];
+    }
+  });
+  return vocab;
+}
+
 async function loadData() {
   const [langues, vocab, lessons] = await Promise.all([
-    fetch('data/languages.json').then(r => r.json()),
-    state.currentLang ? fetch(`data/${state.currentLang}.json`).then(r => r.json()).catch(() => []) : [],
-    state.currentLang ? fetch(`data/lessons_${state.currentLang}.json`).then(r => r.json()).catch(() => ({ lessons: [] })) : { lessons: [] },
+    fetchData('languages.json'),
+    state.currentLang ? loadVocab(state.currentLang) : [],
+    state.currentLang ? fetchData(`lessons_${state.currentLang}.json`).catch(() => ({ lessons: [] })) : { lessons: [] },
   ]);
   state.langues = langues;
   if (state.currentLang && !langues.some(l => l.slug === state.currentLang)) state.currentLang = null;
@@ -207,8 +231,8 @@ async function switchLanguage(slug) {
   try { sessionStorage.setItem('likalo-lang', slug); } catch (e) {}
   stopCurrentAudio();
   const [vocab, lessons] = await Promise.all([
-    fetch(`data/${slug}.json`).then(r => r.json()).catch(() => []),
-    fetch(`data/lessons_${slug}.json`).then(r => r.json()).catch(() => ({ lessons: [] })),
+    loadVocab(slug),
+    fetchData(`lessons_${slug}.json`).catch(() => ({ lessons: [] })),
   ]);
   state.vocab = vocab;
   state.vocabWithFr = vocab.filter(b => b.frenchText && b.langText);
@@ -337,7 +361,7 @@ function renderLangGate(what) {
   $('#app').innerHTML = `
     <section class="max-w-4xl mx-auto">
       <h1 class="font-serif text-2xl sm:text-3xl text-ink-900">Choisissez une langue</h1>
-      <p class="mt-2 text-ink-600">${escapeHtml(what)} Sélectionnez la langue avec laquelle vous souhaitez travailler ; vous pourrez en changer à tout moment depuis le menu.</p>
+      <p class="mt-2 text-ink-600"><span>${escapeHtml(what)}</span> <span>Sélectionnez la langue avec laquelle vous souhaitez travailler ; vous pourrez en changer à tout moment depuis le menu.</span></p>
       <div class="mt-5 bg-ink-50 border border-ink-100 rounded-2xl p-4 sm:p-6">${langChooserHtml(false)}</div>
     </section>`;
   wireLangChooser($('#app'));
@@ -425,7 +449,7 @@ function renderCatalogue() {
         ${l.audio
           ? 'Dataset complet : audios MP3, transcription AGLC, traduction française.'
           : 'Dataset textuel ALCAM disponible.'}
-        ${l.emacCount > 0 ? ` Ressources musicales EMAC intégrées dans les leçons.` : ''}
+        ${l.emacCount > 0 ? `<span> Ressources musicales EMAC intégrées dans les leçons.</span>` : ''}
       </p>
       <div class="mt-4 flex items-center gap-3">
         <button class="text-sm font-medium text-brand-700 hover:text-brand-800 switch-lang-btn" data-slug="${escapeHtml(l.slug)}">
@@ -593,7 +617,7 @@ let _oralCorpus = null;
 async function loadOralCorpus() {
   if (_oralCorpus) return _oralCorpus;
   try {
-    _oralCorpus = await fetch('data/oral-corpus.json').then(r => r.json());
+    _oralCorpus = await fetchData('oral-corpus.json');
   } catch {
     _oralCorpus = [];
   }
@@ -1249,17 +1273,14 @@ state.cultureFilter = { q: '', region: '' };
 
 async function loadCulturesIndex() {
   if (!state.cultures) {
-    state.cultures = await fetch('data/cultures/index.json').then(r => r.json());
+    state.cultures = await fetchData('cultures/index.json');
   }
   return state.cultures;
 }
 
 async function loadCulture(code) {
   if (!state.cultureDetail[code]) {
-    const d = await fetch(`data/cultures/${code}.json`).then(r => {
-      if (!r.ok) throw new Error('not found');
-      return r.json();
-    });
+    const d = await fetchData(`cultures/${code}.json`);
     (d.lessons || []).forEach(normalizeLesson);
     state.cultureDetail[code] = d;
   }
@@ -1316,7 +1337,7 @@ async function renderCultures(code) {
     const list = data.communities.filter(c => {
       const hay = [c.name, c.autonym, c.region, c.place, c.parler, c.family].join(' ').toLowerCase();
       return (!q || hay.includes(q)) && (!reg || c.region.split(/\s*\/\s*/).includes(reg) || c.region.includes(reg));
-    }).sort((a, b) => a.name.localeCompare(b.name, 'fr'));
+    }).sort((a, b) => a.name.localeCompare(b.name, UI_EN ? 'en' : 'fr'));
     $('#cultures-count').textContent = `${list.length} communauté${list.length > 1 ? 's' : ''}`;
     grid.innerHTML = list.length ? list.map(cultureCard).join('')
       : '<div class="text-center text-ink-400 py-12 col-span-full">Aucune communauté ne correspond.</div>';
