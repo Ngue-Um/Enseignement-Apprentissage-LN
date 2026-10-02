@@ -690,7 +690,18 @@
 "statut à préciser": "status to be confirmed",
 "un parc national et deux réserves": "one national park and two reserves",
 "une partie de la Réserve du Dja (1987)": "part of the Dja Reserve (1987)",
-"Kumba 1, 2, 3 ; Limbé 1, 2, 3": "Kumba 1, 2, 3; Limbé 1, 2, 3"
+"Kumba 1, 2, 3 ; Limbé 1, 2, 3": "Kumba 1, 2, 3; Limbé 1, 2, 3",
+"(fiches culturelles)": "(cultural profiles)",
+"Toutes les langues du Mini-Atlas": "All Mini-Atlas languages",
+"Chaque point est une langue figurant sur les cartes du Mini-Atlas : touchez-le pour l'identifier et trouver ses ressources. Zoomez pour afficher les noms. Touchez une région pour voir sa carte d'identité, puis ouvrez la carte détaillée du Mini-Atlas, où chaque nom de langue est aussi cliquable.": "Each dot is a language shown on the Mini-Atlas maps: tap it to identify it and find its resources. Zoom in to show the names. Tap a region to see its fact sheet, then open the detailed Mini-Atlas map, where every language name is also clickable.",
+"Langue avec leçons ou fiche culturelle sur Likalo": "Language with lessons or a cultural profile on Likalo",
+"Autre langue du Mini-Atlas": "Other Mini-Atlas language",
+"Langue en danger ou éteinte (UNESCO, SIL)": "Endangered or extinct language (UNESCO, SIL)",
+"Communauté avec fiche culturelle": "Community with a cultural profile",
+"Positions des langues : d'après l'emplacement de leur nom sur les cartes du Mini-Atlas ; positions des communautés : localité de référence. Toutes les positions sont approximatives.": "Language positions: from where their names appear on the Mini-Atlas maps; community positions: reference locality. All positions are approximate.",
+"🗺 Voir sur la carte détaillée": "🗺 Show on the detailed map",
+"🇨🇲 Voir sur la carte du Cameroun": "🇨🇲 Show on the map of Cameroon",
+"Source : Mini-Atlas linguistique du Cameroun (LACAGEO, 2013). Positions des langues : d'après l'emplacement de leur nom sur les cartes du Mini-Atlas ; positions des communautés : localité de référence. Toutes les positions sont approximatives.": "Source: Linguistic Mini-Atlas of Cameroon (LACAGEO, 2013). Language positions: from where their names appear on the Mini-Atlas maps; community positions: reference locality. All positions are approximate."
 },
 "patterns": [
 [
